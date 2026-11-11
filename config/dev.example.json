@@ -1,0 +1,11 @@
+{
+  "ENV": "dev",
+  "BASE_URL": "https://genaistudio-products.showsapp.org/v1",
+  "DISTRIBUTION_CODE": "com.songlet.ios",
+  "DISTRIBUTION_SECRET": "REPLACE_WITH_HMAC_SECRET",
+  "APP_CODE": "songlet",
+  "BUNDLE_ID": "com.songlet.ios",
+  "IAP_CHANNEL": "appstore",
+  "TERMS_URL": "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/",
+  "PRIVACY_URL": ""
+}

@@ -1,0 +1,35 @@
+# Shared analysis baseline for every workspace member.
+# Members include this via `include: ../../analysis_options.yaml`.
+# Per the dev contract: lints are NEVER relaxed to pass the gate.
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  language:
+    strict-casts: true
+    strict-inference: true
+  errors:
+    # Promote high-signal issues to hard errors so the zero-warning gate is real.
+    missing_required_param: error
+    missing_return: error
+    todo: ignore # informational only; the repo-wide marker grep forbids to-do notes in deliverables.
+  exclude:
+    - "**/*.g.dart"
+    - "**/l10n/generated/**"
+    - build/**
+    - android/**
+    - ios/**
+    - web/**
+    - windows/**
+    - macos/**
+    - linux/**
+
+linter:
+  rules:
+    prefer_single_quotes: true
+    directives_ordering: true
+    unawaited_futures: true
+    always_declare_return_types: true
+    prefer_final_locals: true
+    require_trailing_commas: true
+    avoid_redundant_argument_values: true
+    use_super_parameters: true

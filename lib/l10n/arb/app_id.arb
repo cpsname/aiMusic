@@ -1,0 +1,3546 @@
+{
+  "@@locale": "id",
+  "commonRetry": "Coba lagi",
+  "@commonRetry": {
+    "description": "Shared buttons and messages. Purpose: common retry."
+  },
+  "commonCancel": "Batal",
+  "@commonCancel": {
+    "description": "Shared buttons and messages. Purpose: common cancel."
+  },
+  "startupLoading": "Menyetel nada…",
+  "@startupLoading": {
+    "description": "Startup gate. Purpose: startup loading."
+  },
+  "commonErrorTitle": "Terjadi kesalahan",
+  "@commonErrorTitle": {
+    "description": "Shared buttons and messages. Purpose: common error title."
+  },
+  "updateRequiredTitle": "Pembaruan diperlukan",
+  "@updateRequiredTitle": {
+    "description": "Required app update. Purpose: update required title."
+  },
+  "updateRequiredMessage": "Versi baru diperlukan untuk melanjutkan.",
+  "@updateRequiredMessage": {
+    "description": "Required app update. Purpose: update required message."
+  },
+  "updateNow": "Perbarui sekarang",
+  "@updateNow": {
+    "description": "Required app update. Purpose: update now."
+  },
+  "maintenanceTitle": "Pemeliharaan terjadwal",
+  "@maintenanceTitle": {
+    "description": "Maintenance gate. Purpose: maintenance title."
+  },
+  "maintenanceResumeEstimate": "Diperkirakan kembali dalam sekitar {minutes} menit",
+  "@maintenanceResumeEstimate": {
+    "placeholders": {
+      "minutes": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Estimated waiting or processing duration in minutes."
+      }
+    },
+    "description": "Maintenance gate. Purpose: maintenance resume estimate."
+  },
+  "featureUnavailable": "Fitur ini untuk sementara tidak tersedia.",
+  "@featureUnavailable": {
+    "description": "Feature availability message. Purpose: feature unavailable."
+  },
+  "navProfile": "Profil",
+  "@navProfile": {
+    "description": "Application navigation. Purpose: nav profile."
+  },
+  "navStore": "Toko",
+  "@navStore": {
+    "description": "Application navigation. Purpose: nav store."
+  },
+  "navUpload": "Unggah",
+  "@navUpload": {
+    "description": "Application navigation. Purpose: nav upload."
+  },
+  "uploadTitle": "Unggahan",
+  "@uploadTitle": {
+    "description": "File upload screen. Purpose: upload title."
+  },
+  "uploadSubtitle": "Unggah langsung ke R2 dengan URL presigned, hashing, deduplikasi instan, dan progres.",
+  "@uploadSubtitle": {
+    "description": "File upload screen. Purpose: upload subtitle."
+  },
+  "uploadPick": "Pilih gambar & unggah",
+  "@uploadPick": {
+    "description": "File upload screen. Purpose: upload pick."
+  },
+  "uploadAgain": "Unggah lainnya",
+  "@uploadAgain": {
+    "description": "File upload screen. Purpose: upload again."
+  },
+  "uploadPhaseHashing": "Menghitung hash…",
+  "@uploadPhaseHashing": {
+    "description": "File upload screen. Purpose: upload phase hashing."
+  },
+  "uploadPhaseSigning": "Meminta tiket unggahan…",
+  "@uploadPhaseSigning": {
+    "description": "File upload screen. Purpose: upload phase signing."
+  },
+  "uploadPhaseUploading": "Mengunggah {percent}",
+  "@uploadPhaseUploading": {
+    "placeholders": {
+      "percent": {
+        "type": "String",
+        "description": "Complete percentage already formatted with intl for the UI locale, including the percent sign."
+      }
+    },
+    "description": "File upload screen. Purpose: upload phase uploading."
+  },
+  "uploadPhaseFinalizing": "Menyelesaikan…",
+  "@uploadPhaseFinalizing": {
+    "description": "File upload screen. Purpose: upload phase finalizing."
+  },
+  "uploadDone": "Terunggah.",
+  "@uploadDone": {
+    "description": "File upload screen. Purpose: upload done."
+  },
+  "uploadDedup": "Instan: file ini sudah ada di server.",
+  "@uploadDedup": {
+    "description": "File upload screen. Purpose: upload dedup."
+  },
+  "uploadOpenLink": "Lihat file",
+  "@uploadOpenLink": {
+    "description": "File upload screen. Purpose: upload open link."
+  },
+  "uploadFailed": "Gagal mengunggah.",
+  "@uploadFailed": {
+    "description": "File upload screen. Purpose: upload failed."
+  },
+  "uploadTooLarge": "File terlalu besar (maks. {limit} MB).",
+  "@uploadTooLarge": {
+    "placeholders": {
+      "limit": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Maximum upload size in megabytes."
+      }
+    },
+    "description": "File upload screen. Purpose: upload too large."
+  },
+  "uploadUnsupportedType": "Jenis file tidak didukung.",
+  "@uploadUnsupportedType": {
+    "description": "File upload screen. Purpose: upload unsupported type."
+  },
+  "profileGuestTitle": "Tamu",
+  "@profileGuestTitle": {
+    "description": "Account profile. Purpose: profile guest title."
+  },
+  "profileGuestSubtitle": "Masuk agar pembelianmu tetap tersimpan di semua perangkat.",
+  "@profileGuestSubtitle": {
+    "description": "Account profile. Purpose: profile guest subtitle."
+  },
+  "signIn": "Masuk",
+  "@signIn": {
+    "description": "Account actions. Purpose: sign in."
+  },
+  "signOut": "Keluar",
+  "@signOut": {
+    "description": "Account actions. Purpose: sign out."
+  },
+  "profileBalanceLabel": "Kredit",
+  "@profileBalanceLabel": {
+    "description": "Account profile. Purpose: profile balance label."
+  },
+  "profileAccountId": "ID Akun",
+  "@profileAccountId": {
+    "description": "Account profile. Purpose: profile account id."
+  },
+  "profileFeaturesLabel": "Manfaat aktif",
+  "@profileFeaturesLabel": {
+    "description": "Account profile. Purpose: profile features label."
+  },
+  "profileNoFeatures": "Belum ada manfaat aktif.",
+  "@profileNoFeatures": {
+    "description": "Account profile. Purpose: profile no features."
+  },
+  "profileSubscriptionLabel": "Langganan",
+  "@profileSubscriptionLabel": {
+    "description": "Account profile. Purpose: profile subscription label."
+  },
+  "profileManageSubscription": "Kelola langganan",
+  "@profileManageSubscription": {
+    "description": "Account profile. Purpose: profile manage subscription."
+  },
+  "subscriptionActive": "Aktif",
+  "@subscriptionActive": {
+    "description": "Subscription status. Purpose: subscription active."
+  },
+  "subscriptionInactive": "Tidak ada",
+  "@subscriptionInactive": {
+    "description": "Subscription status. Purpose: subscription inactive."
+  },
+  "profileDeleteAccount": "Hapus akun",
+  "@profileDeleteAccount": {
+    "description": "Account profile. Purpose: profile delete account."
+  },
+  "deleteAccountTitle": "Hapus akun ini?",
+  "@deleteAccountTitle": {
+    "description": "Account deletion confirmation and result. Purpose: delete account title."
+  },
+  "deleteAccountMessage": "Tindakan ini tidak dapat dibatalkan: akun ini beserta kredit dan catatan manfaatnya tidak akan dapat diakses lagi selamanya, lalu akun baru akan dibuat. Langganan app store yang aktif tidak dibatalkan dengan menghapus akun — kelola di pengaturan app store-mu, atau tautkan kembali nanti dengan Pulihkan pembelian.",
+  "@deleteAccountMessage": {
+    "description": "Account deletion confirmation and result. Purpose: delete account message."
+  },
+  "deleteAccountConfirm": "Hapus",
+  "@deleteAccountConfirm": {
+    "description": "Account deletion confirmation and result. Purpose: delete account confirm."
+  },
+  "deleteAccountWorking": "Menghapus akun…",
+  "@deleteAccountWorking": {
+    "description": "Account deletion confirmation and result. Purpose: delete account working."
+  },
+  "deleteAccountDone": "Akun dihapus.",
+  "@deleteAccountDone": {
+    "description": "Account deletion confirmation and result. Purpose: delete account done."
+  },
+  "profileMemberSince": "Anggota sejak {date}",
+  "@profileMemberSince": {
+    "placeholders": {
+      "date": {
+        "type": "DateTime",
+        "format": "yMMMd",
+        "description": "Account creation date, converted to local time."
+      }
+    },
+    "description": "Account profile. Purpose: profile member since."
+  },
+  "loginTitle": "Masuk",
+  "@loginTitle": {
+    "description": "Sign-in sheet. Purpose: login title."
+  },
+  "loginUsername": "Nama pengguna",
+  "@loginUsername": {
+    "description": "Sign-in sheet. Purpose: login username."
+  },
+  "loginPassword": "Kata sandi",
+  "@loginPassword": {
+    "description": "Sign-in sheet. Purpose: login password."
+  },
+  "loginSubmit": "Masuk",
+  "@loginSubmit": {
+    "description": "Sign-in sheet. Purpose: login submit."
+  },
+  "paywallTitle": "Dapatkan lagu lengkap",
+  "@paywallTitle": {
+    "description": "Purchase screen. Purpose: paywall title."
+  },
+  "paywallSubtitle": "Ubah pratinjaumu menjadi lagu 2 menit lengkap dengan lirik — milikmu untuk diunduh dan digunakan.",
+  "@paywallSubtitle": {
+    "description": "Purchase screen. Purpose: paywall subtitle."
+  },
+  "paywallRestore": "Pulihkan pembelian",
+  "@paywallRestore": {
+    "description": "Purchase screen. Purpose: paywall restore."
+  },
+  "paywallAutoRenewNotice": "Pembayaran ditagihkan ke Akun Apple-mu saat konfirmasi. Langganan diperpanjang secara otomatis dengan harga dan periode yang sama kecuali dibatalkan setidaknya 24 jam sebelum periode saat ini berakhir. Uji coba gratis akan berubah menjadi langganan berbayar setelah berakhir. Kelola atau batalkan kapan saja di pengaturan akun App Store-mu.",
+  "@paywallAutoRenewNotice": {
+    "description": "Purchase screen. Purpose: paywall auto renew notice."
+  },
+  "paywallContinue": "Lanjutkan",
+  "@paywallContinue": {
+    "description": "Purchase screen. Purpose: paywall continue."
+  },
+  "paywallFreeTrial": "Uji coba gratis",
+  "@paywallFreeTrial": {
+    "description": "Purchase screen. Purpose: paywall free trial."
+  },
+  "paywallOffer": "Penawaran",
+  "@paywallOffer": {
+    "description": "Purchase screen. Purpose: paywall offer."
+  },
+  "paywallManage": "Kelola",
+  "@paywallManage": {
+    "description": "Purchase screen. Purpose: paywall manage."
+  },
+  "paywallTermsOfUse": "Ketentuan Penggunaan",
+  "@paywallTermsOfUse": {
+    "description": "Purchase screen. Purpose: paywall terms of use."
+  },
+  "paywallPrivacyPolicy": "Kebijakan Privasi",
+  "@paywallPrivacyPolicy": {
+    "description": "Purchase screen. Purpose: paywall privacy policy."
+  },
+  "paywallSubscriptionTerms": "Ketentuan Langganan",
+  "@paywallSubscriptionTerms": {
+    "description": "Purchase screen. Purpose: paywall subscription terms."
+  },
+  "commonLinkError": "Tidak dapat membuka tautan.",
+  "@commonLinkError": {
+    "description": "Shared buttons and messages. Purpose: common link error."
+  },
+  "commonError": "Terjadi kesalahan.",
+  "@commonError": {
+    "description": "Shared buttons and messages. Purpose: common error."
+  },
+  "commonNetworkError": "Kesalahan jaringan — periksa koneksimu dan coba lagi.",
+  "@commonNetworkError": {
+    "description": "Shared buttons and messages. Purpose: common network error."
+  },
+  "commonOfflineError": "Sepertinya kamu sedang offline. Periksa koneksimu dan coba lagi.",
+  "@commonOfflineError": {
+    "description": "Shared buttons and messages. Purpose: common offline error."
+  },
+  "networkErrorTitle": "Masalah koneksi",
+  "@networkErrorTitle": {
+    "description": "Network failure screen. Purpose: network error title."
+  },
+  "configErrorTitle": "Masalah konfigurasi app",
+  "@configErrorTitle": {
+    "description": "Startup configuration failure. Purpose: config error title."
+  },
+  "configErrorMessage": "Versi ini tidak dapat terhubung ke layanan kami. Perbarui app dari App Store, atau instal ulang. Jika masalah berlanjut, hubungi dukungan.",
+  "@configErrorMessage": {
+    "description": "Startup configuration failure. Purpose: config error message."
+  },
+  "commonAuthError": "Sesimu telah berakhir — silakan masuk lagi.",
+  "@commonAuthError": {
+    "description": "Shared buttons and messages. Purpose: common auth error."
+  },
+  "paywallProductsErrorTitle": "Tidak dapat memuat produk",
+  "@paywallProductsErrorTitle": {
+    "description": "Purchase screen. Purpose: paywall products error title."
+  },
+  "paywallNoProducts": "Belum ada produk yang tersedia saat ini.",
+  "@paywallNoProducts": {
+    "description": "Purchase screen. Purpose: paywall no products."
+  },
+  "paywallPurchaseSuccess": "Pembelian selesai — selamat menikmati!",
+  "@paywallPurchaseSuccess": {
+    "description": "Purchase screen. Purpose: paywall purchase success."
+  },
+  "paywallProcessing": "Memproses pembelianmu…",
+  "@paywallProcessing": {
+    "description": "Purchase screen. Purpose: paywall processing."
+  },
+  "paywallVerifying": "Memverifikasi pembelianmu…",
+  "@paywallVerifying": {
+    "description": "Purchase screen. Purpose: paywall verifying."
+  },
+  "paywallPurchaseFailed": "Pembelian tidak dapat diselesaikan.",
+  "@paywallPurchaseFailed": {
+    "description": "Purchase screen. Purpose: paywall purchase failed."
+  },
+  "paywallRestoreStarted": "Memulihkan pembelianmu…",
+  "@paywallRestoreStarted": {
+    "description": "Purchase screen. Purpose: paywall restore started."
+  },
+  "paywallRestoreSuccess": "{count, plural, one{{count} pembelian dipulihkan.} other{{count} pembelian dipulihkan.}}",
+  "@paywallRestoreSuccess": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Number of purchases successfully restored through StoreKit."
+      }
+    },
+    "description": "Purchase screen. Purpose: paywall restore success."
+  },
+  "paywallRestoreNothing": "Tidak ada pembelian untuk dipulihkan.",
+  "@paywallRestoreNothing": {
+    "description": "Purchase screen. Purpose: paywall restore nothing."
+  },
+  "paywallDeferred": "Menunggu persetujuan — kami akan menyelesaikannya setelah disetujui.",
+  "@paywallDeferred": {
+    "description": "Purchase screen. Purpose: paywall deferred."
+  },
+  "paywallAlreadySubscribed": "Kamu sudah berlangganan.",
+  "@paywallAlreadySubscribed": {
+    "description": "Purchase screen. Purpose: paywall already subscribed."
+  },
+  "paywallBillingRetry": "Perbarui metode pembayaranmu agar langganan tetap aktif.",
+  "@paywallBillingRetry": {
+    "description": "Purchase screen. Purpose: paywall billing retry."
+  },
+  "paywallTrial": "Uji coba gratis {days} hari",
+  "@paywallTrial": {
+    "placeholders": {
+      "days": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Trial duration in days reported by StoreKit."
+      }
+    },
+    "description": "Purchase screen. Purpose: paywall trial."
+  },
+  "cycleOneTime": "sekali bayar",
+  "@cycleOneTime": {
+    "description": "Subscription billing period. Purpose: cycle one time."
+  },
+  "cycleWeekly": "/ minggu",
+  "@cycleWeekly": {
+    "description": "Subscription billing period. Purpose: cycle weekly."
+  },
+  "cycleMonthly": "/ bulan",
+  "@cycleMonthly": {
+    "description": "Subscription billing period. Purpose: cycle monthly."
+  },
+  "cycleQuarterly": "/ 3 bulan",
+  "@cycleQuarterly": {
+    "description": "Subscription billing period. Purpose: cycle quarterly."
+  },
+  "cycleSemiAnnual": "/ 6 bulan",
+  "@cycleSemiAnnual": {
+    "description": "Subscription billing period. Purpose: cycle semi annual."
+  },
+  "cycleAnnual": "/ tahun",
+  "@cycleAnnual": {
+    "description": "Subscription billing period. Purpose: cycle annual."
+  },
+  "cycleLifetime": "seumur hidup",
+  "@cycleLifetime": {
+    "description": "Subscription billing period. Purpose: cycle lifetime."
+  },
+  "navCreate": "Buat",
+  "@navCreate": {
+    "description": "Application navigation. Purpose: nav create."
+  },
+  "navLibrary": "Koleksi",
+  "@navLibrary": {
+    "description": "Application navigation. Purpose: nav library."
+  },
+  "navSettings": "Pengaturan",
+  "@navSettings": {
+    "description": "Application navigation. Purpose: nav settings."
+  },
+  "commonContinue": "Lanjutkan",
+  "@commonContinue": {
+    "description": "Shared buttons and messages. Purpose: common continue."
+  },
+  "commonBack": "Kembali",
+  "@commonBack": {
+    "description": "Shared buttons and messages. Purpose: common back."
+  },
+  "createTitle": "Lagu ini untuk siapa?",
+  "@createTitle": {
+    "description": "Song creation screen. Purpose: create title."
+  },
+  "occasionBirthday": "Ulang Tahun",
+  "@occasionBirthday": {
+    "description": "Occasion picker. Purpose: occasion birthday."
+  },
+  "occasionBirthdayHint": "Lagu ceria untuk hari istimewanya",
+  "@occasionBirthdayHint": {
+    "description": "Occasion picker. Purpose: occasion birthday hint."
+  },
+  "occasionAnniversary": "Hari Jadi",
+  "@occasionAnniversary": {
+    "description": "Occasion picker. Purpose: occasion anniversary."
+  },
+  "occasionAnniversaryHint": "Rayakan kisah kalian berdua",
+  "@occasionAnniversaryHint": {
+    "description": "Occasion picker. Purpose: occasion anniversary hint."
+  },
+  "occasionConfession": "Ungkapan Cinta",
+  "@occasionConfession": {
+    "description": "Occasion picker. Purpose: occasion confession."
+  },
+  "occasionConfessionHint": "Ungkapkan isi hatimu",
+  "@occasionConfessionHint": {
+    "description": "Occasion picker. Purpose: occasion confession hint."
+  },
+  "occasionWedding": "Pernikahan",
+  "@occasionWedding": {
+    "description": "Occasion picker. Purpose: occasion wedding."
+  },
+  "occasionWeddingHint": "Lagu untuk momen selamanya",
+  "@occasionWeddingHint": {
+    "description": "Occasion picker. Purpose: occasion wedding hint."
+  },
+  "occasionMemorial": "Kenangan",
+  "@occasionMemorial": {
+    "description": "Occasion picker. Purpose: occasion memorial."
+  },
+  "occasionMemorialHint": "Kenang seseorang yang kamu sayangi",
+  "@occasionMemorialHint": {
+    "description": "Occasion picker. Purpose: occasion memorial hint."
+  },
+  "occasionFestival": "Hari Raya",
+  "@occasionFestival": {
+    "description": "Occasion picker. Purpose: occasion festival."
+  },
+  "occasionFestivalHint": "Ucapan hangat untuk musim istimewa",
+  "@occasionFestivalHint": {
+    "description": "Occasion picker. Purpose: occasion festival hint."
+  },
+  "occasionBrand": "Jingle Brand",
+  "@occasionBrand": {
+    "description": "Occasion picker. Purpose: occasion brand."
+  },
+  "occasionBrandHint": "Nada catchy untuk brand-mu",
+  "@occasionBrandHint": {
+    "description": "Occasion picker. Purpose: occasion brand hint."
+  },
+  "occasionSoundtrack": "Soundtrack Video",
+  "@occasionSoundtrack": {
+    "description": "Occasion picker. Purpose: occasion soundtrack."
+  },
+  "occasionSoundtrackHint": "Musik yang pas dengan ceritamu",
+  "@occasionSoundtrackHint": {
+    "description": "Occasion picker. Purpose: occasion soundtrack hint."
+  },
+  "festivalNewYear": "Tahun Baru",
+  "@festivalNewYear": {
+    "description": "Festival creation screen. Purpose: festival new year."
+  },
+  "festivalThanksgiving": "Thanksgiving",
+  "@festivalThanksgiving": {
+    "description": "Festival creation screen. Purpose: festival thanksgiving."
+  },
+  "festivalDiwali": "Diwali",
+  "@festivalDiwali": {
+    "description": "Festival creation screen. Purpose: festival diwali."
+  },
+  "festivalCarnival": "Karnaval",
+  "@festivalCarnival": {
+    "description": "Festival creation screen. Purpose: festival carnival."
+  },
+  "festivalEid": "Lebaran",
+  "@festivalEid": {
+    "description": "Festival creation screen. Purpose: festival eid."
+  },
+  "festivalLunarNewYear": "Imlek",
+  "@festivalLunarNewYear": {
+    "description": "Festival creation screen. Purpose: festival lunar new year."
+  },
+  "regionTitle": "Di mana lagu ini akan didengar?",
+  "@regionTitle": {
+    "description": "Country and lyrics-language sheet. Purpose: region title."
+  },
+  "regionSearchHint": "Cari negara",
+  "@regionSearchHint": {
+    "description": "Country and lyrics-language sheet. Purpose: region search hint."
+  },
+  "regionLanguageSheetTitle": "Bahasa lirik",
+  "@regionLanguageSheetTitle": {
+    "description": "Country and lyrics-language sheet. Purpose: region language sheet title."
+  },
+  "countryUS": "Amerika Serikat",
+  "@countryUS": {
+    "description": "Country name in region picker. Purpose: country u s."
+  },
+  "countryGB": "Inggris",
+  "@countryGB": {
+    "description": "Country name in region picker. Purpose: country g b."
+  },
+  "countryCA": "Kanada",
+  "@countryCA": {
+    "description": "Country name in region picker. Purpose: country c a."
+  },
+  "countryAU": "Australia",
+  "@countryAU": {
+    "description": "Country name in region picker. Purpose: country a u."
+  },
+  "countryDE": "Jerman",
+  "@countryDE": {
+    "description": "Country name in region picker. Purpose: country d e."
+  },
+  "countryFR": "Prancis",
+  "@countryFR": {
+    "description": "Country name in region picker. Purpose: country f r."
+  },
+  "countryJP": "Jepang",
+  "@countryJP": {
+    "description": "Country name in region picker. Purpose: country j p."
+  },
+  "countryKR": "Korea Selatan",
+  "@countryKR": {
+    "description": "Country name in region picker. Purpose: country k r."
+  },
+  "countryBR": "Brasil",
+  "@countryBR": {
+    "description": "Country name in region picker. Purpose: country b r."
+  },
+  "countryMX": "Meksiko",
+  "@countryMX": {
+    "description": "Country name in region picker. Purpose: country m x."
+  },
+  "countryIN": "India",
+  "@countryIN": {
+    "description": "Country name in region picker. Purpose: country i n."
+  },
+  "countryID": "Indonesia",
+  "@countryID": {
+    "description": "Country name in region picker. Purpose: country i d."
+  },
+  "countryVN": "Vietnam",
+  "@countryVN": {
+    "description": "Country name in region picker. Purpose: country v n."
+  },
+  "countryTR": "Turki",
+  "@countryTR": {
+    "description": "Country name in region picker. Purpose: country t r."
+  },
+  "languageEn": "Inggris",
+  "@languageEn": {
+    "description": "Lyrics-language display name. Purpose: language en."
+  },
+  "languageFr": "Prancis",
+  "@languageFr": {
+    "description": "Lyrics-language display name. Purpose: language fr."
+  },
+  "languageDe": "Jerman",
+  "@languageDe": {
+    "description": "Lyrics-language display name. Purpose: language de."
+  },
+  "languageJa": "Jepang",
+  "@languageJa": {
+    "description": "Lyrics-language display name. Purpose: language ja."
+  },
+  "languageKo": "Korea",
+  "@languageKo": {
+    "description": "Lyrics-language display name. Purpose: language ko."
+  },
+  "languagePtBR": "Portugis (Brasil)",
+  "@languagePtBR": {
+    "description": "Lyrics-language display name. Purpose: language pt b r."
+  },
+  "languageEsMX": "Spanyol (Meksiko)",
+  "@languageEsMX": {
+    "description": "Lyrics-language display name. Purpose: language es m x."
+  },
+  "languageHi": "Hindi",
+  "@languageHi": {
+    "description": "Lyrics-language display name. Purpose: language hi."
+  },
+  "languageId": "Indonesia",
+  "@languageId": {
+    "description": "Lyrics-language display name. Purpose: language id."
+  },
+  "languageVi": "Vietnam",
+  "@languageVi": {
+    "description": "Lyrics-language display name. Purpose: language vi."
+  },
+  "languageTr": "Turki",
+  "@languageTr": {
+    "description": "Lyrics-language display name. Purpose: language tr."
+  },
+  "languageZhHans": "Tionghoa (Sederhana)",
+  "@languageZhHans": {
+    "description": "Lyrics-language display name. Purpose: language zh hans."
+  },
+  "languageZhHant": "Tionghoa (Tradisional)",
+  "@languageZhHant": {
+    "description": "Lyrics-language display name. Purpose: language zh hant."
+  },
+  "inputNameLabel": "Namanya",
+  "@inputNameLabel": {
+    "description": "Song creation form. Purpose: input name label."
+  },
+  "inputNameOptionalLabel": "Nama (opsional)",
+  "@inputNameOptionalLabel": {
+    "description": "Song creation form. Purpose: input name optional label."
+  },
+  "inputNameHint": "mis. Alex",
+  "@inputNameHint": {
+    "description": "Song creation form. Purpose: input name hint."
+  },
+  "inputKeywordsLabel": "Tiga kata tentang dia",
+  "@inputKeywordsLabel": {
+    "description": "Song creation form. Purpose: input keywords label."
+  },
+  "inputLyricsHint": "[Verse] …\n[Chorus] …",
+  "@inputLyricsHint": {
+    "description": "Song creation form. Purpose: input lyrics hint."
+  },
+  "lyricsCounter": "{count} / {limit}",
+  "@lyricsCounter": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Current number of Unicode characters in the lyrics editor."
+      },
+      "limit": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Maximum allowed lyrics characters: 600 for CJK or 1200 otherwise."
+      }
+    },
+    "description": "Own-lyrics editor. Purpose: lyrics counter."
+  },
+  "inputLyricsOwnership": "Lirik ini milik saya atau saya berhak menggunakannya",
+  "@inputLyricsOwnership": {
+    "description": "Song creation form. Purpose: input lyrics ownership."
+  },
+  "issueRecipientMissing": "Tambahkan namanya.",
+  "@issueRecipientMissing": {
+    "description": "Creation form validation; explain how to correct the input. Purpose: issue recipient missing."
+  },
+  "issueRecipientTooLong": "Nama maksimal 24 karakter.",
+  "@issueRecipientTooLong": {
+    "description": "Creation form validation; explain how to correct the input. Purpose: issue recipient too long."
+  },
+  "issueBriefMissing": "Ceritakan tentang lagunya — beberapa kata, lirik, atau foto.",
+  "@issueBriefMissing": {
+    "description": "Creation validation (no inspiration card picked, nothing to write from): ask for a description, keywords, lyrics or photos. Also shown when the server answers 40001 details.prompt."
+  },
+  "issueDescriptionMissing": "Ide ini butuh kata-katamu — tulis satu kalimat tentang lagunya.",
+  "@issueDescriptionMissing": {
+    "description": "Shown when the server answers 40001 details.prompt.description: the picked inspiration needs the user's own words."
+  },
+  "generatingBackToEdit": "Kembali mengedit",
+  "@generatingBackToEdit": {
+    "description": "Generating page, failure or rejected state: returns to the create home with the draft kept, to fix it."
+  },
+  "issueKeywordTooLong": "Setiap kata maksimal 20 karakter.",
+  "@issueKeywordTooLong": {
+    "description": "Creation form validation; explain how to correct the input. Purpose: issue keyword too long."
+  },
+  "issueTooManyKeywords": "Gunakan maksimal tiga kata.",
+  "@issueTooManyKeywords": {
+    "description": "Creation form validation; explain how to correct the input. Purpose: issue too many keywords."
+  },
+  "issueArtistName": "Nama artis tidak dapat digunakan — gambarkan perasaannya saja.",
+  "@issueArtistName": {
+    "description": "Creation form validation; explain how to correct the input. Purpose: issue artist name."
+  },
+  "issueStyleImitation": "Kami tidak bisa meniru penyanyi atau band. Gambarkan suasananya saja.",
+  "@issueStyleImitation": {
+    "description": "Creation form validation; explain how to correct the input. Purpose: issue style imitation."
+  },
+  "issueLyricsTooLong": "Lirik maksimal {limit} karakter.",
+  "@issueLyricsTooLong": {
+    "placeholders": {
+      "limit": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Maximum number of lyrics characters permitted for this script."
+      }
+    },
+    "description": "Creation form validation; explain how to correct the input. Purpose: issue lyrics too long."
+  },
+  "issueLyricsNotOriginal": "Lirik ini mirip lagu yang sudah ada. Silakan tulis lirikmu sendiri.",
+  "@issueLyricsNotOriginal": {
+    "description": "Creation form validation; explain how to correct the input. Purpose: issue lyrics not original."
+  },
+  "issueLyricsOwnership": "Konfirmasikan bahwa kamu berhak menggunakan lirik ini.",
+  "@issueLyricsOwnership": {
+    "description": "Creation form validation; explain how to correct the input. Purpose: issue lyrics ownership."
+  },
+  "issueTooManyPhotos": "Pilih maksimal 10 foto.",
+  "@issueTooManyPhotos": {
+    "description": "Creation form validation; explain how to correct the input. Purpose: issue too many photos."
+  },
+  "photosTitle": "Pilih beberapa foto",
+  "@photosTitle": {
+    "description": "Photo selection. Purpose: photos title."
+  },
+  "photosCount": "{count} / {max}",
+  "@photosCount": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Number of selected reference photos."
+      },
+      "max": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Maximum selectable reference photos."
+      }
+    },
+    "description": "Photo selection. Purpose: photos count."
+  },
+  "photosPrivacy": "Foto hanya digunakan sekali untuk menulis lagu dan dihapus dari server kami dalam 24 jam.",
+  "@photosPrivacy": {
+    "description": "Photo selection. Purpose: photos privacy."
+  },
+  "photosAdd": "Tambahkan foto",
+  "@photosAdd": {
+    "description": "Photo selection. Purpose: photos add."
+  },
+  "photosCreate": "Buat dari foto",
+  "@photosCreate": {
+    "description": "Photo selection. Purpose: photos create."
+  },
+  "photosEmpty": "Pilih 1–10 foto momen tersebut.",
+  "@photosEmpty": {
+    "description": "Photo selection. Purpose: photos empty."
+  },
+  "generatingStepPolishing": "Merapikan kata-katamu di iPhone ini…",
+  "@generatingStepPolishing": {
+    "description": "Song generation progress and cancellation. Purpose: generating step polishing."
+  },
+  "generatingStepUploading": "Mengirim fotomu…",
+  "@generatingStepUploading": {
+    "description": "Song generation progress and cancellation. Purpose: generating step uploading."
+  },
+  "generatingStepSubmitting": "Mengirim ke studio…",
+  "@generatingStepSubmitting": {
+    "description": "Song generation progress and cancellation. Purpose: generating step submitting."
+  },
+  "errorSafetyBlocked": "Kami tidak bisa membuat lagu ini — coba kata lain, dan jangan gunakan nama artis.",
+  "@errorSafetyBlocked": {
+    "description": "PRD 6.5 SAFETY_BLOCKED"
+  },
+  "errorQuotaExhausted": "Lagu bulan ini sudah terpakai semua. Tambah paket lagu atau upgrade.",
+  "@errorQuotaExhausted": {
+    "description": "PRD 6.5 QUOTA_EXHAUSTED"
+  },
+  "errorUpstreamTimeout": "Butuh waktu lebih lama dari biasanya. Kami akan terus mencoba dan memberi tahu kamu.",
+  "@errorUpstreamTimeout": {
+    "description": "PRD 6.5 UPSTREAM_TIMEOUT"
+  },
+  "errorUpstreamRateLimited": "Banyak lagu sedang dibuat saat ini. Lagumu sudah masuk antrean.",
+  "@errorUpstreamRateLimited": {
+    "description": "PRD 6.5 UPSTREAM_RATE_LIMITED"
+  },
+  "errorAttestFailed": "Silakan perbarui Songlet dari App Store.",
+  "@errorAttestFailed": {
+    "description": "PRD 6.5 ATTEST_FAILED"
+  },
+  "errorImageRejected": "Salah satu foto ini tidak dapat digunakan. Coba foto lain.",
+  "@errorImageRejected": {
+    "description": "PRD 6.5 IMAGE_REJECTED"
+  },
+  "errorNetworkOffline": "Kamu sedang offline. Koleksimu tetap bisa diakses.",
+  "@errorNetworkOffline": {
+    "description": "PRD 6.5 NETWORK_OFFLINE"
+  },
+  "errorDownloadLocked": "Lagu ini tidak dapat diunduh — pembelian yang digunakan untuk membuatnya telah dikembalikan dananya atau paketmu telah berakhir. Kamu masih bisa memutarnya.",
+  "@errorDownloadLocked": {
+    "description": "DOWNLOAD_LOCKED (PRD 8.4 refund)"
+  },
+  "errorJobAlreadyFinished": "Sudah selesai — tidak ada yang perlu dibatalkan.",
+  "@errorJobAlreadyFinished": {
+    "description": "Cancel lost the race: the job had already finished (JOB_ALREADY_FINISHED)."
+  },
+  "errorMvSongNotReady": "Lagu ini belum siap untuk dijadikan video.",
+  "@errorMvSongNotReady": {
+    "description": "MV_SONG_NOT_READY (contract v1.1)"
+  },
+  "errorMvSongTooLong": "Lagu ini terlalu panjang untuk video penuh — coba video reff.",
+  "@errorMvSongTooLong": {
+    "description": "MV_SONG_TOO_LONG"
+  },
+  "errorMvSongExpired": "Lagu ini sudah kedaluwarsa. Buat lagi untuk membuat video.",
+  "@errorMvSongExpired": {
+    "description": "MV_SONG_EXPIRED"
+  },
+  "errorMvNotFound": "Video ini sudah tidak tersedia.",
+  "@errorMvNotFound": {
+    "description": "MV_NOT_FOUND"
+  },
+  "errorMvPhotosExpired": "Foto itu sudah kedaluwarsa — pilih lagi.",
+  "@errorMvPhotosExpired": {
+    "description": "MV_PHOTOS_EXPIRED"
+  },
+  "errorMvRenderFailed": "Kami tidak bisa menyelesaikan video ini. Kreditmu sudah kembali — coba lagi.",
+  "@errorMvRenderFailed": {
+    "description": "MV_RENDER_FAILED (job level, refunded)"
+  },
+  "mvHubTitle": "Buat video",
+  "@mvHubTitle": {
+    "description": "P19 hub title"
+  },
+  "mvHubSubtitle": "Ubah “{title}” menjadi video musik.",
+  "@mvHubSubtitle": {
+    "description": "P19 hub subtitle; {title} = song title",
+    "placeholders": {
+      "title": {
+        "type": "String",
+        "description": "Localized song title; may contain a user-provided recipient name."
+      }
+    }
+  },
+  "mvLevelLyricVideo": "Video lirik",
+  "@mvLevelLyricVideo": {
+    "description": "Level: lyric video"
+  },
+  "mvLevelLyricHint": "Satu adegan diam dengan lirikmu",
+  "@mvLevelLyricHint": {
+    "description": "Level hint: lyric video"
+  },
+  "mvLevelChorus": "Video reff",
+  "@mvLevelChorus": {
+    "description": "Level: chorus video"
+  },
+  "mvLevelChorusHint": "30 detik reff-mu, direkam AI",
+  "@mvLevelChorusHint": {
+    "description": "Level hint: chorus video"
+  },
+  "mvLevelFull": "Video lagu penuh",
+  "@mvLevelFull": {
+    "description": "Level: full-song video"
+  },
+  "mvLevelFullHint": "Seluruh lagu, adegan demi adegan",
+  "@mvLevelFullHint": {
+    "description": "Level hint: full-song video"
+  },
+  "mvPriceCredits": "{credits, plural, other{{credits} kredit}}",
+  "@mvPriceCredits": {
+    "description": "Price line; {credits} = integer",
+    "placeholders": {
+      "credits": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Number of video credits, not a monetary price."
+      }
+    }
+  },
+  "mvAvailableCredits": "{credits, plural, other{Kamu punya {credits} kredit}}",
+  "@mvAvailableCredits": {
+    "description": "Credits the account has; {credits} = integer",
+    "placeholders": {
+      "credits": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Number of video credits, not a monetary price."
+      }
+    }
+  },
+  "mvGapCredits": "{credits, plural, other{Kurang {credits} lagi}}",
+  "@mvGapCredits": {
+    "description": "Missing credits; {credits} = integer",
+    "placeholders": {
+      "credits": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Number of video credits, not a monetary price."
+      }
+    }
+  },
+  "mvEstimating": "Memeriksa harga…",
+  "@mvEstimating": {
+    "description": "While the price is fetched"
+  },
+  "mvOptionsHeader": "Opsi",
+  "@mvOptionsHeader": {
+    "description": "P19 options section header"
+  },
+  "mvAspectLabel": "Format",
+  "@mvAspectLabel": {
+    "description": "Aspect ratio option"
+  },
+  "mvAspectPortrait": "Potret",
+  "@mvAspectPortrait": {
+    "description": "9:16"
+  },
+  "mvAspectLandscape": "Lanskap",
+  "@mvAspectLandscape": {
+    "description": "16:9"
+  },
+  "mvAspectSquare": "Persegi",
+  "@mvAspectSquare": {
+    "description": "1:1"
+  },
+  "mvQualityLabel": "Kualitas",
+  "@mvQualityLabel": {
+    "description": "Quality option"
+  },
+  "mvQualityStandard": "Standar",
+  "@mvQualityStandard": {
+    "description": "quality standard"
+  },
+  "mvQualityHigh": "Tinggi",
+  "@mvQualityHigh": {
+    "description": "quality high"
+  },
+  "mvSubtitlesLabel": "Lirik di layar",
+  "@mvSubtitlesLabel": {
+    "description": "Burn lyrics into the video (switch)"
+  },
+  "mvPhotosLabel": "Foto referensi",
+  "@mvPhotosLabel": {
+    "description": "Reference photos row"
+  },
+  "mvPhotosHint": "Untuk suasana dan warna — wajah tidak digunakan",
+  "@mvPhotosHint": {
+    "description": "Reference photos hint (no face driving in V1)"
+  },
+  "mvPhotosCount": "{count, plural, other{{count} foto}}",
+  "@mvPhotosCount": {
+    "description": "Picked photos count; {count} = integer",
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Number of selected video reference photos."
+      }
+    }
+  },
+  "mvChorusLabel": "Reff",
+  "@mvChorusLabel": {
+    "description": "Chorus window row (chorus level only)"
+  },
+  "mvChorusAuto": "Ditemukan otomatis",
+  "@mvChorusAuto": {
+    "description": "Chorus window: automatic"
+  },
+  "mvChorusCustom": "Pilih momen",
+  "@mvChorusCustom": {
+    "description": "Chorus window: chosen by the user"
+  },
+  "mvChorusRange": "{start} – {end}",
+  "@mvChorusRange": {
+    "description": "Chosen chorus window; {start} and {end} are m:ss clock labels",
+    "placeholders": {
+      "start": {
+        "type": "String",
+        "description": "Beginning of the selected chorus, formatted as a media duration."
+      },
+      "end": {
+        "type": "String",
+        "description": "End of the selected chorus, formatted as a media duration."
+      }
+    }
+  },
+  "mvCreate": "Buat video",
+  "@mvCreate": {
+    "description": "P19 primary action"
+  },
+  "mvBuyPack": "Dapatkan paket dan buat",
+  "@mvBuyPack": {
+    "description": "P19 primary action when credits are missing (opens the paywall on the pack)"
+  },
+  "mvSongLocked": "Lagumu disimpan untuk video.",
+  "@mvSongLocked": {
+    "description": "Note that the song was saved for the video (song_locked)"
+  },
+  "mvGeneratingTitle": "Membuat videomu…",
+  "@mvGeneratingTitle": {
+    "description": "P20 title"
+  },
+  "mvStageQueued": "Menunggu mulai",
+  "@mvStageQueued": {
+    "description": "Stage: queued"
+  },
+  "mvStageSlicing": "Memilih momen",
+  "@mvStageSlicing": {
+    "description": "Stage: slicing"
+  },
+  "mvStageStoryboarding": "Menulis storyboard",
+  "@mvStageStoryboarding": {
+    "description": "Stage: storyboarding"
+  },
+  "mvStageKeyframing": "Melukis adegan",
+  "@mvStageKeyframing": {
+    "description": "Stage: keyframing"
+  },
+  "mvStageRendering": "Merekam adegan",
+  "@mvStageRendering": {
+    "description": "Stage: rendering"
+  },
+  "mvStageAssembling": "Menyunting",
+  "@mvStageAssembling": {
+    "description": "Stage: assembling"
+  },
+  "mvStageDone": "Selesai",
+  "@mvStageDone": {
+    "description": "Stage: done"
+  },
+  "mvScenes": "Adegan {done} dari {total}",
+  "@mvScenes": {
+    "description": "Scene progress; {done} and {total} = integers",
+    "placeholders": {
+      "done": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Number of completed video scenes."
+      },
+      "total": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Total number of video scenes."
+      }
+    }
+  },
+  "mvUsuallyMinutes": "Biasanya sekitar {minutes} menit",
+  "@mvUsuallyMinutes": {
+    "description": "ETA caption; {minutes} = integer",
+    "placeholders": {
+      "minutes": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Estimated waiting or processing duration in minutes."
+      }
+    }
+  },
+  "mvCancelRequested": "Berhenti setelah adegan ini…",
+  "@mvCancelRequested": {
+    "description": "Banner after a cancel was acknowledged while rendering"
+  },
+  "mvCancelTitle": "Hentikan video ini?",
+  "@mvCancelTitle": {
+    "description": "Cancel dialog title"
+  },
+  "mvCancelQueued": "Belum dimulai, jadi tidak ada yang terpakai.",
+  "@mvCancelQueued": {
+    "description": "Cancel dialog body while queued"
+  },
+  "mvCancelStarted": "Sudah dimulai. Adegan yang selesai ditagih; sisanya dikembalikan.",
+  "@mvCancelStarted": {
+    "description": "Cancel dialog body while rendering (partial settlement)"
+  },
+  "mvCancelConfirm": "Hentikan video",
+  "@mvCancelConfirm": {
+    "description": "Cancel dialog confirm"
+  },
+  "mvCancelled": "Video dihentikan",
+  "@mvCancelled": {
+    "description": "Toast after a cancel was acknowledged"
+  },
+  "mvCancelledRefunded": "Video dihentikan — tidak ada yang terpakai",
+  "@mvCancelledRefunded": {
+    "description": "Toast after a queued cancel (full refund)"
+  },
+  "mvNothing": "Tidak ada video yang sedang dibuat.",
+  "@mvNothing": {
+    "description": "P20 when no video is in flight"
+  },
+  "mvQuotaTitle": "Kredit tidak cukup",
+  "@mvQuotaTitle": {
+    "description": "P20 credit-gap headline"
+  },
+  "mvAiLabelBurnedIn": "Dibuat AI — lencana adalah bagian dari video",
+  "@mvAiLabelBurnedIn": {
+    "description": "P21 explicit disclosure under the video"
+  },
+  "mvSave": "Simpan ke Foto",
+  "@mvSave": {
+    "description": "P21 save to Photos"
+  },
+  "mvSaveFiles": "Simpan ke File",
+  "@mvSaveFiles": {
+    "description": "P21 save to Files"
+  },
+  "mvShareText": "Aku membuat video musik ini dengan Songlet 🎬",
+  "@mvShareText": {
+    "description": "Share sheet text for the video"
+  },
+  "mvMissing": "Video ini sudah tidak ada di perangkat ini.",
+  "@mvMissing": {
+    "description": "P21 when the file is gone"
+  },
+  "mvDeleteTitle": "Hapus video ini?",
+  "@mvDeleteTitle": {
+    "description": "Delete dialog title"
+  },
+  "mvDeleteBody": "Dihapus dari perangkat ini.",
+  "@mvDeleteBody": {
+    "description": "Delete dialog body"
+  },
+  "mvDeleted": "Video dihapus",
+  "@mvDeleted": {
+    "description": "Toast after delete"
+  },
+  "mvProvenance": "Dibuat dengan Google Lyria 3 dan model video AI · Dibuat AI",
+  "@mvProvenance": {
+    "description": "P21 footnote"
+  },
+  "detailVideos": "Video",
+  "@detailVideos": {
+    "description": "P13 section header"
+  },
+  "detailMakeVideo": "Buat video",
+  "@detailMakeVideo": {
+    "description": "P13 / P09 make-a-video action"
+  },
+  "mvStatusReady": "Siap",
+  "@mvStatusReady": {
+    "description": "Video row status"
+  },
+  "mvStatusPending": "Dibuat…",
+  "@mvStatusPending": {
+    "description": "Video row status"
+  },
+  "mvStatusFailed": "Tidak selesai",
+  "@mvStatusFailed": {
+    "description": "Video row status"
+  },
+  "mvPackTitle": "Video musik",
+  "@mvPackTitle": {
+    "description": "Paywall MV pack row title"
+  },
+  "mvPackChorusSubtitle": "Satu video reff",
+  "@mvPackChorusSubtitle": {
+    "description": "Paywall MV pack row subtitle"
+  },
+  "mvPackFullSubtitle": "Satu video lagu penuh",
+  "@mvPackFullSubtitle": {
+    "description": "Paywall MV pack row subtitle"
+  },
+  "paywallMvHeroTitle": "Jadikan video",
+  "@paywallMvHeroTitle": {
+    "description": "Paywall headline when opened for a music video"
+  },
+  "paywallMvHeroSubtitle": "Kredit untuk video musik lagumu — simpan dan bagikan.",
+  "@paywallMvHeroSubtitle": {
+    "description": "Paywall subtitle when opened for a music video"
+  },
+  "playerAiGenerated": "Dibuat oleh AI",
+  "@playerAiGenerated": {
+    "description": "Non-removable disclosure badge (PRD 9.4)"
+  },
+  "playerLoop": "Ulangi",
+  "@playerLoop": {
+    "description": "Song playback screen. Purpose: player loop."
+  },
+  "playerPlay": "Putar",
+  "@playerPlay": {
+    "description": "Song playback screen. Purpose: player play."
+  },
+  "playerPause": "Jeda",
+  "@playerPause": {
+    "description": "Song playback screen. Purpose: player pause."
+  },
+  "playerPreviewLabel": "Pratinjau 30 detik",
+  "@playerPreviewLabel": {
+    "description": "Song playback screen. Purpose: player preview label."
+  },
+  "playerTitleFor": "Untuk {name}",
+  "@playerTitleFor": {
+    "placeholders": {
+      "name": {
+        "type": "String",
+        "description": "Recipient or template display name; do not translate user-provided names."
+      }
+    },
+    "description": "Song playback screen. Purpose: player title for."
+  },
+  "downloadSaved": "Disimpan ke File.",
+  "@downloadSaved": {
+    "description": "Audio download screen. Purpose: download saved."
+  },
+  "shareComposing": "Membuat kartu berbagimu…",
+  "@shareComposing": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share composing."
+  },
+  "shareFailed": "Tidak dapat membuat kartu berbagi.",
+  "@shareFailed": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share failed."
+  },
+  "shareText": "Aku membuat lagu ini dengan Songlet 🎵",
+  "@shareText": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share text."
+  },
+  "paywallBestValue": "Paling hemat",
+  "@paywallBestValue": {
+    "description": "Purchase screen. Purpose: paywall best value."
+  },
+  "paywallStartTrial": "Mulai uji coba gratis",
+  "@paywallStartTrial": {
+    "description": "Purchase screen. Purpose: paywall start trial."
+  },
+  "paywallClose": "Tutup",
+  "@paywallClose": {
+    "description": "Purchase screen. Purpose: paywall close."
+  },
+  "paywallSeePlans": "Lihat langganan",
+  "@paywallSeePlans": {
+    "description": "Purchase screen. Purpose: paywall see plans."
+  },
+  "paywallCurrentPlan": "{count, plural, one{Paketmu aktif — sisa {count} lagu lengkap periode ini.} other{Paketmu aktif — sisa {count} lagu lengkap periode ini.}}",
+  "@paywallCurrentPlan": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Full songs remaining in the current subscription period."
+      }
+    },
+    "description": "Purchase screen. Purpose: paywall current plan."
+  },
+  "libraryEmpty": "Lagu-lagumu akan tersimpan di sini.",
+  "@libraryEmpty": {
+    "description": "Saved-song library. Purpose: library empty."
+  },
+  "libraryEmptyAction": "Buat lagu pertamamu",
+  "@libraryEmptyAction": {
+    "description": "Saved-song library. Purpose: library empty action."
+  },
+  "libraryPending": "Menggubah…",
+  "@libraryPending": {
+    "description": "Saved-song library. Purpose: library pending."
+  },
+  "libraryPreviewBadge": "Pratinjau",
+  "@libraryPreviewBadge": {
+    "description": "Saved-song library. Purpose: library preview badge."
+  },
+  "librarySongBadge": "Lagu lengkap",
+  "@librarySongBadge": {
+    "description": "Saved-song library. Purpose: library song badge."
+  },
+  "settingsTitle": "Pengaturan",
+  "@settingsTitle": {
+    "description": "Settings screen. Purpose: settings title."
+  },
+  "settingsPlan": "Paketmu",
+  "@settingsPlan": {
+    "description": "Settings screen. Purpose: settings plan."
+  },
+  "settingsPlanUnavailable": "Tidak dapat memuat paketmu. Tarik untuk mencoba lagi nanti.",
+  "@settingsPlanUnavailable": {
+    "description": "Settings screen. Purpose: settings plan unavailable."
+  },
+  "tierFree": "Tanpa langganan",
+  "@tierFree": {
+    "description": "Plan tier display. Purpose: tier free."
+  },
+  "tierPack": "Paket lagu",
+  "@tierPack": {
+    "description": "Plan tier display. Purpose: tier pack."
+  },
+  "settingsSongsLeft": "{count, plural, one{Sisa {count} lagu lengkap} other{Sisa {count} lagu lengkap}}",
+  "@settingsSongsLeft": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Remaining full songs in the current allowance."
+      }
+    },
+    "description": "Settings screen. Purpose: settings songs left."
+  },
+  "settingsClipsLeft": "{count, plural, one{Sisa {count} pratinjau} other{Sisa {count} pratinjau}}",
+  "@settingsClipsLeft": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Remaining song previews in the current allowance."
+      }
+    },
+    "description": "Settings screen. Purpose: settings clips left."
+  },
+  "settingsResets": "Direset {date}",
+  "@settingsResets": {
+    "placeholders": {
+      "date": {
+        "type": "DateTime",
+        "format": "yMMMd",
+        "description": "Next allowance reset date, converted to local time."
+      }
+    },
+    "description": "Settings screen. Purpose: settings resets."
+  },
+  "settingsUpgrade": "Upgrade",
+  "@settingsUpgrade": {
+    "description": "Settings screen. Purpose: settings upgrade."
+  },
+  "appTagline": "Lagu untuk orang-orang yang kamu sayangi",
+  "@appTagline": {
+    "description": "Brand tagline under the app name"
+  },
+  "commonClose": "Tutup",
+  "@commonClose": {
+    "description": "Shared buttons and messages. Purpose: common close."
+  },
+  "commonDone": "Selesai",
+  "@commonDone": {
+    "description": "Shared buttons and messages. Purpose: common done."
+  },
+  "commonDelete": "Hapus",
+  "@commonDelete": {
+    "description": "Shared buttons and messages. Purpose: common delete."
+  },
+  "commonMore": "Lainnya",
+  "@commonMore": {
+    "description": "Shared buttons and messages. Purpose: common more."
+  },
+  "commonCopy": "Salin",
+  "@commonCopy": {
+    "description": "Shared buttons and messages. Purpose: common copy."
+  },
+  "commonCopied": "Disalin",
+  "@commonCopied": {
+    "description": "Shared buttons and messages. Purpose: common copied."
+  },
+  "commonNotNow": "Nanti saja",
+  "@commonNotNow": {
+    "description": "Shared buttons and messages. Purpose: common not now."
+  },
+  "commonLearnMore": "Pelajari lebih lanjut",
+  "@commonLearnMore": {
+    "description": "Shared buttons and messages. Purpose: common learn more."
+  },
+  "commonSeeAll": "Lihat semua",
+  "@commonSeeAll": {
+    "description": "Shared buttons and messages. Purpose: common see all."
+  },
+  "commonKeepGoing": "Lanjutkan",
+  "@commonKeepGoing": {
+    "description": "Shared buttons and messages. Purpose: common keep going."
+  },
+  "composerHint": "Jelaskan lagu yang kamu inginkan",
+  "@composerHint": {
+    "description": "P01 prompt field hint"
+  },
+  "composerAddPhotos": "Tambah foto",
+  "@composerAddPhotos": {
+    "description": "P01 + button"
+  },
+  "composerSourceMusicHint": "Jelaskan dengan kata-katamu sendiri",
+  "@composerSourceMusicHint": {
+    "description": "Song creation composer. Purpose: composer source music hint."
+  },
+  "composerDictate": "Dikte",
+  "@composerDictate": {
+    "description": "P01 mic button"
+  },
+  "composerStopDictation": "Hentikan dikte",
+  "@composerStopDictation": {
+    "description": "P03a stop button"
+  },
+  "lengthPreview": "Pratinjau",
+  "@lengthPreview": {
+    "description": "Composer summary row: the 30-second preview (lyria-3-clip-preview)."
+  },
+  "lengthFull": "Lagu lengkap",
+  "@lengthFull": {
+    "description": "Composer summary row and options: the full ~2-minute song (lyria-3.5)."
+  },
+  "paramLength": "Durasi",
+  "@paramLength": {
+    "description": "Song option selector. Purpose: param length."
+  },
+  "paramVocals": "Vokal",
+  "@paramVocals": {
+    "description": "Song option selector. Purpose: param vocals."
+  },
+  "paramGenre": "Genre",
+  "@paramGenre": {
+    "description": "Song option selector. Purpose: param genre."
+  },
+  "templatePlaySample": "Putar contoh {name}",
+  "@templatePlaySample": {
+    "description": "Template tile play button",
+    "placeholders": {
+      "name": {
+        "type": "String",
+        "description": "Recipient or template display name; do not translate user-provided names."
+      }
+    }
+  },
+  "templatePauseSample": "Jeda contoh",
+  "@templatePauseSample": {
+    "description": "Song template and creation form. Purpose: template pause sample."
+  },
+  "lengthShort": "Pendek",
+  "@lengthShort": {
+    "description": "Song length selector. Purpose: length short."
+  },
+  "lengthShortHint": "Pratinjau 30 detik",
+  "@lengthShortHint": {
+    "description": "Song length selector. Purpose: length short hint."
+  },
+  "lengthStandard": "Standar",
+  "@lengthStandard": {
+    "description": "Song length selector. Purpose: length standard."
+  },
+  "lengthStandardHint": "sekitar 2 menit, Pro",
+  "@lengthStandardHint": {
+    "description": "Song length selector. Purpose: length standard hint."
+  },
+  "vocalsCustom": "Otomatis",
+  "@vocalsCustom": {
+    "description": "Vocal option selector. Purpose: vocals custom."
+  },
+  "vocalsCustomHint": "sesuai deskripsimu",
+  "@vocalsCustomHint": {
+    "description": "Vocal option selector. Purpose: vocals custom hint."
+  },
+  "vocalsCustomDetail": "Gaya vokal mengikuti deskripsimu.",
+  "@vocalsCustomDetail": {
+    "description": "Vocal option selector. Purpose: vocals custom detail."
+  },
+  "vocalsOn": "Dengan vokal",
+  "@vocalsOn": {
+    "description": "Vocal option selector. Purpose: vocals on."
+  },
+  "vocalsInstrumental": "Instrumental",
+  "@vocalsInstrumental": {
+    "description": "Vocal option selector. Purpose: vocals instrumental."
+  },
+  "vocalsLyricsIn": "Lirik ditulis dalam {language}",
+  "@vocalsLyricsIn": {
+    "placeholders": {
+      "language": {
+        "type": "String",
+        "description": "Localized lyrics-language name."
+      }
+    },
+    "description": "Vocal option selector. Purpose: vocals lyrics in."
+  },
+  "genreCustom": "Otomatis",
+  "@genreCustom": {
+    "description": "Genre picker. Purpose: genre custom."
+  },
+  "genreCustomHint": "sesuai deskripsimu",
+  "@genreCustomHint": {
+    "description": "Genre picker. Purpose: genre custom hint."
+  },
+  "genrePopularIn": "Populer di {country}",
+  "@genrePopularIn": {
+    "placeholders": {
+      "country": {
+        "type": "String",
+        "description": "Localized country name."
+      }
+    },
+    "description": "Genre picker. Purpose: genre popular in."
+  },
+  "genreAll": "Semua genre",
+  "@genreAll": {
+    "description": "Genre picker. Purpose: genre all."
+  },
+  "regionHelper": "Mengubah 3 genre rekomendasi dan bahasa lirik",
+  "@regionHelper": {
+    "description": "Country and lyrics-language sheet. Purpose: region helper."
+  },
+  "regionLyricsRow": "Bahasa lirik: {language}",
+  "@regionLyricsRow": {
+    "placeholders": {
+      "language": {
+        "type": "String",
+        "description": "Localized lyrics-language name."
+      }
+    },
+    "description": "Country and lyrics-language sheet. Purpose: region lyrics row."
+  },
+  "regionNoMatch": "Tidak ada negara yang cocok",
+  "@regionNoMatch": {
+    "description": "Country and lyrics-language sheet. Purpose: region no match."
+  },
+  "keywordAdd": "Tambah kata",
+  "@keywordAdd": {
+    "description": "Creation keywords. Purpose: keyword add."
+  },
+  "keywordRemove": "Hapus {word}",
+  "@keywordRemove": {
+    "placeholders": {
+      "word": {
+        "type": "String",
+        "description": "User-provided keyword being removed."
+      }
+    },
+    "description": "Creation keywords. Purpose: keyword remove."
+  },
+  "nameClear": "Hapus nama",
+  "@nameClear": {
+    "description": "Recipient name field. Purpose: name clear."
+  },
+  "lyricsOptional": "Tulis lirik sendiri (opsional)",
+  "@lyricsOptional": {
+    "description": "Own-lyrics editor. Purpose: lyrics optional."
+  },
+  "issueRecipientArtistName": "Nama artis tidak boleh dipakai.",
+  "@issueRecipientArtistName": {
+    "description": "P18 name field"
+  },
+  "issuePromptTooLong": "Buat deskripsi kurang dari {limit} karakter.",
+  "@issuePromptTooLong": {
+    "placeholders": {
+      "limit": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Maximum number of characters in the song description."
+      }
+    },
+    "description": "Creation form validation; explain how to correct the input. Purpose: issue prompt too long."
+  },
+  "voiceRecording": "Merekam…",
+  "@voiceRecording": {
+    "description": "On-device dictation panel. Purpose: voice recording."
+  },
+  "voiceStarting": "Memulai…",
+  "@voiceStarting": {
+    "description": "On-device dictation panel. Purpose: voice starting."
+  },
+  "voiceListening": "Sebutkan untuk siapa lagu ini dan apa yang dia suka…",
+  "@voiceListening": {
+    "description": "On-device dictation panel. Purpose: voice listening."
+  },
+  "voiceOnDevice": "Transkripsi di perangkat",
+  "@voiceOnDevice": {
+    "description": "On-device dictation panel. Purpose: voice on device."
+  },
+  "voicePermissionDenied": "Izinkan mikrofon dan pengenalan suara untuk Songlet di Pengaturan agar bisa dikte.",
+  "@voicePermissionDenied": {
+    "description": "On-device dictation panel. Purpose: voice permission denied."
+  },
+  "voiceUnavailable": "Dikte tidak tersedia untuk bahasa ini di perangkat ini.",
+  "@voiceUnavailable": {
+    "description": "On-device dictation panel. Purpose: voice unavailable."
+  },
+  "voiceApplied": "Ditambahkan dari suaramu",
+  "@voiceApplied": {
+    "description": "On-device dictation panel. Purpose: voice applied."
+  },
+  "photoRemove": "Hapus foto",
+  "@photoRemove": {
+    "description": "Photo selection. Purpose: photo remove."
+  },
+  "generatingTitleFor": "Menulis lagu untuk {name}…",
+  "@generatingTitleFor": {
+    "placeholders": {
+      "name": {
+        "type": "String",
+        "description": "Recipient or template display name; do not translate user-provided names."
+      }
+    },
+    "description": "Song generation progress and cancellation. Purpose: generating title for."
+  },
+  "generatingTitleGeneric": "Menulis lagumu…",
+  "@generatingTitleGeneric": {
+    "description": "Song generation progress and cancellation. Purpose: generating title generic."
+  },
+  "generatingUsually": "Biasanya sekitar {seconds} detik",
+  "@generatingUsually": {
+    "placeholders": {
+      "seconds": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Video, countdown, or generation duration in seconds."
+      }
+    },
+    "description": "Song generation progress and cancellation. Purpose: generating usually."
+  },
+  "generatingPercent": "{percent}",
+  "@generatingPercent": {
+    "placeholders": {
+      "percent": {
+        "type": "String",
+        "description": "Complete percentage already formatted with intl for the UI locale, including the percent sign."
+      }
+    },
+    "description": "Song generation progress and cancellation. Purpose: generating percent."
+  },
+  "generatingProgress": "Kemajuan",
+  "@generatingProgress": {
+    "description": "Song generation progress and cancellation. Purpose: generating progress."
+  },
+  "generatingGlimpse": "Sekilas lagumu",
+  "@generatingGlimpse": {
+    "description": "Song generation progress and cancellation. Purpose: generating glimpse."
+  },
+  "generatingCancelTitle": "Hentikan lagu ini?",
+  "@generatingCancelTitle": {
+    "description": "Song generation progress and cancellation. Purpose: generating cancel title."
+  },
+  "generatingCancelQueued": "Belum dimulai, jadi tidak mengurangi kuotamu.",
+  "@generatingCancelQueued": {
+    "description": "Song generation progress and cancellation. Purpose: generating cancel queued."
+  },
+  "generatingCancelStarted": "Sudah dimulai, jadi tetap mengurangi kuotamu.",
+  "@generatingCancelStarted": {
+    "description": "Song generation progress and cancellation. Purpose: generating cancel started."
+  },
+  "generatingCancelConfirm": "Hentikan",
+  "@generatingCancelConfirm": {
+    "description": "Song generation progress and cancellation. Purpose: generating cancel confirm."
+  },
+  "generatingCancelled": "Lagu dihentikan",
+  "@generatingCancelled": {
+    "description": "Song generation progress and cancellation. Purpose: generating cancelled."
+  },
+  "generatingCancelledRefunded": "Lagu dihentikan — kuota tidak terpakai",
+  "@generatingCancelledRefunded": {
+    "description": "Song generation progress and cancellation. Purpose: generating cancelled refunded."
+  },
+  "queueTitle": "Banyak lagu sedang dibuat saat ini.",
+  "@queueTitle": {
+    "description": "Song generation queue. Purpose: queue title."
+  },
+  "queueSubtitle": "Lagumu sedang mengantre.",
+  "@queueSubtitle": {
+    "description": "Song generation queue. Purpose: queue subtitle."
+  },
+  "queuePosition": "Posisi",
+  "@queuePosition": {
+    "description": "Song generation queue. Purpose: queue position."
+  },
+  "queueWait": "perkiraan tunggu",
+  "@queueWait": {
+    "description": "Song generation queue. Purpose: queue wait."
+  },
+  "queueWaitMinutes": "≈ {minutes} mnt",
+  "@queueWaitMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Estimated waiting or processing duration in minutes."
+      }
+    },
+    "description": "Song generation queue. Purpose: queue wait minutes."
+  },
+  "generatingNothing": "Tidak ada lagu yang sedang dibuat.",
+  "@generatingNothing": {
+    "description": "Song generation progress and cancellation. Purpose: generating nothing."
+  },
+  "previewGetFull": "Dapatkan lagu lengkap 2 menit",
+  "@previewGetFull": {
+    "description": "Song preview screen. Purpose: preview get full."
+  },
+  "previewShare": "Bagikan pratinjau",
+  "@previewShare": {
+    "description": "Song preview screen. Purpose: preview share."
+  },
+  "previewAnother": "Coba versi lain (pakai 1 pratinjau)",
+  "@previewAnother": {
+    "description": "Song preview screen. Purpose: preview another."
+  },
+  "playerPosition": "Posisi putar",
+  "@playerPosition": {
+    "description": "Song playback screen. Purpose: player position."
+  },
+  "playerPrevSection": "Bagian sebelumnya",
+  "@playerPrevSection": {
+    "description": "Song playback screen. Purpose: player prev section."
+  },
+  "playerNextSection": "Bagian berikutnya",
+  "@playerNextSection": {
+    "description": "Song playback screen. Purpose: player next section."
+  },
+  "playerShuffle": "Acak bagian",
+  "@playerShuffle": {
+    "description": "Song playback screen. Purpose: player shuffle."
+  },
+  "playerRepeat": "Ulangi",
+  "@playerRepeat": {
+    "description": "Song playback screen. Purpose: player repeat."
+  },
+  "playerProvenance": "Dibuat dengan Google Lyria 3 · watermark SynthID · dibuat AI",
+  "@playerProvenance": {
+    "description": "Song playback screen. Purpose: player provenance."
+  },
+  "playerMissing": "Lagu ini sudah tidak ada di perangkat ini.",
+  "@playerMissing": {
+    "description": "Song playback screen. Purpose: player missing."
+  },
+  "actionDownload": "Unduh",
+  "@actionDownload": {
+    "description": "Work action button. Purpose: action download."
+  },
+  "actionShare": "Bagikan",
+  "@actionShare": {
+    "description": "Work action button. Purpose: action share."
+  },
+  "actionLicense": "Lisensi",
+  "@actionLicense": {
+    "description": "Work action button. Purpose: action license."
+  },
+  "actionRegenerate": "Buat ulang",
+  "@actionRegenerate": {
+    "description": "Work action button. Purpose: action regenerate."
+  },
+  "actionDetails": "Detail",
+  "@actionDetails": {
+    "description": "Work action button. Purpose: action details."
+  },
+  "sectionIntro": "Intro",
+  "@sectionIntro": {
+    "description": "Song section display label; never translate the inserted protocol token. Purpose: section intro."
+  },
+  "sectionVerse": "Bait",
+  "@sectionVerse": {
+    "description": "Song section display label; never translate the inserted protocol token. Purpose: section verse."
+  },
+  "sectionPreChorus": "Pra-reff",
+  "@sectionPreChorus": {
+    "description": "Song section display label; never translate the inserted protocol token. Purpose: section pre chorus."
+  },
+  "sectionChorus": "Reff",
+  "@sectionChorus": {
+    "description": "Song section display label; never translate the inserted protocol token. Purpose: section chorus."
+  },
+  "sectionBridge": "Bridge",
+  "@sectionBridge": {
+    "description": "Song section display label; never translate the inserted protocol token. Purpose: section bridge."
+  },
+  "sectionOutro": "Outro",
+  "@sectionOutro": {
+    "description": "Song section display label; never translate the inserted protocol token. Purpose: section outro."
+  },
+  "sectionHook": "Hook",
+  "@sectionHook": {
+    "description": "Song section display label; never translate the inserted protocol token. Purpose: section hook."
+  },
+  "shareTitle": "Kartu bagikan",
+  "@shareTitle": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share title."
+  },
+  "shareSubtitle": "Pilih tema dan tata letak.",
+  "@shareSubtitle": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share subtitle."
+  },
+  "shareTheme": "Tema",
+  "@shareTheme": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share theme."
+  },
+  "shareLayout": "Tata letak",
+  "@shareLayout": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share layout."
+  },
+  "shareLayoutScene": "Dengan ilustrasi",
+  "@shareLayoutScene": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share layout scene."
+  },
+  "shareLayoutText": "Teks saja",
+  "@shareLayoutText": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share layout text."
+  },
+  "paletteTerracotta": "Terakota",
+  "@paletteTerracotta": {
+    "description": "Share-card color theme. Purpose: palette terracotta."
+  },
+  "paletteSand": "Pasir",
+  "@paletteSand": {
+    "description": "Share-card color theme. Purpose: palette sand."
+  },
+  "paletteOlive": "Zaitun",
+  "@paletteOlive": {
+    "description": "Share-card color theme. Purpose: palette olive."
+  },
+  "paletteNavy": "Biru dongker",
+  "@paletteNavy": {
+    "description": "Share-card color theme. Purpose: palette navy."
+  },
+  "shareAction": "Bagikan",
+  "@shareAction": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share action."
+  },
+  "shareSaveVideo": "Simpan video",
+  "@shareSaveVideo": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share save video."
+  },
+  "shareCopyLyrics": "Salin lirik",
+  "@shareCopyLyrics": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share copy lyrics."
+  },
+  "shareVideoSaved": "Tersimpan di Foto",
+  "@shareVideoSaved": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share video saved."
+  },
+  "shareLyricsCopied": "Lirik disalin",
+  "@shareLyricsCopied": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share lyrics copied."
+  },
+  "shareCardTagline": "Lagu untuk seseorang",
+  "@shareCardTagline": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share card tagline."
+  },
+  "shareSaveFailed": "Video tidak bisa disimpan. Izinkan Songlet menambahkan ke Foto di Pengaturan.",
+  "@shareSaveFailed": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share save failed."
+  },
+  "downloadReady": "Lagu lengkap siap",
+  "@downloadReady": {
+    "description": "Audio download screen. Purpose: download ready."
+  },
+  "downloadTitle": "Milikmu selamanya",
+  "@downloadTitle": {
+    "description": "Audio download screen. Purpose: download title."
+  },
+  "downloadIntro": "Lagumu sudah jadi. Unduh audio berkualitas tinggi dan lisensi komersialmu di bawah.",
+  "@downloadIntro": {
+    "description": "Audio download screen. Purpose: download intro."
+  },
+  "downloadAudioHeader": "Unduh audio",
+  "@downloadAudioHeader": {
+    "description": "Audio download screen. Purpose: download audio header."
+  },
+  "downloadAudioNote": "Kualitas tinggi",
+  "@downloadAudioNote": {
+    "description": "Audio download screen. Purpose: download audio note."
+  },
+  "downloadMp3Title": "MP3 · 320 kbps",
+  "@downloadMp3Title": {
+    "description": "Audio download screen. Purpose: download mp3 title."
+  },
+  "downloadMp3Subtitle": "Cocok untuk dibagikan dan didengarkan sehari-hari",
+  "@downloadMp3Subtitle": {
+    "description": "Audio download screen. Purpose: download mp3 subtitle."
+  },
+  "downloadWavTitle": "WAV · 44,1 kHz (Premier)",
+  "@downloadWavTitle": {
+    "description": "Audio download screen. Purpose: download wav title."
+  },
+  "downloadWavSubtitle": "Kualitas tertinggi untuk penggunaan profesional",
+  "@downloadWavSubtitle": {
+    "description": "Audio download screen. Purpose: download wav subtitle."
+  },
+  "downloadMp3Action": "Unduh MP3",
+  "@downloadMp3Action": {
+    "description": "Audio download screen. Purpose: download mp3 action."
+  },
+  "downloadWavAction": "Unduh WAV",
+  "@downloadWavAction": {
+    "description": "Audio download screen. Purpose: download wav action."
+  },
+  "downloadLicenseAction": "Unduh lisensi",
+  "@downloadLicenseAction": {
+    "description": "Audio download screen. Purpose: download license action."
+  },
+  "licenseHeader": "Lisensi komersial",
+  "@licenseHeader": {
+    "description": "Commercial-license download and information. Purpose: license header."
+  },
+  "licenseIncluded": "Termasuk dalam paketmu",
+  "@licenseIncluded": {
+    "description": "Commercial-license download and information. Purpose: license included."
+  },
+  "licenseNotIncluded": "Tersedia dengan paket langganan atau paket lagu",
+  "@licenseNotIncluded": {
+    "description": "Commercial-license download and information. Purpose: license not included."
+  },
+  "licensePdfTitle": "Lisensi komersial (PDF)",
+  "@licensePdfTitle": {
+    "description": "Commercial-license download and information. Purpose: license pdf title."
+  },
+  "licenseGenerated": "Diterbitkan {date}",
+  "@licenseGenerated": {
+    "placeholders": {
+      "date": {
+        "type": "DateTime",
+        "format": "yMMMd",
+        "description": "License issuance date, converted to local time."
+      }
+    },
+    "description": "Commercial-license download and information. Purpose: license generated."
+  },
+  "licenseId": "ID lisensi: {id}",
+  "@licenseId": {
+    "placeholders": {
+      "id": {
+        "type": "String",
+        "description": "Account or license identifier; preserve it verbatim."
+      }
+    },
+    "description": "Commercial-license download and information. Purpose: license id."
+  },
+  "licenseUsesTitle": "Kamu bisa memakai lagu ini untuk:",
+  "@licenseUsesTitle": {
+    "description": "Commercial-license download and information. Purpose: license uses title."
+  },
+  "usePersonal": "Penggunaan pribadi",
+  "@usePersonal": {
+    "description": "Commercial-license permitted uses. Purpose: use personal."
+  },
+  "usePersonalDetail": "Hadiah, kenangan, nonkomersial",
+  "@usePersonalDetail": {
+    "description": "Commercial-license permitted uses. Purpose: use personal detail."
+  },
+  "useAds": "Iklan & pemasaran",
+  "@useAds": {
+    "description": "Commercial-license permitted uses. Purpose: use ads."
+  },
+  "useAdsDetail": "Promosi, kampanye berbayar",
+  "@useAdsDetail": {
+    "description": "Commercial-license permitted uses. Purpose: use ads detail."
+  },
+  "useSocial": "Media sosial",
+  "@useSocial": {
+    "description": "Commercial-license permitted uses. Purpose: use social."
+  },
+  "useSocialDetail": "TikTok, Instagram, YouTube, dll.",
+  "@useSocialDetail": {
+    "description": "Commercial-license permitted uses. Purpose: use social detail."
+  },
+  "usePodcasts": "Podcast & video",
+  "@usePodcasts": {
+    "description": "Commercial-license permitted uses. Purpose: use podcasts."
+  },
+  "usePodcastsDetail": "Konten yang dimonetisasi",
+  "@usePodcastsDetail": {
+    "description": "Commercial-license permitted uses. Purpose: use podcasts detail."
+  },
+  "licenseDetailsNote": "Detail lengkap ada di PDF lisensi.",
+  "@licenseDetailsNote": {
+    "description": "Commercial-license download and information. Purpose: license details note."
+  },
+  "saveEnjoyHeader": "Simpan dan nikmati",
+  "@saveEnjoyHeader": {
+    "description": "Save and export actions. Purpose: save enjoy header."
+  },
+  "saveToFiles": "Simpan ke File",
+  "@saveToFiles": {
+    "description": "Save and export actions. Purpose: save to files."
+  },
+  "addToMusic": "Tambahkan ke Musik",
+  "@addToMusic": {
+    "description": "Export action. Purpose: add to music."
+  },
+  "synthIdNote": "Lagu ini berisi watermark SynthID yang menandainya sebagai konten buatan AI, bahkan setelah diunduh.",
+  "@synthIdNote": {
+    "description": "AI watermark explanation. Purpose: synth id note."
+  },
+  "wavNeedsPremier": "Unduhan WAV tersedia di Premier.",
+  "@wavNeedsPremier": {
+    "description": "WAV download availability. Purpose: wav needs premier."
+  },
+  "wavUnavailable": "Lagu ini tidak punya file WAV. File WAV bisa disimpan dalam 24 jam setelah lagu dibuat.",
+  "@wavUnavailable": {
+    "description": "A Premier user tried to save WAV for a song that has no WAV render."
+  },
+  "libraryFilterAll": "Semua",
+  "@libraryFilterAll": {
+    "description": "Saved-song library. Purpose: library filter all."
+  },
+  "libraryJustBecause": "Iseng saja",
+  "@libraryJustBecause": {
+    "description": "Library section for songs without a template occasion"
+  },
+  "libraryPlay": "Putar {title}",
+  "@libraryPlay": {
+    "placeholders": {
+      "title": {
+        "type": "String",
+        "description": "Localized song title; may contain a user-provided recipient name."
+      }
+    },
+    "description": "Saved-song library. Purpose: library play."
+  },
+  "libraryActions": "Tindakan untuk {title}",
+  "@libraryActions": {
+    "placeholders": {
+      "title": {
+        "type": "String",
+        "description": "Localized song title; may contain a user-provided recipient name."
+      }
+    },
+    "description": "Saved-song library. Purpose: library actions."
+  },
+  "libraryDeleteTitle": "Hapus lagu ini?",
+  "@libraryDeleteTitle": {
+    "description": "Saved-song library. Purpose: library delete title."
+  },
+  "libraryDeleteBody": "Lagu akan dihapus dari perangkat ini. Jika sinkron iCloud aktif, juga dari perangkatmu yang lain.",
+  "@libraryDeleteBody": {
+    "description": "Saved-song library. Purpose: library delete body."
+  },
+  "libraryDeleted": "Lagu dihapus",
+  "@libraryDeleted": {
+    "description": "Saved-song library. Purpose: library deleted."
+  },
+  "libraryFailed": "Tidak selesai",
+  "@libraryFailed": {
+    "description": "Saved-song library. Purpose: library failed."
+  },
+  "libraryNoMatch": "Belum ada lagu untuk momen ini.",
+  "@libraryNoMatch": {
+    "description": "Saved-song library. Purpose: library no match."
+  },
+  "detailFullGenerated": "Lagu lengkap dibuat",
+  "@detailFullGenerated": {
+    "description": "Work details screen. Purpose: detail full generated."
+  },
+  "detailPreviewGenerated": "Pratinjau dibuat",
+  "@detailPreviewGenerated": {
+    "description": "Work details screen. Purpose: detail preview generated."
+  },
+  "detailGeneratedOn": "Dibuat {date}",
+  "@detailGeneratedOn": {
+    "placeholders": {
+      "date": {
+        "type": "DateTime",
+        "format": "yMMMd",
+        "description": "Song creation date, converted to local time."
+      }
+    },
+    "description": "Work details screen. Purpose: detail generated on."
+  },
+  "detailPromptUsed": "Data yang dipakai",
+  "@detailPromptUsed": {
+    "description": "Work details screen. Purpose: detail prompt used."
+  },
+  "detailOccasion": "Momen",
+  "@detailOccasion": {
+    "description": "Work details screen. Purpose: detail occasion."
+  },
+  "detailCountry": "Negara",
+  "@detailCountry": {
+    "description": "Work details screen. Purpose: detail country."
+  },
+  "detailGenre": "Genre",
+  "@detailGenre": {
+    "description": "Work details screen. Purpose: detail genre."
+  },
+  "detailKeywords": "Kata kunci",
+  "@detailKeywords": {
+    "description": "Work details screen. Purpose: detail keywords."
+  },
+  "detailDescription": "Deskripsi",
+  "@detailDescription": {
+    "description": "Work details screen. Purpose: detail description."
+  },
+  "detailLyrics": "Lirik",
+  "@detailLyrics": {
+    "description": "Work details screen. Purpose: detail lyrics."
+  },
+  "detailGenerationId": "ID pembuatan",
+  "@detailGenerationId": {
+    "description": "Work details screen. Purpose: detail generation id."
+  },
+  "detailRegenerate": "Buat ulang dengan gaya sama",
+  "@detailRegenerate": {
+    "description": "Work details screen. Purpose: detail regenerate."
+  },
+  "detailCustomGenre": "Sesuai deskripsi",
+  "@detailCustomGenre": {
+    "description": "Work details screen. Purpose: detail custom genre."
+  },
+  "settingsSectionPlan": "Pembelian",
+  "@settingsSectionPlan": {
+    "description": "Settings screen. Purpose: settings section plan."
+  },
+  "settingsSectionLibrary": "Pustaka",
+  "@settingsSectionLibrary": {
+    "description": "Settings screen. Purpose: settings section library."
+  },
+  "settingsSectionAbout": "Tentang",
+  "@settingsSectionAbout": {
+    "description": "Settings screen. Purpose: settings section about."
+  },
+  "settingsRestore": "Pulihkan pembelian",
+  "@settingsRestore": {
+    "description": "Settings screen. Purpose: settings restore."
+  },
+  "settingsManage": "Kelola langganan",
+  "@settingsManage": {
+    "description": "Settings screen. Purpose: settings manage."
+  },
+  "settingsICloud": "Sinkron iCloud",
+  "@settingsICloud": {
+    "description": "Settings screen. Purpose: settings i cloud."
+  },
+  "settingsICloudOn": "Lagu disinkronkan di perangkatmu",
+  "@settingsICloudOn": {
+    "description": "Settings screen. Purpose: settings i cloud on."
+  },
+  "settingsICloudOff": "Lagu hanya disimpan di perangkat ini",
+  "@settingsICloudOff": {
+    "description": "Settings screen. Purpose: settings i cloud off."
+  },
+  "settingsICloudUnavailable": "Masuk ke iCloud di Pengaturan untuk sinkron",
+  "@settingsICloudUnavailable": {
+    "description": "Settings screen. Purpose: settings i cloud unavailable."
+  },
+  "settingsLyricsLanguage": "Bahasa lirik bawaan",
+  "@settingsLyricsLanguage": {
+    "description": "Settings screen. Purpose: settings lyrics language."
+  },
+  "settingsLyricsLanguageAuto": "Sesuai negara",
+  "@settingsLyricsLanguageAuto": {
+    "description": "Settings screen. Purpose: settings lyrics language auto."
+  },
+  "settingsTerms": "Ketentuan Penggunaan",
+  "@settingsTerms": {
+    "description": "Settings screen. Purpose: settings terms."
+  },
+  "settingsPrivacy": "Kebijakan Privasi",
+  "@settingsPrivacy": {
+    "description": "Settings screen. Purpose: settings privacy."
+  },
+  "settingsVersion": "Versi {version}",
+  "@settingsVersion": {
+    "placeholders": {
+      "version": {
+        "type": "String",
+        "description": "App version string from the device profile."
+      }
+    },
+    "description": "Settings screen. Purpose: settings version."
+  },
+  "aboutTitle": "Tentang pembuatan",
+  "@aboutTitle": {
+    "description": "About generation and privacy. Purpose: about title."
+  },
+  "aboutSubtitle": "Cara Songlet membuat lagumu",
+  "@aboutSubtitle": {
+    "description": "About generation and privacy. Purpose: about subtitle."
+  },
+  "aboutLyriaTitle": "Didukung Lyria 3 dari Google",
+  "@aboutLyriaTitle": {
+    "description": "About generation and privacy. Purpose: about lyria title."
+  },
+  "aboutLyriaBody": "Lagu dibuat oleh Lyria 3 dari Google melalui Gemini API. Lyria 3 adalah model pembuat musik yang mengubah idemu menjadi lagu orisinal.",
+  "@aboutLyriaBody": {
+    "description": "About generation and privacy. Purpose: about lyria body."
+  },
+  "aboutWatermarkTitle": "Watermark bawaan",
+  "@aboutWatermarkTitle": {
+    "description": "About generation and privacy. Purpose: about watermark title."
+  },
+  "aboutWatermarkBody": "Setiap lagu berisi watermark SynthID dari Google. Watermark ini membantu mengenali musik buatan AI dan tidak bisa dihapus.",
+  "@aboutWatermarkBody": {
+    "description": "About generation and privacy. Purpose: about watermark body."
+  },
+  "aboutImitationTitle": "Tidak meniru artis sungguhan",
+  "@aboutImitationTitle": {
+    "description": "About generation and privacy. Purpose: about imitation title."
+  },
+  "aboutImitationBody": "Songlet tidak pernah meniru artis sungguhan, suara mereka, atau gaya tertentu. Lagu bersifat orisinal dan dibuat dari ide, deskripsi, dan fotomu.",
+  "@aboutImitationBody": {
+    "description": "About generation and privacy. Purpose: about imitation body."
+  },
+  "aboutPrivacyTitle": "Privasimu penting",
+  "@aboutPrivacyTitle": {
+    "description": "About generation and privacy. Purpose: about privacy title."
+  },
+  "aboutPrivacyBody": "Foto dan deskripsi dihapus dari server kami dalam 24 jam. Kami tidak menyimpan gambar atau deskripsimu setelah lagu dibuat.",
+  "@aboutPrivacyBody": {
+    "description": "About generation and privacy. Purpose: about privacy body."
+  },
+  "aboutBanner": "Setiap lagu yang kamu bagikan diberi label buatan AI.",
+  "@aboutBanner": {
+    "description": "About generation and privacy. Purpose: about banner."
+  },
+  "aboutFooter": "Songlet {version} · Dibuat dengan Google Lyria 3",
+  "@aboutFooter": {
+    "placeholders": {
+      "version": {
+        "type": "String",
+        "description": "App version string from the device profile."
+      }
+    },
+    "description": "About generation and privacy. Purpose: about footer."
+  },
+  "festivalKicker": "Hidupkan ceritamu",
+  "@festivalKicker": {
+    "description": "Festival creation screen. Purpose: festival kicker."
+  },
+  "festivalComing": "segera tiba!",
+  "@festivalComing": {
+    "description": "Festival creation screen. Purpose: festival coming."
+  },
+  "festivalBody": "Buat lagu unik untuk merayakannya.",
+  "@festivalBody": {
+    "description": "Festival creation screen. Purpose: festival body."
+  },
+  "festivalCta": "Buat lagu {festival}",
+  "@festivalCta": {
+    "placeholders": {
+      "festival": {
+        "type": "String",
+        "description": "Localized festival name."
+      }
+    },
+    "description": "Festival creation screen. Purpose: festival cta."
+  },
+  "festivalPickOccasion": "Pilih momen dan mulai berkarya",
+  "@festivalPickOccasion": {
+    "description": "Festival creation screen. Purpose: festival pick occasion."
+  },
+  "festivalLanguagesTitle": "Lagu dalam bahasamu",
+  "@festivalLanguagesTitle": {
+    "description": "Festival creation screen. Purpose: festival languages title."
+  },
+  "festivalLanguagesBody": "Buat lagu dalam {language} dan 12 bahasa lainnya",
+  "@festivalLanguagesBody": {
+    "placeholders": {
+      "language": {
+        "type": "String",
+        "description": "Localized lyrics-language name."
+      }
+    },
+    "description": "Festival creation screen. Purpose: festival languages body."
+  },
+  "unavailableTitle": "Sementara tidak tersedia",
+  "@unavailableTitle": {
+    "description": "Service availability screen. Purpose: unavailable title."
+  },
+  "unavailableMessage": "Songlet belum bisa membuat lagu sekarang. Pustakamu tetap bisa dipakai — coba lagi sebentar lagi.",
+  "@unavailableMessage": {
+    "description": "Service availability screen. Purpose: unavailable message."
+  },
+  "paywallHeroTitle": "Jadikan lagu lengkap",
+  "@paywallHeroTitle": {
+    "description": "Purchase screen. Purpose: paywall hero title."
+  },
+  "paywallHeroSubtitle": "Ubah idemu jadi lagu lengkap dengan kualitas lebih tinggi dan hak penuh.",
+  "@paywallHeroSubtitle": {
+    "description": "Purchase screen. Purpose: paywall hero subtitle."
+  },
+  "paywallBenefitSongs": "Lebih banyak lagu",
+  "@paywallBenefitSongs": {
+    "description": "Purchase screen. Purpose: paywall benefit songs."
+  },
+  "paywallBenefitQuality": "Kualitas lebih tinggi",
+  "@paywallBenefitQuality": {
+    "description": "Purchase screen. Purpose: paywall benefit quality."
+  },
+  "paywallBenefitCommercial": "Penggunaan komersial",
+  "@paywallBenefitCommercial": {
+    "description": "Purchase screen. Purpose: paywall benefit commercial."
+  },
+  "planSongs": "{count, plural, other{{count} lagu lengkap per bulan}}",
+  "@planSongs": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Full-song allowance per month for this plan and storefront."
+      }
+    },
+    "description": "Purchase screen subscription benefits. Purpose: plan songs."
+  },
+  "planPreviews": "{count, plural, other{{count} pratinjau per bulan}}",
+  "@planPreviews": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Preview allowance per month for this plan and storefront."
+      }
+    },
+    "description": "Purchase screen subscription benefits. Purpose: plan previews."
+  },
+  "planMp3": "Unduh MP3",
+  "@planMp3": {
+    "description": "Purchase screen subscription benefits. Purpose: plan mp3."
+  },
+  "planMp3Wav": "Unduh MP3 + WAV",
+  "@planMp3Wav": {
+    "description": "Purchase screen subscription benefits. Purpose: plan mp3 wav."
+  },
+  "planLicense": "Lisensi komersial",
+  "@planLicense": {
+    "description": "Purchase screen subscription benefits. Purpose: plan license."
+  },
+  "planPriority": "Pembuatan prioritas",
+  "@planPriority": {
+    "description": "Purchase screen subscription benefits. Purpose: plan priority."
+  },
+  "planTrial": "Uji coba gratis {days} hari",
+  "@planTrial": {
+    "placeholders": {
+      "days": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Trial duration in days reported by StoreKit."
+      }
+    },
+    "description": "Purchase screen subscription benefits. Purpose: plan trial."
+  },
+  "planPerYear": "{price}/thn",
+  "@planPerYear": {
+    "placeholders": {
+      "price": {
+        "type": "String",
+        "description": "Unmodified StoreKit Product.displayPrice; never format or parse this value."
+      }
+    },
+    "description": "Purchase screen subscription benefits. Purpose: plan per year."
+  },
+  "planPerMonth": "{price}/bln",
+  "@planPerMonth": {
+    "placeholders": {
+      "price": {
+        "type": "String",
+        "description": "Unmodified StoreKit Product.displayPrice; never format or parse this value."
+      }
+    },
+    "description": "Purchase screen subscription benefits. Purpose: plan per month."
+  },
+  "packTitle": "Hanya butuh beberapa?",
+  "@packTitle": {
+    "description": "Purchase screen one-time song pack. Purpose: pack title."
+  },
+  "packSubtitle": "{count, plural, other{Paket {count} lagu}}",
+  "@packSubtitle": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Full songs granted by this one-time pack."
+      }
+    },
+    "description": "Purchase screen one-time song pack. Purpose: pack subtitle."
+  },
+  "packNote": "tidak kedaluwarsa",
+  "@packNote": {
+    "description": "Purchase screen one-time song pack. Purpose: pack note."
+  },
+  "valueForever": "Lagumu, selamanya",
+  "@valueForever": {
+    "description": "Purchase screen benefits. Purpose: value forever."
+  },
+  "valueDownloads": "Unduhan berkualitas tinggi",
+  "@valueDownloads": {
+    "description": "Purchase screen benefits. Purpose: value downloads."
+  },
+  "valueCommercial": "Boleh dipakai komersial",
+  "@valueCommercial": {
+    "description": "Purchase screen benefits. Purpose: value commercial."
+  },
+  "valuePrivate": "Privasi nomor satu",
+  "@valuePrivate": {
+    "description": "Purchase screen benefits. Purpose: value private."
+  },
+  "paywallTrialDisclosure": "Setelah uji coba gratis, {pricePerPeriod} ditagih otomatis. Batalkan kapan saja sebelum uji coba berakhir.",
+  "@paywallTrialDisclosure": {
+    "description": "Paywall disclosure for a selected subscription with a free trial. States the actual recurring price and billing period after the trial, and that cancellation is possible before the trial ends. Shown together with the full auto-renewal notice.",
+    "placeholders": {
+      "pricePerPeriod": {
+        "type": "String",
+        "description": "Localized price with the selected subscription’s billing period (planPerMonth or planPerYear). Its price portion is the unmodified StoreKit Product.displayPrice."
+      }
+    }
+  },
+  "paywallSubscribe": "Berlangganan",
+  "@paywallSubscribe": {
+    "description": "Purchase screen. Purpose: paywall subscribe."
+  },
+  "paywallBuyPack": "Beli paket",
+  "@paywallBuyPack": {
+    "description": "Purchase screen. Purpose: paywall buy pack."
+  },
+  "templateBirthdayWish": "Ucapan Ulang Tahun",
+  "@templateBirthdayWish": {
+    "description": "Song template and creation form. Purpose: template birthday wish."
+  },
+  "templateBirthdayWishHint": "Lagu spesial untuk hari spesialnya",
+  "@templateBirthdayWishHint": {
+    "description": "Song template and creation form. Purpose: template birthday wish hint."
+  },
+  "templateBirthdayParty": "Pesta Ulang Tahun",
+  "@templateBirthdayParty": {
+    "description": "Song template and creation form. Purpose: template birthday party."
+  },
+  "templateBirthdayPartyHint": "Meriahkan pesta sang bintang ulang tahun",
+  "@templateBirthdayPartyHint": {
+    "description": "Song template and creation form. Purpose: template birthday party hint."
+  },
+  "templateLoveStory": "Kisah Cinta",
+  "@templateLoveStory": {
+    "description": "Song template and creation form. Purpose: template love story."
+  },
+  "templateLoveStoryHint": "Kisah kalian dalam sebuah lagu",
+  "@templateLoveStoryHint": {
+    "description": "Song template and creation form. Purpose: template love story hint."
+  },
+  "templateThankAFriend": "Terima Kasih, Teman",
+  "@templateThankAFriend": {
+    "description": "Song template and creation form. Purpose: template thank a friend."
+  },
+  "templateThankAFriendHint": "Ucapkan terima kasih yang tak terucap",
+  "@templateThankAFriendHint": {
+    "description": "Song template and creation form. Purpose: template thank a friend hint."
+  },
+  "templatePartyInvite": "Undangan Pesta",
+  "@templatePartyInvite": {
+    "description": "Song template and creation form. Purpose: template party invite."
+  },
+  "templatePartyInviteHint": "Ajak semua orang ke pesta",
+  "@templatePartyInviteHint": {
+    "description": "Song template and creation form. Purpose: template party invite hint."
+  },
+  "templateWedding": "Pernikahan",
+  "@templateWedding": {
+    "description": "Song template and creation form. Purpose: template wedding."
+  },
+  "templateWeddingHint": "Lagu untuk momen abadi mereka",
+  "@templateWeddingHint": {
+    "description": "Song template and creation form. Purpose: template wedding hint."
+  },
+  "templateInMemory": "Mengenang",
+  "@templateInMemory": {
+    "description": "Song template and creation form. Purpose: template in memory."
+  },
+  "templateInMemoryHint": "Hormati orang yang kamu sayangi",
+  "@templateInMemoryHint": {
+    "description": "Song template and creation form. Purpose: template in memory hint."
+  },
+  "templateFestival": "Hari Raya",
+  "@templateFestival": {
+    "description": "Song template and creation form. Purpose: template festival."
+  },
+  "templateFestivalHint": "Ucapan hangat untuk musim istimewa",
+  "@templateFestivalHint": {
+    "description": "Song template and creation form. Purpose: template festival hint."
+  },
+  "templateRingtone": "Nada Dering",
+  "@templateRingtone": {
+    "description": "Song template and creation form. Purpose: template ringtone."
+  },
+  "templateRingtoneHint": "Loop pendek khusus untukmu",
+  "@templateRingtoneHint": {
+    "description": "Song template and creation form. Purpose: template ringtone hint."
+  },
+  "templateTeamAnthem": "Lagu Tim",
+  "@templateTeamAnthem": {
+    "description": "Song template and creation form. Purpose: template team anthem."
+  },
+  "templateTeamAnthemHint": "Bakar semangat tim dan penonton",
+  "@templateTeamAnthemHint": {
+    "description": "Song template and creation form. Purpose: template team anthem hint."
+  },
+  "templateSportsRecap": "Rangkuman Laga",
+  "@templateSportsRecap": {
+    "description": "Song template and creation form. Purpose: template sports recap."
+  },
+  "templateSportsRecapHint": "Pertandingan besar dalam sebuah lagu",
+  "@templateSportsRecapHint": {
+    "description": "Song template and creation form. Purpose: template sports recap hint."
+  },
+  "templateRapBattle": "Adu Rap",
+  "@templateRapBattle": {
+    "description": "Song template and creation form. Purpose: template rap battle."
+  },
+  "templateRapBattleHint": "Bait bersahabat untuk rival bersahabat",
+  "@templateRapBattleHint": {
+    "description": "Song template and creation form. Purpose: template rap battle hint."
+  },
+  "templateComedy": "Komedi",
+  "@templateComedy": {
+    "description": "Song template and creation form. Purpose: template comedy."
+  },
+  "templateComedyHint": "Lelucon internal, kini dengan reff",
+  "@templateComedyHint": {
+    "description": "Song template and creation form. Purpose: template comedy hint."
+  },
+  "templatePetAnthem": "Lagu Hewan Peliharaan",
+  "@templatePetAnthem": {
+    "description": "Song template and creation form. Purpose: template pet anthem."
+  },
+  "templatePetAnthemHint": "Lagu tema untuk sahabat terbaikmu",
+  "@templatePetAnthemHint": {
+    "description": "Song template and creation form. Purpose: template pet anthem hint."
+  },
+  "templateHometown": "Kampung Halaman",
+  "@templateHometown": {
+    "description": "Song template and creation form. Purpose: template hometown."
+  },
+  "templateHometownHint": "Cinta untuk tempat yang kamu sebut rumah",
+  "@templateHometownHint": {
+    "description": "Song template and creation form. Purpose: template hometown hint."
+  },
+  "templateBusinessPromo": "Promo Usaha",
+  "@templateBusinessPromo": {
+    "description": "Song template and creation form. Purpose: template business promo."
+  },
+  "templateBusinessPromoHint": "Jingle yang nempel untuk toko atau merekmu",
+  "@templateBusinessPromoHint": {
+    "description": "Song template and creation form. Purpose: template business promo hint."
+  },
+  "templateCustom": "Idemu sendiri",
+  "@templateCustom": {
+    "description": "Occasion name for a free-form prompt"
+  },
+  "mvRecommended": "Disarankan",
+  "@mvRecommended": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv recommended."
+  },
+  "mvSeconds": "{seconds} dtk",
+  "@mvSeconds": {
+    "description": "Video length in seconds.",
+    "placeholders": {
+      "seconds": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Video, countdown, or generation duration in seconds."
+      }
+    }
+  },
+  "mvViewProgress": "Lihat progres",
+  "@mvViewProgress": {
+    "description": "Opens the progress of a video being made."
+  },
+  "mvIntentWaiting": "{level} menunggu kredit",
+  "@mvIntentWaiting": {
+    "description": "Hub banner: a video refused for credits can be finished.",
+    "placeholders": {
+      "level": {
+        "type": "String",
+        "description": "Localized music-video level name."
+      }
+    }
+  },
+  "mvSongExpiredAction": "Buat lagunya lagi",
+  "@mvSongExpiredAction": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv song expired action."
+  },
+  "mvQuotaNeed": "{level} butuh {required} kredit. Kamu punya {available}.",
+  "@mvQuotaNeed": {
+    "description": "Quota sheet body.",
+    "placeholders": {
+      "level": {
+        "type": "String",
+        "description": "Localized music-video level name."
+      },
+      "required": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Video credits required to create the selected video."
+      },
+      "available": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Video credits currently available to the account."
+      }
+    }
+  },
+  "mvQuotaBuyAndContinue": "Beli dan lanjutkan",
+  "@mvQuotaBuyAndContinue": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv quota buy and continue."
+  },
+  "mvQuotaMayNeedTwice": "Di wilayahmu, satu paket mungkin belum cukup — mungkin perlu dua.",
+  "@mvQuotaMayNeedTwice": {
+    "description": "T2/T3 storefronts: a pack grants fewer credits."
+  },
+  "mvQuotaAutoRetry": "Videomu mulai begitu pembelian berhasil.",
+  "@mvQuotaAutoRetry": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv quota auto retry."
+  },
+  "mvAutoLyricMaking": "Membuat video lirikmu",
+  "@mvAutoLyricMaking": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv auto lyric making."
+  },
+  "mvAutoChorusDetail": "Dibuat dari lagu ini dengan kreditmu",
+  "@mvAutoChorusDetail": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv auto chorus detail."
+  },
+  "mvAutoReady": "{level} sudah siap",
+  "@mvAutoReady": {
+    "description": "Automatic video finished.",
+    "placeholders": {
+      "level": {
+        "type": "String",
+        "description": "Localized music-video level name."
+      }
+    }
+  },
+  "mvAutoView": "Lihat",
+  "@mvAutoView": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv auto view."
+  },
+  "mvUpgradeChorus": "Buat video reff",
+  "@mvUpgradeChorus": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv upgrade chorus."
+  },
+  "mvAutoFailed": "Video tidak bisa dimulai",
+  "@mvAutoFailed": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv auto failed."
+  },
+  "mvLeaveHint": "Kamu boleh meninggalkan layar ini — kami kabari saat seharusnya sudah siap.",
+  "@mvLeaveHint": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv leave hint."
+  },
+  "mvCreditsBack": "{credits, plural, other{{credits} kreditmu sudah kembali.}}",
+  "@mvCreditsBack": {
+    "description": "A failed video was refunded.",
+    "placeholders": {
+      "credits": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Number of video credits, not a monetary price."
+      }
+    }
+  },
+  "mvFailedTitle": "Video ini tidak selesai",
+  "@mvFailedTitle": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv failed title."
+  },
+  "mvRejectedTitle": "Satu foto tidak bisa dipakai",
+  "@mvRejectedTitle": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv rejected title."
+  },
+  "mvRejectedBody": "Model video menolak salah satu foto referensimu. Ubah fotonya lalu coba lagi.",
+  "@mvRejectedBody": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv rejected body."
+  },
+  "mvAdjustPhotos": "Ubah foto dan coba lagi",
+  "@mvAdjustPhotos": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv adjust photos."
+  },
+  "mvTryChorus": "Buat video reff saja",
+  "@mvTryChorus": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv try chorus."
+  },
+  "mvPreparingPhotos": "Mengunggah fotomu…",
+  "@mvPreparingPhotos": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv preparing photos."
+  },
+  "mvPreparingSubmit": "Mengirim videomu…",
+  "@mvPreparingSubmit": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv preparing submit."
+  },
+  "mvNotifyTitle": "Videomu seharusnya sudah siap",
+  "@mvNotifyTitle": {
+    "description": "Local notification title at the video ETA."
+  },
+  "mvNotifyBody": "{level} — ketuk untuk menonton.",
+  "@mvNotifyBody": {
+    "description": "Local notification body.",
+    "placeholders": {
+      "level": {
+        "type": "String",
+        "description": "Localized music-video level name."
+      }
+    }
+  },
+  "mvRegenerate": "Buat lagi",
+  "@mvRegenerate": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv regenerate."
+  },
+  "mvEntryTitle": "Jadikan video",
+  "@mvEntryTitle": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv entry title."
+  },
+  "mvEntrySubtitle": "Video lirik, reff, dan lagu penuh, dengan kredit",
+  "@mvEntrySubtitle": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv entry subtitle."
+  },
+  "mvEntryDisabled": "Tersedia setelah lagu selesai",
+  "@mvEntryDisabled": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv entry disabled."
+  },
+  "mvEntryChoose": "Pilih video",
+  "@mvEntryChoose": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv entry choose."
+  },
+  "mvEntryWatch": "Tonton video",
+  "@mvEntryWatch": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv entry watch."
+  },
+  "mvChipReady": "Video",
+  "@mvChipReady": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv chip ready."
+  },
+  "mvChipMaking": "Membuat video",
+  "@mvChipMaking": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv chip making."
+  },
+  "lengthAutoVideo": "Buat juga video lirik",
+  "@lengthAutoVideo": {
+    "description": "Song length selector. Purpose: length auto video."
+  },
+  "lengthAutoVideoHint": "Siap beberapa menit setelah lagu · memakai kredit",
+  "@lengthAutoVideoHint": {
+    "description": "Song length selector. Purpose: length auto video hint."
+  },
+  "lengthSongAndChorus": "Lagu + video reff",
+  "@lengthSongAndChorus": {
+    "description": "Song length selector. Purpose: length song and chorus."
+  },
+  "lengthSongAndChorusHint": "Lagu penuh, lalu video reff 30 detik",
+  "@lengthSongAndChorusHint": {
+    "description": "Song length selector. Purpose: length song and chorus hint."
+  },
+  "paywallVideoGroup": "Video musik",
+  "@paywallVideoGroup": {
+    "description": "Purchase screen. Purpose: paywall video group."
+  },
+  "planVideoIncluded": "Kuotamu juga bisa untuk video musik",
+  "@planVideoIncluded": {
+    "description": "Purchase screen subscription benefits. Purpose: plan video included."
+  },
+  "settingsVideoCredits": "Kredit video",
+  "@settingsVideoCredits": {
+    "description": "Settings screen. Purpose: settings video credits."
+  },
+  "createGenrePop": "Pop",
+  "@createGenrePop": {
+    "description": "Genre display label in creation, playback, library, and work details for Pop. The generation request retains its original English genre value."
+  },
+  "createGenreHipHopRap": "Hip-hop & rap",
+  "@createGenreHipHopRap": {
+    "description": "Genre display label in creation, playback, library, and work details for Hip-Hop & Rap. The generation request retains its original English genre value."
+  },
+  "createGenreRock": "Rock",
+  "@createGenreRock": {
+    "description": "Genre display label in creation, playback, library, and work details for Rock. The generation request retains its original English genre value."
+  },
+  "createGenreKPop": "K-pop",
+  "@createGenreKPop": {
+    "description": "Genre display label in creation, playback, library, and work details for K-Pop. The generation request retains its original English genre value."
+  },
+  "createGenreLatin": "Latin",
+  "@createGenreLatin": {
+    "description": "Genre display label in creation, playback, library, and work details for Latin. The generation request retains its original English genre value."
+  },
+  "createGenreElectronic": "Elektronik",
+  "@createGenreElectronic": {
+    "description": "Genre display label in creation, playback, library, and work details for Electronic. The generation request retains its original English genre value."
+  },
+  "createGenreRnb": "R&B",
+  "@createGenreRnb": {
+    "description": "Genre display label in creation, playback, library, and work details for R&B. The generation request retains its original English genre value."
+  },
+  "createGenreCountry": "Country",
+  "@createGenreCountry": {
+    "description": "Genre display label in creation, playback, library, and work details for Country. The generation request retains its original English genre value."
+  },
+  "createGenreAfrobeats": "Afrobeats",
+  "@createGenreAfrobeats": {
+    "description": "Genre display label in creation, playback, library, and work details for Afrobeats. The generation request retains its original English genre value."
+  },
+  "createGenreReggae": "Reggae",
+  "@createGenreReggae": {
+    "description": "Genre display label in creation, playback, library, and work details for Reggae. The generation request retains its original English genre value."
+  },
+  "createGenreJazzBlues": "Jazz & blues",
+  "@createGenreJazzBlues": {
+    "description": "Genre display label in creation, playback, library, and work details for Jazz & Blues. The generation request retains its original English genre value."
+  },
+  "createGenreClassical": "Klasik",
+  "@createGenreClassical": {
+    "description": "Genre display label in creation, playback, library, and work details for Classical. The generation request retains its original English genre value."
+  },
+  "createGenreFolk": "Folk",
+  "@createGenreFolk": {
+    "description": "Genre display label in creation, playback, library, and work details for Folk. The generation request retains its original English genre value."
+  },
+  "createGenreLofi": "Lo-fi",
+  "@createGenreLofi": {
+    "description": "Genre display label in creation, playback, library, and work details for Lo-Fi. The generation request retains its original English genre value."
+  },
+  "createGenreAcoustic": "Akustik",
+  "@createGenreAcoustic": {
+    "description": "Genre display label in creation, playback, library, and work details for Acoustic. The generation request retains its original English genre value."
+  },
+  "createGenreCinematic": "Musik film",
+  "@createGenreCinematic": {
+    "description": "Genre display label in creation, playback, library, and work details for Cinematic. The generation request retains its original English genre value."
+  },
+  "createGenreAmbient": "Ambient",
+  "@createGenreAmbient": {
+    "description": "Genre display label in creation, playback, library, and work details for Ambient. The generation request retains its original English genre value."
+  },
+  "createGenreBossaNova": "Bossa nova",
+  "@createGenreBossaNova": {
+    "description": "Genre display label in creation, playback, library, and work details for Bossa Nova. The generation request retains its original English genre value."
+  },
+  "createGenreIndiePop": "Pop indie",
+  "@createGenreIndiePop": {
+    "description": "Genre display label in creation, playback, library, and work details for Indie Pop. The generation request retains its original English genre value."
+  },
+  "createGenreContemporaryRnb": "R&B modern",
+  "@createGenreContemporaryRnb": {
+    "description": "Genre display label in creation, playback, library, and work details for Contemporary R&B. The generation request retains its original English genre value."
+  },
+  "createGenreAlternativeCountry": "Country alternatif",
+  "@createGenreAlternativeCountry": {
+    "description": "Genre display label in creation, playback, library, and work details for Alternative Country. The generation request retains its original English genre value."
+  },
+  "createGenreGarageRock": "Garage rock",
+  "@createGenreGarageRock": {
+    "description": "Genre display label in creation, playback, library, and work details for Garage Rock. The generation request retains its original English genre value."
+  },
+  "createGenreGrime": "Grime",
+  "@createGenreGrime": {
+    "description": "Genre display label in creation, playback, library, and work details for Grime. The generation request retains its original English genre value."
+  },
+  "createGenreIndieFolk": "Folk indie",
+  "@createGenreIndieFolk": {
+    "description": "Genre display label in creation, playback, library, and work details for Indie Folk. The generation request retains its original English genre value."
+  },
+  "createGenreSynthpop": "Synthpop",
+  "@createGenreSynthpop": {
+    "description": "Genre display label in creation, playback, library, and work details for Synthpop. The generation request retains its original English genre value."
+  },
+  "createGenrePianoBallad": "Balada piano",
+  "@createGenrePianoBallad": {
+    "description": "Genre display label in creation, playback, library, and work details for Piano Ballad. The generation request retains its original English genre value."
+  },
+  "createGenreSurfRock": "Surf rock",
+  "@createGenreSurfRock": {
+    "description": "Genre display label in creation, playback, library, and work details for Surf Rock. The generation request retains its original English genre value."
+  },
+  "createGenreDeepHouse": "Deep house",
+  "@createGenreDeepHouse": {
+    "description": "Genre display label in creation, playback, library, and work details for Deep House. The generation request retains its original English genre value."
+  },
+  "createGenreMinimalTechno": "Techno minimal",
+  "@createGenreMinimalTechno": {
+    "description": "Genre display label in creation, playback, library, and work details for Minimal Techno. The generation request retains its original English genre value."
+  },
+  "createGenreFrenchYeyePop": "Pop yé-yé Prancis 60-an",
+  "@createGenreFrenchYeyePop": {
+    "description": "Genre display label in creation, playback, library, and work details for 1960s French Yé-yé Pop. The generation request retains its original English genre value."
+  },
+  "createGenreChillout": "Chillout",
+  "@createGenreChillout": {
+    "description": "Genre display label in creation, playback, library, and work details for Chillout. The generation request retains its original English genre value."
+  },
+  "createGenreJPopIndiePop": "J-pop indie",
+  "@createGenreJPopIndiePop": {
+    "description": "Genre display label in creation, playback, library, and work details for J-pop Indie Pop. The generation request retains its original English genre value."
+  },
+  "createGenreChiptune": "Chiptune",
+  "@createGenreChiptune": {
+    "description": "Genre display label in creation, playback, library, and work details for Chiptune. The generation request retains its original English genre value."
+  },
+  "createGenreDiscoFunk": "Disco funk",
+  "@createGenreDiscoFunk": {
+    "description": "Genre display label in creation, playback, library, and work details for Disco Funk. The generation request retains its original English genre value."
+  },
+  "createGenreReggaeton": "Reggaeton",
+  "@createGenreReggaeton": {
+    "description": "Genre display label in creation, playback, library, and work details for Reggaeton. The generation request retains its original English genre value."
+  },
+  "createGenreCumbia": "Cumbia",
+  "@createGenreCumbia": {
+    "description": "Genre display label in creation, playback, library, and work details for Cumbia. The generation request retains its original English genre value."
+  },
+  "createGenreLatinJazz": "Jazz Latin",
+  "@createGenreLatinJazz": {
+    "description": "Genre display label in creation, playback, library, and work details for Latin Jazz. The generation request retains its original English genre value."
+  },
+  "createGenreBhangra": "Bhangra",
+  "@createGenreBhangra": {
+    "description": "Genre display label in creation, playback, library, and work details for Bhangra. The generation request retains its original English genre value."
+  },
+  "createGenreIndianClassical": "Klasik India",
+  "@createGenreIndianClassical": {
+    "description": "Genre display label in creation, playback, library, and work details for Indian Classical. The generation request retains its original English genre value."
+  },
+  "createGenreLofiHipHop": "Hip-hop lo-fi",
+  "@createGenreLofiHipHop": {
+    "description": "Genre display label in creation, playback, library, and work details for Lo-Fi Hip Hop. The generation request retains its original English genre value."
+  },
+  "profileAccountIdWithValue": "ID Akun: {id}",
+  "@profileAccountIdWithValue": {
+    "description": "Account profile. Purpose: profile account id with value.",
+    "placeholders": {
+      "id": {
+        "type": "String",
+        "description": "Account or license identifier; preserve it verbatim."
+      }
+    }
+  },
+  "profileBalanceValue": "{balance}",
+  "@profileBalanceValue": {
+    "description": "Account profile. Purpose: profile balance value.",
+    "placeholders": {
+      "balance": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Wallet balance as an integer number of credits, not a monetary price."
+      }
+    }
+  },
+  "playerExportFileName": "{brand} – {title} ({occasion})",
+  "@playerExportFileName": {
+    "description": "Song playback screen. Purpose: player export file name.",
+    "placeholders": {
+      "brand": {
+        "type": "String",
+        "description": "Fixed Songlet brand name; do not translate."
+      },
+      "title": {
+        "type": "String",
+        "description": "Localized song title; may contain a user-provided recipient name."
+      },
+      "occasion": {
+        "type": "String",
+        "description": "Localized occasion or template name."
+      }
+    }
+  },
+  "createVocalsCustomSummary": "Otomatis — sesuai deskripsimu",
+  "@createVocalsCustomSummary": {
+    "description": "Song creation screen. Purpose: create vocals custom summary."
+  },
+  "mvChipMakingWithProgress": "Membuat video · {progress}",
+  "@mvChipMakingWithProgress": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv chip making with progress.",
+    "placeholders": {
+      "progress": {
+        "type": "String",
+        "description": "Complete percentage formatted for the UI locale, including the percent sign."
+      }
+    }
+  },
+  "mvAutoFailureMessage": "Video tidak bisa dimulai · {reason}",
+  "@mvAutoFailureMessage": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv auto failure message.",
+    "placeholders": {
+      "reason": {
+        "type": "String",
+        "description": "Localized reason the automatic video could not start."
+      }
+    }
+  },
+  "settingsVideoCreditsSummary": "Kredit video: {credits}",
+  "@settingsVideoCreditsSummary": {
+    "description": "Settings screen. Purpose: settings video credits summary.",
+    "placeholders": {
+      "credits": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Number of video credits, not a monetary price."
+      }
+    }
+  },
+  "shareLyricsAttribution": "— {aiLabel} · {brand}",
+  "@shareLyricsAttribution": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share lyrics attribution.",
+    "placeholders": {
+      "aiLabel": {
+        "type": "String",
+        "description": "Localized AI-generated attribution."
+      },
+      "brand": {
+        "type": "String",
+        "description": "Fixed Songlet brand name; do not translate."
+      }
+    }
+  },
+  "inspirationHeader": "Inspirasi",
+  "@inspirationHeader": {
+    "description": "Create home: the row of inspirations (contract 02 v1.2, ADR-0029)."
+  },
+  "inspirationPlay": "Putar {name}",
+  "@inspirationPlay": {
+    "description": "Accessibility label of the play button of an inspiration preview.",
+    "placeholders": {
+      "name": {
+        "type": "String",
+        "description": "The inspiration name as shown on its card."
+      }
+    }
+  },
+  "inspirationStop": "Hentikan contoh",
+  "@inspirationStop": {
+    "description": "Accessibility label of the stop button while an inspiration preview plays."
+  },
+  "inspirationNameSoundscape": "Lanskap Suara",
+  "@inspirationNameSoundscape": {
+    "description": "Inspiration names and styles: local copy of the server {en, zh} text for other languages, looked up by the English text (ADR-0029)."
+  },
+  "inspirationStyleSoundscape": "Tekstur ambient, tanpa vokal",
+  "@inspirationStyleSoundscape": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameBackgroundMusic": "Musik Latar",
+  "@inspirationNameBackgroundMusic": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleBackgroundMusic": "Instrumental ringan untuk video",
+  "@inspirationStyleBackgroundMusic": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameMemorizeSomething": "Hafalkan Sesuatu",
+  "@inspirationNameMemorizeSomething": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleMemorizeSomething": "Pop mudah diingat untuk menghafal",
+  "@inspirationStyleMemorizeSomething": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameTextMessages": "Pesan Jadi Lagu",
+  "@inspirationNameTextMessages": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleTextMessages": "Pop jenaka dari pesanmu",
+  "@inspirationStyleTextMessages": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameIntroMusic": "Musik Pembuka",
+  "@inspirationNameIntroMusic": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleIntroMusic": "Pembuka sinematik yang megah",
+  "@inspirationStyleIntroMusic": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameMontage": "Montase",
+  "@inspirationNameMontage": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleMontage": "Musik naik semangat untuk cuplikan terbaik",
+  "@inspirationStyleMontage": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameSayItWithATrack": "Katakan Lewat Lagu",
+  "@inspirationNameSayItWithATrack": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleSayItWithATrack": "Balada pop penuh perasaan",
+  "@inspirationStyleSayItWithATrack": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameBrandJingle": "Jingle Merek",
+  "@inspirationNameBrandJingle": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleBrandJingle": "Hook singkat, cerah, mudah diingat",
+  "@inspirationStyleBrandJingle": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameRingtone": "Nada Dering",
+  "@inspirationNameRingtone": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleRingtone": "Hook 30 detik yang bisa diulang",
+  "@inspirationStyleRingtone": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameStreaming": "Streaming",
+  "@inspirationNameStreaming": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleStreaming": "Intro streaming elektronik yang enerjik",
+  "@inspirationStyleStreaming": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameSpeechToTrack": "Suara Jadi Lagu",
+  "@inspirationNameSpeechToTrack": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleSpeechToTrack": "Suaramu jadi lagu",
+  "@inspirationStyleSpeechToTrack": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameRapBattle": "Adu Rap",
+  "@inspirationNameRapBattle": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleRapBattle": "Hip-hop keras",
+  "@inspirationStyleRapBattle": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameComedy": "Komedi",
+  "@inspirationNameComedy": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleComedy": "Unik, ceria, penuh canda",
+  "@inspirationStyleComedy": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameTeamAnthem": "Lagu Tim",
+  "@inspirationNameTeamAnthem": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleTeamAnthem": "Nyanyian rock stadion",
+  "@inspirationStyleTeamAnthem": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameSportsRecap": "Rangkuman Laga",
+  "@inspirationNameSportsRecap": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleSportsRecap": "Sorotan orkestra epik",
+  "@inspirationStyleSportsRecap": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNamePartyInvite": "Undangan Pesta",
+  "@inspirationNamePartyInvite": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStylePartyInvite": "Undangan dance-pop",
+  "@inspirationStylePartyInvite": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameHappyBirthday": "Selamat Ulang Tahun",
+  "@inspirationNameHappyBirthday": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleHappyBirthday": "Lagu ulang tahun akustik yang hangat",
+  "@inspirationStyleHappyBirthday": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameFriendAppreciation": "Terima Kasih, Sahabat",
+  "@inspirationNameFriendAppreciation": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleFriendAppreciation": "Indie pop yang bikin senang",
+  "@inspirationStyleFriendAppreciation": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameLoveStory": "Kisah Cinta",
+  "@inspirationNameLoveStory": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleLoveStory": "Balada R&B romantis",
+  "@inspirationStyleLoveStory": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameBirthdayRoast": "Ulang Tahun Kocak",
+  "@inspirationNameBirthdayRoast": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleBirthdayRoast": "Lagu ulang tahun jenaka",
+  "@inspirationStyleBirthdayRoast": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameOdeToYourPet": "Pujian untuk Hewanmu",
+  "@inspirationNameOdeToYourPet": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleOdeToYourPet": "Pop lucu dan riang",
+  "@inspirationStyleOdeToYourPet": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameHometownTribute": "Tribut Kampung Halaman",
+  "@inspirationNameHometownTribute": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleHometownTribute": "Folk nostalgia",
+  "@inspirationStyleHometownTribute": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameWeatherReport": "Laporan Cuaca",
+  "@inspirationNameWeatherReport": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleWeatherReport": "Groove lounge yang santai",
+  "@inspirationStyleWeatherReport": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameBusinessPromo": "Promo Usaha",
+  "@inspirationNameBusinessPromo": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleBusinessPromo": "Pop korporat yang percaya diri",
+  "@inspirationStyleBusinessPromo": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleBirthdayWish": "Lagu tulus untuk hari spesial mereka",
+  "@inspirationStyleBirthdayWish": {
+    "description": "Style line of the template entry BirthdayWish (server style.en), read with the tile name in languages the server does not send; mapped by slug (ADR-0032)."
+  },
+  "inspirationStyleBirthdayParty": "Lagu pesta ceria untuk yang berulang tahun",
+  "@inspirationStyleBirthdayParty": {
+    "description": "Style line of the template entry BirthdayParty (server style.en), read with the tile name in languages the server does not send; mapped by slug (ADR-0032)."
+  },
+  "inspirationStyleThankAFriend": "Lagu terima kasih yang hangat dan tulus",
+  "@inspirationStyleThankAFriend": {
+    "description": "Style line of the template entry ThankAFriend (server style.en), read with the tile name in languages the server does not send; mapped by slug (ADR-0032)."
+  },
+  "inspirationStyleWedding": "Lagu ceria dan romantis untuk hari bahagia",
+  "@inspirationStyleWedding": {
+    "description": "Style line of the template entry Wedding (server style.en), read with the tile name in languages the server does not send; mapped by slug (ADR-0032)."
+  },
+  "inspirationStyleInMemory": "Penghormatan lembut penuh harapan",
+  "@inspirationStyleInMemory": {
+    "description": "Style line of the template entry InMemory (server style.en), read with the tile name in languages the server does not send; mapped by slug (ADR-0032)."
+  },
+  "inspirationStyleFestival": "Ucapan musiman yang cerah dan meriah",
+  "@inspirationStyleFestival": {
+    "description": "Style line of the template entry Festival (server style.en), read with the tile name in languages the server does not send; mapped by slug (ADR-0032)."
+  },
+  "inspirationStylePetAnthem": "Lagu tema penuh kasih untuk hewan peliharaan",
+  "@inspirationStylePetAnthem": {
+    "description": "Style line of the template entry PetAnthem (server style.en), read with the tile name in languages the server does not send; mapped by slug (ADR-0032)."
+  },
+  "inspirationStyleHometown": "Lagu kampung halaman yang bangga dan nostalgia",
+  "@inspirationStyleHometown": {
+    "description": "Style line of the template entry Hometown (server style.en), read with the tile name in languages the server does not send; mapped by slug (ADR-0032)."
+  },
+  "settingsSectionLanguage": "Bahasa",
+  "@settingsSectionLanguage": {
+    "description": "Settings section containing interface and default lyrics languages."
+  },
+  "settingsSectionProfile": "Profil",
+  "@settingsSectionProfile": {
+    "description": "Settings section showing the account: its credits and its account ID."
+  },
+  "settingsCredits": "Kredit",
+  "@settingsCredits": {
+    "description": "Settings > Profile: label of the account's credit balance (server truth)."
+  },
+  "settingsAccountId": "ID akun",
+  "@settingsAccountId": {
+    "description": "Settings > Profile: label of the account UUID (shown in full, for support)."
+  },
+  "settingsCopyAccountId": "Salin ID akun",
+  "@settingsCopyAccountId": {
+    "description": "Settings > Profile: accessibility label / tooltip of the button that copies the account ID."
+  },
+  "devSectionTitle": "Pengembang (khusus DEV)",
+  "@devSectionTitle": {
+    "description": "Settings section shown only in DEV debug builds (developer tools)."
+  },
+  "devKeychainReset": "Hapus kunci Keychain",
+  "@devKeychainReset": {
+    "description": "DEV-only settings row: deletes the app's iOS Keychain keys."
+  },
+  "devKeychainResetHint": "ID perangkat dan token sesi",
+  "@devKeychainResetHint": {
+    "description": "DEV-only settings row subtitle: what the Keychain reset removes."
+  },
+  "devKeychainResetConfirmTitle": "Hapus kunci Keychain?",
+  "@devKeychainResetConfirmTitle": {
+    "description": "DEV-only confirmation dialog title before deleting the Keychain keys."
+  },
+  "devKeychainResetConfirmBody": "ID perangkat dan token sesi dihapus dari Keychain. Akun tamu saat ini tidak dapat dipulihkan; aplikasi masuk sebagai tamu baru.",
+  "@devKeychainResetConfirmBody": {
+    "description": "DEV-only confirmation dialog body: consequences of deleting the Keychain keys."
+  },
+  "devKeychainResetDone": "Kunci Keychain dihapus — masuk sebagai tamu baru",
+  "@devKeychainResetDone": {
+    "description": "DEV-only message after the Keychain keys were deleted."
+  },
+  "settingsAppLanguage": "Bahasa aplikasi",
+  "@settingsAppLanguage": {
+    "description": "Settings row and picker heading for the interface language, distinct from lyrics language."
+  },
+  "settingsLanguageSystem": "Ikuti bahasa sistem",
+  "@settingsLanguageSystem": {
+    "description": "Interface-language picker option that follows the system’s preferred supported language."
+  },
+  "settingsLanguageSystemValue": "Sistem ({language})",
+  "@settingsLanguageSystemValue": {
+    "description": "Settings row value when the interface language follows the system.",
+    "placeholders": {
+      "language": {
+        "type": "String",
+        "description": "Autonym of the currently resolved supported system locale."
+      }
+    }
+  },
+  "settingsLanguageNativeName": "Bahasa Indonesia",
+  "@settingsLanguageNativeName": {
+    "description": "This language’s own name (autonym); used to identify it in every interface-language picker, regardless of the current UI language."
+  },
+  "settingsLanguageSaveFailed": "Bahasa gagal disimpan. Coba lagi.",
+  "@settingsLanguageSaveFailed": {
+    "description": "Interface-language preference could not be saved; the previous selection remains. Explain the failure and invite retry."
+  },
+  "settingsLyricsLanguageHint": "Berlaku untuk lagu baru.",
+  "@settingsLyricsLanguageHint": {
+    "description": "Default lyrics-language setting helper. Changing the preference affects new songs, not an existing draft."
+  },
+  "composerRemoveInspiration": "Hapus {name}",
+  "@composerRemoveInspiration": {
+    "description": "Accessibility label of the close button on the picked idea at the head of the composer.",
+    "placeholders": {
+      "name": {
+        "type": "String",
+        "description": "Inspiration display name; do not translate."
+      }
+    }
+  },
+  "composerPromptHint": "Jelaskan lagunya, atau pilih ide di atas",
+  "@composerPromptHint": {
+    "description": "Placeholder of the create home's prompt field on phones, where the idea grid is above the composer (P01, state A)."
+  },
+  "composerPromptHintWide": "Jelaskan lagunya, atau pilih ide",
+  "@composerPromptHintWide": {
+    "description": "Placeholder of the create home's prompt field on iPad, where the idea grid is beside the composer (P01, state A)."
+  },
+  "composerWordsLabel": "Kata-katamu",
+  "@composerWordsLabel": {
+    "description": "Label of the field for the user's own text when the picked idea needs it (composer state B); the idea's hint is its placeholder."
+  },
+  "composerPhotosAttached": "{count, plural, one{{count} foto ditambahkan} other{{count} foto ditambahkan}}",
+  "@composerPhotosAttached": {
+    "description": "Accessibility label of the composer's photo button once photos are added.",
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Number of photos added (1–10)."
+      }
+    }
+  },
+  "composerOptionsSummary": "Opsi lagu: {summary}",
+  "@composerOptionsSummary": {
+    "description": "Accessibility label of the composer's summary row; it opens the song options.",
+    "placeholders": {
+      "summary": {
+        "type": "String",
+        "description": "The current length, vocals and genre, comma-separated, already localized."
+      }
+    }
+  },
+  "composerOptionsShow": "Tampilkan opsi",
+  "@composerOptionsShow": {
+    "description": "Accessibility hint of the composer's summary row while the song options are folded."
+  },
+  "composerOptionsHide": "Sembunyikan opsi",
+  "@composerOptionsHide": {
+    "description": "Accessibility hint of the composer's summary row while the song options are shown."
+  },
+  "composerSummaryAnyVocals": "Vokal bebas",
+  "@composerSummaryAnyVocals": {
+    "description": "Composer summary row: the vocals follow the user's description (the Vocals panel's Custom)."
+  },
+  "composerSummaryAnyGenre": "Genre bebas",
+  "@composerSummaryAnyGenre": {
+    "description": "Composer summary row: no genre chosen, the description decides (the Genre panel's Custom)."
+  },
+  "composerSummaryLyrics": "Lirik sendiri",
+  "@composerSummaryLyrics": {
+    "description": "Composer summary row: the user wrote their own lyrics (shown while the options are folded)."
+  },
+  "composerSummaryVideo": "Video lirik",
+  "@composerSummaryVideo": {
+    "description": "Composer summary row: a lyric video will be made after the full song (shown while the options are folded)."
+  },
+  "createPreviewLabel": "{cost, select, free{Buat pratinjau · gratis} preview{Buat pratinjau · 1 pratinjau} other{Buat pratinjau}}",
+  "@createPreviewLabel": {
+    "description": "The composer's primary button for a 30-second preview; the cost part follows the account's ledger (ADR-0035).",
+    "placeholders": {
+      "cost": {
+        "type": "String",
+        "description": "What the action spends, from the account's ledger (ADR-0035): free, preview, song or other. Selector keywords are code; translate only the phrases."
+      }
+    }
+  },
+  "createPreviewForLabel": "{cost, select, free{Buat pratinjau untuk {name} · gratis} preview{Buat pratinjau untuk {name} · 1 pratinjau} other{Buat pratinjau untuk {name}}}",
+  "@createPreviewForLabel": {
+    "description": "The composer's primary button for a 30-second preview of a picked idea with a name; the cost part follows the account's ledger (ADR-0035).",
+    "placeholders": {
+      "name": {
+        "type": "String",
+        "description": "The recipient's name as typed; do not translate."
+      },
+      "cost": {
+        "type": "String",
+        "description": "What the action spends, from the account's ledger (ADR-0035): free, preview, song or other. Selector keywords are code; translate only the phrases."
+      }
+    }
+  },
+  "createFullSongLabel": "{cost, select, song{Buat lagu lengkap · 1 lagu} other{Buat lagu lengkap}}",
+  "@createFullSongLabel": {
+    "description": "The composer's primary button for the full ~2-minute song; the cost part follows the account's ledger (ADR-0035).",
+    "placeholders": {
+      "cost": {
+        "type": "String",
+        "description": "What the action spends, from the account's ledger (ADR-0035): free, preview, song or other. Selector keywords are code; translate only the phrases."
+      }
+    }
+  },
+  "voiceUseText": "Gunakan teks ini",
+  "@voiceUseText": {
+    "description": "P03a: the dictation's only action — put the transcript in the prompt field (dictation is free input)."
+  },
+  "mvAutoCountdown": "{level} dimulai dalam {seconds} dtk",
+  "@mvAutoCountdown": {
+    "description": "Banner title while an automatic music video counts down before it starts (and is charged); the user can cancel.",
+    "placeholders": {
+      "level": {
+        "type": "String",
+        "description": "Video kind, e.g. Lyric video or Chorus video; already translated."
+      },
+      "seconds": {
+        "type": "int",
+        "description": "Seconds left."
+      }
+    }
+  },
+  "planPerWeek": "{price}/minggu",
+  "@planPerWeek": {
+    "description": "Subscription billing period: price per week, e.g. $4.99/week.",
+    "placeholders": {
+      "price": {
+        "type": "String",
+        "description": "Store-formatted price."
+      }
+    }
+  },
+  "planCreditsWeekly": "Kredit baru setiap minggu",
+  "@planCreditsWeekly": {
+    "description": "Plan benefit line for the weekly subscription: credits are renewed every week (no fixed song count, never 'unlimited')."
+  },
+  "paywallIntroOffer": "Diskon {percent}% untuk {unit, select, day{hari pertama} week{minggu pertama} month{bulan pertama} year{tahun pertama} other{periode pertama}}",
+  "@paywallIntroOffer": {
+    "description": "Plan card caption for an introductory discount read from the App Store, e.g. 50% off your first week.",
+    "placeholders": {
+      "percent": {
+        "type": "int",
+        "description": "Discount percentage."
+      },
+      "unit": {
+        "type": "String",
+        "description": "Billing period unit of the offer: day, week, month or year."
+      }
+    }
+  },
+  "paywallIntroDisclosure": "Setelah harga perkenalan {introPrice}, Anda akan ditagih {pricePerPeriod} secara otomatis. Batalkan kapan saja sebelum perpanjangan.",
+  "@paywallIntroDisclosure": {
+    "description": "Paywall disclosure for a selected subscription with an introductory price: the actual recurring price and period after it, and that cancellation is possible before renewal (App Review 3.1.2).",
+    "placeholders": {
+      "introPrice": {
+        "type": "String",
+        "description": "Store-formatted introductory price."
+      },
+      "pricePerPeriod": {
+        "type": "String",
+        "description": "Recurring price with its billing period, e.g. $4.99/week."
+      }
+    }
+  },
+  "storePreviewAHook": "Mulai dari namanya",
+  "@storePreviewAHook": {
+    "description": "App Store preview, script A, 1–4 s, as the name is typed (the muted hook continues). ≤ 28 characters (CJK ≤ 14)."
+  },
+  "storePreviewAWords": "Tiga kata tentang dia",
+  "@storePreviewAWords": {
+    "description": "App Store preview, script A, 4–7.5 s, as three words about the person are typed. ≤ 28 characters (CJK ≤ 14)."
+  },
+  "storePreviewAWait": "Lagumu sedang dibuat",
+  "@storePreviewAWait": {
+    "description": "App Store preview, script A, 7.5–10 s, over the generating page. ≤ 28 characters (CJK ≤ 14)."
+  },
+  "storePreviewAChorus": "Namanya di reff",
+  "@storePreviewAChorus": {
+    "description": "App Store preview, script A, 10.5–18.5 s, over the player on the chorus that sings the name. ≤ 28 characters (CJK ≤ 14)."
+  },
+  "storePreviewAEnd": "Lagu dengan namanya",
+  "@storePreviewAEnd": {
+    "description": "App Store preview (store_preview/songlet), script A, 0–1 s: the claim on the intro card. ≤ 28 characters (CJK ≤ 14). Never shown in the app."
+  },
+  "storePreviewBHook": "Mulai dari fotomu",
+  "@storePreviewBHook": {
+    "description": "App Store preview, script B, 1–4 s, as four photos are picked (the muted hook continues). ≤ 28 characters (CJK ≤ 14)."
+  },
+  "storePreviewBVideo": "Tambah video lirik",
+  "@storePreviewBVideo": {
+    "description": "App Store preview, script B, 4–8 s, as \"also make a lyric video\" is switched on. ≤ 28 characters (CJK ≤ 14)."
+  },
+  "storePreviewBWait": "Membuat lagumu",
+  "@storePreviewBWait": {
+    "description": "App Store preview, script B, 8–10 s, over the generating page. ≤ 28 characters (CJK ≤ 14)."
+  },
+  "storePreviewBLyrics": "Lirik sinkron di layar",
+  "@storePreviewBLyrics": {
+    "description": "App Store preview, script B, 10.5–17 s, over the lyric video with synced lyrics. ≤ 28 characters (CJK ≤ 14)."
+  },
+  "storePreviewBMood": "Fotomu menentukan suasana.",
+  "@storePreviewBMood": {
+    "description": "App Store preview (store_preview/songlet), script B, 0–1 s: the claim on the intro card. ≤ 28 characters (CJK ≤ 14). Never shown in the app."
+  },
+  "storePreviewBShare": "Bagikan videonya.",
+  "@storePreviewBShare": {
+    "description": "App Store preview, script B, 17–19.5 s, over the share sheet. ≤ 28 characters (CJK ≤ 14)."
+  },
+  "storePreviewBLanguage": "Lirik dalam bahasamu",
+  "@storePreviewBLanguage": {
+    "description": "App Store preview, script B, 19.5–23 s, as the country and lyric language are picked. ≤ 28 characters (CJK ≤ 14)."
+  },
+  "storePreviewAShare": "Kirim sebagai kartu",
+  "@storePreviewAShare": {
+    "description": "App Store preview, script A, 18.5–23 s, over the share card: the song goes out as a card. ≤ 28 characters (CJK ≤ 14)."
+  },
+  "storePreviewCta": "Buat lagu pertamamu",
+  "@storePreviewCta": {
+    "description": "App Store preview end card: the call to action under the app name. ≤ 28 characters (CJK ≤ 14). No price, no \"free\"."
+  },
+  "storePreviewDisclosure": "Memerlukan langganan atau kredit",
+  "@storePreviewDisclosure": {
+    "description": "App Store preview end card, small print: making songs needs a subscription or credits (Apple requires disclosing in-app purchases). ≤ 60 characters (CJK ≤ 30)."
+  },
+  "storeCreativeHeader": "Lagu untuk orang yang kamu sayangi",
+  "@storeCreativeHeader": {
+    "description": "App Store product page header (store_preview/songlet/creatives/store-page.yaml): the phrase beside the app on the default product page, image and looping video. One short phrase, ≤ 40 characters (CJK ≤ 20), at most 2 lines as set. No price, no \"free\", no awards. Never shown in the app."
+  },
+  "storeCreativeSearch": "Ubah nama jadi lagu",
+  "@storeCreativeSearch": {
+    "description": "App Store search results asset (creatives/store-page.yaml): what the app does, obvious at a glance; shown muted beside a name being typed and the song it becomes. ≤ 40 characters (CJK ≤ 20). Never shown in the app."
+  },
+  "storeCreativeBirthday": "Lagu ulang tahun dengan namanya",
+  "@storeCreativeBirthday": {
+    "description": "Custom product page \"Birthday Songs\" header and search results asset (creatives/cpp-birthday.yaml). ≤ 40 characters (CJK ≤ 20). Never shown in the app."
+  },
+  "storeCreativePhoto": "Fotomu jadi lagu",
+  "@storeCreativePhoto": {
+    "description": "Custom product page \"Photo to Song\" header and search results asset (creatives/cpp-photo.yaml). ≤ 40 characters (CJK ≤ 20). Never shown in the app."
+  },
+  "storeCreativeWedding": "Lagu untuk hari pernikahanmu",
+  "@storeCreativeWedding": {
+    "description": "Custom product page \"Wedding Songs\" header and search results asset (creatives/cpp-wedding.yaml). ≤ 40 characters (CJK ≤ 20). Never shown in the app."
+  }
+}

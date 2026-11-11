@@ -1,0 +1,22 @@
+name: arch_guard
+description: "Architecture-boundary checker for the iap_template workspace: machine-enforces the one-way DDD layering (no reverse deps, no UI in business code, pure domain, composition-root-only data wiring, no presentation/ dirs). Pure-Dart dev tooling on the analyzer's public parsing API."
+publish_to: "none"
+version: 1.0.0
+resolution: workspace
+
+# Dev tooling only — never imported by app/library code, so it is a dev_dependency
+# of the root. Built on the analyzer's stable public parsing API (parseString),
+# which tracks the toolchain's analyzer (12.x on Dart 3.12) — unlike custom_lint,
+# whose builder caps at analyzer ^8 and so cannot resolve here. See CLAUDE.md.
+environment:
+  sdk: ^3.11.0
+  flutter: ">=3.44.0"
+
+dependencies:
+  analyzer: ^12.0.0
+  path: ^1.9.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0

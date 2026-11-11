@@ -1,0 +1,40 @@
+{
+  "probed_at": "2026-08-05T10:41:10.932246+08:00",
+  "model": "gemini-3.1-flash-live-preview",
+  "api_version": "v1alpha",
+  "setup_mode": "full",
+  "transcription_requested": true,
+  "ws_url": "wss://generativelanguage.googleapis.com/ws/google.ai.generativelanguage.v1alpha.GenerativeService.BidiGenerateContentConstrained",
+  "auth_scheme": "Token",
+  "token_prefix": "auth_tokens/de2a943a",
+  "handshake_http_status": 101,
+  "frames": [
+    {
+      "seq": 1,
+      "direction": "client→server",
+      "at_ms": 0,
+      "raw": {
+        "setup": {
+          "generationConfig": {
+            "responseModalities": [
+              "AUDIO"
+            ]
+          },
+          "inputAudioTranscription": {},
+          "model": "gemini-3.1-flash-live-preview",
+          "outputAudioTranscription": {},
+          "sessionResumption": {}
+        }
+      }
+    },
+    {
+      "seq": 2,
+      "direction": "server→client",
+      "at_ms": 356,
+      "raw": {
+        "setupComplete": {}
+      }
+    }
+  ],
+  "verdict": "成功: 连接建立且 setup 被接受"
+}

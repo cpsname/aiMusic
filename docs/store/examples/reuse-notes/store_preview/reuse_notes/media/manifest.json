@@ -1,0 +1,41 @@
+{
+  "schema": 2,
+  "entries": [
+    {
+      "id": "backdrop.en-US",
+      "type": "image",
+      "role": "backdrop",
+      "locale": "en-US",
+      "script": "A",
+      "file": "backdrop.png",
+      "license": {
+        "provider": "local-test-fixture",
+        "id": "reuse-notes-backdrop-v1",
+        "model": "ffmpeg-color",
+        "generated_at": "2026-10-13T12:00:00Z"
+      },
+      "vars": {},
+      "data": {
+        "purpose": "independent local acceptance only"
+      }
+    },
+    {
+      "id": "backdrop.zh-Hans",
+      "type": "image",
+      "role": "backdrop",
+      "locale": "zh-Hans",
+      "script": "A",
+      "file": "backdrop.png",
+      "license": {
+        "provider": "local-test-fixture",
+        "id": "reuse-notes-backdrop-v1",
+        "model": "ffmpeg-color",
+        "generated_at": "2026-10-13T12:00:00Z"
+      },
+      "vars": {},
+      "data": {
+        "purpose": "independent local acceptance only"
+      }
+    }
+  ]
+}

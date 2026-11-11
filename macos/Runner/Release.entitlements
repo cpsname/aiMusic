@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>com.apple.security.app-sandbox</key>
+	<true/>
+	<!-- Outbound network: the sandboxed Release app must reach BASE_URL
+	     (app/init, auth, IAP verify, wallet). Without this, every apiDio/authDio
+	     request fails in production. -->
+	<key>com.apple.security.network.client</key>
+	<true/>
+	<!-- Open-panel read access for the upload demo's file picker. -->
+	<key>com.apple.security.files.user-selected.read-only</key>
+	<true/>
+</dict>
+</plist>

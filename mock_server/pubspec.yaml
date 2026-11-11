@@ -1,0 +1,16 @@
+name: songlet_mock_server
+description: "Dev-only mock of the Songlet backend (docs/songlet/backend-contract.md) for client integration on the simulator. Never shipped."
+publish_to: "none"
+version: 0.1.0
+resolution: workspace
+
+environment:
+  sdk: ^3.11.0
+
+dependencies:
+  crypto: ^3.0.7
+  path: ^1.9.1
+
+dev_dependencies:
+  test: ^1.25.0
+  lints: ^6.0.0

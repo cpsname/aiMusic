@@ -1,0 +1,27 @@
+# Script W — footage only (kind: capture, packages/store_preview template
+# ADR-0012): the Wedding card picked and the couple's names typed, for the
+# "Wedding Songs" custom product page's creative assets
+# (creatives/cpp-wedding.yaml, ADR-0039). Never a preview of its own: filmed in
+# each storefront's take after A, before B (whose share sheet ends the take).
+# No song is made.
+id: W
+kind: capture
+title: The Wedding card picked, the couple's names typed
+
+setup:
+  - {do: newDraft}
+
+segments:
+  - scene: wedding
+    duration: 4.0
+    before:
+      # The grid is lazy and shows fewer rows in longer languages: reveal the
+      # tile inside the grid that holds the first one.
+      - {do: tap, key: tile.wedding, within: tile.birthday_wish}
+      - {do: waitFor, key: composer.name}
+      - {do: dismissKeyboard}
+      - {do: pause, ms: 600}
+    steps:
+      - {do: type, key: composer.name, text: "Alex & Sam", cps: 7}
+      - {do: dismissKeyboard}
+      - {do: pause, ms: 1600}

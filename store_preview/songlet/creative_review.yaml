@@ -1,0 +1,22 @@
+# Human review of what each creative asset shows (store-preview review;
+# template ADR-0011). real_ui feeds the assets manifest; a review goes stale
+# when the asset's footage, spec or placements change. Never edited by a tool
+# on its own judgement.
+reviews:
+  - {"asset":"cpp.birthday.header","real_ui":true,"reviewer":"lintion","date":"2026-10-10","basis":"fd0f675210d172d45b2e6618c28ea5b31fc1950422570fd20ca4f153272d9500","note":"contact sheets and first-2s sheets approved 2026-10-10"}
+  - {"asset":"cpp.birthday.header.{storefront}","real_ui":true,"reviewer":"lintion","date":"2026-10-10","basis":"fd0f675210d172d45b2e6618c28ea5b31fc1950422570fd20ca4f153272d9500","note":"contact sheets and first-2s sheets approved 2026-10-10"}
+  - {"asset":"cpp.birthday.search","real_ui":true,"reviewer":"lintion","date":"2026-10-10","basis":"de345206637adc1e3bb778ca68e6c40b79008028de5ed2a4e623a0764eea651c","note":"contact sheets and first-2s sheets approved 2026-10-10"}
+  - {"asset":"cpp.birthday.search.{storefront}","real_ui":true,"reviewer":"lintion","date":"2026-10-10","basis":"de345206637adc1e3bb778ca68e6c40b79008028de5ed2a4e623a0764eea651c","note":"contact sheets and first-2s sheets approved 2026-10-10"}
+  - {"asset":"cpp.photo.header","real_ui":true,"reviewer":"lintion","date":"2026-10-10","basis":"bf39f882cccab62b0fc3e3173e609082582b5f5d9957d3561a81f624290a2a95","note":"contact sheets and first-2s sheets approved 2026-10-10"}
+  - {"asset":"cpp.photo.header.{storefront}","real_ui":true,"reviewer":"lintion","date":"2026-10-10","basis":"bf39f882cccab62b0fc3e3173e609082582b5f5d9957d3561a81f624290a2a95","note":"contact sheets and first-2s sheets approved 2026-10-10"}
+  - {"asset":"cpp.photo.search","real_ui":true,"reviewer":"lintion","date":"2026-10-10","basis":"06d6f5d87e2e16f91de35a470ca7a331f24311ae9b72c1cde3e9e7cc2f5edb2c","note":"contact sheets and first-2s sheets approved 2026-10-10"}
+  - {"asset":"cpp.photo.search.{storefront}","real_ui":true,"reviewer":"lintion","date":"2026-10-10","basis":"06d6f5d87e2e16f91de35a470ca7a331f24311ae9b72c1cde3e9e7cc2f5edb2c","note":"contact sheets and first-2s sheets approved 2026-10-10"}
+  - {"asset":"cpp.wedding.header","real_ui":true,"reviewer":"lintion","date":"2026-10-10","basis":"e5fd6c63ddca125491ce7221b9af72de9d7637665737d70208047a34e2928abe","note":"contact sheets and first-2s sheets approved 2026-10-10"}
+  - {"asset":"cpp.wedding.header.{storefront}","real_ui":true,"reviewer":"lintion","date":"2026-10-10","basis":"e5fd6c63ddca125491ce7221b9af72de9d7637665737d70208047a34e2928abe","note":"contact sheets and first-2s sheets approved 2026-10-10"}
+  - {"asset":"cpp.wedding.search","real_ui":true,"reviewer":"lintion","date":"2026-10-10","basis":"6c40cbe63733c0ce0b4874b8c74772f3410bcb2944e61023b5b7d5d1ba929f20","note":"contact sheets and first-2s sheets approved 2026-10-10"}
+  - {"asset":"cpp.wedding.search.{storefront}","real_ui":true,"reviewer":"lintion","date":"2026-10-10","basis":"6c40cbe63733c0ce0b4874b8c74772f3410bcb2944e61023b5b7d5d1ba929f20","note":"contact sheets and first-2s sheets approved 2026-10-10"}
+  - {"asset":"header.universal.tool","real_ui":true,"reviewer":"lintion","date":"2026-10-10","basis":"f48339077b6b77f47c865d4cd5849d109cbd0ef6392707099b6c2c6156a9bfd5","note":"contact sheets and first-2s sheets approved 2026-10-10"}
+  - {"asset":"header.{storefront}","real_ui":true,"reviewer":"lintion","date":"2026-10-10","basis":"bf39f882cccab62b0fc3e3173e609082582b5f5d9957d3561a81f624290a2a95","note":"contact sheets and first-2s sheets approved 2026-10-10"}
+  - {"asset":"header.{storefront}.video","real_ui":true,"reviewer":"lintion","date":"2026-10-10","basis":"a078b34d47c48176e7f64f1552ecf3c99ce0fb9eb76730fb82960d196d11bd47","note":"contact sheets and first-2s sheets approved 2026-10-10"}
+  - {"asset":"search.{storefront}","real_ui":true,"reviewer":"lintion","date":"2026-10-10","basis":"2d54bff10ec14214eddb123b8350d868deb334f17bc84c2f8eb97897b9ef88a9","note":"contact sheets and first-2s sheets approved 2026-10-10"}
+  - {"asset":"search.{storefront}.video","real_ui":true,"reviewer":"lintion","date":"2026-10-10","basis":"f6679ef349fb44410dfe19e1801b9f5cb981ae35562b46820e52ed5ef3050f99","note":"contact sheets and first-2s sheets approved 2026-10-10"}

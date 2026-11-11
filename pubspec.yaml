@@ -1,0 +1,94 @@
+name: songlet
+description: "Songlet (小曲) — occasion songs made with Lyria 3. iOS app at the repo root; reusable libs under packages/, the dev mock backend under mock_server/."
+publish_to: "none"
+version: 1.0.0+2
+
+# This pubspec is BOTH the app and the pub workspace root: packages/* are
+# workspace members sharing one lockfile + package_config. To start a new
+# project, copy this repo, rename, and (optionally) switch the member path deps
+# to git tags.
+environment:
+  sdk: ^3.11.0
+  flutter: ">=3.44.0"
+
+workspace:
+  - packages/infra_core
+  - packages/commerce_kit
+  - packages/ui_kit
+  - packages/arch_guard
+  - packages/app_config
+  - packages/media_kit
+  - packages/songlet_kit
+  - mock_server
+  - packages/store_preview
+  - packages/store_preview_driver
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  infra_core:
+    path: packages/infra_core
+  commerce_kit:
+    path: packages/commerce_kit
+  ui_kit:
+    path: packages/ui_kit
+  app_config:
+    path: packages/app_config
+  media_kit:
+    path: packages/media_kit
+  songlet_kit:
+    path: packages/songlet_kit
+  flutter_riverpod: ^3.3.2
+  intl: ^0.20.2
+  url_launcher: ^6.3.0
+  # Upload-demo picker only (gallery via PHPicker/Photo Picker — no runtime
+  # permission and no NS*UsageDescription needed). The media_kit library itself
+  # stays picker-free.
+  image_picker: ^1.2.0
+  share_plus: ^12.0.2
+  go_router: ^18.0.1
+  video_player: ^2.14.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  # On-simulator first-session test (integration_test/, Phase 6).
+  integration_test:
+    sdk: flutter
+  # App Store preview recordings (integration_test/store_preview_test.dart):
+  # the app side of packages/store_preview, vendored from the template.
+  store_preview_driver:
+    path: packages/store_preview_driver
+  # Disposal / GC leak checks of page flows (test/perf/leak_test.dart); the
+  # version the Flutter SDK's flutter_test already resolves.
+  leak_tracker_flutter_testing: ^3.0.10
+  flutter_lints: ^6.0.0
+  riverpod: ^3.3.2
+  mocktail: ^1.0.5
+  shared_preferences: ^2.5.5
+  melos: ^7.8.2
+  # Generates the Songlet Pigeon bridge (pigeons/songlet_api.dart → Swift + Dart).
+  pigeon: ^27.3.0
+  # Dev tools under tool/: art extraction (ADR-0014) and the prototype diff
+  # report (ADR-0007). Never imported by app code.
+  image: ^4.9.2
+  # Test harness: a fixed PackageInfo for DeviceInfoService (same line as infra_core).
+  package_info_plus: ^8.3.1
+  # Dev-only architecture-boundary checker (Gate 6). Never imported by app code;
+  # invoked via `make arch` / `dart run arch_guard` and its own test suite.
+  arch_guard:
+    path: packages/arch_guard
+  video_player_platform_interface: ^6.9.0
+
+flutter:
+  uses-material-design: true
+  generate: true
+  # Template, occasion and festival art (ADR-0014; tool/assets/extract_art.dart).
+  assets:
+    - assets/templates/
+    - assets/inspirations/
+    - assets/occasions/
+    - assets/festivals/

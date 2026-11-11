@@ -1,0 +1,88 @@
+import 'package:flutter/material.dart';
+
+import 'l10n/app_localizations.dart';
+
+void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  runApp(const NotesApp());
+}
+
+/// Independent local acceptance app. No backend, account, payment or store API.
+class NotesApp extends StatefulWidget {
+  const NotesApp({super.key});
+  @override
+  State<NotesApp> createState() => _NotesAppState();
+}
+
+class _NotesAppState extends State<NotesApp> {
+  bool pinned = false;
+  bool checklist = false;
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        colorSchemeSeed: const Color(0xff26534c),
+        brightness: Brightness.dark,
+      ),
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
+      home: Builder(
+        builder: (context) {
+          final l = AppLocalizations.of(context)!;
+          return Scaffold(
+            key: const ValueKey('notes.home'),
+            appBar: AppBar(title: Text(l.title)),
+            body: Padding(
+              padding: const EdgeInsets.all(24),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const SizedBox(height: 40),
+                  Text(l.tagline, style: const TextStyle(fontSize: 30)),
+                  const SizedBox(height: 24),
+                  Card(
+                    child: Padding(
+                      padding: const EdgeInsets.all(24),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            l.noteTitle,
+                            style: const TextStyle(fontSize: 24),
+                          ),
+                          const SizedBox(height: 16),
+                          Text(
+                            l.noteBody,
+                            style: const TextStyle(fontSize: 20),
+                          ),
+                          const SizedBox(height: 20),
+                          if (checklist) Text(l.noteChecklist),
+                          if (pinned) Text(l.notePinned),
+                        ],
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 24),
+                  FilledButton.icon(
+                    key: const ValueKey('notes.checklist'),
+                    onPressed: () => setState(() => checklist = true),
+                    icon: const Icon(Icons.checklist),
+                    label: Text(l.actionChecklist),
+                  ),
+                  const SizedBox(height: 12),
+                  OutlinedButton.icon(
+                    key: const ValueKey('notes.pin'),
+                    onPressed: () => setState(() => pinned = true),
+                    icon: const Icon(Icons.push_pin_outlined),
+                    label: Text(l.actionPin),
+                  ),
+                ],
+              ),
+            ),
+          );
+        },
+      ),
+    );
+  }
+}

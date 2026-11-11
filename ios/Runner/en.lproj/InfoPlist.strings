@@ -1,0 +1,6 @@
+/* Microphone: on-device dictation (docs/ui P03a, ADR-0006). */
+"NSMicrophoneUsageDescription" = "Songlet uses the microphone when you dictate a song idea. Audio is transcribed on this iPhone and never uploaded.";
+/* Speech recognition: on-device transcription. */
+"NSSpeechRecognitionUsageDescription" = "Songlet turns your spoken idea into text on this iPhone, so you can use it as keywords or lyrics.";
+/* Photos add-only: "Save video" on the share card (docs/ui P10). */
+"NSPhotoLibraryAddUsageDescription" = "Songlet saves your share-card videos to Photos when you tap Save video.";

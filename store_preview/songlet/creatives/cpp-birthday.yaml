@@ -1,0 +1,31 @@
+# The "Birthday Songs" custom product page's creative assets (ADR-0039): page
+# cpp/birthday.yaml in ascpub's listing (its deep link and keywords live there),
+# target custom_product_page:birthday. Header and search results images: one
+# universal (no text) for the page's default, one per storefront with the
+# phrase. Header: the song that sings their name; search results: the
+# Birthday Wish card with the name typed.
+id: cpp-birthday
+title: Custom product page "Birthday Songs"
+targets: ["custom_product_page:birthday"]
+universal_from: en-US
+backdrop: {role: photo, script: B, index: 0}
+text: storeCreativeBirthday
+tags: ["cpp:birthday"]
+
+# What the page shows (template ADR-0015): per localization the page has the
+# localized image (product decision 2026-10-16), the universal one elsewhere.
+shelf:
+  header: {default: cpp.birthday.header, locales: "cpp.birthday.header.{storefront}"}
+  search_results: {default: cpp.birthday.search, locales: "cpp.birthday.search.{storefront}"}
+
+slots:
+  - placements: [product_page_header]
+    spec: header_21x9
+    assets:
+      - {id: cpp.birthday.header, type: image, frame: {script: A, scene: player, at: 2.0}}
+      - {id: "cpp.birthday.header.{storefront}", type: image, frame: {script: A, scene: player, at: 2.0}}
+  - placements: [app_store_search_results]
+    spec: search_3x2
+    assets:
+      - {id: cpp.birthday.search, type: image, frame: {script: A, scene: name, at: -0.3}}
+      - {id: "cpp.birthday.search.{storefront}", type: image, frame: {script: A, scene: name, at: -0.3}}

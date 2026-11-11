@@ -1,0 +1,15 @@
+# 自定义产品页「daily-planners」。页面名是对账键,改名会被视为新页面。
+schema: 2
+name: "Daily planners"
+# 可选深链(iOS 18+);必须以 assets.yaml deep_links.allowed 中的某个前缀开头
+deep_link: ""
+# 页面版本获批后才有意义
+visible: false
+locales:
+  en-US:
+    promotional_text: "Keep your plans in one note. Turn ideas into a checklist and pin the note for an easy return when you are ready to act."
+    # 只能从「最新已获批 App 版本」的关键词中选
+    keywords: []
+  zh-Hans:
+    promotional_text: "把一天的计划留在一条笔记里，将想法变成待办清单，再把重要笔记置顶。需要行动时，随时回来查看。"
+    keywords: []

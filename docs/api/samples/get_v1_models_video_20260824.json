@@ -1,0 +1,3585 @@
+{
+  "code": 0,
+  "message": "success",
+  "data": {
+    "models": [
+      {
+        "model_bid": "904da54f-106b-45f9-9542-7fe34eaad94d",
+        "model_code": "seedance-2.0",
+        "model_name": {
+          "en": "Seedance 2.0",
+          "zh": "Seedance 2.0 视频生成"
+        },
+        "description": {
+          "en": "[Doubao Seedance 2.0 · High-Quality Video Generation]\n▸ What it does: Turn a text prompt into a high-quality 3–10s video at 480p, 720p, or 1080p.\n▸ Highlights: ByteDance's in-house model — rock-solid access in China, outstanding Chinese-prompt understanding, and 16:9 / 9:16 / 1:1 aspect ratios.\n▸ Perfect for: Chinese short-video creation / Douyin & Xiaohongshu content / China e-commerce marketing / localized ads / bringing Chinese scripts to screen.\n▸ Edge: China-hosted for low latency and zero cross-border network issues — plus a versatile multi-shot mode",
+          "zh": "【豆包 Seedance 2.0 · 高质量视频生成】\n▸ 能做什么: 文字描述 → 3-10 秒高质量视频, 支持 480p / 720p / 1080p 多种分辨率\n▸ 亮点: 字节自研, 国内访问稳定, 中文提示词理解优秀, 支持 16:9 / 9:16 / 1:1 多种比例\n▸ 典型场景: 中文短视频创作 / 抖音/小红书素材 / 国内电商营销 / 本土化广告 / 中文剧本视觉化\n▸ 优势: 国内部署, 低延迟 / 无跨境网络问题 / 支持 versatile 多镜头模式"
+        },
+        "media_type": "video",
+        "task_type": "txt2video",
+        "display_tags": [
+          "hot"
+        ],
+        "sort_order": 1,
+        "versions": [
+          {
+            "version_bid": "bb795460-65ba-4ddb-acde-25cbabfa601f",
+            "version_code": "v1",
+            "version_name": "Seedance 2.0 v1",
+            "release_note": "Seedance 2.0: 旗舰视频, 多分辨率 + 多镜头模式",
+            "param_schema": {
+              "$schema": "http://json-schema.org/draft-07/schema#",
+              "properties": {
+                "_ui_mode": {
+                  "description": "Optional. Default empty = text-to-video; selecting Frames / References shows corresponding input fields.",
+                  "enum": [
+                    "frames",
+                    "references"
+                  ],
+                  "title": "Generation Mode",
+                  "type": "string",
+                  "x-client-only": true,
+                  "x-description": {
+                    "en": "Optional. Default empty = text-to-video; selecting Frames / References shows corresponding input fields.",
+                    "zh": "可选. 不选 = 文生视频; 选「首尾帧」/「全能参考」可显式启用对应输入字段."
+                  },
+                  "x-enum-labels": {
+                    "frames": {
+                      "en": "Frames (Image-to-Video)",
+                      "zh": "首尾帧 (图生视频)"
+                    },
+                    "references": {
+                      "en": "References (Multimodal)",
+                      "zh": "全能参考 (多模态混合)"
+                    }
+                  },
+                  "x-group": "input",
+                  "x-label": {
+                    "en": "Generation Mode",
+                    "zh": "生成模式"
+                  },
+                  "x-section": "basic",
+                  "x-sort-order": 1,
+                  "x-ui-component": "mode_selector"
+                },
+                "aspect_ratio": {
+                  "default": "16:9",
+                  "enum": [
+                    "16:9",
+                    "21:9",
+                    "4:3",
+                    "1:1",
+                    "3:4",
+                    "9:16"
+                  ],
+                  "title": "Aspect Ratio",
+                  "type": "string",
+                  "x-enum-labels": {
+                    "16:9": {
+                      "en": "Landscape 16:9",
+                      "zh": "横屏 16:9"
+                    },
+                    "1:1": {
+                      "en": "Square 1:1",
+                      "zh": "方形 1:1"
+                    },
+                    "21:9": {
+                      "en": "Ultra-wide 21:9",
+                      "zh": "超宽 21:9"
+                    },
+                    "3:4": {
+                      "en": "Portrait 3:4",
+                      "zh": "竖屏 3:4"
+                    },
+                    "4:3": {
+                      "en": "Landscape 4:3",
+                      "zh": "横屏 4:3"
+                    },
+                    "9:16": {
+                      "en": "Portrait 9:16",
+                      "zh": "竖屏 9:16"
+                    }
+                  },
+                  "x-group": "output",
+                  "x-label": {
+                    "en": "Aspect Ratio",
+                    "zh": "画面比例"
+                  },
+                  "x-section": "basic",
+                  "x-sort-order": 10,
+                  "x-ui-component": "select",
+                  "x-value-kind": "aspect_ratio"
+                },
+                "duration": {
+                  "default": 5,
+                  "description": "4–15 seconds",
+                  "maximum": 15,
+                  "minimum": 4,
+                  "title": "Duration (seconds)",
+                  "type": "integer",
+                  "x-description": {
+                    "en": "4–15 seconds",
+                    "zh": "4-15 秒"
+                  },
+                  "x-group": "output",
+                  "x-label": {
+                    "en": "Duration (seconds)",
+                    "zh": "时长 (秒)"
+                  },
+                  "x-section": "basic",
+                  "x-sort-order": 11,
+                  "x-ui-component": "slider",
+                  "x-value-kind": "duration_seconds"
+                },
+                "enable_web_search": {
+                  "default": false,
+                  "description": "The model decides on its own whether to search the internet — effective only for text-to-video (no uploaded materials)",
+                  "title": "Enable Web Search",
+                  "type": "boolean",
+                  "x-description": {
+                    "en": "The model decides on its own whether to search the internet — effective only for text-to-video (no uploaded materials)",
+                    "zh": "模型自主判断是否搜索互联网内容. 仅文生视频(无任何上传素材)时生效"
+                  },
+                  "x-group": "advanced",
+                  "x-label": {
+                    "en": "Enable Web Search",
+                    "zh": "联网搜索"
+                  },
+                  "x-section": "advanced",
+                  "x-sort-order": 22,
+                  "x-ui-component": "switch"
+                },
+                "first_frame_image": {
+                  "description": "First frame for video generation. Can be standalone, or paired with last_frame. Mutually exclusive with reference_*.",
+                  "format": "uri",
+                  "title": "First Frame",
+                  "type": "string",
+                  "x-accept": [
+                    "image/*"
+                  ],
+                  "x-conditions": [
+                    {
+                      "action": "show",
+                      "eq": "frames",
+                      "when": "_ui_mode"
+                    }
+                  ],
+                  "x-description": {
+                    "en": "First frame for video generation. Can be standalone, or paired with last_frame. Mutually exclusive with reference_*.",
+                    "zh": "首帧图 — 视频起始帧. 可单独传 (= 图生视频), 或配 last_frame (= 首尾帧). 互斥: 不可与 reference_images / reference_videos / reference_audios 同时传入."
+                  },
+                  "x-group": "input",
+                  "x-label": {
+                    "en": "First Frame",
+                    "zh": "首帧图片"
+                  },
+                  "x-max-size-mb": 10,
+                  "x-role": "reference_material",
+                  "x-section": "basic",
+                  "x-sort-order": 3,
+                  "x-ui-component": "image_upload"
+                },
+                "generate_audio": {
+                  "default": true,
+                  "description": "Whether to generate synchronized audio for the video (narration / sound effects / background music, controlled by the prompt)",
+                  "title": "Generate Audio",
+                  "type": "boolean",
+                  "x-description": {
+                    "en": "Whether to generate synchronized audio for the video (narration / sound effects / background music, controlled by the prompt)",
+                    "zh": "是否为视频生成同步音频 (旁白 / 音效 / 背景音乐, 由提示词控制)"
+                  },
+                  "x-group": "advanced",
+                  "x-label": {
+                    "en": "Generate Audio",
+                    "zh": "生成音频"
+                  },
+                  "x-section": "advanced",
+                  "x-sort-order": 20,
+                  "x-ui-component": "switch"
+                },
+                "last_frame_image": {
+                  "description": "Last frame. Must be paired with first_frame (standalone last_frame is rejected). Mutually exclusive with reference_*.",
+                  "format": "uri",
+                  "title": "Last Frame",
+                  "type": "string",
+                  "x-accept": [
+                    "image/*"
+                  ],
+                  "x-conditions": [
+                    {
+                      "action": "show",
+                      "eq": "frames",
+                      "when": "_ui_mode"
+                    }
+                  ],
+                  "x-description": {
+                    "en": "Last frame. Must be paired with first_frame (standalone last_frame is rejected). Mutually exclusive with reference_*.",
+                    "zh": "尾帧图. 必须与 first_frame 配对传入 — 单独传 last_frame 不构成有效输入. 互斥: 不可与 reference_images / reference_videos / reference_audios 同时传入."
+                  },
+                  "x-group": "input",
+                  "x-label": {
+                    "en": "Last Frame",
+                    "zh": "尾帧图片"
+                  },
+                  "x-max-size-mb": 10,
+                  "x-role": "reference_material",
+                  "x-section": "basic",
+                  "x-sort-order": 4,
+                  "x-ui-component": "image_upload"
+                },
+                "prompt": {
+                  "description": "Describe the video content. Reference uploaded materials with the format \"Image n\" / \"Video n\" / \"Audio n\" (do not use asset IDs)",
+                  "maxLength": 2000,
+                  "title": "Prompt",
+                  "type": "string",
+                  "x-description": {
+                    "en": "Describe the video content. Reference uploaded materials with the format \"Image n\" / \"Video n\" / \"Audio n\" (do not use asset IDs)",
+                    "zh": "描述视频内容. 引用素材请用「图片n」「视频n」「音频n」格式 (不要用 asset ID)"
+                  },
+                  "x-group": "input",
+                  "x-label": {
+                    "en": "Prompt",
+                    "zh": "提示词"
+                  },
+                  "x-role": "prompt",
+                  "x-section": "basic",
+                  "x-sort-order": 2,
+                  "x-ui-component": "textarea"
+                },
+                "quantity": {
+                  "default": 1,
+                  "description": "How many variants to generate per submission (in-project fan-out; the upstream model generates one at a time)",
+                  "maximum": 5,
+                  "minimum": 1,
+                  "title": "Variants",
+                  "type": "integer",
+                  "x-description": {
+                    "en": "How many variants to generate per submission (in-project fan-out; the upstream model generates one at a time)",
+                    "zh": "单次提交生成多少个变体 (项目内 fanout, 上游每次只生 1 个)"
+                  },
+                  "x-group": "output",
+                  "x-label": {
+                    "en": "Variants",
+                    "zh": "生成数量"
+                  },
+                  "x-section": "basic",
+                  "x-sort-order": 13,
+                  "x-ui-component": "number_input",
+                  "x-value-kind": "count"
+                },
+                "reference_audios": {
+                  "description": "Reference audio (voice / melody). Must accompany ≥1 image or video. Mutually exclusive with first_frame / last_frame.",
+                  "items": {
+                    "format": "uri",
+                    "type": "string"
+                  },
+                  "maxItems": 3,
+                  "title": "Reference Audios",
+                  "type": "array",
+                  "x-accept": [
+                    "audio/*"
+                  ],
+                  "x-conditions": [
+                    {
+                      "action": "show",
+                      "eq": "references",
+                      "when": "_ui_mode"
+                    }
+                  ],
+                  "x-description": {
+                    "en": "Reference audio (voice / melody). Must accompany ≥1 image or video. Mutually exclusive with first_frame / last_frame.",
+                    "zh": "可参考音色 / 音乐旋律. 注意: 不能仅传音频 (须配合至少 1 张图或 1 个视频). 互斥: 不可与 first_frame / last_frame 同时传入."
+                  },
+                  "x-group": "input",
+                  "x-label": {
+                    "en": "Reference Audios",
+                    "zh": "参考音频 (0-3 段)"
+                  },
+                  "x-max-size-mb": 15,
+                  "x-role": "reference_material",
+                  "x-section": "basic",
+                  "x-sort-order": 7,
+                  "x-ui-component": "multi_audio_upload"
+                },
+                "reference_images": {
+                  "description": "Reference images (0-3). Reference in prompt as \"图片1\", \"图片2\", etc. Mutually exclusive with first_frame / last_frame.",
+                  "items": {
+                    "format": "uri",
+                    "type": "string"
+                  },
+                  "maxItems": 9,
+                  "title": "Reference Images",
+                  "type": "array",
+                  "x-accept": [
+                    "image/*"
+                  ],
+                  "x-conditions": [
+                    {
+                      "action": "show",
+                      "eq": "references",
+                      "when": "_ui_mode"
+                    }
+                  ],
+                  "x-description": {
+                    "en": "Reference images (0-3). Reference in prompt as \"图片1\", \"图片2\", etc. Mutually exclusive with first_frame / last_frame.",
+                    "zh": "参考图 (0-3 张). 提示词中用「图片1」「图片2」按顺序引用. 互斥: 不可与 first_frame / last_frame 同时传入 (二选一)."
+                  },
+                  "x-group": "input",
+                  "x-label": {
+                    "en": "Reference Images",
+                    "zh": "参考图片 (0-9 张)"
+                  },
+                  "x-max-size-mb": 10,
+                  "x-role": "reference_material",
+                  "x-section": "basic",
+                  "x-sort-order": 5,
+                  "x-ui-component": "multi_image_upload"
+                },
+                "reference_videos": {
+                  "description": "Reference videos (0-3). Reference in prompt as \"视频1\" etc. Mutually exclusive with first_frame / last_frame.",
+                  "items": {
+                    "format": "uri",
+                    "type": "string"
+                  },
+                  "maxItems": 3,
+                  "title": "Reference Videos",
+                  "type": "array",
+                  "x-accept": [
+                    "video/*"
+                  ],
+                  "x-conditions": [
+                    {
+                      "action": "show",
+                      "eq": "references",
+                      "when": "_ui_mode"
+                    }
+                  ],
+                  "x-description": {
+                    "en": "Reference videos (0-3). Reference in prompt as \"视频1\" etc. Mutually exclusive with first_frame / last_frame.",
+                    "zh": "参考视频 (0-3 个). 提示词中用「视频n」按顺序引用. 互斥: 不可与 first_frame / last_frame 同时传入."
+                  },
+                  "x-group": "input",
+                  "x-label": {
+                    "en": "Reference Videos",
+                    "zh": "参考视频 (0-3 个)"
+                  },
+                  "x-max-size-mb": 50,
+                  "x-role": "reference_material",
+                  "x-section": "basic",
+                  "x-sort-order": 6,
+                  "x-ui-component": "multi_video_upload"
+                },
+                "resolution": {
+                  "default": "720p",
+                  "enum": [
+                    "480p",
+                    "720p",
+                    "1080p"
+                  ],
+                  "title": "Resolution",
+                  "type": "string",
+                  "x-enum-labels": {
+                    "1080p": {
+                      "en": "1080p Full HD",
+                      "zh": "1080p 全高清"
+                    },
+                    "480p": {
+                      "en": "480p SD",
+                      "zh": "480p 标清"
+                    },
+                    "720p": {
+                      "en": "720p HD",
+                      "zh": "720p 高清"
+                    }
+                  },
+                  "x-group": "output",
+                  "x-label": {
+                    "en": "Resolution",
+                    "zh": "分辨率"
+                  },
+                  "x-section": "basic",
+                  "x-sort-order": 12,
+                  "x-ui-component": "radio_group",
+                  "x-value-kind": "resolution_tier"
+                },
+                "return_last_frame": {
+                  "default": false,
+                  "description": "Also return an image of the video's last frame (usable as input for further creation within 30 days)",
+                  "title": "Return Last Frame",
+                  "type": "boolean",
+                  "x-description": {
+                    "en": "Also return an image of the video's last frame (usable as input for further creation within 30 days)",
+                    "zh": "同时返回视频末尾帧的图片 (近 30 天内可作二次创作输入素材)"
+                  },
+                  "x-group": "advanced",
+                  "x-label": {
+                    "en": "Return Last Frame",
+                    "zh": "返回尾帧图"
+                  },
+                  "x-section": "advanced",
+                  "x-sort-order": 21,
+                  "x-ui-component": "switch"
+                },
+                "seed": {
+                  "default": -1,
+                  "description": "Same seed + same input → similar results. -1 = random",
+                  "maximum": 2147483647,
+                  "minimum": -1,
+                  "title": "Seed",
+                  "type": "integer",
+                  "x-description": {
+                    "en": "Same seed + same input → similar results. -1 = random",
+                    "zh": "相同种子 + 相同输入 → 相近结果. -1 = 随机"
+                  },
+                  "x-group": "advanced",
+                  "x-label": {
+                    "en": "Seed",
+                    "zh": "随机种子"
+                  },
+                  "x-section": "advanced",
+                  "x-sort-order": 24,
+                  "x-ui-component": "number_input",
+                  "x-value-kind": "seed"
+                },
+                "watermark": {
+                  "default": false,
+                  "title": "Watermark",
+                  "type": "boolean",
+                  "x-group": "advanced",
+                  "x-label": {
+                    "en": "Watermark",
+                    "zh": "水印"
+                  },
+                  "x-section": "advanced",
+                  "x-sort-order": 23,
+                  "x-ui-component": "switch"
+                }
+              },
+              "required": [
+                "prompt",
+                "aspect_ratio"
+              ],
+              "type": "object",
+              "x-groups": [
+                {
+                  "description": {
+                    "en": "Prompt and reference materials — the mode is decided automatically by what you upload (reference media / first-and-last frame / pure text-to-video)",
+                    "zh": "提示词与参考素材 — 按上传内容自动决定形态(参考媒体/首尾帧/纯文生)"
+                  },
+                  "key": "input",
+                  "label": {
+                    "en": "Input",
+                    "zh": "输入素材"
+                  },
+                  "section": "basic",
+                  "sort": 2
+                },
+                {
+                  "description": {
+                    "en": "Aspect ratio / duration / resolution / audio generation",
+                    "zh": "比例 / 时长 / 分辨率 / 是否生成音频"
+                  },
+                  "key": "output",
+                  "label": {
+                    "en": "Output Specs",
+                    "zh": "输出规格"
+                  },
+                  "section": "basic",
+                  "sort": 3
+                },
+                {
+                  "description": {
+                    "en": "Seed / watermark / last-frame return / web search",
+                    "zh": "种子 / 水印 / 尾帧返回 / 联网搜索"
+                  },
+                  "key": "advanced",
+                  "label": {
+                    "en": "Advanced",
+                    "zh": "高级"
+                  },
+                  "section": "advanced",
+                  "sort": 4
+                }
+              ]
+            },
+            "is_async": true,
+            "estimate_ms": 900000,
+            "async_strategy": {
+              "mode": "polling",
+              "interval_ms": 5000,
+              "max_wait_ms": 1800000
+            },
+            "credit_cost": {
+              "amount": 703,
+              "unit": "per_second"
+            },
+            "status": "published"
+          }
+        ]
+      },
+      {
+        "model_bid": "21bf4cac-7f58-47a6-a3ed-d436e1dfdc7b",
+        "model_code": "seedance-2.0-fast",
+        "model_name": {
+          "en": "Seedance 2.0 Fast",
+          "zh": "Seedance 2.0 快速版"
+        },
+        "description": {
+          "en": "[Doubao Seedance 2.0 Fast · Fast Video Generation]\n▸ What it does: All of Seedance 2.0 in a speed-first build — a 5s video in roughly 60–120s.\n▸ Highlights: 70% cheaper and 2–3× faster — built for rapid iteration and high-volume output.\n▸ Perfect for: quick client-pitch drafts / bulk social content / fast creative validation / training demos",
+          "zh": "【豆包 Seedance 2.0 Fast · 快速视频生成】\n▸ 能做什么: 同 Seedance 2.0, 快速版本, 约 60-120s 完成 5 秒视频\n▸ 亮点: 成本降低 70%, 速度提升 2-3 倍, 适合高频次迭代和批量产出\n▸ 典型场景: 客户提案快速出稿 / 社媒内容批量 / 创意快速验证 / 培训演示"
+        },
+        "media_type": "video",
+        "task_type": "txt2video",
+        "sort_order": 2,
+        "versions": [
+          {
+            "version_bid": "e199ed4f-cdf9-4d22-8e92-1d94cb7487b3",
+            "version_code": "v1",
+            "version_name": "Seedance 2.0 Fast v1",
+            "release_note": "Seedance 2.0 Fast: 速度/成本优化, 保持国内低延迟优势",
+            "param_schema": {
+              "$schema": "http://json-schema.org/draft-07/schema#",
+              "properties": {
+                "_ui_mode": {
+                  "description": "Optional. Default empty = text-to-video; selecting Frames / References shows corresponding input fields.",
+                  "enum": [
+                    "frames",
+                    "references"
+                  ],
+                  "title": "Generation Mode",
+                  "type": "string",
+                  "x-client-only": true,
+                  "x-description": {
+                    "en": "Optional. Default empty = text-to-video; selecting Frames / References shows corresponding input fields.",
+                    "zh": "可选. 不选 = 文生视频; 选「首尾帧」/「全能参考」可显式启用对应输入字段."
+                  },
+                  "x-enum-labels": {
+                    "frames": {
+                      "en": "Frames (Image-to-Video)",
+                      "zh": "首尾帧 (图生视频)"
+                    },
+                    "references": {
+                      "en": "References (Multimodal)",
+                      "zh": "全能参考 (多模态混合)"
+                    }
+                  },
+                  "x-group": "input",
+                  "x-label": {
+                    "en": "Generation Mode",
+                    "zh": "生成模式"
+                  },
+                  "x-section": "basic",
+                  "x-sort-order": 1,
+                  "x-ui-component": "mode_selector"
+                },
+                "aspect_ratio": {
+                  "default": "16:9",
+                  "enum": [
+                    "16:9",
+                    "21:9",
+                    "4:3",
+                    "1:1",
+                    "3:4",
+                    "9:16"
+                  ],
+                  "title": "Aspect Ratio",
+                  "type": "string",
+                  "x-enum-labels": {
+                    "16:9": {
+                      "en": "Landscape 16:9",
+                      "zh": "横屏 16:9"
+                    },
+                    "1:1": {
+                      "en": "Square 1:1",
+                      "zh": "方形 1:1"
+                    },
+                    "21:9": {
+                      "en": "Ultra-wide 21:9",
+                      "zh": "超宽 21:9"
+                    },
+                    "3:4": {
+                      "en": "Portrait 3:4",
+                      "zh": "竖屏 3:4"
+                    },
+                    "4:3": {
+                      "en": "Landscape 4:3",
+                      "zh": "横屏 4:3"
+                    },
+                    "9:16": {
+                      "en": "Portrait 9:16",
+                      "zh": "竖屏 9:16"
+                    }
+                  },
+                  "x-group": "output",
+                  "x-label": {
+                    "en": "Aspect Ratio",
+                    "zh": "画面比例"
+                  },
+                  "x-section": "basic",
+                  "x-sort-order": 10,
+                  "x-ui-component": "select",
+                  "x-value-kind": "aspect_ratio"
+                },
+                "duration": {
+                  "default": 5,
+                  "description": "4–15 seconds",
+                  "maximum": 15,
+                  "minimum": 4,
+                  "title": "Duration (seconds)",
+                  "type": "integer",
+                  "x-description": {
+                    "en": "4–15 seconds",
+                    "zh": "4-15 秒"
+                  },
+                  "x-group": "output",
+                  "x-label": {
+                    "en": "Duration (seconds)",
+                    "zh": "时长 (秒)"
+                  },
+                  "x-section": "basic",
+                  "x-sort-order": 11,
+                  "x-ui-component": "slider",
+                  "x-value-kind": "duration_seconds"
+                },
+                "enable_web_search": {
+                  "default": false,
+                  "description": "The model decides on its own whether to search the internet — effective only for text-to-video (no uploaded materials)",
+                  "title": "Enable Web Search",
+                  "type": "boolean",
+                  "x-description": {
+                    "en": "The model decides on its own whether to search the internet — effective only for text-to-video (no uploaded materials)",
+                    "zh": "模型自主判断是否搜索互联网内容. 仅文生视频(无任何上传素材)时生效"
+                  },
+                  "x-group": "advanced",
+                  "x-label": {
+                    "en": "Enable Web Search",
+                    "zh": "联网搜索"
+                  },
+                  "x-section": "advanced",
+                  "x-sort-order": 22,
+                  "x-ui-component": "switch"
+                },
+                "first_frame_image": {
+                  "description": "First frame for video generation. Can be standalone, or paired with last_frame. Mutually exclusive with reference_*.",
+                  "format": "uri",
+                  "title": "First Frame",
+                  "type": "string",
+                  "x-accept": [
+                    "image/*"
+                  ],
+                  "x-conditions": [
+                    {
+                      "action": "show",
+                      "eq": "frames",
+                      "when": "_ui_mode"
+                    }
+                  ],
+                  "x-description": {
+                    "en": "First frame for video generation. Can be standalone, or paired with last_frame. Mutually exclusive with reference_*.",
+                    "zh": "首帧图 — 视频起始帧. 可单独传 (= 图生视频), 或配 last_frame (= 首尾帧). 互斥: 不可与 reference_images / reference_videos / reference_audios 同时传入."
+                  },
+                  "x-group": "input",
+                  "x-label": {
+                    "en": "First Frame",
+                    "zh": "首帧图片"
+                  },
+                  "x-max-size-mb": 10,
+                  "x-role": "reference_material",
+                  "x-section": "basic",
+                  "x-sort-order": 3,
+                  "x-ui-component": "image_upload"
+                },
+                "generate_audio": {
+                  "default": true,
+                  "description": "Whether to generate synchronized audio for the video (narration / sound effects / background music, controlled by the prompt)",
+                  "title": "Generate Audio",
+                  "type": "boolean",
+                  "x-description": {
+                    "en": "Whether to generate synchronized audio for the video (narration / sound effects / background music, controlled by the prompt)",
+                    "zh": "是否为视频生成同步音频 (旁白 / 音效 / 背景音乐, 由提示词控制)"
+                  },
+                  "x-group": "advanced",
+                  "x-label": {
+                    "en": "Generate Audio",
+                    "zh": "生成音频"
+                  },
+                  "x-section": "advanced",
+                  "x-sort-order": 20,
+                  "x-ui-component": "switch"
+                },
+                "last_frame_image": {
+                  "description": "Last frame. Must be paired with first_frame (standalone last_frame is rejected). Mutually exclusive with reference_*.",
+                  "format": "uri",
+                  "title": "Last Frame",
+                  "type": "string",
+                  "x-accept": [
+                    "image/*"
+                  ],
+                  "x-conditions": [
+                    {
+                      "action": "show",
+                      "eq": "frames",
+                      "when": "_ui_mode"
+                    }
+                  ],
+                  "x-description": {
+                    "en": "Last frame. Must be paired with first_frame (standalone last_frame is rejected). Mutually exclusive with reference_*.",
+                    "zh": "尾帧图. 必须与 first_frame 配对传入 — 单独传 last_frame 不构成有效输入. 互斥: 不可与 reference_images / reference_videos / reference_audios 同时传入."
+                  },
+                  "x-group": "input",
+                  "x-label": {
+                    "en": "Last Frame",
+                    "zh": "尾帧图片"
+                  },
+                  "x-max-size-mb": 10,
+                  "x-role": "reference_material",
+                  "x-section": "basic",
+                  "x-sort-order": 4,
+                  "x-ui-component": "image_upload"
+                },
+                "prompt": {
+                  "description": "Describe the video content. Reference uploaded materials with the format \"Image n\" / \"Video n\" / \"Audio n\" (do not use asset IDs)",
+                  "maxLength": 2000,
+                  "title": "Prompt",
+                  "type": "string",
+                  "x-description": {
+                    "en": "Describe the video content. Reference uploaded materials with the format \"Image n\" / \"Video n\" / \"Audio n\" (do not use asset IDs)",
+                    "zh": "描述视频内容. 引用素材请用「图片n」「视频n」「音频n」格式 (不要用 asset ID)"
+                  },
+                  "x-group": "input",
+                  "x-label": {
+                    "en": "Prompt",
+                    "zh": "提示词"
+                  },
+                  "x-role": "prompt",
+                  "x-section": "basic",
+                  "x-sort-order": 2,
+                  "x-ui-component": "textarea"
+                },
+                "quantity": {
+                  "default": 1,
+                  "description": "How many variants to generate per submission (in-project fan-out; the upstream model generates one at a time)",
+                  "maximum": 5,
+                  "minimum": 1,
+                  "title": "Variants",
+                  "type": "integer",
+                  "x-description": {
+                    "en": "How many variants to generate per submission (in-project fan-out; the upstream model generates one at a time)",
+                    "zh": "单次提交生成多少个变体 (项目内 fanout, 上游每次只生 1 个)"
+                  },
+                  "x-group": "output",
+                  "x-label": {
+                    "en": "Variants",
+                    "zh": "生成数量"
+                  },
+                  "x-section": "basic",
+                  "x-sort-order": 13,
+                  "x-ui-component": "number_input",
+                  "x-value-kind": "count"
+                },
+                "reference_audios": {
+                  "description": "Reference audio (voice / melody). Must accompany ≥1 image or video. Mutually exclusive with first_frame / last_frame.",
+                  "items": {
+                    "format": "uri",
+                    "type": "string"
+                  },
+                  "maxItems": 3,
+                  "title": "Reference Audios",
+                  "type": "array",
+                  "x-accept": [
+                    "audio/*"
+                  ],
+                  "x-conditions": [
+                    {
+                      "action": "show",
+                      "eq": "references",
+                      "when": "_ui_mode"
+                    }
+                  ],
+                  "x-description": {
+                    "en": "Reference audio (voice / melody). Must accompany ≥1 image or video. Mutually exclusive with first_frame / last_frame.",
+                    "zh": "可参考音色 / 音乐旋律. 注意: 不能仅传音频 (须配合至少 1 张图或 1 个视频). 互斥: 不可与 first_frame / last_frame 同时传入."
+                  },
+                  "x-group": "input",
+                  "x-label": {
+                    "en": "Reference Audios",
+                    "zh": "参考音频 (0-3 段)"
+                  },
+                  "x-max-size-mb": 15,
+                  "x-role": "reference_material",
+                  "x-section": "basic",
+                  "x-sort-order": 7,
+                  "x-ui-component": "multi_audio_upload"
+                },
+                "reference_images": {
+                  "description": "Reference images (0-3). Reference in prompt as \"图片1\", \"图片2\", etc. Mutually exclusive with first_frame / last_frame.",
+                  "items": {
+                    "format": "uri",
+                    "type": "string"
+                  },
+                  "maxItems": 9,
+                  "title": "Reference Images",
+                  "type": "array",
+                  "x-accept": [
+                    "image/*"
+                  ],
+                  "x-conditions": [
+                    {
+                      "action": "show",
+                      "eq": "references",
+                      "when": "_ui_mode"
+                    }
+                  ],
+                  "x-description": {
+                    "en": "Reference images (0-3). Reference in prompt as \"图片1\", \"图片2\", etc. Mutually exclusive with first_frame / last_frame.",
+                    "zh": "参考图 (0-3 张). 提示词中用「图片1」「图片2」按顺序引用. 互斥: 不可与 first_frame / last_frame 同时传入 (二选一)."
+                  },
+                  "x-group": "input",
+                  "x-label": {
+                    "en": "Reference Images",
+                    "zh": "参考图片 (0-9 张)"
+                  },
+                  "x-max-size-mb": 10,
+                  "x-role": "reference_material",
+                  "x-section": "basic",
+                  "x-sort-order": 5,
+                  "x-ui-component": "multi_image_upload"
+                },
+                "reference_videos": {
+                  "description": "Reference videos (0-3). Reference in prompt as \"视频1\" etc. Mutually exclusive with first_frame / last_frame.",
+                  "items": {
+                    "format": "uri",
+                    "type": "string"
+                  },
+                  "maxItems": 3,
+                  "title": "Reference Videos",
+                  "type": "array",
+                  "x-accept": [
+                    "video/*"
+                  ],
+                  "x-conditions": [
+                    {
+                      "action": "show",
+                      "eq": "references",
+                      "when": "_ui_mode"
+                    }
+                  ],
+                  "x-description": {
+                    "en": "Reference videos (0-3). Reference in prompt as \"视频1\" etc. Mutually exclusive with first_frame / last_frame.",
+                    "zh": "参考视频 (0-3 个). 提示词中用「视频n」按顺序引用. 互斥: 不可与 first_frame / last_frame 同时传入."
+                  },
+                  "x-group": "input",
+                  "x-label": {
+                    "en": "Reference Videos",
+                    "zh": "参考视频 (0-3 个)"
+                  },
+                  "x-max-size-mb": 50,
+                  "x-role": "reference_material",
+                  "x-section": "basic",
+                  "x-sort-order": 6,
+                  "x-ui-component": "multi_video_upload"
+                },
+                "resolution": {
+                  "default": "720p",
+                  "enum": [
+                    "480p",
+                    "720p"
+                  ],
+                  "title": "Resolution",
+                  "type": "string",
+                  "x-enum-labels": {
+                    "480p": {
+                      "en": "480p SD",
+                      "zh": "480p 标清"
+                    },
+                    "720p": {
+                      "en": "720p HD",
+                      "zh": "720p 高清"
+                    }
+                  },
+                  "x-group": "output",
+                  "x-label": {
+                    "en": "Resolution",
+                    "zh": "分辨率"
+                  },
+                  "x-section": "basic",
+                  "x-sort-order": 12,
+                  "x-ui-component": "radio_group",
+                  "x-value-kind": "resolution_tier"
+                },
+                "return_last_frame": {
+                  "default": false,
+                  "description": "Also return an image of the video's last frame (usable as input for further creation within 30 days)",
+                  "title": "Return Last Frame",
+                  "type": "boolean",
+                  "x-description": {
+                    "en": "Also return an image of the video's last frame (usable as input for further creation within 30 days)",
+                    "zh": "同时返回视频末尾帧的图片 (近 30 天内可作二次创作输入素材)"
+                  },
+                  "x-group": "advanced",
+                  "x-label": {
+                    "en": "Return Last Frame",
+                    "zh": "返回尾帧图"
+                  },
+                  "x-section": "advanced",
+                  "x-sort-order": 21,
+                  "x-ui-component": "switch"
+                },
+                "seed": {
+                  "default": -1,
+                  "description": "Same seed + same input → similar results. -1 = random",
+                  "maximum": 2147483647,
+                  "minimum": -1,
+                  "title": "Seed",
+                  "type": "integer",
+                  "x-description": {
+                    "en": "Same seed + same input → similar results. -1 = random",
+                    "zh": "相同种子 + 相同输入 → 相近结果. -1 = 随机"
+                  },
+                  "x-group": "advanced",
+                  "x-label": {
+                    "en": "Seed",
+                    "zh": "随机种子"
+                  },
+                  "x-section": "advanced",
+                  "x-sort-order": 24,
+                  "x-ui-component": "number_input",
+                  "x-value-kind": "seed"
+                },
+                "watermark": {
+                  "default": false,
+                  "title": "Watermark",
+                  "type": "boolean",
+                  "x-group": "advanced",
+                  "x-label": {
+                    "en": "Watermark",
+                    "zh": "水印"
+                  },
+                  "x-section": "advanced",
+                  "x-sort-order": 23,
+                  "x-ui-component": "switch"
+                }
+              },
+              "required": [
+                "prompt",
+                "aspect_ratio"
+              ],
+              "type": "object",
+              "x-groups": [
+                {
+                  "description": {
+                    "en": "Prompt and reference materials — the mode is decided automatically by what you upload (reference media / first-and-last frame / pure text-to-video)",
+                    "zh": "提示词与参考素材 — 按上传内容自动决定形态(参考媒体/首尾帧/纯文生)"
+                  },
+                  "key": "input",
+                  "label": {
+                    "en": "Input",
+                    "zh": "输入素材"
+                  },
+                  "section": "basic",
+                  "sort": 2
+                },
+                {
+                  "description": {
+                    "en": "Aspect ratio / duration / resolution / audio generation",
+                    "zh": "比例 / 时长 / 分辨率 / 是否生成音频"
+                  },
+                  "key": "output",
+                  "label": {
+                    "en": "Output Specs",
+                    "zh": "输出规格"
+                  },
+                  "section": "basic",
+                  "sort": 3
+                },
+                {
+                  "description": {
+                    "en": "Seed / watermark / last-frame return / web search",
+                    "zh": "种子 / 水印 / 尾帧返回 / 联网搜索"
+                  },
+                  "key": "advanced",
+                  "label": {
+                    "en": "Advanced",
+                    "zh": "高级"
+                  },
+                  "section": "advanced",
+                  "sort": 4
+                }
+              ]
+            },
+            "is_async": true,
+            "estimate_ms": 300000,
+            "async_strategy": {
+              "mode": "polling",
+              "interval_ms": 5000,
+              "max_wait_ms": 600000
+            },
+            "credit_cost": {
+              "amount": 510,
+              "unit": "per_second"
+            },
+            "status": "published"
+          }
+        ]
+      },
+      {
+        "model_bid": "092e90d0-96b1-43c7-9846-278dddb46d15",
+        "model_code": "veo-3.1-generate-preview",
+        "model_name": {
+          "en": "Veo 3.1 Quality",
+          "zh": "Google Veo 3.1 高质量视频"
+        },
+        "description": {
+          "en": "[Veo 3.1 · Top-Tier Video Generation (High Quality)]\n▸ What it does: Turn a text prompt into a 4–8s cinematic video — native audio, fine-grained camera control, and physically real lighting.\n▸ Highlights: Google's latest video model — reference images (subject/style), first-and-last-frame interpolation, scene extension up to 30s, and multiple aspect ratios.\n▸ Perfect for: premium ad films / movie trailers / brand promos / short-drama creation / product launch videos / fine-art work.\n▸ Pro features: two reference images for character consistency / precise first-and-last-frame camera control / extend duration by continuing from a source video",
+          "zh": "【Veo 3.1 · 顶级视频生成 (高质量)】\n▸ 能做什么: 文字描述 → 4-8 秒电影级视频, 原生音频 / 精细镜头控制 / 真实物理光影\n▸ 亮点: Google 最新视频模型, 支持参考图 (主体/风格) / 首末帧插值 / 场景扩展至 30s / 多种比例\n▸ 典型场景: 高端广告片 / 影视预告 / 品牌宣传 / 短剧创作 / 产品发布视频 / 艺术创作\n▸ 进阶能力: 2 张参考图做角色一致性 / 首末帧精确控制镜头 / 源视频续写延长时长"
+        },
+        "media_type": "video",
+        "task_type": "txt2video",
+        "sort_order": 5,
+        "versions": [
+          {
+            "version_bid": "7c2c21cd-330c-4a45-9148-ae8f90026d1d",
+            "version_code": "v1",
+            "version_name": "Veo 3.1 Quality v1",
+            "release_note": "Veo 3.1 Quality: GA 旗舰, 原生音频 + 高级参考图 + 首末帧",
+            "param_schema": {
+              "$schema": "http://json-schema.org/draft-07/schema#",
+              "properties": {
+                "aspect_ratio": {
+                  "default": "16:9",
+                  "enum": [
+                    "16:9",
+                    "9:16"
+                  ],
+                  "title": "Aspect Ratio",
+                  "type": "string",
+                  "x-enum-labels": {
+                    "16:9": {
+                      "en": "Landscape",
+                      "zh": "横屏"
+                    },
+                    "9:16": {
+                      "en": "Portrait",
+                      "zh": "竖屏"
+                    }
+                  },
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Aspect Ratio",
+                    "zh": "画面比例"
+                  },
+                  "x-section": "basic",
+                  "x-sort-order": 3,
+                  "x-ui-component": "select",
+                  "x-value-kind": "aspect_ratio"
+                },
+                "compression_quality": {
+                  "default": "optimized",
+                  "enum": [
+                    "optimized",
+                    "lossless"
+                  ],
+                  "title": "Compression",
+                  "type": "string",
+                  "x-enum-labels": {
+                    "lossless": {
+                      "en": "Lossless",
+                      "zh": "无损"
+                    },
+                    "optimized": {
+                      "en": "Optimize",
+                      "zh": "优化"
+                    }
+                  },
+                  "x-group": "advanced",
+                  "x-label": {
+                    "en": "Compression",
+                    "zh": "压缩质量"
+                  },
+                  "x-section": "advanced",
+                  "x-sort-order": 3,
+                  "x-ui-component": "select"
+                },
+                "duration": {
+                  "default": "8",
+                  "enum": [
+                    "4",
+                    "6",
+                    "8"
+                  ],
+                  "title": "Duration",
+                  "type": "string",
+                  "x-enum-labels": {
+                    "4": {
+                      "en": "4s",
+                      "zh": "4秒"
+                    },
+                    "6": {
+                      "en": "6s",
+                      "zh": "6秒"
+                    },
+                    "8": {
+                      "en": "8s",
+                      "zh": "8秒"
+                    }
+                  },
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Duration",
+                    "zh": "时长(秒)"
+                  },
+                  "x-section": "basic",
+                  "x-sort-order": 5,
+                  "x-ui-component": "select",
+                  "x-value-kind": "duration_seconds"
+                },
+                "first_frame_image": {
+                  "description": "base64 data URI or gs:// path; enables image-to-video mode",
+                  "format": "uri",
+                  "title": "First Frame Image",
+                  "type": "string",
+                  "x-accept": [
+                    "image/*"
+                  ],
+                  "x-conditions": [
+                    {
+                      "action": "show",
+                      "is_empty": true,
+                      "when": "source_video"
+                    }
+                  ],
+                  "x-description": {
+                    "en": "base64 data URI or gs:// path; enables image-to-video mode",
+                    "zh": "base64 data URI 或 gs:// 路径;启用图生视频模式"
+                  },
+                  "x-group": "i2v",
+                  "x-label": {
+                    "en": "First Frame Image",
+                    "zh": "首帧图片"
+                  },
+                  "x-max-size-mb": 10,
+                  "x-role": "reference_material",
+                  "x-section": "basic",
+                  "x-sort-order": 1,
+                  "x-ui-component": "image_upload"
+                },
+                "generate_audio": {
+                  "default": true,
+                  "title": "Generate Audio",
+                  "type": "boolean",
+                  "x-group": "advanced",
+                  "x-label": {
+                    "en": "Generate Audio",
+                    "zh": "生成音频"
+                  },
+                  "x-section": "advanced",
+                  "x-sort-order": 1,
+                  "x-ui-component": "switch"
+                },
+                "last_frame_image": {
+                  "description": "requires first_frame_image; enables interpolation",
+                  "format": "uri",
+                  "title": "Last Frame Image",
+                  "type": "string",
+                  "x-accept": [
+                    "image/*"
+                  ],
+                  "x-conditions": [
+                    {
+                      "action": "show",
+                      "is_empty": true,
+                      "when": "source_video"
+                    },
+                    {
+                      "action": "show",
+                      "is_empty": false,
+                      "when": "first_frame_image"
+                    }
+                  ],
+                  "x-description": {
+                    "en": "requires first_frame_image; enables interpolation",
+                    "zh": "需要 first_frame_image;启用首末帧插值"
+                  },
+                  "x-group": "i2v",
+                  "x-label": {
+                    "en": "Last Frame Image",
+                    "zh": "末帧图片"
+                  },
+                  "x-max-size-mb": 10,
+                  "x-role": "reference_material",
+                  "x-section": "basic",
+                  "x-sort-order": 2,
+                  "x-ui-component": "image_upload"
+                },
+                "negative_prompt": {
+                  "maxLength": 1000,
+                  "title": "Negative Prompt",
+                  "type": "string",
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Negative Prompt",
+                    "zh": "负向提示词"
+                  },
+                  "x-role": "negative_prompt",
+                  "x-section": "basic",
+                  "x-sort-order": 2,
+                  "x-ui-component": "textarea"
+                },
+                "person_generation": {
+                  "default": "allow_adult",
+                  "enum": [
+                    "allow_adult",
+                    "dont_allow"
+                  ],
+                  "title": "Person Generation",
+                  "type": "string",
+                  "x-enum-labels": {
+                    "allow_adult": {
+                      "en": "Allow Adult Content",
+                      "zh": "允许成人"
+                    },
+                    "dont_allow": {
+                      "en": "Off",
+                      "zh": "禁止"
+                    }
+                  },
+                  "x-group": "advanced",
+                  "x-label": {
+                    "en": "Person Generation",
+                    "zh": "人物生成"
+                  },
+                  "x-section": "advanced",
+                  "x-sort-order": 2,
+                  "x-ui-component": "select"
+                },
+                "prompt": {
+                  "description": "Required unless first_frame_image or source_video is provided",
+                  "maxLength": 2000,
+                  "title": "Prompt",
+                  "type": "string",
+                  "x-description": {
+                    "en": "Required unless first_frame_image or source_video is provided",
+                    "zh": "除非已提供 first_frame_image 或 source_video,否则必填"
+                  },
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Prompt",
+                    "zh": "提示词"
+                  },
+                  "x-role": "prompt",
+                  "x-section": "basic",
+                  "x-sort-order": 1,
+                  "x-ui-component": "textarea"
+                },
+                "quantity": {
+                  "default": 1,
+                  "maximum": 4,
+                  "minimum": 1,
+                  "title": "Number of Videos",
+                  "type": "integer",
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Number of Videos",
+                    "zh": "生成数量"
+                  },
+                  "x-section": "basic",
+                  "x-sort-order": 6,
+                  "x-ui-component": "number_input",
+                  "x-value-kind": "count"
+                },
+                "reference_images": {
+                  "description": "1-3 subject/style reference images; auto-routed through Vertex AI REST",
+                  "items": {
+                    "properties": {
+                      "role": {
+                        "enum": [
+                          "subject",
+                          "style"
+                        ],
+                        "type": "string"
+                      },
+                      "url": {
+                        "format": "uri",
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "url"
+                    ],
+                    "type": "object"
+                  },
+                  "maxItems": 3,
+                  "title": "Reference Images",
+                  "type": "array",
+                  "x-accept": [
+                    "image/*"
+                  ],
+                  "x-conditions": [
+                    {
+                      "action": "show",
+                      "is_empty": true,
+                      "when": "first_frame_image"
+                    }
+                  ],
+                  "x-description": {
+                    "en": "1-3 subject/style reference images; auto-routed through Vertex AI REST",
+                    "zh": "1-3 张主体/风格参考图;经 Vertex AI REST 自动路由"
+                  },
+                  "x-group": "v2v",
+                  "x-label": {
+                    "en": "Reference Images",
+                    "zh": "参考图像"
+                  },
+                  "x-max-size-mb": 10,
+                  "x-role": "reference_material",
+                  "x-roles": [
+                    {
+                      "accept": [
+                        "image/*"
+                      ],
+                      "default": true,
+                      "key": "subject",
+                      "kind": "tag",
+                      "label": {
+                        "en": "Subject",
+                        "zh": "主体"
+                      },
+                      "max_items": 3
+                    },
+                    {
+                      "accept": [
+                        "image/*"
+                      ],
+                      "default": false,
+                      "key": "style",
+                      "kind": "tag",
+                      "label": {
+                        "en": "Style",
+                        "zh": "风格"
+                      },
+                      "max_items": 3
+                    }
+                  ],
+                  "x-section": "basic",
+                  "x-sort-order": 2,
+                  "x-ui-component": "media_array"
+                },
+                "resolution": {
+                  "default": "720p",
+                  "enum": [
+                    "720p",
+                    "1080p",
+                    "4K"
+                  ],
+                  "title": "Resolution",
+                  "type": "string",
+                  "x-enum-labels": {
+                    "1080p": {
+                      "en": "1080p",
+                      "zh": "1080p"
+                    },
+                    "4K": {
+                      "en": "4K",
+                      "zh": "4K"
+                    },
+                    "720p": {
+                      "en": "720p",
+                      "zh": "720p"
+                    }
+                  },
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Resolution",
+                    "zh": "分辨率"
+                  },
+                  "x-section": "basic",
+                  "x-sort-order": 4,
+                  "x-ui-component": "select",
+                  "x-value-kind": "resolution_tier"
+                },
+                "seed": {
+                  "maximum": 2147483647,
+                  "minimum": 0,
+                  "title": "Seed",
+                  "type": "integer",
+                  "x-group": "advanced",
+                  "x-label": {
+                    "en": "Seed",
+                    "zh": "随机种子"
+                  },
+                  "x-section": "advanced",
+                  "x-sort-order": 4,
+                  "x-ui-component": "number_input",
+                  "x-value-kind": "seed"
+                },
+                "source_video": {
+                  "description": "gs://, https://, or data:video/mp4;base64 - enables scene extension up to 30s total",
+                  "format": "uri",
+                  "title": "Source Video (Scene Extension)",
+                  "type": "string",
+                  "x-accept": [
+                    "video/*"
+                  ],
+                  "x-conditions": [
+                    {
+                      "action": "show",
+                      "is_empty": true,
+                      "when": "first_frame_image"
+                    }
+                  ],
+                  "x-description": {
+                    "en": "gs://, https://, or data:video/mp4;base64 - enables scene extension up to 30s total",
+                    "zh": "gs://、https:// 或 data:video/mp4;base64 —— 启用场景扩展,总时长最长 30 秒"
+                  },
+                  "x-group": "v2v",
+                  "x-label": {
+                    "en": "Source Video (Scene Extension)",
+                    "zh": "源视频(场景扩展)"
+                  },
+                  "x-max-size-mb": 50,
+                  "x-role": "reference_material",
+                  "x-section": "basic",
+                  "x-sort-order": 1,
+                  "x-ui-component": "video_upload"
+                }
+              },
+              "type": "object",
+              "x-groups": [
+                {
+                  "description": {
+                    "en": "Required core parameters defining the generation",
+                    "zh": "必填的核心参数,定义生成的画面内容"
+                  },
+                  "key": "basic",
+                  "label": {
+                    "en": "Basic",
+                    "zh": "基础设置"
+                  },
+                  "section": "basic",
+                  "sort": 1
+                },
+                {
+                  "description": {
+                    "en": "Animate from still images. Mutually exclusive with v2v",
+                    "zh": "上传首帧 / 尾帧图像,从静态图生成动态视频。与「视频续作」互斥"
+                  },
+                  "key": "i2v",
+                  "label": {
+                    "en": "Image-to-Video",
+                    "zh": "图生视频"
+                  },
+                  "section": "basic",
+                  "sort": 2
+                },
+                {
+                  "description": {
+                    "en": "Continue/extend a source video. Mutually exclusive with i2v",
+                    "zh": "上传源视频用于续作或场景扩展。与「图生视频」互斥"
+                  },
+                  "key": "v2v",
+                  "label": {
+                    "en": "Video/Reference",
+                    "zh": "视频参考"
+                  },
+                  "section": "basic",
+                  "sort": 3
+                },
+                {
+                  "description": {
+                    "en": "Seed, negative prompt and advanced controls",
+                    "zh": "随机种子、负向提示词等高级控制"
+                  },
+                  "key": "advanced",
+                  "label": {
+                    "en": "Advanced",
+                    "zh": "高级设置"
+                  },
+                  "section": "advanced",
+                  "sort": 4
+                }
+              ]
+            },
+            "is_async": true,
+            "estimate_ms": 450000,
+            "async_strategy": {
+              "mode": "polling",
+              "interval_ms": 10000,
+              "max_wait_ms": 900000
+            },
+            "credit_cost": {
+              "amount": 211,
+              "unit": "per_second"
+            },
+            "status": "published"
+          }
+        ]
+      },
+      {
+        "model_bid": "c76df70b-ed7b-49b6-b0f4-e85807d917db",
+        "model_code": "veo-3.1-fast-generate-preview",
+        "model_name": {
+          "en": "Veo 3.1 Fast",
+          "zh": "Google Veo 3.1 快速视频"
+        },
+        "description": {
+          "en": "[Veo 3.1 Fast · Fast Video Generation]\n▸ What it does: All of Veo 3.1, speed-first — a 4s video in about 30–60s, at half the cost.\n▸ Highlights: keeps every advanced capability — native audio, reference images, first-and-last-frame — for just ~10% less image quality.\n▸ Perfect for: iterative creation / quick client-pitch drafts / content-farm bulk production / internal creative validation",
+          "zh": "【Veo 3.1 Fast · 快速视频生成】\n▸ 能做什么: 同 Veo 3.1, 速度优先 (约 30-60s 完成 4s 视频), 成本减半\n▸ 亮点: 保留原生音频 / 参考图 / 首末帧等全部高级能力, 仅牺牲约 10% 画质\n▸ 典型场景: 迭代创作 / 客户提案快速出稿 / 内容农场批量生产 / 内部创意验证"
+        },
+        "media_type": "video",
+        "task_type": "txt2video",
+        "sort_order": 6,
+        "versions": [
+          {
+            "version_bid": "e10cac00-f4bd-491f-bf9b-f22f7fec603b",
+            "version_code": "v1",
+            "version_name": "Veo 3.1 Fast v1",
+            "release_note": "Veo 3.1 Fast: 速度/成本优化, 保留全部高级特性",
+            "param_schema": {
+              "$schema": "http://json-schema.org/draft-07/schema#",
+              "properties": {
+                "aspect_ratio": {
+                  "default": "16:9",
+                  "enum": [
+                    "16:9",
+                    "9:16"
+                  ],
+                  "title": "Aspect Ratio",
+                  "type": "string",
+                  "x-enum-labels": {
+                    "16:9": {
+                      "en": "Landscape",
+                      "zh": "横屏"
+                    },
+                    "9:16": {
+                      "en": "Portrait",
+                      "zh": "竖屏"
+                    }
+                  },
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Aspect Ratio",
+                    "zh": "画面比例"
+                  },
+                  "x-section": "basic",
+                  "x-sort-order": 3,
+                  "x-ui-component": "select",
+                  "x-value-kind": "aspect_ratio"
+                },
+                "compression_quality": {
+                  "default": "optimized",
+                  "enum": [
+                    "optimized",
+                    "lossless"
+                  ],
+                  "title": "Compression",
+                  "type": "string",
+                  "x-enum-labels": {
+                    "lossless": {
+                      "en": "Lossless",
+                      "zh": "无损"
+                    },
+                    "optimized": {
+                      "en": "Optimize",
+                      "zh": "优化"
+                    }
+                  },
+                  "x-group": "advanced",
+                  "x-label": {
+                    "en": "Compression",
+                    "zh": "压缩质量"
+                  },
+                  "x-section": "advanced",
+                  "x-sort-order": 3,
+                  "x-ui-component": "select"
+                },
+                "duration": {
+                  "default": "8",
+                  "enum": [
+                    "4",
+                    "6",
+                    "8"
+                  ],
+                  "title": "Duration",
+                  "type": "string",
+                  "x-enum-labels": {
+                    "4": {
+                      "en": "4s",
+                      "zh": "4秒"
+                    },
+                    "6": {
+                      "en": "6s",
+                      "zh": "6秒"
+                    },
+                    "8": {
+                      "en": "8s",
+                      "zh": "8秒"
+                    }
+                  },
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Duration",
+                    "zh": "时长(秒)"
+                  },
+                  "x-section": "basic",
+                  "x-sort-order": 5,
+                  "x-ui-component": "select",
+                  "x-value-kind": "duration_seconds"
+                },
+                "first_frame_image": {
+                  "description": "base64 data URI or gs:// path; enables image-to-video mode",
+                  "format": "uri",
+                  "title": "First Frame Image",
+                  "type": "string",
+                  "x-accept": [
+                    "image/*"
+                  ],
+                  "x-conditions": [
+                    {
+                      "action": "show",
+                      "is_empty": true,
+                      "when": "source_video"
+                    }
+                  ],
+                  "x-description": {
+                    "en": "base64 data URI or gs:// path; enables image-to-video mode",
+                    "zh": "base64 data URI 或 gs:// 路径;启用图生视频模式"
+                  },
+                  "x-group": "i2v",
+                  "x-label": {
+                    "en": "First Frame Image",
+                    "zh": "首帧图片"
+                  },
+                  "x-max-size-mb": 10,
+                  "x-role": "reference_material",
+                  "x-section": "basic",
+                  "x-sort-order": 1,
+                  "x-ui-component": "image_upload"
+                },
+                "generate_audio": {
+                  "default": true,
+                  "title": "Generate Audio",
+                  "type": "boolean",
+                  "x-group": "advanced",
+                  "x-label": {
+                    "en": "Generate Audio",
+                    "zh": "生成音频"
+                  },
+                  "x-section": "advanced",
+                  "x-sort-order": 1,
+                  "x-ui-component": "switch"
+                },
+                "last_frame_image": {
+                  "description": "requires first_frame_image; enables interpolation",
+                  "format": "uri",
+                  "title": "Last Frame Image",
+                  "type": "string",
+                  "x-accept": [
+                    "image/*"
+                  ],
+                  "x-conditions": [
+                    {
+                      "action": "show",
+                      "is_empty": true,
+                      "when": "source_video"
+                    },
+                    {
+                      "action": "show",
+                      "is_empty": false,
+                      "when": "first_frame_image"
+                    }
+                  ],
+                  "x-description": {
+                    "en": "requires first_frame_image; enables interpolation",
+                    "zh": "需要 first_frame_image;启用首末帧插值"
+                  },
+                  "x-group": "i2v",
+                  "x-label": {
+                    "en": "Last Frame Image",
+                    "zh": "末帧图片"
+                  },
+                  "x-max-size-mb": 10,
+                  "x-role": "reference_material",
+                  "x-section": "basic",
+                  "x-sort-order": 2,
+                  "x-ui-component": "image_upload"
+                },
+                "negative_prompt": {
+                  "maxLength": 1000,
+                  "title": "Negative Prompt",
+                  "type": "string",
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Negative Prompt",
+                    "zh": "负向提示词"
+                  },
+                  "x-role": "negative_prompt",
+                  "x-section": "basic",
+                  "x-sort-order": 2,
+                  "x-ui-component": "textarea"
+                },
+                "person_generation": {
+                  "default": "allow_adult",
+                  "enum": [
+                    "allow_adult",
+                    "dont_allow"
+                  ],
+                  "title": "Person Generation",
+                  "type": "string",
+                  "x-enum-labels": {
+                    "allow_adult": {
+                      "en": "Allow Adult Content",
+                      "zh": "允许成人"
+                    },
+                    "dont_allow": {
+                      "en": "Off",
+                      "zh": "禁止"
+                    }
+                  },
+                  "x-group": "advanced",
+                  "x-label": {
+                    "en": "Person Generation",
+                    "zh": "人物生成"
+                  },
+                  "x-section": "advanced",
+                  "x-sort-order": 2,
+                  "x-ui-component": "select"
+                },
+                "prompt": {
+                  "description": "Required unless first_frame_image or source_video is provided",
+                  "maxLength": 2000,
+                  "title": "Prompt",
+                  "type": "string",
+                  "x-description": {
+                    "en": "Required unless first_frame_image or source_video is provided",
+                    "zh": "除非已提供 first_frame_image 或 source_video,否则必填"
+                  },
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Prompt",
+                    "zh": "提示词"
+                  },
+                  "x-role": "prompt",
+                  "x-section": "basic",
+                  "x-sort-order": 1,
+                  "x-ui-component": "textarea"
+                },
+                "quantity": {
+                  "default": 1,
+                  "maximum": 4,
+                  "minimum": 1,
+                  "title": "Number of Videos",
+                  "type": "integer",
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Number of Videos",
+                    "zh": "生成数量"
+                  },
+                  "x-section": "basic",
+                  "x-sort-order": 6,
+                  "x-ui-component": "number_input",
+                  "x-value-kind": "count"
+                },
+                "reference_images": {
+                  "description": "1-3 subject/style reference images; auto-routed through Vertex AI REST",
+                  "items": {
+                    "properties": {
+                      "role": {
+                        "enum": [
+                          "subject",
+                          "style"
+                        ],
+                        "type": "string"
+                      },
+                      "url": {
+                        "format": "uri",
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "url"
+                    ],
+                    "type": "object"
+                  },
+                  "maxItems": 3,
+                  "title": "Reference Images",
+                  "type": "array",
+                  "x-accept": [
+                    "image/*"
+                  ],
+                  "x-conditions": [
+                    {
+                      "action": "show",
+                      "is_empty": true,
+                      "when": "first_frame_image"
+                    }
+                  ],
+                  "x-description": {
+                    "en": "1-3 subject/style reference images; auto-routed through Vertex AI REST",
+                    "zh": "1-3 张主体/风格参考图;经 Vertex AI REST 自动路由"
+                  },
+                  "x-group": "v2v",
+                  "x-label": {
+                    "en": "Reference Images",
+                    "zh": "参考图像"
+                  },
+                  "x-max-size-mb": 10,
+                  "x-role": "reference_material",
+                  "x-roles": [
+                    {
+                      "accept": [
+                        "image/*"
+                      ],
+                      "default": true,
+                      "key": "subject",
+                      "kind": "tag",
+                      "label": {
+                        "en": "Subject",
+                        "zh": "主体"
+                      },
+                      "max_items": 3
+                    },
+                    {
+                      "accept": [
+                        "image/*"
+                      ],
+                      "default": false,
+                      "key": "style",
+                      "kind": "tag",
+                      "label": {
+                        "en": "Style",
+                        "zh": "风格"
+                      },
+                      "max_items": 3
+                    }
+                  ],
+                  "x-section": "basic",
+                  "x-sort-order": 2,
+                  "x-ui-component": "media_array"
+                },
+                "resolution": {
+                  "default": "720p",
+                  "enum": [
+                    "720p",
+                    "1080p",
+                    "4K"
+                  ],
+                  "title": "Resolution",
+                  "type": "string",
+                  "x-enum-labels": {
+                    "1080p": {
+                      "en": "1080p",
+                      "zh": "1080p"
+                    },
+                    "4K": {
+                      "en": "4K",
+                      "zh": "4K"
+                    },
+                    "720p": {
+                      "en": "720p",
+                      "zh": "720p"
+                    }
+                  },
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Resolution",
+                    "zh": "分辨率"
+                  },
+                  "x-section": "basic",
+                  "x-sort-order": 4,
+                  "x-ui-component": "select",
+                  "x-value-kind": "resolution_tier"
+                },
+                "seed": {
+                  "maximum": 2147483647,
+                  "minimum": 0,
+                  "title": "Seed",
+                  "type": "integer",
+                  "x-group": "advanced",
+                  "x-label": {
+                    "en": "Seed",
+                    "zh": "随机种子"
+                  },
+                  "x-section": "advanced",
+                  "x-sort-order": 4,
+                  "x-ui-component": "number_input",
+                  "x-value-kind": "seed"
+                },
+                "source_video": {
+                  "description": "gs://, https://, or data:video/mp4;base64 - enables scene extension up to 30s total",
+                  "format": "uri",
+                  "title": "Source Video (Scene Extension)",
+                  "type": "string",
+                  "x-accept": [
+                    "video/*"
+                  ],
+                  "x-conditions": [
+                    {
+                      "action": "show",
+                      "is_empty": true,
+                      "when": "first_frame_image"
+                    }
+                  ],
+                  "x-description": {
+                    "en": "gs://, https://, or data:video/mp4;base64 - enables scene extension up to 30s total",
+                    "zh": "gs://、https:// 或 data:video/mp4;base64 —— 启用场景扩展,总时长最长 30 秒"
+                  },
+                  "x-group": "v2v",
+                  "x-label": {
+                    "en": "Source Video (Scene Extension)",
+                    "zh": "源视频(场景扩展)"
+                  },
+                  "x-max-size-mb": 50,
+                  "x-role": "reference_material",
+                  "x-section": "basic",
+                  "x-sort-order": 1,
+                  "x-ui-component": "video_upload"
+                }
+              },
+              "type": "object",
+              "x-groups": [
+                {
+                  "description": {
+                    "en": "Required core parameters defining the generation",
+                    "zh": "必填的核心参数,定义生成的画面内容"
+                  },
+                  "key": "basic",
+                  "label": {
+                    "en": "Basic",
+                    "zh": "基础设置"
+                  },
+                  "section": "basic",
+                  "sort": 1
+                },
+                {
+                  "description": {
+                    "en": "Animate from still images. Mutually exclusive with v2v",
+                    "zh": "上传首帧 / 尾帧图像,从静态图生成动态视频。与「视频续作」互斥"
+                  },
+                  "key": "i2v",
+                  "label": {
+                    "en": "Image-to-Video",
+                    "zh": "图生视频"
+                  },
+                  "section": "basic",
+                  "sort": 2
+                },
+                {
+                  "description": {
+                    "en": "Continue/extend a source video. Mutually exclusive with i2v",
+                    "zh": "上传源视频用于续作或场景扩展。与「图生视频」互斥"
+                  },
+                  "key": "v2v",
+                  "label": {
+                    "en": "Video/Reference",
+                    "zh": "视频参考"
+                  },
+                  "section": "basic",
+                  "sort": 3
+                },
+                {
+                  "description": {
+                    "en": "Seed, negative prompt and advanced controls",
+                    "zh": "随机种子、负向提示词等高级控制"
+                  },
+                  "key": "advanced",
+                  "label": {
+                    "en": "Advanced",
+                    "zh": "高级设置"
+                  },
+                  "section": "advanced",
+                  "sort": 4
+                }
+              ]
+            },
+            "is_async": true,
+            "estimate_ms": 300000,
+            "async_strategy": {
+              "mode": "polling",
+              "interval_ms": 8000,
+              "max_wait_ms": 600000
+            },
+            "credit_cost": {
+              "amount": 53,
+              "unit": "per_second"
+            },
+            "status": "published"
+          }
+        ]
+      },
+      {
+        "model_bid": "5536a09f-b17f-4884-84de-5ec8aa2fc86d",
+        "model_code": "veo-3.1-lite-generate-preview",
+        "model_name": {
+          "en": "Veo 3.1 Lite",
+          "zh": "Google Veo 3.1 轻量视频"
+        },
+        "description": {
+          "en": "[Veo 3.1 Lite · Entry-Level Video Generation]\n▸ What it does: Fast text-to-video — a fixed 4–8s clip at mainstream 720p.\n▸ Highlights: the most budget-friendly option with outstanding value — great for learning, testing, and lightweight high-frequency work.\n▸ Perfect for: prototype validation / team training / bulk thumbnail videos / preview generation / teaching demos.\n▸ Note: no reference images or advanced camera control — for stronger results, choose Fast or Quality",
+          "zh": "【Veo 3.1 Lite · 入门级视频生成】\n▸ 能做什么: 快速文生视频, 固定 4-8 秒, 720p 主流画质\n▸ 亮点: 成本最低、性价比突出, 适合学习 / 测试 / 高频次轻量场景\n▸ 典型场景: 原型验证 / 团队培训 / 大批量缩略视频 / 预览生成 / 教学演示\n▸ 注意: 不支持参考图 / 高级镜头控制, 想要更强效果请选 Fast 或 Quality"
+        },
+        "media_type": "video",
+        "task_type": "txt2video",
+        "display_tags": [
+          "best_value"
+        ],
+        "sort_order": 7,
+        "versions": [
+          {
+            "version_bid": "e5b8f5b3-ed9f-4a6f-b699-b276fa18c373",
+            "version_code": "v1",
+            "version_name": "Veo 3.1 Lite v1",
+            "release_note": "Veo 3.1 Lite: Preview 变体, 最低成本, 功能精简",
+            "param_schema": {
+              "$schema": "http://json-schema.org/draft-07/schema#",
+              "properties": {
+                "aspect_ratio": {
+                  "default": "16:9",
+                  "enum": [
+                    "16:9",
+                    "9:16"
+                  ],
+                  "title": "Aspect Ratio",
+                  "type": "string",
+                  "x-enum-labels": {
+                    "16:9": {
+                      "en": "Landscape",
+                      "zh": "横屏"
+                    },
+                    "9:16": {
+                      "en": "Portrait",
+                      "zh": "竖屏"
+                    }
+                  },
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Aspect Ratio",
+                    "zh": "画面比例"
+                  },
+                  "x-section": "basic",
+                  "x-sort-order": 3,
+                  "x-ui-component": "select",
+                  "x-value-kind": "aspect_ratio"
+                },
+                "compression_quality": {
+                  "default": "optimized",
+                  "enum": [
+                    "optimized",
+                    "lossless"
+                  ],
+                  "title": "Compression",
+                  "type": "string",
+                  "x-enum-labels": {
+                    "lossless": {
+                      "en": "Lossless",
+                      "zh": "无损"
+                    },
+                    "optimized": {
+                      "en": "Optimize",
+                      "zh": "优化"
+                    }
+                  },
+                  "x-group": "advanced",
+                  "x-label": {
+                    "en": "Compression",
+                    "zh": "压缩质量"
+                  },
+                  "x-section": "advanced",
+                  "x-sort-order": 3,
+                  "x-ui-component": "select"
+                },
+                "duration": {
+                  "default": "8",
+                  "enum": [
+                    "4",
+                    "6",
+                    "8"
+                  ],
+                  "title": "Duration",
+                  "type": "string",
+                  "x-enum-labels": {
+                    "4": {
+                      "en": "4s",
+                      "zh": "4秒"
+                    },
+                    "6": {
+                      "en": "6s",
+                      "zh": "6秒"
+                    },
+                    "8": {
+                      "en": "8s",
+                      "zh": "8秒"
+                    }
+                  },
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Duration",
+                    "zh": "时长(秒)"
+                  },
+                  "x-section": "basic",
+                  "x-sort-order": 5,
+                  "x-ui-component": "select",
+                  "x-value-kind": "duration_seconds"
+                },
+                "first_frame_image": {
+                  "description": "base64 data URI or gs:// path; enables image-to-video mode",
+                  "format": "uri",
+                  "title": "First Frame Image",
+                  "type": "string",
+                  "x-accept": [
+                    "image/*"
+                  ],
+                  "x-conditions": [
+                    {
+                      "action": "show",
+                      "is_empty": true,
+                      "when": "source_video"
+                    }
+                  ],
+                  "x-description": {
+                    "en": "base64 data URI or gs:// path; enables image-to-video mode",
+                    "zh": "base64 data URI 或 gs:// 路径;启用图生视频模式"
+                  },
+                  "x-group": "i2v",
+                  "x-label": {
+                    "en": "First Frame Image",
+                    "zh": "首帧图片"
+                  },
+                  "x-max-size-mb": 10,
+                  "x-role": "reference_material",
+                  "x-section": "basic",
+                  "x-sort-order": 1,
+                  "x-ui-component": "image_upload"
+                },
+                "generate_audio": {
+                  "default": true,
+                  "title": "Generate Audio",
+                  "type": "boolean",
+                  "x-group": "advanced",
+                  "x-label": {
+                    "en": "Generate Audio",
+                    "zh": "生成音频"
+                  },
+                  "x-section": "advanced",
+                  "x-sort-order": 1,
+                  "x-ui-component": "switch"
+                },
+                "last_frame_image": {
+                  "description": "requires first_frame_image; enables interpolation",
+                  "format": "uri",
+                  "title": "Last Frame Image",
+                  "type": "string",
+                  "x-accept": [
+                    "image/*"
+                  ],
+                  "x-conditions": [
+                    {
+                      "action": "show",
+                      "is_empty": true,
+                      "when": "source_video"
+                    },
+                    {
+                      "action": "show",
+                      "is_empty": false,
+                      "when": "first_frame_image"
+                    }
+                  ],
+                  "x-description": {
+                    "en": "requires first_frame_image; enables interpolation",
+                    "zh": "需要 first_frame_image;启用首末帧插值"
+                  },
+                  "x-group": "i2v",
+                  "x-label": {
+                    "en": "Last Frame Image",
+                    "zh": "末帧图片"
+                  },
+                  "x-max-size-mb": 10,
+                  "x-role": "reference_material",
+                  "x-section": "basic",
+                  "x-sort-order": 2,
+                  "x-ui-component": "image_upload"
+                },
+                "negative_prompt": {
+                  "maxLength": 1000,
+                  "title": "Negative Prompt",
+                  "type": "string",
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Negative Prompt",
+                    "zh": "负向提示词"
+                  },
+                  "x-role": "negative_prompt",
+                  "x-section": "basic",
+                  "x-sort-order": 2,
+                  "x-ui-component": "textarea"
+                },
+                "person_generation": {
+                  "default": "allow_adult",
+                  "enum": [
+                    "allow_adult",
+                    "dont_allow"
+                  ],
+                  "title": "Person Generation",
+                  "type": "string",
+                  "x-enum-labels": {
+                    "allow_adult": {
+                      "en": "Allow Adult Content",
+                      "zh": "允许成人"
+                    },
+                    "dont_allow": {
+                      "en": "Off",
+                      "zh": "禁止"
+                    }
+                  },
+                  "x-group": "advanced",
+                  "x-label": {
+                    "en": "Person Generation",
+                    "zh": "人物生成"
+                  },
+                  "x-section": "advanced",
+                  "x-sort-order": 2,
+                  "x-ui-component": "select"
+                },
+                "prompt": {
+                  "description": "Required unless first_frame_image or source_video is provided",
+                  "maxLength": 2000,
+                  "title": "Prompt",
+                  "type": "string",
+                  "x-description": {
+                    "en": "Required unless first_frame_image or source_video is provided",
+                    "zh": "除非已提供 first_frame_image 或 source_video,否则必填"
+                  },
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Prompt",
+                    "zh": "提示词"
+                  },
+                  "x-role": "prompt",
+                  "x-section": "basic",
+                  "x-sort-order": 1,
+                  "x-ui-component": "textarea"
+                },
+                "quantity": {
+                  "default": 1,
+                  "maximum": 4,
+                  "minimum": 1,
+                  "title": "Number of Videos",
+                  "type": "integer",
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Number of Videos",
+                    "zh": "生成数量"
+                  },
+                  "x-section": "basic",
+                  "x-sort-order": 6,
+                  "x-ui-component": "number_input",
+                  "x-value-kind": "count"
+                },
+                "resolution": {
+                  "default": "720p",
+                  "enum": [
+                    "720p",
+                    "1080p"
+                  ],
+                  "title": "Resolution",
+                  "type": "string",
+                  "x-enum-labels": {
+                    "1080p": {
+                      "en": "1080p",
+                      "zh": "1080p"
+                    },
+                    "720p": {
+                      "en": "720p",
+                      "zh": "720p"
+                    }
+                  },
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Resolution",
+                    "zh": "分辨率"
+                  },
+                  "x-section": "basic",
+                  "x-sort-order": 4,
+                  "x-ui-component": "select",
+                  "x-value-kind": "resolution_tier"
+                },
+                "seed": {
+                  "maximum": 2147483647,
+                  "minimum": 0,
+                  "title": "Seed",
+                  "type": "integer",
+                  "x-group": "advanced",
+                  "x-label": {
+                    "en": "Seed",
+                    "zh": "随机种子"
+                  },
+                  "x-section": "advanced",
+                  "x-sort-order": 4,
+                  "x-ui-component": "number_input",
+                  "x-value-kind": "seed"
+                },
+                "source_video": {
+                  "description": "gs://, https://, or data:video/mp4;base64 - enables scene extension up to 30s total",
+                  "format": "uri",
+                  "title": "Source Video (Scene Extension)",
+                  "type": "string",
+                  "x-accept": [
+                    "video/*"
+                  ],
+                  "x-conditions": [
+                    {
+                      "action": "show",
+                      "is_empty": true,
+                      "when": "first_frame_image"
+                    }
+                  ],
+                  "x-description": {
+                    "en": "gs://, https://, or data:video/mp4;base64 - enables scene extension up to 30s total",
+                    "zh": "gs://、https:// 或 data:video/mp4;base64 —— 启用场景扩展,总时长最长 30 秒"
+                  },
+                  "x-group": "v2v",
+                  "x-label": {
+                    "en": "Source Video (Scene Extension)",
+                    "zh": "源视频(场景扩展)"
+                  },
+                  "x-max-size-mb": 50,
+                  "x-role": "reference_material",
+                  "x-section": "basic",
+                  "x-sort-order": 1,
+                  "x-ui-component": "video_upload"
+                }
+              },
+              "type": "object",
+              "x-groups": [
+                {
+                  "description": {
+                    "en": "Required core parameters defining the generation",
+                    "zh": "必填的核心参数,定义生成的画面内容"
+                  },
+                  "key": "basic",
+                  "label": {
+                    "en": "Basic",
+                    "zh": "基础设置"
+                  },
+                  "section": "basic",
+                  "sort": 1
+                },
+                {
+                  "description": {
+                    "en": "Animate from still images. Mutually exclusive with v2v",
+                    "zh": "上传首帧 / 尾帧图像,从静态图生成动态视频。与「视频续作」互斥"
+                  },
+                  "key": "i2v",
+                  "label": {
+                    "en": "Image-to-Video",
+                    "zh": "图生视频"
+                  },
+                  "section": "basic",
+                  "sort": 2
+                },
+                {
+                  "description": {
+                    "en": "Continue/extend a source video. Mutually exclusive with i2v",
+                    "zh": "上传源视频用于续作或场景扩展。与「图生视频」互斥"
+                  },
+                  "key": "v2v",
+                  "label": {
+                    "en": "Video/Reference",
+                    "zh": "视频参考"
+                  },
+                  "section": "basic",
+                  "sort": 3
+                },
+                {
+                  "description": {
+                    "en": "Seed, negative prompt and advanced controls",
+                    "zh": "随机种子、负向提示词等高级控制"
+                  },
+                  "key": "advanced",
+                  "label": {
+                    "en": "Advanced",
+                    "zh": "高级设置"
+                  },
+                  "section": "advanced",
+                  "sort": 4
+                }
+              ]
+            },
+            "is_async": true,
+            "estimate_ms": 300000,
+            "async_strategy": {
+              "mode": "polling",
+              "interval_ms": 8000,
+              "max_wait_ms": 600000
+            },
+            "credit_cost": {
+              "amount": 27,
+              "unit": "per_second"
+            },
+            "status": "published"
+          }
+        ]
+      },
+      {
+        "model_bid": "49584004-2513-4b80-b060-eb8676e7aeb8",
+        "model_code": "wan2.7-video",
+        "model_name": {
+          "en": "Wan 2.7 Video",
+          "zh": "万相 2.7 视频生成"
+        },
+        "description": {
+          "en": "Wan 2.7 Video (unified entry point): leave media empty for text-to-video; include first_frame (and similar) for image-to-video; include reference_image/video for reference-to-video. Routing is decided automatically by the backend FamilyRouter.",
+          "zh": "万相 2.7 视频生成 (统一入口): 留空 media 走文生视频; media 含 first_frame 等走图生视频; media 含 reference_image/video 走参考生视频. 路由由后端 FamilyRouter 自动判定."
+        },
+        "media_type": "video",
+        "task_type": "txt2video",
+        "sort_order": 40,
+        "versions": [
+          {
+            "version_bid": "dab5be88-f10e-4f3d-971d-6f8e079608f3",
+            "version_code": "v1",
+            "version_name": "Wan 2.7 Video",
+            "capability_label": "视频生成",
+            "release_note": "统一入口: 文生视频/图生视频/参考生视频. 后端按 params.media[] 自动路由真实 upstream.",
+            "param_schema": {
+              "$schema": "http://json-schema.org/draft-07/schema#",
+              "properties": {
+                "aspect_ratio": {
+                  "default": "16:9",
+                  "enum": [
+                    "16:9",
+                    "9:16",
+                    "1:1",
+                    "4:3",
+                    "3:4"
+                  ],
+                  "title": "Aspect Ratio",
+                  "type": "string",
+                  "x-enum-labels": {
+                    "16:9": {
+                      "en": "16:9 Landscape",
+                      "zh": "16:9 横屏"
+                    },
+                    "1:1": {
+                      "en": "1:1 Square",
+                      "zh": "1:1 方形"
+                    },
+                    "3:4": {
+                      "en": "3:4",
+                      "zh": "3:4"
+                    },
+                    "4:3": {
+                      "en": "4:3",
+                      "zh": "4:3"
+                    },
+                    "9:16": {
+                      "en": "9:16 Portrait",
+                      "zh": "9:16 竖屏"
+                    }
+                  },
+                  "x-group": "basic",
+                  "x-hint": {
+                    "en": "Ignored when first_frame is provided in media[]",
+                    "zh": "media[] 含 first_frame 时本参数被忽略"
+                  },
+                  "x-label": {
+                    "en": "Aspect Ratio",
+                    "zh": "画面比例"
+                  },
+                  "x-section": "basic",
+                  "x-sort-order": 3,
+                  "x-ui-component": "select",
+                  "x-value-kind": "aspect_ratio"
+                },
+                "audio_url": {
+                  "format": "uri",
+                  "title": "Audio URL (text-to-video only)",
+                  "type": "string",
+                  "x-accept": [
+                    "audio/*"
+                  ],
+                  "x-conditions": [
+                    {
+                      "action": "show",
+                      "is_empty": true,
+                      "when": "media"
+                    }
+                  ],
+                  "x-group": "advanced",
+                  "x-hint": {
+                    "en": "wav/mp3, 2-30s, <=15MB. Auto-generate BGM if omitted. Ignored when media[] is provided.",
+                    "zh": "wav/mp3, 2-30 秒, ≤15MB; 留空自动配乐; 提供 media[] 时本字段被忽略"
+                  },
+                  "x-label": {
+                    "en": "Audio URL (text-to-video only)",
+                    "zh": "音频 URL (仅文生视频)"
+                  },
+                  "x-max-size-mb": 15,
+                  "x-role": "reference_material",
+                  "x-section": "advanced",
+                  "x-sort-order": 3,
+                  "x-ui-component": "audio_upload"
+                },
+                "duration": {
+                  "default": 5,
+                  "maximum": 15,
+                  "minimum": 2,
+                  "title": "Duration (seconds)",
+                  "type": "integer",
+                  "x-group": "basic",
+                  "x-hint": {
+                    "en": "Max 10s when reference_video is provided",
+                    "zh": "media 含 reference_video 时上限 10 秒"
+                  },
+                  "x-label": {
+                    "en": "Duration (seconds)",
+                    "zh": "视频时长 (秒)"
+                  },
+                  "x-section": "basic",
+                  "x-sort-order": 5,
+                  "x-ui-component": "slider",
+                  "x-value-kind": "duration_seconds"
+                },
+                "media": {
+                  "items": {
+                    "properties": {
+                      "role": {
+                        "enum": [
+                          "first_frame",
+                          "last_frame",
+                          "first_clip",
+                          "driving_audio",
+                          "reference_image",
+                          "reference_video"
+                        ],
+                        "type": "string"
+                      },
+                      "url": {
+                        "format": "uri",
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "url"
+                    ],
+                    "type": "object"
+                  },
+                  "maxItems": 5,
+                  "title": "Media (optional)",
+                  "type": "array",
+                  "x-group": "basic",
+                  "x-hint": {
+                    "en": "Leave empty for text-to-video. Add first_frame/last_frame/first_clip/driving_audio for image-to-video. Add reference_image/reference_video for reference-to-video.",
+                    "zh": "留空=文生视频; 含 first_frame/last_frame/first_clip/driving_audio=图生视频; 含 reference_image/reference_video=参考生视频"
+                  },
+                  "x-label": {
+                    "en": "Media (optional)",
+                    "zh": "媒体素材 (可选)"
+                  },
+                  "x-role": "reference_material",
+                  "x-role-mode-exclusive": true,
+                  "x-role-modes": [
+                    {
+                      "key": "image_to_video",
+                      "label": {
+                        "en": "Image to Video",
+                        "zh": "图生视频"
+                      }
+                    },
+                    {
+                      "key": "reference_to_video",
+                      "label": {
+                        "en": "Reference to Video",
+                        "zh": "参考生视频"
+                      }
+                    }
+                  ],
+                  "x-roles": [
+                    {
+                      "accept": [
+                        "image/*"
+                      ],
+                      "default": true,
+                      "key": "first_frame",
+                      "kind": "slot",
+                      "label": {
+                        "en": "First Frame",
+                        "zh": "首帧"
+                      },
+                      "max_items": 1,
+                      "mode": "image_to_video"
+                    },
+                    {
+                      "accept": [
+                        "image/*"
+                      ],
+                      "default": false,
+                      "key": "last_frame",
+                      "kind": "slot",
+                      "label": {
+                        "en": "Last Frame",
+                        "zh": "尾帧"
+                      },
+                      "max_items": 1,
+                      "mode": "image_to_video"
+                    },
+                    {
+                      "accept": [
+                        "video/*"
+                      ],
+                      "default": false,
+                      "key": "first_clip",
+                      "kind": "slot",
+                      "label": {
+                        "en": "First Clip",
+                        "zh": "首段视频"
+                      },
+                      "max_items": 1,
+                      "mode": "image_to_video"
+                    },
+                    {
+                      "accept": [
+                        "audio/*"
+                      ],
+                      "default": false,
+                      "key": "driving_audio",
+                      "kind": "slot",
+                      "label": {
+                        "en": "Driving Audio",
+                        "zh": "驱动音频"
+                      },
+                      "max_items": 1,
+                      "mode": "image_to_video"
+                    },
+                    {
+                      "accept": [
+                        "image/*"
+                      ],
+                      "default": false,
+                      "key": "reference_image",
+                      "kind": "tag",
+                      "label": {
+                        "en": "Reference Image",
+                        "zh": "参考图"
+                      },
+                      "max_items": 1,
+                      "mode": "reference_to_video"
+                    },
+                    {
+                      "accept": [
+                        "video/*"
+                      ],
+                      "default": false,
+                      "key": "reference_video",
+                      "kind": "tag",
+                      "label": {
+                        "en": "Reference Video",
+                        "zh": "参考视频"
+                      },
+                      "max_items": 1,
+                      "mode": "reference_to_video"
+                    }
+                  ],
+                  "x-section": "basic",
+                  "x-sort-order": 2,
+                  "x-ui-component": "media_array"
+                },
+                "negative_prompt": {
+                  "maxLength": 500,
+                  "title": "Negative Prompt",
+                  "type": "string",
+                  "x-group": "advanced",
+                  "x-label": {
+                    "en": "Negative Prompt",
+                    "zh": "反向提示词"
+                  },
+                  "x-role": "negative_prompt",
+                  "x-section": "advanced",
+                  "x-sort-order": 1,
+                  "x-ui-component": "textarea"
+                },
+                "prompt": {
+                  "maxLength": 5000,
+                  "title": "Prompt",
+                  "type": "string",
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Prompt",
+                    "zh": "提示词"
+                  },
+                  "x-placeholder": {
+                    "en": "Describe the scene / motion / camera. Use 图1/图2 to reference media.",
+                    "zh": "描述画面/动作/镜头; 使用 图1/图2 引用媒体素材"
+                  },
+                  "x-role": "prompt",
+                  "x-section": "basic",
+                  "x-sort-order": 1,
+                  "x-ui-component": "textarea"
+                },
+                "prompt_extend": {
+                  "default": true,
+                  "title": "Prompt Extend",
+                  "type": "boolean",
+                  "x-group": "advanced",
+                  "x-label": {
+                    "en": "Prompt Extend",
+                    "zh": "智能改写"
+                  },
+                  "x-section": "advanced",
+                  "x-sort-order": 2,
+                  "x-ui-component": "switch"
+                },
+                "resolution": {
+                  "default": "1080P",
+                  "enum": [
+                    "720P",
+                    "1080P"
+                  ],
+                  "title": "Resolution",
+                  "type": "string",
+                  "x-enum-labels": {
+                    "1080P": {
+                      "en": "1080P",
+                      "zh": "1080P (高清)"
+                    },
+                    "720P": {
+                      "en": "720P",
+                      "zh": "720P"
+                    }
+                  },
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Resolution",
+                    "zh": "分辨率"
+                  },
+                  "x-section": "basic",
+                  "x-sort-order": 4,
+                  "x-ui-component": "radio_group",
+                  "x-value-kind": "resolution_tier"
+                },
+                "seed": {
+                  "maximum": 2147483647,
+                  "minimum": 0,
+                  "title": "Seed",
+                  "type": "integer",
+                  "x-group": "advanced",
+                  "x-label": {
+                    "en": "Seed",
+                    "zh": "随机种子"
+                  },
+                  "x-section": "advanced",
+                  "x-sort-order": 5,
+                  "x-ui-component": "number_input",
+                  "x-value-kind": "seed"
+                },
+                "watermark": {
+                  "default": false,
+                  "title": "Watermark",
+                  "type": "boolean",
+                  "x-group": "advanced",
+                  "x-label": {
+                    "en": "Watermark",
+                    "zh": "添加水印"
+                  },
+                  "x-section": "advanced",
+                  "x-sort-order": 4,
+                  "x-ui-component": "switch"
+                }
+              },
+              "required": [
+                "prompt"
+              ],
+              "type": "object",
+              "x-groups": [
+                {
+                  "key": "basic",
+                  "label": {
+                    "en": "Basic",
+                    "zh": "基础设置"
+                  },
+                  "section": "basic",
+                  "sort": 1
+                },
+                {
+                  "key": "advanced",
+                  "label": {
+                    "en": "Advanced",
+                    "zh": "高级设置"
+                  },
+                  "section": "advanced",
+                  "sort": 2
+                }
+              ]
+            },
+            "is_async": true,
+            "estimate_ms": 600000,
+            "async_strategy": {
+              "mode": "polling",
+              "interval_ms": 15000,
+              "max_wait_ms": 1200000
+            },
+            "credit_cost": {
+              "amount": 78,
+              "unit": "per_second"
+            },
+            "status": "published"
+          }
+        ]
+      },
+      {
+        "model_bid": "f35e47be-d5d6-4728-83b4-82c938d2e700",
+        "model_code": "wan2.7-i2v",
+        "model_name": {
+          "en": "Wan 2.7 Image-to-Video",
+          "zh": "万相 2.7 图生视频"
+        },
+        "description": {
+          "en": "[Wan 2.7 I2V · Image-to-Video]\n▸ What it does: turn one or more images into video — mix first frames, last frames, clips, and driving audio.\n▸ Highlights: first/last frames steer the camera, driving audio delivers precise lip-sync, and the structured media array keeps it flexible.\n▸ Perfect for: bringing product photos to life / talking-character animation / scene camera moves / still-to-video.\n▸ Value: cost-effective HD video creation",
+          "zh": "【Wan 2.7 I2V · 图生视频】\n▸ 能做什么: 单张/多张图片 → 视频 (首帧/尾帧/片段/驱动音频组合)\n▸ 亮点: 首尾帧控制镜头运动, 驱动音频精确对嘴型, 结构化 media 数组灵活\n▸ 典型场景: 产品图活化 / 人物讲话动画 / 场景镜头运动 / 静图转视频\n▸ 性价比: 高清视频创作经济实惠"
+        },
+        "media_type": "video",
+        "task_type": "img2video",
+        "sort_order": 41,
+        "versions": [
+          {
+            "version_bid": "080869c7-9c12-424f-a3eb-b67eb6ae6851",
+            "version_code": "v1",
+            "version_name": "Wan 2.7 I2V v1",
+            "release_note": "DashScope video-generation async, structured media array",
+            "param_schema": {
+              "$schema": "http://json-schema.org/draft-07/schema#",
+              "properties": {
+                "duration": {
+                  "default": 5,
+                  "maximum": 15,
+                  "minimum": 2,
+                  "title": "Duration (seconds)",
+                  "type": "integer",
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Duration (seconds)",
+                    "zh": "视频时长 (秒)"
+                  },
+                  "x-section": "basic",
+                  "x-sort-order": 5,
+                  "x-ui-component": "slider",
+                  "x-value-kind": "duration_seconds"
+                },
+                "media": {
+                  "items": {
+                    "properties": {
+                      "role": {
+                        "enum": [
+                          "first_frame",
+                          "last_frame",
+                          "first_clip",
+                          "driving_audio"
+                        ],
+                        "type": "string"
+                      },
+                      "url": {
+                        "format": "uri",
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "url"
+                    ],
+                    "type": "object"
+                  },
+                  "maxItems": 4,
+                  "title": "Media References",
+                  "type": "array",
+                  "x-group": "basic",
+                  "x-hint": {
+                    "en": "Array of {type, url}; type: first_frame / last_frame / first_clip / driving_audio",
+                    "zh": "数组 {type, url}; type 可选 first_frame/last_frame/first_clip/driving_audio"
+                  },
+                  "x-label": {
+                    "en": "Media References",
+                    "zh": "媒体输入"
+                  },
+                  "x-role": "reference_material",
+                  "x-roles": [
+                    {
+                      "accept": [
+                        "image/*"
+                      ],
+                      "default": true,
+                      "key": "first_frame",
+                      "kind": "slot",
+                      "label": {
+                        "en": "First Frame",
+                        "zh": "首帧"
+                      },
+                      "max_items": 1
+                    },
+                    {
+                      "accept": [
+                        "image/*"
+                      ],
+                      "default": false,
+                      "key": "last_frame",
+                      "kind": "slot",
+                      "label": {
+                        "en": "Last Frame",
+                        "zh": "尾帧"
+                      },
+                      "max_items": 1
+                    },
+                    {
+                      "accept": [
+                        "video/*"
+                      ],
+                      "default": false,
+                      "key": "first_clip",
+                      "kind": "slot",
+                      "label": {
+                        "en": "First Clip",
+                        "zh": "首段视频"
+                      },
+                      "max_items": 1
+                    },
+                    {
+                      "accept": [
+                        "audio/*"
+                      ],
+                      "default": false,
+                      "key": "driving_audio",
+                      "kind": "slot",
+                      "label": {
+                        "en": "Driving Audio",
+                        "zh": "驱动音频"
+                      },
+                      "max_items": 1
+                    }
+                  ],
+                  "x-section": "basic",
+                  "x-sort-order": 2,
+                  "x-ui-component": "media_array"
+                },
+                "negative_prompt": {
+                  "maxLength": 500,
+                  "title": "Negative Prompt",
+                  "type": "string",
+                  "x-group": "advanced",
+                  "x-label": {
+                    "en": "Negative Prompt",
+                    "zh": "反向提示词"
+                  },
+                  "x-role": "negative_prompt",
+                  "x-section": "advanced",
+                  "x-sort-order": 1,
+                  "x-ui-component": "textarea"
+                },
+                "prompt": {
+                  "maxLength": 5000,
+                  "title": "Prompt",
+                  "type": "string",
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Prompt",
+                    "zh": "动作描述"
+                  },
+                  "x-placeholder": {
+                    "en": "Describe motion / camera / effects",
+                    "zh": "描述动作/镜头/特效"
+                  },
+                  "x-role": "prompt",
+                  "x-section": "basic",
+                  "x-sort-order": 1,
+                  "x-ui-component": "textarea"
+                },
+                "prompt_extend": {
+                  "default": true,
+                  "title": "Prompt Extend",
+                  "type": "boolean",
+                  "x-group": "advanced",
+                  "x-label": {
+                    "en": "Prompt Extend",
+                    "zh": "智能改写"
+                  },
+                  "x-section": "advanced",
+                  "x-sort-order": 2,
+                  "x-ui-component": "switch"
+                },
+                "resolution": {
+                  "default": "1080P",
+                  "enum": [
+                    "720P",
+                    "1080P"
+                  ],
+                  "title": "Resolution",
+                  "type": "string",
+                  "x-enum-labels": {
+                    "1080P": {
+                      "en": "1080P",
+                      "zh": "1080P (高清)"
+                    },
+                    "720P": {
+                      "en": "720P",
+                      "zh": "720P"
+                    }
+                  },
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Resolution",
+                    "zh": "分辨率"
+                  },
+                  "x-section": "basic",
+                  "x-sort-order": 4,
+                  "x-ui-component": "radio_group",
+                  "x-value-kind": "resolution_tier"
+                },
+                "seed": {
+                  "maximum": 2147483647,
+                  "minimum": 0,
+                  "title": "Seed",
+                  "type": "integer",
+                  "x-group": "advanced",
+                  "x-label": {
+                    "en": "Seed",
+                    "zh": "随机种子"
+                  },
+                  "x-section": "advanced",
+                  "x-sort-order": 5,
+                  "x-ui-component": "number_input",
+                  "x-value-kind": "seed"
+                },
+                "watermark": {
+                  "default": false,
+                  "title": "Watermark",
+                  "type": "boolean",
+                  "x-group": "advanced",
+                  "x-label": {
+                    "en": "Watermark",
+                    "zh": "添加水印"
+                  },
+                  "x-section": "advanced",
+                  "x-sort-order": 4,
+                  "x-ui-component": "switch"
+                }
+              },
+              "required": [
+                "media"
+              ],
+              "type": "object",
+              "x-groups": [
+                {
+                  "key": "basic",
+                  "label": {
+                    "en": "Basic",
+                    "zh": "基础设置"
+                  },
+                  "section": "basic",
+                  "sort": 1
+                },
+                {
+                  "key": "advanced",
+                  "label": {
+                    "en": "Advanced",
+                    "zh": "高级设置"
+                  },
+                  "section": "advanced",
+                  "sort": 2
+                }
+              ]
+            },
+            "is_async": true,
+            "estimate_ms": 600000,
+            "async_strategy": {
+              "mode": "polling",
+              "interval_ms": 15000,
+              "max_wait_ms": 1200000
+            },
+            "credit_cost": {
+              "amount": 78,
+              "unit": "per_second"
+            },
+            "status": "published"
+          }
+        ]
+      },
+      {
+        "model_bid": "019b9d48-5257-4ace-b2dc-009d9981e47e",
+        "model_code": "wan2.7-r2v",
+        "model_name": {
+          "en": "Wan 2.7 Reference-to-Video",
+          "zh": "万相 2.7 参考生视频"
+        },
+        "description": {
+          "en": "[Wan 2.7 R2V · Reference-to-Video]\n▸ What it does: a prompt plus up to 5 reference images/videos becomes a brand-new video — mixing multiple subjects and source materials.\n▸ Highlights: multi-subject referencing (characters + props + scenes), reference_voice for voice cloning, and consistency held across all source materials.\n▸ Perfect for: character-IP videos / style transfer / remixing existing footage / branded character animation.\n▸ Value: great value for multi-subject video creation",
+          "zh": "【Wan 2.7 R2V · 参考生视频】\n▸ 能做什么: 提示词 + 最多 5 个参考图/视频 → 新视频, 支持多主体/多素材组合\n▸ 亮点: 多主体参考 (人物+道具+场景), 支持 reference_voice 音色克隆, 跨素材一致性保持\n▸ 典型场景: 角色 IP 视频 / 风格迁移 / 素材二创 / 品牌角色动画\n▸ 性价比: 多主体视频创作高性价比"
+        },
+        "media_type": "video",
+        "task_type": "txt2video",
+        "sort_order": 42,
+        "versions": [
+          {
+            "version_bid": "be465a17-bd06-44bb-b544-1cd720d8ac18",
+            "version_code": "v1",
+            "version_name": "Wan 2.7 R2V v1",
+            "release_note": "DashScope video-generation async, multi-reference media",
+            "param_schema": {
+              "$schema": "http://json-schema.org/draft-07/schema#",
+              "properties": {
+                "duration": {
+                  "default": 5,
+                  "maximum": 10,
+                  "minimum": 2,
+                  "title": "Duration (seconds)",
+                  "type": "integer",
+                  "x-group": "basic",
+                  "x-hint": {
+                    "en": "Max 10s when video reference provided",
+                    "zh": "有参考视频时上限 10 秒"
+                  },
+                  "x-label": {
+                    "en": "Duration (seconds)",
+                    "zh": "视频时长 (秒)"
+                  },
+                  "x-section": "basic",
+                  "x-sort-order": 5,
+                  "x-ui-component": "slider",
+                  "x-value-kind": "duration_seconds"
+                },
+                "media": {
+                  "items": {
+                    "properties": {
+                      "reference_voice": {
+                        "format": "uri",
+                        "type": "string",
+                        "x-accept": [
+                          "audio/*"
+                        ],
+                        "x-ui-component": "audio_upload"
+                      },
+                      "role": {
+                        "enum": [
+                          "reference_image",
+                          "reference_video",
+                          "first_frame"
+                        ],
+                        "type": "string"
+                      },
+                      "url": {
+                        "format": "uri",
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "url"
+                    ],
+                    "type": "object"
+                  },
+                  "maxItems": 3,
+                  "minItems": 1,
+                  "title": "Reference Media",
+                  "type": "array",
+                  "x-group": "basic",
+                  "x-hint": {
+                    "en": "Array {type, url, reference_voice?}; type: reference_image / reference_video / first_frame; total ≤ 5",
+                    "zh": "数组 {type, url, reference_voice?}; type: reference_image/reference_video/first_frame; 总数 ≤ 5"
+                  },
+                  "x-label": {
+                    "en": "Reference Media",
+                    "zh": "参考素材"
+                  },
+                  "x-role": "reference_material",
+                  "x-roles": [
+                    {
+                      "accept": [
+                        "image/*"
+                      ],
+                      "default": true,
+                      "key": "reference_image",
+                      "kind": "tag",
+                      "label": {
+                        "en": "Reference Image",
+                        "zh": "参考图"
+                      },
+                      "max_items": 1
+                    },
+                    {
+                      "accept": [
+                        "video/*"
+                      ],
+                      "default": false,
+                      "key": "reference_video",
+                      "kind": "tag",
+                      "label": {
+                        "en": "Reference Video",
+                        "zh": "参考视频"
+                      },
+                      "max_items": 1
+                    },
+                    {
+                      "accept": [
+                        "image/*"
+                      ],
+                      "default": false,
+                      "key": "first_frame",
+                      "kind": "slot",
+                      "label": {
+                        "en": "First Frame",
+                        "zh": "首帧"
+                      },
+                      "max_items": 1
+                    }
+                  ],
+                  "x-section": "basic",
+                  "x-sort-order": 2,
+                  "x-ui-component": "media_array"
+                },
+                "negative_prompt": {
+                  "maxLength": 500,
+                  "title": "Negative Prompt",
+                  "type": "string",
+                  "x-group": "advanced",
+                  "x-label": {
+                    "en": "Negative Prompt",
+                    "zh": "反向提示词"
+                  },
+                  "x-role": "negative_prompt",
+                  "x-section": "advanced",
+                  "x-sort-order": 1,
+                  "x-ui-component": "textarea"
+                },
+                "prompt": {
+                  "maxLength": 5000,
+                  "title": "Prompt",
+                  "type": "string",
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Prompt",
+                    "zh": "场景描述"
+                  },
+                  "x-placeholder": {
+                    "en": "Describe scene using 图1/图2 to reference media",
+                    "zh": "使用 图1/图2 引用参考素材, 描述场景"
+                  },
+                  "x-role": "prompt",
+                  "x-section": "basic",
+                  "x-sort-order": 1,
+                  "x-ui-component": "textarea"
+                },
+                "prompt_extend": {
+                  "default": true,
+                  "title": "Prompt Extend",
+                  "type": "boolean",
+                  "x-group": "advanced",
+                  "x-label": {
+                    "en": "Prompt Extend",
+                    "zh": "智能改写"
+                  },
+                  "x-section": "advanced",
+                  "x-sort-order": 2,
+                  "x-ui-component": "switch"
+                },
+                "ratio": {
+                  "default": "16:9",
+                  "enum": [
+                    "16:9",
+                    "9:16",
+                    "1:1"
+                  ],
+                  "title": "Aspect Ratio",
+                  "type": "string",
+                  "x-enum-labels": {
+                    "16:9": {
+                      "en": "16:9 Landscape",
+                      "zh": "16:9 横屏"
+                    },
+                    "1:1": {
+                      "en": "1:1 Square",
+                      "zh": "1:1 方形"
+                    },
+                    "9:16": {
+                      "en": "9:16 Portrait",
+                      "zh": "9:16 竖屏"
+                    }
+                  },
+                  "x-group": "basic",
+                  "x-hint": {
+                    "en": "Ignored when first_frame provided",
+                    "zh": "提供 first_frame 时本参数被忽略"
+                  },
+                  "x-label": {
+                    "en": "Aspect Ratio",
+                    "zh": "画面比例"
+                  },
+                  "x-section": "basic",
+                  "x-sort-order": 3,
+                  "x-ui-component": "select",
+                  "x-value-kind": "aspect_ratio"
+                },
+                "resolution": {
+                  "default": "1080P",
+                  "enum": [
+                    "720P",
+                    "1080P"
+                  ],
+                  "title": "Resolution",
+                  "type": "string",
+                  "x-enum-labels": {
+                    "1080P": {
+                      "en": "1080P",
+                      "zh": "1080P (高清)"
+                    },
+                    "720P": {
+                      "en": "720P",
+                      "zh": "720P"
+                    }
+                  },
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Resolution",
+                    "zh": "分辨率"
+                  },
+                  "x-section": "basic",
+                  "x-sort-order": 4,
+                  "x-ui-component": "radio_group",
+                  "x-value-kind": "resolution_tier"
+                },
+                "seed": {
+                  "maximum": 2147483647,
+                  "minimum": 0,
+                  "title": "Seed",
+                  "type": "integer",
+                  "x-group": "advanced",
+                  "x-label": {
+                    "en": "Seed",
+                    "zh": "随机种子"
+                  },
+                  "x-section": "advanced",
+                  "x-sort-order": 5,
+                  "x-ui-component": "number_input",
+                  "x-value-kind": "seed"
+                },
+                "watermark": {
+                  "default": false,
+                  "title": "Watermark",
+                  "type": "boolean",
+                  "x-group": "advanced",
+                  "x-label": {
+                    "en": "Watermark",
+                    "zh": "添加水印"
+                  },
+                  "x-section": "advanced",
+                  "x-sort-order": 4,
+                  "x-ui-component": "switch"
+                }
+              },
+              "required": [
+                "prompt",
+                "media"
+              ],
+              "type": "object",
+              "x-groups": [
+                {
+                  "key": "basic",
+                  "label": {
+                    "en": "Basic",
+                    "zh": "基础设置"
+                  },
+                  "section": "basic",
+                  "sort": 1
+                },
+                {
+                  "key": "advanced",
+                  "label": {
+                    "en": "Advanced",
+                    "zh": "高级设置"
+                  },
+                  "section": "advanced",
+                  "sort": 2
+                }
+              ]
+            },
+            "is_async": true,
+            "estimate_ms": 600000,
+            "async_strategy": {
+              "mode": "polling",
+              "interval_ms": 15000,
+              "max_wait_ms": 1200000
+            },
+            "credit_cost": {
+              "amount": 78,
+              "unit": "per_second"
+            },
+            "status": "published"
+          }
+        ]
+      },
+      {
+        "model_bid": "6538f272-4fa6-472a-9f4f-46b79680f944",
+        "model_code": "wan2.2-animate-mix",
+        "model_name": {
+          "en": "Wan 2.2 Animate Mix",
+          "zh": "万相 2.2 视频换人"
+        },
+        "description": {
+          "en": "[Wan 2.2 Animate Mix · Video Character Swap]\n▸ What it does: replace the person in a source video with a character of your choice — keeping the original scene, lighting, and motion intact.\n▸ Highlights: identity preservation plus motion transfer; wan-pro mode delivers film-grade face-swap quality.\n▸ Perfect for: virtual presenters / KOL remixes / celebrity-endorsement videos / personalized custom content.\n▸ Note: face detection is on by default (check_image=true) — supply a clear, front-facing portrait.\n▸ Value: affordable video character swapping",
+          "zh": "【Wan 2.2 Animate Mix · 视频换人】\n▸ 能做什么: 将原视频中的人物换成指定角色图, 保留原视频场景/光影/动作\n▸ 亮点: 身份保持 + 动作迁移, wan-pro 模式质量媲美影视换脸\n▸ 典型场景: 虚拟主播 / KOL 二创 / 明星代言视频 / 个性化定制\n▸ 注意: 人脸检测默认开启 (check_image=true), 需清晰正面肖像图\n▸ 性价比: 视频换人创作经济实惠"
+        },
+        "media_type": "video",
+        "task_type": "img2video",
+        "sort_order": 43,
+        "versions": [
+          {
+            "version_bid": "9d5e7c5b-482d-4b53-b0c7-1fbd7ddb232c",
+            "version_code": "v1",
+            "version_name": "Wan 2.2 Animate Mix v1",
+            "release_note": "DashScope image2video async (distinct endpoint path), mode=wan-std|wan-pro",
+            "param_schema": {
+              "$schema": "http://json-schema.org/draft-07/schema#",
+              "properties": {
+                "check_image": {
+                  "default": true,
+                  "title": "Face Detection Check",
+                  "type": "boolean",
+                  "x-group": "advanced",
+                  "x-label": {
+                    "en": "Face Detection Check",
+                    "zh": "人脸检测校验"
+                  },
+                  "x-section": "advanced",
+                  "x-sort-order": 1,
+                  "x-ui-component": "switch"
+                },
+                "image_url": {
+                  "format": "uri",
+                  "title": "Character Image",
+                  "type": "string",
+                  "x-accept": [
+                    "image/png",
+                    "image/jpeg",
+                    "image/webp"
+                  ],
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Character Image",
+                    "zh": "角色图"
+                  },
+                  "x-max-size-mb": 10,
+                  "x-placeholder": {
+                    "en": "Human portrait image",
+                    "zh": "人物肖像图"
+                  },
+                  "x-role": "reference_material",
+                  "x-section": "basic",
+                  "x-sort-order": 1,
+                  "x-ui-component": "image_upload"
+                },
+                "mode": {
+                  "default": "wan-std",
+                  "enum": [
+                    "wan-std",
+                    "wan-pro"
+                  ],
+                  "title": "Quality Mode",
+                  "type": "string",
+                  "x-enum-labels": {
+                    "wan-pro": {
+                      "en": "Pro (Higher Quality)",
+                      "zh": "专业 (更好质量)"
+                    },
+                    "wan-std": {
+                      "en": "Standard (Faster)",
+                      "zh": "标准 (更快)"
+                    }
+                  },
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Quality Mode",
+                    "zh": "生成模式"
+                  },
+                  "x-section": "basic",
+                  "x-sort-order": 3,
+                  "x-ui-component": "radio_group",
+                  "x-value-kind": "quality_tier"
+                },
+                "video_url": {
+                  "format": "uri",
+                  "title": "Source Video",
+                  "type": "string",
+                  "x-accept": [
+                    "video/mp4",
+                    "video/quicktime",
+                    "video/webm"
+                  ],
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Source Video",
+                    "zh": "原视频"
+                  },
+                  "x-max-size-mb": 200,
+                  "x-placeholder": {
+                    "en": "Reference video to swap character into",
+                    "zh": "待替换角色的参考视频"
+                  },
+                  "x-role": "reference_material",
+                  "x-section": "basic",
+                  "x-sort-order": 2,
+                  "x-ui-component": "video_upload"
+                },
+                "watermark": {
+                  "default": false,
+                  "title": "Watermark",
+                  "type": "boolean",
+                  "x-group": "advanced",
+                  "x-label": {
+                    "en": "Watermark",
+                    "zh": "添加水印"
+                  },
+                  "x-section": "advanced",
+                  "x-sort-order": 2,
+                  "x-ui-component": "switch"
+                }
+              },
+              "required": [
+                "image_url",
+                "video_url",
+                "mode"
+              ],
+              "type": "object",
+              "x-groups": [
+                {
+                  "key": "basic",
+                  "label": {
+                    "en": "Basic",
+                    "zh": "基础设置"
+                  },
+                  "section": "basic",
+                  "sort": 1
+                },
+                {
+                  "key": "advanced",
+                  "label": {
+                    "en": "Advanced",
+                    "zh": "高级设置"
+                  },
+                  "section": "advanced",
+                  "sort": 2
+                }
+              ]
+            },
+            "is_async": true,
+            "estimate_ms": 900000,
+            "async_strategy": {
+              "mode": "polling",
+              "interval_ms": 15000,
+              "max_wait_ms": 1800000
+            },
+            "credit_cost": {
+              "amount": 47,
+              "unit": "per_second"
+            },
+            "status": "published"
+          }
+        ]
+      }
+    ],
+    "total": 9
+  },
+  "request_id": "511b70b3-b7d2-459e-b974-5eedd48f07fe",
+  "timestamp": 1787560251
+}

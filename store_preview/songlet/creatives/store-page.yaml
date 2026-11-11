@@ -1,0 +1,61 @@
+# The default product page's creative assets (ADR-0039;
+# docs/store/creative-assets-specs.md): the universal 16:9 image every
+# localization without its own falls back to (no text), and per storefront the
+# 21:9 product page header and the 3:2 search results asset, each as an image
+# and a muted looping video. The ids are what listings/com.songlet.ios/
+# assets.yaml (ascpub) binds.
+id: store-page
+title: Default product page — header and search results
+targets: [app_store_version]
+universal_from: en-US
+backdrop: {role: photo, script: B, index: 1}
+tags: ["page:default"]
+
+# What the store shows (template ADR-0015): per localization the localized
+# image (product decision 2026-10-16), the universal image on every
+# localization without one. The localized videos stay in the warehouse
+# (PPO treatments).
+shelf:
+  header: {default: header.universal.tool, locales: "header.{storefront}"}
+  search_results: {default: header.universal.tool, locales: "search.{storefront}"}
+
+slots:
+  - placements: [product_page_header, app_store_search_results]
+    spec: universal_16x9
+    assets:
+      - {id: header.universal.tool, type: image, frame: {script: A, scene: player, at: 2.0}}
+
+  # The value first: the lyric video the app made from the photos, then the
+  # song with their name in the chorus.
+  - placements: [product_page_header]
+    spec: header_21x9
+    text: storeCreativeHeader
+    tags: ["value:people"]
+    assets:
+      - {id: "header.{storefront}", type: image, frame: {script: B, scene: lyricVideo, at: 3.0}}
+      - id: "header.{storefront}.video"
+        type: video
+        template: banner_loop
+        rhythm: 12
+        poster_at: 3.0
+        scenes:
+          - {beat: hero, script: B, scene: lyricVideo, duration: 6.4}
+          - {beat: detail, script: A, scene: player, duration: 5.6}
+
+  # The purpose at a glance: a name typed, three words, the song that sings it.
+  - placements: [app_store_search_results]
+    spec: search_3x2
+    text: storeCreativeSearch
+    tags: ["value:name"]
+    assets:
+      - {id: "search.{storefront}", type: image, frame: {script: A, scene: player, at: 2.0}}
+      - id: "search.{storefront}.video"
+        type: video
+        template: search_card
+        rhythm: 15
+        poster_at: 9.0
+        scenes:
+          - {beat: input, script: A, scene: name, from: -2.6, duration: 2.6}
+          - {beat: input, script: A, scene: words, duration: 2.9}
+          - {beat: result, script: A, scene: player, duration: 7.5}
+          - {beat: share, script: A, scene: share, from: -2.0, duration: 2.0}

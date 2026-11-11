@@ -1,0 +1,117 @@
+# Script A — "A song for them" (为 TA 写一首歌), 25 s: input → wait → result →
+# share (packages/store_preview/templates/input_wait_result_share.yaml).
+#
+# The claim on the intro card over one of the storefront's photos → the
+# Birthday Wish card (picked off camera, set to the full song) and the name → three words → generate → the wait (sped
+# up) → a dissolve through another photo → the player on the chorus that
+# sings the name (real time; the poster frame) → the 9:16 share card → the
+# end card (name, call to action, the purchase disclosure).
+id: A
+title: A song with their name in it
+template: input_wait_result_share
+rhythm: 25
+poster_at: 13
+
+requires:
+  - {role: song, vars: [recipient, keyword1, keyword2, keyword3, chorus_index, lyric_language]}
+  # The cards and the bridge show the storefront's photos (made for script B).
+  - {role: photo, script: B, count: 4}
+
+setup:
+  - {do: newDraft}
+  - {do: use, role: song}
+  # Off camera: the storefront's region and the song's lyric language, as a
+  # user there has them (the simulator's App Store storefront is always US).
+  - {do: go, location: /create/region}
+  - {do: tap, key: "region.{region}", within: 'widget:CountryRow'}
+  - {do: tap, key: region.language}
+  - {do: tapLyricLanguage, language: "{lyric_language}"}
+  - {do: checkLyricLanguage, language: "{lyric_language}"}
+  - {do: tap, key: region.done}
+  - {do: waitFor, key: tile.birthday_wish}
+  # The sheet finishes closing off camera: the intro card dissolves into the
+  # create home, not into the sheet.
+  - {do: waitGone, key: region.done}
+  - {do: pause, ms: 600}
+
+segments:
+  - card: intro
+    duration: 1.0
+    text: storePreviewAEnd
+    background: {image: {role: photo, script: B, index: 0}}
+
+  - scene: name
+    beat: input
+    duration: 3.0
+    before:
+      # Off camera: the Birthday Wish card picked and switched to the full
+      # song (a pick starts at a preview, ADR-0036) through the Length panel's
+      # route, then the options folded again (/create).
+      - {do: tap, key: tile.birthday_wish}
+      - {do: waitFor, key: composer.name}
+      - {do: go, location: "/create?panel=length"}
+      - {do: tap, key: panel.length.standard}
+      - {do: waitGone, key: panel.length.standard}
+      - {do: go, location: /create}
+      - {do: dismissKeyboard}
+      - {do: pause, ms: 600}
+    steps:
+      - {do: type, key: composer.name, text: "{recipient}", cps: 7}
+      - {do: pause, ms: 500}
+
+  - scene: words
+    beat: input
+    duration: 3.5
+    steps:
+      - {do: type, key: composer.keywords, text: "{keyword1}", cps: 12}
+      - {do: submit, key: composer.keywords}
+      - {do: type, key: composer.keywords, text: "{keyword2}", cps: 12}
+      - {do: submit, key: composer.keywords}
+      - {do: type, key: composer.keywords, text: "{keyword3}", cps: 12}
+      - {do: submit, key: composer.keywords}
+      - {do: dismissKeyboard}
+      - {do: tap, key: composer.create}
+
+  - scene: progress
+    beat: wait
+    duration: 2.5
+    steps:
+      - {do: waitFor, key: generating.progress}
+      - {do: pause, ms: 3000}
+
+  - bridge: toPlayer
+    duration: 0.5
+    image: {role: photo, script: B, index: 1}
+
+  - scene: player
+    beat: result
+    duration: 8
+    finished: true
+    follow: song
+    audio: {role: song}
+    before:
+      - {do: waitFor, key: player.sections, timeout: 90}
+      - {do: waitPlaying}
+      - {do: tap, key: player.sections, widget: GestureDetector, index: "{chorus_index}"}
+      - {do: pause, ms: 300}
+    steps:
+      - {do: pause, ms: 7500}
+
+  - scene: share
+    beat: share
+    duration: 4.5
+    steps:
+      - {do: tap, key: player.share}
+      - {do: waitFor, key: share.card}
+      - {do: pause, ms: 4000}
+
+  - card: outro
+    duration: 2.0
+    background: {image: {role: photo, script: B, index: 2}}
+
+captions:
+  - {key: storePreviewAHook, from: 1.0, to: 4.0}
+  - {key: storePreviewAWords, from: 4.0, to: 7.5}
+  - {key: storePreviewAWait, from: 7.5, to: 10.0}
+  - {key: storePreviewAChorus, from: 10.5, to: 18.5}
+  - {key: storePreviewAShare, from: 18.5, to: 23.0}

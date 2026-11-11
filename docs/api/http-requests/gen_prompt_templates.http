@@ -1,0 +1,133 @@
+### Creation BC — 任务级提示词预设(`gen_prompt_templates`)
+###
+### Phase 3 GAP-P3-002 落地端点 + SubmitTask 集成示例.
+### 详细分层定位见 docs/architecture/audit/audit-prompt-template-overlap.md.
+###
+### 与 PromptAPI HTTP 端点 (`/v1/prompt/templates`, Agent Builder 层) 互补:
+### - 本端点 = AIGC 任务层预设 (gen_*, 单表 + task_type/model_code 二维绑定)
+### - PromptAPI = Agent Builder 层 (pt_*, 双表版本化 + workspace + 状态机)
+###
+### env 变量:see docs/api/http-requests/http-client.env.json
+###   - {{base_url}}     e.g. http://localhost:8080
+###   - {{access_token}} JWT (含非空 BID claim, 见 internal/platform/httpserver/middleware/jwt_auth.go)
+###   - {{app_id}} + {{app_signature}}  see signtool
+
+############################################
+# 1. List 全部任务级模板 (system + 当前租户)
+############################################
+
+GET {{base_url}}/v1/prompt-templates
+Authorization: Bearer {{access_token}}
+X-App-ID: {{app_id}}
+X-App-Signature: {{app_signature}}
+
+############################################
+# 2. 按 task_type 过滤
+############################################
+
+GET {{base_url}}/v1/prompt-templates?task_type=chat
+Authorization: Bearer {{access_token}}
+X-App-ID: {{app_id}}
+X-App-Signature: {{app_signature}}
+
+############################################
+# 3. 单查 (template_code)
+# 200 OK     - 返单个模板 DTO
+# 404 NotFound - ErrGenPromptTemplateNotFound (response.NotFound)
+############################################
+
+GET {{base_url}}/v1/prompt-templates/code_generator
+Authorization: Bearer {{access_token}}
+X-App-ID: {{app_id}}
+X-App-Signature: {{app_signature}}
+
+############################################
+# 4. SubmitTask 集成 — 客户端只传 prompt_template + variables
+#
+# 渲染时机: ValidateAndMergeParams 之前 + 远早于 wallet freeze (零经济损失保证).
+# 互斥语义: prompt + prompt_template 二选一, 同时给 → 400 ErrInvalidParam.
+# 变量声明: params.variables 嵌套 map (工程清晰; pipeline-api.md 扁平方式不被接受).
+############################################
+
+POST {{base_url}}/v1/tasks
+Authorization: Bearer {{access_token}}
+X-App-ID: {{app_id}}
+X-App-Signature: {{app_signature}}
+Content-Type: application/json
+
+{
+  "model_version_bid": "gpt-4o-mini-v1",
+  "params": {
+    "prompt_template": "code_generator",
+    "variables": {
+      "language": "Go",
+      "requirement": "写一个快速排序实现"
+    },
+    "temperature": 0.7,
+    "max_tokens": 2048,
+    "n": 1
+  },
+  "idempotency_key": "demo-{{$timestamp}}"
+}
+
+############################################
+# 5. 互斥校验失败 — prompt 与 prompt_template 同时传 → 400
+############################################
+
+POST {{base_url}}/v1/tasks
+Authorization: Bearer {{access_token}}
+X-App-ID: {{app_id}}
+X-App-Signature: {{app_signature}}
+Content-Type: application/json
+
+{
+  "model_version_bid": "gpt-4o-mini-v1",
+  "params": {
+    "prompt": "已直传 prompt",
+    "prompt_template": "code_generator",
+    "variables": {"language": "Go", "requirement": "..."}
+  },
+  "idempotency_key": "demo-mutex-{{$timestamp}}"
+}
+
+############################################
+# 6. prompt_template 不存在 → 400 (ErrInvalidParam, 内含 "not found" 详情)
+############################################
+
+POST {{base_url}}/v1/tasks
+Authorization: Bearer {{access_token}}
+X-App-ID: {{app_id}}
+X-App-Signature: {{app_signature}}
+Content-Type: application/json
+
+{
+  "model_version_bid": "gpt-4o-mini-v1",
+  "params": {
+    "prompt_template": "no_such_template_xxx",
+    "variables": {}
+  },
+  "idempotency_key": "demo-404-{{$timestamp}}"
+}
+
+############################################
+# 7. 渲染时变量缺失 → 400 (Prompt BC ErrUndeclaredVariable 透传到 detail)
+#
+# 注: code_generator 模板要求 language + requirement, 此处仅传 language 模拟缺失.
+############################################
+
+POST {{base_url}}/v1/tasks
+Authorization: Bearer {{access_token}}
+X-App-ID: {{app_id}}
+X-App-Signature: {{app_signature}}
+Content-Type: application/json
+
+{
+  "model_version_bid": "gpt-4o-mini-v1",
+  "params": {
+    "prompt_template": "code_generator",
+    "variables": {
+      "language": "Go"
+    }
+  },
+  "idempotency_key": "demo-missing-var-{{$timestamp}}"
+}

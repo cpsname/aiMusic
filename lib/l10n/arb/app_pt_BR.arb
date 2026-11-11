@@ -1,0 +1,3546 @@
+{
+  "@@locale": "pt_BR",
+  "commonRetry": "Tentar novamente",
+  "@commonRetry": {
+    "description": "Shared buttons and messages. Purpose: common retry."
+  },
+  "commonCancel": "Cancelar",
+  "@commonCancel": {
+    "description": "Shared buttons and messages. Purpose: common cancel."
+  },
+  "startupLoading": "Afinando…",
+  "@startupLoading": {
+    "description": "Startup gate. Purpose: startup loading."
+  },
+  "commonErrorTitle": "Algo deu errado",
+  "@commonErrorTitle": {
+    "description": "Shared buttons and messages. Purpose: common error title."
+  },
+  "updateRequiredTitle": "Atualização necessária",
+  "@updateRequiredTitle": {
+    "description": "Required app update. Purpose: update required title."
+  },
+  "updateRequiredMessage": "É necessária uma nova versão para continuar.",
+  "@updateRequiredMessage": {
+    "description": "Required app update. Purpose: update required message."
+  },
+  "updateNow": "Atualizar agora",
+  "@updateNow": {
+    "description": "Required app update. Purpose: update now."
+  },
+  "maintenanceTitle": "Manutenção programada",
+  "@maintenanceTitle": {
+    "description": "Maintenance gate. Purpose: maintenance title."
+  },
+  "maintenanceResumeEstimate": "Previsão de retorno em cerca de {minutes} min",
+  "@maintenanceResumeEstimate": {
+    "placeholders": {
+      "minutes": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Estimated waiting or processing duration in minutes."
+      }
+    },
+    "description": "Maintenance gate. Purpose: maintenance resume estimate."
+  },
+  "featureUnavailable": "Este recurso está temporariamente indisponível.",
+  "@featureUnavailable": {
+    "description": "Feature availability message. Purpose: feature unavailable."
+  },
+  "navProfile": "Perfil",
+  "@navProfile": {
+    "description": "Application navigation. Purpose: nav profile."
+  },
+  "navStore": "Loja",
+  "@navStore": {
+    "description": "Application navigation. Purpose: nav store."
+  },
+  "navUpload": "Enviar",
+  "@navUpload": {
+    "description": "Application navigation. Purpose: nav upload."
+  },
+  "uploadTitle": "Envios",
+  "@uploadTitle": {
+    "description": "File upload screen. Purpose: upload title."
+  },
+  "uploadSubtitle": "Envio direto ao R2 com URL pré-assinada, hash, deduplicação instantânea e progresso.",
+  "@uploadSubtitle": {
+    "description": "File upload screen. Purpose: upload subtitle."
+  },
+  "uploadPick": "Escolher imagem e enviar",
+  "@uploadPick": {
+    "description": "File upload screen. Purpose: upload pick."
+  },
+  "uploadAgain": "Enviar outra",
+  "@uploadAgain": {
+    "description": "File upload screen. Purpose: upload again."
+  },
+  "uploadPhaseHashing": "Calculando hash…",
+  "@uploadPhaseHashing": {
+    "description": "File upload screen. Purpose: upload phase hashing."
+  },
+  "uploadPhaseSigning": "Solicitando autorização de envio…",
+  "@uploadPhaseSigning": {
+    "description": "File upload screen. Purpose: upload phase signing."
+  },
+  "uploadPhaseUploading": "Enviando {percent}",
+  "@uploadPhaseUploading": {
+    "placeholders": {
+      "percent": {
+        "type": "String",
+        "description": "Complete percentage already formatted with intl for the UI locale, including the percent sign."
+      }
+    },
+    "description": "File upload screen. Purpose: upload phase uploading."
+  },
+  "uploadPhaseFinalizing": "Finalizando…",
+  "@uploadPhaseFinalizing": {
+    "description": "File upload screen. Purpose: upload phase finalizing."
+  },
+  "uploadDone": "Enviado.",
+  "@uploadDone": {
+    "description": "File upload screen. Purpose: upload done."
+  },
+  "uploadDedup": "Instantâneo: este arquivo já existia no servidor.",
+  "@uploadDedup": {
+    "description": "File upload screen. Purpose: upload dedup."
+  },
+  "uploadOpenLink": "Ver arquivo",
+  "@uploadOpenLink": {
+    "description": "File upload screen. Purpose: upload open link."
+  },
+  "uploadFailed": "Falha no envio.",
+  "@uploadFailed": {
+    "description": "File upload screen. Purpose: upload failed."
+  },
+  "uploadTooLarge": "O arquivo é grande demais (máx. {limit} MB).",
+  "@uploadTooLarge": {
+    "placeholders": {
+      "limit": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Maximum upload size in megabytes."
+      }
+    },
+    "description": "File upload screen. Purpose: upload too large."
+  },
+  "uploadUnsupportedType": "Tipo de arquivo não compatível.",
+  "@uploadUnsupportedType": {
+    "description": "File upload screen. Purpose: upload unsupported type."
+  },
+  "profileGuestTitle": "Convidado",
+  "@profileGuestTitle": {
+    "description": "Account profile. Purpose: profile guest title."
+  },
+  "profileGuestSubtitle": "Entre na sua conta para manter suas compras em todos os dispositivos.",
+  "@profileGuestSubtitle": {
+    "description": "Account profile. Purpose: profile guest subtitle."
+  },
+  "signIn": "Entrar",
+  "@signIn": {
+    "description": "Account actions. Purpose: sign in."
+  },
+  "signOut": "Sair",
+  "@signOut": {
+    "description": "Account actions. Purpose: sign out."
+  },
+  "profileBalanceLabel": "Créditos",
+  "@profileBalanceLabel": {
+    "description": "Account profile. Purpose: profile balance label."
+  },
+  "profileAccountId": "ID da conta",
+  "@profileAccountId": {
+    "description": "Account profile. Purpose: profile account id."
+  },
+  "profileFeaturesLabel": "Benefícios ativos",
+  "@profileFeaturesLabel": {
+    "description": "Account profile. Purpose: profile features label."
+  },
+  "profileNoFeatures": "Nenhum benefício ativo ainda.",
+  "@profileNoFeatures": {
+    "description": "Account profile. Purpose: profile no features."
+  },
+  "profileSubscriptionLabel": "Assinatura",
+  "@profileSubscriptionLabel": {
+    "description": "Account profile. Purpose: profile subscription label."
+  },
+  "profileManageSubscription": "Gerenciar assinatura",
+  "@profileManageSubscription": {
+    "description": "Account profile. Purpose: profile manage subscription."
+  },
+  "subscriptionActive": "Ativa",
+  "@subscriptionActive": {
+    "description": "Subscription status. Purpose: subscription active."
+  },
+  "subscriptionInactive": "Nenhuma",
+  "@subscriptionInactive": {
+    "description": "Subscription status. Purpose: subscription inactive."
+  },
+  "profileDeleteAccount": "Apagar conta",
+  "@profileDeleteAccount": {
+    "description": "Account profile. Purpose: profile delete account."
+  },
+  "deleteAccountTitle": "Apagar esta conta?",
+  "@deleteAccountTitle": {
+    "description": "Account deletion confirmation and result. Purpose: delete account title."
+  },
+  "deleteAccountMessage": "Esta ação não pode ser desfeita: esta conta e seus créditos e benefícios ficarão permanentemente inacessíveis, e uma nova conta será criada. Apagar a conta não cancela uma assinatura ativa da App Store: gerencie-a nos ajustes da sua conta da App Store ou vincule-a novamente mais tarde com Restaurar compras.",
+  "@deleteAccountMessage": {
+    "description": "Account deletion confirmation and result. Purpose: delete account message."
+  },
+  "deleteAccountConfirm": "Apagar",
+  "@deleteAccountConfirm": {
+    "description": "Account deletion confirmation and result. Purpose: delete account confirm."
+  },
+  "deleteAccountWorking": "Apagando conta…",
+  "@deleteAccountWorking": {
+    "description": "Account deletion confirmation and result. Purpose: delete account working."
+  },
+  "deleteAccountDone": "Conta apagada.",
+  "@deleteAccountDone": {
+    "description": "Account deletion confirmation and result. Purpose: delete account done."
+  },
+  "profileMemberSince": "Membro desde {date}",
+  "@profileMemberSince": {
+    "placeholders": {
+      "date": {
+        "type": "DateTime",
+        "format": "yMMMd",
+        "description": "Account creation date, converted to local time."
+      }
+    },
+    "description": "Account profile. Purpose: profile member since."
+  },
+  "loginTitle": "Entrar",
+  "@loginTitle": {
+    "description": "Sign-in sheet. Purpose: login title."
+  },
+  "loginUsername": "Nome de usuário",
+  "@loginUsername": {
+    "description": "Sign-in sheet. Purpose: login username."
+  },
+  "loginPassword": "Senha",
+  "@loginPassword": {
+    "description": "Sign-in sheet. Purpose: login password."
+  },
+  "loginSubmit": "Entrar",
+  "@loginSubmit": {
+    "description": "Sign-in sheet. Purpose: login submit."
+  },
+  "paywallTitle": "Tenha a música completa",
+  "@paywallTitle": {
+    "description": "Purchase screen. Purpose: paywall title."
+  },
+  "paywallSubtitle": "Transforme sua prévia em uma música de 2 minutos com letra, sua para baixar e usar.",
+  "@paywallSubtitle": {
+    "description": "Purchase screen. Purpose: paywall subtitle."
+  },
+  "paywallRestore": "Restaurar compras",
+  "@paywallRestore": {
+    "description": "Purchase screen. Purpose: paywall restore."
+  },
+  "paywallAutoRenewNotice": "O pagamento será cobrado na sua Conta Apple na confirmação da compra. As assinaturas são renovadas automaticamente pelo mesmo preço e período, a menos que sejam canceladas pelo menos 24 horas antes do fim do período atual. O teste grátis se converte em uma assinatura paga quando termina. Gerencie ou cancele a qualquer momento nos ajustes da sua conta da App Store.",
+  "@paywallAutoRenewNotice": {
+    "description": "Purchase screen. Purpose: paywall auto renew notice."
+  },
+  "paywallContinue": "Continuar",
+  "@paywallContinue": {
+    "description": "Purchase screen. Purpose: paywall continue."
+  },
+  "paywallFreeTrial": "Teste grátis",
+  "@paywallFreeTrial": {
+    "description": "Purchase screen. Purpose: paywall free trial."
+  },
+  "paywallOffer": "Oferta",
+  "@paywallOffer": {
+    "description": "Purchase screen. Purpose: paywall offer."
+  },
+  "paywallManage": "Gerenciar",
+  "@paywallManage": {
+    "description": "Purchase screen. Purpose: paywall manage."
+  },
+  "paywallTermsOfUse": "Termos de Uso",
+  "@paywallTermsOfUse": {
+    "description": "Purchase screen. Purpose: paywall terms of use."
+  },
+  "paywallPrivacyPolicy": "Política de Privacidade",
+  "@paywallPrivacyPolicy": {
+    "description": "Purchase screen. Purpose: paywall privacy policy."
+  },
+  "paywallSubscriptionTerms": "Termos da Assinatura",
+  "@paywallSubscriptionTerms": {
+    "description": "Purchase screen. Purpose: paywall subscription terms."
+  },
+  "commonLinkError": "Não foi possível abrir o link.",
+  "@commonLinkError": {
+    "description": "Shared buttons and messages. Purpose: common link error."
+  },
+  "commonError": "Algo deu errado.",
+  "@commonError": {
+    "description": "Shared buttons and messages. Purpose: common error."
+  },
+  "commonNetworkError": "Erro de rede: verifique sua conexão e tente novamente.",
+  "@commonNetworkError": {
+    "description": "Shared buttons and messages. Purpose: common network error."
+  },
+  "commonOfflineError": "Parece que você está offline. Verifique sua conexão e tente novamente.",
+  "@commonOfflineError": {
+    "description": "Shared buttons and messages. Purpose: common offline error."
+  },
+  "networkErrorTitle": "Problema de conexão",
+  "@networkErrorTitle": {
+    "description": "Network failure screen. Purpose: network error title."
+  },
+  "configErrorTitle": "Problema de configuração do app",
+  "@configErrorTitle": {
+    "description": "Startup configuration failure. Purpose: config error title."
+  },
+  "configErrorMessage": "Esta versão não consegue acessar nosso serviço. Atualize o app pela App Store ou reinstale-o. Se o problema persistir, entre em contato com o suporte.",
+  "@configErrorMessage": {
+    "description": "Startup configuration failure. Purpose: config error message."
+  },
+  "commonAuthError": "Sua sessão expirou. Entre novamente.",
+  "@commonAuthError": {
+    "description": "Shared buttons and messages. Purpose: common auth error."
+  },
+  "paywallProductsErrorTitle": "Não foi possível carregar os produtos",
+  "@paywallProductsErrorTitle": {
+    "description": "Purchase screen. Purpose: paywall products error title."
+  },
+  "paywallNoProducts": "Nenhum produto disponível no momento.",
+  "@paywallNoProducts": {
+    "description": "Purchase screen. Purpose: paywall no products."
+  },
+  "paywallPurchaseSuccess": "Compra concluída. Aproveite!",
+  "@paywallPurchaseSuccess": {
+    "description": "Purchase screen. Purpose: paywall purchase success."
+  },
+  "paywallProcessing": "Processando sua compra…",
+  "@paywallProcessing": {
+    "description": "Purchase screen. Purpose: paywall processing."
+  },
+  "paywallVerifying": "Verificando sua compra…",
+  "@paywallVerifying": {
+    "description": "Purchase screen. Purpose: paywall verifying."
+  },
+  "paywallPurchaseFailed": "Não foi possível concluir a compra.",
+  "@paywallPurchaseFailed": {
+    "description": "Purchase screen. Purpose: paywall purchase failed."
+  },
+  "paywallRestoreStarted": "Restaurando suas compras…",
+  "@paywallRestoreStarted": {
+    "description": "Purchase screen. Purpose: paywall restore started."
+  },
+  "paywallRestoreSuccess": "{count, plural, one{{count} compra restaurada.} other{{count} compras restauradas.}}",
+  "@paywallRestoreSuccess": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Number of purchases successfully restored through StoreKit."
+      }
+    },
+    "description": "Purchase screen. Purpose: paywall restore success."
+  },
+  "paywallRestoreNothing": "Nenhuma compra para restaurar.",
+  "@paywallRestoreNothing": {
+    "description": "Purchase screen. Purpose: paywall restore nothing."
+  },
+  "paywallDeferred": "Aguardando aprovação. Vamos concluir assim que for aprovada.",
+  "@paywallDeferred": {
+    "description": "Purchase screen. Purpose: paywall deferred."
+  },
+  "paywallAlreadySubscribed": "Você já é assinante.",
+  "@paywallAlreadySubscribed": {
+    "description": "Purchase screen. Purpose: paywall already subscribed."
+  },
+  "paywallBillingRetry": "Atualize sua forma de pagamento para manter sua assinatura.",
+  "@paywallBillingRetry": {
+    "description": "Purchase screen. Purpose: paywall billing retry."
+  },
+  "paywallTrial": "Teste grátis de {days} dias",
+  "@paywallTrial": {
+    "placeholders": {
+      "days": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Trial duration in days reported by StoreKit."
+      }
+    },
+    "description": "Purchase screen. Purpose: paywall trial."
+  },
+  "cycleOneTime": "pagamento único",
+  "@cycleOneTime": {
+    "description": "Subscription billing period. Purpose: cycle one time."
+  },
+  "cycleWeekly": "/ semana",
+  "@cycleWeekly": {
+    "description": "Subscription billing period. Purpose: cycle weekly."
+  },
+  "cycleMonthly": "/ mês",
+  "@cycleMonthly": {
+    "description": "Subscription billing period. Purpose: cycle monthly."
+  },
+  "cycleQuarterly": "/ trimestre",
+  "@cycleQuarterly": {
+    "description": "Subscription billing period. Purpose: cycle quarterly."
+  },
+  "cycleSemiAnnual": "/ 6 meses",
+  "@cycleSemiAnnual": {
+    "description": "Subscription billing period. Purpose: cycle semi annual."
+  },
+  "cycleAnnual": "/ ano",
+  "@cycleAnnual": {
+    "description": "Subscription billing period. Purpose: cycle annual."
+  },
+  "cycleLifetime": "vitalício",
+  "@cycleLifetime": {
+    "description": "Subscription billing period. Purpose: cycle lifetime."
+  },
+  "navCreate": "Criar",
+  "@navCreate": {
+    "description": "Application navigation. Purpose: nav create."
+  },
+  "navLibrary": "Biblioteca",
+  "@navLibrary": {
+    "description": "Application navigation. Purpose: nav library."
+  },
+  "navSettings": "Ajustes",
+  "@navSettings": {
+    "description": "Application navigation. Purpose: nav settings."
+  },
+  "commonContinue": "Continuar",
+  "@commonContinue": {
+    "description": "Shared buttons and messages. Purpose: common continue."
+  },
+  "commonBack": "Voltar",
+  "@commonBack": {
+    "description": "Shared buttons and messages. Purpose: common back."
+  },
+  "createTitle": "Para quem é esta música?",
+  "@createTitle": {
+    "description": "Song creation screen. Purpose: create title."
+  },
+  "occasionBirthday": "Aniversário",
+  "@occasionBirthday": {
+    "description": "Occasion picker. Purpose: occasion birthday."
+  },
+  "occasionBirthdayHint": "Uma música alegre para o grande dia",
+  "@occasionBirthdayHint": {
+    "description": "Occasion picker. Purpose: occasion birthday hint."
+  },
+  "occasionAnniversary": "Aniversário de casal",
+  "@occasionAnniversary": {
+    "description": "Occasion picker. Purpose: occasion anniversary."
+  },
+  "occasionAnniversaryHint": "Celebrem a história de vocês",
+  "@occasionAnniversaryHint": {
+    "description": "Occasion picker. Purpose: occasion anniversary hint."
+  },
+  "occasionConfession": "Declaração de amor",
+  "@occasionConfession": {
+    "description": "Occasion picker. Purpose: occasion confession."
+  },
+  "occasionConfessionHint": "Diga o que seu coração sente",
+  "@occasionConfessionHint": {
+    "description": "Occasion picker. Purpose: occasion confession hint."
+  },
+  "occasionWedding": "Casamento",
+  "@occasionWedding": {
+    "description": "Occasion picker. Purpose: occasion wedding."
+  },
+  "occasionWeddingHint": "Uma música para o momento de uma vida",
+  "@occasionWeddingHint": {
+    "description": "Occasion picker. Purpose: occasion wedding hint."
+  },
+  "occasionMemorial": "Em memória",
+  "@occasionMemorial": {
+    "description": "Occasion picker. Purpose: occasion memorial."
+  },
+  "occasionMemorialHint": "Homenageie alguém especial",
+  "@occasionMemorialHint": {
+    "description": "Occasion picker. Purpose: occasion memorial hint."
+  },
+  "occasionFestival": "Festividade",
+  "@occasionFestival": {
+    "description": "Occasion picker. Purpose: occasion festival."
+  },
+  "occasionFestivalHint": "Votos calorosos para uma época especial",
+  "@occasionFestivalHint": {
+    "description": "Occasion picker. Purpose: occasion festival hint."
+  },
+  "occasionBrand": "Jingle de marca",
+  "@occasionBrand": {
+    "description": "Occasion picker. Purpose: occasion brand."
+  },
+  "occasionBrandHint": "Uma melodia chiclete para sua marca",
+  "@occasionBrandHint": {
+    "description": "Occasion picker. Purpose: occasion brand hint."
+  },
+  "occasionSoundtrack": "Trilha para vídeo",
+  "@occasionSoundtrack": {
+    "description": "Occasion picker. Purpose: occasion soundtrack."
+  },
+  "occasionSoundtrackHint": "Música que combina com sua história",
+  "@occasionSoundtrackHint": {
+    "description": "Occasion picker. Purpose: occasion soundtrack hint."
+  },
+  "festivalNewYear": "Ano-Novo",
+  "@festivalNewYear": {
+    "description": "Festival creation screen. Purpose: festival new year."
+  },
+  "festivalThanksgiving": "Ação de Graças",
+  "@festivalThanksgiving": {
+    "description": "Festival creation screen. Purpose: festival thanksgiving."
+  },
+  "festivalDiwali": "Diwali",
+  "@festivalDiwali": {
+    "description": "Festival creation screen. Purpose: festival diwali."
+  },
+  "festivalCarnival": "Carnaval",
+  "@festivalCarnival": {
+    "description": "Festival creation screen. Purpose: festival carnival."
+  },
+  "festivalEid": "Eid",
+  "@festivalEid": {
+    "description": "Festival creation screen. Purpose: festival eid."
+  },
+  "festivalLunarNewYear": "Ano-Novo Lunar",
+  "@festivalLunarNewYear": {
+    "description": "Festival creation screen. Purpose: festival lunar new year."
+  },
+  "regionTitle": "Onde ela vai tocar?",
+  "@regionTitle": {
+    "description": "Country and lyrics-language sheet. Purpose: region title."
+  },
+  "regionSearchHint": "Buscar país",
+  "@regionSearchHint": {
+    "description": "Country and lyrics-language sheet. Purpose: region search hint."
+  },
+  "regionLanguageSheetTitle": "Idioma da letra",
+  "@regionLanguageSheetTitle": {
+    "description": "Country and lyrics-language sheet. Purpose: region language sheet title."
+  },
+  "countryUS": "Estados Unidos",
+  "@countryUS": {
+    "description": "Country name in region picker. Purpose: country u s."
+  },
+  "countryGB": "Reino Unido",
+  "@countryGB": {
+    "description": "Country name in region picker. Purpose: country g b."
+  },
+  "countryCA": "Canadá",
+  "@countryCA": {
+    "description": "Country name in region picker. Purpose: country c a."
+  },
+  "countryAU": "Austrália",
+  "@countryAU": {
+    "description": "Country name in region picker. Purpose: country a u."
+  },
+  "countryDE": "Alemanha",
+  "@countryDE": {
+    "description": "Country name in region picker. Purpose: country d e."
+  },
+  "countryFR": "França",
+  "@countryFR": {
+    "description": "Country name in region picker. Purpose: country f r."
+  },
+  "countryJP": "Japão",
+  "@countryJP": {
+    "description": "Country name in region picker. Purpose: country j p."
+  },
+  "countryKR": "Coreia do Sul",
+  "@countryKR": {
+    "description": "Country name in region picker. Purpose: country k r."
+  },
+  "countryBR": "Brasil",
+  "@countryBR": {
+    "description": "Country name in region picker. Purpose: country b r."
+  },
+  "countryMX": "México",
+  "@countryMX": {
+    "description": "Country name in region picker. Purpose: country m x."
+  },
+  "countryIN": "Índia",
+  "@countryIN": {
+    "description": "Country name in region picker. Purpose: country i n."
+  },
+  "countryID": "Indonésia",
+  "@countryID": {
+    "description": "Country name in region picker. Purpose: country i d."
+  },
+  "countryVN": "Vietnã",
+  "@countryVN": {
+    "description": "Country name in region picker. Purpose: country v n."
+  },
+  "countryTR": "Turquia",
+  "@countryTR": {
+    "description": "Country name in region picker. Purpose: country t r."
+  },
+  "languageEn": "Inglês",
+  "@languageEn": {
+    "description": "Lyrics-language display name. Purpose: language en."
+  },
+  "languageFr": "Francês",
+  "@languageFr": {
+    "description": "Lyrics-language display name. Purpose: language fr."
+  },
+  "languageDe": "Alemão",
+  "@languageDe": {
+    "description": "Lyrics-language display name. Purpose: language de."
+  },
+  "languageJa": "Japonês",
+  "@languageJa": {
+    "description": "Lyrics-language display name. Purpose: language ja."
+  },
+  "languageKo": "Coreano",
+  "@languageKo": {
+    "description": "Lyrics-language display name. Purpose: language ko."
+  },
+  "languagePtBR": "Português (Brasil)",
+  "@languagePtBR": {
+    "description": "Lyrics-language display name. Purpose: language pt b r."
+  },
+  "languageEsMX": "Espanhol (México)",
+  "@languageEsMX": {
+    "description": "Lyrics-language display name. Purpose: language es m x."
+  },
+  "languageHi": "Hindi",
+  "@languageHi": {
+    "description": "Lyrics-language display name. Purpose: language hi."
+  },
+  "languageId": "Indonésio",
+  "@languageId": {
+    "description": "Lyrics-language display name. Purpose: language id."
+  },
+  "languageVi": "Vietnamita",
+  "@languageVi": {
+    "description": "Lyrics-language display name. Purpose: language vi."
+  },
+  "languageTr": "Turco",
+  "@languageTr": {
+    "description": "Lyrics-language display name. Purpose: language tr."
+  },
+  "languageZhHans": "Chinês (simplificado)",
+  "@languageZhHans": {
+    "description": "Lyrics-language display name. Purpose: language zh hans."
+  },
+  "languageZhHant": "Chinês (tradicional)",
+  "@languageZhHant": {
+    "description": "Lyrics-language display name. Purpose: language zh hant."
+  },
+  "inputNameLabel": "Nome da pessoa",
+  "@inputNameLabel": {
+    "description": "Song creation form. Purpose: input name label."
+  },
+  "inputNameOptionalLabel": "Nome (opcional)",
+  "@inputNameOptionalLabel": {
+    "description": "Song creation form. Purpose: input name optional label."
+  },
+  "inputNameHint": "ex.: Alex",
+  "@inputNameHint": {
+    "description": "Song creation form. Purpose: input name hint."
+  },
+  "inputKeywordsLabel": "Três palavras sobre a pessoa",
+  "@inputKeywordsLabel": {
+    "description": "Song creation form. Purpose: input keywords label."
+  },
+  "inputLyricsHint": "[Verse] …\n[Chorus] …",
+  "@inputLyricsHint": {
+    "description": "Song creation form. Purpose: input lyrics hint."
+  },
+  "lyricsCounter": "{count} / {limit}",
+  "@lyricsCounter": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Current number of Unicode characters in the lyrics editor."
+      },
+      "limit": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Maximum allowed lyrics characters: 600 for CJK or 1200 otherwise."
+      }
+    },
+    "description": "Own-lyrics editor. Purpose: lyrics counter."
+  },
+  "inputLyricsOwnership": "Esta letra é minha ou tenho o direito de usá-la",
+  "@inputLyricsOwnership": {
+    "description": "Song creation form. Purpose: input lyrics ownership."
+  },
+  "issueRecipientMissing": "Adicione o nome da pessoa.",
+  "@issueRecipientMissing": {
+    "description": "Creation form validation; explain how to correct the input. Purpose: issue recipient missing."
+  },
+  "issueRecipientTooLong": "Os nomes podem ter até 24 caracteres.",
+  "@issueRecipientTooLong": {
+    "description": "Creation form validation; explain how to correct the input. Purpose: issue recipient too long."
+  },
+  "issueBriefMissing": "Conte sobre a música: algumas palavras, letra ou fotos.",
+  "@issueBriefMissing": {
+    "description": "Creation validation (no inspiration card picked, nothing to write from): ask for a description, keywords, lyrics or photos. Also shown when the server answers 40001 details.prompt."
+  },
+  "issueDescriptionMissing": "Esta ideia precisa das suas palavras: escreva uma frase sobre a música.",
+  "@issueDescriptionMissing": {
+    "description": "Shown when the server answers 40001 details.prompt.description: the picked inspiration needs the user's own words."
+  },
+  "generatingBackToEdit": "Voltar para editar",
+  "@generatingBackToEdit": {
+    "description": "Generating page, failure or rejected state: returns to the create home with the draft kept, to fix it."
+  },
+  "issueKeywordTooLong": "Cada palavra pode ter até 20 caracteres.",
+  "@issueKeywordTooLong": {
+    "description": "Creation form validation; explain how to correct the input. Purpose: issue keyword too long."
+  },
+  "issueTooManyKeywords": "Use no máximo três palavras.",
+  "@issueTooManyKeywords": {
+    "description": "Creation form validation; explain how to correct the input. Purpose: issue too many keywords."
+  },
+  "issueArtistName": "Não é possível usar nomes de artistas. Descreva o sentimento.",
+  "@issueArtistName": {
+    "description": "Creation form validation; explain how to correct the input. Purpose: issue artist name."
+  },
+  "issueStyleImitation": "Não podemos imitar um cantor ou uma banda. Descreva o clima.",
+  "@issueStyleImitation": {
+    "description": "Creation form validation; explain how to correct the input. Purpose: issue style imitation."
+  },
+  "issueLyricsTooLong": "A letra pode ter até {limit} caracteres.",
+  "@issueLyricsTooLong": {
+    "placeholders": {
+      "limit": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Maximum number of lyrics characters permitted for this script."
+      }
+    },
+    "description": "Creation form validation; explain how to correct the input. Purpose: issue lyrics too long."
+  },
+  "issueLyricsNotOriginal": "Esta letra parece uma música existente. Escreva a sua.",
+  "@issueLyricsNotOriginal": {
+    "description": "Creation form validation; explain how to correct the input. Purpose: issue lyrics not original."
+  },
+  "issueLyricsOwnership": "Confirme que você tem o direito de usar a letra.",
+  "@issueLyricsOwnership": {
+    "description": "Creation form validation; explain how to correct the input. Purpose: issue lyrics ownership."
+  },
+  "issueTooManyPhotos": "Escolha até 10 fotos.",
+  "@issueTooManyPhotos": {
+    "description": "Creation form validation; explain how to correct the input. Purpose: issue too many photos."
+  },
+  "photosTitle": "Escolha algumas fotos",
+  "@photosTitle": {
+    "description": "Photo selection. Purpose: photos title."
+  },
+  "photosCount": "{count} / {max}",
+  "@photosCount": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Number of selected reference photos."
+      },
+      "max": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Maximum selectable reference photos."
+      }
+    },
+    "description": "Photo selection. Purpose: photos count."
+  },
+  "photosPrivacy": "As fotos são usadas uma única vez para escrever a música e apagadas dos nossos servidores em até 24 horas.",
+  "@photosPrivacy": {
+    "description": "Photo selection. Purpose: photos privacy."
+  },
+  "photosAdd": "Adicionar fotos",
+  "@photosAdd": {
+    "description": "Photo selection. Purpose: photos add."
+  },
+  "photosCreate": "Criar com fotos",
+  "@photosCreate": {
+    "description": "Photo selection. Purpose: photos create."
+  },
+  "photosEmpty": "Escolha de 1 a 10 fotos do momento.",
+  "@photosEmpty": {
+    "description": "Photo selection. Purpose: photos empty."
+  },
+  "generatingStepPolishing": "Refinando suas palavras neste iPhone…",
+  "@generatingStepPolishing": {
+    "description": "Song generation progress and cancellation. Purpose: generating step polishing."
+  },
+  "generatingStepUploading": "Enviando suas fotos…",
+  "@generatingStepUploading": {
+    "description": "Song generation progress and cancellation. Purpose: generating step uploading."
+  },
+  "generatingStepSubmitting": "Enviando para o estúdio…",
+  "@generatingStepSubmitting": {
+    "description": "Song generation progress and cancellation. Purpose: generating step submitting."
+  },
+  "errorSafetyBlocked": "Não conseguimos criar esta. Tente outras palavras e não use nomes de artistas.",
+  "@errorSafetyBlocked": {
+    "description": "PRD 6.5 SAFETY_BLOCKED"
+  },
+  "errorQuotaExhausted": "Você já usou as músicas deste mês. Adicione um pacote ou faça upgrade.",
+  "@errorQuotaExhausted": {
+    "description": "PRD 6.5 QUOTA_EXHAUSTED"
+  },
+  "errorUpstreamTimeout": "Está demorando mais que o normal. Vamos continuar tentando e avisaremos você.",
+  "@errorUpstreamTimeout": {
+    "description": "PRD 6.5 UPSTREAM_TIMEOUT"
+  },
+  "errorUpstreamRateLimited": "Muitas músicas sendo criadas agora. A sua está na fila.",
+  "@errorUpstreamRateLimited": {
+    "description": "PRD 6.5 UPSTREAM_RATE_LIMITED"
+  },
+  "errorAttestFailed": "Atualize o Songlet pela App Store.",
+  "@errorAttestFailed": {
+    "description": "PRD 6.5 ATTEST_FAILED"
+  },
+  "errorImageRejected": "Uma dessas fotos não pode ser usada. Tente outra.",
+  "@errorImageRejected": {
+    "description": "PRD 6.5 IMAGE_REJECTED"
+  },
+  "errorNetworkOffline": "Você está offline. Sua biblioteca continua funcionando.",
+  "@errorNetworkOffline": {
+    "description": "PRD 6.5 NETWORK_OFFLINE"
+  },
+  "errorDownloadLocked": "Não é possível baixar esta música: a compra usada para criá-la foi reembolsada ou seu plano terminou. Você ainda pode ouvi-la.",
+  "@errorDownloadLocked": {
+    "description": "DOWNLOAD_LOCKED (PRD 8.4 refund)"
+  },
+  "errorJobAlreadyFinished": "Já terminou — não há nada para cancelar.",
+  "@errorJobAlreadyFinished": {
+    "description": "Cancel lost the race: the job had already finished (JOB_ALREADY_FINISHED)."
+  },
+  "errorMvSongNotReady": "Esta música ainda não está pronta para um vídeo.",
+  "@errorMvSongNotReady": {
+    "description": "MV_SONG_NOT_READY (contract v1.1)"
+  },
+  "errorMvSongTooLong": "Esta música é longa demais para um vídeo completo — tente um vídeo do refrão.",
+  "@errorMvSongTooLong": {
+    "description": "MV_SONG_TOO_LONG"
+  },
+  "errorMvSongExpired": "Esta música expirou. Gere-a de novo para fazer um vídeo.",
+  "@errorMvSongExpired": {
+    "description": "MV_SONG_EXPIRED"
+  },
+  "errorMvNotFound": "Este vídeo não está mais disponível.",
+  "@errorMvNotFound": {
+    "description": "MV_NOT_FOUND"
+  },
+  "errorMvPhotosExpired": "Essas fotos expiraram — escolha-as de novo.",
+  "@errorMvPhotosExpired": {
+    "description": "MV_PHOTOS_EXPIRED"
+  },
+  "errorMvRenderFailed": "Não conseguimos terminar este vídeo. Seus créditos voltaram — tente de novo.",
+  "@errorMvRenderFailed": {
+    "description": "MV_RENDER_FAILED (job level, refunded)"
+  },
+  "mvHubTitle": "Fazer um vídeo",
+  "@mvHubTitle": {
+    "description": "P19 hub title"
+  },
+  "mvHubSubtitle": "Transforme “{title}” em um videoclipe.",
+  "@mvHubSubtitle": {
+    "description": "P19 hub subtitle; {title} = song title",
+    "placeholders": {
+      "title": {
+        "type": "String",
+        "description": "Localized song title; may contain a user-provided recipient name."
+      }
+    }
+  },
+  "mvLevelLyricVideo": "Vídeo com letra",
+  "@mvLevelLyricVideo": {
+    "description": "Level: lyric video"
+  },
+  "mvLevelLyricHint": "Uma cena fixa com a sua letra",
+  "@mvLevelLyricHint": {
+    "description": "Level hint: lyric video"
+  },
+  "mvLevelChorus": "Vídeo do refrão",
+  "@mvLevelChorus": {
+    "description": "Level: chorus video"
+  },
+  "mvLevelChorusHint": "30 segundos do seu refrão, filmados por IA",
+  "@mvLevelChorusHint": {
+    "description": "Level hint: chorus video"
+  },
+  "mvLevelFull": "Vídeo da música inteira",
+  "@mvLevelFull": {
+    "description": "Level: full-song video"
+  },
+  "mvLevelFullHint": "A música inteira, cena a cena",
+  "@mvLevelFullHint": {
+    "description": "Level hint: full-song video"
+  },
+  "mvPriceCredits": "{credits, plural, one{{credits} crédito} other{{credits} créditos}}",
+  "@mvPriceCredits": {
+    "description": "Price line; {credits} = integer",
+    "placeholders": {
+      "credits": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Number of video credits, not a monetary price."
+      }
+    }
+  },
+  "mvAvailableCredits": "{credits, plural, one{Você tem {credits} crédito} other{Você tem {credits} créditos}}",
+  "@mvAvailableCredits": {
+    "description": "Credits the account has; {credits} = integer",
+    "placeholders": {
+      "credits": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Number of video credits, not a monetary price."
+      }
+    }
+  },
+  "mvGapCredits": "{credits, plural, one{Falta {credits} crédito} other{Faltam {credits} créditos}}",
+  "@mvGapCredits": {
+    "description": "Missing credits; {credits} = integer",
+    "placeholders": {
+      "credits": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Number of video credits, not a monetary price."
+      }
+    }
+  },
+  "mvEstimating": "Verificando o preço…",
+  "@mvEstimating": {
+    "description": "While the price is fetched"
+  },
+  "mvOptionsHeader": "Opções",
+  "@mvOptionsHeader": {
+    "description": "P19 options section header"
+  },
+  "mvAspectLabel": "Formato",
+  "@mvAspectLabel": {
+    "description": "Aspect ratio option"
+  },
+  "mvAspectPortrait": "Vertical",
+  "@mvAspectPortrait": {
+    "description": "9:16"
+  },
+  "mvAspectLandscape": "Horizontal",
+  "@mvAspectLandscape": {
+    "description": "16:9"
+  },
+  "mvAspectSquare": "Quadrado",
+  "@mvAspectSquare": {
+    "description": "1:1"
+  },
+  "mvQualityLabel": "Qualidade",
+  "@mvQualityLabel": {
+    "description": "Quality option"
+  },
+  "mvQualityStandard": "Padrão",
+  "@mvQualityStandard": {
+    "description": "quality standard"
+  },
+  "mvQualityHigh": "Alta",
+  "@mvQualityHigh": {
+    "description": "quality high"
+  },
+  "mvSubtitlesLabel": "Letra na tela",
+  "@mvSubtitlesLabel": {
+    "description": "Burn lyrics into the video (switch)"
+  },
+  "mvPhotosLabel": "Fotos de referência",
+  "@mvPhotosLabel": {
+    "description": "Reference photos row"
+  },
+  "mvPhotosHint": "Definem o clima e as cores — rostos não são usados",
+  "@mvPhotosHint": {
+    "description": "Reference photos hint (no face driving in V1)"
+  },
+  "mvPhotosCount": "{count, plural, one{{count} foto} other{{count} fotos}}",
+  "@mvPhotosCount": {
+    "description": "Picked photos count; {count} = integer",
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Number of selected video reference photos."
+      }
+    }
+  },
+  "mvChorusLabel": "Refrão",
+  "@mvChorusLabel": {
+    "description": "Chorus window row (chorus level only)"
+  },
+  "mvChorusAuto": "Encontrado automaticamente",
+  "@mvChorusAuto": {
+    "description": "Chorus window: automatic"
+  },
+  "mvChorusCustom": "Escolher o trecho",
+  "@mvChorusCustom": {
+    "description": "Chorus window: chosen by the user"
+  },
+  "mvChorusRange": "{start} – {end}",
+  "@mvChorusRange": {
+    "description": "Chosen chorus window; {start} and {end} are m:ss clock labels",
+    "placeholders": {
+      "start": {
+        "type": "String",
+        "description": "Beginning of the selected chorus, formatted as a media duration."
+      },
+      "end": {
+        "type": "String",
+        "description": "End of the selected chorus, formatted as a media duration."
+      }
+    }
+  },
+  "mvCreate": "Fazer o vídeo",
+  "@mvCreate": {
+    "description": "P19 primary action"
+  },
+  "mvBuyPack": "Pegue o pacote e faça",
+  "@mvBuyPack": {
+    "description": "P19 primary action when credits are missing (opens the paywall on the pack)"
+  },
+  "mvSongLocked": "Sua música foi salva para o vídeo.",
+  "@mvSongLocked": {
+    "description": "Note that the song was saved for the video (song_locked)"
+  },
+  "mvGeneratingTitle": "Fazendo o seu vídeo…",
+  "@mvGeneratingTitle": {
+    "description": "P20 title"
+  },
+  "mvStageQueued": "Aguardando para começar",
+  "@mvStageQueued": {
+    "description": "Stage: queued"
+  },
+  "mvStageSlicing": "Escolhendo os momentos",
+  "@mvStageSlicing": {
+    "description": "Stage: slicing"
+  },
+  "mvStageStoryboarding": "Escrevendo o storyboard",
+  "@mvStageStoryboarding": {
+    "description": "Stage: storyboarding"
+  },
+  "mvStageKeyframing": "Pintando as cenas",
+  "@mvStageKeyframing": {
+    "description": "Stage: keyframing"
+  },
+  "mvStageRendering": "Filmando as cenas",
+  "@mvStageRendering": {
+    "description": "Stage: rendering"
+  },
+  "mvStageAssembling": "Montando o vídeo",
+  "@mvStageAssembling": {
+    "description": "Stage: assembling"
+  },
+  "mvStageDone": "Pronto",
+  "@mvStageDone": {
+    "description": "Stage: done"
+  },
+  "mvScenes": "Cena {done} de {total}",
+  "@mvScenes": {
+    "description": "Scene progress; {done} and {total} = integers",
+    "placeholders": {
+      "done": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Number of completed video scenes."
+      },
+      "total": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Total number of video scenes."
+      }
+    }
+  },
+  "mvUsuallyMinutes": "Geralmente uns {minutes} minutos",
+  "@mvUsuallyMinutes": {
+    "description": "ETA caption; {minutes} = integer",
+    "placeholders": {
+      "minutes": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Estimated waiting or processing duration in minutes."
+      }
+    }
+  },
+  "mvCancelRequested": "Vai parar depois da cena atual…",
+  "@mvCancelRequested": {
+    "description": "Banner after a cancel was acknowledged while rendering"
+  },
+  "mvCancelTitle": "Parar este vídeo?",
+  "@mvCancelTitle": {
+    "description": "Cancel dialog title"
+  },
+  "mvCancelQueued": "Ainda não começou, então nada será usado.",
+  "@mvCancelQueued": {
+    "description": "Cancel dialog body while queued"
+  },
+  "mvCancelStarted": "Já começou. As cenas prontas são cobradas; o resto volta.",
+  "@mvCancelStarted": {
+    "description": "Cancel dialog body while rendering (partial settlement)"
+  },
+  "mvCancelConfirm": "Parar vídeo",
+  "@mvCancelConfirm": {
+    "description": "Cancel dialog confirm"
+  },
+  "mvCancelled": "Vídeo parado",
+  "@mvCancelled": {
+    "description": "Toast after a cancel was acknowledged"
+  },
+  "mvCancelledRefunded": "Vídeo parado — nada foi usado",
+  "@mvCancelledRefunded": {
+    "description": "Toast after a queued cancel (full refund)"
+  },
+  "mvNothing": "Nenhum vídeo sendo feito agora.",
+  "@mvNothing": {
+    "description": "P20 when no video is in flight"
+  },
+  "mvQuotaTitle": "Créditos insuficientes",
+  "@mvQuotaTitle": {
+    "description": "P20 credit-gap headline"
+  },
+  "mvAiLabelBurnedIn": "Gerado por IA — o selo faz parte do vídeo",
+  "@mvAiLabelBurnedIn": {
+    "description": "P21 explicit disclosure under the video"
+  },
+  "mvSave": "Salvar em Fotos",
+  "@mvSave": {
+    "description": "P21 save to Photos"
+  },
+  "mvSaveFiles": "Salvar em Arquivos",
+  "@mvSaveFiles": {
+    "description": "P21 save to Files"
+  },
+  "mvShareText": "Fiz este videoclipe com o Songlet 🎬",
+  "@mvShareText": {
+    "description": "Share sheet text for the video"
+  },
+  "mvMissing": "Este vídeo não está mais neste aparelho.",
+  "@mvMissing": {
+    "description": "P21 when the file is gone"
+  },
+  "mvDeleteTitle": "Excluir este vídeo?",
+  "@mvDeleteTitle": {
+    "description": "Delete dialog title"
+  },
+  "mvDeleteBody": "Ele é removido deste aparelho.",
+  "@mvDeleteBody": {
+    "description": "Delete dialog body"
+  },
+  "mvDeleted": "Vídeo excluído",
+  "@mvDeleted": {
+    "description": "Toast after delete"
+  },
+  "mvProvenance": "Feito com Google Lyria 3 e modelos de vídeo com IA · Gerado por IA",
+  "@mvProvenance": {
+    "description": "P21 footnote"
+  },
+  "detailVideos": "Vídeos",
+  "@detailVideos": {
+    "description": "P13 section header"
+  },
+  "detailMakeVideo": "Fazer um vídeo",
+  "@detailMakeVideo": {
+    "description": "P13 / P09 make-a-video action"
+  },
+  "mvStatusReady": "Pronto",
+  "@mvStatusReady": {
+    "description": "Video row status"
+  },
+  "mvStatusPending": "Fazendo…",
+  "@mvStatusPending": {
+    "description": "Video row status"
+  },
+  "mvStatusFailed": "Não terminou",
+  "@mvStatusFailed": {
+    "description": "Video row status"
+  },
+  "mvPackTitle": "Videoclipe",
+  "@mvPackTitle": {
+    "description": "Paywall MV pack row title"
+  },
+  "mvPackChorusSubtitle": "Um vídeo do refrão",
+  "@mvPackChorusSubtitle": {
+    "description": "Paywall MV pack row subtitle"
+  },
+  "mvPackFullSubtitle": "Um vídeo da música inteira",
+  "@mvPackFullSubtitle": {
+    "description": "Paywall MV pack row subtitle"
+  },
+  "paywallMvHeroTitle": "Transforme em vídeo",
+  "@paywallMvHeroTitle": {
+    "description": "Paywall headline when opened for a music video"
+  },
+  "paywallMvHeroSubtitle": "Créditos para um videoclipe da sua música — para salvar e compartilhar.",
+  "@paywallMvHeroSubtitle": {
+    "description": "Paywall subtitle when opened for a music video"
+  },
+  "playerAiGenerated": "Gerado por IA",
+  "@playerAiGenerated": {
+    "description": "Non-removable disclosure badge (PRD 9.4)"
+  },
+  "playerLoop": "Repetir",
+  "@playerLoop": {
+    "description": "Song playback screen. Purpose: player loop."
+  },
+  "playerPlay": "Reproduzir",
+  "@playerPlay": {
+    "description": "Song playback screen. Purpose: player play."
+  },
+  "playerPause": "Pausar",
+  "@playerPause": {
+    "description": "Song playback screen. Purpose: player pause."
+  },
+  "playerPreviewLabel": "Prévia de 30 segundos",
+  "@playerPreviewLabel": {
+    "description": "Song playback screen. Purpose: player preview label."
+  },
+  "playerTitleFor": "Para {name}",
+  "@playerTitleFor": {
+    "placeholders": {
+      "name": {
+        "type": "String",
+        "description": "Recipient or template display name; do not translate user-provided names."
+      }
+    },
+    "description": "Song playback screen. Purpose: player title for."
+  },
+  "downloadSaved": "Salvo em Arquivos.",
+  "@downloadSaved": {
+    "description": "Audio download screen. Purpose: download saved."
+  },
+  "shareComposing": "Criando seu cartão para compartilhar…",
+  "@shareComposing": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share composing."
+  },
+  "shareFailed": "Não foi possível criar o cartão para compartilhar.",
+  "@shareFailed": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share failed."
+  },
+  "shareText": "Fiz esta música com o Songlet 🎵",
+  "@shareText": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share text."
+  },
+  "paywallBestValue": "Melhor custo-benefício",
+  "@paywallBestValue": {
+    "description": "Purchase screen. Purpose: paywall best value."
+  },
+  "paywallStartTrial": "Começar teste grátis",
+  "@paywallStartTrial": {
+    "description": "Purchase screen. Purpose: paywall start trial."
+  },
+  "paywallClose": "Fechar",
+  "@paywallClose": {
+    "description": "Purchase screen. Purpose: paywall close."
+  },
+  "paywallSeePlans": "Ver assinaturas",
+  "@paywallSeePlans": {
+    "description": "Purchase screen. Purpose: paywall see plans."
+  },
+  "paywallCurrentPlan": "{count, plural, one{Seu plano está ativo: resta {count} música completa neste período.} other{Seu plano está ativo: restam {count} músicas completas neste período.}}",
+  "@paywallCurrentPlan": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Full songs remaining in the current subscription period."
+      }
+    },
+    "description": "Purchase screen. Purpose: paywall current plan."
+  },
+  "libraryEmpty": "Suas músicas vão ficar aqui.",
+  "@libraryEmpty": {
+    "description": "Saved-song library. Purpose: library empty."
+  },
+  "libraryEmptyAction": "Crie sua primeira música",
+  "@libraryEmptyAction": {
+    "description": "Saved-song library. Purpose: library empty action."
+  },
+  "libraryPending": "Compondo…",
+  "@libraryPending": {
+    "description": "Saved-song library. Purpose: library pending."
+  },
+  "libraryPreviewBadge": "Prévia",
+  "@libraryPreviewBadge": {
+    "description": "Saved-song library. Purpose: library preview badge."
+  },
+  "librarySongBadge": "Música completa",
+  "@librarySongBadge": {
+    "description": "Saved-song library. Purpose: library song badge."
+  },
+  "settingsTitle": "Ajustes",
+  "@settingsTitle": {
+    "description": "Settings screen. Purpose: settings title."
+  },
+  "settingsPlan": "Seu plano",
+  "@settingsPlan": {
+    "description": "Settings screen. Purpose: settings plan."
+  },
+  "settingsPlanUnavailable": "Não foi possível carregar seu plano. Puxe para baixo para tentar novamente mais tarde.",
+  "@settingsPlanUnavailable": {
+    "description": "Settings screen. Purpose: settings plan unavailable."
+  },
+  "tierFree": "Sem assinatura",
+  "@tierFree": {
+    "description": "Plan tier display. Purpose: tier free."
+  },
+  "tierPack": "Pacotes de músicas",
+  "@tierPack": {
+    "description": "Plan tier display. Purpose: tier pack."
+  },
+  "settingsSongsLeft": "{count, plural, one{{count} música completa restante} other{{count} músicas completas restantes}}",
+  "@settingsSongsLeft": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Remaining full songs in the current allowance."
+      }
+    },
+    "description": "Settings screen. Purpose: settings songs left."
+  },
+  "settingsClipsLeft": "{count, plural, one{{count} prévia restante} other{{count} prévias restantes}}",
+  "@settingsClipsLeft": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Remaining song previews in the current allowance."
+      }
+    },
+    "description": "Settings screen. Purpose: settings clips left."
+  },
+  "settingsResets": "Renova em {date}",
+  "@settingsResets": {
+    "placeholders": {
+      "date": {
+        "type": "DateTime",
+        "format": "yMMMd",
+        "description": "Next allowance reset date, converted to local time."
+      }
+    },
+    "description": "Settings screen. Purpose: settings resets."
+  },
+  "settingsUpgrade": "Fazer upgrade",
+  "@settingsUpgrade": {
+    "description": "Settings screen. Purpose: settings upgrade."
+  },
+  "appTagline": "Músicas para as pessoas que você ama",
+  "@appTagline": {
+    "description": "Brand tagline under the app name"
+  },
+  "commonClose": "Fechar",
+  "@commonClose": {
+    "description": "Shared buttons and messages. Purpose: common close."
+  },
+  "commonDone": "Concluir",
+  "@commonDone": {
+    "description": "Shared buttons and messages. Purpose: common done."
+  },
+  "commonDelete": "Apagar",
+  "@commonDelete": {
+    "description": "Shared buttons and messages. Purpose: common delete."
+  },
+  "commonMore": "Mais",
+  "@commonMore": {
+    "description": "Shared buttons and messages. Purpose: common more."
+  },
+  "commonCopy": "Copiar",
+  "@commonCopy": {
+    "description": "Shared buttons and messages. Purpose: common copy."
+  },
+  "commonCopied": "Copiado",
+  "@commonCopied": {
+    "description": "Shared buttons and messages. Purpose: common copied."
+  },
+  "commonNotNow": "Agora não",
+  "@commonNotNow": {
+    "description": "Shared buttons and messages. Purpose: common not now."
+  },
+  "commonLearnMore": "Saiba mais",
+  "@commonLearnMore": {
+    "description": "Shared buttons and messages. Purpose: common learn more."
+  },
+  "commonSeeAll": "Ver tudo",
+  "@commonSeeAll": {
+    "description": "Shared buttons and messages. Purpose: common see all."
+  },
+  "commonKeepGoing": "Continuar",
+  "@commonKeepGoing": {
+    "description": "Shared buttons and messages. Purpose: common keep going."
+  },
+  "composerHint": "Descreva a música que você quer",
+  "@composerHint": {
+    "description": "P01 prompt field hint"
+  },
+  "composerAddPhotos": "Adicionar fotos",
+  "@composerAddPhotos": {
+    "description": "P01 + button"
+  },
+  "composerSourceMusicHint": "Descreva com suas palavras",
+  "@composerSourceMusicHint": {
+    "description": "Song creation composer. Purpose: composer source music hint."
+  },
+  "composerDictate": "Ditar",
+  "@composerDictate": {
+    "description": "P01 mic button"
+  },
+  "composerStopDictation": "Parar ditado",
+  "@composerStopDictation": {
+    "description": "P03a stop button"
+  },
+  "lengthPreview": "Prévia",
+  "@lengthPreview": {
+    "description": "Composer summary row: the 30-second preview (lyria-3-clip-preview)."
+  },
+  "lengthFull": "Música completa",
+  "@lengthFull": {
+    "description": "Composer summary row and options: the full ~2-minute song (lyria-3.5)."
+  },
+  "paramLength": "Duração",
+  "@paramLength": {
+    "description": "Song option selector. Purpose: param length."
+  },
+  "paramVocals": "Vocal",
+  "@paramVocals": {
+    "description": "Song option selector. Purpose: param vocals."
+  },
+  "paramGenre": "Gênero",
+  "@paramGenre": {
+    "description": "Song option selector. Purpose: param genre."
+  },
+  "templatePlaySample": "Ouvir uma amostra de {name}",
+  "@templatePlaySample": {
+    "description": "Template tile play button",
+    "placeholders": {
+      "name": {
+        "type": "String",
+        "description": "Recipient or template display name; do not translate user-provided names."
+      }
+    }
+  },
+  "templatePauseSample": "Pausar a amostra",
+  "@templatePauseSample": {
+    "description": "Song template and creation form. Purpose: template pause sample."
+  },
+  "lengthShort": "Curta",
+  "@lengthShort": {
+    "description": "Song length selector. Purpose: length short."
+  },
+  "lengthShortHint": "Prévia de 30 segundos",
+  "@lengthShortHint": {
+    "description": "Song length selector. Purpose: length short hint."
+  },
+  "lengthStandard": "Padrão",
+  "@lengthStandard": {
+    "description": "Song length selector. Purpose: length standard."
+  },
+  "lengthStandardHint": "cerca de 2 minutos, Pro",
+  "@lengthStandardHint": {
+    "description": "Song length selector. Purpose: length standard hint."
+  },
+  "vocalsCustom": "Automático",
+  "@vocalsCustom": {
+    "description": "Vocal option selector. Purpose: vocals custom."
+  },
+  "vocalsCustomHint": "conforme sua descrição",
+  "@vocalsCustomHint": {
+    "description": "Vocal option selector. Purpose: vocals custom hint."
+  },
+  "vocalsCustomDetail": "O estilo vocal segue sua descrição.",
+  "@vocalsCustomDetail": {
+    "description": "Vocal option selector. Purpose: vocals custom detail."
+  },
+  "vocalsOn": "Com vocal",
+  "@vocalsOn": {
+    "description": "Vocal option selector. Purpose: vocals on."
+  },
+  "vocalsInstrumental": "Instrumental",
+  "@vocalsInstrumental": {
+    "description": "Vocal option selector. Purpose: vocals instrumental."
+  },
+  "vocalsLyricsIn": "Letra em {language}",
+  "@vocalsLyricsIn": {
+    "placeholders": {
+      "language": {
+        "type": "String",
+        "description": "Localized lyrics-language name."
+      }
+    },
+    "description": "Vocal option selector. Purpose: vocals lyrics in."
+  },
+  "genreCustom": "Automático",
+  "@genreCustom": {
+    "description": "Genre picker. Purpose: genre custom."
+  },
+  "genreCustomHint": "conforme sua descrição",
+  "@genreCustomHint": {
+    "description": "Genre picker. Purpose: genre custom hint."
+  },
+  "genrePopularIn": "Populares: {country}",
+  "@genrePopularIn": {
+    "placeholders": {
+      "country": {
+        "type": "String",
+        "description": "Localized country name."
+      }
+    },
+    "description": "Genre picker. Purpose: genre popular in."
+  },
+  "genreAll": "Todos os gêneros",
+  "@genreAll": {
+    "description": "Genre picker. Purpose: genre all."
+  },
+  "regionHelper": "Muda os 3 gêneros recomendados e o idioma da letra",
+  "@regionHelper": {
+    "description": "Country and lyrics-language sheet. Purpose: region helper."
+  },
+  "regionLyricsRow": "Idioma da letra: {language}",
+  "@regionLyricsRow": {
+    "placeholders": {
+      "language": {
+        "type": "String",
+        "description": "Localized lyrics-language name."
+      }
+    },
+    "description": "Country and lyrics-language sheet. Purpose: region lyrics row."
+  },
+  "regionNoMatch": "Nenhum país encontrado",
+  "@regionNoMatch": {
+    "description": "Country and lyrics-language sheet. Purpose: region no match."
+  },
+  "keywordAdd": "Adicionar uma palavra",
+  "@keywordAdd": {
+    "description": "Creation keywords. Purpose: keyword add."
+  },
+  "keywordRemove": "Remover {word}",
+  "@keywordRemove": {
+    "placeholders": {
+      "word": {
+        "type": "String",
+        "description": "User-provided keyword being removed."
+      }
+    },
+    "description": "Creation keywords. Purpose: keyword remove."
+  },
+  "nameClear": "Limpar nome",
+  "@nameClear": {
+    "description": "Recipient name field. Purpose: name clear."
+  },
+  "lyricsOptional": "Escreva sua própria letra (opcional)",
+  "@lyricsOptional": {
+    "description": "Own-lyrics editor. Purpose: lyrics optional."
+  },
+  "issueRecipientArtistName": "Não é possível usar nomes de artistas.",
+  "@issueRecipientArtistName": {
+    "description": "P18 name field"
+  },
+  "issuePromptTooLong": "Use menos de {limit} caracteres na descrição.",
+  "@issuePromptTooLong": {
+    "placeholders": {
+      "limit": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Maximum number of characters in the song description."
+      }
+    },
+    "description": "Creation form validation; explain how to correct the input. Purpose: issue prompt too long."
+  },
+  "voiceRecording": "Gravando…",
+  "@voiceRecording": {
+    "description": "On-device dictation panel. Purpose: voice recording."
+  },
+  "voiceStarting": "Iniciando…",
+  "@voiceStarting": {
+    "description": "On-device dictation panel. Purpose: voice starting."
+  },
+  "voiceListening": "Diga para quem é e do que a pessoa gosta…",
+  "@voiceListening": {
+    "description": "On-device dictation panel. Purpose: voice listening."
+  },
+  "voiceOnDevice": "Transcrição no aparelho",
+  "@voiceOnDevice": {
+    "description": "On-device dictation panel. Purpose: voice on device."
+  },
+  "voicePermissionDenied": "Permita o microfone e o reconhecimento de fala para o Songlet em Ajustes para ditar.",
+  "@voicePermissionDenied": {
+    "description": "On-device dictation panel. Purpose: voice permission denied."
+  },
+  "voiceUnavailable": "O ditado não está disponível para este idioma neste aparelho.",
+  "@voiceUnavailable": {
+    "description": "On-device dictation panel. Purpose: voice unavailable."
+  },
+  "voiceApplied": "Adicionado pela sua voz",
+  "@voiceApplied": {
+    "description": "On-device dictation panel. Purpose: voice applied."
+  },
+  "photoRemove": "Remover foto",
+  "@photoRemove": {
+    "description": "Photo selection. Purpose: photo remove."
+  },
+  "generatingTitleFor": "Escrevendo a música de {name}…",
+  "@generatingTitleFor": {
+    "placeholders": {
+      "name": {
+        "type": "String",
+        "description": "Recipient or template display name; do not translate user-provided names."
+      }
+    },
+    "description": "Song generation progress and cancellation. Purpose: generating title for."
+  },
+  "generatingTitleGeneric": "Escrevendo sua música…",
+  "@generatingTitleGeneric": {
+    "description": "Song generation progress and cancellation. Purpose: generating title generic."
+  },
+  "generatingUsually": "Normalmente cerca de {seconds} segundos",
+  "@generatingUsually": {
+    "placeholders": {
+      "seconds": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Video, countdown, or generation duration in seconds."
+      }
+    },
+    "description": "Song generation progress and cancellation. Purpose: generating usually."
+  },
+  "generatingPercent": "{percent}",
+  "@generatingPercent": {
+    "placeholders": {
+      "percent": {
+        "type": "String",
+        "description": "Complete percentage already formatted with intl for the UI locale, including the percent sign."
+      }
+    },
+    "description": "Song generation progress and cancellation. Purpose: generating percent."
+  },
+  "generatingProgress": "Progresso",
+  "@generatingProgress": {
+    "description": "Song generation progress and cancellation. Purpose: generating progress."
+  },
+  "generatingGlimpse": "Uma prévia da sua música",
+  "@generatingGlimpse": {
+    "description": "Song generation progress and cancellation. Purpose: generating glimpse."
+  },
+  "generatingCancelTitle": "Parar esta música?",
+  "@generatingCancelTitle": {
+    "description": "Song generation progress and cancellation. Purpose: generating cancel title."
+  },
+  "generatingCancelQueued": "Ela ainda não começou, então não conta no seu limite.",
+  "@generatingCancelQueued": {
+    "description": "Song generation progress and cancellation. Purpose: generating cancel queued."
+  },
+  "generatingCancelStarted": "Ela já começou, então conta no seu limite.",
+  "@generatingCancelStarted": {
+    "description": "Song generation progress and cancellation. Purpose: generating cancel started."
+  },
+  "generatingCancelConfirm": "Parar",
+  "@generatingCancelConfirm": {
+    "description": "Song generation progress and cancellation. Purpose: generating cancel confirm."
+  },
+  "generatingCancelled": "Música interrompida",
+  "@generatingCancelled": {
+    "description": "Song generation progress and cancellation. Purpose: generating cancelled."
+  },
+  "generatingCancelledRefunded": "Música interrompida — nada foi usado",
+  "@generatingCancelledRefunded": {
+    "description": "Song generation progress and cancellation. Purpose: generating cancelled refunded."
+  },
+  "queueTitle": "Muitas músicas estão sendo criadas agora.",
+  "@queueTitle": {
+    "description": "Song generation queue. Purpose: queue title."
+  },
+  "queueSubtitle": "A sua está na fila.",
+  "@queueSubtitle": {
+    "description": "Song generation queue. Purpose: queue subtitle."
+  },
+  "queuePosition": "Posição",
+  "@queuePosition": {
+    "description": "Song generation queue. Purpose: queue position."
+  },
+  "queueWait": "espera estimada",
+  "@queueWait": {
+    "description": "Song generation queue. Purpose: queue wait."
+  },
+  "queueWaitMinutes": "≈ {minutes} min",
+  "@queueWaitMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Estimated waiting or processing duration in minutes."
+      }
+    },
+    "description": "Song generation queue. Purpose: queue wait minutes."
+  },
+  "generatingNothing": "Nenhuma música está sendo criada agora.",
+  "@generatingNothing": {
+    "description": "Song generation progress and cancellation. Purpose: generating nothing."
+  },
+  "previewGetFull": "Obter a música completa de 2 minutos",
+  "@previewGetFull": {
+    "description": "Song preview screen. Purpose: preview get full."
+  },
+  "previewShare": "Compartilhar prévia",
+  "@previewShare": {
+    "description": "Song preview screen. Purpose: preview share."
+  },
+  "previewAnother": "Tentar outra versão (usa 1 prévia)",
+  "@previewAnother": {
+    "description": "Song preview screen. Purpose: preview another."
+  },
+  "playerPosition": "Posição da reprodução",
+  "@playerPosition": {
+    "description": "Song playback screen. Purpose: player position."
+  },
+  "playerPrevSection": "Seção anterior",
+  "@playerPrevSection": {
+    "description": "Song playback screen. Purpose: player prev section."
+  },
+  "playerNextSection": "Próxima seção",
+  "@playerNextSection": {
+    "description": "Song playback screen. Purpose: player next section."
+  },
+  "playerShuffle": "Seções aleatórias",
+  "@playerShuffle": {
+    "description": "Song playback screen. Purpose: player shuffle."
+  },
+  "playerRepeat": "Repetir",
+  "@playerRepeat": {
+    "description": "Song playback screen. Purpose: player repeat."
+  },
+  "playerProvenance": "Feita com Google Lyria 3 · marca d’água SynthID · gerada por IA",
+  "@playerProvenance": {
+    "description": "Song playback screen. Purpose: player provenance."
+  },
+  "playerMissing": "Esta música não está mais neste aparelho.",
+  "@playerMissing": {
+    "description": "Song playback screen. Purpose: player missing."
+  },
+  "actionDownload": "Baixar",
+  "@actionDownload": {
+    "description": "Work action button. Purpose: action download."
+  },
+  "actionShare": "Compartilhar",
+  "@actionShare": {
+    "description": "Work action button. Purpose: action share."
+  },
+  "actionLicense": "Licença",
+  "@actionLicense": {
+    "description": "Work action button. Purpose: action license."
+  },
+  "actionRegenerate": "Gerar de novo",
+  "@actionRegenerate": {
+    "description": "Work action button. Purpose: action regenerate."
+  },
+  "actionDetails": "Detalhes",
+  "@actionDetails": {
+    "description": "Work action button. Purpose: action details."
+  },
+  "sectionIntro": "Intro",
+  "@sectionIntro": {
+    "description": "Song section display label; never translate the inserted protocol token. Purpose: section intro."
+  },
+  "sectionVerse": "Verso",
+  "@sectionVerse": {
+    "description": "Song section display label; never translate the inserted protocol token. Purpose: section verse."
+  },
+  "sectionPreChorus": "Pré-refrão",
+  "@sectionPreChorus": {
+    "description": "Song section display label; never translate the inserted protocol token. Purpose: section pre chorus."
+  },
+  "sectionChorus": "Refrão",
+  "@sectionChorus": {
+    "description": "Song section display label; never translate the inserted protocol token. Purpose: section chorus."
+  },
+  "sectionBridge": "Ponte",
+  "@sectionBridge": {
+    "description": "Song section display label; never translate the inserted protocol token. Purpose: section bridge."
+  },
+  "sectionOutro": "Final",
+  "@sectionOutro": {
+    "description": "Song section display label; never translate the inserted protocol token. Purpose: section outro."
+  },
+  "sectionHook": "Gancho",
+  "@sectionHook": {
+    "description": "Song section display label; never translate the inserted protocol token. Purpose: section hook."
+  },
+  "shareTitle": "Cartão para compartilhar",
+  "@shareTitle": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share title."
+  },
+  "shareSubtitle": "Escolha um tema e um layout.",
+  "@shareSubtitle": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share subtitle."
+  },
+  "shareTheme": "Tema",
+  "@shareTheme": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share theme."
+  },
+  "shareLayout": "Layout",
+  "@shareLayout": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share layout."
+  },
+  "shareLayoutScene": "Com ilustração",
+  "@shareLayoutScene": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share layout scene."
+  },
+  "shareLayoutText": "Só texto",
+  "@shareLayoutText": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share layout text."
+  },
+  "paletteTerracotta": "Terracota",
+  "@paletteTerracotta": {
+    "description": "Share-card color theme. Purpose: palette terracotta."
+  },
+  "paletteSand": "Areia",
+  "@paletteSand": {
+    "description": "Share-card color theme. Purpose: palette sand."
+  },
+  "paletteOlive": "Oliva",
+  "@paletteOlive": {
+    "description": "Share-card color theme. Purpose: palette olive."
+  },
+  "paletteNavy": "Azul-marinho",
+  "@paletteNavy": {
+    "description": "Share-card color theme. Purpose: palette navy."
+  },
+  "shareAction": "Compartilhar",
+  "@shareAction": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share action."
+  },
+  "shareSaveVideo": "Salvar vídeo",
+  "@shareSaveVideo": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share save video."
+  },
+  "shareCopyLyrics": "Copiar letra",
+  "@shareCopyLyrics": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share copy lyrics."
+  },
+  "shareVideoSaved": "Salvo em Fotos",
+  "@shareVideoSaved": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share video saved."
+  },
+  "shareLyricsCopied": "Letra copiada",
+  "@shareLyricsCopied": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share lyrics copied."
+  },
+  "shareCardTagline": "Uma música para alguém",
+  "@shareCardTagline": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share card tagline."
+  },
+  "shareSaveFailed": "Não foi possível salvar o vídeo. Permita que o Songlet adicione a Fotos em Ajustes.",
+  "@shareSaveFailed": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share save failed."
+  },
+  "downloadReady": "Música completa pronta",
+  "@downloadReady": {
+    "description": "Audio download screen. Purpose: download ready."
+  },
+  "downloadTitle": "Sua para sempre",
+  "@downloadTitle": {
+    "description": "Audio download screen. Purpose: download title."
+  },
+  "downloadIntro": "Sua música está pronta. Baixe o áudio em alta qualidade e sua licença comercial abaixo.",
+  "@downloadIntro": {
+    "description": "Audio download screen. Purpose: download intro."
+  },
+  "downloadAudioHeader": "Baixar áudio",
+  "@downloadAudioHeader": {
+    "description": "Audio download screen. Purpose: download audio header."
+  },
+  "downloadAudioNote": "Alta qualidade",
+  "@downloadAudioNote": {
+    "description": "Audio download screen. Purpose: download audio note."
+  },
+  "downloadMp3Title": "MP3 · 320 kbps",
+  "@downloadMp3Title": {
+    "description": "Audio download screen. Purpose: download mp3 title."
+  },
+  "downloadMp3Subtitle": "Ideal para compartilhar e ouvir no dia a dia",
+  "@downloadMp3Subtitle": {
+    "description": "Audio download screen. Purpose: download mp3 subtitle."
+  },
+  "downloadWavTitle": "WAV · 44,1 kHz (Premier)",
+  "@downloadWavTitle": {
+    "description": "Audio download screen. Purpose: download wav title."
+  },
+  "downloadWavSubtitle": "A mais alta qualidade para uso profissional",
+  "@downloadWavSubtitle": {
+    "description": "Audio download screen. Purpose: download wav subtitle."
+  },
+  "downloadMp3Action": "Baixar MP3",
+  "@downloadMp3Action": {
+    "description": "Audio download screen. Purpose: download mp3 action."
+  },
+  "downloadWavAction": "Baixar WAV",
+  "@downloadWavAction": {
+    "description": "Audio download screen. Purpose: download wav action."
+  },
+  "downloadLicenseAction": "Baixar licença",
+  "@downloadLicenseAction": {
+    "description": "Audio download screen. Purpose: download license action."
+  },
+  "licenseHeader": "Licença comercial",
+  "@licenseHeader": {
+    "description": "Commercial-license download and information. Purpose: license header."
+  },
+  "licenseIncluded": "Incluída no seu plano",
+  "@licenseIncluded": {
+    "description": "Commercial-license download and information. Purpose: license included."
+  },
+  "licenseNotIncluded": "Disponível com um plano ou pacote",
+  "@licenseNotIncluded": {
+    "description": "Commercial-license download and information. Purpose: license not included."
+  },
+  "licensePdfTitle": "Licença comercial (PDF)",
+  "@licensePdfTitle": {
+    "description": "Commercial-license download and information. Purpose: license pdf title."
+  },
+  "licenseGenerated": "Gerada em {date}",
+  "@licenseGenerated": {
+    "placeholders": {
+      "date": {
+        "type": "DateTime",
+        "format": "yMMMd",
+        "description": "License issuance date, converted to local time."
+      }
+    },
+    "description": "Commercial-license download and information. Purpose: license generated."
+  },
+  "licenseId": "ID da licença: {id}",
+  "@licenseId": {
+    "placeholders": {
+      "id": {
+        "type": "String",
+        "description": "Account or license identifier; preserve it verbatim."
+      }
+    },
+    "description": "Commercial-license download and information. Purpose: license id."
+  },
+  "licenseUsesTitle": "Você pode usar esta música para:",
+  "@licenseUsesTitle": {
+    "description": "Commercial-license download and information. Purpose: license uses title."
+  },
+  "usePersonal": "Uso pessoal",
+  "@usePersonal": {
+    "description": "Commercial-license permitted uses. Purpose: use personal."
+  },
+  "usePersonalDetail": "Presentes, lembranças, sem fins comerciais",
+  "@usePersonalDetail": {
+    "description": "Commercial-license permitted uses. Purpose: use personal detail."
+  },
+  "useAds": "Anúncios e marketing",
+  "@useAds": {
+    "description": "Commercial-license permitted uses. Purpose: use ads."
+  },
+  "useAdsDetail": "Promoções, campanhas pagas",
+  "@useAdsDetail": {
+    "description": "Commercial-license permitted uses. Purpose: use ads detail."
+  },
+  "useSocial": "Redes sociais",
+  "@useSocial": {
+    "description": "Commercial-license permitted uses. Purpose: use social."
+  },
+  "useSocialDetail": "TikTok, Instagram, YouTube etc.",
+  "@useSocialDetail": {
+    "description": "Commercial-license permitted uses. Purpose: use social detail."
+  },
+  "usePodcasts": "Podcasts e vídeos",
+  "@usePodcasts": {
+    "description": "Commercial-license permitted uses. Purpose: use podcasts."
+  },
+  "usePodcastsDetail": "Conteúdo monetizado",
+  "@usePodcastsDetail": {
+    "description": "Commercial-license permitted uses. Purpose: use podcasts detail."
+  },
+  "licenseDetailsNote": "Todos os detalhes estão no PDF da licença.",
+  "@licenseDetailsNote": {
+    "description": "Commercial-license download and information. Purpose: license details note."
+  },
+  "saveEnjoyHeader": "Salve e aproveite",
+  "@saveEnjoyHeader": {
+    "description": "Save and export actions. Purpose: save enjoy header."
+  },
+  "saveToFiles": "Salvar em Arquivos",
+  "@saveToFiles": {
+    "description": "Save and export actions. Purpose: save to files."
+  },
+  "addToMusic": "Adicionar ao Música",
+  "@addToMusic": {
+    "description": "Export action. Purpose: add to music."
+  },
+  "synthIdNote": "Esta música contém uma marca d’água SynthID que a identifica como conteúdo gerado por IA, mesmo depois de baixada.",
+  "@synthIdNote": {
+    "description": "AI watermark explanation. Purpose: synth id note."
+  },
+  "wavNeedsPremier": "Downloads em WAV fazem parte do Premier.",
+  "@wavNeedsPremier": {
+    "description": "WAV download availability. Purpose: wav needs premier."
+  },
+  "wavUnavailable": "Esta música não tem arquivo WAV. Arquivos WAV podem ser salvos em até 24 horas após a criação da música.",
+  "@wavUnavailable": {
+    "description": "A Premier user tried to save WAV for a song that has no WAV render."
+  },
+  "libraryFilterAll": "Todas",
+  "@libraryFilterAll": {
+    "description": "Saved-song library. Purpose: library filter all."
+  },
+  "libraryJustBecause": "Só porque sim",
+  "@libraryJustBecause": {
+    "description": "Library section for songs without a template occasion"
+  },
+  "libraryPlay": "Tocar {title}",
+  "@libraryPlay": {
+    "placeholders": {
+      "title": {
+        "type": "String",
+        "description": "Localized song title; may contain a user-provided recipient name."
+      }
+    },
+    "description": "Saved-song library. Purpose: library play."
+  },
+  "libraryActions": "Ações para {title}",
+  "@libraryActions": {
+    "placeholders": {
+      "title": {
+        "type": "String",
+        "description": "Localized song title; may contain a user-provided recipient name."
+      }
+    },
+    "description": "Saved-song library. Purpose: library actions."
+  },
+  "libraryDeleteTitle": "Apagar esta música?",
+  "@libraryDeleteTitle": {
+    "description": "Saved-song library. Purpose: library delete title."
+  },
+  "libraryDeleteBody": "Ela será removida deste aparelho. Se a sincronização do iCloud estiver ligada, também dos seus outros aparelhos.",
+  "@libraryDeleteBody": {
+    "description": "Saved-song library. Purpose: library delete body."
+  },
+  "libraryDeleted": "Música apagada",
+  "@libraryDeleted": {
+    "description": "Saved-song library. Purpose: library deleted."
+  },
+  "libraryFailed": "Não concluída",
+  "@libraryFailed": {
+    "description": "Saved-song library. Purpose: library failed."
+  },
+  "libraryNoMatch": "Ainda não há músicas para esta ocasião.",
+  "@libraryNoMatch": {
+    "description": "Saved-song library. Purpose: library no match."
+  },
+  "detailFullGenerated": "Música completa gerada",
+  "@detailFullGenerated": {
+    "description": "Work details screen. Purpose: detail full generated."
+  },
+  "detailPreviewGenerated": "Prévia gerada",
+  "@detailPreviewGenerated": {
+    "description": "Work details screen. Purpose: detail preview generated."
+  },
+  "detailGeneratedOn": "Gerada em {date}",
+  "@detailGeneratedOn": {
+    "placeholders": {
+      "date": {
+        "type": "DateTime",
+        "format": "yMMMd",
+        "description": "Song creation date, converted to local time."
+      }
+    },
+    "description": "Work details screen. Purpose: detail generated on."
+  },
+  "detailPromptUsed": "Dados usados",
+  "@detailPromptUsed": {
+    "description": "Work details screen. Purpose: detail prompt used."
+  },
+  "detailOccasion": "Ocasião",
+  "@detailOccasion": {
+    "description": "Work details screen. Purpose: detail occasion."
+  },
+  "detailCountry": "País",
+  "@detailCountry": {
+    "description": "Work details screen. Purpose: detail country."
+  },
+  "detailGenre": "Gênero",
+  "@detailGenre": {
+    "description": "Work details screen. Purpose: detail genre."
+  },
+  "detailKeywords": "Palavras-chave",
+  "@detailKeywords": {
+    "description": "Work details screen. Purpose: detail keywords."
+  },
+  "detailDescription": "Descrição",
+  "@detailDescription": {
+    "description": "Work details screen. Purpose: detail description."
+  },
+  "detailLyrics": "Letra",
+  "@detailLyrics": {
+    "description": "Work details screen. Purpose: detail lyrics."
+  },
+  "detailGenerationId": "ID de geração",
+  "@detailGenerationId": {
+    "description": "Work details screen. Purpose: detail generation id."
+  },
+  "detailRegenerate": "Gerar de novo no mesmo estilo",
+  "@detailRegenerate": {
+    "description": "Work details screen. Purpose: detail regenerate."
+  },
+  "detailCustomGenre": "Conforme a descrição",
+  "@detailCustomGenre": {
+    "description": "Work details screen. Purpose: detail custom genre."
+  },
+  "settingsSectionPlan": "Compras",
+  "@settingsSectionPlan": {
+    "description": "Settings screen. Purpose: settings section plan."
+  },
+  "settingsSectionLibrary": "Biblioteca",
+  "@settingsSectionLibrary": {
+    "description": "Settings screen. Purpose: settings section library."
+  },
+  "settingsSectionAbout": "Sobre",
+  "@settingsSectionAbout": {
+    "description": "Settings screen. Purpose: settings section about."
+  },
+  "settingsRestore": "Restaurar compras",
+  "@settingsRestore": {
+    "description": "Settings screen. Purpose: settings restore."
+  },
+  "settingsManage": "Gerenciar assinatura",
+  "@settingsManage": {
+    "description": "Settings screen. Purpose: settings manage."
+  },
+  "settingsICloud": "Sincronização do iCloud",
+  "@settingsICloud": {
+    "description": "Settings screen. Purpose: settings i cloud."
+  },
+  "settingsICloudOn": "As músicas sincronizam entre seus aparelhos",
+  "@settingsICloudOn": {
+    "description": "Settings screen. Purpose: settings i cloud on."
+  },
+  "settingsICloudOff": "As músicas ficam neste aparelho",
+  "@settingsICloudOff": {
+    "description": "Settings screen. Purpose: settings i cloud off."
+  },
+  "settingsICloudUnavailable": "Entre no iCloud em Ajustes para sincronizar",
+  "@settingsICloudUnavailable": {
+    "description": "Settings screen. Purpose: settings i cloud unavailable."
+  },
+  "settingsLyricsLanguage": "Idioma padrão da letra",
+  "@settingsLyricsLanguage": {
+    "description": "Settings screen. Purpose: settings lyrics language."
+  },
+  "settingsLyricsLanguageAuto": "Conforme o país",
+  "@settingsLyricsLanguageAuto": {
+    "description": "Settings screen. Purpose: settings lyrics language auto."
+  },
+  "settingsTerms": "Termos de Uso",
+  "@settingsTerms": {
+    "description": "Settings screen. Purpose: settings terms."
+  },
+  "settingsPrivacy": "Política de Privacidade",
+  "@settingsPrivacy": {
+    "description": "Settings screen. Purpose: settings privacy."
+  },
+  "settingsVersion": "Versão {version}",
+  "@settingsVersion": {
+    "placeholders": {
+      "version": {
+        "type": "String",
+        "description": "App version string from the device profile."
+      }
+    },
+    "description": "Settings screen. Purpose: settings version."
+  },
+  "aboutTitle": "Sobre a geração",
+  "@aboutTitle": {
+    "description": "About generation and privacy. Purpose: about title."
+  },
+  "aboutSubtitle": "Como o Songlet cria suas músicas",
+  "@aboutSubtitle": {
+    "description": "About generation and privacy. Purpose: about subtitle."
+  },
+  "aboutLyriaTitle": "Com o Lyria 3 do Google",
+  "@aboutLyriaTitle": {
+    "description": "About generation and privacy. Purpose: about lyria title."
+  },
+  "aboutLyriaBody": "As músicas são geradas pelo Lyria 3 do Google por meio da API Gemini. O Lyria 3 é um modelo de geração musical que transforma suas ideias em músicas originais.",
+  "@aboutLyriaBody": {
+    "description": "About generation and privacy. Purpose: about lyria body."
+  },
+  "aboutWatermarkTitle": "Marca d’água integrada",
+  "@aboutWatermarkTitle": {
+    "description": "About generation and privacy. Purpose: about watermark title."
+  },
+  "aboutWatermarkBody": "Toda música inclui uma marca d’água SynthID do Google. Ela ajuda a identificar música gerada por IA e não pode ser removida.",
+  "@aboutWatermarkBody": {
+    "description": "About generation and privacy. Purpose: about watermark body."
+  },
+  "aboutImitationTitle": "Sem imitar artistas reais",
+  "@aboutImitationTitle": {
+    "description": "About generation and privacy. Purpose: about imitation title."
+  },
+  "aboutImitationBody": "O Songlet nunca imita artistas reais, suas vozes ou estilos específicos. As músicas são originais e criadas a partir das suas ideias, descrições e fotos.",
+  "@aboutImitationBody": {
+    "description": "About generation and privacy. Purpose: about imitation body."
+  },
+  "aboutPrivacyTitle": "Sua privacidade importa",
+  "@aboutPrivacyTitle": {
+    "description": "About generation and privacy. Purpose: about privacy title."
+  },
+  "aboutPrivacyBody": "Fotos e descrições são apagadas dos nossos servidores em até 24 horas. Não guardamos suas imagens nem descrições depois que a música é gerada.",
+  "@aboutPrivacyBody": {
+    "description": "About generation and privacy. Purpose: about privacy body."
+  },
+  "aboutBanner": "Toda música que você compartilha é identificada como gerada por IA.",
+  "@aboutBanner": {
+    "description": "About generation and privacy. Purpose: about banner."
+  },
+  "aboutFooter": "Songlet {version} · Feito com Google Lyria 3",
+  "@aboutFooter": {
+    "placeholders": {
+      "version": {
+        "type": "String",
+        "description": "App version string from the device profile."
+      }
+    },
+    "description": "About generation and privacy. Purpose: about footer."
+  },
+  "festivalKicker": "Viva a sua história",
+  "@festivalKicker": {
+    "description": "Festival creation screen. Purpose: festival kicker."
+  },
+  "festivalComing": "está chegando!",
+  "@festivalComing": {
+    "description": "Festival creation screen. Purpose: festival coming."
+  },
+  "festivalBody": "Crie uma música única para celebrar essa energia.",
+  "@festivalBody": {
+    "description": "Festival creation screen. Purpose: festival body."
+  },
+  "festivalCta": "Fazer uma música de {festival}",
+  "@festivalCta": {
+    "placeholders": {
+      "festival": {
+        "type": "String",
+        "description": "Localized festival name."
+      }
+    },
+    "description": "Festival creation screen. Purpose: festival cta."
+  },
+  "festivalPickOccasion": "Escolha uma ocasião e comece a criar",
+  "@festivalPickOccasion": {
+    "description": "Festival creation screen. Purpose: festival pick occasion."
+  },
+  "festivalLanguagesTitle": "Músicas no seu idioma",
+  "@festivalLanguagesTitle": {
+    "description": "Festival creation screen. Purpose: festival languages title."
+  },
+  "festivalLanguagesBody": "Crie músicas em {language} e em mais 12 idiomas",
+  "@festivalLanguagesBody": {
+    "placeholders": {
+      "language": {
+        "type": "String",
+        "description": "Localized lyrics-language name."
+      }
+    },
+    "description": "Festival creation screen. Purpose: festival languages body."
+  },
+  "unavailableTitle": "Temporariamente indisponível",
+  "@unavailableTitle": {
+    "description": "Service availability screen. Purpose: unavailable title."
+  },
+  "unavailableMessage": "O Songlet não consegue criar músicas agora. Sua biblioteca continua funcionando — tente de novo daqui a pouco.",
+  "@unavailableMessage": {
+    "description": "Service availability screen. Purpose: unavailable message."
+  },
+  "paywallHeroTitle": "Transforme em música completa",
+  "@paywallHeroTitle": {
+    "description": "Purchase screen. Purpose: paywall hero title."
+  },
+  "paywallHeroSubtitle": "Leve sua ideia a uma música completa, com mais qualidade e todos os direitos.",
+  "@paywallHeroSubtitle": {
+    "description": "Purchase screen. Purpose: paywall hero subtitle."
+  },
+  "paywallBenefitSongs": "Mais músicas",
+  "@paywallBenefitSongs": {
+    "description": "Purchase screen. Purpose: paywall benefit songs."
+  },
+  "paywallBenefitQuality": "Mais qualidade",
+  "@paywallBenefitQuality": {
+    "description": "Purchase screen. Purpose: paywall benefit quality."
+  },
+  "paywallBenefitCommercial": "Uso comercial",
+  "@paywallBenefitCommercial": {
+    "description": "Purchase screen. Purpose: paywall benefit commercial."
+  },
+  "planSongs": "{count, plural, one{{count} música completa por mês} other{{count} músicas completas por mês}}",
+  "@planSongs": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Full-song allowance per month for this plan and storefront."
+      }
+    },
+    "description": "Purchase screen subscription benefits. Purpose: plan songs."
+  },
+  "planPreviews": "{count, plural, one{{count} prévia por mês} other{{count} prévias por mês}}",
+  "@planPreviews": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Preview allowance per month for this plan and storefront."
+      }
+    },
+    "description": "Purchase screen subscription benefits. Purpose: plan previews."
+  },
+  "planMp3": "Download em MP3",
+  "@planMp3": {
+    "description": "Purchase screen subscription benefits. Purpose: plan mp3."
+  },
+  "planMp3Wav": "Download em MP3 + WAV",
+  "@planMp3Wav": {
+    "description": "Purchase screen subscription benefits. Purpose: plan mp3 wav."
+  },
+  "planLicense": "Licença comercial",
+  "@planLicense": {
+    "description": "Purchase screen subscription benefits. Purpose: plan license."
+  },
+  "planPriority": "Geração prioritária",
+  "@planPriority": {
+    "description": "Purchase screen subscription benefits. Purpose: plan priority."
+  },
+  "planTrial": "Teste grátis de {days} dias",
+  "@planTrial": {
+    "placeholders": {
+      "days": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Trial duration in days reported by StoreKit."
+      }
+    },
+    "description": "Purchase screen subscription benefits. Purpose: plan trial."
+  },
+  "planPerYear": "{price}/ano",
+  "@planPerYear": {
+    "placeholders": {
+      "price": {
+        "type": "String",
+        "description": "Unmodified StoreKit Product.displayPrice; never format or parse this value."
+      }
+    },
+    "description": "Purchase screen subscription benefits. Purpose: plan per year."
+  },
+  "planPerMonth": "{price}/mês",
+  "@planPerMonth": {
+    "placeholders": {
+      "price": {
+        "type": "String",
+        "description": "Unmodified StoreKit Product.displayPrice; never format or parse this value."
+      }
+    },
+    "description": "Purchase screen subscription benefits. Purpose: plan per month."
+  },
+  "packTitle": "Precisa de só algumas?",
+  "@packTitle": {
+    "description": "Purchase screen one-time song pack. Purpose: pack title."
+  },
+  "packSubtitle": "{count, plural, one{Pacote de {count} música} other{Pacote de {count} músicas}}",
+  "@packSubtitle": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Full songs granted by this one-time pack."
+      }
+    },
+    "description": "Purchase screen one-time song pack. Purpose: pack subtitle."
+  },
+  "packNote": "não expira",
+  "@packNote": {
+    "description": "Purchase screen one-time song pack. Purpose: pack note."
+  },
+  "valueForever": "Suas músicas, para sempre",
+  "@valueForever": {
+    "description": "Purchase screen benefits. Purpose: value forever."
+  },
+  "valueDownloads": "Downloads em alta qualidade",
+  "@valueDownloads": {
+    "description": "Purchase screen benefits. Purpose: value downloads."
+  },
+  "valueCommercial": "Uso comercial permitido",
+  "@valueCommercial": {
+    "description": "Purchase screen benefits. Purpose: value commercial."
+  },
+  "valuePrivate": "Privacidade em primeiro lugar",
+  "@valuePrivate": {
+    "description": "Purchase screen benefits. Purpose: value private."
+  },
+  "paywallTrialDisclosure": "Após o teste grátis, serão cobrados {pricePerPeriod} automaticamente. Cancele quando quiser antes do fim do teste.",
+  "@paywallTrialDisclosure": {
+    "description": "Paywall disclosure for a selected subscription with a free trial. States the actual recurring price and billing period after the trial, and that cancellation is possible before the trial ends. Shown together with the full auto-renewal notice.",
+    "placeholders": {
+      "pricePerPeriod": {
+        "type": "String",
+        "description": "Localized price with the selected subscription’s billing period (planPerMonth or planPerYear). Its price portion is the unmodified StoreKit Product.displayPrice."
+      }
+    }
+  },
+  "paywallSubscribe": "Assinar",
+  "@paywallSubscribe": {
+    "description": "Purchase screen. Purpose: paywall subscribe."
+  },
+  "paywallBuyPack": "Comprar pacote",
+  "@paywallBuyPack": {
+    "description": "Purchase screen. Purpose: paywall buy pack."
+  },
+  "templateBirthdayWish": "Parabéns",
+  "@templateBirthdayWish": {
+    "description": "Song template and creation form. Purpose: template birthday wish."
+  },
+  "templateBirthdayWishHint": "Uma música especial para um dia especial",
+  "@templateBirthdayWishHint": {
+    "description": "Song template and creation form. Purpose: template birthday wish hint."
+  },
+  "templateBirthdayParty": "Festa de aniversário",
+  "@templateBirthdayParty": {
+    "description": "Song template and creation form. Purpose: template birthday party."
+  },
+  "templateBirthdayPartyHint": "Anime a festa do aniversariante",
+  "@templateBirthdayPartyHint": {
+    "description": "Song template and creation form. Purpose: template birthday party hint."
+  },
+  "templateLoveStory": "História de amor",
+  "@templateLoveStory": {
+    "description": "Song template and creation form. Purpose: template love story."
+  },
+  "templateLoveStoryHint": "A história de vocês em forma de música",
+  "@templateLoveStoryHint": {
+    "description": "Song template and creation form. Purpose: template love story hint."
+  },
+  "templateThankAFriend": "Obrigado, amigo",
+  "@templateThankAFriend": {
+    "description": "Song template and creation form. Purpose: template thank a friend."
+  },
+  "templateThankAFriendHint": "Agradeça como as palavras não conseguem",
+  "@templateThankAFriendHint": {
+    "description": "Song template and creation form. Purpose: template thank a friend hint."
+  },
+  "templatePartyInvite": "Convite para festa",
+  "@templatePartyInvite": {
+    "description": "Song template and creation form. Purpose: template party invite."
+  },
+  "templatePartyInviteHint": "Chame todo mundo para a festa",
+  "@templatePartyInviteHint": {
+    "description": "Song template and creation form. Purpose: template party invite hint."
+  },
+  "templateWedding": "Casamento",
+  "@templateWedding": {
+    "description": "Song template and creation form. Purpose: template wedding."
+  },
+  "templateWeddingHint": "Uma música para o momento eterno deles",
+  "@templateWeddingHint": {
+    "description": "Song template and creation form. Purpose: template wedding hint."
+  },
+  "templateInMemory": "Em memória",
+  "@templateInMemory": {
+    "description": "Song template and creation form. Purpose: template in memory."
+  },
+  "templateInMemoryHint": "Homenageie alguém querido",
+  "@templateInMemoryHint": {
+    "description": "Song template and creation form. Purpose: template in memory hint."
+  },
+  "templateFestival": "Festas",
+  "@templateFestival": {
+    "description": "Song template and creation form. Purpose: template festival."
+  },
+  "templateFestivalHint": "Votos carinhosos para uma época especial",
+  "@templateFestivalHint": {
+    "description": "Song template and creation form. Purpose: template festival hint."
+  },
+  "templateRingtone": "Toque",
+  "@templateRingtone": {
+    "description": "Song template and creation form. Purpose: template ringtone."
+  },
+  "templateRingtoneHint": "Um loop curto só seu",
+  "@templateRingtoneHint": {
+    "description": "Song template and creation form. Purpose: template ringtone hint."
+  },
+  "templateTeamAnthem": "Hino do time",
+  "@templateTeamAnthem": {
+    "description": "Song template and creation form. Purpose: template team anthem."
+  },
+  "templateTeamAnthemHint": "Anime o time e a torcida",
+  "@templateTeamAnthemHint": {
+    "description": "Song template and creation form. Purpose: template team anthem hint."
+  },
+  "templateSportsRecap": "Resumo do jogo",
+  "@templateSportsRecap": {
+    "description": "Song template and creation form. Purpose: template sports recap."
+  },
+  "templateSportsRecapHint": "O grande jogo em forma de música",
+  "@templateSportsRecapHint": {
+    "description": "Song template and creation form. Purpose: template sports recap hint."
+  },
+  "templateRapBattle": "Batalha de rap",
+  "@templateRapBattle": {
+    "description": "Song template and creation form. Purpose: template rap battle."
+  },
+  "templateRapBattleHint": "Rimas amigáveis para um rival amigável",
+  "@templateRapBattleHint": {
+    "description": "Song template and creation form. Purpose: template rap battle hint."
+  },
+  "templateComedy": "Comédia",
+  "@templateComedy": {
+    "description": "Song template and creation form. Purpose: template comedy."
+  },
+  "templateComedyHint": "Piadas internas, agora com refrão",
+  "@templateComedyHint": {
+    "description": "Song template and creation form. Purpose: template comedy hint."
+  },
+  "templatePetAnthem": "Hino do pet",
+  "@templatePetAnthem": {
+    "description": "Song template and creation form. Purpose: template pet anthem."
+  },
+  "templatePetAnthemHint": "Uma música-tema para o seu melhor amigo",
+  "@templatePetAnthemHint": {
+    "description": "Song template and creation form. Purpose: template pet anthem hint."
+  },
+  "templateHometown": "Minha cidade",
+  "@templateHometown": {
+    "description": "Song template and creation form. Purpose: template hometown."
+  },
+  "templateHometownHint": "Amor pelo lugar que você chama de lar",
+  "@templateHometownHint": {
+    "description": "Song template and creation form. Purpose: template hometown hint."
+  },
+  "templateBusinessPromo": "Promo do negócio",
+  "@templateBusinessPromo": {
+    "description": "Song template and creation form. Purpose: template business promo."
+  },
+  "templateBusinessPromoHint": "Um jingle chiclete para sua loja ou marca",
+  "@templateBusinessPromoHint": {
+    "description": "Song template and creation form. Purpose: template business promo hint."
+  },
+  "templateCustom": "Sua própria ideia",
+  "@templateCustom": {
+    "description": "Occasion name for a free-form prompt"
+  },
+  "mvRecommended": "Recomendado",
+  "@mvRecommended": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv recommended."
+  },
+  "mvSeconds": "{seconds} s",
+  "@mvSeconds": {
+    "description": "Video length in seconds.",
+    "placeholders": {
+      "seconds": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Video, countdown, or generation duration in seconds."
+      }
+    }
+  },
+  "mvViewProgress": "Ver o progresso",
+  "@mvViewProgress": {
+    "description": "Opens the progress of a video being made."
+  },
+  "mvIntentWaiting": "{level} está esperando créditos",
+  "@mvIntentWaiting": {
+    "description": "Hub banner: a video refused for credits can be finished.",
+    "placeholders": {
+      "level": {
+        "type": "String",
+        "description": "Localized music-video level name."
+      }
+    }
+  },
+  "mvSongExpiredAction": "Fazer a música de novo",
+  "@mvSongExpiredAction": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv song expired action."
+  },
+  "mvQuotaNeed": "{level} precisa de {required, plural, one{{required} crédito} other{{required} créditos}}. Você tem {available}.",
+  "@mvQuotaNeed": {
+    "description": "Quota sheet body.",
+    "placeholders": {
+      "level": {
+        "type": "String",
+        "description": "Localized music-video level name."
+      },
+      "required": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Video credits required to create the selected video."
+      },
+      "available": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Video credits currently available to the account."
+      }
+    }
+  },
+  "mvQuotaBuyAndContinue": "Comprar e continuar",
+  "@mvQuotaBuyAndContinue": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv quota buy and continue."
+  },
+  "mvQuotaMayNeedTwice": "Onde você está, um pacote pode não bastar — talvez precise de dois.",
+  "@mvQuotaMayNeedTwice": {
+    "description": "T2/T3 storefronts: a pack grants fewer credits."
+  },
+  "mvQuotaAutoRetry": "Seu vídeo começa assim que a compra for concluída.",
+  "@mvQuotaAutoRetry": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv quota auto retry."
+  },
+  "mvAutoLyricMaking": "Fazendo seu vídeo com letra",
+  "@mvAutoLyricMaking": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv auto lyric making."
+  },
+  "mvAutoChorusDetail": "Feito com esta música e seus créditos",
+  "@mvAutoChorusDetail": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv auto chorus detail."
+  },
+  "mvAutoReady": "{level} está pronto",
+  "@mvAutoReady": {
+    "description": "Automatic video finished.",
+    "placeholders": {
+      "level": {
+        "type": "String",
+        "description": "Localized music-video level name."
+      }
+    }
+  },
+  "mvAutoView": "Ver",
+  "@mvAutoView": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv auto view."
+  },
+  "mvUpgradeChorus": "Fazer um vídeo do refrão",
+  "@mvUpgradeChorus": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv upgrade chorus."
+  },
+  "mvAutoFailed": "O vídeo não pôde começar",
+  "@mvAutoFailed": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv auto failed."
+  },
+  "mvLeaveHint": "Você pode sair desta tela — avisamos quando ele deve estar pronto.",
+  "@mvLeaveHint": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv leave hint."
+  },
+  "mvCreditsBack": "{credits, plural, one{Seu crédito foi devolvido.} other{Seus {credits} créditos foram devolvidos.}}",
+  "@mvCreditsBack": {
+    "description": "A failed video was refunded.",
+    "placeholders": {
+      "credits": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Number of video credits, not a monetary price."
+      }
+    }
+  },
+  "mvFailedTitle": "Este vídeo não foi concluído",
+  "@mvFailedTitle": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv failed title."
+  },
+  "mvRejectedTitle": "Uma foto não pôde ser usada",
+  "@mvRejectedTitle": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv rejected title."
+  },
+  "mvRejectedBody": "O modelo de vídeo recusou uma das suas fotos de referência. Ajuste as fotos e tente de novo.",
+  "@mvRejectedBody": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv rejected body."
+  },
+  "mvAdjustPhotos": "Ajustar fotos e tentar de novo",
+  "@mvAdjustPhotos": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv adjust photos."
+  },
+  "mvTryChorus": "Fazer um vídeo do refrão",
+  "@mvTryChorus": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv try chorus."
+  },
+  "mvPreparingPhotos": "Enviando suas fotos…",
+  "@mvPreparingPhotos": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv preparing photos."
+  },
+  "mvPreparingSubmit": "Enviando seu vídeo…",
+  "@mvPreparingSubmit": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv preparing submit."
+  },
+  "mvNotifyTitle": "Seu vídeo já deve estar pronto",
+  "@mvNotifyTitle": {
+    "description": "Local notification title at the video ETA."
+  },
+  "mvNotifyBody": "{level} — toque para assistir.",
+  "@mvNotifyBody": {
+    "description": "Local notification body.",
+    "placeholders": {
+      "level": {
+        "type": "String",
+        "description": "Localized music-video level name."
+      }
+    }
+  },
+  "mvRegenerate": "Fazer outro",
+  "@mvRegenerate": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv regenerate."
+  },
+  "mvEntryTitle": "Transformar em vídeo",
+  "@mvEntryTitle": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv entry title."
+  },
+  "mvEntrySubtitle": "Vídeos com letra, do refrão e completos, com créditos",
+  "@mvEntrySubtitle": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv entry subtitle."
+  },
+  "mvEntryDisabled": "Disponível quando a música estiver pronta",
+  "@mvEntryDisabled": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv entry disabled."
+  },
+  "mvEntryChoose": "Escolher um vídeo",
+  "@mvEntryChoose": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv entry choose."
+  },
+  "mvEntryWatch": "Assistir ao vídeo",
+  "@mvEntryWatch": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv entry watch."
+  },
+  "mvChipReady": "Vídeo",
+  "@mvChipReady": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv chip ready."
+  },
+  "mvChipMaking": "Fazendo o vídeo",
+  "@mvChipMaking": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv chip making."
+  },
+  "lengthAutoVideo": "Fazer também um vídeo com letra",
+  "@lengthAutoVideo": {
+    "description": "Song length selector. Purpose: length auto video."
+  },
+  "lengthAutoVideoHint": "Pronto alguns minutos depois da música · usa créditos",
+  "@lengthAutoVideoHint": {
+    "description": "Song length selector. Purpose: length auto video hint."
+  },
+  "lengthSongAndChorus": "Música + vídeo do refrão",
+  "@lengthSongAndChorus": {
+    "description": "Song length selector. Purpose: length song and chorus."
+  },
+  "lengthSongAndChorusHint": "A música completa e depois um vídeo do refrão de 30 segundos",
+  "@lengthSongAndChorusHint": {
+    "description": "Song length selector. Purpose: length song and chorus hint."
+  },
+  "paywallVideoGroup": "Videoclipes",
+  "@paywallVideoGroup": {
+    "description": "Purchase screen. Purpose: paywall video group."
+  },
+  "planVideoIncluded": "Sua cota também faz videoclipes",
+  "@planVideoIncluded": {
+    "description": "Purchase screen subscription benefits. Purpose: plan video included."
+  },
+  "settingsVideoCredits": "Créditos de vídeo",
+  "@settingsVideoCredits": {
+    "description": "Settings screen. Purpose: settings video credits."
+  },
+  "createGenrePop": "Pop",
+  "@createGenrePop": {
+    "description": "Genre display label in creation, playback, library, and work details for Pop. The generation request retains its original English genre value."
+  },
+  "createGenreHipHopRap": "Hip-hop e rap",
+  "@createGenreHipHopRap": {
+    "description": "Genre display label in creation, playback, library, and work details for Hip-Hop & Rap. The generation request retains its original English genre value."
+  },
+  "createGenreRock": "Rock",
+  "@createGenreRock": {
+    "description": "Genre display label in creation, playback, library, and work details for Rock. The generation request retains its original English genre value."
+  },
+  "createGenreKPop": "K-pop",
+  "@createGenreKPop": {
+    "description": "Genre display label in creation, playback, library, and work details for K-Pop. The generation request retains its original English genre value."
+  },
+  "createGenreLatin": "Latina",
+  "@createGenreLatin": {
+    "description": "Genre display label in creation, playback, library, and work details for Latin. The generation request retains its original English genre value."
+  },
+  "createGenreElectronic": "Eletrônica",
+  "@createGenreElectronic": {
+    "description": "Genre display label in creation, playback, library, and work details for Electronic. The generation request retains its original English genre value."
+  },
+  "createGenreRnb": "R&B",
+  "@createGenreRnb": {
+    "description": "Genre display label in creation, playback, library, and work details for R&B. The generation request retains its original English genre value."
+  },
+  "createGenreCountry": "Country",
+  "@createGenreCountry": {
+    "description": "Genre display label in creation, playback, library, and work details for Country. The generation request retains its original English genre value."
+  },
+  "createGenreAfrobeats": "Afrobeats",
+  "@createGenreAfrobeats": {
+    "description": "Genre display label in creation, playback, library, and work details for Afrobeats. The generation request retains its original English genre value."
+  },
+  "createGenreReggae": "Reggae",
+  "@createGenreReggae": {
+    "description": "Genre display label in creation, playback, library, and work details for Reggae. The generation request retains its original English genre value."
+  },
+  "createGenreJazzBlues": "Jazz e blues",
+  "@createGenreJazzBlues": {
+    "description": "Genre display label in creation, playback, library, and work details for Jazz & Blues. The generation request retains its original English genre value."
+  },
+  "createGenreClassical": "Clássica",
+  "@createGenreClassical": {
+    "description": "Genre display label in creation, playback, library, and work details for Classical. The generation request retains its original English genre value."
+  },
+  "createGenreFolk": "Folk",
+  "@createGenreFolk": {
+    "description": "Genre display label in creation, playback, library, and work details for Folk. The generation request retains its original English genre value."
+  },
+  "createGenreLofi": "Lo-fi",
+  "@createGenreLofi": {
+    "description": "Genre display label in creation, playback, library, and work details for Lo-Fi. The generation request retains its original English genre value."
+  },
+  "createGenreAcoustic": "Acústica",
+  "@createGenreAcoustic": {
+    "description": "Genre display label in creation, playback, library, and work details for Acoustic. The generation request retains its original English genre value."
+  },
+  "createGenreCinematic": "Trilha de cinema",
+  "@createGenreCinematic": {
+    "description": "Genre display label in creation, playback, library, and work details for Cinematic. The generation request retains its original English genre value."
+  },
+  "createGenreAmbient": "Ambient",
+  "@createGenreAmbient": {
+    "description": "Genre display label in creation, playback, library, and work details for Ambient. The generation request retains its original English genre value."
+  },
+  "createGenreBossaNova": "Bossa nova",
+  "@createGenreBossaNova": {
+    "description": "Genre display label in creation, playback, library, and work details for Bossa Nova. The generation request retains its original English genre value."
+  },
+  "createGenreIndiePop": "Pop indie",
+  "@createGenreIndiePop": {
+    "description": "Genre display label in creation, playback, library, and work details for Indie Pop. The generation request retains its original English genre value."
+  },
+  "createGenreContemporaryRnb": "R&B contemporâneo",
+  "@createGenreContemporaryRnb": {
+    "description": "Genre display label in creation, playback, library, and work details for Contemporary R&B. The generation request retains its original English genre value."
+  },
+  "createGenreAlternativeCountry": "Country alternativo",
+  "@createGenreAlternativeCountry": {
+    "description": "Genre display label in creation, playback, library, and work details for Alternative Country. The generation request retains its original English genre value."
+  },
+  "createGenreGarageRock": "Garage rock",
+  "@createGenreGarageRock": {
+    "description": "Genre display label in creation, playback, library, and work details for Garage Rock. The generation request retains its original English genre value."
+  },
+  "createGenreGrime": "Grime",
+  "@createGenreGrime": {
+    "description": "Genre display label in creation, playback, library, and work details for Grime. The generation request retains its original English genre value."
+  },
+  "createGenreIndieFolk": "Folk indie",
+  "@createGenreIndieFolk": {
+    "description": "Genre display label in creation, playback, library, and work details for Indie Folk. The generation request retains its original English genre value."
+  },
+  "createGenreSynthpop": "Synthpop",
+  "@createGenreSynthpop": {
+    "description": "Genre display label in creation, playback, library, and work details for Synthpop. The generation request retains its original English genre value."
+  },
+  "createGenrePianoBallad": "Balada de piano",
+  "@createGenrePianoBallad": {
+    "description": "Genre display label in creation, playback, library, and work details for Piano Ballad. The generation request retains its original English genre value."
+  },
+  "createGenreSurfRock": "Surf rock",
+  "@createGenreSurfRock": {
+    "description": "Genre display label in creation, playback, library, and work details for Surf Rock. The generation request retains its original English genre value."
+  },
+  "createGenreDeepHouse": "Deep house",
+  "@createGenreDeepHouse": {
+    "description": "Genre display label in creation, playback, library, and work details for Deep House. The generation request retains its original English genre value."
+  },
+  "createGenreMinimalTechno": "Techno minimalista",
+  "@createGenreMinimalTechno": {
+    "description": "Genre display label in creation, playback, library, and work details for Minimal Techno. The generation request retains its original English genre value."
+  },
+  "createGenreFrenchYeyePop": "Yé-yé francês dos anos 60",
+  "@createGenreFrenchYeyePop": {
+    "description": "Genre display label in creation, playback, library, and work details for 1960s French Yé-yé Pop. The generation request retains its original English genre value."
+  },
+  "createGenreChillout": "Chill-out",
+  "@createGenreChillout": {
+    "description": "Genre display label in creation, playback, library, and work details for Chillout. The generation request retains its original English genre value."
+  },
+  "createGenreJPopIndiePop": "J-pop indie",
+  "@createGenreJPopIndiePop": {
+    "description": "Genre display label in creation, playback, library, and work details for J-pop Indie Pop. The generation request retains its original English genre value."
+  },
+  "createGenreChiptune": "Chiptune",
+  "@createGenreChiptune": {
+    "description": "Genre display label in creation, playback, library, and work details for Chiptune. The generation request retains its original English genre value."
+  },
+  "createGenreDiscoFunk": "Disco-funk",
+  "@createGenreDiscoFunk": {
+    "description": "Genre display label in creation, playback, library, and work details for Disco Funk. The generation request retains its original English genre value."
+  },
+  "createGenreReggaeton": "Reggaeton",
+  "@createGenreReggaeton": {
+    "description": "Genre display label in creation, playback, library, and work details for Reggaeton. The generation request retains its original English genre value."
+  },
+  "createGenreCumbia": "Cumbia",
+  "@createGenreCumbia": {
+    "description": "Genre display label in creation, playback, library, and work details for Cumbia. The generation request retains its original English genre value."
+  },
+  "createGenreLatinJazz": "Jazz latino",
+  "@createGenreLatinJazz": {
+    "description": "Genre display label in creation, playback, library, and work details for Latin Jazz. The generation request retains its original English genre value."
+  },
+  "createGenreBhangra": "Bhangra",
+  "@createGenreBhangra": {
+    "description": "Genre display label in creation, playback, library, and work details for Bhangra. The generation request retains its original English genre value."
+  },
+  "createGenreIndianClassical": "Clássica indiana",
+  "@createGenreIndianClassical": {
+    "description": "Genre display label in creation, playback, library, and work details for Indian Classical. The generation request retains its original English genre value."
+  },
+  "createGenreLofiHipHop": "Hip-hop lo-fi",
+  "@createGenreLofiHipHop": {
+    "description": "Genre display label in creation, playback, library, and work details for Lo-Fi Hip Hop. The generation request retains its original English genre value."
+  },
+  "profileAccountIdWithValue": "ID da conta: {id}",
+  "@profileAccountIdWithValue": {
+    "description": "Account profile. Purpose: profile account id with value.",
+    "placeholders": {
+      "id": {
+        "type": "String",
+        "description": "Account or license identifier; preserve it verbatim."
+      }
+    }
+  },
+  "profileBalanceValue": "{balance}",
+  "@profileBalanceValue": {
+    "description": "Account profile. Purpose: profile balance value.",
+    "placeholders": {
+      "balance": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Wallet balance as an integer number of credits, not a monetary price."
+      }
+    }
+  },
+  "playerExportFileName": "{brand} – {title} ({occasion})",
+  "@playerExportFileName": {
+    "description": "Song playback screen. Purpose: player export file name.",
+    "placeholders": {
+      "brand": {
+        "type": "String",
+        "description": "Fixed Songlet brand name; do not translate."
+      },
+      "title": {
+        "type": "String",
+        "description": "Localized song title; may contain a user-provided recipient name."
+      },
+      "occasion": {
+        "type": "String",
+        "description": "Localized occasion or template name."
+      }
+    }
+  },
+  "createVocalsCustomSummary": "Automático — conforme sua descrição",
+  "@createVocalsCustomSummary": {
+    "description": "Song creation screen. Purpose: create vocals custom summary."
+  },
+  "mvChipMakingWithProgress": "Fazendo o vídeo · {progress}",
+  "@mvChipMakingWithProgress": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv chip making with progress.",
+    "placeholders": {
+      "progress": {
+        "type": "String",
+        "description": "Complete percentage formatted for the UI locale, including the percent sign."
+      }
+    }
+  },
+  "mvAutoFailureMessage": "O vídeo não pôde começar · {reason}",
+  "@mvAutoFailureMessage": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv auto failure message.",
+    "placeholders": {
+      "reason": {
+        "type": "String",
+        "description": "Localized reason the automatic video could not start."
+      }
+    }
+  },
+  "settingsVideoCreditsSummary": "Créditos de vídeo: {credits}",
+  "@settingsVideoCreditsSummary": {
+    "description": "Settings screen. Purpose: settings video credits summary.",
+    "placeholders": {
+      "credits": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Number of video credits, not a monetary price."
+      }
+    }
+  },
+  "shareLyricsAttribution": "— {aiLabel} · {brand}",
+  "@shareLyricsAttribution": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share lyrics attribution.",
+    "placeholders": {
+      "aiLabel": {
+        "type": "String",
+        "description": "Localized AI-generated attribution."
+      },
+      "brand": {
+        "type": "String",
+        "description": "Fixed Songlet brand name; do not translate."
+      }
+    }
+  },
+  "inspirationHeader": "Inspiração",
+  "@inspirationHeader": {
+    "description": "Create home: the row of inspirations (contract 02 v1.2, ADR-0029)."
+  },
+  "inspirationPlay": "Tocar {name}",
+  "@inspirationPlay": {
+    "description": "Accessibility label of the play button of an inspiration preview.",
+    "placeholders": {
+      "name": {
+        "type": "String",
+        "description": "The inspiration name as shown on its card."
+      }
+    }
+  },
+  "inspirationStop": "Parar a prévia",
+  "@inspirationStop": {
+    "description": "Accessibility label of the stop button while an inspiration preview plays."
+  },
+  "inspirationNameSoundscape": "Paisagem sonora",
+  "@inspirationNameSoundscape": {
+    "description": "Inspiration names and styles: local copy of the server {en, zh} text for other languages, looked up by the English text (ADR-0029)."
+  },
+  "inspirationStyleSoundscape": "Texturas ambientes, sem voz",
+  "@inspirationStyleSoundscape": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameBackgroundMusic": "Música de fundo",
+  "@inspirationNameBackgroundMusic": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleBackgroundMusic": "Instrumental leve para vídeos",
+  "@inspirationStyleBackgroundMusic": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameMemorizeSomething": "Para memorizar",
+  "@inspirationNameMemorizeSomething": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleMemorizeSomething": "Pop grudento para memorizar",
+  "@inspirationStyleMemorizeSomething": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameTextMessages": "Mensagens viram música",
+  "@inspirationNameTextMessages": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleTextMessages": "Pop divertido com as suas mensagens",
+  "@inspirationStyleTextMessages": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameIntroMusic": "Música de abertura",
+  "@inspirationNameIntroMusic": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleIntroMusic": "Abertura cinematográfica marcante",
+  "@inspirationStyleIntroMusic": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameMontage": "Montagem",
+  "@inspirationNameMontage": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleMontage": "Crescendo animado para melhores momentos",
+  "@inspirationStyleMontage": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameSayItWithATrack": "Diga com uma música",
+  "@inspirationNameSayItWithATrack": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleSayItWithATrack": "Balada pop emocionante",
+  "@inspirationStyleSayItWithATrack": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameBrandJingle": "Jingle de marca",
+  "@inspirationNameBrandJingle": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleBrandJingle": "Refrão curto, brilhante e marcante",
+  "@inspirationStyleBrandJingle": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameRingtone": "Toque de celular",
+  "@inspirationNameRingtone": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleRingtone": "Trecho de 30 segundos em loop",
+  "@inspirationStyleRingtone": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameStreaming": "Streaming",
+  "@inspirationNameStreaming": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleStreaming": "Abertura eletrônica animada para lives",
+  "@inspirationStyleStreaming": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameSpeechToTrack": "Da voz para a música",
+  "@inspirationNameSpeechToTrack": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleSpeechToTrack": "A sua voz virando música",
+  "@inspirationStyleSpeechToTrack": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameRapBattle": "Batalha de rap",
+  "@inspirationNameRapBattle": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleRapBattle": "Hip-hop pesado",
+  "@inspirationStyleRapBattle": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameComedy": "Humor",
+  "@inspirationNameComedy": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleComedy": "Diferente, animado e irônico",
+  "@inspirationStyleComedy": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameTeamAnthem": "Hino do time",
+  "@inspirationNameTeamAnthem": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleTeamAnthem": "Grito de guerra de rock de estádio",
+  "@inspirationStyleTeamAnthem": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameSportsRecap": "Resumo do jogo",
+  "@inspirationNameSportsRecap": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleSportsRecap": "Melhores momentos orquestrais épicos",
+  "@inspirationStyleSportsRecap": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNamePartyInvite": "Convite para a festa",
+  "@inspirationNamePartyInvite": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStylePartyInvite": "Convite dance-pop",
+  "@inspirationStylePartyInvite": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameHappyBirthday": "Feliz aniversário",
+  "@inspirationNameHappyBirthday": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleHappyBirthday": "Música de aniversário acústica e calorosa",
+  "@inspirationStyleHappyBirthday": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameFriendAppreciation": "Valeu, amigos",
+  "@inspirationNameFriendAppreciation": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleFriendAppreciation": "Indie pop de bem com a vida",
+  "@inspirationStyleFriendAppreciation": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameLoveStory": "História de amor",
+  "@inspirationNameLoveStory": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleLoveStory": "Balada romântica de R&B",
+  "@inspirationStyleLoveStory": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameBirthdayRoast": "Aniversário zoeira",
+  "@inspirationNameBirthdayRoast": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleBirthdayRoast": "Música de aniversário engraçadinha",
+  "@inspirationStyleBirthdayRoast": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameOdeToYourPet": "Ode ao seu pet",
+  "@inspirationNameOdeToYourPet": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleOdeToYourPet": "Pop fofo e saltitante",
+  "@inspirationStyleOdeToYourPet": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameHometownTribute": "Homenagem à sua cidade",
+  "@inspirationNameHometownTribute": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleHometownTribute": "Folk nostálgico",
+  "@inspirationStyleHometownTribute": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameWeatherReport": "Previsão do tempo",
+  "@inspirationNameWeatherReport": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleWeatherReport": "Groove lounge descontraído",
+  "@inspirationStyleWeatherReport": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameBusinessPromo": "Divulgação do seu negócio",
+  "@inspirationNameBusinessPromo": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleBusinessPromo": "Pop corporativo confiante",
+  "@inspirationStyleBusinessPromo": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleBirthdayWish": "Canção sincera para o dia especial",
+  "@inspirationStyleBirthdayWish": {
+    "description": "Style line of the template entry BirthdayWish (server style.en), read with the tile name in languages the server does not send; mapped by slug (ADR-0032)."
+  },
+  "inspirationStyleBirthdayParty": "Hino de festa animado para o aniversariante",
+  "@inspirationStyleBirthdayParty": {
+    "description": "Style line of the template entry BirthdayParty (server style.en), read with the tile name in languages the server does not send; mapped by slug (ADR-0032)."
+  },
+  "inspirationStyleThankAFriend": "Canção de agradecimento calorosa e sincera",
+  "@inspirationStyleThankAFriend": {
+    "description": "Style line of the template entry ThankAFriend (server style.en), read with the tile name in languages the server does not send; mapped by slug (ADR-0032)."
+  },
+  "inspirationStyleWedding": "Canção alegre e romântica para o grande dia",
+  "@inspirationStyleWedding": {
+    "description": "Style line of the template entry Wedding (server style.en), read with the tile name in languages the server does not send; mapped by slug (ADR-0032)."
+  },
+  "inspirationStyleInMemory": "Homenagem suave e esperançosa",
+  "@inspirationStyleInMemory": {
+    "description": "Style line of the template entry InMemory (server style.en), read with the tile name in languages the server does not send; mapped by slug (ADR-0032)."
+  },
+  "inspirationStyleFestival": "Saudação festiva e brilhante da estação",
+  "@inspirationStyleFestival": {
+    "description": "Style line of the template entry Festival (server style.en), read with the tile name in languages the server does not send; mapped by slug (ADR-0032)."
+  },
+  "inspirationStylePetAnthem": "Tema carinhoso e animado para o seu pet",
+  "@inspirationStylePetAnthem": {
+    "description": "Style line of the template entry PetAnthem (server style.en), read with the tile name in languages the server does not send; mapped by slug (ADR-0032)."
+  },
+  "inspirationStyleHometown": "Hino orgulhoso e nostálgico à sua cidade",
+  "@inspirationStyleHometown": {
+    "description": "Style line of the template entry Hometown (server style.en), read with the tile name in languages the server does not send; mapped by slug (ADR-0032)."
+  },
+  "settingsSectionLanguage": "Idioma",
+  "@settingsSectionLanguage": {
+    "description": "Settings section containing interface and default lyrics languages."
+  },
+  "settingsSectionProfile": "Perfil",
+  "@settingsSectionProfile": {
+    "description": "Settings section showing the account: its credits and its account ID."
+  },
+  "settingsCredits": "Créditos",
+  "@settingsCredits": {
+    "description": "Settings > Profile: label of the account's credit balance (server truth)."
+  },
+  "settingsAccountId": "ID da conta",
+  "@settingsAccountId": {
+    "description": "Settings > Profile: label of the account UUID (shown in full, for support)."
+  },
+  "settingsCopyAccountId": "Copiar ID da conta",
+  "@settingsCopyAccountId": {
+    "description": "Settings > Profile: accessibility label / tooltip of the button that copies the account ID."
+  },
+  "devSectionTitle": "Desenvolvedor (só DEV)",
+  "@devSectionTitle": {
+    "description": "Settings section shown only in DEV debug builds (developer tools)."
+  },
+  "devKeychainReset": "Apagar chaves do Keychain",
+  "@devKeychainReset": {
+    "description": "DEV-only settings row: deletes the app's iOS Keychain keys."
+  },
+  "devKeychainResetHint": "ID do dispositivo e tokens de sessão",
+  "@devKeychainResetHint": {
+    "description": "DEV-only settings row subtitle: what the Keychain reset removes."
+  },
+  "devKeychainResetConfirmTitle": "Apagar chaves do Keychain?",
+  "@devKeychainResetConfirmTitle": {
+    "description": "DEV-only confirmation dialog title before deleting the Keychain keys."
+  },
+  "devKeychainResetConfirmBody": "O ID do dispositivo e os tokens de sessão são apagados do Keychain. A conta de convidado atual não pode ser recuperada; o app entra como um novo convidado.",
+  "@devKeychainResetConfirmBody": {
+    "description": "DEV-only confirmation dialog body: consequences of deleting the Keychain keys."
+  },
+  "devKeychainResetDone": "Chaves apagadas — conectado como novo convidado",
+  "@devKeychainResetDone": {
+    "description": "DEV-only message after the Keychain keys were deleted."
+  },
+  "settingsAppLanguage": "Idioma do app",
+  "@settingsAppLanguage": {
+    "description": "Settings row and picker heading for the interface language, distinct from lyrics language."
+  },
+  "settingsLanguageSystem": "Usar idioma do sistema",
+  "@settingsLanguageSystem": {
+    "description": "Interface-language picker option that follows the system’s preferred supported language."
+  },
+  "settingsLanguageSystemValue": "Sistema ({language})",
+  "@settingsLanguageSystemValue": {
+    "description": "Settings row value when the interface language follows the system.",
+    "placeholders": {
+      "language": {
+        "type": "String",
+        "description": "Autonym of the currently resolved supported system locale."
+      }
+    }
+  },
+  "settingsLanguageNativeName": "Português (Brasil)",
+  "@settingsLanguageNativeName": {
+    "description": "This language’s own name (autonym); used to identify it in every interface-language picker, regardless of the current UI language."
+  },
+  "settingsLanguageSaveFailed": "Não foi possível salvar o idioma. Tente de novo.",
+  "@settingsLanguageSaveFailed": {
+    "description": "Interface-language preference could not be saved; the previous selection remains. Explain the failure and invite retry."
+  },
+  "settingsLyricsLanguageHint": "Vale para novas músicas.",
+  "@settingsLyricsLanguageHint": {
+    "description": "Default lyrics-language setting helper. Changing the preference affects new songs, not an existing draft."
+  },
+  "composerRemoveInspiration": "Remover {name}",
+  "@composerRemoveInspiration": {
+    "description": "Accessibility label of the close button on the picked idea at the head of the composer.",
+    "placeholders": {
+      "name": {
+        "type": "String",
+        "description": "Inspiration display name; do not translate."
+      }
+    }
+  },
+  "composerPromptHint": "Descreva a música ou escolha uma ideia acima",
+  "@composerPromptHint": {
+    "description": "Placeholder of the create home's prompt field on phones, where the idea grid is above the composer (P01, state A)."
+  },
+  "composerPromptHintWide": "Descreva a música ou escolha uma ideia",
+  "@composerPromptHintWide": {
+    "description": "Placeholder of the create home's prompt field on iPad, where the idea grid is beside the composer (P01, state A)."
+  },
+  "composerWordsLabel": "Suas palavras",
+  "@composerWordsLabel": {
+    "description": "Label of the field for the user's own text when the picked idea needs it (composer state B); the idea's hint is its placeholder."
+  },
+  "composerPhotosAttached": "{count, plural, one{{count} foto adicionada} other{{count} fotos adicionadas}}",
+  "@composerPhotosAttached": {
+    "description": "Accessibility label of the composer's photo button once photos are added.",
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Number of photos added (1–10)."
+      }
+    }
+  },
+  "composerOptionsSummary": "Opções da música: {summary}",
+  "@composerOptionsSummary": {
+    "description": "Accessibility label of the composer's summary row; it opens the song options.",
+    "placeholders": {
+      "summary": {
+        "type": "String",
+        "description": "The current length, vocals and genre, comma-separated, already localized."
+      }
+    }
+  },
+  "composerOptionsShow": "Mostrar opções",
+  "@composerOptionsShow": {
+    "description": "Accessibility hint of the composer's summary row while the song options are folded."
+  },
+  "composerOptionsHide": "Ocultar opções",
+  "@composerOptionsHide": {
+    "description": "Accessibility hint of the composer's summary row while the song options are shown."
+  },
+  "composerSummaryAnyVocals": "Qualquer vocal",
+  "@composerSummaryAnyVocals": {
+    "description": "Composer summary row: the vocals follow the user's description (the Vocals panel's Custom)."
+  },
+  "composerSummaryAnyGenre": "Qualquer gênero",
+  "@composerSummaryAnyGenre": {
+    "description": "Composer summary row: no genre chosen, the description decides (the Genre panel's Custom)."
+  },
+  "composerSummaryLyrics": "Letra própria",
+  "@composerSummaryLyrics": {
+    "description": "Composer summary row: the user wrote their own lyrics (shown while the options are folded)."
+  },
+  "composerSummaryVideo": "Vídeo com letra",
+  "@composerSummaryVideo": {
+    "description": "Composer summary row: a lyric video will be made after the full song (shown while the options are folded)."
+  },
+  "createPreviewLabel": "{cost, select, free{Criar prévia · grátis} preview{Criar prévia · 1 prévia} other{Criar prévia}}",
+  "@createPreviewLabel": {
+    "description": "The composer's primary button for a 30-second preview; the cost part follows the account's ledger (ADR-0035).",
+    "placeholders": {
+      "cost": {
+        "type": "String",
+        "description": "What the action spends, from the account's ledger (ADR-0035): free, preview, song or other. Selector keywords are code; translate only the phrases."
+      }
+    }
+  },
+  "createPreviewForLabel": "{cost, select, free{Criar a prévia de {name} · grátis} preview{Criar a prévia de {name} · 1 prévia} other{Criar a prévia de {name}}}",
+  "@createPreviewForLabel": {
+    "description": "The composer's primary button for a 30-second preview of a picked idea with a name; the cost part follows the account's ledger (ADR-0035).",
+    "placeholders": {
+      "name": {
+        "type": "String",
+        "description": "The recipient's name as typed; do not translate."
+      },
+      "cost": {
+        "type": "String",
+        "description": "What the action spends, from the account's ledger (ADR-0035): free, preview, song or other. Selector keywords are code; translate only the phrases."
+      }
+    }
+  },
+  "createFullSongLabel": "{cost, select, song{Criar música completa · 1 música} other{Criar música completa}}",
+  "@createFullSongLabel": {
+    "description": "The composer's primary button for the full ~2-minute song; the cost part follows the account's ledger (ADR-0035).",
+    "placeholders": {
+      "cost": {
+        "type": "String",
+        "description": "What the action spends, from the account's ledger (ADR-0035): free, preview, song or other. Selector keywords are code; translate only the phrases."
+      }
+    }
+  },
+  "voiceUseText": "Usar este texto",
+  "@voiceUseText": {
+    "description": "P03a: the dictation's only action — put the transcript in the prompt field (dictation is free input)."
+  },
+  "mvAutoCountdown": "{level} começa em {seconds} s",
+  "@mvAutoCountdown": {
+    "description": "Banner title while an automatic music video counts down before it starts (and is charged); the user can cancel.",
+    "placeholders": {
+      "level": {
+        "type": "String",
+        "description": "Video kind, e.g. Lyric video or Chorus video; already translated."
+      },
+      "seconds": {
+        "type": "int",
+        "description": "Seconds left."
+      }
+    }
+  },
+  "planPerWeek": "{price}/semana",
+  "@planPerWeek": {
+    "description": "Subscription billing period: price per week, e.g. $4.99/week.",
+    "placeholders": {
+      "price": {
+        "type": "String",
+        "description": "Store-formatted price."
+      }
+    }
+  },
+  "planCreditsWeekly": "Novos créditos toda semana",
+  "@planCreditsWeekly": {
+    "description": "Plan benefit line for the weekly subscription: credits are renewed every week (no fixed song count, never 'unlimited')."
+  },
+  "paywallIntroOffer": "{percent}% de desconto {unit, select, day{no primeiro dia} week{na primeira semana} month{no primeiro mês} year{no primeiro ano} other{no primeiro período}}",
+  "@paywallIntroOffer": {
+    "description": "Plan card caption for an introductory discount read from the App Store, e.g. 50% off your first week.",
+    "placeholders": {
+      "percent": {
+        "type": "int",
+        "description": "Discount percentage."
+      },
+      "unit": {
+        "type": "String",
+        "description": "Billing period unit of the offer: day, week, month or year."
+      }
+    }
+  },
+  "paywallIntroDisclosure": "Após o preço promocional de {introPrice}, você será cobrado {pricePerPeriod} automaticamente. Cancele quando quiser antes da renovação.",
+  "@paywallIntroDisclosure": {
+    "description": "Paywall disclosure for a selected subscription with an introductory price: the actual recurring price and period after it, and that cancellation is possible before renewal (App Review 3.1.2).",
+    "placeholders": {
+      "introPrice": {
+        "type": "String",
+        "description": "Store-formatted introductory price."
+      },
+      "pricePerPeriod": {
+        "type": "String",
+        "description": "Recurring price with its billing period, e.g. $4.99/week."
+      }
+    }
+  },
+  "storePreviewAHook": "Comece pelo nome",
+  "@storePreviewAHook": {
+    "description": "App Store preview, script A, 1–4 s, as the name is typed (the muted hook continues). ≤ 28 characters (CJK ≤ 14)."
+  },
+  "storePreviewAWords": "Três palavras sobre a pessoa",
+  "@storePreviewAWords": {
+    "description": "App Store preview, script A, 4–7.5 s, as three words about the person are typed. ≤ 28 characters (CJK ≤ 14)."
+  },
+  "storePreviewAWait": "Sua música está sendo criada",
+  "@storePreviewAWait": {
+    "description": "App Store preview, script A, 7.5–10 s, over the generating page. ≤ 28 characters (CJK ≤ 14)."
+  },
+  "storePreviewAChorus": "O nome no refrão",
+  "@storePreviewAChorus": {
+    "description": "App Store preview, script A, 10.5–18.5 s, over the player on the chorus that sings the name. ≤ 28 characters (CJK ≤ 14)."
+  },
+  "storePreviewAEnd": "Uma música com esse nome",
+  "@storePreviewAEnd": {
+    "description": "App Store preview (store_preview/songlet), script A, 0–1 s: the claim on the intro card. ≤ 28 characters (CJK ≤ 14). Never shown in the app."
+  },
+  "storePreviewBHook": "Comece pelas suas fotos",
+  "@storePreviewBHook": {
+    "description": "App Store preview, script B, 1–4 s, as four photos are picked (the muted hook continues). ≤ 28 characters (CJK ≤ 14)."
+  },
+  "storePreviewBVideo": "Inclua um vídeo com letra",
+  "@storePreviewBVideo": {
+    "description": "App Store preview, script B, 4–8 s, as \"also make a lyric video\" is switched on. ≤ 28 characters (CJK ≤ 14)."
+  },
+  "storePreviewBWait": "Criando sua música",
+  "@storePreviewBWait": {
+    "description": "App Store preview, script B, 8–10 s, over the generating page. ≤ 28 characters (CJK ≤ 14)."
+  },
+  "storePreviewBLyrics": "Letra sincronizada na tela",
+  "@storePreviewBLyrics": {
+    "description": "App Store preview, script B, 10.5–17 s, over the lyric video with synced lyrics. ≤ 28 characters (CJK ≤ 14)."
+  },
+  "storePreviewBMood": "Suas fotos criam o clima.",
+  "@storePreviewBMood": {
+    "description": "App Store preview (store_preview/songlet), script B, 0–1 s: the claim on the intro card. ≤ 28 characters (CJK ≤ 14). Never shown in the app."
+  },
+  "storePreviewBShare": "Compartilhe o vídeo.",
+  "@storePreviewBShare": {
+    "description": "App Store preview, script B, 17–19.5 s, over the share sheet. ≤ 28 characters (CJK ≤ 14)."
+  },
+  "storePreviewBLanguage": "Letras no seu idioma",
+  "@storePreviewBLanguage": {
+    "description": "App Store preview, script B, 19.5–23 s, as the country and lyric language are picked. ≤ 28 characters (CJK ≤ 14)."
+  },
+  "storePreviewAShare": "Envie como cartão",
+  "@storePreviewAShare": {
+    "description": "App Store preview, script A, 18.5–23 s, over the share card: the song goes out as a card. ≤ 28 characters (CJK ≤ 14)."
+  },
+  "storePreviewCta": "Crie sua primeira música",
+  "@storePreviewCta": {
+    "description": "App Store preview end card: the call to action under the app name. ≤ 28 characters (CJK ≤ 14). No price, no \"free\"."
+  },
+  "storePreviewDisclosure": "Requer assinatura ou créditos",
+  "@storePreviewDisclosure": {
+    "description": "App Store preview end card, small print: making songs needs a subscription or credits (Apple requires disclosing in-app purchases). ≤ 60 characters (CJK ≤ 30)."
+  },
+  "storeCreativeHeader": "Músicas para quem você ama",
+  "@storeCreativeHeader": {
+    "description": "App Store product page header (store_preview/songlet/creatives/store-page.yaml): the phrase beside the app on the default product page, image and looping video. One short phrase, ≤ 40 characters (CJK ≤ 20), at most 2 lines as set. No price, no \"free\", no awards. Never shown in the app."
+  },
+  "storeCreativeSearch": "Um nome vira uma música",
+  "@storeCreativeSearch": {
+    "description": "App Store search results asset (creatives/store-page.yaml): what the app does, obvious at a glance; shown muted beside a name being typed and the song it becomes. ≤ 40 characters (CJK ≤ 20). Never shown in the app."
+  },
+  "storeCreativeBirthday": "Uma música de aniversário com o nome",
+  "@storeCreativeBirthday": {
+    "description": "Custom product page \"Birthday Songs\" header and search results asset (creatives/cpp-birthday.yaml). ≤ 40 characters (CJK ≤ 20). Never shown in the app."
+  },
+  "storeCreativePhoto": "Suas fotos viram uma música",
+  "@storeCreativePhoto": {
+    "description": "Custom product page \"Photo to Song\" header and search results asset (creatives/cpp-photo.yaml). ≤ 40 characters (CJK ≤ 20). Never shown in the app."
+  },
+  "storeCreativeWedding": "Uma música para o seu casamento",
+  "@storeCreativeWedding": {
+    "description": "Custom product page \"Wedding Songs\" header and search results asset (creatives/cpp-wedding.yaml). ≤ 40 characters (CJK ≤ 20). Never shown in the app."
+  }
+}

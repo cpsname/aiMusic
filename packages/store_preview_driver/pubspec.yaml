@@ -1,0 +1,21 @@
+name: store_preview_driver
+description: "The app side of store_preview: runs a recording plan inside the app's integration_test (built-in steps, the app's own steps and playback readers, scene marks). Dev-only, used from integration_test."
+publish_to: "none"
+version: 1.0.0
+resolution: workspace
+
+environment:
+  sdk: ^3.11.0
+  flutter: ">=3.44.0"
+
+# Imported only by an app's integration_test (a dev_dependency of the app).
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_test:
+    sdk: flutter
+  integration_test:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_lints: ^6.0.0

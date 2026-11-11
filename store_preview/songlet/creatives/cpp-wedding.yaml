@@ -1,0 +1,31 @@
+# The "Wedding Songs" custom product page's creative assets (ADR-0039): page
+# cpp/wedding.yaml in ascpub's listing (its deep link and keywords live there),
+# target custom_product_page:wedding. Header and search results images: one
+# universal (no text) for the page's default, one per storefront with the
+# phrase. Both show the Wedding card with the couple's names typed (script
+# W).
+id: cpp-wedding
+title: Custom product page "Wedding Songs"
+targets: ["custom_product_page:wedding"]
+universal_from: en-US
+backdrop: {role: photo, script: B, index: 3}
+text: storeCreativeWedding
+tags: ["cpp:wedding"]
+
+# What the page shows (template ADR-0015): per localization the page has the
+# localized image (product decision 2026-10-16), the universal one elsewhere.
+shelf:
+  header: {default: cpp.wedding.header, locales: "cpp.wedding.header.{storefront}"}
+  search_results: {default: cpp.wedding.search, locales: "cpp.wedding.search.{storefront}"}
+
+slots:
+  - placements: [product_page_header]
+    spec: header_21x9
+    assets:
+      - {id: cpp.wedding.header, type: image, frame: {script: W, scene: wedding, at: -0.3}}
+      - {id: "cpp.wedding.header.{storefront}", type: image, frame: {script: W, scene: wedding, at: -0.3}}
+  - placements: [app_store_search_results]
+    spec: search_3x2
+    assets:
+      - {id: cpp.wedding.search, type: image, frame: {script: W, scene: wedding, at: -0.3}}
+      - {id: "cpp.wedding.search.{storefront}", type: image, frame: {script: W, scene: wedding, at: -0.3}}

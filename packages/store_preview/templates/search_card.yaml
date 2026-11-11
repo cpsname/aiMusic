@@ -1,0 +1,25 @@
+# The search results video: a muted loop whose purpose is obvious at a
+# glance. Apple (asset best practices): "State the obvious … be sure your app
+# or game's purpose is obvious at a glance", "Showcase the firsthand
+# experience", and it plays muted ("can't currently be unmuted").
+#
+# What goes in, then what comes out (`result`, the poster frame's scene), then
+# optionally where it goes. Real time, dissolves and the seamless loop as in
+# banner_loop.yaml. 8 and 12 s suit a spec whose floor is 5 s; the search
+# results video's floor is 15 s (defaults/creative.yaml, ADR-0013), so it plays
+# the 15 s rhythm.
+id: search_card
+format: loop
+title: Search card
+description: What the user puts in, what the app makes of it, where it goes; muted, looping without a seam.
+flex: 2.0
+hook:
+  seconds: 2
+beats:
+  - {id: input, kind: scene}
+  - {id: result, kind: scene, finished: true}
+  - {id: share, kind: scene, optional: true}
+rhythms:
+  8: {input: 3.0, result: 5.0}
+  12: {input: 4.0, result: 6.5, share: 1.5}
+  15: {input: 5.0, result: 8.0, share: 2.0}

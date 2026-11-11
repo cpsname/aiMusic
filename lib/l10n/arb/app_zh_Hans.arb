@@ -1,0 +1,3546 @@
+{
+  "@@locale": "zh_Hans",
+  "commonRetry": "重试",
+  "@commonRetry": {
+    "description": "Shared buttons and messages. Purpose: common retry."
+  },
+  "commonCancel": "取消",
+  "@commonCancel": {
+    "description": "Shared buttons and messages. Purpose: common cancel."
+  },
+  "startupLoading": "正在调音…",
+  "@startupLoading": {
+    "description": "Startup gate. Purpose: startup loading."
+  },
+  "commonErrorTitle": "出错了",
+  "@commonErrorTitle": {
+    "description": "Shared buttons and messages. Purpose: common error title."
+  },
+  "updateRequiredTitle": "需要更新",
+  "@updateRequiredTitle": {
+    "description": "Required app update. Purpose: update required title."
+  },
+  "updateRequiredMessage": "需要新版本才能继续。",
+  "@updateRequiredMessage": {
+    "description": "Required app update. Purpose: update required message."
+  },
+  "updateNow": "立即更新",
+  "@updateNow": {
+    "description": "Required app update. Purpose: update now."
+  },
+  "maintenanceTitle": "系统维护中",
+  "@maintenanceTitle": {
+    "description": "Maintenance gate. Purpose: maintenance title."
+  },
+  "maintenanceResumeEstimate": "预计约 {minutes} 分钟后恢复",
+  "@maintenanceResumeEstimate": {
+    "placeholders": {
+      "minutes": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Estimated waiting or processing duration in minutes."
+      }
+    },
+    "description": "Maintenance gate. Purpose: maintenance resume estimate."
+  },
+  "featureUnavailable": "该功能暂时不可用。",
+  "@featureUnavailable": {
+    "description": "Feature availability message. Purpose: feature unavailable."
+  },
+  "navProfile": "我的",
+  "@navProfile": {
+    "description": "Application navigation. Purpose: nav profile."
+  },
+  "navStore": "商店",
+  "@navStore": {
+    "description": "Application navigation. Purpose: nav store."
+  },
+  "navUpload": "上传",
+  "@navUpload": {
+    "description": "Application navigation. Purpose: nav upload."
+  },
+  "uploadTitle": "文件上传",
+  "@uploadTitle": {
+    "description": "File upload screen. Purpose: upload title."
+  },
+  "uploadSubtitle": "两段式预签名直传：哈希、秒传去重与实时进度。",
+  "@uploadSubtitle": {
+    "description": "File upload screen. Purpose: upload subtitle."
+  },
+  "uploadPick": "选择图片并上传",
+  "@uploadPick": {
+    "description": "File upload screen. Purpose: upload pick."
+  },
+  "uploadAgain": "再传一张",
+  "@uploadAgain": {
+    "description": "File upload screen. Purpose: upload again."
+  },
+  "uploadPhaseHashing": "计算哈希…",
+  "@uploadPhaseHashing": {
+    "description": "File upload screen. Purpose: upload phase hashing."
+  },
+  "uploadPhaseSigning": "获取上传凭证…",
+  "@uploadPhaseSigning": {
+    "description": "File upload screen. Purpose: upload phase signing."
+  },
+  "uploadPhaseUploading": "上传中 {percent}",
+  "@uploadPhaseUploading": {
+    "placeholders": {
+      "percent": {
+        "type": "String",
+        "description": "Complete percentage already formatted with intl for the UI locale, including the percent sign."
+      }
+    },
+    "description": "File upload screen. Purpose: upload phase uploading."
+  },
+  "uploadPhaseFinalizing": "确认完成…",
+  "@uploadPhaseFinalizing": {
+    "description": "File upload screen. Purpose: upload phase finalizing."
+  },
+  "uploadDone": "上传完成。",
+  "@uploadDone": {
+    "description": "File upload screen. Purpose: upload done."
+  },
+  "uploadDedup": "秒传：服务器已存在该文件。",
+  "@uploadDedup": {
+    "description": "File upload screen. Purpose: upload dedup."
+  },
+  "uploadOpenLink": "查看文件",
+  "@uploadOpenLink": {
+    "description": "File upload screen. Purpose: upload open link."
+  },
+  "uploadFailed": "上传失败。",
+  "@uploadFailed": {
+    "description": "File upload screen. Purpose: upload failed."
+  },
+  "uploadTooLarge": "文件超过 {limit} MB 上限。",
+  "@uploadTooLarge": {
+    "placeholders": {
+      "limit": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Maximum upload size in megabytes."
+      }
+    },
+    "description": "File upload screen. Purpose: upload too large."
+  },
+  "uploadUnsupportedType": "不支持的文件类型。",
+  "@uploadUnsupportedType": {
+    "description": "File upload screen. Purpose: upload unsupported type."
+  },
+  "profileGuestTitle": "游客",
+  "@profileGuestTitle": {
+    "description": "Account profile. Purpose: profile guest title."
+  },
+  "profileGuestSubtitle": "登录后可在多台设备同步购买。",
+  "@profileGuestSubtitle": {
+    "description": "Account profile. Purpose: profile guest subtitle."
+  },
+  "signIn": "登录",
+  "@signIn": {
+    "description": "Account actions. Purpose: sign in."
+  },
+  "signOut": "退出登录",
+  "@signOut": {
+    "description": "Account actions. Purpose: sign out."
+  },
+  "profileBalanceLabel": "积分",
+  "@profileBalanceLabel": {
+    "description": "Account profile. Purpose: profile balance label."
+  },
+  "profileAccountId": "账号 ID",
+  "@profileAccountId": {
+    "description": "Account profile. Purpose: profile account id."
+  },
+  "profileFeaturesLabel": "已激活权益",
+  "@profileFeaturesLabel": {
+    "description": "Account profile. Purpose: profile features label."
+  },
+  "profileNoFeatures": "暂无已激活权益。",
+  "@profileNoFeatures": {
+    "description": "Account profile. Purpose: profile no features."
+  },
+  "profileSubscriptionLabel": "订阅",
+  "@profileSubscriptionLabel": {
+    "description": "Account profile. Purpose: profile subscription label."
+  },
+  "profileManageSubscription": "管理订阅",
+  "@profileManageSubscription": {
+    "description": "Account profile. Purpose: profile manage subscription."
+  },
+  "subscriptionActive": "生效中",
+  "@subscriptionActive": {
+    "description": "Subscription status. Purpose: subscription active."
+  },
+  "subscriptionInactive": "无",
+  "@subscriptionInactive": {
+    "description": "Subscription status. Purpose: subscription inactive."
+  },
+  "profileDeleteAccount": "删除账号",
+  "@profileDeleteAccount": {
+    "description": "Account profile. Purpose: profile delete account."
+  },
+  "deleteAccountTitle": "删除该账号？",
+  "@deleteAccountTitle": {
+    "description": "Account deletion confirmation and result. Purpose: delete account title."
+  },
+  "deleteAccountMessage": "此操作不可恢复：该账号及其积分、权益记录将永久无法找回，应用将为你创建一个全新账号。删除账号不会取消 App Store 订阅——请在应用商店的订阅设置中管理，也可稍后通过「恢复购买」重新关联。",
+  "@deleteAccountMessage": {
+    "description": "Account deletion confirmation and result. Purpose: delete account message."
+  },
+  "deleteAccountConfirm": "删除",
+  "@deleteAccountConfirm": {
+    "description": "Account deletion confirmation and result. Purpose: delete account confirm."
+  },
+  "deleteAccountWorking": "正在删除账号…",
+  "@deleteAccountWorking": {
+    "description": "Account deletion confirmation and result. Purpose: delete account working."
+  },
+  "deleteAccountDone": "账号已删除。",
+  "@deleteAccountDone": {
+    "description": "Account deletion confirmation and result. Purpose: delete account done."
+  },
+  "profileMemberSince": "注册于 {date}",
+  "@profileMemberSince": {
+    "placeholders": {
+      "date": {
+        "type": "DateTime",
+        "format": "yMMMd",
+        "description": "Account creation date, converted to local time."
+      }
+    },
+    "description": "Account profile. Purpose: profile member since."
+  },
+  "loginTitle": "登录",
+  "@loginTitle": {
+    "description": "Sign-in sheet. Purpose: login title."
+  },
+  "loginUsername": "用户名",
+  "@loginUsername": {
+    "description": "Sign-in sheet. Purpose: login username."
+  },
+  "loginPassword": "密码",
+  "@loginPassword": {
+    "description": "Sign-in sheet. Purpose: login password."
+  },
+  "loginSubmit": "登录",
+  "@loginSubmit": {
+    "description": "Sign-in sheet. Purpose: login submit."
+  },
+  "paywallTitle": "获取完整歌曲",
+  "@paywallTitle": {
+    "description": "Purchase screen. Purpose: paywall title."
+  },
+  "paywallSubtitle": "把试听变成一首带歌词的 2 分钟歌曲——可下载，随你使用。",
+  "@paywallSubtitle": {
+    "description": "Purchase screen. Purpose: paywall subtitle."
+  },
+  "paywallRestore": "恢复购买",
+  "@paywallRestore": {
+    "description": "Purchase screen. Purpose: paywall restore."
+  },
+  "paywallAutoRenewNotice": "确认购买时将通过你的 Apple 账户扣款。除非在当前订阅期结束前至少 24 小时取消，否则订阅将以相同价格和周期自动续订。免费试用结束后将自动转为付费订阅。你可以随时在 App Store 账户设置中管理或取消订阅。",
+  "@paywallAutoRenewNotice": {
+    "description": "Purchase screen. Purpose: paywall auto renew notice."
+  },
+  "paywallContinue": "继续",
+  "@paywallContinue": {
+    "description": "Purchase screen. Purpose: paywall continue."
+  },
+  "paywallFreeTrial": "免费试用",
+  "@paywallFreeTrial": {
+    "description": "Purchase screen. Purpose: paywall free trial."
+  },
+  "paywallOffer": "优惠",
+  "@paywallOffer": {
+    "description": "Purchase screen. Purpose: paywall offer."
+  },
+  "paywallManage": "管理",
+  "@paywallManage": {
+    "description": "Purchase screen. Purpose: paywall manage."
+  },
+  "paywallTermsOfUse": "使用条款",
+  "@paywallTermsOfUse": {
+    "description": "Purchase screen. Purpose: paywall terms of use."
+  },
+  "paywallPrivacyPolicy": "隐私政策",
+  "@paywallPrivacyPolicy": {
+    "description": "Purchase screen. Purpose: paywall privacy policy."
+  },
+  "paywallSubscriptionTerms": "订阅条款",
+  "@paywallSubscriptionTerms": {
+    "description": "Purchase screen. Purpose: paywall subscription terms."
+  },
+  "commonLinkError": "无法打开链接。",
+  "@commonLinkError": {
+    "description": "Shared buttons and messages. Purpose: common link error."
+  },
+  "commonError": "出了点问题。",
+  "@commonError": {
+    "description": "Shared buttons and messages. Purpose: common error."
+  },
+  "commonNetworkError": "网络错误——请检查网络后重试。",
+  "@commonNetworkError": {
+    "description": "Shared buttons and messages. Purpose: common network error."
+  },
+  "commonOfflineError": "似乎已离线，请检查网络连接后重试。",
+  "@commonOfflineError": {
+    "description": "Shared buttons and messages. Purpose: common offline error."
+  },
+  "networkErrorTitle": "网络连接异常",
+  "@networkErrorTitle": {
+    "description": "Network failure screen. Purpose: network error title."
+  },
+  "configErrorTitle": "应用配置异常",
+  "@configErrorTitle": {
+    "description": "Startup configuration failure. Purpose: config error title."
+  },
+  "configErrorMessage": "当前版本无法连接服务。请从 App Store 更新或重新安装应用；若问题仍在，请联系客服。",
+  "@configErrorMessage": {
+    "description": "Startup configuration failure. Purpose: config error message."
+  },
+  "commonAuthError": "登录已过期——请重新登录。",
+  "@commonAuthError": {
+    "description": "Shared buttons and messages. Purpose: common auth error."
+  },
+  "paywallProductsErrorTitle": "无法加载商品",
+  "@paywallProductsErrorTitle": {
+    "description": "Purchase screen. Purpose: paywall products error title."
+  },
+  "paywallNoProducts": "暂无可购买的商品。",
+  "@paywallNoProducts": {
+    "description": "Purchase screen. Purpose: paywall no products."
+  },
+  "paywallPurchaseSuccess": "购买成功，尽情享用！",
+  "@paywallPurchaseSuccess": {
+    "description": "Purchase screen. Purpose: paywall purchase success."
+  },
+  "paywallProcessing": "正在处理购买……",
+  "@paywallProcessing": {
+    "description": "Purchase screen. Purpose: paywall processing."
+  },
+  "paywallVerifying": "正在校验购买……",
+  "@paywallVerifying": {
+    "description": "Purchase screen. Purpose: paywall verifying."
+  },
+  "paywallPurchaseFailed": "购买未能完成。",
+  "@paywallPurchaseFailed": {
+    "description": "Purchase screen. Purpose: paywall purchase failed."
+  },
+  "paywallRestoreStarted": "正在恢复购买…",
+  "@paywallRestoreStarted": {
+    "description": "Purchase screen. Purpose: paywall restore started."
+  },
+  "paywallRestoreSuccess": "{count, plural, other{已恢复 {count} 项购买。}}",
+  "@paywallRestoreSuccess": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Number of purchases successfully restored through StoreKit."
+      }
+    },
+    "description": "Purchase screen. Purpose: paywall restore success."
+  },
+  "paywallRestoreNothing": "没有可恢复的购买。",
+  "@paywallRestoreNothing": {
+    "description": "Purchase screen. Purpose: paywall restore nothing."
+  },
+  "paywallDeferred": "等待批准——批准后将自动完成。",
+  "@paywallDeferred": {
+    "description": "Purchase screen. Purpose: paywall deferred."
+  },
+  "paywallAlreadySubscribed": "你已订阅。",
+  "@paywallAlreadySubscribed": {
+    "description": "Purchase screen. Purpose: paywall already subscribed."
+  },
+  "paywallBillingRetry": "请更新支付方式以保持订阅。",
+  "@paywallBillingRetry": {
+    "description": "Purchase screen. Purpose: paywall billing retry."
+  },
+  "paywallTrial": "{days} 天免费试用",
+  "@paywallTrial": {
+    "placeholders": {
+      "days": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Trial duration in days reported by StoreKit."
+      }
+    },
+    "description": "Purchase screen. Purpose: paywall trial."
+  },
+  "cycleOneTime": "一次性",
+  "@cycleOneTime": {
+    "description": "Subscription billing period. Purpose: cycle one time."
+  },
+  "cycleWeekly": "/ 周",
+  "@cycleWeekly": {
+    "description": "Subscription billing period. Purpose: cycle weekly."
+  },
+  "cycleMonthly": "/ 月",
+  "@cycleMonthly": {
+    "description": "Subscription billing period. Purpose: cycle monthly."
+  },
+  "cycleQuarterly": "/ 季",
+  "@cycleQuarterly": {
+    "description": "Subscription billing period. Purpose: cycle quarterly."
+  },
+  "cycleSemiAnnual": "/ 半年",
+  "@cycleSemiAnnual": {
+    "description": "Subscription billing period. Purpose: cycle semi annual."
+  },
+  "cycleAnnual": "/ 年",
+  "@cycleAnnual": {
+    "description": "Subscription billing period. Purpose: cycle annual."
+  },
+  "cycleLifetime": "永久",
+  "@cycleLifetime": {
+    "description": "Subscription billing period. Purpose: cycle lifetime."
+  },
+  "navCreate": "创作",
+  "@navCreate": {
+    "description": "Application navigation. Purpose: nav create."
+  },
+  "navLibrary": "资料库",
+  "@navLibrary": {
+    "description": "Application navigation. Purpose: nav library."
+  },
+  "navSettings": "设置",
+  "@navSettings": {
+    "description": "Application navigation. Purpose: nav settings."
+  },
+  "commonContinue": "继续",
+  "@commonContinue": {
+    "description": "Shared buttons and messages. Purpose: common continue."
+  },
+  "commonBack": "返回",
+  "@commonBack": {
+    "description": "Shared buttons and messages. Purpose: common back."
+  },
+  "createTitle": "这首歌写给谁？",
+  "@createTitle": {
+    "description": "Song creation screen. Purpose: create title."
+  },
+  "occasionBirthday": "生日",
+  "@occasionBirthday": {
+    "description": "Occasion picker. Purpose: occasion birthday."
+  },
+  "occasionBirthdayHint": "为 TA 的重要日子送上欢快的歌",
+  "@occasionBirthdayHint": {
+    "description": "Occasion picker. Purpose: occasion birthday hint."
+  },
+  "occasionAnniversary": "纪念日",
+  "@occasionAnniversary": {
+    "description": "Occasion picker. Purpose: occasion anniversary."
+  },
+  "occasionAnniversaryHint": "庆祝你们一起走过的故事",
+  "@occasionAnniversaryHint": {
+    "description": "Occasion picker. Purpose: occasion anniversary hint."
+  },
+  "occasionConfession": "表白",
+  "@occasionConfession": {
+    "description": "Occasion picker. Purpose: occasion confession."
+  },
+  "occasionConfessionHint": "唱出你的心里话",
+  "@occasionConfessionHint": {
+    "description": "Occasion picker. Purpose: occasion confession hint."
+  },
+  "occasionWedding": "婚礼",
+  "@occasionWedding": {
+    "description": "Occasion picker. Purpose: occasion wedding."
+  },
+  "occasionWeddingHint": "献给你们永恒时刻的歌",
+  "@occasionWeddingHint": {
+    "description": "Occasion picker. Purpose: occasion wedding hint."
+  },
+  "occasionMemorial": "追思",
+  "@occasionMemorial": {
+    "description": "Occasion picker. Purpose: occasion memorial."
+  },
+  "occasionMemorialHint": "纪念你珍视的人",
+  "@occasionMemorialHint": {
+    "description": "Occasion picker. Purpose: occasion memorial hint."
+  },
+  "occasionFestival": "节日",
+  "@occasionFestival": {
+    "description": "Occasion picker. Purpose: occasion festival."
+  },
+  "occasionFestivalHint": "在特别的时节送上温暖祝福",
+  "@occasionFestivalHint": {
+    "description": "Occasion picker. Purpose: occasion festival hint."
+  },
+  "occasionBrand": "品牌广告歌",
+  "@occasionBrand": {
+    "description": "Occasion picker. Purpose: occasion brand."
+  },
+  "occasionBrandHint": "为你的品牌打造朗朗上口的旋律",
+  "@occasionBrandHint": {
+    "description": "Occasion picker. Purpose: occasion brand hint."
+  },
+  "occasionSoundtrack": "视频配乐",
+  "@occasionSoundtrack": {
+    "description": "Occasion picker. Purpose: occasion soundtrack."
+  },
+  "occasionSoundtrackHint": "贴合你故事的音乐",
+  "@occasionSoundtrackHint": {
+    "description": "Occasion picker. Purpose: occasion soundtrack hint."
+  },
+  "festivalNewYear": "新年",
+  "@festivalNewYear": {
+    "description": "Festival creation screen. Purpose: festival new year."
+  },
+  "festivalThanksgiving": "感恩节",
+  "@festivalThanksgiving": {
+    "description": "Festival creation screen. Purpose: festival thanksgiving."
+  },
+  "festivalDiwali": "排灯节",
+  "@festivalDiwali": {
+    "description": "Festival creation screen. Purpose: festival diwali."
+  },
+  "festivalCarnival": "狂欢节",
+  "@festivalCarnival": {
+    "description": "Festival creation screen. Purpose: festival carnival."
+  },
+  "festivalEid": "开斋节",
+  "@festivalEid": {
+    "description": "Festival creation screen. Purpose: festival eid."
+  },
+  "festivalLunarNewYear": "春节",
+  "@festivalLunarNewYear": {
+    "description": "Festival creation screen. Purpose: festival lunar new year."
+  },
+  "regionTitle": "这首歌会在哪里响起？",
+  "@regionTitle": {
+    "description": "Country and lyrics-language sheet. Purpose: region title."
+  },
+  "regionSearchHint": "搜索国家或地区",
+  "@regionSearchHint": {
+    "description": "Country and lyrics-language sheet. Purpose: region search hint."
+  },
+  "regionLanguageSheetTitle": "歌词语言",
+  "@regionLanguageSheetTitle": {
+    "description": "Country and lyrics-language sheet. Purpose: region language sheet title."
+  },
+  "countryUS": "美国",
+  "@countryUS": {
+    "description": "Country name in region picker. Purpose: country u s."
+  },
+  "countryGB": "英国",
+  "@countryGB": {
+    "description": "Country name in region picker. Purpose: country g b."
+  },
+  "countryCA": "加拿大",
+  "@countryCA": {
+    "description": "Country name in region picker. Purpose: country c a."
+  },
+  "countryAU": "澳大利亚",
+  "@countryAU": {
+    "description": "Country name in region picker. Purpose: country a u."
+  },
+  "countryDE": "德国",
+  "@countryDE": {
+    "description": "Country name in region picker. Purpose: country d e."
+  },
+  "countryFR": "法国",
+  "@countryFR": {
+    "description": "Country name in region picker. Purpose: country f r."
+  },
+  "countryJP": "日本",
+  "@countryJP": {
+    "description": "Country name in region picker. Purpose: country j p."
+  },
+  "countryKR": "韩国",
+  "@countryKR": {
+    "description": "Country name in region picker. Purpose: country k r."
+  },
+  "countryBR": "巴西",
+  "@countryBR": {
+    "description": "Country name in region picker. Purpose: country b r."
+  },
+  "countryMX": "墨西哥",
+  "@countryMX": {
+    "description": "Country name in region picker. Purpose: country m x."
+  },
+  "countryIN": "印度",
+  "@countryIN": {
+    "description": "Country name in region picker. Purpose: country i n."
+  },
+  "countryID": "印度尼西亚",
+  "@countryID": {
+    "description": "Country name in region picker. Purpose: country i d."
+  },
+  "countryVN": "越南",
+  "@countryVN": {
+    "description": "Country name in region picker. Purpose: country v n."
+  },
+  "countryTR": "土耳其",
+  "@countryTR": {
+    "description": "Country name in region picker. Purpose: country t r."
+  },
+  "languageEn": "英语",
+  "@languageEn": {
+    "description": "Lyrics-language display name. Purpose: language en."
+  },
+  "languageFr": "法语",
+  "@languageFr": {
+    "description": "Lyrics-language display name. Purpose: language fr."
+  },
+  "languageDe": "德语",
+  "@languageDe": {
+    "description": "Lyrics-language display name. Purpose: language de."
+  },
+  "languageJa": "日语",
+  "@languageJa": {
+    "description": "Lyrics-language display name. Purpose: language ja."
+  },
+  "languageKo": "韩语",
+  "@languageKo": {
+    "description": "Lyrics-language display name. Purpose: language ko."
+  },
+  "languagePtBR": "葡萄牙语（巴西）",
+  "@languagePtBR": {
+    "description": "Lyrics-language display name. Purpose: language pt b r."
+  },
+  "languageEsMX": "西班牙语（墨西哥）",
+  "@languageEsMX": {
+    "description": "Lyrics-language display name. Purpose: language es m x."
+  },
+  "languageHi": "印地语",
+  "@languageHi": {
+    "description": "Lyrics-language display name. Purpose: language hi."
+  },
+  "languageId": "印度尼西亚语",
+  "@languageId": {
+    "description": "Lyrics-language display name. Purpose: language id."
+  },
+  "languageVi": "越南语",
+  "@languageVi": {
+    "description": "Lyrics-language display name. Purpose: language vi."
+  },
+  "languageTr": "土耳其语",
+  "@languageTr": {
+    "description": "Lyrics-language display name. Purpose: language tr."
+  },
+  "languageZhHans": "简体中文",
+  "@languageZhHans": {
+    "description": "Lyrics-language display name. Purpose: language zh hans."
+  },
+  "languageZhHant": "繁体中文",
+  "@languageZhHant": {
+    "description": "Lyrics-language display name. Purpose: language zh hant."
+  },
+  "inputNameLabel": "TA 的名字",
+  "@inputNameLabel": {
+    "description": "Song creation form. Purpose: input name label."
+  },
+  "inputNameOptionalLabel": "名字（选填）",
+  "@inputNameOptionalLabel": {
+    "description": "Song creation form. Purpose: input name optional label."
+  },
+  "inputNameHint": "例如：小雨",
+  "@inputNameHint": {
+    "description": "Song creation form. Purpose: input name hint."
+  },
+  "inputKeywordsLabel": "用三个词形容 TA",
+  "@inputKeywordsLabel": {
+    "description": "Song creation form. Purpose: input keywords label."
+  },
+  "inputLyricsHint": "[Verse] …\n[Chorus] …",
+  "@inputLyricsHint": {
+    "description": "Song creation form. Purpose: input lyrics hint."
+  },
+  "lyricsCounter": "{count} / {limit}",
+  "@lyricsCounter": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Current number of Unicode characters in the lyrics editor."
+      },
+      "limit": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Maximum allowed lyrics characters: 600 for CJK or 1200 otherwise."
+      }
+    },
+    "description": "Own-lyrics editor. Purpose: lyrics counter."
+  },
+  "inputLyricsOwnership": "这些歌词是我原创的，或我有权使用",
+  "@inputLyricsOwnership": {
+    "description": "Song creation form. Purpose: input lyrics ownership."
+  },
+  "issueRecipientMissing": "请填写 TA 的名字。",
+  "@issueRecipientMissing": {
+    "description": "Creation form validation; explain how to correct the input. Purpose: issue recipient missing."
+  },
+  "issueRecipientTooLong": "名字最多 24 个字符。",
+  "@issueRecipientTooLong": {
+    "description": "Creation form validation; explain how to correct the input. Purpose: issue recipient too long."
+  },
+  "issueBriefMissing": "说说这首歌吧——写几句话、歌词，或添加照片。",
+  "@issueBriefMissing": {
+    "description": "Creation validation (no inspiration card picked, nothing to write from): ask for a description, keywords, lyrics or photos. Also shown when the server answers 40001 details.prompt."
+  },
+  "issueDescriptionMissing": "这个灵感需要你的文字——写一句关于这首歌的话吧。",
+  "@issueDescriptionMissing": {
+    "description": "Shown when the server answers 40001 details.prompt.description: the picked inspiration needs the user's own words."
+  },
+  "generatingBackToEdit": "返回修改",
+  "@generatingBackToEdit": {
+    "description": "Generating page, failure or rejected state: returns to the create home with the draft kept, to fix it."
+  },
+  "issueKeywordTooLong": "每个词最多 20 个字符。",
+  "@issueKeywordTooLong": {
+    "description": "Creation form validation; explain how to correct the input. Purpose: issue keyword too long."
+  },
+  "issueTooManyKeywords": "最多使用三个词。",
+  "@issueTooManyKeywords": {
+    "description": "Creation form validation; explain how to correct the input. Purpose: issue too many keywords."
+  },
+  "issueArtistName": "不能使用艺人名称——试着描述你想要的感觉。",
+  "@issueArtistName": {
+    "description": "Creation form validation; explain how to correct the input. Purpose: issue artist name."
+  },
+  "issueStyleImitation": "我们无法模仿歌手或乐队，试着描述你想要的氛围。",
+  "@issueStyleImitation": {
+    "description": "Creation form validation; explain how to correct the input. Purpose: issue style imitation."
+  },
+  "issueLyricsTooLong": "歌词最多 {limit} 个字符。",
+  "@issueLyricsTooLong": {
+    "placeholders": {
+      "limit": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Maximum number of lyrics characters permitted for this script."
+      }
+    },
+    "description": "Creation form validation; explain how to correct the input. Purpose: issue lyrics too long."
+  },
+  "issueLyricsNotOriginal": "这些歌词看起来像是已有的歌曲，请写你自己的歌词。",
+  "@issueLyricsNotOriginal": {
+    "description": "Creation form validation; explain how to correct the input. Purpose: issue lyrics not original."
+  },
+  "issueLyricsOwnership": "请确认你有权使用这些歌词。",
+  "@issueLyricsOwnership": {
+    "description": "Creation form validation; explain how to correct the input. Purpose: issue lyrics ownership."
+  },
+  "issueTooManyPhotos": "最多选择 10 张照片。",
+  "@issueTooManyPhotos": {
+    "description": "Creation form validation; explain how to correct the input. Purpose: issue too many photos."
+  },
+  "photosTitle": "挑几张照片",
+  "@photosTitle": {
+    "description": "Photo selection. Purpose: photos title."
+  },
+  "photosCount": "{count} / {max}",
+  "@photosCount": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Number of selected reference photos."
+      },
+      "max": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Maximum selectable reference photos."
+      }
+    },
+    "description": "Photo selection. Purpose: photos count."
+  },
+  "photosPrivacy": "照片仅用于创作这首歌一次，并会在 24 小时内从我们的服务器删除。",
+  "@photosPrivacy": {
+    "description": "Photo selection. Purpose: photos privacy."
+  },
+  "photosAdd": "添加照片",
+  "@photosAdd": {
+    "description": "Photo selection. Purpose: photos add."
+  },
+  "photosCreate": "用照片创作",
+  "@photosCreate": {
+    "description": "Photo selection. Purpose: photos create."
+  },
+  "photosEmpty": "选择 1–10 张记录那一刻的照片。",
+  "@photosEmpty": {
+    "description": "Photo selection. Purpose: photos empty."
+  },
+  "generatingStepPolishing": "正在这台 iPhone 上润色你的文字…",
+  "@generatingStepPolishing": {
+    "description": "Song generation progress and cancellation. Purpose: generating step polishing."
+  },
+  "generatingStepUploading": "正在发送照片…",
+  "@generatingStepUploading": {
+    "description": "Song generation progress and cancellation. Purpose: generating step uploading."
+  },
+  "generatingStepSubmitting": "正在发送到录音室…",
+  "@generatingStepSubmitting": {
+    "description": "Song generation progress and cancellation. Purpose: generating step submitting."
+  },
+  "errorSafetyBlocked": "这首歌我们无法制作——请换些词试试，并且不要使用艺人名称。",
+  "@errorSafetyBlocked": {
+    "description": "PRD 6.5 SAFETY_BLOCKED"
+  },
+  "errorQuotaExhausted": "你已用完本月的歌曲。请添加歌曲包或升级。",
+  "@errorQuotaExhausted": {
+    "description": "PRD 6.5 QUOTA_EXHAUSTED"
+  },
+  "errorUpstreamTimeout": "耗时比平时长。我们会继续尝试，并通知你。",
+  "@errorUpstreamTimeout": {
+    "description": "PRD 6.5 UPSTREAM_TIMEOUT"
+  },
+  "errorUpstreamRateLimited": "现在有很多歌曲正在制作，你的歌已在排队。",
+  "@errorUpstreamRateLimited": {
+    "description": "PRD 6.5 UPSTREAM_RATE_LIMITED"
+  },
+  "errorAttestFailed": "请从 App Store 更新 Songlet。",
+  "@errorAttestFailed": {
+    "description": "PRD 6.5 ATTEST_FAILED"
+  },
+  "errorImageRejected": "其中一张照片无法使用，请换一张试试。",
+  "@errorImageRejected": {
+    "description": "PRD 6.5 IMAGE_REJECTED"
+  },
+  "errorNetworkOffline": "你已离线。资料库仍可正常使用。",
+  "@errorNetworkOffline": {
+    "description": "PRD 6.5 NETWORK_OFFLINE"
+  },
+  "errorDownloadLocked": "这首歌暂时无法下载——制作它的购买已退款，或你的方案已到期。你仍然可以播放它。",
+  "@errorDownloadLocked": {
+    "description": "DOWNLOAD_LOCKED (PRD 8.4 refund)"
+  },
+  "errorJobAlreadyFinished": "歌曲已完成，无需取消。",
+  "@errorJobAlreadyFinished": {
+    "description": "Cancel lost the race: the job had already finished (JOB_ALREADY_FINISHED)."
+  },
+  "errorMvSongNotReady": "这首歌还没准备好制作视频。",
+  "@errorMvSongNotReady": {
+    "description": "MV_SONG_NOT_READY (contract v1.1)"
+  },
+  "errorMvSongTooLong": "这首歌太长，无法制作完整视频——试试副歌视频。",
+  "@errorMvSongTooLong": {
+    "description": "MV_SONG_TOO_LONG"
+  },
+  "errorMvSongExpired": "这首歌已过期。请重新生成后再制作视频。",
+  "@errorMvSongExpired": {
+    "description": "MV_SONG_EXPIRED"
+  },
+  "errorMvNotFound": "这个视频已不可用。",
+  "@errorMvNotFound": {
+    "description": "MV_NOT_FOUND"
+  },
+  "errorMvPhotosExpired": "这些照片已过期——请重新选择。",
+  "@errorMvPhotosExpired": {
+    "description": "MV_PHOTOS_EXPIRED"
+  },
+  "errorMvRenderFailed": "这个视频没能完成。积分已退回——再试一次。",
+  "@errorMvRenderFailed": {
+    "description": "MV_RENDER_FAILED (job level, refunded)"
+  },
+  "mvHubTitle": "制作视频",
+  "@mvHubTitle": {
+    "description": "P19 hub title"
+  },
+  "mvHubSubtitle": "把《{title}》变成一支音乐视频。",
+  "@mvHubSubtitle": {
+    "description": "P19 hub subtitle; {title} = song title",
+    "placeholders": {
+      "title": {
+        "type": "String",
+        "description": "Localized song title; may contain a user-provided recipient name."
+      }
+    }
+  },
+  "mvLevelLyricVideo": "歌词视频",
+  "@mvLevelLyricVideo": {
+    "description": "Level: lyric video"
+  },
+  "mvLevelLyricHint": "一幅静态画面配上歌词",
+  "@mvLevelLyricHint": {
+    "description": "Level hint: lyric video"
+  },
+  "mvLevelChorus": "副歌视频",
+  "@mvLevelChorus": {
+    "description": "Level: chorus video"
+  },
+  "mvLevelChorusHint": "30 秒副歌，由 AI 拍摄",
+  "@mvLevelChorusHint": {
+    "description": "Level hint: chorus video"
+  },
+  "mvLevelFull": "全曲视频",
+  "@mvLevelFull": {
+    "description": "Level: full-song video"
+  },
+  "mvLevelFullHint": "整首歌，一幕接一幕",
+  "@mvLevelFullHint": {
+    "description": "Level hint: full-song video"
+  },
+  "mvPriceCredits": "{credits, plural, other{{credits} 积分}}",
+  "@mvPriceCredits": {
+    "description": "Price line; {credits} = integer",
+    "placeholders": {
+      "credits": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Number of video credits, not a monetary price."
+      }
+    }
+  },
+  "mvAvailableCredits": "{credits, plural, other{你有 {credits} 积分}}",
+  "@mvAvailableCredits": {
+    "description": "Credits the account has; {credits} = integer",
+    "placeholders": {
+      "credits": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Number of video credits, not a monetary price."
+      }
+    }
+  },
+  "mvGapCredits": "{credits, plural, other{还差 {credits} 积分}}",
+  "@mvGapCredits": {
+    "description": "Missing credits; {credits} = integer",
+    "placeholders": {
+      "credits": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Number of video credits, not a monetary price."
+      }
+    }
+  },
+  "mvEstimating": "正在查询价格…",
+  "@mvEstimating": {
+    "description": "While the price is fetched"
+  },
+  "mvOptionsHeader": "选项",
+  "@mvOptionsHeader": {
+    "description": "P19 options section header"
+  },
+  "mvAspectLabel": "画幅",
+  "@mvAspectLabel": {
+    "description": "Aspect ratio option"
+  },
+  "mvAspectPortrait": "竖版",
+  "@mvAspectPortrait": {
+    "description": "9:16"
+  },
+  "mvAspectLandscape": "横版",
+  "@mvAspectLandscape": {
+    "description": "16:9"
+  },
+  "mvAspectSquare": "方形",
+  "@mvAspectSquare": {
+    "description": "1:1"
+  },
+  "mvQualityLabel": "画质",
+  "@mvQualityLabel": {
+    "description": "Quality option"
+  },
+  "mvQualityStandard": "标准",
+  "@mvQualityStandard": {
+    "description": "quality standard"
+  },
+  "mvQualityHigh": "高清",
+  "@mvQualityHigh": {
+    "description": "quality high"
+  },
+  "mvSubtitlesLabel": "画面显示歌词",
+  "@mvSubtitlesLabel": {
+    "description": "Burn lyrics into the video (switch)"
+  },
+  "mvPhotosLabel": "参考照片",
+  "@mvPhotosLabel": {
+    "description": "Reference photos row"
+  },
+  "mvPhotosHint": "设定场景与色调——不会使用人脸",
+  "@mvPhotosHint": {
+    "description": "Reference photos hint (no face driving in V1)"
+  },
+  "mvPhotosCount": "{count, plural, other{{count} 张}}",
+  "@mvPhotosCount": {
+    "description": "Picked photos count; {count} = integer",
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Number of selected video reference photos."
+      }
+    }
+  },
+  "mvChorusLabel": "副歌",
+  "@mvChorusLabel": {
+    "description": "Chorus window row (chorus level only)"
+  },
+  "mvChorusAuto": "自动定位",
+  "@mvChorusAuto": {
+    "description": "Chorus window: automatic"
+  },
+  "mvChorusCustom": "自己选择片段",
+  "@mvChorusCustom": {
+    "description": "Chorus window: chosen by the user"
+  },
+  "mvChorusRange": "{start} – {end}",
+  "@mvChorusRange": {
+    "description": "Chosen chorus window; {start} and {end} are m:ss clock labels",
+    "placeholders": {
+      "start": {
+        "type": "String",
+        "description": "Beginning of the selected chorus, formatted as a media duration."
+      },
+      "end": {
+        "type": "String",
+        "description": "End of the selected chorus, formatted as a media duration."
+      }
+    }
+  },
+  "mvCreate": "制作视频",
+  "@mvCreate": {
+    "description": "P19 primary action"
+  },
+  "mvBuyPack": "购买视频包并制作",
+  "@mvBuyPack": {
+    "description": "P19 primary action when credits are missing (opens the paywall on the pack)"
+  },
+  "mvSongLocked": "你的歌曲已为视频保存。",
+  "@mvSongLocked": {
+    "description": "Note that the song was saved for the video (song_locked)"
+  },
+  "mvGeneratingTitle": "正在制作你的视频…",
+  "@mvGeneratingTitle": {
+    "description": "P20 title"
+  },
+  "mvStageQueued": "等待开始",
+  "@mvStageQueued": {
+    "description": "Stage: queued"
+  },
+  "mvStageSlicing": "挑选片段",
+  "@mvStageSlicing": {
+    "description": "Stage: slicing"
+  },
+  "mvStageStoryboarding": "撰写分镜",
+  "@mvStageStoryboarding": {
+    "description": "Stage: storyboarding"
+  },
+  "mvStageKeyframing": "绘制场景",
+  "@mvStageKeyframing": {
+    "description": "Stage: keyframing"
+  },
+  "mvStageRendering": "拍摄场景",
+  "@mvStageRendering": {
+    "description": "Stage: rendering"
+  },
+  "mvStageAssembling": "剪辑合成",
+  "@mvStageAssembling": {
+    "description": "Stage: assembling"
+  },
+  "mvStageDone": "完成",
+  "@mvStageDone": {
+    "description": "Stage: done"
+  },
+  "mvScenes": "第 {done}/{total} 幕",
+  "@mvScenes": {
+    "description": "Scene progress; {done} and {total} = integers",
+    "placeholders": {
+      "done": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Number of completed video scenes."
+      },
+      "total": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Total number of video scenes."
+      }
+    }
+  },
+  "mvUsuallyMinutes": "通常约 {minutes} 分钟",
+  "@mvUsuallyMinutes": {
+    "description": "ETA caption; {minutes} = integer",
+    "placeholders": {
+      "minutes": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Estimated waiting or processing duration in minutes."
+      }
+    }
+  },
+  "mvCancelRequested": "将在当前场景结束后停止…",
+  "@mvCancelRequested": {
+    "description": "Banner after a cancel was acknowledged while rendering"
+  },
+  "mvCancelTitle": "停止这个视频？",
+  "@mvCancelTitle": {
+    "description": "Cancel dialog title"
+  },
+  "mvCancelQueued": "它还没开始，不会使用任何积分。",
+  "@mvCancelQueued": {
+    "description": "Cancel dialog body while queued"
+  },
+  "mvCancelStarted": "它已经开始了。已完成的场景会计费，其余积分退回。",
+  "@mvCancelStarted": {
+    "description": "Cancel dialog body while rendering (partial settlement)"
+  },
+  "mvCancelConfirm": "停止视频",
+  "@mvCancelConfirm": {
+    "description": "Cancel dialog confirm"
+  },
+  "mvCancelled": "视频已停止",
+  "@mvCancelled": {
+    "description": "Toast after a cancel was acknowledged"
+  },
+  "mvCancelledRefunded": "视频已停止——未使用任何积分",
+  "@mvCancelledRefunded": {
+    "description": "Toast after a queued cancel (full refund)"
+  },
+  "mvNothing": "当前没有正在制作的视频。",
+  "@mvNothing": {
+    "description": "P20 when no video is in flight"
+  },
+  "mvQuotaTitle": "积分不足",
+  "@mvQuotaTitle": {
+    "description": "P20 credit-gap headline"
+  },
+  "mvAiLabelBurnedIn": "AI 生成——角标已烧录进视频",
+  "@mvAiLabelBurnedIn": {
+    "description": "P21 explicit disclosure under the video"
+  },
+  "mvSave": "保存到相册",
+  "@mvSave": {
+    "description": "P21 save to Photos"
+  },
+  "mvSaveFiles": "保存到文件",
+  "@mvSaveFiles": {
+    "description": "P21 save to Files"
+  },
+  "mvShareText": "我用 Songlet 做了这支音乐视频 🎬",
+  "@mvShareText": {
+    "description": "Share sheet text for the video"
+  },
+  "mvMissing": "这个视频已不在此设备上。",
+  "@mvMissing": {
+    "description": "P21 when the file is gone"
+  },
+  "mvDeleteTitle": "删除这个视频？",
+  "@mvDeleteTitle": {
+    "description": "Delete dialog title"
+  },
+  "mvDeleteBody": "它将从此设备上移除。",
+  "@mvDeleteBody": {
+    "description": "Delete dialog body"
+  },
+  "mvDeleted": "视频已删除",
+  "@mvDeleted": {
+    "description": "Toast after delete"
+  },
+  "mvProvenance": "由 Google Lyria 3 与 AI 视频模型制作 · AI 生成",
+  "@mvProvenance": {
+    "description": "P21 footnote"
+  },
+  "detailVideos": "视频",
+  "@detailVideos": {
+    "description": "P13 section header"
+  },
+  "detailMakeVideo": "制作视频",
+  "@detailMakeVideo": {
+    "description": "P13 / P09 make-a-video action"
+  },
+  "mvStatusReady": "已完成",
+  "@mvStatusReady": {
+    "description": "Video row status"
+  },
+  "mvStatusPending": "制作中…",
+  "@mvStatusPending": {
+    "description": "Video row status"
+  },
+  "mvStatusFailed": "未完成",
+  "@mvStatusFailed": {
+    "description": "Video row status"
+  },
+  "mvPackTitle": "音乐视频",
+  "@mvPackTitle": {
+    "description": "Paywall MV pack row title"
+  },
+  "mvPackChorusSubtitle": "一支副歌视频",
+  "@mvPackChorusSubtitle": {
+    "description": "Paywall MV pack row subtitle"
+  },
+  "mvPackFullSubtitle": "一支全曲视频",
+  "@mvPackFullSubtitle": {
+    "description": "Paywall MV pack row subtitle"
+  },
+  "paywallMvHeroTitle": "把它做成视频",
+  "@paywallMvHeroTitle": {
+    "description": "Paywall headline when opened for a music video"
+  },
+  "paywallMvHeroSubtitle": "为你的歌曲制作音乐视频的积分——可保存、可分享。",
+  "@paywallMvHeroSubtitle": {
+    "description": "Paywall subtitle when opened for a music video"
+  },
+  "playerAiGenerated": "AI 生成",
+  "@playerAiGenerated": {
+    "description": "Non-removable disclosure badge (PRD 9.4)"
+  },
+  "playerLoop": "循环播放",
+  "@playerLoop": {
+    "description": "Song playback screen. Purpose: player loop."
+  },
+  "playerPlay": "播放",
+  "@playerPlay": {
+    "description": "Song playback screen. Purpose: player play."
+  },
+  "playerPause": "暂停",
+  "@playerPause": {
+    "description": "Song playback screen. Purpose: player pause."
+  },
+  "playerPreviewLabel": "30 秒试听",
+  "@playerPreviewLabel": {
+    "description": "Song playback screen. Purpose: player preview label."
+  },
+  "playerTitleFor": "献给 {name}",
+  "@playerTitleFor": {
+    "placeholders": {
+      "name": {
+        "type": "String",
+        "description": "Recipient or template display name; do not translate user-provided names."
+      }
+    },
+    "description": "Song playback screen. Purpose: player title for."
+  },
+  "downloadSaved": "已存储到“文件”。",
+  "@downloadSaved": {
+    "description": "Audio download screen. Purpose: download saved."
+  },
+  "shareComposing": "正在制作分享卡片…",
+  "@shareComposing": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share composing."
+  },
+  "shareFailed": "无法制作分享卡片。",
+  "@shareFailed": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share failed."
+  },
+  "shareText": "我用 Songlet 做了这首歌 🎵",
+  "@shareText": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share text."
+  },
+  "paywallBestValue": "最超值",
+  "@paywallBestValue": {
+    "description": "Purchase screen. Purpose: paywall best value."
+  },
+  "paywallStartTrial": "开始免费试用",
+  "@paywallStartTrial": {
+    "description": "Purchase screen. Purpose: paywall start trial."
+  },
+  "paywallClose": "关闭",
+  "@paywallClose": {
+    "description": "Purchase screen. Purpose: paywall close."
+  },
+  "paywallSeePlans": "查看订阅",
+  "@paywallSeePlans": {
+    "description": "Purchase screen. Purpose: paywall see plans."
+  },
+  "paywallCurrentPlan": "{count, plural, one{你的方案已生效——本周期还剩 {count} 首完整歌曲。} other{你的方案已生效——本周期还剩 {count} 首完整歌曲。}}",
+  "@paywallCurrentPlan": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Full songs remaining in the current subscription period."
+      }
+    },
+    "description": "Purchase screen. Purpose: paywall current plan."
+  },
+  "libraryEmpty": "你的歌曲会保存在这里。",
+  "@libraryEmpty": {
+    "description": "Saved-song library. Purpose: library empty."
+  },
+  "libraryEmptyAction": "创作你的第一首歌",
+  "@libraryEmptyAction": {
+    "description": "Saved-song library. Purpose: library empty action."
+  },
+  "libraryPending": "作曲中…",
+  "@libraryPending": {
+    "description": "Saved-song library. Purpose: library pending."
+  },
+  "libraryPreviewBadge": "试听",
+  "@libraryPreviewBadge": {
+    "description": "Saved-song library. Purpose: library preview badge."
+  },
+  "librarySongBadge": "完整歌曲",
+  "@librarySongBadge": {
+    "description": "Saved-song library. Purpose: library song badge."
+  },
+  "settingsTitle": "设置",
+  "@settingsTitle": {
+    "description": "Settings screen. Purpose: settings title."
+  },
+  "settingsPlan": "你的方案",
+  "@settingsPlan": {
+    "description": "Settings screen. Purpose: settings plan."
+  },
+  "settingsPlanUnavailable": "无法加载你的方案。请稍后下拉重试。",
+  "@settingsPlanUnavailable": {
+    "description": "Settings screen. Purpose: settings plan unavailable."
+  },
+  "tierFree": "未订阅",
+  "@tierFree": {
+    "description": "Plan tier display. Purpose: tier free."
+  },
+  "tierPack": "歌曲包",
+  "@tierPack": {
+    "description": "Plan tier display. Purpose: tier pack."
+  },
+  "settingsSongsLeft": "{count, plural, one{还剩 {count} 首完整歌曲} other{还剩 {count} 首完整歌曲}}",
+  "@settingsSongsLeft": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Remaining full songs in the current allowance."
+      }
+    },
+    "description": "Settings screen. Purpose: settings songs left."
+  },
+  "settingsClipsLeft": "{count, plural, one{还剩 {count} 次试听} other{还剩 {count} 次试听}}",
+  "@settingsClipsLeft": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Remaining song previews in the current allowance."
+      }
+    },
+    "description": "Settings screen. Purpose: settings clips left."
+  },
+  "settingsResets": "{date} 重置",
+  "@settingsResets": {
+    "placeholders": {
+      "date": {
+        "type": "DateTime",
+        "format": "yMMMd",
+        "description": "Next allowance reset date, converted to local time."
+      }
+    },
+    "description": "Settings screen. Purpose: settings resets."
+  },
+  "settingsUpgrade": "升级",
+  "@settingsUpgrade": {
+    "description": "Settings screen. Purpose: settings upgrade."
+  },
+  "appTagline": "为你爱的人写一首歌",
+  "@appTagline": {
+    "description": "Brand tagline under the app name"
+  },
+  "commonClose": "关闭",
+  "@commonClose": {
+    "description": "Shared buttons and messages. Purpose: common close."
+  },
+  "commonDone": "完成",
+  "@commonDone": {
+    "description": "Shared buttons and messages. Purpose: common done."
+  },
+  "commonDelete": "删除",
+  "@commonDelete": {
+    "description": "Shared buttons and messages. Purpose: common delete."
+  },
+  "commonMore": "更多",
+  "@commonMore": {
+    "description": "Shared buttons and messages. Purpose: common more."
+  },
+  "commonCopy": "复制",
+  "@commonCopy": {
+    "description": "Shared buttons and messages. Purpose: common copy."
+  },
+  "commonCopied": "已复制",
+  "@commonCopied": {
+    "description": "Shared buttons and messages. Purpose: common copied."
+  },
+  "commonNotNow": "以后再说",
+  "@commonNotNow": {
+    "description": "Shared buttons and messages. Purpose: common not now."
+  },
+  "commonLearnMore": "了解更多",
+  "@commonLearnMore": {
+    "description": "Shared buttons and messages. Purpose: common learn more."
+  },
+  "commonSeeAll": "查看全部",
+  "@commonSeeAll": {
+    "description": "Shared buttons and messages. Purpose: common see all."
+  },
+  "commonKeepGoing": "继续生成",
+  "@commonKeepGoing": {
+    "description": "Shared buttons and messages. Purpose: common keep going."
+  },
+  "composerHint": "描述你想要的歌",
+  "@composerHint": {
+    "description": "P01 prompt field hint"
+  },
+  "composerAddPhotos": "添加照片",
+  "@composerAddPhotos": {
+    "description": "P01 + button"
+  },
+  "composerSourceMusicHint": "用你自己的话描述",
+  "@composerSourceMusicHint": {
+    "description": "Song creation composer. Purpose: composer source music hint."
+  },
+  "composerDictate": "语音输入",
+  "@composerDictate": {
+    "description": "P01 mic button"
+  },
+  "composerStopDictation": "停止语音输入",
+  "@composerStopDictation": {
+    "description": "P03a stop button"
+  },
+  "lengthPreview": "试听",
+  "@lengthPreview": {
+    "description": "Composer summary row: the 30-second preview (lyria-3-clip-preview)."
+  },
+  "lengthFull": "完整歌曲",
+  "@lengthFull": {
+    "description": "Composer summary row and options: the full ~2-minute song (lyria-3.5)."
+  },
+  "paramLength": "时长",
+  "@paramLength": {
+    "description": "Song option selector. Purpose: param length."
+  },
+  "paramVocals": "人声",
+  "@paramVocals": {
+    "description": "Song option selector. Purpose: param vocals."
+  },
+  "paramGenre": "曲风",
+  "@paramGenre": {
+    "description": "Song option selector. Purpose: param genre."
+  },
+  "templatePlaySample": "试听「{name}」示例",
+  "@templatePlaySample": {
+    "description": "Template tile play button",
+    "placeholders": {
+      "name": {
+        "type": "String",
+        "description": "Recipient or template display name; do not translate user-provided names."
+      }
+    }
+  },
+  "templatePauseSample": "暂停示例",
+  "@templatePauseSample": {
+    "description": "Song template and creation form. Purpose: template pause sample."
+  },
+  "lengthShort": "短",
+  "@lengthShort": {
+    "description": "Song length selector. Purpose: length short."
+  },
+  "lengthShortHint": "30 秒试听",
+  "@lengthShortHint": {
+    "description": "Song length selector. Purpose: length short hint."
+  },
+  "lengthStandard": "标准",
+  "@lengthStandard": {
+    "description": "Song length selector. Purpose: length standard."
+  },
+  "lengthStandardHint": "约 2 分钟，Pro",
+  "@lengthStandardHint": {
+    "description": "Song length selector. Purpose: length standard hint."
+  },
+  "vocalsCustom": "自定义",
+  "@vocalsCustom": {
+    "description": "Vocal option selector. Purpose: vocals custom."
+  },
+  "vocalsCustomHint": "根据你的描述",
+  "@vocalsCustomHint": {
+    "description": "Vocal option selector. Purpose: vocals custom hint."
+  },
+  "vocalsCustomDetail": "人声风格跟随你的描述。",
+  "@vocalsCustomDetail": {
+    "description": "Vocal option selector. Purpose: vocals custom detail."
+  },
+  "vocalsOn": "有人声",
+  "@vocalsOn": {
+    "description": "Vocal option selector. Purpose: vocals on."
+  },
+  "vocalsInstrumental": "纯音乐",
+  "@vocalsInstrumental": {
+    "description": "Vocal option selector. Purpose: vocals instrumental."
+  },
+  "vocalsLyricsIn": "歌词语言：{language}",
+  "@vocalsLyricsIn": {
+    "placeholders": {
+      "language": {
+        "type": "String",
+        "description": "Localized lyrics-language name."
+      }
+    },
+    "description": "Vocal option selector. Purpose: vocals lyrics in."
+  },
+  "genreCustom": "自定义",
+  "@genreCustom": {
+    "description": "Genre picker. Purpose: genre custom."
+  },
+  "genreCustomHint": "根据你的描述",
+  "@genreCustomHint": {
+    "description": "Genre picker. Purpose: genre custom hint."
+  },
+  "genrePopularIn": "{country}热门",
+  "@genrePopularIn": {
+    "placeholders": {
+      "country": {
+        "type": "String",
+        "description": "Localized country name."
+      }
+    },
+    "description": "Genre picker. Purpose: genre popular in."
+  },
+  "genreAll": "全部曲风",
+  "@genreAll": {
+    "description": "Genre picker. Purpose: genre all."
+  },
+  "regionHelper": "会改变 3 个推荐曲风和歌词语言",
+  "@regionHelper": {
+    "description": "Country and lyrics-language sheet. Purpose: region helper."
+  },
+  "regionLyricsRow": "歌词语言：{language}",
+  "@regionLyricsRow": {
+    "placeholders": {
+      "language": {
+        "type": "String",
+        "description": "Localized lyrics-language name."
+      }
+    },
+    "description": "Country and lyrics-language sheet. Purpose: region lyrics row."
+  },
+  "regionNoMatch": "没有匹配的国家或地区",
+  "@regionNoMatch": {
+    "description": "Country and lyrics-language sheet. Purpose: region no match."
+  },
+  "keywordAdd": "添加一个词",
+  "@keywordAdd": {
+    "description": "Creation keywords. Purpose: keyword add."
+  },
+  "keywordRemove": "移除「{word}」",
+  "@keywordRemove": {
+    "placeholders": {
+      "word": {
+        "type": "String",
+        "description": "User-provided keyword being removed."
+      }
+    },
+    "description": "Creation keywords. Purpose: keyword remove."
+  },
+  "nameClear": "清除名字",
+  "@nameClear": {
+    "description": "Recipient name field. Purpose: name clear."
+  },
+  "lyricsOptional": "自己写歌词（可选）",
+  "@lyricsOptional": {
+    "description": "Own-lyrics editor. Purpose: lyrics optional."
+  },
+  "issueRecipientArtistName": "不能使用艺人名字。",
+  "@issueRecipientArtistName": {
+    "description": "P18 name field"
+  },
+  "issuePromptTooLong": "描述请控制在 {limit} 个字符以内。",
+  "@issuePromptTooLong": {
+    "placeholders": {
+      "limit": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Maximum number of characters in the song description."
+      }
+    },
+    "description": "Creation form validation; explain how to correct the input. Purpose: issue prompt too long."
+  },
+  "voiceRecording": "正在录音…",
+  "@voiceRecording": {
+    "description": "On-device dictation panel. Purpose: voice recording."
+  },
+  "voiceStarting": "正在启动…",
+  "@voiceStarting": {
+    "description": "On-device dictation panel. Purpose: voice starting."
+  },
+  "voiceListening": "说说这首歌送给谁、TA 喜欢什么…",
+  "@voiceListening": {
+    "description": "On-device dictation panel. Purpose: voice listening."
+  },
+  "voiceOnDevice": "本机转写",
+  "@voiceOnDevice": {
+    "description": "On-device dictation panel. Purpose: voice on device."
+  },
+  "voicePermissionDenied": "请在“设置”中允许 Songlet 使用麦克风和语音识别后再试。",
+  "@voicePermissionDenied": {
+    "description": "On-device dictation panel. Purpose: voice permission denied."
+  },
+  "voiceUnavailable": "此设备不支持该语言的语音输入。",
+  "@voiceUnavailable": {
+    "description": "On-device dictation panel. Purpose: voice unavailable."
+  },
+  "voiceApplied": "已从语音添加",
+  "@voiceApplied": {
+    "description": "On-device dictation panel. Purpose: voice applied."
+  },
+  "photoRemove": "移除照片",
+  "@photoRemove": {
+    "description": "Photo selection. Purpose: photo remove."
+  },
+  "generatingTitleFor": "正在为 {name} 写歌…",
+  "@generatingTitleFor": {
+    "placeholders": {
+      "name": {
+        "type": "String",
+        "description": "Recipient or template display name; do not translate user-provided names."
+      }
+    },
+    "description": "Song generation progress and cancellation. Purpose: generating title for."
+  },
+  "generatingTitleGeneric": "正在写你的歌…",
+  "@generatingTitleGeneric": {
+    "description": "Song generation progress and cancellation. Purpose: generating title generic."
+  },
+  "generatingUsually": "通常约 {seconds} 秒",
+  "@generatingUsually": {
+    "placeholders": {
+      "seconds": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Video, countdown, or generation duration in seconds."
+      }
+    },
+    "description": "Song generation progress and cancellation. Purpose: generating usually."
+  },
+  "generatingPercent": "{percent}",
+  "@generatingPercent": {
+    "placeholders": {
+      "percent": {
+        "type": "String",
+        "description": "Complete percentage already formatted with intl for the UI locale, including the percent sign."
+      }
+    },
+    "description": "Song generation progress and cancellation. Purpose: generating percent."
+  },
+  "generatingProgress": "进度",
+  "@generatingProgress": {
+    "description": "Song generation progress and cancellation. Purpose: generating progress."
+  },
+  "generatingGlimpse": "抢先看一眼",
+  "@generatingGlimpse": {
+    "description": "Song generation progress and cancellation. Purpose: generating glimpse."
+  },
+  "generatingCancelTitle": "停止这首歌？",
+  "@generatingCancelTitle": {
+    "description": "Song generation progress and cancellation. Purpose: generating cancel title."
+  },
+  "generatingCancelQueued": "还没开始生成，不会扣除额度。",
+  "@generatingCancelQueued": {
+    "description": "Song generation progress and cancellation. Purpose: generating cancel queued."
+  },
+  "generatingCancelStarted": "已经开始生成，仍会计入额度。",
+  "@generatingCancelStarted": {
+    "description": "Song generation progress and cancellation. Purpose: generating cancel started."
+  },
+  "generatingCancelConfirm": "停止",
+  "@generatingCancelConfirm": {
+    "description": "Song generation progress and cancellation. Purpose: generating cancel confirm."
+  },
+  "generatingCancelled": "已停止",
+  "@generatingCancelled": {
+    "description": "Song generation progress and cancellation. Purpose: generating cancelled."
+  },
+  "generatingCancelledRefunded": "已停止——未扣除额度",
+  "@generatingCancelledRefunded": {
+    "description": "Song generation progress and cancellation. Purpose: generating cancelled refunded."
+  },
+  "queueTitle": "现在创作的人很多。",
+  "@queueTitle": {
+    "description": "Song generation queue. Purpose: queue title."
+  },
+  "queueSubtitle": "你的歌正在排队。",
+  "@queueSubtitle": {
+    "description": "Song generation queue. Purpose: queue subtitle."
+  },
+  "queuePosition": "排队位置",
+  "@queuePosition": {
+    "description": "Song generation queue. Purpose: queue position."
+  },
+  "queueWait": "预计等待",
+  "@queueWait": {
+    "description": "Song generation queue. Purpose: queue wait."
+  },
+  "queueWaitMinutes": "约 {minutes} 分钟",
+  "@queueWaitMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Estimated waiting or processing duration in minutes."
+      }
+    },
+    "description": "Song generation queue. Purpose: queue wait minutes."
+  },
+  "generatingNothing": "现在没有正在生成的歌。",
+  "@generatingNothing": {
+    "description": "Song generation progress and cancellation. Purpose: generating nothing."
+  },
+  "previewGetFull": "生成 2 分钟完整版",
+  "@previewGetFull": {
+    "description": "Song preview screen. Purpose: preview get full."
+  },
+  "previewShare": "分享试听",
+  "@previewShare": {
+    "description": "Song preview screen. Purpose: preview share."
+  },
+  "previewAnother": "换一版（消耗 1 次试听）",
+  "@previewAnother": {
+    "description": "Song preview screen. Purpose: preview another."
+  },
+  "playerPosition": "播放进度",
+  "@playerPosition": {
+    "description": "Song playback screen. Purpose: player position."
+  },
+  "playerPrevSection": "上一段",
+  "@playerPrevSection": {
+    "description": "Song playback screen. Purpose: player prev section."
+  },
+  "playerNextSection": "下一段",
+  "@playerNextSection": {
+    "description": "Song playback screen. Purpose: player next section."
+  },
+  "playerShuffle": "随机段落",
+  "@playerShuffle": {
+    "description": "Song playback screen. Purpose: player shuffle."
+  },
+  "playerRepeat": "循环",
+  "@playerRepeat": {
+    "description": "Song playback screen. Purpose: player repeat."
+  },
+  "playerProvenance": "由 Google Lyria 3 生成 · SynthID 水印 · AI 生成",
+  "@playerProvenance": {
+    "description": "Song playback screen. Purpose: player provenance."
+  },
+  "playerMissing": "这首歌已不在此设备上。",
+  "@playerMissing": {
+    "description": "Song playback screen. Purpose: player missing."
+  },
+  "actionDownload": "下载",
+  "@actionDownload": {
+    "description": "Work action button. Purpose: action download."
+  },
+  "actionShare": "分享",
+  "@actionShare": {
+    "description": "Work action button. Purpose: action share."
+  },
+  "actionLicense": "授权",
+  "@actionLicense": {
+    "description": "Work action button. Purpose: action license."
+  },
+  "actionRegenerate": "重新生成",
+  "@actionRegenerate": {
+    "description": "Work action button. Purpose: action regenerate."
+  },
+  "actionDetails": "详情",
+  "@actionDetails": {
+    "description": "Work action button. Purpose: action details."
+  },
+  "sectionIntro": "前奏",
+  "@sectionIntro": {
+    "description": "Song section display label; never translate the inserted protocol token. Purpose: section intro."
+  },
+  "sectionVerse": "主歌",
+  "@sectionVerse": {
+    "description": "Song section display label; never translate the inserted protocol token. Purpose: section verse."
+  },
+  "sectionPreChorus": "预副歌",
+  "@sectionPreChorus": {
+    "description": "Song section display label; never translate the inserted protocol token. Purpose: section pre chorus."
+  },
+  "sectionChorus": "副歌",
+  "@sectionChorus": {
+    "description": "Song section display label; never translate the inserted protocol token. Purpose: section chorus."
+  },
+  "sectionBridge": "桥段",
+  "@sectionBridge": {
+    "description": "Song section display label; never translate the inserted protocol token. Purpose: section bridge."
+  },
+  "sectionOutro": "尾奏",
+  "@sectionOutro": {
+    "description": "Song section display label; never translate the inserted protocol token. Purpose: section outro."
+  },
+  "sectionHook": "记忆点",
+  "@sectionHook": {
+    "description": "Song section display label; never translate the inserted protocol token. Purpose: section hook."
+  },
+  "shareTitle": "分享卡片",
+  "@shareTitle": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share title."
+  },
+  "shareSubtitle": "选择主题和版式。",
+  "@shareSubtitle": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share subtitle."
+  },
+  "shareTheme": "主题",
+  "@shareTheme": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share theme."
+  },
+  "shareLayout": "版式",
+  "@shareLayout": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share layout."
+  },
+  "shareLayoutScene": "带插画",
+  "@shareLayoutScene": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share layout scene."
+  },
+  "shareLayoutText": "纯文字",
+  "@shareLayoutText": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share layout text."
+  },
+  "paletteTerracotta": "陶土",
+  "@paletteTerracotta": {
+    "description": "Share-card color theme. Purpose: palette terracotta."
+  },
+  "paletteSand": "沙色",
+  "@paletteSand": {
+    "description": "Share-card color theme. Purpose: palette sand."
+  },
+  "paletteOlive": "橄榄",
+  "@paletteOlive": {
+    "description": "Share-card color theme. Purpose: palette olive."
+  },
+  "paletteNavy": "藏青",
+  "@paletteNavy": {
+    "description": "Share-card color theme. Purpose: palette navy."
+  },
+  "shareAction": "分享",
+  "@shareAction": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share action."
+  },
+  "shareSaveVideo": "保存视频",
+  "@shareSaveVideo": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share save video."
+  },
+  "shareCopyLyrics": "复制歌词",
+  "@shareCopyLyrics": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share copy lyrics."
+  },
+  "shareVideoSaved": "已存入照片",
+  "@shareVideoSaved": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share video saved."
+  },
+  "shareLyricsCopied": "歌词已复制",
+  "@shareLyricsCopied": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share lyrics copied."
+  },
+  "shareCardTagline": "为某个人写的歌",
+  "@shareCardTagline": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share card tagline."
+  },
+  "shareSaveFailed": "无法保存视频。请在“设置”中允许 Songlet 添加到照片。",
+  "@shareSaveFailed": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share save failed."
+  },
+  "downloadReady": "完整版已就绪",
+  "@downloadReady": {
+    "description": "Audio download screen. Purpose: download ready."
+  },
+  "downloadTitle": "永久属于你",
+  "@downloadTitle": {
+    "description": "Audio download screen. Purpose: download title."
+  },
+  "downloadIntro": "你的歌已完成。可在下方下载高品质音频和商用授权。",
+  "@downloadIntro": {
+    "description": "Audio download screen. Purpose: download intro."
+  },
+  "downloadAudioHeader": "下载音频",
+  "@downloadAudioHeader": {
+    "description": "Audio download screen. Purpose: download audio header."
+  },
+  "downloadAudioNote": "高品质",
+  "@downloadAudioNote": {
+    "description": "Audio download screen. Purpose: download audio note."
+  },
+  "downloadMp3Title": "MP3 · 320 kbps",
+  "@downloadMp3Title": {
+    "description": "Audio download screen. Purpose: download mp3 title."
+  },
+  "downloadMp3Subtitle": "适合分享和日常收听",
+  "@downloadMp3Subtitle": {
+    "description": "Audio download screen. Purpose: download mp3 subtitle."
+  },
+  "downloadWavTitle": "WAV · 44.1 kHz（Premier）",
+  "@downloadWavTitle": {
+    "description": "Audio download screen. Purpose: download wav title."
+  },
+  "downloadWavSubtitle": "专业用途的最高品质",
+  "@downloadWavSubtitle": {
+    "description": "Audio download screen. Purpose: download wav subtitle."
+  },
+  "downloadMp3Action": "下载 MP3",
+  "@downloadMp3Action": {
+    "description": "Audio download screen. Purpose: download mp3 action."
+  },
+  "downloadWavAction": "下载 WAV",
+  "@downloadWavAction": {
+    "description": "Audio download screen. Purpose: download wav action."
+  },
+  "downloadLicenseAction": "下载授权文件",
+  "@downloadLicenseAction": {
+    "description": "Audio download screen. Purpose: download license action."
+  },
+  "licenseHeader": "商用授权",
+  "@licenseHeader": {
+    "description": "Commercial-license download and information. Purpose: license header."
+  },
+  "licenseIncluded": "已包含在你的方案中",
+  "@licenseIncluded": {
+    "description": "Commercial-license download and information. Purpose: license included."
+  },
+  "licenseNotIncluded": "购买方案或歌曲包后获得",
+  "@licenseNotIncluded": {
+    "description": "Commercial-license download and information. Purpose: license not included."
+  },
+  "licensePdfTitle": "商用授权（PDF）",
+  "@licensePdfTitle": {
+    "description": "Commercial-license download and information. Purpose: license pdf title."
+  },
+  "licenseGenerated": "生成于 {date}",
+  "@licenseGenerated": {
+    "placeholders": {
+      "date": {
+        "type": "DateTime",
+        "format": "yMMMd",
+        "description": "License issuance date, converted to local time."
+      }
+    },
+    "description": "Commercial-license download and information. Purpose: license generated."
+  },
+  "licenseId": "授权编号：{id}",
+  "@licenseId": {
+    "placeholders": {
+      "id": {
+        "type": "String",
+        "description": "Account or license identifier; preserve it verbatim."
+      }
+    },
+    "description": "Commercial-license download and information. Purpose: license id."
+  },
+  "licenseUsesTitle": "这首歌可用于：",
+  "@licenseUsesTitle": {
+    "description": "Commercial-license download and information. Purpose: license uses title."
+  },
+  "usePersonal": "个人使用",
+  "@usePersonal": {
+    "description": "Commercial-license permitted uses. Purpose: use personal."
+  },
+  "usePersonalDetail": "礼物、纪念、非商业用途",
+  "@usePersonalDetail": {
+    "description": "Commercial-license permitted uses. Purpose: use personal detail."
+  },
+  "useAds": "广告与营销",
+  "@useAds": {
+    "description": "Commercial-license permitted uses. Purpose: use ads."
+  },
+  "useAdsDetail": "推广、付费投放",
+  "@useAdsDetail": {
+    "description": "Commercial-license permitted uses. Purpose: use ads detail."
+  },
+  "useSocial": "社交媒体",
+  "@useSocial": {
+    "description": "Commercial-license permitted uses. Purpose: use social."
+  },
+  "useSocialDetail": "抖音、Instagram、YouTube 等",
+  "@useSocialDetail": {
+    "description": "Commercial-license permitted uses. Purpose: use social detail."
+  },
+  "usePodcasts": "播客与视频",
+  "@usePodcasts": {
+    "description": "Commercial-license permitted uses. Purpose: use podcasts."
+  },
+  "usePodcastsDetail": "可变现内容",
+  "@usePodcastsDetail": {
+    "description": "Commercial-license permitted uses. Purpose: use podcasts detail."
+  },
+  "licenseDetailsNote": "完整条款见授权 PDF。",
+  "@licenseDetailsNote": {
+    "description": "Commercial-license download and information. Purpose: license details note."
+  },
+  "saveEnjoyHeader": "保存与收听",
+  "@saveEnjoyHeader": {
+    "description": "Save and export actions. Purpose: save enjoy header."
+  },
+  "saveToFiles": "存储到“文件”",
+  "@saveToFiles": {
+    "description": "Save and export actions. Purpose: save to files."
+  },
+  "addToMusic": "添加到音乐",
+  "@addToMusic": {
+    "description": "Export action. Purpose: add to music."
+  },
+  "synthIdNote": "这首歌含有 SynthID 水印，下载后仍可识别为 AI 生成内容。",
+  "@synthIdNote": {
+    "description": "AI watermark explanation. Purpose: synth id note."
+  },
+  "wavNeedsPremier": "WAV 下载仅限 Premier。",
+  "@wavNeedsPremier": {
+    "description": "WAV download availability. Purpose: wav needs premier."
+  },
+  "wavUnavailable": "这首歌没有 WAV 文件。WAV 需在歌曲生成后 24 小时内保存。",
+  "@wavUnavailable": {
+    "description": "A Premier user tried to save WAV for a song that has no WAV render."
+  },
+  "libraryFilterAll": "全部",
+  "@libraryFilterAll": {
+    "description": "Saved-song library. Purpose: library filter all."
+  },
+  "libraryJustBecause": "随心而作",
+  "@libraryJustBecause": {
+    "description": "Library section for songs without a template occasion"
+  },
+  "libraryPlay": "播放 {title}",
+  "@libraryPlay": {
+    "placeholders": {
+      "title": {
+        "type": "String",
+        "description": "Localized song title; may contain a user-provided recipient name."
+      }
+    },
+    "description": "Saved-song library. Purpose: library play."
+  },
+  "libraryActions": "{title} 的操作",
+  "@libraryActions": {
+    "placeholders": {
+      "title": {
+        "type": "String",
+        "description": "Localized song title; may contain a user-provided recipient name."
+      }
+    },
+    "description": "Saved-song library. Purpose: library actions."
+  },
+  "libraryDeleteTitle": "删除这首歌？",
+  "@libraryDeleteTitle": {
+    "description": "Saved-song library. Purpose: library delete title."
+  },
+  "libraryDeleteBody": "会从此设备删除。如果开启了 iCloud 同步，也会从你的其他设备删除。",
+  "@libraryDeleteBody": {
+    "description": "Saved-song library. Purpose: library delete body."
+  },
+  "libraryDeleted": "已删除",
+  "@libraryDeleted": {
+    "description": "Saved-song library. Purpose: library deleted."
+  },
+  "libraryFailed": "未完成",
+  "@libraryFailed": {
+    "description": "Saved-song library. Purpose: library failed."
+  },
+  "libraryNoMatch": "这个场合还没有歌。",
+  "@libraryNoMatch": {
+    "description": "Saved-song library. Purpose: library no match."
+  },
+  "detailFullGenerated": "完整版已生成",
+  "@detailFullGenerated": {
+    "description": "Work details screen. Purpose: detail full generated."
+  },
+  "detailPreviewGenerated": "试听已生成",
+  "@detailPreviewGenerated": {
+    "description": "Work details screen. Purpose: detail preview generated."
+  },
+  "detailGeneratedOn": "生成于 {date}",
+  "@detailGeneratedOn": {
+    "placeholders": {
+      "date": {
+        "type": "DateTime",
+        "format": "yMMMd",
+        "description": "Song creation date, converted to local time."
+      }
+    },
+    "description": "Work details screen. Purpose: detail generated on."
+  },
+  "detailPromptUsed": "创作信息",
+  "@detailPromptUsed": {
+    "description": "Work details screen. Purpose: detail prompt used."
+  },
+  "detailOccasion": "场合",
+  "@detailOccasion": {
+    "description": "Work details screen. Purpose: detail occasion."
+  },
+  "detailCountry": "国家或地区",
+  "@detailCountry": {
+    "description": "Work details screen. Purpose: detail country."
+  },
+  "detailGenre": "曲风",
+  "@detailGenre": {
+    "description": "Work details screen. Purpose: detail genre."
+  },
+  "detailKeywords": "关键词",
+  "@detailKeywords": {
+    "description": "Work details screen. Purpose: detail keywords."
+  },
+  "detailDescription": "描述",
+  "@detailDescription": {
+    "description": "Work details screen. Purpose: detail description."
+  },
+  "detailLyrics": "歌词",
+  "@detailLyrics": {
+    "description": "Work details screen. Purpose: detail lyrics."
+  },
+  "detailGenerationId": "生成编号",
+  "@detailGenerationId": {
+    "description": "Work details screen. Purpose: detail generation id."
+  },
+  "detailRegenerate": "同风格再生成",
+  "@detailRegenerate": {
+    "description": "Work details screen. Purpose: detail regenerate."
+  },
+  "detailCustomGenre": "根据描述",
+  "@detailCustomGenre": {
+    "description": "Work details screen. Purpose: detail custom genre."
+  },
+  "settingsSectionPlan": "购买",
+  "@settingsSectionPlan": {
+    "description": "Settings screen. Purpose: settings section plan."
+  },
+  "settingsSectionLibrary": "作品库",
+  "@settingsSectionLibrary": {
+    "description": "Settings screen. Purpose: settings section library."
+  },
+  "settingsSectionAbout": "关于",
+  "@settingsSectionAbout": {
+    "description": "Settings screen. Purpose: settings section about."
+  },
+  "settingsRestore": "恢复购买",
+  "@settingsRestore": {
+    "description": "Settings screen. Purpose: settings restore."
+  },
+  "settingsManage": "管理订阅",
+  "@settingsManage": {
+    "description": "Settings screen. Purpose: settings manage."
+  },
+  "settingsICloud": "iCloud 同步",
+  "@settingsICloud": {
+    "description": "Settings screen. Purpose: settings i cloud."
+  },
+  "settingsICloudOn": "歌曲会在你的设备间同步",
+  "@settingsICloudOn": {
+    "description": "Settings screen. Purpose: settings i cloud on."
+  },
+  "settingsICloudOff": "歌曲只保存在此设备",
+  "@settingsICloudOff": {
+    "description": "Settings screen. Purpose: settings i cloud off."
+  },
+  "settingsICloudUnavailable": "请先在“设置”中登录 iCloud",
+  "@settingsICloudUnavailable": {
+    "description": "Settings screen. Purpose: settings i cloud unavailable."
+  },
+  "settingsLyricsLanguage": "默认歌词语言",
+  "@settingsLyricsLanguage": {
+    "description": "Settings screen. Purpose: settings lyrics language."
+  },
+  "settingsLyricsLanguageAuto": "跟随国家或地区",
+  "@settingsLyricsLanguageAuto": {
+    "description": "Settings screen. Purpose: settings lyrics language auto."
+  },
+  "settingsTerms": "使用条款",
+  "@settingsTerms": {
+    "description": "Settings screen. Purpose: settings terms."
+  },
+  "settingsPrivacy": "隐私政策",
+  "@settingsPrivacy": {
+    "description": "Settings screen. Purpose: settings privacy."
+  },
+  "settingsVersion": "版本 {version}",
+  "@settingsVersion": {
+    "placeholders": {
+      "version": {
+        "type": "String",
+        "description": "App version string from the device profile."
+      }
+    },
+    "description": "Settings screen. Purpose: settings version."
+  },
+  "aboutTitle": "关于生成",
+  "@aboutTitle": {
+    "description": "About generation and privacy. Purpose: about title."
+  },
+  "aboutSubtitle": "Songlet 如何创作你的歌",
+  "@aboutSubtitle": {
+    "description": "About generation and privacy. Purpose: about subtitle."
+  },
+  "aboutLyriaTitle": "由 Google Lyria 3 驱动",
+  "@aboutLyriaTitle": {
+    "description": "About generation and privacy. Purpose: about lyria title."
+  },
+  "aboutLyriaBody": "歌曲由 Google 的 Lyria 3 通过 Gemini API 生成。Lyria 3 是一个音乐生成模型，能把你的想法变成原创歌曲。",
+  "@aboutLyriaBody": {
+    "description": "About generation and privacy. Purpose: about lyria body."
+  },
+  "aboutWatermarkTitle": "内置水印",
+  "@aboutWatermarkTitle": {
+    "description": "About generation and privacy. Purpose: about watermark title."
+  },
+  "aboutWatermarkBody": "每首歌都带有 Google 的 SynthID 水印，用于识别 AI 生成的音乐，且无法去除。",
+  "@aboutWatermarkBody": {
+    "description": "About generation and privacy. Purpose: about watermark body."
+  },
+  "aboutImitationTitle": "不模仿真实艺人",
+  "@aboutImitationTitle": {
+    "description": "About generation and privacy. Purpose: about imitation title."
+  },
+  "aboutImitationBody": "Songlet 从不模仿真实艺人、他们的声音或特定风格。歌曲均为原创，来自你的想法、描述和照片。",
+  "@aboutImitationBody": {
+    "description": "About generation and privacy. Purpose: about imitation body."
+  },
+  "aboutPrivacyTitle": "重视你的隐私",
+  "@aboutPrivacyTitle": {
+    "description": "About generation and privacy. Purpose: about privacy title."
+  },
+  "aboutPrivacyBody": "照片和描述会在 24 小时内从服务器删除。歌曲生成后我们不会保留你的图片或描述。",
+  "@aboutPrivacyBody": {
+    "description": "About generation and privacy. Purpose: about privacy body."
+  },
+  "aboutBanner": "你分享的每首歌都会标注“AI 生成”。",
+  "@aboutBanner": {
+    "description": "About generation and privacy. Purpose: about banner."
+  },
+  "aboutFooter": "Songlet {version} · 由 Google Lyria 3 生成",
+  "@aboutFooter": {
+    "placeholders": {
+      "version": {
+        "type": "String",
+        "description": "App version string from the device profile."
+      }
+    },
+    "description": "About generation and privacy. Purpose: about footer."
+  },
+  "festivalKicker": "记录你的故事",
+  "@festivalKicker": {
+    "description": "Festival creation screen. Purpose: festival kicker."
+  },
+  "festivalComing": "就要到了！",
+  "@festivalComing": {
+    "description": "Festival creation screen. Purpose: festival coming."
+  },
+  "festivalBody": "写一首独一无二的歌来庆祝。",
+  "@festivalBody": {
+    "description": "Festival creation screen. Purpose: festival body."
+  },
+  "festivalCta": "写一首{festival}的歌",
+  "@festivalCta": {
+    "placeholders": {
+      "festival": {
+        "type": "String",
+        "description": "Localized festival name."
+      }
+    },
+    "description": "Festival creation screen. Purpose: festival cta."
+  },
+  "festivalPickOccasion": "选一个场合，开始创作",
+  "@festivalPickOccasion": {
+    "description": "Festival creation screen. Purpose: festival pick occasion."
+  },
+  "festivalLanguagesTitle": "用你的语言唱",
+  "@festivalLanguagesTitle": {
+    "description": "Festival creation screen. Purpose: festival languages title."
+  },
+  "festivalLanguagesBody": "支持{language}等 13 种语言",
+  "@festivalLanguagesBody": {
+    "placeholders": {
+      "language": {
+        "type": "String",
+        "description": "Localized lyrics-language name."
+      }
+    },
+    "description": "Festival creation screen. Purpose: festival languages body."
+  },
+  "unavailableTitle": "暂时不可用",
+  "@unavailableTitle": {
+    "description": "Service availability screen. Purpose: unavailable title."
+  },
+  "unavailableMessage": "Songlet 现在无法生成歌曲。作品库仍可使用——请稍后再试。",
+  "@unavailableMessage": {
+    "description": "Service availability screen. Purpose: unavailable message."
+  },
+  "paywallHeroTitle": "生成完整版",
+  "@paywallHeroTitle": {
+    "description": "Purchase screen. Purpose: paywall hero title."
+  },
+  "paywallHeroSubtitle": "把你的想法变成更高品质、拥有完整权利的歌曲。",
+  "@paywallHeroSubtitle": {
+    "description": "Purchase screen. Purpose: paywall hero subtitle."
+  },
+  "paywallBenefitSongs": "更多歌曲",
+  "@paywallBenefitSongs": {
+    "description": "Purchase screen. Purpose: paywall benefit songs."
+  },
+  "paywallBenefitQuality": "更高品质",
+  "@paywallBenefitQuality": {
+    "description": "Purchase screen. Purpose: paywall benefit quality."
+  },
+  "paywallBenefitCommercial": "可商用",
+  "@paywallBenefitCommercial": {
+    "description": "Purchase screen. Purpose: paywall benefit commercial."
+  },
+  "planSongs": "{count, plural, other{每月 {count} 首完整歌曲}}",
+  "@planSongs": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Full-song allowance per month for this plan and storefront."
+      }
+    },
+    "description": "Purchase screen subscription benefits. Purpose: plan songs."
+  },
+  "planPreviews": "{count, plural, other{每月 {count} 次试听}}",
+  "@planPreviews": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Preview allowance per month for this plan and storefront."
+      }
+    },
+    "description": "Purchase screen subscription benefits. Purpose: plan previews."
+  },
+  "planMp3": "MP3 下载",
+  "@planMp3": {
+    "description": "Purchase screen subscription benefits. Purpose: plan mp3."
+  },
+  "planMp3Wav": "MP3 + WAV 下载",
+  "@planMp3Wav": {
+    "description": "Purchase screen subscription benefits. Purpose: plan mp3 wav."
+  },
+  "planLicense": "商用授权",
+  "@planLicense": {
+    "description": "Purchase screen subscription benefits. Purpose: plan license."
+  },
+  "planPriority": "优先生成",
+  "@planPriority": {
+    "description": "Purchase screen subscription benefits. Purpose: plan priority."
+  },
+  "planTrial": "{days} 天免费试用",
+  "@planTrial": {
+    "placeholders": {
+      "days": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Trial duration in days reported by StoreKit."
+      }
+    },
+    "description": "Purchase screen subscription benefits. Purpose: plan trial."
+  },
+  "planPerYear": "{price}/年",
+  "@planPerYear": {
+    "placeholders": {
+      "price": {
+        "type": "String",
+        "description": "Unmodified StoreKit Product.displayPrice; never format or parse this value."
+      }
+    },
+    "description": "Purchase screen subscription benefits. Purpose: plan per year."
+  },
+  "planPerMonth": "{price}/月",
+  "@planPerMonth": {
+    "placeholders": {
+      "price": {
+        "type": "String",
+        "description": "Unmodified StoreKit Product.displayPrice; never format or parse this value."
+      }
+    },
+    "description": "Purchase screen subscription benefits. Purpose: plan per month."
+  },
+  "packTitle": "只需要几首？",
+  "@packTitle": {
+    "description": "Purchase screen one-time song pack. Purpose: pack title."
+  },
+  "packSubtitle": "{count, plural, other{{count} 首歌曲包}}",
+  "@packSubtitle": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Full songs granted by this one-time pack."
+      }
+    },
+    "description": "Purchase screen one-time song pack. Purpose: pack subtitle."
+  },
+  "packNote": "永不过期",
+  "@packNote": {
+    "description": "Purchase screen one-time song pack. Purpose: pack note."
+  },
+  "valueForever": "你的歌永久保存",
+  "@valueForever": {
+    "description": "Purchase screen benefits. Purpose: value forever."
+  },
+  "valueDownloads": "高品质下载",
+  "@valueDownloads": {
+    "description": "Purchase screen benefits. Purpose: value downloads."
+  },
+  "valueCommercial": "允许商用",
+  "@valueCommercial": {
+    "description": "Purchase screen benefits. Purpose: value commercial."
+  },
+  "valuePrivate": "隐私优先",
+  "@valuePrivate": {
+    "description": "Purchase screen benefits. Purpose: value private."
+  },
+  "paywallTrialDisclosure": "免费试用结束后，将自动按 {pricePerPeriod} 扣款。可在试用结束前随时取消。",
+  "@paywallTrialDisclosure": {
+    "description": "Paywall disclosure for a selected subscription with a free trial. States the actual recurring price and billing period after the trial, and that cancellation is possible before the trial ends. Shown together with the full auto-renewal notice.",
+    "placeholders": {
+      "pricePerPeriod": {
+        "type": "String",
+        "description": "Localized price with the selected subscription’s billing period (planPerMonth or planPerYear). Its price portion is the unmodified StoreKit Product.displayPrice."
+      }
+    }
+  },
+  "paywallSubscribe": "订阅",
+  "@paywallSubscribe": {
+    "description": "Purchase screen. Purpose: paywall subscribe."
+  },
+  "paywallBuyPack": "购买歌曲包",
+  "@paywallBuyPack": {
+    "description": "Purchase screen. Purpose: paywall buy pack."
+  },
+  "templateBirthdayWish": "生日祝福",
+  "@templateBirthdayWish": {
+    "description": "Song template and creation form. Purpose: template birthday wish."
+  },
+  "templateBirthdayWishHint": "为 TA 的特别日子写一首特别的歌",
+  "@templateBirthdayWishHint": {
+    "description": "Song template and creation form. Purpose: template birthday wish hint."
+  },
+  "templateBirthdayParty": "生日派对",
+  "@templateBirthdayParty": {
+    "description": "Song template and creation form. Purpose: template birthday party."
+  },
+  "templateBirthdayPartyHint": "为寿星把派对气氛拉满",
+  "@templateBirthdayPartyHint": {
+    "description": "Song template and creation form. Purpose: template birthday party hint."
+  },
+  "templateLoveStory": "爱情故事",
+  "@templateLoveStory": {
+    "description": "Song template and creation form. Purpose: template love story."
+  },
+  "templateLoveStoryHint": "把你们的故事写成歌",
+  "@templateLoveStoryHint": {
+    "description": "Song template and creation form. Purpose: template love story hint."
+  },
+  "templateThankAFriend": "感谢朋友",
+  "@templateThankAFriend": {
+    "description": "Song template and creation form. Purpose: template thank a friend."
+  },
+  "templateThankAFriendHint": "用歌说出说不出口的谢谢",
+  "@templateThankAFriendHint": {
+    "description": "Song template and creation form. Purpose: template thank a friend hint."
+  },
+  "templatePartyInvite": "派对邀请",
+  "@templatePartyInvite": {
+    "description": "Song template and creation form. Purpose: template party invite."
+  },
+  "templatePartyInviteHint": "把大家都叫来",
+  "@templatePartyInviteHint": {
+    "description": "Song template and creation form. Purpose: template party invite hint."
+  },
+  "templateWedding": "婚礼",
+  "@templateWedding": {
+    "description": "Song template and creation form. Purpose: template wedding."
+  },
+  "templateWeddingHint": "为 TA 们的永恒时刻",
+  "@templateWeddingHint": {
+    "description": "Song template and creation form. Purpose: template wedding hint."
+  },
+  "templateInMemory": "纪念",
+  "@templateInMemory": {
+    "description": "Song template and creation form. Purpose: template in memory."
+  },
+  "templateInMemoryHint": "纪念你珍惜的人",
+  "@templateInMemoryHint": {
+    "description": "Song template and creation form. Purpose: template in memory hint."
+  },
+  "templateFestival": "节日",
+  "@templateFestival": {
+    "description": "Song template and creation form. Purpose: template festival."
+  },
+  "templateFestivalHint": "为特别的季节送上祝福",
+  "@templateFestivalHint": {
+    "description": "Song template and creation form. Purpose: template festival hint."
+  },
+  "templateRingtone": "铃声",
+  "@templateRingtone": {
+    "description": "Song template and creation form. Purpose: template ringtone."
+  },
+  "templateRingtoneHint": "专属于你的短循环",
+  "@templateRingtoneHint": {
+    "description": "Song template and creation form. Purpose: template ringtone hint."
+  },
+  "templateTeamAnthem": "队歌",
+  "@templateTeamAnthem": {
+    "description": "Song template and creation form. Purpose: template team anthem."
+  },
+  "templateTeamAnthemHint": "点燃队伍和观众",
+  "@templateTeamAnthemHint": {
+    "description": "Song template and creation form. Purpose: template team anthem hint."
+  },
+  "templateSportsRecap": "赛事回顾",
+  "@templateSportsRecap": {
+    "description": "Song template and creation form. Purpose: template sports recap."
+  },
+  "templateSportsRecapHint": "把那场比赛唱出来",
+  "@templateSportsRecapHint": {
+    "description": "Song template and creation form. Purpose: template sports recap hint."
+  },
+  "templateRapBattle": "说唱对决",
+  "@templateRapBattle": {
+    "description": "Song template and creation form. Purpose: template rap battle."
+  },
+  "templateRapBattleHint": "给好对手的友好 battle",
+  "@templateRapBattleHint": {
+    "description": "Song template and creation form. Purpose: template rap battle hint."
+  },
+  "templateComedy": "搞笑",
+  "@templateComedy": {
+    "description": "Song template and creation form. Purpose: template comedy."
+  },
+  "templateComedyHint": "把圈内梗唱成副歌",
+  "@templateComedyHint": {
+    "description": "Song template and creation form. Purpose: template comedy hint."
+  },
+  "templatePetAnthem": "宠物之歌",
+  "@templatePetAnthem": {
+    "description": "Song template and creation form. Purpose: template pet anthem."
+  },
+  "templatePetAnthemHint": "给你的毛孩子一首主题曲",
+  "@templatePetAnthemHint": {
+    "description": "Song template and creation form. Purpose: template pet anthem hint."
+  },
+  "templateHometown": "家乡",
+  "@templateHometown": {
+    "description": "Song template and creation form. Purpose: template hometown."
+  },
+  "templateHometownHint": "唱给你称为家的地方",
+  "@templateHometownHint": {
+    "description": "Song template and creation form. Purpose: template hometown hint."
+  },
+  "templateBusinessPromo": "小店宣传",
+  "@templateBusinessPromo": {
+    "description": "Song template and creation form. Purpose: template business promo."
+  },
+  "templateBusinessPromoHint": "给你的店或品牌一段洗脑旋律",
+  "@templateBusinessPromoHint": {
+    "description": "Song template and creation form. Purpose: template business promo hint."
+  },
+  "templateCustom": "你的想法",
+  "@templateCustom": {
+    "description": "Occasion name for a free-form prompt"
+  },
+  "mvRecommended": "推荐",
+  "@mvRecommended": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv recommended."
+  },
+  "mvSeconds": "{seconds} 秒",
+  "@mvSeconds": {
+    "description": "Video length in seconds.",
+    "placeholders": {
+      "seconds": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Video, countdown, or generation duration in seconds."
+      }
+    }
+  },
+  "mvViewProgress": "查看进度",
+  "@mvViewProgress": {
+    "description": "Opens the progress of a video being made."
+  },
+  "mvIntentWaiting": "{level}正在等待积分",
+  "@mvIntentWaiting": {
+    "description": "Hub banner: a video refused for credits can be finished.",
+    "placeholders": {
+      "level": {
+        "type": "String",
+        "description": "Localized music-video level name."
+      }
+    }
+  },
+  "mvSongExpiredAction": "重新生成这首歌",
+  "@mvSongExpiredAction": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv song expired action."
+  },
+  "mvQuotaNeed": "{level}需要 {required} 积分，你现在有 {available}。",
+  "@mvQuotaNeed": {
+    "description": "Quota sheet body.",
+    "placeholders": {
+      "level": {
+        "type": "String",
+        "description": "Localized music-video level name."
+      },
+      "required": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Video credits required to create the selected video."
+      },
+      "available": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Video credits currently available to the account."
+      }
+    }
+  },
+  "mvQuotaBuyAndContinue": "购买并继续",
+  "@mvQuotaBuyAndContinue": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv quota buy and continue."
+  },
+  "mvQuotaMayNeedTwice": "在你所在的地区，一个包可能不够，可能需要买两个。",
+  "@mvQuotaMayNeedTwice": {
+    "description": "T2/T3 storefronts: a pack grants fewer credits."
+  },
+  "mvQuotaAutoRetry": "购买完成后视频会立即开始制作。",
+  "@mvQuotaAutoRetry": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv quota auto retry."
+  },
+  "mvAutoLyricMaking": "正在制作歌词视频",
+  "@mvAutoLyricMaking": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv auto lyric making."
+  },
+  "mvAutoChorusDetail": "用这首歌和你的积分制作",
+  "@mvAutoChorusDetail": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv auto chorus detail."
+  },
+  "mvAutoReady": "{level}已完成",
+  "@mvAutoReady": {
+    "description": "Automatic video finished.",
+    "placeholders": {
+      "level": {
+        "type": "String",
+        "description": "Localized music-video level name."
+      }
+    }
+  },
+  "mvAutoView": "查看",
+  "@mvAutoView": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv auto view."
+  },
+  "mvUpgradeChorus": "制作副歌视频",
+  "@mvUpgradeChorus": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv upgrade chorus."
+  },
+  "mvAutoFailed": "视频未能开始",
+  "@mvAutoFailed": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv auto failed."
+  },
+  "mvLeaveHint": "你可以离开此页面，我们会在预计完成时通知你。",
+  "@mvLeaveHint": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv leave hint."
+  },
+  "mvCreditsBack": "{credits, plural, other{你的 {credits} 积分已退回。}}",
+  "@mvCreditsBack": {
+    "description": "A failed video was refunded.",
+    "placeholders": {
+      "credits": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Number of video credits, not a monetary price."
+      }
+    }
+  },
+  "mvFailedTitle": "这个视频没有完成",
+  "@mvFailedTitle": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv failed title."
+  },
+  "mvRejectedTitle": "有一张照片无法使用",
+  "@mvRejectedTitle": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv rejected title."
+  },
+  "mvRejectedBody": "视频模型拒绝了你的一张参考照片。请调整照片后重试。",
+  "@mvRejectedBody": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv rejected body."
+  },
+  "mvAdjustPhotos": "调整照片后重试",
+  "@mvAdjustPhotos": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv adjust photos."
+  },
+  "mvTryChorus": "改做副歌视频",
+  "@mvTryChorus": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv try chorus."
+  },
+  "mvPreparingPhotos": "正在上传照片…",
+  "@mvPreparingPhotos": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv preparing photos."
+  },
+  "mvPreparingSubmit": "正在提交视频…",
+  "@mvPreparingSubmit": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv preparing submit."
+  },
+  "mvNotifyTitle": "你的视频应该做好了",
+  "@mvNotifyTitle": {
+    "description": "Local notification title at the video ETA."
+  },
+  "mvNotifyBody": "{level}——点按观看。",
+  "@mvNotifyBody": {
+    "description": "Local notification body.",
+    "placeholders": {
+      "level": {
+        "type": "String",
+        "description": "Localized music-video level name."
+      }
+    }
+  },
+  "mvRegenerate": "再做一个",
+  "@mvRegenerate": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv regenerate."
+  },
+  "mvEntryTitle": "做成视频",
+  "@mvEntryTitle": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv entry title."
+  },
+  "mvEntrySubtitle": "歌词、副歌和整曲视频，均使用积分",
+  "@mvEntrySubtitle": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv entry subtitle."
+  },
+  "mvEntryDisabled": "歌曲完成后可用",
+  "@mvEntryDisabled": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv entry disabled."
+  },
+  "mvEntryChoose": "选择视频",
+  "@mvEntryChoose": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv entry choose."
+  },
+  "mvEntryWatch": "观看视频",
+  "@mvEntryWatch": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv entry watch."
+  },
+  "mvChipReady": "视频",
+  "@mvChipReady": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv chip ready."
+  },
+  "mvChipMaking": "视频制作中",
+  "@mvChipMaking": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv chip making."
+  },
+  "lengthAutoVideo": "同时生成歌词视频",
+  "@lengthAutoVideo": {
+    "description": "Song length selector. Purpose: length auto video."
+  },
+  "lengthAutoVideoHint": "歌曲完成几分钟后即可 · 使用积分",
+  "@lengthAutoVideoHint": {
+    "description": "Song length selector. Purpose: length auto video hint."
+  },
+  "lengthSongAndChorus": "歌曲 + 副歌视频",
+  "@lengthSongAndChorus": {
+    "description": "Song length selector. Purpose: length song and chorus."
+  },
+  "lengthSongAndChorusHint": "先生成整首歌，再做 30 秒副歌视频",
+  "@lengthSongAndChorusHint": {
+    "description": "Song length selector. Purpose: length song and chorus hint."
+  },
+  "paywallVideoGroup": "音乐视频",
+  "@paywallVideoGroup": {
+    "description": "Purchase screen. Purpose: paywall video group."
+  },
+  "planVideoIncluded": "每月额度也可用于制作音乐视频",
+  "@planVideoIncluded": {
+    "description": "Purchase screen subscription benefits. Purpose: plan video included."
+  },
+  "settingsVideoCredits": "视频积分",
+  "@settingsVideoCredits": {
+    "description": "Settings screen. Purpose: settings video credits."
+  },
+  "createGenrePop": "流行",
+  "@createGenrePop": {
+    "description": "Genre display label in creation, playback, library, and work details for Pop. The generation request retains its original English genre value."
+  },
+  "createGenreHipHopRap": "嘻哈与说唱",
+  "@createGenreHipHopRap": {
+    "description": "Genre display label in creation, playback, library, and work details for Hip-Hop & Rap. The generation request retains its original English genre value."
+  },
+  "createGenreRock": "摇滚",
+  "@createGenreRock": {
+    "description": "Genre display label in creation, playback, library, and work details for Rock. The generation request retains its original English genre value."
+  },
+  "createGenreKPop": "韩流",
+  "@createGenreKPop": {
+    "description": "Genre display label in creation, playback, library, and work details for K-Pop. The generation request retains its original English genre value."
+  },
+  "createGenreLatin": "拉丁",
+  "@createGenreLatin": {
+    "description": "Genre display label in creation, playback, library, and work details for Latin. The generation request retains its original English genre value."
+  },
+  "createGenreElectronic": "电子",
+  "@createGenreElectronic": {
+    "description": "Genre display label in creation, playback, library, and work details for Electronic. The generation request retains its original English genre value."
+  },
+  "createGenreRnb": "节奏蓝调",
+  "@createGenreRnb": {
+    "description": "Genre display label in creation, playback, library, and work details for R&B. The generation request retains its original English genre value."
+  },
+  "createGenreCountry": "乡村",
+  "@createGenreCountry": {
+    "description": "Genre display label in creation, playback, library, and work details for Country. The generation request retains its original English genre value."
+  },
+  "createGenreAfrobeats": "非洲流行",
+  "@createGenreAfrobeats": {
+    "description": "Genre display label in creation, playback, library, and work details for Afrobeats. The generation request retains its original English genre value."
+  },
+  "createGenreReggae": "雷鬼",
+  "@createGenreReggae": {
+    "description": "Genre display label in creation, playback, library, and work details for Reggae. The generation request retains its original English genre value."
+  },
+  "createGenreJazzBlues": "爵士与蓝调",
+  "@createGenreJazzBlues": {
+    "description": "Genre display label in creation, playback, library, and work details for Jazz & Blues. The generation request retains its original English genre value."
+  },
+  "createGenreClassical": "古典",
+  "@createGenreClassical": {
+    "description": "Genre display label in creation, playback, library, and work details for Classical. The generation request retains its original English genre value."
+  },
+  "createGenreFolk": "民谣",
+  "@createGenreFolk": {
+    "description": "Genre display label in creation, playback, library, and work details for Folk. The generation request retains its original English genre value."
+  },
+  "createGenreLofi": "低保真",
+  "@createGenreLofi": {
+    "description": "Genre display label in creation, playback, library, and work details for Lo-Fi. The generation request retains its original English genre value."
+  },
+  "createGenreAcoustic": "原声",
+  "@createGenreAcoustic": {
+    "description": "Genre display label in creation, playback, library, and work details for Acoustic. The generation request retains its original English genre value."
+  },
+  "createGenreCinematic": "电影配乐",
+  "@createGenreCinematic": {
+    "description": "Genre display label in creation, playback, library, and work details for Cinematic. The generation request retains its original English genre value."
+  },
+  "createGenreAmbient": "氛围",
+  "@createGenreAmbient": {
+    "description": "Genre display label in creation, playback, library, and work details for Ambient. The generation request retains its original English genre value."
+  },
+  "createGenreBossaNova": "巴萨诺瓦",
+  "@createGenreBossaNova": {
+    "description": "Genre display label in creation, playback, library, and work details for Bossa Nova. The generation request retains its original English genre value."
+  },
+  "createGenreIndiePop": "独立流行",
+  "@createGenreIndiePop": {
+    "description": "Genre display label in creation, playback, library, and work details for Indie Pop. The generation request retains its original English genre value."
+  },
+  "createGenreContemporaryRnb": "当代节奏蓝调",
+  "@createGenreContemporaryRnb": {
+    "description": "Genre display label in creation, playback, library, and work details for Contemporary R&B. The generation request retains its original English genre value."
+  },
+  "createGenreAlternativeCountry": "另类乡村",
+  "@createGenreAlternativeCountry": {
+    "description": "Genre display label in creation, playback, library, and work details for Alternative Country. The generation request retains its original English genre value."
+  },
+  "createGenreGarageRock": "车库摇滚",
+  "@createGenreGarageRock": {
+    "description": "Genre display label in creation, playback, library, and work details for Garage Rock. The generation request retains its original English genre value."
+  },
+  "createGenreGrime": "Grime",
+  "@createGenreGrime": {
+    "description": "Genre display label in creation, playback, library, and work details for Grime. The generation request retains its original English genre value."
+  },
+  "createGenreIndieFolk": "独立民谣",
+  "@createGenreIndieFolk": {
+    "description": "Genre display label in creation, playback, library, and work details for Indie Folk. The generation request retains its original English genre value."
+  },
+  "createGenreSynthpop": "合成器流行",
+  "@createGenreSynthpop": {
+    "description": "Genre display label in creation, playback, library, and work details for Synthpop. The generation request retains its original English genre value."
+  },
+  "createGenrePianoBallad": "钢琴抒情",
+  "@createGenrePianoBallad": {
+    "description": "Genre display label in creation, playback, library, and work details for Piano Ballad. The generation request retains its original English genre value."
+  },
+  "createGenreSurfRock": "冲浪摇滚",
+  "@createGenreSurfRock": {
+    "description": "Genre display label in creation, playback, library, and work details for Surf Rock. The generation request retains its original English genre value."
+  },
+  "createGenreDeepHouse": "深度浩室",
+  "@createGenreDeepHouse": {
+    "description": "Genre display label in creation, playback, library, and work details for Deep House. The generation request retains its original English genre value."
+  },
+  "createGenreMinimalTechno": "极简电子",
+  "@createGenreMinimalTechno": {
+    "description": "Genre display label in creation, playback, library, and work details for Minimal Techno. The generation request retains its original English genre value."
+  },
+  "createGenreFrenchYeyePop": "法式复古流行",
+  "@createGenreFrenchYeyePop": {
+    "description": "Genre display label in creation, playback, library, and work details for 1960s French Yé-yé Pop. The generation request retains its original English genre value."
+  },
+  "createGenreChillout": "轻松电子",
+  "@createGenreChillout": {
+    "description": "Genre display label in creation, playback, library, and work details for Chillout. The generation request retains its original English genre value."
+  },
+  "createGenreJPopIndiePop": "日系独立流行",
+  "@createGenreJPopIndiePop": {
+    "description": "Genre display label in creation, playback, library, and work details for J-pop Indie Pop. The generation request retains its original English genre value."
+  },
+  "createGenreChiptune": "芯片音乐",
+  "@createGenreChiptune": {
+    "description": "Genre display label in creation, playback, library, and work details for Chiptune. The generation request retains its original English genre value."
+  },
+  "createGenreDiscoFunk": "迪斯科放克",
+  "@createGenreDiscoFunk": {
+    "description": "Genre display label in creation, playback, library, and work details for Disco Funk. The generation request retains its original English genre value."
+  },
+  "createGenreReggaeton": "雷鬼顿",
+  "@createGenreReggaeton": {
+    "description": "Genre display label in creation, playback, library, and work details for Reggaeton. The generation request retains its original English genre value."
+  },
+  "createGenreCumbia": "昆比亚",
+  "@createGenreCumbia": {
+    "description": "Genre display label in creation, playback, library, and work details for Cumbia. The generation request retains its original English genre value."
+  },
+  "createGenreLatinJazz": "拉丁爵士",
+  "@createGenreLatinJazz": {
+    "description": "Genre display label in creation, playback, library, and work details for Latin Jazz. The generation request retains its original English genre value."
+  },
+  "createGenreBhangra": "邦格拉",
+  "@createGenreBhangra": {
+    "description": "Genre display label in creation, playback, library, and work details for Bhangra. The generation request retains its original English genre value."
+  },
+  "createGenreIndianClassical": "印度古典",
+  "@createGenreIndianClassical": {
+    "description": "Genre display label in creation, playback, library, and work details for Indian Classical. The generation request retains its original English genre value."
+  },
+  "createGenreLofiHipHop": "低保真嘻哈",
+  "@createGenreLofiHipHop": {
+    "description": "Genre display label in creation, playback, library, and work details for Lo-Fi Hip Hop. The generation request retains its original English genre value."
+  },
+  "profileAccountIdWithValue": "账号 ID: {id}",
+  "@profileAccountIdWithValue": {
+    "description": "Account profile. Purpose: profile account id with value.",
+    "placeholders": {
+      "id": {
+        "type": "String",
+        "description": "Account or license identifier; preserve it verbatim."
+      }
+    }
+  },
+  "profileBalanceValue": "{balance}",
+  "@profileBalanceValue": {
+    "description": "Account profile. Purpose: profile balance value.",
+    "placeholders": {
+      "balance": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Wallet balance as an integer number of credits, not a monetary price."
+      }
+    }
+  },
+  "playerExportFileName": "{brand} – {title} ({occasion})",
+  "@playerExportFileName": {
+    "description": "Song playback screen. Purpose: player export file name.",
+    "placeholders": {
+      "brand": {
+        "type": "String",
+        "description": "Fixed Songlet brand name; do not translate."
+      },
+      "title": {
+        "type": "String",
+        "description": "Localized song title; may contain a user-provided recipient name."
+      },
+      "occasion": {
+        "type": "String",
+        "description": "Localized occasion or template name."
+      }
+    }
+  },
+  "createVocalsCustomSummary": "自定义 — 根据你的描述",
+  "@createVocalsCustomSummary": {
+    "description": "Song creation screen. Purpose: create vocals custom summary."
+  },
+  "mvChipMakingWithProgress": "视频制作中 · {progress}",
+  "@mvChipMakingWithProgress": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv chip making with progress.",
+    "placeholders": {
+      "progress": {
+        "type": "String",
+        "description": "Complete percentage formatted for the UI locale, including the percent sign."
+      }
+    }
+  },
+  "mvAutoFailureMessage": "视频未能开始 · {reason}",
+  "@mvAutoFailureMessage": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv auto failure message.",
+    "placeholders": {
+      "reason": {
+        "type": "String",
+        "description": "Localized reason the automatic video could not start."
+      }
+    }
+  },
+  "settingsVideoCreditsSummary": "视频积分：{credits}",
+  "@settingsVideoCreditsSummary": {
+    "description": "Settings screen. Purpose: settings video credits summary.",
+    "placeholders": {
+      "credits": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Number of video credits, not a monetary price."
+      }
+    }
+  },
+  "shareLyricsAttribution": "— {aiLabel} · {brand}",
+  "@shareLyricsAttribution": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share lyrics attribution.",
+    "placeholders": {
+      "aiLabel": {
+        "type": "String",
+        "description": "Localized AI-generated attribution."
+      },
+      "brand": {
+        "type": "String",
+        "description": "Fixed Songlet brand name; do not translate."
+      }
+    }
+  },
+  "inspirationHeader": "灵感",
+  "@inspirationHeader": {
+    "description": "Create home: the row of inspirations (contract 02 v1.2, ADR-0029)."
+  },
+  "inspirationPlay": "播放「{name}」",
+  "@inspirationPlay": {
+    "description": "Accessibility label of the play button of an inspiration preview.",
+    "placeholders": {
+      "name": {
+        "type": "String",
+        "description": "The inspiration name as shown on its card."
+      }
+    }
+  },
+  "inspirationStop": "停止试听",
+  "@inspirationStop": {
+    "description": "Accessibility label of the stop button while an inspiration preview plays."
+  },
+  "inspirationNameSoundscape": "环境音景",
+  "@inspirationNameSoundscape": {
+    "description": "Inspiration names and styles: local copy of the server {en, zh} text for other languages, looked up by the English text (ADR-0029)."
+  },
+  "inspirationStyleSoundscape": "氛围音色，纯音乐",
+  "@inspirationStyleSoundscape": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameBackgroundMusic": "背景音乐",
+  "@inspirationNameBackgroundMusic": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleBackgroundMusic": "轻快纯音乐配乐",
+  "@inspirationStyleBackgroundMusic": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameMemorizeSomething": "记忆小曲",
+  "@inspirationNameMemorizeSomething": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleMemorizeSomething": "朗朗上口的记忆流行曲",
+  "@inspirationStyleMemorizeSomething": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameTextMessages": "短信成歌",
+  "@inspirationNameTextMessages": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleTextMessages": "把消息唱出来的俏皮流行",
+  "@inspirationStyleTextMessages": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameIntroMusic": "开场音乐",
+  "@inspirationNameIntroMusic": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleIntroMusic": "大气电影感开场",
+  "@inspirationStyleIntroMusic": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameMontage": "混剪配乐",
+  "@inspirationNameMontage": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleMontage": "高光混剪的递进配乐",
+  "@inspirationStyleMontage": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameSayItWithATrack": "用歌说话",
+  "@inspirationNameSayItWithATrack": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleSayItWithATrack": "深情流行抒情",
+  "@inspirationStyleSayItWithATrack": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameBrandJingle": "品牌短曲",
+  "@inspirationNameBrandJingle": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleBrandJingle": "简短明亮易记的短曲",
+  "@inspirationStyleBrandJingle": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameRingtone": "铃声",
+  "@inspirationNameRingtone": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleRingtone": "30 秒可循环片段",
+  "@inspirationStyleRingtone": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameStreaming": "直播",
+  "@inspirationNameStreaming": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleStreaming": "动感电子直播开场",
+  "@inspirationStyleStreaming": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameSpeechToTrack": "语音生成歌曲",
+  "@inspirationNameSpeechToTrack": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleSpeechToTrack": "把说话变成歌",
+  "@inspirationStyleSpeechToTrack": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameRapBattle": "说唱对决",
+  "@inspirationNameRapBattle": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleRapBattle": "硬核嘻哈",
+  "@inspirationStyleRapBattle": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameComedy": "喜剧",
+  "@inspirationNameComedy": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleComedy": "俏皮欢快带点调侃",
+  "@inspirationStyleComedy": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameTeamAnthem": "队歌",
+  "@inspirationNameTeamAnthem": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleTeamAnthem": "体育场摇滚合唱",
+  "@inspirationStyleTeamAnthem": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameSportsRecap": "体育赛事回顾",
+  "@inspirationNameSportsRecap": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleSportsRecap": "史诗管弦高光",
+  "@inspirationStyleSportsRecap": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNamePartyInvite": "派对邀请函",
+  "@inspirationNamePartyInvite": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStylePartyInvite": "舞曲流行邀请",
+  "@inspirationStylePartyInvite": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameHappyBirthday": "生日祝福",
+  "@inspirationNameHappyBirthday": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleHappyBirthday": "温暖原声生日歌",
+  "@inspirationStyleHappyBirthday": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameFriendAppreciation": "感谢朋友",
+  "@inspirationNameFriendAppreciation": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleFriendAppreciation": "治愈系独立流行",
+  "@inspirationStyleFriendAppreciation": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameLoveStory": "爱情故事",
+  "@inspirationNameLoveStory": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleLoveStory": "浪漫 R&B 抒情",
+  "@inspirationStyleLoveStory": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameBirthdayRoast": "生日庆祝",
+  "@inspirationNameBirthdayRoast": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleBirthdayRoast": "幽默吐槽版生日歌",
+  "@inspirationStyleBirthdayRoast": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameOdeToYourPet": "宠物颂歌",
+  "@inspirationNameOdeToYourPet": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleOdeToYourPet": "可爱蹦跳的流行",
+  "@inspirationStyleOdeToYourPet": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameHometownTribute": "家乡特辑",
+  "@inspirationNameHometownTribute": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleHometownTribute": "怀旧民谣",
+  "@inspirationStyleHometownTribute": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameWeatherReport": "天气报告",
+  "@inspirationNameWeatherReport": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleWeatherReport": "轻松俏皮的沙发律动",
+  "@inspirationStyleWeatherReport": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameBusinessPromo": "业务宣传",
+  "@inspirationNameBusinessPromo": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleBusinessPromo": "自信商务流行",
+  "@inspirationStyleBusinessPromo": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleBirthdayWish": "为 TA 的特别日子写的走心歌",
+  "@inspirationStyleBirthdayWish": {
+    "description": "Style line of the template entry BirthdayWish (server style.en), read with the tile name in languages the server does not send; mapped by slug (ADR-0032)."
+  },
+  "inspirationStyleBirthdayParty": "为寿星炒热气氛的派对歌",
+  "@inspirationStyleBirthdayParty": {
+    "description": "Style line of the template entry BirthdayParty (server style.en), read with the tile name in languages the server does not send; mapped by slug (ADR-0032)."
+  },
+  "inspirationStyleThankAFriend": "温暖真诚的感谢之歌",
+  "@inspirationStyleThankAFriend": {
+    "description": "Style line of the template entry ThankAFriend (server style.en), read with the tile name in languages the server does not send; mapped by slug (ADR-0032)."
+  },
+  "inspirationStyleWedding": "喜悦浪漫的婚礼之歌",
+  "@inspirationStyleWedding": {
+    "description": "Style line of the template entry Wedding (server style.en), read with the tile name in languages the server does not send; mapped by slug (ADR-0032)."
+  },
+  "inspirationStyleInMemory": "温柔而有希望的纪念曲",
+  "@inspirationStyleInMemory": {
+    "description": "Style line of the template entry InMemory (server style.en), read with the tile name in languages the server does not send; mapped by slug (ADR-0032)."
+  },
+  "inspirationStyleFestival": "明亮喜庆的节日祝福",
+  "@inspirationStyleFestival": {
+    "description": "Style line of the template entry Festival (server style.en), read with the tile name in languages the server does not send; mapped by slug (ADR-0032)."
+  },
+  "inspirationStylePetAnthem": "亲昵蹦跳的宠物主题曲",
+  "@inspirationStylePetAnthem": {
+    "description": "Style line of the template entry PetAnthem (server style.en), read with the tile name in languages the server does not send; mapped by slug (ADR-0032)."
+  },
+  "inspirationStyleHometown": "自豪又怀旧的家乡之歌",
+  "@inspirationStyleHometown": {
+    "description": "Style line of the template entry Hometown (server style.en), read with the tile name in languages the server does not send; mapped by slug (ADR-0032)."
+  },
+  "settingsSectionLanguage": "语言",
+  "@settingsSectionLanguage": {
+    "description": "Settings section containing interface and default lyrics languages."
+  },
+  "settingsSectionProfile": "个人资料",
+  "@settingsSectionProfile": {
+    "description": "Settings section showing the account: its credits and its account ID."
+  },
+  "settingsCredits": "积分",
+  "@settingsCredits": {
+    "description": "Settings > Profile: label of the account's credit balance (server truth)."
+  },
+  "settingsAccountId": "账户 ID",
+  "@settingsAccountId": {
+    "description": "Settings > Profile: label of the account UUID (shown in full, for support)."
+  },
+  "settingsCopyAccountId": "复制账户 ID",
+  "@settingsCopyAccountId": {
+    "description": "Settings > Profile: accessibility label / tooltip of the button that copies the account ID."
+  },
+  "devSectionTitle": "开发者（仅 DEV）",
+  "@devSectionTitle": {
+    "description": "Settings section shown only in DEV debug builds (developer tools)."
+  },
+  "devKeychainReset": "删除 Keychain 密钥",
+  "@devKeychainReset": {
+    "description": "DEV-only settings row: deletes the app's iOS Keychain keys."
+  },
+  "devKeychainResetHint": "设备 ID 与会话令牌",
+  "@devKeychainResetHint": {
+    "description": "DEV-only settings row subtitle: what the Keychain reset removes."
+  },
+  "devKeychainResetConfirmTitle": "删除 Keychain 密钥？",
+  "@devKeychainResetConfirmTitle": {
+    "description": "DEV-only confirmation dialog title before deleting the Keychain keys."
+  },
+  "devKeychainResetConfirmBody": "将从 Keychain 中清除设备 ID 与会话令牌。当前访客账户无法恢复，应用会以新访客身份登录。",
+  "@devKeychainResetConfirmBody": {
+    "description": "DEV-only confirmation dialog body: consequences of deleting the Keychain keys."
+  },
+  "devKeychainResetDone": "Keychain 密钥已删除——已以新访客身份登录",
+  "@devKeychainResetDone": {
+    "description": "DEV-only message after the Keychain keys were deleted."
+  },
+  "settingsAppLanguage": "界面语言",
+  "@settingsAppLanguage": {
+    "description": "Settings row and picker heading for the interface language, distinct from lyrics language."
+  },
+  "settingsLanguageSystem": "跟随系统",
+  "@settingsLanguageSystem": {
+    "description": "Interface-language picker option that follows the system’s preferred supported language."
+  },
+  "settingsLanguageSystemValue": "跟随系统（{language}）",
+  "@settingsLanguageSystemValue": {
+    "description": "Settings row value when the interface language follows the system.",
+    "placeholders": {
+      "language": {
+        "type": "String",
+        "description": "Autonym of the currently resolved supported system locale."
+      }
+    }
+  },
+  "settingsLanguageNativeName": "简体中文",
+  "@settingsLanguageNativeName": {
+    "description": "This language’s own name (autonym); used to identify it in every interface-language picker, regardless of the current UI language."
+  },
+  "settingsLanguageSaveFailed": "语言未能保存，请重试。",
+  "@settingsLanguageSaveFailed": {
+    "description": "Interface-language preference could not be saved; the previous selection remains. Explain the failure and invite retry."
+  },
+  "settingsLyricsLanguageHint": "用于新建歌曲。",
+  "@settingsLyricsLanguageHint": {
+    "description": "Default lyrics-language setting helper. Changing the preference affects new songs, not an existing draft."
+  },
+  "composerRemoveInspiration": "移除{name}",
+  "@composerRemoveInspiration": {
+    "description": "Accessibility label of the close button on the picked idea at the head of the composer.",
+    "placeholders": {
+      "name": {
+        "type": "String",
+        "description": "Inspiration display name; do not translate."
+      }
+    }
+  },
+  "composerPromptHint": "描述这首歌，或在上方选一个灵感",
+  "@composerPromptHint": {
+    "description": "Placeholder of the create home's prompt field on phones, where the idea grid is above the composer (P01, state A)."
+  },
+  "composerPromptHintWide": "描述这首歌，或选一个灵感",
+  "@composerPromptHintWide": {
+    "description": "Placeholder of the create home's prompt field on iPad, where the idea grid is beside the composer (P01, state A)."
+  },
+  "composerWordsLabel": "你的内容",
+  "@composerWordsLabel": {
+    "description": "Label of the field for the user's own text when the picked idea needs it (composer state B); the idea's hint is its placeholder."
+  },
+  "composerPhotosAttached": "{count, plural, one{已添加 {count} 张照片} other{已添加 {count} 张照片}}",
+  "@composerPhotosAttached": {
+    "description": "Accessibility label of the composer's photo button once photos are added.",
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Number of photos added (1–10)."
+      }
+    }
+  },
+  "composerOptionsSummary": "歌曲选项：{summary}",
+  "@composerOptionsSummary": {
+    "description": "Accessibility label of the composer's summary row; it opens the song options.",
+    "placeholders": {
+      "summary": {
+        "type": "String",
+        "description": "The current length, vocals and genre, comma-separated, already localized."
+      }
+    }
+  },
+  "composerOptionsShow": "展开歌曲选项",
+  "@composerOptionsShow": {
+    "description": "Accessibility hint of the composer's summary row while the song options are folded."
+  },
+  "composerOptionsHide": "收起歌曲选项",
+  "@composerOptionsHide": {
+    "description": "Accessibility hint of the composer's summary row while the song options are shown."
+  },
+  "composerSummaryAnyVocals": "人声不限",
+  "@composerSummaryAnyVocals": {
+    "description": "Composer summary row: the vocals follow the user's description (the Vocals panel's Custom)."
+  },
+  "composerSummaryAnyGenre": "曲风不限",
+  "@composerSummaryAnyGenre": {
+    "description": "Composer summary row: no genre chosen, the description decides (the Genre panel's Custom)."
+  },
+  "composerSummaryLyrics": "自写歌词",
+  "@composerSummaryLyrics": {
+    "description": "Composer summary row: the user wrote their own lyrics (shown while the options are folded)."
+  },
+  "composerSummaryVideo": "歌词视频",
+  "@composerSummaryVideo": {
+    "description": "Composer summary row: a lyric video will be made after the full song (shown while the options are folded)."
+  },
+  "createPreviewLabel": "{cost, select, free{生成试听 · 免费} preview{生成试听 · 1 次试听} other{生成试听}}",
+  "@createPreviewLabel": {
+    "description": "The composer's primary button for a 30-second preview; the cost part follows the account's ledger (ADR-0035).",
+    "placeholders": {
+      "cost": {
+        "type": "String",
+        "description": "What the action spends, from the account's ledger (ADR-0035): free, preview, song or other. Selector keywords are code; translate only the phrases."
+      }
+    }
+  },
+  "createPreviewForLabel": "{cost, select, free{为 {name} 生成试听 · 免费} preview{为 {name} 生成试听 · 1 次试听} other{为 {name} 生成试听}}",
+  "@createPreviewForLabel": {
+    "description": "The composer's primary button for a 30-second preview of a picked idea with a name; the cost part follows the account's ledger (ADR-0035).",
+    "placeholders": {
+      "name": {
+        "type": "String",
+        "description": "The recipient's name as typed; do not translate."
+      },
+      "cost": {
+        "type": "String",
+        "description": "What the action spends, from the account's ledger (ADR-0035): free, preview, song or other. Selector keywords are code; translate only the phrases."
+      }
+    }
+  },
+  "createFullSongLabel": "{cost, select, song{生成完整歌曲 · 1 首} other{生成完整歌曲}}",
+  "@createFullSongLabel": {
+    "description": "The composer's primary button for the full ~2-minute song; the cost part follows the account's ledger (ADR-0035).",
+    "placeholders": {
+      "cost": {
+        "type": "String",
+        "description": "What the action spends, from the account's ledger (ADR-0035): free, preview, song or other. Selector keywords are code; translate only the phrases."
+      }
+    }
+  },
+  "voiceUseText": "使用这段文字",
+  "@voiceUseText": {
+    "description": "P03a: the dictation's only action — put the transcript in the prompt field (dictation is free input)."
+  },
+  "mvAutoCountdown": "{level}将在 {seconds} 秒后开始",
+  "@mvAutoCountdown": {
+    "description": "Banner title while an automatic music video counts down before it starts (and is charged); the user can cancel.",
+    "placeholders": {
+      "level": {
+        "type": "String",
+        "description": "Video kind, e.g. Lyric video or Chorus video; already translated."
+      },
+      "seconds": {
+        "type": "int",
+        "description": "Seconds left."
+      }
+    }
+  },
+  "planPerWeek": "{price}/周",
+  "@planPerWeek": {
+    "description": "Subscription billing period: price per week, e.g. $4.99/week.",
+    "placeholders": {
+      "price": {
+        "type": "String",
+        "description": "Store-formatted price."
+      }
+    }
+  },
+  "planCreditsWeekly": "每周补充积分",
+  "@planCreditsWeekly": {
+    "description": "Plan benefit line for the weekly subscription: credits are renewed every week (no fixed song count, never 'unlimited')."
+  },
+  "paywallIntroOffer": "{unit, select, day{首日} week{首周} month{首月} year{首年} other{首期}}立减 {percent}%",
+  "@paywallIntroOffer": {
+    "description": "Plan card caption for an introductory discount read from the App Store, e.g. 50% off your first week.",
+    "placeholders": {
+      "percent": {
+        "type": "int",
+        "description": "Discount percentage."
+      },
+      "unit": {
+        "type": "String",
+        "description": "Billing period unit of the offer: day, week, month or year."
+      }
+    }
+  },
+  "paywallIntroDisclosure": "优惠价 {introPrice} 结束后，将自动按 {pricePerPeriod} 续费。可在续费前随时取消。",
+  "@paywallIntroDisclosure": {
+    "description": "Paywall disclosure for a selected subscription with an introductory price: the actual recurring price and period after it, and that cancellation is possible before renewal (App Review 3.1.2).",
+    "placeholders": {
+      "introPrice": {
+        "type": "String",
+        "description": "Store-formatted introductory price."
+      },
+      "pricePerPeriod": {
+        "type": "String",
+        "description": "Recurring price with its billing period, e.g. $4.99/week."
+      }
+    }
+  },
+  "storePreviewAHook": "从 TA 的名字开始",
+  "@storePreviewAHook": {
+    "description": "App Store preview, script A, 1–4 s, as the name is typed (the muted hook continues). ≤ 28 characters (CJK ≤ 14)."
+  },
+  "storePreviewAWords": "写下关于 TA 的三个词",
+  "@storePreviewAWords": {
+    "description": "App Store preview, script A, 4–7.5 s, as three words about the person are typed. ≤ 28 characters (CJK ≤ 14)."
+  },
+  "storePreviewAWait": "正在为你写歌",
+  "@storePreviewAWait": {
+    "description": "App Store preview, script A, 7.5–10 s, over the generating page. ≤ 28 characters (CJK ≤ 14)."
+  },
+  "storePreviewAChorus": "副歌里唱出 TA 的名字",
+  "@storePreviewAChorus": {
+    "description": "App Store preview, script A, 10.5–18.5 s, over the player on the chorus that sings the name. ≤ 28 characters (CJK ≤ 14)."
+  },
+  "storePreviewAEnd": "一首唱着 TA 名字的歌",
+  "@storePreviewAEnd": {
+    "description": "App Store preview (store_preview/songlet), script A, 0–1 s: the claim on the intro card. ≤ 28 characters (CJK ≤ 14). Never shown in the app."
+  },
+  "storePreviewBHook": "从你的照片开始",
+  "@storePreviewBHook": {
+    "description": "App Store preview, script B, 1–4 s, as four photos are picked (the muted hook continues). ≤ 28 characters (CJK ≤ 14)."
+  },
+  "storePreviewBVideo": "同时生成歌词视频",
+  "@storePreviewBVideo": {
+    "description": "App Store preview, script B, 4–8 s, as \"also make a lyric video\" is switched on. ≤ 28 characters (CJK ≤ 14)."
+  },
+  "storePreviewBWait": "正在写歌",
+  "@storePreviewBWait": {
+    "description": "App Store preview, script B, 8–10 s, over the generating page. ≤ 28 characters (CJK ≤ 14)."
+  },
+  "storePreviewBLyrics": "歌词同步上屏",
+  "@storePreviewBLyrics": {
+    "description": "App Store preview, script B, 10.5–17 s, over the lyric video with synced lyrics. ≤ 28 characters (CJK ≤ 14)."
+  },
+  "storePreviewBMood": "照片定下歌的氛围。",
+  "@storePreviewBMood": {
+    "description": "App Store preview (store_preview/songlet), script B, 0–1 s: the claim on the intro card. ≤ 28 characters (CJK ≤ 14). Never shown in the app."
+  },
+  "storePreviewBShare": "分享这段视频。",
+  "@storePreviewBShare": {
+    "description": "App Store preview, script B, 17–19.5 s, over the share sheet. ≤ 28 characters (CJK ≤ 14)."
+  },
+  "storePreviewBLanguage": "用你的语言写歌词",
+  "@storePreviewBLanguage": {
+    "description": "App Store preview, script B, 19.5–23 s, as the country and lyric language are picked. ≤ 28 characters (CJK ≤ 14)."
+  },
+  "storePreviewAShare": "做成卡片送给 TA",
+  "@storePreviewAShare": {
+    "description": "App Store preview, script A, 18.5–23 s, over the share card: the song goes out as a card. ≤ 28 characters (CJK ≤ 14)."
+  },
+  "storePreviewCta": "写下你的第一首歌",
+  "@storePreviewCta": {
+    "description": "App Store preview end card: the call to action under the app name. ≤ 28 characters (CJK ≤ 14). No price, no \"free\"."
+  },
+  "storePreviewDisclosure": "需订阅或积分",
+  "@storePreviewDisclosure": {
+    "description": "App Store preview end card, small print: making songs needs a subscription or credits (Apple requires disclosing in-app purchases). ≤ 60 characters (CJK ≤ 30)."
+  },
+  "storeCreativeHeader": "为你爱的人写一首歌",
+  "@storeCreativeHeader": {
+    "description": "App Store product page header (store_preview/songlet/creatives/store-page.yaml): the phrase beside the app on the default product page, image and looping video. One short phrase, ≤ 40 characters (CJK ≤ 20), at most 2 lines as set. No price, no \"free\", no awards. Never shown in the app."
+  },
+  "storeCreativeSearch": "一个名字，写成一首歌",
+  "@storeCreativeSearch": {
+    "description": "App Store search results asset (creatives/store-page.yaml): what the app does, obvious at a glance; shown muted beside a name being typed and the song it becomes. ≤ 40 characters (CJK ≤ 20). Never shown in the app."
+  },
+  "storeCreativeBirthday": "唱出TA名字的生日歌",
+  "@storeCreativeBirthday": {
+    "description": "Custom product page \"Birthday Songs\" header and search results asset (creatives/cpp-birthday.yaml). ≤ 40 characters (CJK ≤ 20). Never shown in the app."
+  },
+  "storeCreativePhoto": "让照片变成一首歌",
+  "@storeCreativePhoto": {
+    "description": "Custom product page \"Photo to Song\" header and search results asset (creatives/cpp-photo.yaml). ≤ 40 characters (CJK ≤ 20). Never shown in the app."
+  },
+  "storeCreativeWedding": "献给你们婚礼的歌",
+  "@storeCreativeWedding": {
+    "description": "Custom product page \"Wedding Songs\" header and search results asset (creatives/cpp-wedding.yaml). ≤ 40 characters (CJK ≤ 20). Never shown in the app."
+  }
+}

@@ -1,0 +1,73 @@
+### Identity BC — 游客注册 App Attest(ADR-026)· 凭签名交易重绑(ADR-027)
+###
+### 权威路由: internal/identity/port/http/routes.go
+### 文档:     docs/api/identity.md
+### 机器契约: api/openapi/openapi.yaml#/paths/~1auth~1guest-register 与 ~1auth~1claim-entitlement
+###
+### 签名头 (internal/platform/httpserver/middleware/app_signature.go):
+###   X-Distribution-Code / X-App-Signature / X-Timestamp(秒) / X-Nonce;调试签名用 cmd/signtool
+### 设备头: X-Device-ID / X-Platform / X-App-Version / X-Os-Version / X-Device-Model
+###
+### 变量: {{base_url}} {{distribution_code}} {{app_signature}} {{ts}} {{nonce}} {{device_id}} {{access_token}}
+###
+### 红线:body 里的 attest / signed_transaction 只是**证据**;账号由 X-Device-ID × 签名分发 / JWT 决定。
+
+############################################
+# 1. 游客注册 + 首次 App Attest(attestation)
+#
+# challenge = <device_id>.<unix_ms>.<uuid>, 客户端 clientDataHash = SHA256(challenge)。
+# 分发 acfg attest.mode=required 时缺失 / unsupported / 校验失败 → code 40140。
+POST {{base_url}}/v1/auth/guest-register
+Content-Type: application/json
+X-Distribution-Code: {{distribution_code}}
+X-App-Signature: {{app_signature}}
+X-Timestamp: {{ts}}
+X-Nonce: {{nonce}}
+X-Device-ID: {{device_id}}
+X-Platform: ios
+X-App-Version: 1.0.0
+X-Os-Version: 26.0
+X-Device-Model: iPhone17,1
+
+{
+  "app": { "distribution_code": "{{distribution_code}}", "app_code": "songlet", "bundle_id": "com.songlet.ios", "channel": "appstore" },
+  "attest": {
+    "key_id": "<Apple key identifier>",
+    "attestation": "<标准 base64 CBOR attestation object>",
+    "challenge": "{{device_id}}.1790332800000.6f1d2c3b-4a5b-4c6d-8e9f-0a1b2c3d4e5f"
+  }
+}
+
+############################################
+# 2. 后续启动:断言(assertion)
+POST {{base_url}}/v1/auth/guest-register
+Content-Type: application/json
+X-Distribution-Code: {{distribution_code}}
+X-App-Signature: {{app_signature}}
+X-Timestamp: {{ts}}
+X-Nonce: {{nonce}}
+X-Device-ID: {{device_id}}
+X-Platform: ios
+
+{
+  "app": { "distribution_code": "{{distribution_code}}", "app_code": "songlet", "bundle_id": "com.songlet.ios", "channel": "appstore" },
+  "attest": { "key_id": "<同上>", "assertion": "<标准 base64 CBOR assertion>", "challenge": "{{device_id}}.1790332860000.<uuid>" }
+}
+
+############################################
+# 3. 换设备恢复购买:凭 StoreKit 2 签名交易重绑到原游客账号(ADR-027)
+#
+# 200 → data { rebound: true }(当前账号令牌随即吊销 → 40104 → 客户端重新 attest 拿到原账号令牌)
+#       data { rebound: false }(交易本就属于当前账号)
+# 40917 → 冲突(当前账号有付费历史 / 目标不是游客或已注销 / 当前设备不属于当前账号)
+# 40003 → 证据不成立(签名 / 链不对、非本 App、已撤销、无 appAccountToken)
+POST {{base_url}}/v1/auth/claim-entitlement
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+X-Distribution-Code: {{distribution_code}}
+X-App-Signature: {{app_signature}}
+X-Timestamp: {{ts}}
+X-Nonce: {{nonce}}
+X-Device-ID: {{device_id}}
+
+{ "signed_transaction": "<Transaction.jwsRepresentation>" }

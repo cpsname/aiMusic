@@ -1,0 +1,64 @@
+{
+  "identifier" : "5C2E1A00-0000-4000-8000-000000000001",
+  "nonRenewingSubscriptions" : [],
+  "products" : [
+    {
+      "displayPrice" : "1.99",
+      "familyShareable" : false,
+      "internalID" : "5C2E1A00-0000-4000-8000-000000000002",
+      "localizations" : [
+        {
+          "description" : "A small pack of credits.",
+          "displayName" : "Small Credit Pack",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "veopro.credits.small",
+      "referenceName" : "Small Credit Pack",
+      "type" : "Consumable"
+    }
+  ],
+  "settings" : {
+    "_failTransactionsEnabled" : false,
+    "_locale" : "en_US",
+    "_storefront" : "USA",
+    "_storeKitErrors" : []
+  },
+  "subscriptionGroups" : [
+    {
+      "id" : "5C2E1A00-0000-4000-8000-000000000010",
+      "localizations" : [],
+      "name" : "Pro",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [],
+          "codeOffers" : [],
+          "displayPrice" : "0.99",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "5C2E1A00-0000-4000-8000-000000000011",
+          "introductoryOffer" : {
+            "internalID" : "5C2E1A00-0000-4000-8000-000000000012",
+            "paymentMode" : "free",
+            "subscriptionPeriod" : "P3D"
+          },
+          "localizations" : [
+            {
+              "description" : "Unlock the full studio experience, weekly.",
+              "displayName" : "Weekly Pro",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "vizgo.sub.weekly",
+          "recurringSubscriptionPeriod" : "P1W",
+          "referenceName" : "Weekly Pro",
+          "type" : "RecurringSubscription"
+        }
+      ]
+    }
+  ],
+  "version" : {
+    "major" : 4,
+    "minor" : 0
+  }
+}

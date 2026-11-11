@@ -1,0 +1,205 @@
+{
+  "quality": 90,
+  "crops": [
+    {
+      "out": "assets/templates/birthday_wish.jpg",
+      "source": "docs/ui/P01.png",
+      "x": 31,
+      "y": 231,
+      "w": 177,
+      "h": 133
+    },
+    {
+      "out": "assets/templates/birthday_party.jpg",
+      "source": "docs/ui/P01.png",
+      "x": 237,
+      "y": 231,
+      "w": 173,
+      "h": 133
+    },
+    {
+      "out": "assets/templates/love_story.jpg",
+      "source": "docs/ui/P01.png",
+      "x": 440,
+      "y": 231,
+      "w": 174,
+      "h": 133
+    },
+    {
+      "out": "assets/templates/thank_a_friend.jpg",
+      "source": "docs/ui/P01.png",
+      "x": 644,
+      "y": 231,
+      "w": 177,
+      "h": 133
+    },
+    {
+      "out": "assets/templates/party_invite.jpg",
+      "source": "docs/ui/P01.png",
+      "x": 31,
+      "y": 467,
+      "w": 177,
+      "h": 133
+    },
+    {
+      "out": "assets/templates/wedding.jpg",
+      "source": "docs/ui/P01.png",
+      "x": 237,
+      "y": 467,
+      "w": 173,
+      "h": 133
+    },
+    {
+      "out": "assets/templates/in_memory.jpg",
+      "source": "docs/ui/P01.png",
+      "x": 440,
+      "y": 467,
+      "w": 174,
+      "h": 133
+    },
+    {
+      "out": "assets/templates/festival.jpg",
+      "source": "docs/ui/P01.png",
+      "x": 644,
+      "y": 467,
+      "w": 177,
+      "h": 133
+    },
+    {
+      "out": "assets/templates/ringtone.jpg",
+      "source": "docs/ui/P01.png",
+      "x": 31,
+      "y": 703,
+      "w": 177,
+      "h": 135
+    },
+    {
+      "out": "assets/templates/team_anthem.jpg",
+      "source": "docs/ui/P01.png",
+      "x": 237,
+      "y": 703,
+      "w": 173,
+      "h": 135
+    },
+    {
+      "out": "assets/templates/sports_recap.jpg",
+      "source": "docs/ui/P01.png",
+      "x": 440,
+      "y": 703,
+      "w": 174,
+      "h": 135
+    },
+    {
+      "out": "assets/templates/rap_battle.jpg",
+      "source": "docs/ui/P01.png",
+      "x": 644,
+      "y": 703,
+      "w": 177,
+      "h": 135
+    },
+    {
+      "out": "assets/templates/comedy.jpg",
+      "source": "docs/ui/P01.png",
+      "x": 31,
+      "y": 941,
+      "w": 177,
+      "h": 138
+    },
+    {
+      "out": "assets/templates/pet_anthem.jpg",
+      "source": "docs/ui/P01.png",
+      "x": 237,
+      "y": 941,
+      "w": 173,
+      "h": 138
+    },
+    {
+      "out": "assets/templates/hometown.jpg",
+      "source": "docs/ui/P01.png",
+      "x": 440,
+      "y": 941,
+      "w": 174,
+      "h": 138
+    },
+    {
+      "out": "assets/templates/business_promo.jpg",
+      "source": "docs/ui/P01.png",
+      "x": 644,
+      "y": 941,
+      "w": 177,
+      "h": 138
+    },
+    {
+      "out": "assets/occasions/birthday.jpg",
+      "source": "docs/ui/P16.png",
+      "x": 45,
+      "y": 759,
+      "w": 126,
+      "h": 170
+    },
+    {
+      "out": "assets/occasions/anniversary.jpg",
+      "source": "docs/ui/P16.png",
+      "x": 420,
+      "y": 759,
+      "w": 125,
+      "h": 170
+    },
+    {
+      "out": "assets/occasions/confession.jpg",
+      "source": "docs/ui/P16.png",
+      "x": 45,
+      "y": 974,
+      "w": 126,
+      "h": 172
+    },
+    {
+      "out": "assets/occasions/wedding.jpg",
+      "source": "docs/ui/P16.png",
+      "x": 420,
+      "y": 974,
+      "w": 125,
+      "h": 172
+    },
+    {
+      "out": "assets/occasions/memorial.jpg",
+      "source": "docs/ui/P16.png",
+      "x": 45,
+      "y": 1191,
+      "w": 126,
+      "h": 175
+    },
+    {
+      "out": "assets/occasions/festival.jpg",
+      "source": "docs/ui/P16.png",
+      "x": 420,
+      "y": 1191,
+      "w": 125,
+      "h": 175
+    },
+    {
+      "out": "assets/occasions/brand.jpg",
+      "source": "docs/ui/P16.png",
+      "x": 45,
+      "y": 1411,
+      "w": 126,
+      "h": 175
+    },
+    {
+      "out": "assets/occasions/soundtrack.jpg",
+      "source": "docs/ui/P16.png",
+      "x": 420,
+      "y": 1411,
+      "w": 125,
+      "h": 175
+    },
+    {
+      "out": "assets/festivals/carnival.jpg",
+      "source": "docs/ui/P16.png",
+      "x": 440,
+      "y": 218,
+      "w": 325,
+      "h": 240
+    }
+  ]
+}

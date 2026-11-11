@@ -1,0 +1,6 @@
+/* Microphone: on-device dictation (docs/ui P03a, ADR-0006). */
+"NSMicrophoneUsageDescription" = "在你用语音描述歌曲想法时，Songlet 会使用麦克风。音频只在这台 iPhone 上转写，不会上传。";
+/* Speech recognition: on-device transcription. */
+"NSSpeechRecognitionUsageDescription" = "Songlet 会在这台 iPhone 上把你说的话转成文字，方便用作关键词或歌词。";
+/* Photos add-only: "Save video" on the share card (docs/ui P10). */
+"NSPhotoLibraryAddUsageDescription" = "当你轻点“保存视频”时，Songlet 会把分享卡片视频存入“照片”。";

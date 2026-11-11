@@ -1,0 +1,16 @@
+name: songlet
+
+# The app (repo root, ".") plus the reusable packages. The pub workspace handles
+# resolution; melos handles cross-package scripting (the gates).
+packages:
+  - .
+  - packages/*
+
+scripts:
+  analyze:
+    description: "Gate 1 — static analysis across the app + every package (zero warn/zero error)."
+    exec: flutter analyze
+
+  test:
+    description: "Gate 2 — run the test suite of the app + every package."
+    exec: flutter test

@@ -1,0 +1,62 @@
+# What the products repo's `cmd/songlet-samples -store-preview` generates for the
+# App Store previews (media/README.md). Each request has the shape the app sends
+# for that script, so a preview shows what a user gets:
+#
+#   A  the Birthday Wish card: recipient + three words (contract 02 v2.1).
+#   B  four photos only, as the photos page sends them (occasion custom, no
+#      text), then the free lyric video of that song with the same photos as
+#      its style reference.
+#
+# Script C (one sentence in three countries) is archived with its media in
+# archive/C/. Region and lyric language come from app.yaml's storefront vars,
+# the photo imagery from photo_briefs below. Model: the full song (lyria-3.5),
+# as the app's default for these paths.
+scripts: [A, B]
+model: lyria-3.5
+recipient: Alex
+# How the lyrics may write the recipient in other scripts. Script A's chorus
+# must sing the name (as typed or one of these); the one found is recorded as
+# the song's sung_name.
+recipient_spellings: [アレックス, アレクス, 알렉스, अलेक्स, एलेक्स, ऐलेक्स, 亚历克斯, 艾利克斯, 阿历克斯]
+
+# Four photos per storefront: the storefront's photo_brief, one framing each.
+photo_framings:
+  - wide establishing shot
+  - close-up detail shot with shallow depth of field
+  - medium shot, golden-hour light
+  - evening ambience with warm practical lights
+photo_style: >-
+  Photorealistic smartphone photo, natural colours, portrait 3:4. An empty scene:
+  no people anywhere (not even blurred in the background), no faces, no hands,
+  no text, no lettering, no characters, no logos, no brand names.
+
+# Script A's three words per storefront (typed by the recording).
+keywords:
+  en-US: [coffee, hiking, Sunday]
+  ja: [珈琲, 山歩き, 日曜日]
+  de-DE: [Kaffee, Wandern, Sonntag]
+  fr-FR: [café, randonnée, dimanche]
+  pt-BR: [café, trilha, domingo]
+  es-MX: [café, senderismo, domingo]
+  hi: [चाय, पहाड़, रविवार]
+  ko: [커피, 등산, 일요일]
+  id: [kopi, mendaki, Minggu]
+  vi: [cà phê, leo núi, Chủ nhật]
+  tr: [kahve, yürüyüş, pazar]
+  zh-Hans: [咖啡, 爬山, 星期天]
+
+# Each storefront's photo imagery (PRD §7.3): four photos, one framing each
+# (photo_framings), in photo_style. No faces, brands or lettering.
+photo_briefs:
+  en-US: small-town American main street at golden hour, string lights, a diner sign without lettering
+  ja: summer festival paper lanterns along a shrine path at dusk, yukata fabric on a railing
+  de-DE: Christmas-market wooden stalls with warm lights, gingerbread hearts, snow on cobblestones
+  fr-FR: Paris café terrace at blue hour, bistro chairs, river quay with lamps
+  pt-BR: Brazilian beach at sunset, palm silhouettes, carnival confetti on sand
+  es-MX: papel picado over a colonial plaza, marigolds, a guitar resting on a bench
+  hi: Diwali oil lamps on a courtyard step, rangoli powder patterns, marigold garlands
+  ko: Seoul night street with neon glow (no lettering), cherry blossoms over a stream
+  id: Bali rice terraces at sunrise, temple gate silhouette, frangipani flowers
+  vi: Hoi An silk lanterns over the river at night, a boat with candles
+  tr: Istanbul Bosphorus at sunset, tea glasses on a ledge, mosaic lamps
+  zh-Hans: plain red silk lanterns with no characters or symbols over a night-market street, steaming bamboo dumpling baskets, paper-cut flower patterns without any characters

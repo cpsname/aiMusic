@@ -1,0 +1,3546 @@
+{
+  "@@locale": "hi",
+  "commonRetry": "फिर से कोशिश करें",
+  "@commonRetry": {
+    "description": "Shared buttons and messages. Purpose: common retry."
+  },
+  "commonCancel": "रद्द करें",
+  "@commonCancel": {
+    "description": "Shared buttons and messages. Purpose: common cancel."
+  },
+  "startupLoading": "सुर मिलाए जा रहे हैं…",
+  "@startupLoading": {
+    "description": "Startup gate. Purpose: startup loading."
+  },
+  "commonErrorTitle": "कुछ गड़बड़ हो गई",
+  "@commonErrorTitle": {
+    "description": "Shared buttons and messages. Purpose: common error title."
+  },
+  "updateRequiredTitle": "अपडेट ज़रूरी है",
+  "@updateRequiredTitle": {
+    "description": "Required app update. Purpose: update required title."
+  },
+  "updateRequiredMessage": "जारी रखने के लिए नया वर्शन ज़रूरी है।",
+  "@updateRequiredMessage": {
+    "description": "Required app update. Purpose: update required message."
+  },
+  "updateNow": "अभी अपडेट करें",
+  "@updateNow": {
+    "description": "Required app update. Purpose: update now."
+  },
+  "maintenanceTitle": "निर्धारित मेंटेनेंस",
+  "@maintenanceTitle": {
+    "description": "Maintenance gate. Purpose: maintenance title."
+  },
+  "maintenanceResumeEstimate": "लगभग {minutes} मिनट में फिर से शुरू होने की उम्मीद है",
+  "@maintenanceResumeEstimate": {
+    "placeholders": {
+      "minutes": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Estimated waiting or processing duration in minutes."
+      }
+    },
+    "description": "Maintenance gate. Purpose: maintenance resume estimate."
+  },
+  "featureUnavailable": "यह फ़ीचर अभी कुछ समय के लिए उपलब्ध नहीं है।",
+  "@featureUnavailable": {
+    "description": "Feature availability message. Purpose: feature unavailable."
+  },
+  "navProfile": "प्रोफ़ाइल",
+  "@navProfile": {
+    "description": "Application navigation. Purpose: nav profile."
+  },
+  "navStore": "स्टोर",
+  "@navStore": {
+    "description": "Application navigation. Purpose: nav store."
+  },
+  "navUpload": "अपलोड",
+  "@navUpload": {
+    "description": "Application navigation. Purpose: nav upload."
+  },
+  "uploadTitle": "अपलोड",
+  "@uploadTitle": {
+    "description": "File upload screen. Purpose: upload title."
+  },
+  "uploadSubtitle": "हैशिंग, तुरंत डुप्लिकेट-जाँच और प्रोग्रेस के साथ प्रीसाइन्ड URL से सीधे R2 पर अपलोड।",
+  "@uploadSubtitle": {
+    "description": "File upload screen. Purpose: upload subtitle."
+  },
+  "uploadPick": "इमेज चुनें और अपलोड करें",
+  "@uploadPick": {
+    "description": "File upload screen. Purpose: upload pick."
+  },
+  "uploadAgain": "एक और अपलोड करें",
+  "@uploadAgain": {
+    "description": "File upload screen. Purpose: upload again."
+  },
+  "uploadPhaseHashing": "हैश बनाया जा रहा है…",
+  "@uploadPhaseHashing": {
+    "description": "File upload screen. Purpose: upload phase hashing."
+  },
+  "uploadPhaseSigning": "अपलोड टिकट माँगा जा रहा है…",
+  "@uploadPhaseSigning": {
+    "description": "File upload screen. Purpose: upload phase signing."
+  },
+  "uploadPhaseUploading": "अपलोड हो रहा है {percent}",
+  "@uploadPhaseUploading": {
+    "placeholders": {
+      "percent": {
+        "type": "String",
+        "description": "Complete percentage already formatted with intl for the UI locale, including the percent sign."
+      }
+    },
+    "description": "File upload screen. Purpose: upload phase uploading."
+  },
+  "uploadPhaseFinalizing": "पूरा किया जा रहा है…",
+  "@uploadPhaseFinalizing": {
+    "description": "File upload screen. Purpose: upload phase finalizing."
+  },
+  "uploadDone": "अपलोड हो गया।",
+  "@uploadDone": {
+    "description": "File upload screen. Purpose: upload done."
+  },
+  "uploadDedup": "तुरंत: यह फ़ाइल सर्वर पर पहले से मौजूद थी।",
+  "@uploadDedup": {
+    "description": "File upload screen. Purpose: upload dedup."
+  },
+  "uploadOpenLink": "फ़ाइल देखें",
+  "@uploadOpenLink": {
+    "description": "File upload screen. Purpose: upload open link."
+  },
+  "uploadFailed": "अपलोड नहीं हो सका।",
+  "@uploadFailed": {
+    "description": "File upload screen. Purpose: upload failed."
+  },
+  "uploadTooLarge": "फ़ाइल बहुत बड़ी है (अधिकतम {limit} MB)।",
+  "@uploadTooLarge": {
+    "placeholders": {
+      "limit": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Maximum upload size in megabytes."
+      }
+    },
+    "description": "File upload screen. Purpose: upload too large."
+  },
+  "uploadUnsupportedType": "यह फ़ाइल टाइप सपोर्ट नहीं है।",
+  "@uploadUnsupportedType": {
+    "description": "File upload screen. Purpose: upload unsupported type."
+  },
+  "profileGuestTitle": "गेस्ट",
+  "@profileGuestTitle": {
+    "description": "Account profile. Purpose: profile guest title."
+  },
+  "profileGuestSubtitle": "अपनी ख़रीदारियाँ सभी डिवाइस पर बनाए रखने के लिए साइन इन करें।",
+  "@profileGuestSubtitle": {
+    "description": "Account profile. Purpose: profile guest subtitle."
+  },
+  "signIn": "साइन इन करें",
+  "@signIn": {
+    "description": "Account actions. Purpose: sign in."
+  },
+  "signOut": "साइन आउट करें",
+  "@signOut": {
+    "description": "Account actions. Purpose: sign out."
+  },
+  "profileBalanceLabel": "क्रेडिट",
+  "@profileBalanceLabel": {
+    "description": "Account profile. Purpose: profile balance label."
+  },
+  "profileAccountId": "अकाउंट ID",
+  "@profileAccountId": {
+    "description": "Account profile. Purpose: profile account id."
+  },
+  "profileFeaturesLabel": "सक्रिय लाभ",
+  "@profileFeaturesLabel": {
+    "description": "Account profile. Purpose: profile features label."
+  },
+  "profileNoFeatures": "अभी तक कोई सक्रिय लाभ नहीं।",
+  "@profileNoFeatures": {
+    "description": "Account profile. Purpose: profile no features."
+  },
+  "profileSubscriptionLabel": "सब्सक्रिप्शन",
+  "@profileSubscriptionLabel": {
+    "description": "Account profile. Purpose: profile subscription label."
+  },
+  "profileManageSubscription": "सब्सक्रिप्शन मैनेज करें",
+  "@profileManageSubscription": {
+    "description": "Account profile. Purpose: profile manage subscription."
+  },
+  "subscriptionActive": "सक्रिय",
+  "@subscriptionActive": {
+    "description": "Subscription status. Purpose: subscription active."
+  },
+  "subscriptionInactive": "कोई नहीं",
+  "@subscriptionInactive": {
+    "description": "Subscription status. Purpose: subscription inactive."
+  },
+  "profileDeleteAccount": "अकाउंट डिलीट करें",
+  "@profileDeleteAccount": {
+    "description": "Account profile. Purpose: profile delete account."
+  },
+  "deleteAccountTitle": "यह अकाउंट डिलीट करें?",
+  "@deleteAccountTitle": {
+    "description": "Account deletion confirmation and result. Purpose: delete account title."
+  },
+  "deleteAccountMessage": "इसे वापस नहीं किया जा सकता: यह अकाउंट और इसके क्रेडिट व लाभ के रिकॉर्ड हमेशा के लिए पहुँच से बाहर हो जाएँगे, और एक नया अकाउंट बना दिया जाएगा। अकाउंट डिलीट करने से सक्रिय app store सब्सक्रिप्शन रद्द नहीं होता — इसे अपनी app store सेटिंग्स में मैनेज करें, या बाद में \"ख़रीदारियाँ रीस्टोर करें\" से फिर से जोड़ें।",
+  "@deleteAccountMessage": {
+    "description": "Account deletion confirmation and result. Purpose: delete account message."
+  },
+  "deleteAccountConfirm": "डिलीट करें",
+  "@deleteAccountConfirm": {
+    "description": "Account deletion confirmation and result. Purpose: delete account confirm."
+  },
+  "deleteAccountWorking": "अकाउंट डिलीट किया जा रहा है…",
+  "@deleteAccountWorking": {
+    "description": "Account deletion confirmation and result. Purpose: delete account working."
+  },
+  "deleteAccountDone": "अकाउंट डिलीट हो गया।",
+  "@deleteAccountDone": {
+    "description": "Account deletion confirmation and result. Purpose: delete account done."
+  },
+  "profileMemberSince": "{date} से सदस्य",
+  "@profileMemberSince": {
+    "placeholders": {
+      "date": {
+        "type": "DateTime",
+        "format": "yMMMd",
+        "description": "Account creation date, converted to local time."
+      }
+    },
+    "description": "Account profile. Purpose: profile member since."
+  },
+  "loginTitle": "साइन इन करें",
+  "@loginTitle": {
+    "description": "Sign-in sheet. Purpose: login title."
+  },
+  "loginUsername": "यूज़रनेम",
+  "@loginUsername": {
+    "description": "Sign-in sheet. Purpose: login username."
+  },
+  "loginPassword": "पासवर्ड",
+  "@loginPassword": {
+    "description": "Sign-in sheet. Purpose: login password."
+  },
+  "loginSubmit": "साइन इन करें",
+  "@loginSubmit": {
+    "description": "Sign-in sheet. Purpose: login submit."
+  },
+  "paywallTitle": "पूरा गाना पाएँ",
+  "@paywallTitle": {
+    "description": "Purchase screen. Purpose: paywall title."
+  },
+  "paywallSubtitle": "अपने प्रीव्यू को बोलों के साथ 2 मिनट के गाने में बदलें — डाउनलोड करने और इस्तेमाल करने के लिए पूरी तरह आपका।",
+  "@paywallSubtitle": {
+    "description": "Purchase screen. Purpose: paywall subtitle."
+  },
+  "paywallRestore": "ख़रीदारियाँ रीस्टोर करें",
+  "@paywallRestore": {
+    "description": "Purchase screen. Purpose: paywall restore."
+  },
+  "paywallAutoRenewNotice": "पुष्टि होते ही भुगतान आपके Apple खाते से लिया जाता है। सब्सक्रिप्शन उसी क़ीमत और अवधि पर अपने-आप रिन्यू होते हैं, जब तक कि मौजूदा अवधि ख़त्म होने से कम से कम 24 घंटे पहले रद्द न किए जाएँ। फ़्री ट्रायल ख़त्म होने पर वह पेड सब्सक्रिप्शन में बदल जाता है। अपनी App Store अकाउंट सेटिंग्स में कभी भी मैनेज या रद्द करें।",
+  "@paywallAutoRenewNotice": {
+    "description": "Purchase screen. Purpose: paywall auto renew notice."
+  },
+  "paywallContinue": "जारी रखें",
+  "@paywallContinue": {
+    "description": "Purchase screen. Purpose: paywall continue."
+  },
+  "paywallFreeTrial": "फ़्री ट्रायल",
+  "@paywallFreeTrial": {
+    "description": "Purchase screen. Purpose: paywall free trial."
+  },
+  "paywallOffer": "ऑफ़र",
+  "@paywallOffer": {
+    "description": "Purchase screen. Purpose: paywall offer."
+  },
+  "paywallManage": "मैनेज करें",
+  "@paywallManage": {
+    "description": "Purchase screen. Purpose: paywall manage."
+  },
+  "paywallTermsOfUse": "उपयोग की शर्तें",
+  "@paywallTermsOfUse": {
+    "description": "Purchase screen. Purpose: paywall terms of use."
+  },
+  "paywallPrivacyPolicy": "प्राइवेसी पॉलिसी",
+  "@paywallPrivacyPolicy": {
+    "description": "Purchase screen. Purpose: paywall privacy policy."
+  },
+  "paywallSubscriptionTerms": "सब्सक्रिप्शन की शर्तें",
+  "@paywallSubscriptionTerms": {
+    "description": "Purchase screen. Purpose: paywall subscription terms."
+  },
+  "commonLinkError": "लिंक नहीं खुल सका।",
+  "@commonLinkError": {
+    "description": "Shared buttons and messages. Purpose: common link error."
+  },
+  "commonError": "कुछ गड़बड़ हो गई।",
+  "@commonError": {
+    "description": "Shared buttons and messages. Purpose: common error."
+  },
+  "commonNetworkError": "नेटवर्क की समस्या — अपना कनेक्शन जाँचें और फिर से कोशिश करें।",
+  "@commonNetworkError": {
+    "description": "Shared buttons and messages. Purpose: common network error."
+  },
+  "commonOfflineError": "लगता है आप ऑफ़लाइन हैं। अपना कनेक्शन जाँचें और फिर से कोशिश करें।",
+  "@commonOfflineError": {
+    "description": "Shared buttons and messages. Purpose: common offline error."
+  },
+  "networkErrorTitle": "कनेक्शन की समस्या",
+  "@networkErrorTitle": {
+    "description": "Network failure screen. Purpose: network error title."
+  },
+  "configErrorTitle": "ऐप कॉन्फ़िगरेशन की समस्या",
+  "@configErrorTitle": {
+    "description": "Startup configuration failure. Purpose: config error title."
+  },
+  "configErrorMessage": "यह वर्शन हमारी सर्विस से कनेक्ट नहीं हो पा रहा है। App Store से ऐप अपडेट करें, या इसे दोबारा इंस्टॉल करें। अगर समस्या बनी रहे, तो सपोर्ट से संपर्क करें।",
+  "@configErrorMessage": {
+    "description": "Startup configuration failure. Purpose: config error message."
+  },
+  "commonAuthError": "आपका सेशन ख़त्म हो गया — कृपया फिर से साइन इन करें।",
+  "@commonAuthError": {
+    "description": "Shared buttons and messages. Purpose: common auth error."
+  },
+  "paywallProductsErrorTitle": "प्रोडक्ट लोड नहीं हो सके",
+  "@paywallProductsErrorTitle": {
+    "description": "Purchase screen. Purpose: paywall products error title."
+  },
+  "paywallNoProducts": "अभी कोई प्रोडक्ट उपलब्ध नहीं है।",
+  "@paywallNoProducts": {
+    "description": "Purchase screen. Purpose: paywall no products."
+  },
+  "paywallPurchaseSuccess": "ख़रीदारी पूरी हुई — आनंद लें!",
+  "@paywallPurchaseSuccess": {
+    "description": "Purchase screen. Purpose: paywall purchase success."
+  },
+  "paywallProcessing": "आपकी ख़रीदारी प्रोसेस हो रही है…",
+  "@paywallProcessing": {
+    "description": "Purchase screen. Purpose: paywall processing."
+  },
+  "paywallVerifying": "आपकी ख़रीदारी वेरिफ़ाई हो रही है…",
+  "@paywallVerifying": {
+    "description": "Purchase screen. Purpose: paywall verifying."
+  },
+  "paywallPurchaseFailed": "ख़रीदारी पूरी नहीं हो सकी।",
+  "@paywallPurchaseFailed": {
+    "description": "Purchase screen. Purpose: paywall purchase failed."
+  },
+  "paywallRestoreStarted": "आपकी ख़रीदारियाँ रीस्टोर हो रही हैं…",
+  "@paywallRestoreStarted": {
+    "description": "Purchase screen. Purpose: paywall restore started."
+  },
+  "paywallRestoreSuccess": "{count, plural, one{{count} ख़रीदारी रीस्टोर हुई।} other{{count} ख़रीदारियाँ रीस्टोर हुईं।}}",
+  "@paywallRestoreSuccess": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Number of purchases successfully restored through StoreKit."
+      }
+    },
+    "description": "Purchase screen. Purpose: paywall restore success."
+  },
+  "paywallRestoreNothing": "रीस्टोर करने के लिए कोई ख़रीदारी नहीं है।",
+  "@paywallRestoreNothing": {
+    "description": "Purchase screen. Purpose: paywall restore nothing."
+  },
+  "paywallDeferred": "मंज़ूरी का इंतज़ार है — मंज़ूरी मिलते ही हम इसे पूरा कर देंगे।",
+  "@paywallDeferred": {
+    "description": "Purchase screen. Purpose: paywall deferred."
+  },
+  "paywallAlreadySubscribed": "आप पहले से सब्सक्राइब्ड हैं।",
+  "@paywallAlreadySubscribed": {
+    "description": "Purchase screen. Purpose: paywall already subscribed."
+  },
+  "paywallBillingRetry": "अपना सब्सक्रिप्शन जारी रखने के लिए पेमेंट का तरीका अपडेट करें।",
+  "@paywallBillingRetry": {
+    "description": "Purchase screen. Purpose: paywall billing retry."
+  },
+  "paywallTrial": "{days} दिन का फ़्री ट्रायल",
+  "@paywallTrial": {
+    "placeholders": {
+      "days": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Trial duration in days reported by StoreKit."
+      }
+    },
+    "description": "Purchase screen. Purpose: paywall trial."
+  },
+  "cycleOneTime": "एक बार",
+  "@cycleOneTime": {
+    "description": "Subscription billing period. Purpose: cycle one time."
+  },
+  "cycleWeekly": "/ हफ़्ता",
+  "@cycleWeekly": {
+    "description": "Subscription billing period. Purpose: cycle weekly."
+  },
+  "cycleMonthly": "/ महीना",
+  "@cycleMonthly": {
+    "description": "Subscription billing period. Purpose: cycle monthly."
+  },
+  "cycleQuarterly": "/ तिमाही",
+  "@cycleQuarterly": {
+    "description": "Subscription billing period. Purpose: cycle quarterly."
+  },
+  "cycleSemiAnnual": "/ 6 महीने",
+  "@cycleSemiAnnual": {
+    "description": "Subscription billing period. Purpose: cycle semi annual."
+  },
+  "cycleAnnual": "/ साल",
+  "@cycleAnnual": {
+    "description": "Subscription billing period. Purpose: cycle annual."
+  },
+  "cycleLifetime": "लाइफ़टाइम",
+  "@cycleLifetime": {
+    "description": "Subscription billing period. Purpose: cycle lifetime."
+  },
+  "navCreate": "बनाएँ",
+  "@navCreate": {
+    "description": "Application navigation. Purpose: nav create."
+  },
+  "navLibrary": "लाइब्रेरी",
+  "@navLibrary": {
+    "description": "Application navigation. Purpose: nav library."
+  },
+  "navSettings": "सेटिंग्स",
+  "@navSettings": {
+    "description": "Application navigation. Purpose: nav settings."
+  },
+  "commonContinue": "जारी रखें",
+  "@commonContinue": {
+    "description": "Shared buttons and messages. Purpose: common continue."
+  },
+  "commonBack": "वापस",
+  "@commonBack": {
+    "description": "Shared buttons and messages. Purpose: common back."
+  },
+  "createTitle": "यह गाना किसके लिए है?",
+  "@createTitle": {
+    "description": "Song creation screen. Purpose: create title."
+  },
+  "occasionBirthday": "जन्मदिन",
+  "@occasionBirthday": {
+    "description": "Occasion picker. Purpose: occasion birthday."
+  },
+  "occasionBirthdayHint": "उनके ख़ास दिन के लिए एक ख़ुशनुमा गाना",
+  "@occasionBirthdayHint": {
+    "description": "Occasion picker. Purpose: occasion birthday hint."
+  },
+  "occasionAnniversary": "सालगिरह",
+  "@occasionAnniversary": {
+    "description": "Occasion picker. Purpose: occasion anniversary."
+  },
+  "occasionAnniversaryHint": "अपनी साथ की कहानी का जश्न मनाएँ",
+  "@occasionAnniversaryHint": {
+    "description": "Occasion picker. Purpose: occasion anniversary hint."
+  },
+  "occasionConfession": "प्यार का इज़हार",
+  "@occasionConfession": {
+    "description": "Occasion picker. Purpose: occasion confession."
+  },
+  "occasionConfessionHint": "दिल की बात कह दें",
+  "@occasionConfessionHint": {
+    "description": "Occasion picker. Purpose: occasion confession hint."
+  },
+  "occasionWedding": "शादी",
+  "@occasionWedding": {
+    "description": "Occasion picker. Purpose: occasion wedding."
+  },
+  "occasionWeddingHint": "आपके हमेशा के पल के लिए एक गाना",
+  "@occasionWeddingHint": {
+    "description": "Occasion picker. Purpose: occasion wedding hint."
+  },
+  "occasionMemorial": "याद में",
+  "@occasionMemorial": {
+    "description": "Occasion picker. Purpose: occasion memorial."
+  },
+  "occasionMemorialHint": "किसी अपने को सम्मान दें",
+  "@occasionMemorialHint": {
+    "description": "Occasion picker. Purpose: occasion memorial hint."
+  },
+  "occasionFestival": "त्योहार",
+  "@occasionFestival": {
+    "description": "Occasion picker. Purpose: occasion festival."
+  },
+  "occasionFestivalHint": "ख़ास मौसम के लिए प्यार भरी शुभकामनाएँ",
+  "@occasionFestivalHint": {
+    "description": "Occasion picker. Purpose: occasion festival hint."
+  },
+  "occasionBrand": "ब्रांड जिंगल",
+  "@occasionBrand": {
+    "description": "Occasion picker. Purpose: occasion brand."
+  },
+  "occasionBrandHint": "आपके ब्रांड के लिए एक कैची धुन",
+  "@occasionBrandHint": {
+    "description": "Occasion picker. Purpose: occasion brand hint."
+  },
+  "occasionSoundtrack": "वीडियो साउंडट्रैक",
+  "@occasionSoundtrack": {
+    "description": "Occasion picker. Purpose: occasion soundtrack."
+  },
+  "occasionSoundtrackHint": "आपकी कहानी से मेल खाता संगीत",
+  "@occasionSoundtrackHint": {
+    "description": "Occasion picker. Purpose: occasion soundtrack hint."
+  },
+  "festivalNewYear": "नया साल",
+  "@festivalNewYear": {
+    "description": "Festival creation screen. Purpose: festival new year."
+  },
+  "festivalThanksgiving": "थैंक्सगिविंग",
+  "@festivalThanksgiving": {
+    "description": "Festival creation screen. Purpose: festival thanksgiving."
+  },
+  "festivalDiwali": "दिवाली",
+  "@festivalDiwali": {
+    "description": "Festival creation screen. Purpose: festival diwali."
+  },
+  "festivalCarnival": "कार्निवल",
+  "@festivalCarnival": {
+    "description": "Festival creation screen. Purpose: festival carnival."
+  },
+  "festivalEid": "ईद",
+  "@festivalEid": {
+    "description": "Festival creation screen. Purpose: festival eid."
+  },
+  "festivalLunarNewYear": "लूनर न्यू ईयर",
+  "@festivalLunarNewYear": {
+    "description": "Festival creation screen. Purpose: festival lunar new year."
+  },
+  "regionTitle": "यह कहाँ सुना जाएगा?",
+  "@regionTitle": {
+    "description": "Country and lyrics-language sheet. Purpose: region title."
+  },
+  "regionSearchHint": "देश खोजें",
+  "@regionSearchHint": {
+    "description": "Country and lyrics-language sheet. Purpose: region search hint."
+  },
+  "regionLanguageSheetTitle": "बोलों की भाषा",
+  "@regionLanguageSheetTitle": {
+    "description": "Country and lyrics-language sheet. Purpose: region language sheet title."
+  },
+  "countryUS": "संयुक्त राज्य अमेरिका",
+  "@countryUS": {
+    "description": "Country name in region picker. Purpose: country u s."
+  },
+  "countryGB": "यूनाइटेड किंगडम",
+  "@countryGB": {
+    "description": "Country name in region picker. Purpose: country g b."
+  },
+  "countryCA": "कनाडा",
+  "@countryCA": {
+    "description": "Country name in region picker. Purpose: country c a."
+  },
+  "countryAU": "ऑस्ट्रेलिया",
+  "@countryAU": {
+    "description": "Country name in region picker. Purpose: country a u."
+  },
+  "countryDE": "जर्मनी",
+  "@countryDE": {
+    "description": "Country name in region picker. Purpose: country d e."
+  },
+  "countryFR": "फ़्रांस",
+  "@countryFR": {
+    "description": "Country name in region picker. Purpose: country f r."
+  },
+  "countryJP": "जापान",
+  "@countryJP": {
+    "description": "Country name in region picker. Purpose: country j p."
+  },
+  "countryKR": "दक्षिण कोरिया",
+  "@countryKR": {
+    "description": "Country name in region picker. Purpose: country k r."
+  },
+  "countryBR": "ब्राज़ील",
+  "@countryBR": {
+    "description": "Country name in region picker. Purpose: country b r."
+  },
+  "countryMX": "मेक्सिको",
+  "@countryMX": {
+    "description": "Country name in region picker. Purpose: country m x."
+  },
+  "countryIN": "भारत",
+  "@countryIN": {
+    "description": "Country name in region picker. Purpose: country i n."
+  },
+  "countryID": "इंडोनेशिया",
+  "@countryID": {
+    "description": "Country name in region picker. Purpose: country i d."
+  },
+  "countryVN": "वियतनाम",
+  "@countryVN": {
+    "description": "Country name in region picker. Purpose: country v n."
+  },
+  "countryTR": "तुर्किये",
+  "@countryTR": {
+    "description": "Country name in region picker. Purpose: country t r."
+  },
+  "languageEn": "अंग्रेज़ी",
+  "@languageEn": {
+    "description": "Lyrics-language display name. Purpose: language en."
+  },
+  "languageFr": "फ़्रेंच",
+  "@languageFr": {
+    "description": "Lyrics-language display name. Purpose: language fr."
+  },
+  "languageDe": "जर्मन",
+  "@languageDe": {
+    "description": "Lyrics-language display name. Purpose: language de."
+  },
+  "languageJa": "जापानी",
+  "@languageJa": {
+    "description": "Lyrics-language display name. Purpose: language ja."
+  },
+  "languageKo": "कोरियाई",
+  "@languageKo": {
+    "description": "Lyrics-language display name. Purpose: language ko."
+  },
+  "languagePtBR": "पुर्तगाली (ब्राज़ील)",
+  "@languagePtBR": {
+    "description": "Lyrics-language display name. Purpose: language pt b r."
+  },
+  "languageEsMX": "स्पैनिश (मेक्सिको)",
+  "@languageEsMX": {
+    "description": "Lyrics-language display name. Purpose: language es m x."
+  },
+  "languageHi": "हिन्दी",
+  "@languageHi": {
+    "description": "Lyrics-language display name. Purpose: language hi."
+  },
+  "languageId": "इंडोनेशियाई",
+  "@languageId": {
+    "description": "Lyrics-language display name. Purpose: language id."
+  },
+  "languageVi": "वियतनामी",
+  "@languageVi": {
+    "description": "Lyrics-language display name. Purpose: language vi."
+  },
+  "languageTr": "तुर्की",
+  "@languageTr": {
+    "description": "Lyrics-language display name. Purpose: language tr."
+  },
+  "languageZhHans": "चीनी (सरलीकृत)",
+  "@languageZhHans": {
+    "description": "Lyrics-language display name. Purpose: language zh hans."
+  },
+  "languageZhHant": "चीनी (पारंपरिक)",
+  "@languageZhHant": {
+    "description": "Lyrics-language display name. Purpose: language zh hant."
+  },
+  "inputNameLabel": "उनका नाम",
+  "@inputNameLabel": {
+    "description": "Song creation form. Purpose: input name label."
+  },
+  "inputNameOptionalLabel": "नाम (वैकल्पिक)",
+  "@inputNameOptionalLabel": {
+    "description": "Song creation form. Purpose: input name optional label."
+  },
+  "inputNameHint": "जैसे Alex",
+  "@inputNameHint": {
+    "description": "Song creation form. Purpose: input name hint."
+  },
+  "inputKeywordsLabel": "उनके बारे में तीन शब्द",
+  "@inputKeywordsLabel": {
+    "description": "Song creation form. Purpose: input keywords label."
+  },
+  "inputLyricsHint": "[Verse] …\n[Chorus] …",
+  "@inputLyricsHint": {
+    "description": "Song creation form. Purpose: input lyrics hint."
+  },
+  "lyricsCounter": "{count} / {limit}",
+  "@lyricsCounter": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Current number of Unicode characters in the lyrics editor."
+      },
+      "limit": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Maximum allowed lyrics characters: 600 for CJK or 1200 otherwise."
+      }
+    },
+    "description": "Own-lyrics editor. Purpose: lyrics counter."
+  },
+  "inputLyricsOwnership": "ये बोल मेरे हैं या मुझे इन्हें इस्तेमाल करने का अधिकार है",
+  "@inputLyricsOwnership": {
+    "description": "Song creation form. Purpose: input lyrics ownership."
+  },
+  "issueRecipientMissing": "उनका नाम जोड़ें।",
+  "@issueRecipientMissing": {
+    "description": "Creation form validation; explain how to correct the input. Purpose: issue recipient missing."
+  },
+  "issueRecipientTooLong": "नाम अधिकतम 24 अक्षरों का हो सकता है।",
+  "@issueRecipientTooLong": {
+    "description": "Creation form validation; explain how to correct the input. Purpose: issue recipient too long."
+  },
+  "issueBriefMissing": "गाने के बारे में बताएं — कुछ शब्द, बोल या फ़ोटो।",
+  "@issueBriefMissing": {
+    "description": "Creation validation (no inspiration card picked, nothing to write from): ask for a description, keywords, lyrics or photos. Also shown when the server answers 40001 details.prompt."
+  },
+  "issueDescriptionMissing": "इस आइडिया को आपके शब्द चाहिए — गाने के बारे में एक लाइन लिखें।",
+  "@issueDescriptionMissing": {
+    "description": "Shown when the server answers 40001 details.prompt.description: the picked inspiration needs the user's own words."
+  },
+  "generatingBackToEdit": "वापस बदलें",
+  "@generatingBackToEdit": {
+    "description": "Generating page, failure or rejected state: returns to the create home with the draft kept, to fix it."
+  },
+  "issueKeywordTooLong": "हर शब्द अधिकतम 20 अक्षरों का हो सकता है।",
+  "@issueKeywordTooLong": {
+    "description": "Creation form validation; explain how to correct the input. Purpose: issue keyword too long."
+  },
+  "issueTooManyKeywords": "अधिकतम तीन शब्द इस्तेमाल करें।",
+  "@issueTooManyKeywords": {
+    "description": "Creation form validation; explain how to correct the input. Purpose: issue too many keywords."
+  },
+  "issueArtistName": "कलाकारों के नाम इस्तेमाल नहीं किए जा सकते — इसके बजाय भावना बताएँ।",
+  "@issueArtistName": {
+    "description": "Creation form validation; explain how to correct the input. Purpose: issue artist name."
+  },
+  "issueStyleImitation": "हम किसी गायक या बैंड की नकल नहीं कर सकते। इसके बजाय मूड बताएँ।",
+  "@issueStyleImitation": {
+    "description": "Creation form validation; explain how to correct the input. Purpose: issue style imitation."
+  },
+  "issueLyricsTooLong": "बोल अधिकतम {limit} अक्षरों के हो सकते हैं।",
+  "@issueLyricsTooLong": {
+    "placeholders": {
+      "limit": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Maximum number of lyrics characters permitted for this script."
+      }
+    },
+    "description": "Creation form validation; explain how to correct the input. Purpose: issue lyrics too long."
+  },
+  "issueLyricsNotOriginal": "ये बोल किसी मौजूदा गाने जैसे लगते हैं। कृपया अपने बोल ख़ुद लिखें।",
+  "@issueLyricsNotOriginal": {
+    "description": "Creation form validation; explain how to correct the input. Purpose: issue lyrics not original."
+  },
+  "issueLyricsOwnership": "पुष्टि करें कि आपको ये बोल इस्तेमाल करने का अधिकार है।",
+  "@issueLyricsOwnership": {
+    "description": "Creation form validation; explain how to correct the input. Purpose: issue lyrics ownership."
+  },
+  "issueTooManyPhotos": "अधिकतम 10 फ़ोटो चुनें।",
+  "@issueTooManyPhotos": {
+    "description": "Creation form validation; explain how to correct the input. Purpose: issue too many photos."
+  },
+  "photosTitle": "कुछ फ़ोटो चुनें",
+  "@photosTitle": {
+    "description": "Photo selection. Purpose: photos title."
+  },
+  "photosCount": "{count} / {max}",
+  "@photosCount": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Number of selected reference photos."
+      },
+      "max": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Maximum selectable reference photos."
+      }
+    },
+    "description": "Photo selection. Purpose: photos count."
+  },
+  "photosPrivacy": "फ़ोटो का इस्तेमाल सिर्फ़ एक बार गाना लिखने के लिए होता है और 24 घंटे के अंदर हमारे सर्वर से डिलीट कर दी जाती हैं।",
+  "@photosPrivacy": {
+    "description": "Photo selection. Purpose: photos privacy."
+  },
+  "photosAdd": "फ़ोटो जोड़ें",
+  "@photosAdd": {
+    "description": "Photo selection. Purpose: photos add."
+  },
+  "photosCreate": "फ़ोटो से बनाएँ",
+  "@photosCreate": {
+    "description": "Photo selection. Purpose: photos create."
+  },
+  "photosEmpty": "उस पल की 1–10 फ़ोटो चुनें।",
+  "@photosEmpty": {
+    "description": "Photo selection. Purpose: photos empty."
+  },
+  "generatingStepPolishing": "इस iPhone पर आपके शब्द निखारे जा रहे हैं…",
+  "@generatingStepPolishing": {
+    "description": "Song generation progress and cancellation. Purpose: generating step polishing."
+  },
+  "generatingStepUploading": "आपकी फ़ोटो भेजी जा रही हैं…",
+  "@generatingStepUploading": {
+    "description": "Song generation progress and cancellation. Purpose: generating step uploading."
+  },
+  "generatingStepSubmitting": "स्टूडियो को भेजा जा रहा है…",
+  "@generatingStepSubmitting": {
+    "description": "Song generation progress and cancellation. Purpose: generating step submitting."
+  },
+  "errorSafetyBlocked": "हम यह गाना नहीं बना सकते — दूसरे शब्द आज़माएँ, और कलाकारों के नाम न लिखें।",
+  "@errorSafetyBlocked": {
+    "description": "PRD 6.5 SAFETY_BLOCKED"
+  },
+  "errorQuotaExhausted": "आपने इस महीने के गाने इस्तेमाल कर लिए हैं। कोई पैक जोड़ें या अपग्रेड करें।",
+  "@errorQuotaExhausted": {
+    "description": "PRD 6.5 QUOTA_EXHAUSTED"
+  },
+  "errorUpstreamTimeout": "सामान्य से ज़्यादा समय लग रहा है। हम कोशिश करते रहेंगे और आपको सूचित करेंगे।",
+  "@errorUpstreamTimeout": {
+    "description": "PRD 6.5 UPSTREAM_TIMEOUT"
+  },
+  "errorUpstreamRateLimited": "अभी बहुत सारे गाने बन रहे हैं। आपका गाना कतार में है।",
+  "@errorUpstreamRateLimited": {
+    "description": "PRD 6.5 UPSTREAM_RATE_LIMITED"
+  },
+  "errorAttestFailed": "कृपया App Store से Songlet अपडेट करें।",
+  "@errorAttestFailed": {
+    "description": "PRD 6.5 ATTEST_FAILED"
+  },
+  "errorImageRejected": "इनमें से एक फ़ोटो इस्तेमाल नहीं की जा सकती। कोई दूसरी आज़माएँ।",
+  "@errorImageRejected": {
+    "description": "PRD 6.5 IMAGE_REJECTED"
+  },
+  "errorNetworkOffline": "आप ऑफ़लाइन हैं। आपकी लाइब्रेरी अब भी काम करती है।",
+  "@errorNetworkOffline": {
+    "description": "PRD 6.5 NETWORK_OFFLINE"
+  },
+  "errorDownloadLocked": "यह गाना डाउनलोड नहीं किया जा सकता — जिस ख़रीदारी से यह बना था उसका रिफ़ंड हो गया है या आपका प्लान ख़त्म हो गया है। आप इसे अब भी चला सकते हैं।",
+  "@errorDownloadLocked": {
+    "description": "DOWNLOAD_LOCKED (PRD 8.4 refund)"
+  },
+  "errorJobAlreadyFinished": "यह पहले ही पूरा हो चुका है — रद्द करने के लिए कुछ नहीं है।",
+  "@errorJobAlreadyFinished": {
+    "description": "Cancel lost the race: the job had already finished (JOB_ALREADY_FINISHED)."
+  },
+  "errorMvSongNotReady": "यह गाना अभी वीडियो के लिए तैयार नहीं है।",
+  "@errorMvSongNotReady": {
+    "description": "MV_SONG_NOT_READY (contract v1.1)"
+  },
+  "errorMvSongTooLong": "यह गाना पूरे वीडियो के लिए बहुत लंबा है — कोरस वीडियो आज़माएँ।",
+  "@errorMvSongTooLong": {
+    "description": "MV_SONG_TOO_LONG"
+  },
+  "errorMvSongExpired": "यह गाना समाप्त हो गया है। वीडियो बनाने के लिए इसे फिर से बनाएँ।",
+  "@errorMvSongExpired": {
+    "description": "MV_SONG_EXPIRED"
+  },
+  "errorMvNotFound": "यह वीडियो अब उपलब्ध नहीं है।",
+  "@errorMvNotFound": {
+    "description": "MV_NOT_FOUND"
+  },
+  "errorMvPhotosExpired": "वे फ़ोटो समाप्त हो गए हैं — उन्हें फिर से चुनें।",
+  "@errorMvPhotosExpired": {
+    "description": "MV_PHOTOS_EXPIRED"
+  },
+  "errorMvRenderFailed": "हम यह वीडियो पूरा नहीं कर सके। आपके क्रेडिट वापस आ गए हैं — फिर से कोशिश करें।",
+  "@errorMvRenderFailed": {
+    "description": "MV_RENDER_FAILED (job level, refunded)"
+  },
+  "mvHubTitle": "वीडियो बनाएँ",
+  "@mvHubTitle": {
+    "description": "P19 hub title"
+  },
+  "mvHubSubtitle": "“{title}” को म्यूज़िक वीडियो बनाएँ।",
+  "@mvHubSubtitle": {
+    "description": "P19 hub subtitle; {title} = song title",
+    "placeholders": {
+      "title": {
+        "type": "String",
+        "description": "Localized song title; may contain a user-provided recipient name."
+      }
+    }
+  },
+  "mvLevelLyricVideo": "लिरिक वीडियो",
+  "@mvLevelLyricVideo": {
+    "description": "Level: lyric video"
+  },
+  "mvLevelLyricHint": "आपके बोल के साथ एक स्थिर दृश्य",
+  "@mvLevelLyricHint": {
+    "description": "Level hint: lyric video"
+  },
+  "mvLevelChorus": "कोरस वीडियो",
+  "@mvLevelChorus": {
+    "description": "Level: chorus video"
+  },
+  "mvLevelChorusHint": "आपके कोरस के 30 सेकंड, AI द्वारा शूट",
+  "@mvLevelChorusHint": {
+    "description": "Level hint: chorus video"
+  },
+  "mvLevelFull": "पूरे गाने का वीडियो",
+  "@mvLevelFull": {
+    "description": "Level: full-song video"
+  },
+  "mvLevelFullHint": "पूरा गाना, दृश्य दर दृश्य",
+  "@mvLevelFullHint": {
+    "description": "Level hint: full-song video"
+  },
+  "mvPriceCredits": "{credits, plural, one{{credits} क्रेडिट} other{{credits} क्रेडिट}}",
+  "@mvPriceCredits": {
+    "description": "Price line; {credits} = integer",
+    "placeholders": {
+      "credits": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Number of video credits, not a monetary price."
+      }
+    }
+  },
+  "mvAvailableCredits": "{credits, plural, one{आपके पास {credits} क्रेडिट है} other{आपके पास {credits} क्रेडिट हैं}}",
+  "@mvAvailableCredits": {
+    "description": "Credits the account has; {credits} = integer",
+    "placeholders": {
+      "credits": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Number of video credits, not a monetary price."
+      }
+    }
+  },
+  "mvGapCredits": "{credits, plural, one{{credits} और क्रेडिट चाहिए} other{{credits} और क्रेडिट चाहिए}}",
+  "@mvGapCredits": {
+    "description": "Missing credits; {credits} = integer",
+    "placeholders": {
+      "credits": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Number of video credits, not a monetary price."
+      }
+    }
+  },
+  "mvEstimating": "क़ीमत देख रहे हैं…",
+  "@mvEstimating": {
+    "description": "While the price is fetched"
+  },
+  "mvOptionsHeader": "विकल्प",
+  "@mvOptionsHeader": {
+    "description": "P19 options section header"
+  },
+  "mvAspectLabel": "फ़ॉर्मैट",
+  "@mvAspectLabel": {
+    "description": "Aspect ratio option"
+  },
+  "mvAspectPortrait": "पोर्ट्रेट",
+  "@mvAspectPortrait": {
+    "description": "9:16"
+  },
+  "mvAspectLandscape": "लैंडस्केप",
+  "@mvAspectLandscape": {
+    "description": "16:9"
+  },
+  "mvAspectSquare": "वर्ग",
+  "@mvAspectSquare": {
+    "description": "1:1"
+  },
+  "mvQualityLabel": "गुणवत्ता",
+  "@mvQualityLabel": {
+    "description": "Quality option"
+  },
+  "mvQualityStandard": "मानक",
+  "@mvQualityStandard": {
+    "description": "quality standard"
+  },
+  "mvQualityHigh": "उच्च",
+  "@mvQualityHigh": {
+    "description": "quality high"
+  },
+  "mvSubtitlesLabel": "स्क्रीन पर बोल",
+  "@mvSubtitlesLabel": {
+    "description": "Burn lyrics into the video (switch)"
+  },
+  "mvPhotosLabel": "संदर्भ फ़ोटो",
+  "@mvPhotosLabel": {
+    "description": "Reference photos row"
+  },
+  "mvPhotosHint": "माहौल और रंग तय करें — चेहरों का उपयोग नहीं होता",
+  "@mvPhotosHint": {
+    "description": "Reference photos hint (no face driving in V1)"
+  },
+  "mvPhotosCount": "{count, plural, one{{count} फ़ोटो} other{{count} फ़ोटो}}",
+  "@mvPhotosCount": {
+    "description": "Picked photos count; {count} = integer",
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Number of selected video reference photos."
+      }
+    }
+  },
+  "mvChorusLabel": "कोरस",
+  "@mvChorusLabel": {
+    "description": "Chorus window row (chorus level only)"
+  },
+  "mvChorusAuto": "अपने आप खोजा जाएगा",
+  "@mvChorusAuto": {
+    "description": "Chorus window: automatic"
+  },
+  "mvChorusCustom": "पल चुनें",
+  "@mvChorusCustom": {
+    "description": "Chorus window: chosen by the user"
+  },
+  "mvChorusRange": "{start} – {end}",
+  "@mvChorusRange": {
+    "description": "Chosen chorus window; {start} and {end} are m:ss clock labels",
+    "placeholders": {
+      "start": {
+        "type": "String",
+        "description": "Beginning of the selected chorus, formatted as a media duration."
+      },
+      "end": {
+        "type": "String",
+        "description": "End of the selected chorus, formatted as a media duration."
+      }
+    }
+  },
+  "mvCreate": "वीडियो बनाएँ",
+  "@mvCreate": {
+    "description": "P19 primary action"
+  },
+  "mvBuyPack": "पैक लें और बनाएँ",
+  "@mvBuyPack": {
+    "description": "P19 primary action when credits are missing (opens the paywall on the pack)"
+  },
+  "mvSongLocked": "आपका गाना वीडियो के लिए सहेज लिया गया है।",
+  "@mvSongLocked": {
+    "description": "Note that the song was saved for the video (song_locked)"
+  },
+  "mvGeneratingTitle": "आपका वीडियो बन रहा है…",
+  "@mvGeneratingTitle": {
+    "description": "P20 title"
+  },
+  "mvStageQueued": "शुरू होने की प्रतीक्षा",
+  "@mvStageQueued": {
+    "description": "Stage: queued"
+  },
+  "mvStageSlicing": "पल चुने जा रहे हैं",
+  "@mvStageSlicing": {
+    "description": "Stage: slicing"
+  },
+  "mvStageStoryboarding": "स्टोरीबोर्ड लिखा जा रहा है",
+  "@mvStageStoryboarding": {
+    "description": "Stage: storyboarding"
+  },
+  "mvStageKeyframing": "दृश्य बनाए जा रहे हैं",
+  "@mvStageKeyframing": {
+    "description": "Stage: keyframing"
+  },
+  "mvStageRendering": "दृश्य फ़िल्माए जा रहे हैं",
+  "@mvStageRendering": {
+    "description": "Stage: rendering"
+  },
+  "mvStageAssembling": "जोड़ा जा रहा है",
+  "@mvStageAssembling": {
+    "description": "Stage: assembling"
+  },
+  "mvStageDone": "हो गया",
+  "@mvStageDone": {
+    "description": "Stage: done"
+  },
+  "mvScenes": "दृश्य {done} / {total}",
+  "@mvScenes": {
+    "description": "Scene progress; {done} and {total} = integers",
+    "placeholders": {
+      "done": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Number of completed video scenes."
+      },
+      "total": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Total number of video scenes."
+      }
+    }
+  },
+  "mvUsuallyMinutes": "आमतौर पर लगभग {minutes} मिनट",
+  "@mvUsuallyMinutes": {
+    "description": "ETA caption; {minutes} = integer",
+    "placeholders": {
+      "minutes": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Estimated waiting or processing duration in minutes."
+      }
+    }
+  },
+  "mvCancelRequested": "मौजूदा दृश्य के बाद रुक जाएगा…",
+  "@mvCancelRequested": {
+    "description": "Banner after a cancel was acknowledged while rendering"
+  },
+  "mvCancelTitle": "यह वीडियो रोकें?",
+  "@mvCancelTitle": {
+    "description": "Cancel dialog title"
+  },
+  "mvCancelQueued": "यह अभी शुरू नहीं हुआ है, इसलिए कुछ भी उपयोग नहीं होगा।",
+  "@mvCancelQueued": {
+    "description": "Cancel dialog body while queued"
+  },
+  "mvCancelStarted": "यह शुरू हो चुका है। बने हुए दृश्यों का शुल्क लगेगा; बाक़ी वापस आ जाएगा।",
+  "@mvCancelStarted": {
+    "description": "Cancel dialog body while rendering (partial settlement)"
+  },
+  "mvCancelConfirm": "वीडियो रोकें",
+  "@mvCancelConfirm": {
+    "description": "Cancel dialog confirm"
+  },
+  "mvCancelled": "वीडियो रोका गया",
+  "@mvCancelled": {
+    "description": "Toast after a cancel was acknowledged"
+  },
+  "mvCancelledRefunded": "वीडियो रोका गया — कुछ भी उपयोग नहीं हुआ",
+  "@mvCancelledRefunded": {
+    "description": "Toast after a queued cancel (full refund)"
+  },
+  "mvNothing": "अभी कोई वीडियो नहीं बन रहा है।",
+  "@mvNothing": {
+    "description": "P20 when no video is in flight"
+  },
+  "mvQuotaTitle": "पर्याप्त क्रेडिट नहीं",
+  "@mvQuotaTitle": {
+    "description": "P20 credit-gap headline"
+  },
+  "mvAiLabelBurnedIn": "AI से बना — बैज वीडियो का हिस्सा है",
+  "@mvAiLabelBurnedIn": {
+    "description": "P21 explicit disclosure under the video"
+  },
+  "mvSave": "फ़ोटो में सहेजें",
+  "@mvSave": {
+    "description": "P21 save to Photos"
+  },
+  "mvSaveFiles": "फ़ाइल में सहेजें",
+  "@mvSaveFiles": {
+    "description": "P21 save to Files"
+  },
+  "mvShareText": "मैंने यह म्यूज़िक वीडियो Songlet से बनाया 🎬",
+  "@mvShareText": {
+    "description": "Share sheet text for the video"
+  },
+  "mvMissing": "यह वीडियो अब इस डिवाइस पर नहीं है।",
+  "@mvMissing": {
+    "description": "P21 when the file is gone"
+  },
+  "mvDeleteTitle": "यह वीडियो हटाएँ?",
+  "@mvDeleteTitle": {
+    "description": "Delete dialog title"
+  },
+  "mvDeleteBody": "यह इस डिवाइस से हटा दिया जाएगा।",
+  "@mvDeleteBody": {
+    "description": "Delete dialog body"
+  },
+  "mvDeleted": "वीडियो हटाया गया",
+  "@mvDeleted": {
+    "description": "Toast after delete"
+  },
+  "mvProvenance": "Google Lyria 3 और AI वीडियो मॉडल से बना · AI से बना",
+  "@mvProvenance": {
+    "description": "P21 footnote"
+  },
+  "detailVideos": "वीडियो",
+  "@detailVideos": {
+    "description": "P13 section header"
+  },
+  "detailMakeVideo": "वीडियो बनाएँ",
+  "@detailMakeVideo": {
+    "description": "P13 / P09 make-a-video action"
+  },
+  "mvStatusReady": "तैयार",
+  "@mvStatusReady": {
+    "description": "Video row status"
+  },
+  "mvStatusPending": "बन रहा है…",
+  "@mvStatusPending": {
+    "description": "Video row status"
+  },
+  "mvStatusFailed": "पूरा नहीं हुआ",
+  "@mvStatusFailed": {
+    "description": "Video row status"
+  },
+  "mvPackTitle": "म्यूज़िक वीडियो",
+  "@mvPackTitle": {
+    "description": "Paywall MV pack row title"
+  },
+  "mvPackChorusSubtitle": "एक कोरस वीडियो",
+  "@mvPackChorusSubtitle": {
+    "description": "Paywall MV pack row subtitle"
+  },
+  "mvPackFullSubtitle": "एक पूरे गाने का वीडियो",
+  "@mvPackFullSubtitle": {
+    "description": "Paywall MV pack row subtitle"
+  },
+  "paywallMvHeroTitle": "इसे वीडियो बनाएँ",
+  "@paywallMvHeroTitle": {
+    "description": "Paywall headline when opened for a music video"
+  },
+  "paywallMvHeroSubtitle": "आपके गाने के म्यूज़िक वीडियो के लिए क्रेडिट — सहेजें और साझा करें।",
+  "@paywallMvHeroSubtitle": {
+    "description": "Paywall subtitle when opened for a music video"
+  },
+  "playerAiGenerated": "AI द्वारा बनाया गया",
+  "@playerAiGenerated": {
+    "description": "Non-removable disclosure badge (PRD 9.4)"
+  },
+  "playerLoop": "लूप",
+  "@playerLoop": {
+    "description": "Song playback screen. Purpose: player loop."
+  },
+  "playerPlay": "चलाएँ",
+  "@playerPlay": {
+    "description": "Song playback screen. Purpose: player play."
+  },
+  "playerPause": "रोकें",
+  "@playerPause": {
+    "description": "Song playback screen. Purpose: player pause."
+  },
+  "playerPreviewLabel": "30 सेकंड का प्रीव्यू",
+  "@playerPreviewLabel": {
+    "description": "Song playback screen. Purpose: player preview label."
+  },
+  "playerTitleFor": "{name} के लिए",
+  "@playerTitleFor": {
+    "placeholders": {
+      "name": {
+        "type": "String",
+        "description": "Recipient or template display name; do not translate user-provided names."
+      }
+    },
+    "description": "Song playback screen. Purpose: player title for."
+  },
+  "downloadSaved": "फ़ाइलें में सेव किया गया।",
+  "@downloadSaved": {
+    "description": "Audio download screen. Purpose: download saved."
+  },
+  "shareComposing": "आपका शेयर कार्ड बनाया जा रहा है…",
+  "@shareComposing": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share composing."
+  },
+  "shareFailed": "शेयर कार्ड नहीं बन सका।",
+  "@shareFailed": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share failed."
+  },
+  "shareText": "मैंने यह गाना Songlet से बनाया 🎵",
+  "@shareText": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share text."
+  },
+  "paywallBestValue": "सबसे फ़ायदेमंद",
+  "@paywallBestValue": {
+    "description": "Purchase screen. Purpose: paywall best value."
+  },
+  "paywallStartTrial": "फ़्री ट्रायल शुरू करें",
+  "@paywallStartTrial": {
+    "description": "Purchase screen. Purpose: paywall start trial."
+  },
+  "paywallClose": "बंद करें",
+  "@paywallClose": {
+    "description": "Purchase screen. Purpose: paywall close."
+  },
+  "paywallSeePlans": "सदस्यताएँ देखें",
+  "@paywallSeePlans": {
+    "description": "Purchase screen. Purpose: paywall see plans."
+  },
+  "paywallCurrentPlan": "{count, plural, one{आपका प्लान सक्रिय है — इस अवधि में {count} पूरा गाना बचा है।} other{आपका प्लान सक्रिय है — इस अवधि में {count} पूरे गाने बचे हैं।}}",
+  "@paywallCurrentPlan": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Full songs remaining in the current subscription period."
+      }
+    },
+    "description": "Purchase screen. Purpose: paywall current plan."
+  },
+  "libraryEmpty": "आपके गाने यहाँ रहेंगे।",
+  "@libraryEmpty": {
+    "description": "Saved-song library. Purpose: library empty."
+  },
+  "libraryEmptyAction": "अपना पहला गाना बनाएँ",
+  "@libraryEmptyAction": {
+    "description": "Saved-song library. Purpose: library empty action."
+  },
+  "libraryPending": "कंपोज़ हो रहा है…",
+  "@libraryPending": {
+    "description": "Saved-song library. Purpose: library pending."
+  },
+  "libraryPreviewBadge": "प्रीव्यू",
+  "@libraryPreviewBadge": {
+    "description": "Saved-song library. Purpose: library preview badge."
+  },
+  "librarySongBadge": "पूरा गाना",
+  "@librarySongBadge": {
+    "description": "Saved-song library. Purpose: library song badge."
+  },
+  "settingsTitle": "सेटिंग्स",
+  "@settingsTitle": {
+    "description": "Settings screen. Purpose: settings title."
+  },
+  "settingsPlan": "आपका प्लान",
+  "@settingsPlan": {
+    "description": "Settings screen. Purpose: settings plan."
+  },
+  "settingsPlanUnavailable": "आपका प्लान लोड नहीं हो सका। बाद में फिर से कोशिश करने के लिए नीचे खींचें।",
+  "@settingsPlanUnavailable": {
+    "description": "Settings screen. Purpose: settings plan unavailable."
+  },
+  "tierFree": "कोई सदस्यता नहीं",
+  "@tierFree": {
+    "description": "Plan tier display. Purpose: tier free."
+  },
+  "tierPack": "सॉन्ग पैक",
+  "@tierPack": {
+    "description": "Plan tier display. Purpose: tier pack."
+  },
+  "settingsSongsLeft": "{count, plural, one{{count} पूरा गाना बचा है} other{{count} पूरे गाने बचे हैं}}",
+  "@settingsSongsLeft": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Remaining full songs in the current allowance."
+      }
+    },
+    "description": "Settings screen. Purpose: settings songs left."
+  },
+  "settingsClipsLeft": "{count, plural, one{{count} प्रीव्यू बचा है} other{{count} प्रीव्यू बचे हैं}}",
+  "@settingsClipsLeft": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Remaining song previews in the current allowance."
+      }
+    },
+    "description": "Settings screen. Purpose: settings clips left."
+  },
+  "settingsResets": "{date} को रीसेट होगा",
+  "@settingsResets": {
+    "placeholders": {
+      "date": {
+        "type": "DateTime",
+        "format": "yMMMd",
+        "description": "Next allowance reset date, converted to local time."
+      }
+    },
+    "description": "Settings screen. Purpose: settings resets."
+  },
+  "settingsUpgrade": "अपग्रेड करें",
+  "@settingsUpgrade": {
+    "description": "Settings screen. Purpose: settings upgrade."
+  },
+  "appTagline": "अपनों के लिए गीत",
+  "@appTagline": {
+    "description": "Brand tagline under the app name"
+  },
+  "commonClose": "बंद करें",
+  "@commonClose": {
+    "description": "Shared buttons and messages. Purpose: common close."
+  },
+  "commonDone": "हो गया",
+  "@commonDone": {
+    "description": "Shared buttons and messages. Purpose: common done."
+  },
+  "commonDelete": "मिटाएँ",
+  "@commonDelete": {
+    "description": "Shared buttons and messages. Purpose: common delete."
+  },
+  "commonMore": "और",
+  "@commonMore": {
+    "description": "Shared buttons and messages. Purpose: common more."
+  },
+  "commonCopy": "कॉपी करें",
+  "@commonCopy": {
+    "description": "Shared buttons and messages. Purpose: common copy."
+  },
+  "commonCopied": "कॉपी हो गया",
+  "@commonCopied": {
+    "description": "Shared buttons and messages. Purpose: common copied."
+  },
+  "commonNotNow": "अभी नहीं",
+  "@commonNotNow": {
+    "description": "Shared buttons and messages. Purpose: common not now."
+  },
+  "commonLearnMore": "और जानें",
+  "@commonLearnMore": {
+    "description": "Shared buttons and messages. Purpose: common learn more."
+  },
+  "commonSeeAll": "सभी देखें",
+  "@commonSeeAll": {
+    "description": "Shared buttons and messages. Purpose: common see all."
+  },
+  "commonKeepGoing": "जारी रखें",
+  "@commonKeepGoing": {
+    "description": "Shared buttons and messages. Purpose: common keep going."
+  },
+  "composerHint": "जैसा गीत चाहिए, उसके बारे में लिखें",
+  "@composerHint": {
+    "description": "P01 prompt field hint"
+  },
+  "composerAddPhotos": "फ़ोटो जोड़ें",
+  "@composerAddPhotos": {
+    "description": "P01 + button"
+  },
+  "composerSourceMusicHint": "अपने शब्दों में बताएँ",
+  "@composerSourceMusicHint": {
+    "description": "Song creation composer. Purpose: composer source music hint."
+  },
+  "composerDictate": "बोलकर लिखें",
+  "@composerDictate": {
+    "description": "P01 mic button"
+  },
+  "composerStopDictation": "बोलकर लिखना बंद करें",
+  "@composerStopDictation": {
+    "description": "P03a stop button"
+  },
+  "lengthPreview": "प्रीव्यू",
+  "@lengthPreview": {
+    "description": "Composer summary row: the 30-second preview (lyria-3-clip-preview)."
+  },
+  "lengthFull": "पूरा गाना",
+  "@lengthFull": {
+    "description": "Composer summary row and options: the full ~2-minute song (lyria-3.5)."
+  },
+  "paramLength": "लंबाई",
+  "@paramLength": {
+    "description": "Song option selector. Purpose: param length."
+  },
+  "paramVocals": "आवाज़",
+  "@paramVocals": {
+    "description": "Song option selector. Purpose: param vocals."
+  },
+  "paramGenre": "शैली",
+  "@paramGenre": {
+    "description": "Song option selector. Purpose: param genre."
+  },
+  "templatePlaySample": "{name} का नमूना सुनें",
+  "@templatePlaySample": {
+    "description": "Template tile play button",
+    "placeholders": {
+      "name": {
+        "type": "String",
+        "description": "Recipient or template display name; do not translate user-provided names."
+      }
+    }
+  },
+  "templatePauseSample": "नमूना रोकें",
+  "@templatePauseSample": {
+    "description": "Song template and creation form. Purpose: template pause sample."
+  },
+  "lengthShort": "छोटा",
+  "@lengthShort": {
+    "description": "Song length selector. Purpose: length short."
+  },
+  "lengthShortHint": "30 सेकंड प्रीव्यू",
+  "@lengthShortHint": {
+    "description": "Song length selector. Purpose: length short hint."
+  },
+  "lengthStandard": "सामान्य",
+  "@lengthStandard": {
+    "description": "Song length selector. Purpose: length standard."
+  },
+  "lengthStandardHint": "लगभग 2 मिनट, Pro",
+  "@lengthStandardHint": {
+    "description": "Song length selector. Purpose: length standard hint."
+  },
+  "vocalsCustom": "अपने आप",
+  "@vocalsCustom": {
+    "description": "Vocal option selector. Purpose: vocals custom."
+  },
+  "vocalsCustomHint": "आपके विवरण के अनुसार",
+  "@vocalsCustomHint": {
+    "description": "Vocal option selector. Purpose: vocals custom hint."
+  },
+  "vocalsCustomDetail": "आवाज़ की शैली आपके विवरण के अनुसार होगी।",
+  "@vocalsCustomDetail": {
+    "description": "Vocal option selector. Purpose: vocals custom detail."
+  },
+  "vocalsOn": "आवाज़ के साथ",
+  "@vocalsOn": {
+    "description": "Vocal option selector. Purpose: vocals on."
+  },
+  "vocalsInstrumental": "केवल संगीत",
+  "@vocalsInstrumental": {
+    "description": "Vocal option selector. Purpose: vocals instrumental."
+  },
+  "vocalsLyricsIn": "बोल {language} में लिखे जाएँगे",
+  "@vocalsLyricsIn": {
+    "placeholders": {
+      "language": {
+        "type": "String",
+        "description": "Localized lyrics-language name."
+      }
+    },
+    "description": "Vocal option selector. Purpose: vocals lyrics in."
+  },
+  "genreCustom": "अपने आप",
+  "@genreCustom": {
+    "description": "Genre picker. Purpose: genre custom."
+  },
+  "genreCustomHint": "आपके विवरण के अनुसार",
+  "@genreCustomHint": {
+    "description": "Genre picker. Purpose: genre custom hint."
+  },
+  "genrePopularIn": "{country} में लोकप्रिय",
+  "@genrePopularIn": {
+    "placeholders": {
+      "country": {
+        "type": "String",
+        "description": "Localized country name."
+      }
+    },
+    "description": "Genre picker. Purpose: genre popular in."
+  },
+  "genreAll": "सभी शैलियाँ",
+  "@genreAll": {
+    "description": "Genre picker. Purpose: genre all."
+  },
+  "regionHelper": "3 सुझाई गई शैलियाँ और बोल की भाषा बदल जाती है",
+  "@regionHelper": {
+    "description": "Country and lyrics-language sheet. Purpose: region helper."
+  },
+  "regionLyricsRow": "बोल की भाषा: {language}",
+  "@regionLyricsRow": {
+    "placeholders": {
+      "language": {
+        "type": "String",
+        "description": "Localized lyrics-language name."
+      }
+    },
+    "description": "Country and lyrics-language sheet. Purpose: region lyrics row."
+  },
+  "regionNoMatch": "कोई देश नहीं मिला",
+  "@regionNoMatch": {
+    "description": "Country and lyrics-language sheet. Purpose: region no match."
+  },
+  "keywordAdd": "एक शब्द जोड़ें",
+  "@keywordAdd": {
+    "description": "Creation keywords. Purpose: keyword add."
+  },
+  "keywordRemove": "{word} हटाएँ",
+  "@keywordRemove": {
+    "placeholders": {
+      "word": {
+        "type": "String",
+        "description": "User-provided keyword being removed."
+      }
+    },
+    "description": "Creation keywords. Purpose: keyword remove."
+  },
+  "nameClear": "नाम साफ़ करें",
+  "@nameClear": {
+    "description": "Recipient name field. Purpose: name clear."
+  },
+  "lyricsOptional": "अपने बोल लिखें (वैकल्पिक)",
+  "@lyricsOptional": {
+    "description": "Own-lyrics editor. Purpose: lyrics optional."
+  },
+  "issueRecipientArtistName": "कलाकारों के नाम इस्तेमाल नहीं किए जा सकते।",
+  "@issueRecipientArtistName": {
+    "description": "P18 name field"
+  },
+  "issuePromptTooLong": "विवरण {limit} अक्षरों से कम रखें।",
+  "@issuePromptTooLong": {
+    "placeholders": {
+      "limit": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Maximum number of characters in the song description."
+      }
+    },
+    "description": "Creation form validation; explain how to correct the input. Purpose: issue prompt too long."
+  },
+  "voiceRecording": "रिकॉर्ड हो रहा है…",
+  "@voiceRecording": {
+    "description": "On-device dictation panel. Purpose: voice recording."
+  },
+  "voiceStarting": "शुरू हो रहा है…",
+  "@voiceStarting": {
+    "description": "On-device dictation panel. Purpose: voice starting."
+  },
+  "voiceListening": "बताइए यह गीत किसके लिए है और उन्हें क्या पसंद है…",
+  "@voiceListening": {
+    "description": "On-device dictation panel. Purpose: voice listening."
+  },
+  "voiceOnDevice": "डिवाइस पर ही लिखा गया",
+  "@voiceOnDevice": {
+    "description": "On-device dictation panel. Purpose: voice on device."
+  },
+  "voicePermissionDenied": "बोलकर लिखने के लिए Settings में Songlet को माइक्रोफ़ोन और स्पीच रिकग्निशन की अनुमति दें।",
+  "@voicePermissionDenied": {
+    "description": "On-device dictation panel. Purpose: voice permission denied."
+  },
+  "voiceUnavailable": "इस डिवाइस पर इस भाषा में बोलकर लिखना उपलब्ध नहीं है।",
+  "@voiceUnavailable": {
+    "description": "On-device dictation panel. Purpose: voice unavailable."
+  },
+  "voiceApplied": "आपकी आवाज़ से जोड़ा गया",
+  "@voiceApplied": {
+    "description": "On-device dictation panel. Purpose: voice applied."
+  },
+  "photoRemove": "फ़ोटो हटाएँ",
+  "@photoRemove": {
+    "description": "Photo selection. Purpose: photo remove."
+  },
+  "generatingTitleFor": "{name} का गीत लिखा जा रहा है…",
+  "@generatingTitleFor": {
+    "placeholders": {
+      "name": {
+        "type": "String",
+        "description": "Recipient or template display name; do not translate user-provided names."
+      }
+    },
+    "description": "Song generation progress and cancellation. Purpose: generating title for."
+  },
+  "generatingTitleGeneric": "आपका गीत लिखा जा रहा है…",
+  "@generatingTitleGeneric": {
+    "description": "Song generation progress and cancellation. Purpose: generating title generic."
+  },
+  "generatingUsually": "आमतौर पर लगभग {seconds} सेकंड",
+  "@generatingUsually": {
+    "placeholders": {
+      "seconds": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Video, countdown, or generation duration in seconds."
+      }
+    },
+    "description": "Song generation progress and cancellation. Purpose: generating usually."
+  },
+  "generatingPercent": "{percent}",
+  "@generatingPercent": {
+    "placeholders": {
+      "percent": {
+        "type": "String",
+        "description": "Complete percentage already formatted with intl for the UI locale, including the percent sign."
+      }
+    },
+    "description": "Song generation progress and cancellation. Purpose: generating percent."
+  },
+  "generatingProgress": "प्रगति",
+  "@generatingProgress": {
+    "description": "Song generation progress and cancellation. Purpose: generating progress."
+  },
+  "generatingGlimpse": "आपके गीत की एक झलक",
+  "@generatingGlimpse": {
+    "description": "Song generation progress and cancellation. Purpose: generating glimpse."
+  },
+  "generatingCancelTitle": "यह गीत रोकें?",
+  "@generatingCancelTitle": {
+    "description": "Song generation progress and cancellation. Purpose: generating cancel title."
+  },
+  "generatingCancelQueued": "यह अभी शुरू नहीं हुआ है, इसलिए आपकी सीमा में नहीं गिना जाएगा।",
+  "@generatingCancelQueued": {
+    "description": "Song generation progress and cancellation. Purpose: generating cancel queued."
+  },
+  "generatingCancelStarted": "यह शुरू हो चुका है, इसलिए आपकी सीमा में गिना जाएगा।",
+  "@generatingCancelStarted": {
+    "description": "Song generation progress and cancellation. Purpose: generating cancel started."
+  },
+  "generatingCancelConfirm": "गीत रोकें",
+  "@generatingCancelConfirm": {
+    "description": "Song generation progress and cancellation. Purpose: generating cancel confirm."
+  },
+  "generatingCancelled": "गीत रोक दिया गया",
+  "@generatingCancelled": {
+    "description": "Song generation progress and cancellation. Purpose: generating cancelled."
+  },
+  "generatingCancelledRefunded": "गीत रोक दिया गया — कुछ भी खर्च नहीं हुआ",
+  "@generatingCancelledRefunded": {
+    "description": "Song generation progress and cancellation. Purpose: generating cancelled refunded."
+  },
+  "queueTitle": "अभी बहुत सारे गीत बन रहे हैं।",
+  "@queueTitle": {
+    "description": "Song generation queue. Purpose: queue title."
+  },
+  "queueSubtitle": "आपका गीत कतार में है।",
+  "@queueSubtitle": {
+    "description": "Song generation queue. Purpose: queue subtitle."
+  },
+  "queuePosition": "कतार में स्थान",
+  "@queuePosition": {
+    "description": "Song generation queue. Purpose: queue position."
+  },
+  "queueWait": "अनुमानित इंतज़ार",
+  "@queueWait": {
+    "description": "Song generation queue. Purpose: queue wait."
+  },
+  "queueWaitMinutes": "≈ {minutes} मिनट",
+  "@queueWaitMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Estimated waiting or processing duration in minutes."
+      }
+    },
+    "description": "Song generation queue. Purpose: queue wait minutes."
+  },
+  "generatingNothing": "अभी कोई गीत नहीं बन रहा है।",
+  "@generatingNothing": {
+    "description": "Song generation progress and cancellation. Purpose: generating nothing."
+  },
+  "previewGetFull": "पूरा 2 मिनट का गीत पाएँ",
+  "@previewGetFull": {
+    "description": "Song preview screen. Purpose: preview get full."
+  },
+  "previewShare": "प्रीव्यू शेयर करें",
+  "@previewShare": {
+    "description": "Song preview screen. Purpose: preview share."
+  },
+  "previewAnother": "दूसरा वर्शन आज़माएँ (1 प्रीव्यू लगेगा)",
+  "@previewAnother": {
+    "description": "Song preview screen. Purpose: preview another."
+  },
+  "playerPosition": "चलने की स्थिति",
+  "@playerPosition": {
+    "description": "Song playback screen. Purpose: player position."
+  },
+  "playerPrevSection": "पिछला हिस्सा",
+  "@playerPrevSection": {
+    "description": "Song playback screen. Purpose: player prev section."
+  },
+  "playerNextSection": "अगला हिस्सा",
+  "@playerNextSection": {
+    "description": "Song playback screen. Purpose: player next section."
+  },
+  "playerShuffle": "हिस्से शफ़ल करें",
+  "@playerShuffle": {
+    "description": "Song playback screen. Purpose: player shuffle."
+  },
+  "playerRepeat": "दोहराएँ",
+  "@playerRepeat": {
+    "description": "Song playback screen. Purpose: player repeat."
+  },
+  "playerProvenance": "Google Lyria 3 से बना · SynthID वॉटरमार्क · AI से बना",
+  "@playerProvenance": {
+    "description": "Song playback screen. Purpose: player provenance."
+  },
+  "playerMissing": "यह गीत अब इस डिवाइस पर नहीं है।",
+  "@playerMissing": {
+    "description": "Song playback screen. Purpose: player missing."
+  },
+  "actionDownload": "डाउनलोड",
+  "@actionDownload": {
+    "description": "Work action button. Purpose: action download."
+  },
+  "actionShare": "शेयर",
+  "@actionShare": {
+    "description": "Work action button. Purpose: action share."
+  },
+  "actionLicense": "लाइसेंस",
+  "@actionLicense": {
+    "description": "Work action button. Purpose: action license."
+  },
+  "actionRegenerate": "फिर से बनाएँ",
+  "@actionRegenerate": {
+    "description": "Work action button. Purpose: action regenerate."
+  },
+  "actionDetails": "विवरण",
+  "@actionDetails": {
+    "description": "Work action button. Purpose: action details."
+  },
+  "sectionIntro": "इंट्रो",
+  "@sectionIntro": {
+    "description": "Song section display label; never translate the inserted protocol token. Purpose: section intro."
+  },
+  "sectionVerse": "अंतरा",
+  "@sectionVerse": {
+    "description": "Song section display label; never translate the inserted protocol token. Purpose: section verse."
+  },
+  "sectionPreChorus": "प्री-कोरस",
+  "@sectionPreChorus": {
+    "description": "Song section display label; never translate the inserted protocol token. Purpose: section pre chorus."
+  },
+  "sectionChorus": "मुखड़ा",
+  "@sectionChorus": {
+    "description": "Song section display label; never translate the inserted protocol token. Purpose: section chorus."
+  },
+  "sectionBridge": "ब्रिज",
+  "@sectionBridge": {
+    "description": "Song section display label; never translate the inserted protocol token. Purpose: section bridge."
+  },
+  "sectionOutro": "आउट्रो",
+  "@sectionOutro": {
+    "description": "Song section display label; never translate the inserted protocol token. Purpose: section outro."
+  },
+  "sectionHook": "हुक",
+  "@sectionHook": {
+    "description": "Song section display label; never translate the inserted protocol token. Purpose: section hook."
+  },
+  "shareTitle": "शेयर कार्ड",
+  "@shareTitle": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share title."
+  },
+  "shareSubtitle": "थीम और लेआउट चुनें।",
+  "@shareSubtitle": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share subtitle."
+  },
+  "shareTheme": "थीम",
+  "@shareTheme": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share theme."
+  },
+  "shareLayout": "लेआउट",
+  "@shareLayout": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share layout."
+  },
+  "shareLayoutScene": "चित्र के साथ",
+  "@shareLayoutScene": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share layout scene."
+  },
+  "shareLayoutText": "केवल टेक्स्ट",
+  "@shareLayoutText": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share layout text."
+  },
+  "paletteTerracotta": "टेराकोटा",
+  "@paletteTerracotta": {
+    "description": "Share-card color theme. Purpose: palette terracotta."
+  },
+  "paletteSand": "रेतीला",
+  "@paletteSand": {
+    "description": "Share-card color theme. Purpose: palette sand."
+  },
+  "paletteOlive": "ज़ैतूनी",
+  "@paletteOlive": {
+    "description": "Share-card color theme. Purpose: palette olive."
+  },
+  "paletteNavy": "नेवी",
+  "@paletteNavy": {
+    "description": "Share-card color theme. Purpose: palette navy."
+  },
+  "shareAction": "शेयर करें",
+  "@shareAction": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share action."
+  },
+  "shareSaveVideo": "वीडियो सहेजें",
+  "@shareSaveVideo": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share save video."
+  },
+  "shareCopyLyrics": "बोल कॉपी करें",
+  "@shareCopyLyrics": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share copy lyrics."
+  },
+  "shareVideoSaved": "Photos में सहेजा गया",
+  "@shareVideoSaved": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share video saved."
+  },
+  "shareLyricsCopied": "बोल कॉपी हो गए",
+  "@shareLyricsCopied": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share lyrics copied."
+  },
+  "shareCardTagline": "किसी के लिए एक गीत",
+  "@shareCardTagline": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share card tagline."
+  },
+  "shareSaveFailed": "वीडियो सहेजा नहीं जा सका। Settings में Songlet को Photos में जोड़ने की अनुमति दें।",
+  "@shareSaveFailed": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share save failed."
+  },
+  "downloadReady": "पूरा गीत तैयार है",
+  "@downloadReady": {
+    "description": "Audio download screen. Purpose: download ready."
+  },
+  "downloadTitle": "हमेशा के लिए आपका",
+  "@downloadTitle": {
+    "description": "Audio download screen. Purpose: download title."
+  },
+  "downloadIntro": "आपका गीत तैयार है। नीचे से हाई-क्वालिटी ऑडियो और कमर्शियल लाइसेंस डाउनलोड करें।",
+  "@downloadIntro": {
+    "description": "Audio download screen. Purpose: download intro."
+  },
+  "downloadAudioHeader": "ऑडियो डाउनलोड करें",
+  "@downloadAudioHeader": {
+    "description": "Audio download screen. Purpose: download audio header."
+  },
+  "downloadAudioNote": "हाई क्वालिटी",
+  "@downloadAudioNote": {
+    "description": "Audio download screen. Purpose: download audio note."
+  },
+  "downloadMp3Title": "MP3 · 320 kbps",
+  "@downloadMp3Title": {
+    "description": "Audio download screen. Purpose: download mp3 title."
+  },
+  "downloadMp3Subtitle": "शेयर करने और रोज़ सुनने के लिए बढ़िया",
+  "@downloadMp3Subtitle": {
+    "description": "Audio download screen. Purpose: download mp3 subtitle."
+  },
+  "downloadWavTitle": "WAV · 44.1 kHz (Premier)",
+  "@downloadWavTitle": {
+    "description": "Audio download screen. Purpose: download wav title."
+  },
+  "downloadWavSubtitle": "प्रोफ़ेशनल इस्तेमाल के लिए सबसे बेहतर क्वालिटी",
+  "@downloadWavSubtitle": {
+    "description": "Audio download screen. Purpose: download wav subtitle."
+  },
+  "downloadMp3Action": "MP3 डाउनलोड करें",
+  "@downloadMp3Action": {
+    "description": "Audio download screen. Purpose: download mp3 action."
+  },
+  "downloadWavAction": "WAV डाउनलोड करें",
+  "@downloadWavAction": {
+    "description": "Audio download screen. Purpose: download wav action."
+  },
+  "downloadLicenseAction": "लाइसेंस डाउनलोड करें",
+  "@downloadLicenseAction": {
+    "description": "Audio download screen. Purpose: download license action."
+  },
+  "licenseHeader": "कमर्शियल लाइसेंस",
+  "@licenseHeader": {
+    "description": "Commercial-license download and information. Purpose: license header."
+  },
+  "licenseIncluded": "आपके प्लान में शामिल",
+  "@licenseIncluded": {
+    "description": "Commercial-license download and information. Purpose: license included."
+  },
+  "licenseNotIncluded": "प्लान या पैक के साथ मिलता है",
+  "@licenseNotIncluded": {
+    "description": "Commercial-license download and information. Purpose: license not included."
+  },
+  "licensePdfTitle": "कमर्शियल लाइसेंस (PDF)",
+  "@licensePdfTitle": {
+    "description": "Commercial-license download and information. Purpose: license pdf title."
+  },
+  "licenseGenerated": "{date} को जारी",
+  "@licenseGenerated": {
+    "placeholders": {
+      "date": {
+        "type": "DateTime",
+        "format": "yMMMd",
+        "description": "License issuance date, converted to local time."
+      }
+    },
+    "description": "Commercial-license download and information. Purpose: license generated."
+  },
+  "licenseId": "लाइसेंस ID: {id}",
+  "@licenseId": {
+    "placeholders": {
+      "id": {
+        "type": "String",
+        "description": "Account or license identifier; preserve it verbatim."
+      }
+    },
+    "description": "Commercial-license download and information. Purpose: license id."
+  },
+  "licenseUsesTitle": "आप यह गीत इनके लिए इस्तेमाल कर सकते हैं:",
+  "@licenseUsesTitle": {
+    "description": "Commercial-license download and information. Purpose: license uses title."
+  },
+  "usePersonal": "निजी इस्तेमाल",
+  "@usePersonal": {
+    "description": "Commercial-license permitted uses. Purpose: use personal."
+  },
+  "usePersonalDetail": "उपहार, यादें, गैर-व्यावसायिक",
+  "@usePersonalDetail": {
+    "description": "Commercial-license permitted uses. Purpose: use personal detail."
+  },
+  "useAds": "विज्ञापन और मार्केटिंग",
+  "@useAds": {
+    "description": "Commercial-license permitted uses. Purpose: use ads."
+  },
+  "useAdsDetail": "प्रमोशन, पेड कैंपेन",
+  "@useAdsDetail": {
+    "description": "Commercial-license permitted uses. Purpose: use ads detail."
+  },
+  "useSocial": "सोशल मीडिया",
+  "@useSocial": {
+    "description": "Commercial-license permitted uses. Purpose: use social."
+  },
+  "useSocialDetail": "TikTok, Instagram, YouTube आदि",
+  "@useSocialDetail": {
+    "description": "Commercial-license permitted uses. Purpose: use social detail."
+  },
+  "usePodcasts": "पॉडकास्ट और वीडियो",
+  "@usePodcasts": {
+    "description": "Commercial-license permitted uses. Purpose: use podcasts."
+  },
+  "usePodcastsDetail": "कमाई वाला कंटेंट",
+  "@usePodcastsDetail": {
+    "description": "Commercial-license permitted uses. Purpose: use podcasts detail."
+  },
+  "licenseDetailsNote": "पूरी जानकारी लाइसेंस PDF में है।",
+  "@licenseDetailsNote": {
+    "description": "Commercial-license download and information. Purpose: license details note."
+  },
+  "saveEnjoyHeader": "सहेजें और सुनें",
+  "@saveEnjoyHeader": {
+    "description": "Save and export actions. Purpose: save enjoy header."
+  },
+  "saveToFiles": "Files में सहेजें",
+  "@saveToFiles": {
+    "description": "Save and export actions. Purpose: save to files."
+  },
+  "addToMusic": "Music में जोड़ें",
+  "@addToMusic": {
+    "description": "Export action. Purpose: add to music."
+  },
+  "synthIdNote": "इस गीत में SynthID वॉटरमार्क है, जिससे डाउनलोड के बाद भी इसे AI से बना कंटेंट पहचाना जा सकता है।",
+  "@synthIdNote": {
+    "description": "AI watermark explanation. Purpose: synth id note."
+  },
+  "wavNeedsPremier": "WAV डाउनलोड Premier के साथ मिलते हैं।",
+  "@wavNeedsPremier": {
+    "description": "WAV download availability. Purpose: wav needs premier."
+  },
+  "wavUnavailable": "इस गाने की कोई WAV फ़ाइल नहीं है। WAV फ़ाइलें गाना बनने के 24 घंटे के भीतर सेव की जा सकती हैं।",
+  "@wavUnavailable": {
+    "description": "A Premier user tried to save WAV for a song that has no WAV render."
+  },
+  "libraryFilterAll": "सभी",
+  "@libraryFilterAll": {
+    "description": "Saved-song library. Purpose: library filter all."
+  },
+  "libraryJustBecause": "यूँ ही",
+  "@libraryJustBecause": {
+    "description": "Library section for songs without a template occasion"
+  },
+  "libraryPlay": "{title} चलाएँ",
+  "@libraryPlay": {
+    "placeholders": {
+      "title": {
+        "type": "String",
+        "description": "Localized song title; may contain a user-provided recipient name."
+      }
+    },
+    "description": "Saved-song library. Purpose: library play."
+  },
+  "libraryActions": "{title} के विकल्प",
+  "@libraryActions": {
+    "placeholders": {
+      "title": {
+        "type": "String",
+        "description": "Localized song title; may contain a user-provided recipient name."
+      }
+    },
+    "description": "Saved-song library. Purpose: library actions."
+  },
+  "libraryDeleteTitle": "यह गीत मिटाएँ?",
+  "@libraryDeleteTitle": {
+    "description": "Saved-song library. Purpose: library delete title."
+  },
+  "libraryDeleteBody": "यह इस डिवाइस से हटा दिया जाएगा। अगर iCloud सिंक चालू है, तो आपके दूसरे डिवाइस से भी हट जाएगा।",
+  "@libraryDeleteBody": {
+    "description": "Saved-song library. Purpose: library delete body."
+  },
+  "libraryDeleted": "गीत मिटा दिया गया",
+  "@libraryDeleted": {
+    "description": "Saved-song library. Purpose: library deleted."
+  },
+  "libraryFailed": "पूरा नहीं हुआ",
+  "@libraryFailed": {
+    "description": "Saved-song library. Purpose: library failed."
+  },
+  "libraryNoMatch": "इस मौके के लिए अभी कोई गीत नहीं है।",
+  "@libraryNoMatch": {
+    "description": "Saved-song library. Purpose: library no match."
+  },
+  "detailFullGenerated": "पूरा गीत बना",
+  "@detailFullGenerated": {
+    "description": "Work details screen. Purpose: detail full generated."
+  },
+  "detailPreviewGenerated": "प्रीव्यू बना",
+  "@detailPreviewGenerated": {
+    "description": "Work details screen. Purpose: detail preview generated."
+  },
+  "detailGeneratedOn": "{date} को बना",
+  "@detailGeneratedOn": {
+    "placeholders": {
+      "date": {
+        "type": "DateTime",
+        "format": "yMMMd",
+        "description": "Song creation date, converted to local time."
+      }
+    },
+    "description": "Work details screen. Purpose: detail generated on."
+  },
+  "detailPromptUsed": "इस्तेमाल की गई जानकारी",
+  "@detailPromptUsed": {
+    "description": "Work details screen. Purpose: detail prompt used."
+  },
+  "detailOccasion": "मौका",
+  "@detailOccasion": {
+    "description": "Work details screen. Purpose: detail occasion."
+  },
+  "detailCountry": "देश",
+  "@detailCountry": {
+    "description": "Work details screen. Purpose: detail country."
+  },
+  "detailGenre": "शैली",
+  "@detailGenre": {
+    "description": "Work details screen. Purpose: detail genre."
+  },
+  "detailKeywords": "कीवर्ड",
+  "@detailKeywords": {
+    "description": "Work details screen. Purpose: detail keywords."
+  },
+  "detailDescription": "विवरण",
+  "@detailDescription": {
+    "description": "Work details screen. Purpose: detail description."
+  },
+  "detailLyrics": "बोल",
+  "@detailLyrics": {
+    "description": "Work details screen. Purpose: detail lyrics."
+  },
+  "detailGenerationId": "जनरेशन ID",
+  "@detailGenerationId": {
+    "description": "Work details screen. Purpose: detail generation id."
+  },
+  "detailRegenerate": "इसी शैली में फिर से बनाएँ",
+  "@detailRegenerate": {
+    "description": "Work details screen. Purpose: detail regenerate."
+  },
+  "detailCustomGenre": "विवरण के अनुसार",
+  "@detailCustomGenre": {
+    "description": "Work details screen. Purpose: detail custom genre."
+  },
+  "settingsSectionPlan": "खरीदारी",
+  "@settingsSectionPlan": {
+    "description": "Settings screen. Purpose: settings section plan."
+  },
+  "settingsSectionLibrary": "लाइब्रेरी",
+  "@settingsSectionLibrary": {
+    "description": "Settings screen. Purpose: settings section library."
+  },
+  "settingsSectionAbout": "जानकारी",
+  "@settingsSectionAbout": {
+    "description": "Settings screen. Purpose: settings section about."
+  },
+  "settingsRestore": "खरीदारी बहाल करें",
+  "@settingsRestore": {
+    "description": "Settings screen. Purpose: settings restore."
+  },
+  "settingsManage": "सदस्यता प्रबंधित करें",
+  "@settingsManage": {
+    "description": "Settings screen. Purpose: settings manage."
+  },
+  "settingsICloud": "iCloud सिंक",
+  "@settingsICloud": {
+    "description": "Settings screen. Purpose: settings i cloud."
+  },
+  "settingsICloudOn": "गीत आपके सभी डिवाइस में सिंक होते हैं",
+  "@settingsICloudOn": {
+    "description": "Settings screen. Purpose: settings i cloud on."
+  },
+  "settingsICloudOff": "गीत सिर्फ़ इसी डिवाइस पर रहते हैं",
+  "@settingsICloudOff": {
+    "description": "Settings screen. Purpose: settings i cloud off."
+  },
+  "settingsICloudUnavailable": "सिंक के लिए Settings में iCloud में साइन इन करें",
+  "@settingsICloudUnavailable": {
+    "description": "Settings screen. Purpose: settings i cloud unavailable."
+  },
+  "settingsLyricsLanguage": "बोल की डिफ़ॉल्ट भाषा",
+  "@settingsLyricsLanguage": {
+    "description": "Settings screen. Purpose: settings lyrics language."
+  },
+  "settingsLyricsLanguageAuto": "देश के अनुसार",
+  "@settingsLyricsLanguageAuto": {
+    "description": "Settings screen. Purpose: settings lyrics language auto."
+  },
+  "settingsTerms": "उपयोग की शर्तें",
+  "@settingsTerms": {
+    "description": "Settings screen. Purpose: settings terms."
+  },
+  "settingsPrivacy": "गोपनीयता नीति",
+  "@settingsPrivacy": {
+    "description": "Settings screen. Purpose: settings privacy."
+  },
+  "settingsVersion": "वर्शन {version}",
+  "@settingsVersion": {
+    "placeholders": {
+      "version": {
+        "type": "String",
+        "description": "App version string from the device profile."
+      }
+    },
+    "description": "Settings screen. Purpose: settings version."
+  },
+  "aboutTitle": "गीत कैसे बनते हैं",
+  "@aboutTitle": {
+    "description": "About generation and privacy. Purpose: about title."
+  },
+  "aboutSubtitle": "Songlet आपके गीत कैसे बनाता है",
+  "@aboutSubtitle": {
+    "description": "About generation and privacy. Purpose: about subtitle."
+  },
+  "aboutLyriaTitle": "Google के Lyria 3 से",
+  "@aboutLyriaTitle": {
+    "description": "About generation and privacy. Purpose: about lyria title."
+  },
+  "aboutLyriaBody": "गीत Gemini API के ज़रिए Google के Lyria 3 से बनाए जाते हैं। Lyria 3 एक संगीत मॉडल है जो आपके विचारों को मौलिक गीतों में बदलता है।",
+  "@aboutLyriaBody": {
+    "description": "About generation and privacy. Purpose: about lyria body."
+  },
+  "aboutWatermarkTitle": "बिल्ट-इन वॉटरमार्क",
+  "@aboutWatermarkTitle": {
+    "description": "About generation and privacy. Purpose: about watermark title."
+  },
+  "aboutWatermarkBody": "हर गीत में Google का SynthID वॉटरमार्क होता है। इससे AI से बने संगीत की पहचान होती है और इसे हटाया नहीं जा सकता।",
+  "@aboutWatermarkBody": {
+    "description": "About generation and privacy. Purpose: about watermark body."
+  },
+  "aboutImitationTitle": "असली कलाकारों की नकल नहीं",
+  "@aboutImitationTitle": {
+    "description": "About generation and privacy. Purpose: about imitation title."
+  },
+  "aboutImitationBody": "Songlet कभी भी असली कलाकारों, उनकी आवाज़ या किसी खास शैली की नकल नहीं करता। गीत मौलिक होते हैं और आपके विचारों, विवरण और फ़ोटो से बनते हैं।",
+  "@aboutImitationBody": {
+    "description": "About generation and privacy. Purpose: about imitation body."
+  },
+  "aboutPrivacyTitle": "आपकी निजता ज़रूरी है",
+  "@aboutPrivacyTitle": {
+    "description": "About generation and privacy. Purpose: about privacy title."
+  },
+  "aboutPrivacyBody": "फ़ोटो और विवरण 24 घंटे के भीतर हमारे सर्वर से मिटा दिए जाते हैं। गीत बनने के बाद हम आपकी तस्वीरें या विवरण नहीं रखते।",
+  "@aboutPrivacyBody": {
+    "description": "About generation and privacy. Purpose: about privacy body."
+  },
+  "aboutBanner": "आपका शेयर किया हर गीत AI से बना होने के रूप में चिह्नित होता है।",
+  "@aboutBanner": {
+    "description": "About generation and privacy. Purpose: about banner."
+  },
+  "aboutFooter": "Songlet {version} · Google Lyria 3 से बना",
+  "@aboutFooter": {
+    "placeholders": {
+      "version": {
+        "type": "String",
+        "description": "App version string from the device profile."
+      }
+    },
+    "description": "About generation and privacy. Purpose: about footer."
+  },
+  "festivalKicker": "अपनी कहानी जिएँ",
+  "@festivalKicker": {
+    "description": "Festival creation screen. Purpose: festival kicker."
+  },
+  "festivalComing": "आने वाली है!",
+  "@festivalComing": {
+    "description": "Festival creation screen. Purpose: festival coming."
+  },
+  "festivalBody": "जश्न मनाने के लिए एक अनोखा गीत बनाएँ।",
+  "@festivalBody": {
+    "description": "Festival creation screen. Purpose: festival body."
+  },
+  "festivalCta": "{festival} का गीत बनाएँ",
+  "@festivalCta": {
+    "placeholders": {
+      "festival": {
+        "type": "String",
+        "description": "Localized festival name."
+      }
+    },
+    "description": "Festival creation screen. Purpose: festival cta."
+  },
+  "festivalPickOccasion": "एक मौका चुनें और बनाना शुरू करें",
+  "@festivalPickOccasion": {
+    "description": "Festival creation screen. Purpose: festival pick occasion."
+  },
+  "festivalLanguagesTitle": "आपकी भाषा में गीत",
+  "@festivalLanguagesTitle": {
+    "description": "Festival creation screen. Purpose: festival languages title."
+  },
+  "festivalLanguagesBody": "{language} और 12 दूसरी भाषाओं में गीत बनाएँ",
+  "@festivalLanguagesBody": {
+    "placeholders": {
+      "language": {
+        "type": "String",
+        "description": "Localized lyrics-language name."
+      }
+    },
+    "description": "Festival creation screen. Purpose: festival languages body."
+  },
+  "unavailableTitle": "कुछ समय के लिए उपलब्ध नहीं",
+  "@unavailableTitle": {
+    "description": "Service availability screen. Purpose: unavailable title."
+  },
+  "unavailableMessage": "Songlet अभी गीत नहीं बना सकता। आपकी लाइब्रेरी काम कर रही है — थोड़ी देर बाद फिर कोशिश करें।",
+  "@unavailableMessage": {
+    "description": "Service availability screen. Purpose: unavailable message."
+  },
+  "paywallHeroTitle": "इसे पूरा गीत बनाएँ",
+  "@paywallHeroTitle": {
+    "description": "Purchase screen. Purpose: paywall hero title."
+  },
+  "paywallHeroSubtitle": "अपने विचार को बेहतर क्वालिटी और पूरे अधिकारों वाले पूरे गीत में बदलें।",
+  "@paywallHeroSubtitle": {
+    "description": "Purchase screen. Purpose: paywall hero subtitle."
+  },
+  "paywallBenefitSongs": "ज़्यादा गीत",
+  "@paywallBenefitSongs": {
+    "description": "Purchase screen. Purpose: paywall benefit songs."
+  },
+  "paywallBenefitQuality": "बेहतर क्वालिटी",
+  "@paywallBenefitQuality": {
+    "description": "Purchase screen. Purpose: paywall benefit quality."
+  },
+  "paywallBenefitCommercial": "कमर्शियल इस्तेमाल",
+  "@paywallBenefitCommercial": {
+    "description": "Purchase screen. Purpose: paywall benefit commercial."
+  },
+  "planSongs": "{count, plural, one{हर महीने {count} पूरा गाना} other{हर महीने {count} पूरे गाने}}",
+  "@planSongs": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Full-song allowance per month for this plan and storefront."
+      }
+    },
+    "description": "Purchase screen subscription benefits. Purpose: plan songs."
+  },
+  "planPreviews": "{count, plural, one{हर महीने {count} प्रीव्यू} other{हर महीने {count} प्रीव्यू}}",
+  "@planPreviews": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Preview allowance per month for this plan and storefront."
+      }
+    },
+    "description": "Purchase screen subscription benefits. Purpose: plan previews."
+  },
+  "planMp3": "MP3 डाउनलोड",
+  "@planMp3": {
+    "description": "Purchase screen subscription benefits. Purpose: plan mp3."
+  },
+  "planMp3Wav": "MP3 + WAV डाउनलोड",
+  "@planMp3Wav": {
+    "description": "Purchase screen subscription benefits. Purpose: plan mp3 wav."
+  },
+  "planLicense": "कमर्शियल लाइसेंस",
+  "@planLicense": {
+    "description": "Purchase screen subscription benefits. Purpose: plan license."
+  },
+  "planPriority": "प्राथमिकता से बनना",
+  "@planPriority": {
+    "description": "Purchase screen subscription benefits. Purpose: plan priority."
+  },
+  "planTrial": "{days} दिन का मुफ़्त ट्रायल",
+  "@planTrial": {
+    "placeholders": {
+      "days": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Trial duration in days reported by StoreKit."
+      }
+    },
+    "description": "Purchase screen subscription benefits. Purpose: plan trial."
+  },
+  "planPerYear": "{price}/साल",
+  "@planPerYear": {
+    "placeholders": {
+      "price": {
+        "type": "String",
+        "description": "Unmodified StoreKit Product.displayPrice; never format or parse this value."
+      }
+    },
+    "description": "Purchase screen subscription benefits. Purpose: plan per year."
+  },
+  "planPerMonth": "{price}/महीना",
+  "@planPerMonth": {
+    "placeholders": {
+      "price": {
+        "type": "String",
+        "description": "Unmodified StoreKit Product.displayPrice; never format or parse this value."
+      }
+    },
+    "description": "Purchase screen subscription benefits. Purpose: plan per month."
+  },
+  "packTitle": "बस कुछ चाहिए?",
+  "@packTitle": {
+    "description": "Purchase screen one-time song pack. Purpose: pack title."
+  },
+  "packSubtitle": "{count, plural, one{{count} गाने का पैक} other{{count} गानों का पैक}}",
+  "@packSubtitle": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Full songs granted by this one-time pack."
+      }
+    },
+    "description": "Purchase screen one-time song pack. Purpose: pack subtitle."
+  },
+  "packNote": "कभी खत्म नहीं होता",
+  "@packNote": {
+    "description": "Purchase screen one-time song pack. Purpose: pack note."
+  },
+  "valueForever": "आपके गीत, हमेशा के लिए",
+  "@valueForever": {
+    "description": "Purchase screen benefits. Purpose: value forever."
+  },
+  "valueDownloads": "हाई-क्वालिटी डाउनलोड",
+  "@valueDownloads": {
+    "description": "Purchase screen benefits. Purpose: value downloads."
+  },
+  "valueCommercial": "कमर्शियल इस्तेमाल की अनुमति",
+  "@valueCommercial": {
+    "description": "Purchase screen benefits. Purpose: value commercial."
+  },
+  "valuePrivate": "निजता सबसे पहले",
+  "@valuePrivate": {
+    "description": "Purchase screen benefits. Purpose: value private."
+  },
+  "paywallTrialDisclosure": "मुफ़्त ट्रायल के बाद {pricePerPeriod} अपने आप लिया जाएगा। ट्रायल खत्म होने से पहले कभी भी रद्द करें।",
+  "@paywallTrialDisclosure": {
+    "description": "Paywall disclosure for a selected subscription with a free trial. States the actual recurring price and billing period after the trial, and that cancellation is possible before the trial ends. Shown together with the full auto-renewal notice.",
+    "placeholders": {
+      "pricePerPeriod": {
+        "type": "String",
+        "description": "Localized price with the selected subscription’s billing period (planPerMonth or planPerYear). Its price portion is the unmodified StoreKit Product.displayPrice."
+      }
+    }
+  },
+  "paywallSubscribe": "सदस्यता लें",
+  "@paywallSubscribe": {
+    "description": "Purchase screen. Purpose: paywall subscribe."
+  },
+  "paywallBuyPack": "पैक खरीदें",
+  "@paywallBuyPack": {
+    "description": "Purchase screen. Purpose: paywall buy pack."
+  },
+  "templateBirthdayWish": "जन्मदिन की शुभकामना",
+  "@templateBirthdayWish": {
+    "description": "Song template and creation form. Purpose: template birthday wish."
+  },
+  "templateBirthdayWishHint": "उनके खास दिन के लिए खास गीत",
+  "@templateBirthdayWishHint": {
+    "description": "Song template and creation form. Purpose: template birthday wish hint."
+  },
+  "templateBirthdayParty": "जन्मदिन की पार्टी",
+  "@templateBirthdayParty": {
+    "description": "Song template and creation form. Purpose: template birthday party."
+  },
+  "templateBirthdayPartyHint": "बर्थडे स्टार के लिए पार्टी जमाएँ",
+  "@templateBirthdayPartyHint": {
+    "description": "Song template and creation form. Purpose: template birthday party hint."
+  },
+  "templateLoveStory": "प्रेम कहानी",
+  "@templateLoveStory": {
+    "description": "Song template and creation form. Purpose: template love story."
+  },
+  "templateLoveStoryHint": "आपकी कहानी, संगीत में",
+  "@templateLoveStoryHint": {
+    "description": "Song template and creation form. Purpose: template love story hint."
+  },
+  "templateThankAFriend": "दोस्त को धन्यवाद",
+  "@templateThankAFriend": {
+    "description": "Song template and creation form. Purpose: template thank a friend."
+  },
+  "templateThankAFriendHint": "वो धन्यवाद जो शब्दों में नहीं कहा जाता",
+  "@templateThankAFriendHint": {
+    "description": "Song template and creation form. Purpose: template thank a friend hint."
+  },
+  "templatePartyInvite": "पार्टी का न्योता",
+  "@templatePartyInvite": {
+    "description": "Song template and creation form. Purpose: template party invite."
+  },
+  "templatePartyInviteHint": "सबको पार्टी में बुलाएँ",
+  "@templatePartyInviteHint": {
+    "description": "Song template and creation form. Purpose: template party invite hint."
+  },
+  "templateWedding": "शादी",
+  "@templateWedding": {
+    "description": "Song template and creation form. Purpose: template wedding."
+  },
+  "templateWeddingHint": "उनके हमेशा वाले पल के लिए गीत",
+  "@templateWeddingHint": {
+    "description": "Song template and creation form. Purpose: template wedding hint."
+  },
+  "templateInMemory": "याद में",
+  "@templateInMemory": {
+    "description": "Song template and creation form. Purpose: template in memory."
+  },
+  "templateInMemoryHint": "किसी प्रिय को श्रद्धांजलि",
+  "@templateInMemoryHint": {
+    "description": "Song template and creation form. Purpose: template in memory hint."
+  },
+  "templateFestival": "त्योहार",
+  "@templateFestival": {
+    "description": "Song template and creation form. Purpose: template festival."
+  },
+  "templateFestivalHint": "खास मौसम के लिए शुभकामनाएँ",
+  "@templateFestivalHint": {
+    "description": "Song template and creation form. Purpose: template festival hint."
+  },
+  "templateRingtone": "रिंगटोन",
+  "@templateRingtone": {
+    "description": "Song template and creation form. Purpose: template ringtone."
+  },
+  "templateRingtoneHint": "सिर्फ़ आपका छोटा-सा लूप",
+  "@templateRingtoneHint": {
+    "description": "Song template and creation form. Purpose: template ringtone hint."
+  },
+  "templateTeamAnthem": "टीम एंथम",
+  "@templateTeamAnthem": {
+    "description": "Song template and creation form. Purpose: template team anthem."
+  },
+  "templateTeamAnthemHint": "टीम और दर्शकों में जोश भरें",
+  "@templateTeamAnthemHint": {
+    "description": "Song template and creation form. Purpose: template team anthem hint."
+  },
+  "templateSportsRecap": "मैच की झलकियाँ",
+  "@templateSportsRecap": {
+    "description": "Song template and creation form. Purpose: template sports recap."
+  },
+  "templateSportsRecapHint": "बड़ा मैच, गीत के रूप में",
+  "@templateSportsRecapHint": {
+    "description": "Song template and creation form. Purpose: template sports recap hint."
+  },
+  "templateRapBattle": "रैप बैटल",
+  "@templateRapBattle": {
+    "description": "Song template and creation form. Purpose: template rap battle."
+  },
+  "templateRapBattleHint": "दोस्ताना प्रतिद्वंद्वी के लिए दोस्ताना बार्स",
+  "@templateRapBattleHint": {
+    "description": "Song template and creation form. Purpose: template rap battle hint."
+  },
+  "templateComedy": "कॉमेडी",
+  "@templateComedy": {
+    "description": "Song template and creation form. Purpose: template comedy."
+  },
+  "templateComedyHint": "आपस के मज़ाक, अब कोरस के साथ",
+  "@templateComedyHint": {
+    "description": "Song template and creation form. Purpose: template comedy hint."
+  },
+  "templatePetAnthem": "पेट एंथम",
+  "@templatePetAnthem": {
+    "description": "Song template and creation form. Purpose: template pet anthem."
+  },
+  "templatePetAnthemHint": "आपके सबसे अच्छे दोस्त के लिए थीम सॉन्ग",
+  "@templatePetAnthemHint": {
+    "description": "Song template and creation form. Purpose: template pet anthem hint."
+  },
+  "templateHometown": "अपना शहर",
+  "@templateHometown": {
+    "description": "Song template and creation form. Purpose: template hometown."
+  },
+  "templateHometownHint": "उस जगह के लिए प्यार जिसे आप घर कहते हैं",
+  "@templateHometownHint": {
+    "description": "Song template and creation form. Purpose: template hometown hint."
+  },
+  "templateBusinessPromo": "बिज़नेस प्रोमो",
+  "@templateBusinessPromo": {
+    "description": "Song template and creation form. Purpose: template business promo."
+  },
+  "templateBusinessPromoHint": "आपकी दुकान या ब्रांड के लिए एक यादगार धुन",
+  "@templateBusinessPromoHint": {
+    "description": "Song template and creation form. Purpose: template business promo hint."
+  },
+  "templateCustom": "आपका अपना विचार",
+  "@templateCustom": {
+    "description": "Occasion name for a free-form prompt"
+  },
+  "mvRecommended": "सुझाया गया",
+  "@mvRecommended": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv recommended."
+  },
+  "mvSeconds": "{seconds} से.",
+  "@mvSeconds": {
+    "description": "Video length in seconds.",
+    "placeholders": {
+      "seconds": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Video, countdown, or generation duration in seconds."
+      }
+    }
+  },
+  "mvViewProgress": "प्रगति देखें",
+  "@mvViewProgress": {
+    "description": "Opens the progress of a video being made."
+  },
+  "mvIntentWaiting": "{level} क्रेडिट का इंतज़ार कर रहा है",
+  "@mvIntentWaiting": {
+    "description": "Hub banner: a video refused for credits can be finished.",
+    "placeholders": {
+      "level": {
+        "type": "String",
+        "description": "Localized music-video level name."
+      }
+    }
+  },
+  "mvSongExpiredAction": "गाना फिर से बनाएँ",
+  "@mvSongExpiredAction": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv song expired action."
+  },
+  "mvQuotaNeed": "{level} के लिए {required} क्रेडिट चाहिए। आपके पास {available} हैं।",
+  "@mvQuotaNeed": {
+    "description": "Quota sheet body.",
+    "placeholders": {
+      "level": {
+        "type": "String",
+        "description": "Localized music-video level name."
+      },
+      "required": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Video credits required to create the selected video."
+      },
+      "available": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Video credits currently available to the account."
+      }
+    }
+  },
+  "mvQuotaBuyAndContinue": "खरीदें और जारी रखें",
+  "@mvQuotaBuyAndContinue": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv quota buy and continue."
+  },
+  "mvQuotaMayNeedTwice": "आपके क्षेत्र में एक पैक शायद काफ़ी न हो — दो की ज़रूरत पड़ सकती है।",
+  "@mvQuotaMayNeedTwice": {
+    "description": "T2/T3 storefronts: a pack grants fewer credits."
+  },
+  "mvQuotaAutoRetry": "खरीदारी पूरी होते ही आपका वीडियो शुरू हो जाएगा।",
+  "@mvQuotaAutoRetry": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv quota auto retry."
+  },
+  "mvAutoLyricMaking": "आपका लिरिक वीडियो बन रहा है",
+  "@mvAutoLyricMaking": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv auto lyric making."
+  },
+  "mvAutoChorusDetail": "इस गाने से, आपके क्रेडिट से बना",
+  "@mvAutoChorusDetail": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv auto chorus detail."
+  },
+  "mvAutoReady": "{level} तैयार है",
+  "@mvAutoReady": {
+    "description": "Automatic video finished.",
+    "placeholders": {
+      "level": {
+        "type": "String",
+        "description": "Localized music-video level name."
+      }
+    }
+  },
+  "mvAutoView": "देखें",
+  "@mvAutoView": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv auto view."
+  },
+  "mvUpgradeChorus": "कोरस वीडियो बनाएँ",
+  "@mvUpgradeChorus": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv upgrade chorus."
+  },
+  "mvAutoFailed": "वीडियो शुरू नहीं हो सका",
+  "@mvAutoFailed": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv auto failed."
+  },
+  "mvLeaveHint": "आप यह स्क्रीन छोड़ सकते हैं — तैयार होने के समय हम आपको बताएँगे।",
+  "@mvLeaveHint": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv leave hint."
+  },
+  "mvCreditsBack": "{credits, plural, one{आपका {credits} क्रेडिट वापस आ गया।} other{आपके {credits} क्रेडिट वापस आ गए।}}",
+  "@mvCreditsBack": {
+    "description": "A failed video was refunded.",
+    "placeholders": {
+      "credits": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Number of video credits, not a monetary price."
+      }
+    }
+  },
+  "mvFailedTitle": "यह वीडियो पूरा नहीं हुआ",
+  "@mvFailedTitle": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv failed title."
+  },
+  "mvRejectedTitle": "एक फ़ोटो इस्तेमाल नहीं हो सकी",
+  "@mvRejectedTitle": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv rejected title."
+  },
+  "mvRejectedBody": "वीडियो मॉडल ने आपकी एक रेफ़रेंस फ़ोटो अस्वीकार कर दी। फ़ोटो बदलकर फिर से कोशिश करें।",
+  "@mvRejectedBody": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv rejected body."
+  },
+  "mvAdjustPhotos": "फ़ोटो बदलें और फिर कोशिश करें",
+  "@mvAdjustPhotos": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv adjust photos."
+  },
+  "mvTryChorus": "इसके बजाय कोरस वीडियो बनाएँ",
+  "@mvTryChorus": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv try chorus."
+  },
+  "mvPreparingPhotos": "आपकी फ़ोटो अपलोड हो रही हैं…",
+  "@mvPreparingPhotos": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv preparing photos."
+  },
+  "mvPreparingSubmit": "आपका वीडियो भेजा जा रहा है…",
+  "@mvPreparingSubmit": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv preparing submit."
+  },
+  "mvNotifyTitle": "आपका वीडियो तैयार होना चाहिए",
+  "@mvNotifyTitle": {
+    "description": "Local notification title at the video ETA."
+  },
+  "mvNotifyBody": "{level} — देखने के लिए टैप करें।",
+  "@mvNotifyBody": {
+    "description": "Local notification body.",
+    "placeholders": {
+      "level": {
+        "type": "String",
+        "description": "Localized music-video level name."
+      }
+    }
+  },
+  "mvRegenerate": "एक और बनाएँ",
+  "@mvRegenerate": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv regenerate."
+  },
+  "mvEntryTitle": "इसका वीडियो बनाएँ",
+  "@mvEntryTitle": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv entry title."
+  },
+  "mvEntrySubtitle": "लिरिक, कोरस और पूरे गाने के वीडियो — क्रेडिट से",
+  "@mvEntrySubtitle": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv entry subtitle."
+  },
+  "mvEntryDisabled": "गाना पूरा होने के बाद उपलब्ध",
+  "@mvEntryDisabled": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv entry disabled."
+  },
+  "mvEntryChoose": "वीडियो चुनें",
+  "@mvEntryChoose": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv entry choose."
+  },
+  "mvEntryWatch": "वीडियो देखें",
+  "@mvEntryWatch": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv entry watch."
+  },
+  "mvChipReady": "वीडियो",
+  "@mvChipReady": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv chip ready."
+  },
+  "mvChipMaking": "वीडियो बन रहा है",
+  "@mvChipMaking": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv chip making."
+  },
+  "lengthAutoVideo": "लिरिक वीडियो भी बनाएँ",
+  "@lengthAutoVideo": {
+    "description": "Song length selector. Purpose: length auto video."
+  },
+  "lengthAutoVideoHint": "गाने के कुछ मिनट बाद तैयार · क्रेडिट लगते हैं",
+  "@lengthAutoVideoHint": {
+    "description": "Song length selector. Purpose: length auto video hint."
+  },
+  "lengthSongAndChorus": "गाना + कोरस वीडियो",
+  "@lengthSongAndChorus": {
+    "description": "Song length selector. Purpose: length song and chorus."
+  },
+  "lengthSongAndChorusHint": "पूरा गाना, फिर 30 सेकंड का कोरस वीडियो",
+  "@lengthSongAndChorusHint": {
+    "description": "Song length selector. Purpose: length song and chorus hint."
+  },
+  "paywallVideoGroup": "म्यूज़िक वीडियो",
+  "@paywallVideoGroup": {
+    "description": "Purchase screen. Purpose: paywall video group."
+  },
+  "planVideoIncluded": "आपके कोटा से म्यूज़िक वीडियो भी बनते हैं",
+  "@planVideoIncluded": {
+    "description": "Purchase screen subscription benefits. Purpose: plan video included."
+  },
+  "settingsVideoCredits": "वीडियो क्रेडिट",
+  "@settingsVideoCredits": {
+    "description": "Settings screen. Purpose: settings video credits."
+  },
+  "createGenrePop": "पॉप",
+  "@createGenrePop": {
+    "description": "Genre display label in creation, playback, library, and work details for Pop. The generation request retains its original English genre value."
+  },
+  "createGenreHipHopRap": "हिप-हॉप और रैप",
+  "@createGenreHipHopRap": {
+    "description": "Genre display label in creation, playback, library, and work details for Hip-Hop & Rap. The generation request retains its original English genre value."
+  },
+  "createGenreRock": "रॉक",
+  "@createGenreRock": {
+    "description": "Genre display label in creation, playback, library, and work details for Rock. The generation request retains its original English genre value."
+  },
+  "createGenreKPop": "के-पॉप",
+  "@createGenreKPop": {
+    "description": "Genre display label in creation, playback, library, and work details for K-Pop. The generation request retains its original English genre value."
+  },
+  "createGenreLatin": "लैटिन",
+  "@createGenreLatin": {
+    "description": "Genre display label in creation, playback, library, and work details for Latin. The generation request retains its original English genre value."
+  },
+  "createGenreElectronic": "इलेक्ट्रॉनिक",
+  "@createGenreElectronic": {
+    "description": "Genre display label in creation, playback, library, and work details for Electronic. The generation request retains its original English genre value."
+  },
+  "createGenreRnb": "आर एंड बी",
+  "@createGenreRnb": {
+    "description": "Genre display label in creation, playback, library, and work details for R&B. The generation request retains its original English genre value."
+  },
+  "createGenreCountry": "कंट्री",
+  "@createGenreCountry": {
+    "description": "Genre display label in creation, playback, library, and work details for Country. The generation request retains its original English genre value."
+  },
+  "createGenreAfrobeats": "अफ़्रोबीट्स",
+  "@createGenreAfrobeats": {
+    "description": "Genre display label in creation, playback, library, and work details for Afrobeats. The generation request retains its original English genre value."
+  },
+  "createGenreReggae": "रेगे",
+  "@createGenreReggae": {
+    "description": "Genre display label in creation, playback, library, and work details for Reggae. The generation request retains its original English genre value."
+  },
+  "createGenreJazzBlues": "जैज़ और ब्लूज़",
+  "@createGenreJazzBlues": {
+    "description": "Genre display label in creation, playback, library, and work details for Jazz & Blues. The generation request retains its original English genre value."
+  },
+  "createGenreClassical": "शास्त्रीय",
+  "@createGenreClassical": {
+    "description": "Genre display label in creation, playback, library, and work details for Classical. The generation request retains its original English genre value."
+  },
+  "createGenreFolk": "लोक संगीत",
+  "@createGenreFolk": {
+    "description": "Genre display label in creation, playback, library, and work details for Folk. The generation request retains its original English genre value."
+  },
+  "createGenreLofi": "लो-फ़ाई",
+  "@createGenreLofi": {
+    "description": "Genre display label in creation, playback, library, and work details for Lo-Fi. The generation request retains its original English genre value."
+  },
+  "createGenreAcoustic": "अकूस्टिक",
+  "@createGenreAcoustic": {
+    "description": "Genre display label in creation, playback, library, and work details for Acoustic. The generation request retains its original English genre value."
+  },
+  "createGenreCinematic": "फ़िल्मी संगीत",
+  "@createGenreCinematic": {
+    "description": "Genre display label in creation, playback, library, and work details for Cinematic. The generation request retains its original English genre value."
+  },
+  "createGenreAmbient": "ऐम्बिएंट",
+  "@createGenreAmbient": {
+    "description": "Genre display label in creation, playback, library, and work details for Ambient. The generation request retains its original English genre value."
+  },
+  "createGenreBossaNova": "बॉसा नोवा",
+  "@createGenreBossaNova": {
+    "description": "Genre display label in creation, playback, library, and work details for Bossa Nova. The generation request retains its original English genre value."
+  },
+  "createGenreIndiePop": "इंडी पॉप",
+  "@createGenreIndiePop": {
+    "description": "Genre display label in creation, playback, library, and work details for Indie Pop. The generation request retains its original English genre value."
+  },
+  "createGenreContemporaryRnb": "आधुनिक आर एंड बी",
+  "@createGenreContemporaryRnb": {
+    "description": "Genre display label in creation, playback, library, and work details for Contemporary R&B. The generation request retains its original English genre value."
+  },
+  "createGenreAlternativeCountry": "ऑल्ट कंट्री",
+  "@createGenreAlternativeCountry": {
+    "description": "Genre display label in creation, playback, library, and work details for Alternative Country. The generation request retains its original English genre value."
+  },
+  "createGenreGarageRock": "गैराज रॉक",
+  "@createGenreGarageRock": {
+    "description": "Genre display label in creation, playback, library, and work details for Garage Rock. The generation request retains its original English genre value."
+  },
+  "createGenreGrime": "ग्राइम",
+  "@createGenreGrime": {
+    "description": "Genre display label in creation, playback, library, and work details for Grime. The generation request retains its original English genre value."
+  },
+  "createGenreIndieFolk": "इंडी लोक संगीत",
+  "@createGenreIndieFolk": {
+    "description": "Genre display label in creation, playback, library, and work details for Indie Folk. The generation request retains its original English genre value."
+  },
+  "createGenreSynthpop": "सिंथपॉप",
+  "@createGenreSynthpop": {
+    "description": "Genre display label in creation, playback, library, and work details for Synthpop. The generation request retains its original English genre value."
+  },
+  "createGenrePianoBallad": "पियानो बैलेड",
+  "@createGenrePianoBallad": {
+    "description": "Genre display label in creation, playback, library, and work details for Piano Ballad. The generation request retains its original English genre value."
+  },
+  "createGenreSurfRock": "सर्फ़ रॉक",
+  "@createGenreSurfRock": {
+    "description": "Genre display label in creation, playback, library, and work details for Surf Rock. The generation request retains its original English genre value."
+  },
+  "createGenreDeepHouse": "डीप हाउस",
+  "@createGenreDeepHouse": {
+    "description": "Genre display label in creation, playback, library, and work details for Deep House. The generation request retains its original English genre value."
+  },
+  "createGenreMinimalTechno": "मिनिमल टेक्नो",
+  "@createGenreMinimalTechno": {
+    "description": "Genre display label in creation, playback, library, and work details for Minimal Techno. The generation request retains its original English genre value."
+  },
+  "createGenreFrenchYeyePop": "60 के दशक का फ़्रेंच पॉप",
+  "@createGenreFrenchYeyePop": {
+    "description": "Genre display label in creation, playback, library, and work details for 1960s French Yé-yé Pop. The generation request retains its original English genre value."
+  },
+  "createGenreChillout": "चिलआउट",
+  "@createGenreChillout": {
+    "description": "Genre display label in creation, playback, library, and work details for Chillout. The generation request retains its original English genre value."
+  },
+  "createGenreJPopIndiePop": "जापानी इंडी पॉप",
+  "@createGenreJPopIndiePop": {
+    "description": "Genre display label in creation, playback, library, and work details for J-pop Indie Pop. The generation request retains its original English genre value."
+  },
+  "createGenreChiptune": "चिपट्यून",
+  "@createGenreChiptune": {
+    "description": "Genre display label in creation, playback, library, and work details for Chiptune. The generation request retains its original English genre value."
+  },
+  "createGenreDiscoFunk": "डिस्को फ़ंक",
+  "@createGenreDiscoFunk": {
+    "description": "Genre display label in creation, playback, library, and work details for Disco Funk. The generation request retains its original English genre value."
+  },
+  "createGenreReggaeton": "रेगेटॉन",
+  "@createGenreReggaeton": {
+    "description": "Genre display label in creation, playback, library, and work details for Reggaeton. The generation request retains its original English genre value."
+  },
+  "createGenreCumbia": "कुम्बिया",
+  "@createGenreCumbia": {
+    "description": "Genre display label in creation, playback, library, and work details for Cumbia. The generation request retains its original English genre value."
+  },
+  "createGenreLatinJazz": "लैटिन जैज़",
+  "@createGenreLatinJazz": {
+    "description": "Genre display label in creation, playback, library, and work details for Latin Jazz. The generation request retains its original English genre value."
+  },
+  "createGenreBhangra": "भांगड़ा",
+  "@createGenreBhangra": {
+    "description": "Genre display label in creation, playback, library, and work details for Bhangra. The generation request retains its original English genre value."
+  },
+  "createGenreIndianClassical": "भारतीय शास्त्रीय",
+  "@createGenreIndianClassical": {
+    "description": "Genre display label in creation, playback, library, and work details for Indian Classical. The generation request retains its original English genre value."
+  },
+  "createGenreLofiHipHop": "लो-फ़ाई हिप-हॉप",
+  "@createGenreLofiHipHop": {
+    "description": "Genre display label in creation, playback, library, and work details for Lo-Fi Hip Hop. The generation request retains its original English genre value."
+  },
+  "profileAccountIdWithValue": "अकाउंट ID: {id}",
+  "@profileAccountIdWithValue": {
+    "description": "Account profile. Purpose: profile account id with value.",
+    "placeholders": {
+      "id": {
+        "type": "String",
+        "description": "Account or license identifier; preserve it verbatim."
+      }
+    }
+  },
+  "profileBalanceValue": "{balance}",
+  "@profileBalanceValue": {
+    "description": "Account profile. Purpose: profile balance value.",
+    "placeholders": {
+      "balance": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Wallet balance as an integer number of credits, not a monetary price."
+      }
+    }
+  },
+  "playerExportFileName": "{brand} – {title} ({occasion})",
+  "@playerExportFileName": {
+    "description": "Song playback screen. Purpose: player export file name.",
+    "placeholders": {
+      "brand": {
+        "type": "String",
+        "description": "Fixed Songlet brand name; do not translate."
+      },
+      "title": {
+        "type": "String",
+        "description": "Localized song title; may contain a user-provided recipient name."
+      },
+      "occasion": {
+        "type": "String",
+        "description": "Localized occasion or template name."
+      }
+    }
+  },
+  "createVocalsCustomSummary": "अपने आप — आपके विवरण के अनुसार",
+  "@createVocalsCustomSummary": {
+    "description": "Song creation screen. Purpose: create vocals custom summary."
+  },
+  "mvChipMakingWithProgress": "वीडियो बन रहा है · {progress}",
+  "@mvChipMakingWithProgress": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv chip making with progress.",
+    "placeholders": {
+      "progress": {
+        "type": "String",
+        "description": "Complete percentage formatted for the UI locale, including the percent sign."
+      }
+    }
+  },
+  "mvAutoFailureMessage": "वीडियो शुरू नहीं हो सका · {reason}",
+  "@mvAutoFailureMessage": {
+    "description": "Music-video configuration, progress, playback, or notification. Purpose: mv auto failure message.",
+    "placeholders": {
+      "reason": {
+        "type": "String",
+        "description": "Localized reason the automatic video could not start."
+      }
+    }
+  },
+  "settingsVideoCreditsSummary": "वीडियो क्रेडिट: {credits}",
+  "@settingsVideoCreditsSummary": {
+    "description": "Settings screen. Purpose: settings video credits summary.",
+    "placeholders": {
+      "credits": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Number of video credits, not a monetary price."
+      }
+    }
+  },
+  "shareLyricsAttribution": "— {aiLabel} · {brand}",
+  "@shareLyricsAttribution": {
+    "description": "Share card, exported attribution, or system share sheet. Purpose: share lyrics attribution.",
+    "placeholders": {
+      "aiLabel": {
+        "type": "String",
+        "description": "Localized AI-generated attribution."
+      },
+      "brand": {
+        "type": "String",
+        "description": "Fixed Songlet brand name; do not translate."
+      }
+    }
+  },
+  "inspirationHeader": "प्रेरणा",
+  "@inspirationHeader": {
+    "description": "Create home: the row of inspirations (contract 02 v1.2, ADR-0029)."
+  },
+  "inspirationPlay": "{name} चलाएँ",
+  "@inspirationPlay": {
+    "description": "Accessibility label of the play button of an inspiration preview.",
+    "placeholders": {
+      "name": {
+        "type": "String",
+        "description": "The inspiration name as shown on its card."
+      }
+    }
+  },
+  "inspirationStop": "नमूना रोकें",
+  "@inspirationStop": {
+    "description": "Accessibility label of the stop button while an inspiration preview plays."
+  },
+  "inspirationNameSoundscape": "साउंडस्केप",
+  "@inspirationNameSoundscape": {
+    "description": "Inspiration names and styles: local copy of the server {en, zh} text for other languages, looked up by the English text (ADR-0029)."
+  },
+  "inspirationStyleSoundscape": "परिवेशी ध्वनियाँ, बिना गायन",
+  "@inspirationStyleSoundscape": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameBackgroundMusic": "बैकग्राउंड म्यूज़िक",
+  "@inspirationNameBackgroundMusic": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleBackgroundMusic": "वीडियो के लिए हल्का वाद्य संगीत",
+  "@inspirationStyleBackgroundMusic": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameMemorizeSomething": "कुछ याद करें",
+  "@inspirationNameMemorizeSomething": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleMemorizeSomething": "याद रखने वाला आकर्षक पॉप",
+  "@inspirationStyleMemorizeSomething": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameTextMessages": "मैसेज से गाना",
+  "@inspirationNameTextMessages": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleTextMessages": "आपके मैसेज से मज़ेदार पॉप",
+  "@inspirationStyleTextMessages": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameIntroMusic": "इंट्रो म्यूज़िक",
+  "@inspirationNameIntroMusic": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleIntroMusic": "दमदार सिनेमाई शुरुआत",
+  "@inspirationStyleIntroMusic": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameMontage": "मोंटाज",
+  "@inspirationNameMontage": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleMontage": "हाइलाइट रील के लिए जोशीला उठान",
+  "@inspirationStyleMontage": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameSayItWithATrack": "गाने से कहें",
+  "@inspirationNameSayItWithATrack": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleSayItWithATrack": "दिल छू लेने वाला पॉप गीत",
+  "@inspirationStyleSayItWithATrack": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameBrandJingle": "ब्रांड जिंगल",
+  "@inspirationNameBrandJingle": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleBrandJingle": "छोटी, चमकदार, यादगार धुन",
+  "@inspirationStyleBrandJingle": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameRingtone": "रिंगटोन",
+  "@inspirationNameRingtone": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleRingtone": "30 सेकंड की लूप होने वाली धुन",
+  "@inspirationStyleRingtone": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameStreaming": "स्ट्रीमिंग",
+  "@inspirationNameStreaming": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleStreaming": "ऊर्जावान इलेक्ट्रॉनिक स्ट्रीम इंट्रो",
+  "@inspirationStyleStreaming": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameSpeechToTrack": "आवाज़ से गाना",
+  "@inspirationNameSpeechToTrack": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleSpeechToTrack": "आपकी आवाज़ बनी गाना",
+  "@inspirationStyleSpeechToTrack": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameRapBattle": "रैप बैटल",
+  "@inspirationNameRapBattle": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleRapBattle": "दमदार हिप-हॉप",
+  "@inspirationStyleRapBattle": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameComedy": "कॉमेडी",
+  "@inspirationNameComedy": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleComedy": "अनोखा, खुशमिज़ाज, चुटीला",
+  "@inspirationStyleComedy": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameTeamAnthem": "टीम एंथम",
+  "@inspirationNameTeamAnthem": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleTeamAnthem": "स्टेडियम रॉक नारा",
+  "@inspirationStyleTeamAnthem": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameSportsRecap": "मैच की झलकियाँ",
+  "@inspirationNameSportsRecap": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleSportsRecap": "शानदार ऑर्केस्ट्रा हाइलाइट्स",
+  "@inspirationStyleSportsRecap": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNamePartyInvite": "पार्टी का न्योता",
+  "@inspirationNamePartyInvite": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStylePartyInvite": "डांस-पॉप न्योता",
+  "@inspirationStylePartyInvite": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameHappyBirthday": "जन्मदिन मुबारक",
+  "@inspirationNameHappyBirthday": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleHappyBirthday": "गर्मजोशी भरा अकूस्टिक जन्मदिन गीत",
+  "@inspirationStyleHappyBirthday": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameFriendAppreciation": "दोस्तों का शुक्रिया",
+  "@inspirationNameFriendAppreciation": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleFriendAppreciation": "सुकून देने वाला इंडी पॉप",
+  "@inspirationStyleFriendAppreciation": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameLoveStory": "प्रेम कहानी",
+  "@inspirationNameLoveStory": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleLoveStory": "रोमांटिक R&B गीत",
+  "@inspirationStyleLoveStory": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameBirthdayRoast": "जन्मदिन की मस्ती",
+  "@inspirationNameBirthdayRoast": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleBirthdayRoast": "शरारती मज़ेदार जन्मदिन धुन",
+  "@inspirationStyleBirthdayRoast": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameOdeToYourPet": "आपके पालतू के नाम",
+  "@inspirationNameOdeToYourPet": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleOdeToYourPet": "प्यारा, उछलता पॉप",
+  "@inspirationStyleOdeToYourPet": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameHometownTribute": "अपने शहर को सलाम",
+  "@inspirationNameHometownTribute": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleHometownTribute": "पुरानी यादों वाला लोक संगीत",
+  "@inspirationStyleHometownTribute": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameWeatherReport": "मौसम का हाल",
+  "@inspirationNameWeatherReport": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleWeatherReport": "हल्का-फुल्का लाउंज ग्रूव",
+  "@inspirationStyleWeatherReport": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationNameBusinessPromo": "बिज़नेस प्रोमो",
+  "@inspirationNameBusinessPromo": {
+    "description": "Inspiration name (server name.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleBusinessPromo": "आत्मविश्वासी कॉर्पोरेट पॉप",
+  "@inspirationStyleBusinessPromo": {
+    "description": "Inspiration style (server style.en); shown in languages the server does not send (ADR-0029)."
+  },
+  "inspirationStyleBirthdayWish": "उनके ख़ास दिन के लिए दिल से गाना",
+  "@inspirationStyleBirthdayWish": {
+    "description": "Style line of the template entry BirthdayWish (server style.en), read with the tile name in languages the server does not send; mapped by slug (ADR-0032)."
+  },
+  "inspirationStyleBirthdayParty": "बर्थडे स्टार के लिए जोशीला पार्टी गीत",
+  "@inspirationStyleBirthdayParty": {
+    "description": "Style line of the template entry BirthdayParty (server style.en), read with the tile name in languages the server does not send; mapped by slug (ADR-0032)."
+  },
+  "inspirationStyleThankAFriend": "गर्मजोशी भरा धन्यवाद गीत",
+  "@inspirationStyleThankAFriend": {
+    "description": "Style line of the template entry ThankAFriend (server style.en), read with the tile name in languages the server does not send; mapped by slug (ADR-0032)."
+  },
+  "inspirationStyleWedding": "बड़े दिन के लिए खुशनुमा, रोमांटिक गीत",
+  "@inspirationStyleWedding": {
+    "description": "Style line of the template entry Wedding (server style.en), read with the tile name in languages the server does not send; mapped by slug (ADR-0032)."
+  },
+  "inspirationStyleInMemory": "कोमल, उम्मीद भरी श्रद्धांजलि",
+  "@inspirationStyleInMemory": {
+    "description": "Style line of the template entry InMemory (server style.en), read with the tile name in languages the server does not send; mapped by slug (ADR-0032)."
+  },
+  "inspirationStyleFestival": "चमकदार, उत्सवी मौसमी शुभकामना",
+  "@inspirationStyleFestival": {
+    "description": "Style line of the template entry Festival (server style.en), read with the tile name in languages the server does not send; mapped by slug (ADR-0032)."
+  },
+  "inspirationStylePetAnthem": "पालतू के लिए प्यारी, उछलती धुन",
+  "@inspirationStylePetAnthem": {
+    "description": "Style line of the template entry PetAnthem (server style.en), read with the tile name in languages the server does not send; mapped by slug (ADR-0032)."
+  },
+  "inspirationStyleHometown": "गर्व और यादों से भरा अपने शहर का गीत",
+  "@inspirationStyleHometown": {
+    "description": "Style line of the template entry Hometown (server style.en), read with the tile name in languages the server does not send; mapped by slug (ADR-0032)."
+  },
+  "settingsSectionLanguage": "भाषा",
+  "@settingsSectionLanguage": {
+    "description": "Settings section containing interface and default lyrics languages."
+  },
+  "settingsSectionProfile": "प्रोफ़ाइल",
+  "@settingsSectionProfile": {
+    "description": "Settings section showing the account: its credits and its account ID."
+  },
+  "settingsCredits": "क्रेडिट",
+  "@settingsCredits": {
+    "description": "Settings > Profile: label of the account's credit balance (server truth)."
+  },
+  "settingsAccountId": "खाता ID",
+  "@settingsAccountId": {
+    "description": "Settings > Profile: label of the account UUID (shown in full, for support)."
+  },
+  "settingsCopyAccountId": "खाता ID कॉपी करें",
+  "@settingsCopyAccountId": {
+    "description": "Settings > Profile: accessibility label / tooltip of the button that copies the account ID."
+  },
+  "devSectionTitle": "डेवलपर (केवल DEV)",
+  "@devSectionTitle": {
+    "description": "Settings section shown only in DEV debug builds (developer tools)."
+  },
+  "devKeychainReset": "Keychain कुंजियाँ हटाएँ",
+  "@devKeychainReset": {
+    "description": "DEV-only settings row: deletes the app's iOS Keychain keys."
+  },
+  "devKeychainResetHint": "डिवाइस ID और सत्र टोकन",
+  "@devKeychainResetHint": {
+    "description": "DEV-only settings row subtitle: what the Keychain reset removes."
+  },
+  "devKeychainResetConfirmTitle": "Keychain कुंजियाँ हटाएँ?",
+  "@devKeychainResetConfirmTitle": {
+    "description": "DEV-only confirmation dialog title before deleting the Keychain keys."
+  },
+  "devKeychainResetConfirmBody": "Keychain से डिवाइस ID और सत्र टोकन मिटा दिए जाएंगे। मौजूदा अतिथि खाता वापस नहीं मिलेगा; ऐप नए अतिथि के रूप में साइन इन करेगा।",
+  "@devKeychainResetConfirmBody": {
+    "description": "DEV-only confirmation dialog body: consequences of deleting the Keychain keys."
+  },
+  "devKeychainResetDone": "Keychain कुंजियाँ हटाई गईं — नए अतिथि के रूप में साइन इन",
+  "@devKeychainResetDone": {
+    "description": "DEV-only message after the Keychain keys were deleted."
+  },
+  "settingsAppLanguage": "ऐप की भाषा",
+  "@settingsAppLanguage": {
+    "description": "Settings row and picker heading for the interface language, distinct from lyrics language."
+  },
+  "settingsLanguageSystem": "सिस्टम की भाषा इस्तेमाल करें",
+  "@settingsLanguageSystem": {
+    "description": "Interface-language picker option that follows the system’s preferred supported language."
+  },
+  "settingsLanguageSystemValue": "सिस्टम ({language})",
+  "@settingsLanguageSystemValue": {
+    "description": "Settings row value when the interface language follows the system.",
+    "placeholders": {
+      "language": {
+        "type": "String",
+        "description": "Autonym of the currently resolved supported system locale."
+      }
+    }
+  },
+  "settingsLanguageNativeName": "हिन्दी",
+  "@settingsLanguageNativeName": {
+    "description": "This language’s own name (autonym); used to identify it in every interface-language picker, regardless of the current UI language."
+  },
+  "settingsLanguageSaveFailed": "भाषा सेव नहीं हो सकी। फिर कोशिश करें।",
+  "@settingsLanguageSaveFailed": {
+    "description": "Interface-language preference could not be saved; the previous selection remains. Explain the failure and invite retry."
+  },
+  "settingsLyricsLanguageHint": "नए गानों पर लागू होगा।",
+  "@settingsLyricsLanguageHint": {
+    "description": "Default lyrics-language setting helper. Changing the preference affects new songs, not an existing draft."
+  },
+  "composerRemoveInspiration": "{name} हटाएँ",
+  "@composerRemoveInspiration": {
+    "description": "Accessibility label of the close button on the picked idea at the head of the composer.",
+    "placeholders": {
+      "name": {
+        "type": "String",
+        "description": "Inspiration display name; do not translate."
+      }
+    }
+  },
+  "composerPromptHint": "गीत के बारे में लिखें या ऊपर कोई आइडिया चुनें",
+  "@composerPromptHint": {
+    "description": "Placeholder of the create home's prompt field on phones, where the idea grid is above the composer (P01, state A)."
+  },
+  "composerPromptHintWide": "गीत के बारे में लिखें या कोई आइडिया चुनें",
+  "@composerPromptHintWide": {
+    "description": "Placeholder of the create home's prompt field on iPad, where the idea grid is beside the composer (P01, state A)."
+  },
+  "composerWordsLabel": "आपके शब्द",
+  "@composerWordsLabel": {
+    "description": "Label of the field for the user's own text when the picked idea needs it (composer state B); the idea's hint is its placeholder."
+  },
+  "composerPhotosAttached": "{count, plural, one{{count} फ़ोटो जोड़ी गई} other{{count} फ़ोटो जोड़ी गईं}}",
+  "@composerPhotosAttached": {
+    "description": "Accessibility label of the composer's photo button once photos are added.",
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "format": "decimalPattern",
+        "description": "Number of photos added (1–10)."
+      }
+    }
+  },
+  "composerOptionsSummary": "गीत के विकल्प: {summary}",
+  "@composerOptionsSummary": {
+    "description": "Accessibility label of the composer's summary row; it opens the song options.",
+    "placeholders": {
+      "summary": {
+        "type": "String",
+        "description": "The current length, vocals and genre, comma-separated, already localized."
+      }
+    }
+  },
+  "composerOptionsShow": "विकल्प दिखाएँ",
+  "@composerOptionsShow": {
+    "description": "Accessibility hint of the composer's summary row while the song options are folded."
+  },
+  "composerOptionsHide": "विकल्प छिपाएँ",
+  "@composerOptionsHide": {
+    "description": "Accessibility hint of the composer's summary row while the song options are shown."
+  },
+  "composerSummaryAnyVocals": "कोई भी आवाज़",
+  "@composerSummaryAnyVocals": {
+    "description": "Composer summary row: the vocals follow the user's description (the Vocals panel's Custom)."
+  },
+  "composerSummaryAnyGenre": "कोई भी शैली",
+  "@composerSummaryAnyGenre": {
+    "description": "Composer summary row: no genre chosen, the description decides (the Genre panel's Custom)."
+  },
+  "composerSummaryLyrics": "अपने बोल",
+  "@composerSummaryLyrics": {
+    "description": "Composer summary row: the user wrote their own lyrics (shown while the options are folded)."
+  },
+  "composerSummaryVideo": "लिरिक वीडियो",
+  "@composerSummaryVideo": {
+    "description": "Composer summary row: a lyric video will be made after the full song (shown while the options are folded)."
+  },
+  "createPreviewLabel": "{cost, select, free{प्रीव्यू बनाएँ · मुफ़्त} preview{प्रीव्यू बनाएँ · 1 प्रीव्यू} other{प्रीव्यू बनाएँ}}",
+  "@createPreviewLabel": {
+    "description": "The composer's primary button for a 30-second preview; the cost part follows the account's ledger (ADR-0035).",
+    "placeholders": {
+      "cost": {
+        "type": "String",
+        "description": "What the action spends, from the account's ledger (ADR-0035): free, preview, song or other. Selector keywords are code; translate only the phrases."
+      }
+    }
+  },
+  "createPreviewForLabel": "{cost, select, free{{name} के लिए प्रीव्यू बनाएँ · मुफ़्त} preview{{name} के लिए प्रीव्यू बनाएँ · 1 प्रीव्यू} other{{name} के लिए प्रीव्यू बनाएँ}}",
+  "@createPreviewForLabel": {
+    "description": "The composer's primary button for a 30-second preview of a picked idea with a name; the cost part follows the account's ledger (ADR-0035).",
+    "placeholders": {
+      "name": {
+        "type": "String",
+        "description": "The recipient's name as typed; do not translate."
+      },
+      "cost": {
+        "type": "String",
+        "description": "What the action spends, from the account's ledger (ADR-0035): free, preview, song or other. Selector keywords are code; translate only the phrases."
+      }
+    }
+  },
+  "createFullSongLabel": "{cost, select, song{पूरा गाना बनाएँ · 1 गाना} other{पूरा गाना बनाएँ}}",
+  "@createFullSongLabel": {
+    "description": "The composer's primary button for the full ~2-minute song; the cost part follows the account's ledger (ADR-0035).",
+    "placeholders": {
+      "cost": {
+        "type": "String",
+        "description": "What the action spends, from the account's ledger (ADR-0035): free, preview, song or other. Selector keywords are code; translate only the phrases."
+      }
+    }
+  },
+  "voiceUseText": "इस टेक्स्ट का उपयोग करें",
+  "@voiceUseText": {
+    "description": "P03a: the dictation's only action — put the transcript in the prompt field (dictation is free input)."
+  },
+  "mvAutoCountdown": "{level} {seconds} सेकंड में शुरू होगा",
+  "@mvAutoCountdown": {
+    "description": "Banner title while an automatic music video counts down before it starts (and is charged); the user can cancel.",
+    "placeholders": {
+      "level": {
+        "type": "String",
+        "description": "Video kind, e.g. Lyric video or Chorus video; already translated."
+      },
+      "seconds": {
+        "type": "int",
+        "description": "Seconds left."
+      }
+    }
+  },
+  "planPerWeek": "{price}/सप्ताह",
+  "@planPerWeek": {
+    "description": "Subscription billing period: price per week, e.g. $4.99/week.",
+    "placeholders": {
+      "price": {
+        "type": "String",
+        "description": "Store-formatted price."
+      }
+    }
+  },
+  "planCreditsWeekly": "हर हफ़्ते नए क्रेडिट",
+  "@planCreditsWeekly": {
+    "description": "Plan benefit line for the weekly subscription: credits are renewed every week (no fixed song count, never 'unlimited')."
+  },
+  "paywallIntroOffer": "पहले {unit, select, day{दिन} week{सप्ताह} month{महीने} year{साल} other{अवधि}} पर {percent}% की छूट",
+  "@paywallIntroOffer": {
+    "description": "Plan card caption for an introductory discount read from the App Store, e.g. 50% off your first week.",
+    "placeholders": {
+      "percent": {
+        "type": "int",
+        "description": "Discount percentage."
+      },
+      "unit": {
+        "type": "String",
+        "description": "Billing period unit of the offer: day, week, month or year."
+      }
+    }
+  },
+  "paywallIntroDisclosure": "{introPrice} की शुरुआती कीमत के बाद, आपसे अपने-आप {pricePerPeriod} लिया जाएगा। नवीनीकरण से पहले कभी भी रद्द करें।",
+  "@paywallIntroDisclosure": {
+    "description": "Paywall disclosure for a selected subscription with an introductory price: the actual recurring price and period after it, and that cancellation is possible before renewal (App Review 3.1.2).",
+    "placeholders": {
+      "introPrice": {
+        "type": "String",
+        "description": "Store-formatted introductory price."
+      },
+      "pricePerPeriod": {
+        "type": "String",
+        "description": "Recurring price with its billing period, e.g. $4.99/week."
+      }
+    }
+  },
+  "storePreviewAHook": "उनके नाम से शुरू करें",
+  "@storePreviewAHook": {
+    "description": "App Store preview, script A, 1–4 s, as the name is typed (the muted hook continues). ≤ 28 characters (CJK ≤ 14)."
+  },
+  "storePreviewAWords": "उनके बारे में तीन शब्द",
+  "@storePreviewAWords": {
+    "description": "App Store preview, script A, 4–7.5 s, as three words about the person are typed. ≤ 28 characters (CJK ≤ 14)."
+  },
+  "storePreviewAWait": "आपका गाना बन रहा है",
+  "@storePreviewAWait": {
+    "description": "App Store preview, script A, 7.5–10 s, over the generating page. ≤ 28 characters (CJK ≤ 14)."
+  },
+  "storePreviewAChorus": "कोरस में उनका नाम",
+  "@storePreviewAChorus": {
+    "description": "App Store preview, script A, 10.5–18.5 s, over the player on the chorus that sings the name. ≤ 28 characters (CJK ≤ 14)."
+  },
+  "storePreviewAEnd": "उनके नाम वाला गाना",
+  "@storePreviewAEnd": {
+    "description": "App Store preview (store_preview/songlet), script A, 0–1 s: the claim on the intro card. ≤ 28 characters (CJK ≤ 14). Never shown in the app."
+  },
+  "storePreviewBHook": "अपनी तस्वीरों से शुरू करें",
+  "@storePreviewBHook": {
+    "description": "App Store preview, script B, 1–4 s, as four photos are picked (the muted hook continues). ≤ 28 characters (CJK ≤ 14)."
+  },
+  "storePreviewBVideo": "लिरिक वीडियो भी बनाएँ",
+  "@storePreviewBVideo": {
+    "description": "App Store preview, script B, 4–8 s, as \"also make a lyric video\" is switched on. ≤ 28 characters (CJK ≤ 14)."
+  },
+  "storePreviewBWait": "आपका गाना बन रहा है",
+  "@storePreviewBWait": {
+    "description": "App Store preview, script B, 8–10 s, over the generating page. ≤ 28 characters (CJK ≤ 14)."
+  },
+  "storePreviewBLyrics": "स्क्रीन पर सिंक बोल",
+  "@storePreviewBLyrics": {
+    "description": "App Store preview, script B, 10.5–17 s, over the lyric video with synced lyrics. ≤ 28 characters (CJK ≤ 14)."
+  },
+  "storePreviewBMood": "तस्वीरें माहौल बनाती हैं।",
+  "@storePreviewBMood": {
+    "description": "App Store preview (store_preview/songlet), script B, 0–1 s: the claim on the intro card. ≤ 28 characters (CJK ≤ 14). Never shown in the app."
+  },
+  "storePreviewBShare": "वीडियो शेयर करें।",
+  "@storePreviewBShare": {
+    "description": "App Store preview, script B, 17–19.5 s, over the share sheet. ≤ 28 characters (CJK ≤ 14)."
+  },
+  "storePreviewBLanguage": "आपकी भाषा में बोल",
+  "@storePreviewBLanguage": {
+    "description": "App Store preview, script B, 19.5–23 s, as the country and lyric language are picked. ≤ 28 characters (CJK ≤ 14)."
+  },
+  "storePreviewAShare": "कार्ड बनाकर भेजें",
+  "@storePreviewAShare": {
+    "description": "App Store preview, script A, 18.5–23 s, over the share card: the song goes out as a card. ≤ 28 characters (CJK ≤ 14)."
+  },
+  "storePreviewCta": "अपना पहला गीत बनाएँ",
+  "@storePreviewCta": {
+    "description": "App Store preview end card: the call to action under the app name. ≤ 28 characters (CJK ≤ 14). No price, no \"free\"."
+  },
+  "storePreviewDisclosure": "सदस्यता या क्रेडिट आवश्यक है",
+  "@storePreviewDisclosure": {
+    "description": "App Store preview end card, small print: making songs needs a subscription or credits (Apple requires disclosing in-app purchases). ≤ 60 characters (CJK ≤ 30)."
+  },
+  "storeCreativeHeader": "अपनों के लिए गाने",
+  "@storeCreativeHeader": {
+    "description": "App Store product page header (store_preview/songlet/creatives/store-page.yaml): the phrase beside the app on the default product page, image and looping video. One short phrase, ≤ 40 characters (CJK ≤ 20), at most 2 lines as set. No price, no \"free\", no awards. Never shown in the app."
+  },
+  "storeCreativeSearch": "एक नाम से बनाएं गाना",
+  "@storeCreativeSearch": {
+    "description": "App Store search results asset (creatives/store-page.yaml): what the app does, obvious at a glance; shown muted beside a name being typed and the song it becomes. ≤ 40 characters (CJK ≤ 20). Never shown in the app."
+  },
+  "storeCreativeBirthday": "नाम वाला जन्मदिन गीत",
+  "@storeCreativeBirthday": {
+    "description": "Custom product page \"Birthday Songs\" header and search results asset (creatives/cpp-birthday.yaml). ≤ 40 characters (CJK ≤ 20). Never shown in the app."
+  },
+  "storeCreativePhoto": "आपकी तस्वीरें बनें गाना",
+  "@storeCreativePhoto": {
+    "description": "Custom product page \"Photo to Song\" header and search results asset (creatives/cpp-photo.yaml). ≤ 40 characters (CJK ≤ 20). Never shown in the app."
+  },
+  "storeCreativeWedding": "आपकी शादी के लिए एक गाना",
+  "@storeCreativeWedding": {
+    "description": "Custom product page \"Wedding Songs\" header and search results asset (creatives/cpp-wedding.yaml). ≤ 40 characters (CJK ≤ 20). Never shown in the app."
+  }
+}

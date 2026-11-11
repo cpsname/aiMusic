@@ -1,0 +1,137 @@
+# App Store previews of Songlet (packages/store_preview/README.md): 2 scripts
+# × 12 storefronts on the iPhone 6.9" slot (the app is iPhone-only, ADR-0037),
+# and the creative assets of the product page header and search results
+# (creatives/, ADR-0039; script W films their wedding footage).
+# `make store-preview ARGS="render --app songlet"`; scripts in scripts/,
+# generated media in media/ (products repo cmd/songlet-samples), script C and
+# its media in archive/C/ (ADR-0038).
+app: songlet
+bundle_id: com.songlet.ios
+
+brand:
+  name: Songlet
+  icon: ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-1024x1024@1x.png
+  # SongletColors.accent (light), white text, black plates.
+  palette: {primary: "#C9472B", on_primary: "#FFFFFF", scrim: "#000000"}
+  cta_key: storePreviewCta
+  disclosure_key: storePreviewDisclosure
+
+# Songs need a subscription or credits (ADR-0031): the end card says so.
+requires_purchase: true
+
+captions:
+  arb_dir: lib/l10n/arb
+  # Other AI music apps (App Review 2.3.7 / 2.3.10).
+  banned_words: [suno, udio, boomy, mubert, soundraw, aiva, soundful, riffusion]
+
+devices: [iphone]
+
+driver:
+  type: flutter_integration_test
+  target: integration_test/store_preview_test.dart
+  dart_defines_file: config/mock.json
+  ready: {key: tile.birthday_wish}
+  # The system photo picker (B) and the notification prompt of the first
+  # video (ADR-0025): ios/RunnerUITests/StorePreviewHelper.swift.
+  helper: {}
+
+# The dev mock's demo profile serves the manifest's songs and lyric videos
+# (mock_server/lib/src/demo.dart). Before each take: a fresh state, and song
+# jobs that outlast the 4 s progress scene (the page between "done" and
+# "audio on disk" stays off camera).
+backend:
+  start: dart run mock_server/bin/server.dart --port {port} --profile demo --demo-manifest {manifest}
+  health: http://localhost:{port}/__admin/state
+  admin: http://localhost:{port}/__admin/
+  port: 8787
+  before_take:
+    - {post: reset}
+    - {post: demo, body: {manifest: "{manifest}"}}
+    - {post: config, body: {demo_delay_ms: 9000, mv_delay_ms: 6000, wav_enabled: false, remote_config: {wav_export: false}}}
+
+# Off camera, once per take: the device attests, then holds Premier — granted
+# server-side, as the acceptance run does (a headless simulator cannot finish
+# a StoreKit sheet) — so no paywall interrupts a script.
+prelude:
+  - {do: waitOnline}
+  - {do: admin, path: grant, body: {product_id: com.songlet.premier.monthly}}
+  - {do: refreshEntitlement, tier: premier}
+
+# A script's `use` step tells the mock which song the next job makes.
+on_use:
+  - {do: admin, path: demo, body: {script: "{use.script}", locale: "{use.locale}"}}
+
+# Creative assets (creatives/, ADR-0039): the assets manifest's authorization
+# block names each shown item's license id — a Lyria song's interaction, the
+# platform's lyric-video task, the platform image call.
+creatives:
+  # ascpub (the publisher) owns the assets-manifest contract and the listing:
+  # the schema is read from its checkout and pinned here; the custom product
+  # pages and the ids they bind are its listing's (assets.yaml, cpp/*.yaml).
+  # $ASCPUB_ROOT overrides root.
+  ascpub:
+    root: ../../Tools/ASOShip
+    schema_sha256: 7f117bc76322822b8b930fd6825622bcf013ae4290ab8e8881f839a0c689321a
+    listing: ../songlet/listings/com.songlet.ios
+  authorization: {song: interaction_id, lyric_video: mv_id, photo: generation_id}
+
+# The photo library holds each storefront's four generated photos (script B).
+simulator:
+  library: {role: photo, script: B}
+
+# The 12 storefronts (PRD §10.3 / §11.2): ASO name and subtitle verbatim from
+# PRD §10.3; vars = the region preset and lyric language a user there has.
+# serves (template ADR-0017): the listing's other localizations of the same
+# language show that storefront's previews and assets (nothing is recorded for
+# them). The other 22 localizations speak a language the app has no UI for:
+# they keep the textless universal header and search image.
+storefronts:
+  - {id: en-US, ui_locale: en, sim_language: en, sim_locale: en_US,
+     aso_name: "Songlet: AI Song Maker & Gift", aso_subtitle: "Birthday Songs, Photo to Music",
+     vars: {region: US, lyric_language: en},
+     serves: [en-GB, en-AU, en-CA]}
+  - {id: ja, ui_locale: ja, sim_language: ja, sim_locale: ja_JP,
+     aso_name: "Songlet: AI作曲・歌づくりアプリ", aso_subtitle: "誕生日ソング・写真から音楽",
+     vars: {region: JP, lyric_language: ja}}
+  - {id: de-DE, ui_locale: de, sim_language: de, sim_locale: de_DE,
+     aso_name: "Songlet: KI Musik & Song Maker", aso_subtitle: "Geburtstagslied, Foto zu Musik",
+     vars: {region: DE, lyric_language: de}}
+  - {id: fr-FR, ui_locale: fr, sim_language: fr, sim_locale: fr_FR,
+     aso_name: "Songlet : Musique IA, Chanson", aso_subtitle: "Chanson d'anniversaire, photo",
+     vars: {region: FR, lyric_language: fr},
+     serves: [fr-CA]}
+  - {id: pt-BR, ui_locale: pt-BR, sim_language: pt-BR, sim_locale: pt_BR,
+     aso_name: "Songlet: Música com IA, Canção", aso_subtitle: "Música de aniversário, foto",
+     vars: {region: BR, lyric_language: pt-BR},
+     serves: [pt-PT]}
+  - {id: es-MX, ui_locale: es, sim_language: es-MX, sim_locale: es_MX,
+     aso_name: "Songlet: Música IA y Canciones", aso_subtitle: "Canción de cumpleaños, fotos",
+     vars: {region: MX, lyric_language: es-MX},
+     serves: [es-ES]}
+  - {id: hi, ui_locale: hi, sim_language: hi, sim_locale: hi_IN,
+     aso_name: "Songlet: AI Song & Music Maker", aso_subtitle: "Birthday Song, Hindi & English",
+     vars: {region: IN, lyric_language: hi}}
+  - {id: ko, ui_locale: ko, sim_language: ko, sim_locale: ko_KR,
+     aso_name: "Songlet: AI 작곡 노래 만들기", aso_subtitle: "생일 노래, 사진으로 음악",
+     vars: {region: KR, lyric_language: ko}}
+  - {id: id, ui_locale: id, sim_language: id, sim_locale: id_ID,
+     aso_name: "Songlet: Buat Lagu AI & Musik", aso_subtitle: "Lagu ulang tahun dari foto",
+     vars: {region: ID, lyric_language: id}}
+  - {id: vi, ui_locale: vi, sim_language: vi, sim_locale: vi_VN,
+     aso_name: "Songlet: Tạo Nhạc AI, Bài Hát", aso_subtitle: "Nhạc sinh nhật từ ảnh",
+     vars: {region: VN, lyric_language: vi}}
+  - {id: tr, ui_locale: tr, sim_language: tr, sim_locale: tr_TR,
+     aso_name: "Songlet: Yapay Zeka Şarkı Yap", aso_subtitle: "Doğum günü şarkısı, fotoğraf",
+     vars: {region: TR, lyric_language: tr}}
+  - {id: zh-Hans, ui_locale: zh-Hans, sim_language: zh-Hans, sim_locale: zh_US,
+     aso_name: "Songlet 小曲：AI写歌 生日歌", aso_subtitle: "照片生成音乐，多语言歌词",
+     vars: {region: US, lyric_language: zh-Hans}}
+
+publish:
+  listings_dir: listings/com.songlet.ios/locales
+  device_dirs: {iphone: previews/iphone-6.9}
+  # fastlane deliver sets one still frame for every preview
+  # (listings/com.songlet.ios/base.yaml preview_frame_time_code 00:00:13:00).
+  shared_poster_at: 13
+  upload_order: [A, B]
+  checklist_doc: docs/store/preview-upload-checklist.md

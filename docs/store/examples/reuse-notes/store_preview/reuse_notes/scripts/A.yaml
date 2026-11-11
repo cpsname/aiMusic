@@ -1,0 +1,37 @@
+# Script A — three features in 15 s (feature_triptych, packages/store_preview/
+# templates). Replace each scene's steps with what a user does on that screen
+# (README › Steps) and its caption with what it shows.
+id: A
+title: Keep an idea, build a checklist, pin the note
+template: feature_triptych
+rhythm: 15
+poster_at: 3
+soundtrack: none
+segments:
+  - card: intro
+    duration: 0.8
+    text: storePreviewAIntro
+  - scene: first
+    beat: feature1
+    duration: 4.2
+    finished: true
+    steps:
+      - {do: pause, ms: 4200}
+  - scene: second
+    beat: feature2
+    duration: 4.2
+    steps:
+      - {do: tap, key: notes.checklist}
+      - {do: pause, ms: 4200}
+  - scene: third
+    beat: feature3
+    duration: 4.4
+    steps:
+      - {do: tap, key: notes.pin}
+      - {do: pause, ms: 4400}
+  - card: outro
+    duration: 1.4
+captions:
+  - {key: storePreviewAHook, from: 0.8, to: 5.0}
+  - {key: storePreviewAFeature2, from: 5.0, to: 9.2}
+  - {key: storePreviewAFeature3, from: 9.2, to: 13.6}

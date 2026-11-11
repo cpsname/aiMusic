@@ -1,0 +1,13 @@
+{
+  "ENV": "dev",
+  "BASE_URL": "https://genaistudio-products.showsapp.org/v1",
+  "PRODUCT_BASE_URL": "https://genaistudio-products.showsapp.org/v1",
+  "PLATFORM_BASE_URL": "https://genaistudio.showsapp.org/v1",
+  "DISTRIBUTION_CODE": "com.songlet.ios",
+  "DISTRIBUTION_SECRET": "9b48bb89e323251703a29b4e75addbf941dccfd17e0676b934eb0cf563be8fea",
+  "APP_CODE": "songlet",
+  "BUNDLE_ID": "com.songlet.ios",
+  "IAP_CHANNEL": "app_store",
+  "TERMS_URL": "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/",
+  "PRIVACY_URL": "https://r2.showsapp.org/Songlet/privacy_policy.html"
+}

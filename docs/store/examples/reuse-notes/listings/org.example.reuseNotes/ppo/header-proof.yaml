@@ -1,0 +1,14 @@
+# 产品页优化实验「header-proof」。只适用于默认产品页(不适用于自定义产品页)。
+schema: 1
+name: "Show the checklist in the header"
+target: product_page
+# 进入实验的流量百分比(1–100),在各 treatment 间平分
+traffic_proportion: 30
+hypothesis: "Showing the completed checklist in the header helps visitors understand the planning workflow and increases product-page conversion."
+primary_metric: conversion_rate
+# 唯一主变量:header | search_results;同时改多处写 bundle 并填 bundle_note
+variable: header
+bundle_note: ""
+locales: [en-US, zh-Hans]
+treatments:
+  - name: "Checklist"

@@ -1,0 +1,6 @@
+/* Microphone: on-device dictation (docs/ui P03a, ADR-0006). */
+"NSMicrophoneUsageDescription" = "Songlet memakai mikrofon saat kamu mendiktekan ide lagu. Audio ditranskripsi di iPhone ini dan tidak pernah diunggah.";
+/* Speech recognition: on-device transcription. */
+"NSSpeechRecognitionUsageDescription" = "Songlet mengubah ide yang kamu ucapkan menjadi teks di iPhone ini agar bisa dipakai sebagai kata kunci atau lirik.";
+/* Photos add-only: "Save video" on the share card (docs/ui P10). */
+"NSPhotoLibraryAddUsageDescription" = "Songlet menyimpan video kartu bagikan ke Foto saat kamu mengetuk Simpan video.";

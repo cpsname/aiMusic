@@ -1,0 +1,159 @@
+### Creation BC — 提示词辅助(POST /v1/prompt-assist,p9_05)
+###
+### 移动端「增强提示词」/「扩写提示词」按钮通用入口.
+### 经 capability.Invoke(SurfaceInternal) 走 14-step middleware chain.
+###
+### 文档:
+###   - 完整方案: docs/plan/提示词辅助_完整实施方案_v2.md
+###   - API 段:   docs/api/creation.md §提示词辅助 (POST /v1/prompt-assist, p9_05)
+###   - Seed:    docs/migrations/p9_04_prompt_assist_templates.sql + p9_05_prompt_assist_capability.sql
+###
+### env 变量:see docs/api/http-requests/http-client.env.json
+###   - {{base_url}}     e.g. http://localhost:8080
+###   - {{access_token}} JWT (含非空 BID claim)
+###   - {{app_id}} + {{app_signature}}  see cmd/signtool
+###
+### 红线:
+###   - 严禁在 body 传 account_id / app_id / tenant_id — 由 ctx middleware 注入,body 会被忽略
+###   - mode 仅 "enhance" / "expand" — Handler / Schema / Executor 三道防御
+###   - 客户端不直接调 /v1/capabilities/prompt_assist/invoke (admin gated 返 40300)
+
+############################################
+# 1. 增强提示词 (enhance)
+# 200 OK — { data: { result_text, mode, language, model_used, cost_credits, cache_hit } }
+############################################
+
+POST {{base_url}}/v1/prompt-assist
+Authorization: Bearer {{access_token}}
+X-App-ID: {{app_id}}
+X-App-Signature: {{app_signature}}
+Content-Type: application/json
+
+{
+  "mode": "enhance",
+  "text": "画一张冬天的猫",
+  "language": "zh-Hans",
+  "scene_hint": "image_generation",
+  "idempotency_key": "demo-enhance-{{$timestamp}}"
+}
+
+############################################
+# 2. 扩写提示词 (expand)
+# 输出长度通常为输入 2-4 倍, 补充细节 / 场景 / 风格.
+############################################
+
+POST {{base_url}}/v1/prompt-assist
+Authorization: Bearer {{access_token}}
+X-App-ID: {{app_id}}
+X-App-Signature: {{app_signature}}
+Content-Type: application/json
+
+{
+  "mode": "expand",
+  "text": "一只可爱的猫",
+  "language": "zh-Hans",
+  "idempotency_key": "demo-expand-{{$timestamp}}"
+}
+
+############################################
+# 3. Cache 命中验证 — 同 idempotency_key + 同 input 再调
+# 期望:
+#   data.cache_hit = true
+#   data.cost_credits = 0  (cache 命中不计费)
+#   ~10ms 返回
+############################################
+
+POST {{base_url}}/v1/prompt-assist
+Authorization: Bearer {{access_token}}
+X-App-ID: {{app_id}}
+X-App-Signature: {{app_signature}}
+Content-Type: application/json
+
+{
+  "mode": "enhance",
+  "text": "画一张冬天的猫",
+  "language": "zh-Hans",
+  "scene_hint": "image_generation",
+  "idempotency_key": "demo-enhance-cache-fixed-001"
+}
+
+############################################
+# 4. 客户端 model_hint 覆盖 config 默认
+# Executor 优先级: input.model_hint > config.prompt_assist.default_model_version_bid
+############################################
+
+POST {{base_url}}/v1/prompt-assist
+Authorization: Bearer {{access_token}}
+X-App-ID: {{app_id}}
+X-App-Signature: {{app_signature}}
+Content-Type: application/json
+
+{
+  "mode": "enhance",
+  "text": "短文本",
+  "model_hint": "<your-gemini-flash-model-version-bid>",
+  "idempotency_key": "demo-modelhint-{{$timestamp}}"
+}
+
+############################################
+# 5. mode 非法 → 40030 (Handler 第一道防御)
+############################################
+
+POST {{base_url}}/v1/prompt-assist
+Authorization: Bearer {{access_token}}
+X-App-ID: {{app_id}}
+X-App-Signature: {{app_signature}}
+Content-Type: application/json
+
+{
+  "mode": "delete",
+  "text": "hi"
+}
+
+############################################
+# 6. text 空 → 40030
+############################################
+
+POST {{base_url}}/v1/prompt-assist
+Authorization: Bearer {{access_token}}
+X-App-ID: {{app_id}}
+X-App-Signature: {{app_signature}}
+Content-Type: application/json
+
+{
+  "mode": "enhance",
+  "text": ""
+}
+
+############################################
+# 7. body 中的 account_id / tenant_id 被忽略 (越权防御 — 仅信 ctx middleware)
+# 即使 body 含 account_id=999999, 实际计费走 JWT 注入的 account_id.
+############################################
+
+POST {{base_url}}/v1/prompt-assist
+Authorization: Bearer {{access_token}}
+X-App-ID: {{app_id}}
+X-App-Signature: {{app_signature}}
+Content-Type: application/json
+
+{
+  "mode": "enhance",
+  "text": "x",
+  "account_id": 999999,
+  "tenant_id": 888888,
+  "surface_kind": "direct_api"
+}
+
+############################################
+# 8. 缺 Authorization → 40103 unauthorized
+############################################
+
+POST {{base_url}}/v1/prompt-assist
+X-App-ID: {{app_id}}
+X-App-Signature: {{app_signature}}
+Content-Type: application/json
+
+{
+  "mode": "enhance",
+  "text": "x"
+}

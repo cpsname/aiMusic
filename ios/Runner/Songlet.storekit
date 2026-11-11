@@ -1,0 +1,173 @@
+{
+  "identifier": "50E7A000-0000-4000-8000-000000000001",
+  "nonRenewingSubscriptions": [],
+  "products": [
+    {
+      "displayPrice": "4.99",
+      "familyShareable": false,
+      "internalID": "50E7A000-0000-4000-8000-000000000002",
+      "localizations": [
+        {
+          "description": "10 full songs. Never expire.",
+          "displayName": "10 Songs",
+          "locale": "en_US"
+        }
+      ],
+      "productID": "com.songlet.pack.10",
+      "referenceName": "Song Pack 10",
+      "type": "Consumable"
+    },
+    {
+      "displayPrice": "19.99",
+      "familyShareable": false,
+      "internalID": "50E7A000-0000-4000-8000-000000000003",
+      "localizations": [
+        {
+          "description": "50 full songs. Never expire.",
+          "displayName": "50 Songs",
+          "locale": "en_US"
+        }
+      ],
+      "productID": "com.songlet.pack.50",
+      "referenceName": "Song Pack 50",
+      "type": "Consumable"
+    },
+    {
+      "displayPrice": "14.99",
+      "familyShareable": false,
+      "internalID": "50E7A000-0000-4000-8000-000000000004",
+      "localizations": [
+        {
+          "description": "One 30-second chorus music video from a saved song. Never expires.",
+          "displayName": "Chorus music video",
+          "locale": "en_US"
+        }
+      ],
+      "productID": "com.songlet.mv.chorus",
+      "referenceName": "Chorus MV pack",
+      "type": "Consumable"
+    },
+    {
+      "displayPrice": "79.99",
+      "familyShareable": false,
+      "internalID": "50E7A000-0000-4000-8000-000000000005",
+      "localizations": [
+        {
+          "description": "One full-song music video (up to 3 minutes) from a saved song. Never expires.",
+          "displayName": "Full-song music video",
+          "locale": "en_US"
+        }
+      ],
+      "productID": "com.songlet.mv.full",
+      "referenceName": "Full MV pack",
+      "type": "Consumable"
+    }
+  ],
+  "settings": {
+    "_failTransactionsEnabled": false,
+    "_locale": "en_US",
+    "_storefront": "USA",
+    "_storeKitErrors": []
+  },
+  "subscriptionGroups": [
+    {
+      "id": "50E7A000-0000-4000-8000-000000000010",
+      "localizations": [],
+      "name": "Songlet",
+      "subscriptions": [
+        {
+          "adHocOffers": [],
+          "codeOffers": [],
+          "displayPrice": "4.99",
+          "familyShareable": false,
+          "groupNumber": 2,
+          "internalID": "50E7A000-0000-4000-8000-000000000020",
+          "introductoryOffer": {
+            "displayPrice": "2.49",
+            "internalID": "50E7A000-0000-4000-8000-000000000021",
+            "numberOfPeriods": 1,
+            "paymentMode": "payAsYouGo",
+            "subscriptionPeriod": "P1W"
+          },
+          "localizations": [
+            {
+              "description": "Fresh credits every week for songs and videos, MP3, commercial license.",
+              "displayName": "Pro Weekly",
+              "locale": "en_US"
+            }
+          ],
+          "productID": "com.songlet.pro.weekly",
+          "recurringSubscriptionPeriod": "P1W",
+          "referenceName": "Pro Weekly",
+          "type": "RecurringSubscription"
+        },
+        {
+          "adHocOffers": [],
+          "codeOffers": [],
+          "displayPrice": "9.99",
+          "familyShareable": false,
+          "groupNumber": 2,
+          "internalID": "50E7A000-0000-4000-8000-000000000011",
+          "localizations": [
+            {
+              "description": "40 full songs and 100 previews a month, MP3, commercial license.",
+              "displayName": "Pro Monthly",
+              "locale": "en_US"
+            }
+          ],
+          "productID": "com.songlet.pro.monthly",
+          "recurringSubscriptionPeriod": "P1M",
+          "referenceName": "Pro Monthly",
+          "type": "RecurringSubscription"
+        },
+        {
+          "adHocOffers": [],
+          "codeOffers": [],
+          "displayPrice": "59.99",
+          "familyShareable": false,
+          "groupNumber": 2,
+          "internalID": "50E7A000-0000-4000-8000-000000000012",
+          "introductoryOffer": {
+            "internalID": "50E7A000-0000-4000-8000-000000000013",
+            "paymentMode": "free",
+            "subscriptionPeriod": "P1W"
+          },
+          "localizations": [
+            {
+              "description": "40 full songs and 100 previews a month, billed yearly.",
+              "displayName": "Pro Yearly",
+              "locale": "en_US"
+            }
+          ],
+          "productID": "com.songlet.pro.yearly",
+          "recurringSubscriptionPeriod": "P1Y",
+          "referenceName": "Pro Yearly",
+          "type": "RecurringSubscription"
+        },
+        {
+          "adHocOffers": [],
+          "codeOffers": [],
+          "displayPrice": "24.99",
+          "familyShareable": false,
+          "groupNumber": 1,
+          "internalID": "50E7A000-0000-4000-8000-000000000014",
+          "localizations": [
+            {
+              "description": "120 full songs and 200 previews a month, commercial license.",
+              "displayName": "Premier Monthly",
+              "locale": "en_US"
+            }
+          ],
+          "productID": "com.songlet.premier.monthly",
+          "recurringSubscriptionPeriod": "P1M",
+          "referenceName": "Premier Monthly",
+          "type": "RecurringSubscription"
+        }
+      ]
+    }
+  ],
+  "version": {
+    "major": 4,
+    "minor": 0
+  }
+}

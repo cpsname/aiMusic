@@ -1,0 +1,26 @@
+# Three features, side by side: one claim, three short demonstrations,
+# optionally bridged. For apps whose value is breadth (a toolkit, a
+# subscription that unlocks several things).
+#
+# Rhythms (each adds up to its seconds, ≥ 85 % footage), flex and the hook
+# rule: see input_wait_result_share.yaml. Mark the
+# scene that shows the strongest finished result `finished: true` (the poster
+# frame comes from it).
+id: feature_triptych
+title: Feature triptych
+description: One claim, three short feature demonstrations, the call to action.
+flex: 2.0
+hook:
+  seconds: 3
+beats:
+  - {id: intro, kind: card}
+  - {id: feature1, kind: scene}
+  - {id: bridge1, kind: bridge, optional: true}
+  - {id: feature2, kind: scene}
+  - {id: bridge2, kind: bridge, optional: true}
+  - {id: feature3, kind: scene}
+  - {id: outro, kind: card}
+rhythms:
+  15: {intro: 0.8, feature1: 4.2, feature2: 4.2, feature3: 4.4, outro: 1.4}
+  22: {intro: 0.8, feature1: 6.0, bridge1: 0.5, feature2: 6.0, bridge2: 0.5, feature3: 6.8, outro: 1.4}
+  25: {intro: 0.8, feature1: 7.0, bridge1: 0.5, feature2: 6.5, bridge2: 0.5, feature3: 8.1, outro: 1.6}

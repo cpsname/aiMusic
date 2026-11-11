@@ -1,0 +1,43 @@
+# Encoding and mixing targets, in one place (docs/store/apple-preview-rules.md).
+#
+# Apple: H.264 progressive, up to High Profile Level 4.0, target 10–12 Mbps,
+# at most 30 fps; AAC 256 kbps stereo at 44.1 or 48 kHz.
+#
+# The video is held at `bitrate` in constant bitrate with HRD filler: app
+# footage is mostly still frames, and a plain VBR encode of it averages
+# 6–7 Mbps, under Apple's range. The audio uses AudioToolbox AAC in constant
+# bitrate: the native encoder undershoots 256 kbps on sparse audio.
+video:
+  codec: libx264
+  profile: high
+  level: '4.0'
+  bitrate: 11000000
+  fps: 30
+  gop_seconds: 2
+audio:
+  codec: aac_at
+  bitrate: 256000
+  sample_rate: 44100
+  channels: 2
+# Soundtrack: head fade-in, tail fade-out, crossfade where one source hands
+# over to the next (seconds).
+mix:
+  fade_in: 0.5
+  fade_out: 1.0
+  crossfade: 0.3
+  # A voiceover entry ducks the music under it (sidechain compression).
+  duck_threshold: 0.03
+  duck_ratio: 8
+# Transitions (seconds). Apple: "Aim to use straightforward transitions, like
+# dissolves and fades." Cards dissolve into / out of the footage; a bridge
+# dissolves from the last frame into a blurred image and on into the next
+# scene's first frame.
+transitions:
+  card: 0.25
+  bridge_in: 0.2
+  bridge_out: 0.2
+# Motion captions: fade and rise in, fade out (seconds, px at the slot's size).
+captions:
+  in: 0.2
+  rise: 24
+  out: 0.15

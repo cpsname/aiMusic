@@ -1,0 +1,2169 @@
+{
+  "code": 0,
+  "message": "success",
+  "data": {
+    "models": [
+      {
+        "model_bid": "acc9a4a4-6fbf-4606-aa26-d3dec3009f78",
+        "model_code": "gemini-3.1-flash-image",
+        "model_name": {
+          "en": "Nano Banana 2",
+          "zh": "Nano Banana 2"
+        },
+        "description": {
+          "en": "Nano Banana 2 — the efficient edition of Gemini 3 Pro Image, now with extreme 1:4 / 4:1 / 1:8 / 8:1 aspect ratios, compact 0.5K (512px) images, and the google_search tool.",
+          "zh": "Nano Banana 2 — Gemini 3 Pro Image 的高效版, 新增 1:4/4:1/1:8/8:1 极端比例 + 0.5K(512) 小图 + google_search 工具."
+        },
+        "media_type": "image",
+        "task_type": "txt2img",
+        "sort_order": 1,
+        "versions": [
+          {
+            "version_bid": "eb0b17fc-9a34-431e-bc97-7724d7e59878",
+            "version_code": "v1",
+            "version_name": "Nano Banana 2 v1",
+            "param_schema": {
+              "$schema": "http://json-schema.org/draft-07/schema#",
+              "properties": {
+                "aspect_ratio": {
+                  "default": "1:1",
+                  "enum": [
+                    "1:1",
+                    "2:3",
+                    "3:2",
+                    "3:4",
+                    "4:3",
+                    "4:5",
+                    "5:4",
+                    "9:16",
+                    "16:9",
+                    "21:9",
+                    "1:4",
+                    "4:1",
+                    "1:8",
+                    "8:1"
+                  ],
+                  "title": "Aspect Ratio",
+                  "type": "string",
+                  "x-enum-labels": {
+                    "16:9": {
+                      "en": "16:9",
+                      "zh": "16:9 宽屏"
+                    },
+                    "1:1": {
+                      "en": "1:1",
+                      "zh": "1:1 方图"
+                    },
+                    "1:4": {
+                      "en": "1:4",
+                      "zh": "1:4 超长竖"
+                    },
+                    "1:8": {
+                      "en": "1:8",
+                      "zh": "1:8 极限竖"
+                    },
+                    "21:9": {
+                      "en": "21:9",
+                      "zh": "21:9 超宽"
+                    },
+                    "2:3": {
+                      "en": "2:3",
+                      "zh": "2:3 竖"
+                    },
+                    "3:2": {
+                      "en": "3:2",
+                      "zh": "3:2 横"
+                    },
+                    "3:4": {
+                      "en": "3:4",
+                      "zh": "3:4 竖"
+                    },
+                    "4:1": {
+                      "en": "4:1",
+                      "zh": "4:1 超长横"
+                    },
+                    "4:3": {
+                      "en": "4:3",
+                      "zh": "4:3 横"
+                    },
+                    "4:5": {
+                      "en": "4:5",
+                      "zh": "4:5 竖"
+                    },
+                    "5:4": {
+                      "en": "5:4",
+                      "zh": "5:4 横"
+                    },
+                    "8:1": {
+                      "en": "8:1",
+                      "zh": "8:1 极限横"
+                    },
+                    "9:16": {
+                      "en": "9:16",
+                      "zh": "9:16 手机竖屏"
+                    }
+                  },
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Aspect Ratio",
+                    "zh": "画幅比例"
+                  },
+                  "x-section": "basic",
+                  "x-sort-order": 2,
+                  "x-ui-component": "select",
+                  "x-value-kind": "aspect_ratio"
+                },
+                "image_size": {
+                  "default": "1K",
+                  "enum": [
+                    "0.5K",
+                    "1K",
+                    "2K",
+                    "4K"
+                  ],
+                  "title": "Image Size",
+                  "type": "string",
+                  "x-enum-labels": {
+                    "0.5K": {
+                      "en": "0.5K (512)",
+                      "zh": "0.5K (512)"
+                    },
+                    "1K": {
+                      "en": "1K",
+                      "zh": "1K"
+                    },
+                    "2K": {
+                      "en": "2K",
+                      "zh": "2K"
+                    },
+                    "4K": {
+                      "en": "4K",
+                      "zh": "4K"
+                    }
+                  },
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Image Size",
+                    "zh": "图像尺寸"
+                  },
+                  "x-section": "basic",
+                  "x-sort-order": 3,
+                  "x-ui-component": "select",
+                  "x-value-kind": "resolution_tier"
+                },
+                "prompt": {
+                  "maxLength": 4000,
+                  "title": "Prompt",
+                  "type": "string",
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Prompt",
+                    "zh": "提示词"
+                  },
+                  "x-role": "prompt",
+                  "x-section": "basic",
+                  "x-sort-order": 1,
+                  "x-ui-component": "textarea"
+                },
+                "reference_images": {
+                  "items": {
+                    "properties": {
+                      "role": {
+                        "enum": [
+                          "object",
+                          "character"
+                        ],
+                        "type": "string"
+                      },
+                      "url": {
+                        "format": "uri",
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "url"
+                    ],
+                    "type": "object"
+                  },
+                  "maxItems": 14,
+                  "title": "Reference Images",
+                  "type": "array",
+                  "x-group": "basic",
+                  "x-hint": {
+                    "en": "Upload reference images for editing/style/character consistency. Drives multi-part input.",
+                    "zh": "上传参考图实现编辑 / 风格迁移 / 角色一致性。后端会把参考图随 prompt 一起送到模型。"
+                  },
+                  "x-label": {
+                    "en": "Reference Images",
+                    "zh": "参考图片"
+                  },
+                  "x-role": "reference_material",
+                  "x-roles": [
+                    {
+                      "accept": [
+                        "image/*"
+                      ],
+                      "default": true,
+                      "key": "object",
+                      "kind": "tag",
+                      "label": {
+                        "en": "Object/Style",
+                        "zh": "对象/风格"
+                      },
+                      "max_items": 10
+                    },
+                    {
+                      "accept": [
+                        "image/*"
+                      ],
+                      "default": false,
+                      "key": "character",
+                      "kind": "tag",
+                      "label": {
+                        "en": "Character",
+                        "zh": "角色"
+                      },
+                      "max_items": 4
+                    }
+                  ],
+                  "x-section": "basic",
+                  "x-sort-order": 4,
+                  "x-ui-component": "media_array"
+                },
+                "thinking_level": {
+                  "default": "minimal",
+                  "description": "Flash-Image only: minimal (fast) or high (stronger instruction following & text fidelity, higher latency)",
+                  "enum": [
+                    "minimal",
+                    "high"
+                  ],
+                  "title": "Thinking Level",
+                  "type": "string",
+                  "x-description": {
+                    "en": "Flash-Image only: minimal (fast) or high (stronger instruction following & text fidelity, higher latency)",
+                    "zh": "仅 Flash-Image 支持: minimal 极速 / high 提升复杂指令遵循与文字保真度, 延迟更高"
+                  },
+                  "x-enum-labels": {
+                    "high": {
+                      "en": "High",
+                      "zh": "高"
+                    },
+                    "minimal": {
+                      "en": "Minimal",
+                      "zh": "极速"
+                    }
+                  },
+                  "x-group": "advanced",
+                  "x-label": {
+                    "en": "Thinking Level",
+                    "zh": "思考深度"
+                  },
+                  "x-section": "advanced",
+                  "x-sort-order": 1,
+                  "x-ui-component": "select"
+                }
+              },
+              "required": [
+                "prompt"
+              ],
+              "type": "object",
+              "x-groups": [
+                {
+                  "key": "basic",
+                  "label": {
+                    "en": "Basic",
+                    "zh": "基础"
+                  },
+                  "section": "basic",
+                  "sort": 1
+                },
+                {
+                  "key": "advanced",
+                  "label": {
+                    "en": "Advanced",
+                    "zh": "高级"
+                  },
+                  "section": "advanced",
+                  "sort": 2
+                }
+              ]
+            },
+            "is_async": false,
+            "estimate_ms": 8000,
+            "credit_cost": {
+              "amount": 36,
+              "unit": "per_request"
+            },
+            "status": "published"
+          }
+        ]
+      },
+      {
+        "model_bid": "1753387b-2057-4256-9e4c-5fa48df8e252",
+        "model_code": "gemini-3-pro-image-preview",
+        "model_name": {
+          "en": "Nano Banana Pro",
+          "zh": "Nano Banana Pro"
+        },
+        "description": {
+          "en": "Nano Banana Pro — professional-grade image generation with thinking-mode reasoning and high-fidelity text rendering (great for infographics, menus, and posters). Supports up to 6 objects and 5 character reference images.",
+          "zh": "Nano Banana Pro — 专业级图片生成, thinking 推理 + 高保真文字渲染 (适合信息图/菜单/海报). 最多 6 物体 + 5 人物参考图."
+        },
+        "media_type": "image",
+        "task_type": "txt2img",
+        "display_tags": [
+          "best_value"
+        ],
+        "sort_order": 2,
+        "versions": [
+          {
+            "version_bid": "1f847346-482e-4b76-aa7a-703da2668f13",
+            "version_code": "v1",
+            "version_name": "Nano Banana Pro v1",
+            "param_schema": {
+              "$schema": "http://json-schema.org/draft-07/schema#",
+              "properties": {
+                "aspect_ratio": {
+                  "default": "1:1",
+                  "enum": [
+                    "1:1",
+                    "2:3",
+                    "3:2",
+                    "3:4",
+                    "4:3",
+                    "9:16",
+                    "16:9",
+                    "21:9"
+                  ],
+                  "title": "Aspect Ratio",
+                  "type": "string",
+                  "x-enum-labels": {
+                    "16:9": {
+                      "en": "16:9",
+                      "zh": "16:9 宽屏"
+                    },
+                    "1:1": {
+                      "en": "1:1",
+                      "zh": "1:1 方图"
+                    },
+                    "21:9": {
+                      "en": "21:9",
+                      "zh": "21:9 超宽"
+                    },
+                    "2:3": {
+                      "en": "2:3",
+                      "zh": "2:3 竖"
+                    },
+                    "3:2": {
+                      "en": "3:2",
+                      "zh": "3:2 横"
+                    },
+                    "3:4": {
+                      "en": "3:4",
+                      "zh": "3:4 竖"
+                    },
+                    "4:3": {
+                      "en": "4:3",
+                      "zh": "4:3 横"
+                    },
+                    "9:16": {
+                      "en": "9:16",
+                      "zh": "9:16 手机竖屏"
+                    }
+                  },
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Aspect Ratio",
+                    "zh": "画幅比例"
+                  },
+                  "x-section": "basic",
+                  "x-sort-order": 2,
+                  "x-ui-component": "select",
+                  "x-value-kind": "aspect_ratio"
+                },
+                "image_size": {
+                  "default": "1K",
+                  "enum": [
+                    "1K",
+                    "2K",
+                    "4K"
+                  ],
+                  "title": "Image Size",
+                  "type": "string",
+                  "x-enum-labels": {
+                    "1K": {
+                      "en": "1K",
+                      "zh": "1K"
+                    },
+                    "2K": {
+                      "en": "2K",
+                      "zh": "2K"
+                    },
+                    "4K": {
+                      "en": "4K",
+                      "zh": "4K"
+                    }
+                  },
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Image Size",
+                    "zh": "图像尺寸"
+                  },
+                  "x-section": "basic",
+                  "x-sort-order": 3,
+                  "x-ui-component": "select",
+                  "x-value-kind": "resolution_tier"
+                },
+                "prompt": {
+                  "maxLength": 4000,
+                  "title": "Prompt",
+                  "type": "string",
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Prompt",
+                    "zh": "提示词"
+                  },
+                  "x-role": "prompt",
+                  "x-section": "basic",
+                  "x-sort-order": 1,
+                  "x-ui-component": "textarea"
+                },
+                "reference_images": {
+                  "items": {
+                    "properties": {
+                      "role": {
+                        "enum": [
+                          "object",
+                          "character"
+                        ],
+                        "type": "string"
+                      },
+                      "url": {
+                        "format": "uri",
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "url"
+                    ],
+                    "type": "object"
+                  },
+                  "maxItems": 14,
+                  "title": "Reference Images",
+                  "type": "array",
+                  "x-group": "basic",
+                  "x-hint": {
+                    "en": "Upload reference images for editing/style/character consistency. Drives multi-part input.",
+                    "zh": "上传参考图实现编辑 / 风格迁移 / 角色一致性。后端会把参考图随 prompt 一起送到模型。"
+                  },
+                  "x-label": {
+                    "en": "Reference Images",
+                    "zh": "参考图片"
+                  },
+                  "x-role": "reference_material",
+                  "x-roles": [
+                    {
+                      "accept": [
+                        "image/*"
+                      ],
+                      "default": true,
+                      "key": "object",
+                      "kind": "tag",
+                      "label": {
+                        "en": "Object/Style",
+                        "zh": "对象/风格"
+                      },
+                      "max_items": 6
+                    },
+                    {
+                      "accept": [
+                        "image/*"
+                      ],
+                      "default": false,
+                      "key": "character",
+                      "kind": "tag",
+                      "label": {
+                        "en": "Character",
+                        "zh": "角色"
+                      },
+                      "max_items": 5
+                    }
+                  ],
+                  "x-section": "basic",
+                  "x-sort-order": 4,
+                  "x-ui-component": "media_array"
+                }
+              },
+              "required": [
+                "prompt"
+              ],
+              "type": "object",
+              "x-groups": [
+                {
+                  "key": "basic",
+                  "label": {
+                    "en": "Basic",
+                    "zh": "基础"
+                  },
+                  "section": "basic",
+                  "sort": 1
+                }
+              ]
+            },
+            "is_async": false,
+            "estimate_ms": 8000,
+            "credit_cost": {
+              "amount": 16,
+              "unit": "per_request"
+            },
+            "status": "published"
+          }
+        ]
+      },
+      {
+        "model_bid": "c9fb048e-1b42-4121-8fac-5e5e6f8f9d33",
+        "model_code": "seedream-5.0",
+        "model_name": {
+          "en": "Seedream 5.0",
+          "zh": "Seedream 5.0 图片生成"
+        },
+        "description": {
+          "en": "[Doubao Seedream 5.0 · Flagship Image Generation]\n▸ What it does: Turn a text prompt into ultra-high-resolution images — 3.7M+ pixels, starting from 2048×2048.\n▸ Highlights: ByteDance's newest flagship — best-in-class Chinese semantic understanding, a balanced blend of realism and artistry, and abundant detail.\n▸ Perfect for: posters, covers & illustrations / e-commerce hero shots / China-market campaigns / concept design / fine-art creation.\n▸ Edge: direct China connectivity with zero cross-border lag, native Chinese-prompt support, and custom seeds for reproducible results",
+          "zh": "【豆包 Seedream 5.0 · 旗舰图片生成】\n▸ 能做什么: 文字描述 → 超高分辨率图片 (≥3.7M 像素 ~ 2048x2048 起步)\n▸ 亮点: 字节最新旗舰, 中文语义理解业内领先, 真实感和艺术风格均衡, 细节丰富\n▸ 典型场景: 海报/封面/插画创作 / 电商主图 / 中文场景营销 / 概念设计 / 艺术创作\n▸ 优势: 国内直连 / 无跨境延迟 / 中文提示词原生支持 / 支持自定义种子复现"
+        },
+        "media_type": "image",
+        "task_type": "txt2img",
+        "display_tags": [
+          "hot"
+        ],
+        "sort_order": 3,
+        "versions": [
+          {
+            "version_bid": "9c805ee3-e8d7-4f53-a13f-e5018cdaf15c",
+            "version_code": "v1",
+            "version_name": "Seedream 5.0 v1",
+            "release_note": "Seedream 5.0: 旗舰图像, 最低 2048x2048, 像素量约束 ≥3.7M",
+            "param_schema": {
+              "$schema": "http://json-schema.org/draft-07/schema#",
+              "properties": {
+                "prompt": {
+                  "maxLength": 4000,
+                  "title": "Prompt",
+                  "type": "string",
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Prompt",
+                    "zh": "提示词"
+                  },
+                  "x-role": "prompt",
+                  "x-section": "basic",
+                  "x-sort-order": 1,
+                  "x-ui-component": "textarea"
+                },
+                "quantity": {
+                  "default": 1,
+                  "description": "Output count 1-14. n>1 auto-enables group mode. Constraint: ref images + n ≤ 15.",
+                  "maximum": 14,
+                  "minimum": 1,
+                  "title": "Count",
+                  "type": "integer",
+                  "x-description": {
+                    "en": "Output count 1-14. n>1 auto-enables group mode. Constraint: ref images + n ≤ 15.",
+                    "zh": "生成数量 1-14. 当 n>1 时自动启用组图模式 (sequential_image_generation=auto). 约束: 参考图数量 + 生成数量 ≤ 15."
+                  },
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Count",
+                    "zh": "生成数量"
+                  },
+                  "x-section": "basic",
+                  "x-sort-order": 4,
+                  "x-ui-component": "number_input",
+                  "x-value-kind": "count"
+                },
+                "reference_images": {
+                  "description": "0-14 reference images (optional). Group mode: refs + n ≤ 15. 0 = text-to-image; 1 = single-ref-to-group; 2-14 = multi-ref-to-group.",
+                  "items": {
+                    "format": "uri",
+                    "type": "string"
+                  },
+                  "maxItems": 14,
+                  "minItems": 0,
+                  "title": "Reference Images",
+                  "type": "array",
+                  "x-accept": [
+                    "image/*"
+                  ],
+                  "x-description": {
+                    "en": "0-14 reference images (optional). Group mode: refs + n ≤ 15. 0 = text-to-image; 1 = single-ref-to-group; 2-14 = multi-ref-to-group.",
+                    "zh": "可选 0-14 张参考图. 组图模式约束: 参考图数量 + 生成数量 ≤ 15. 0 张 = 文生图 / 文生组图; 1 张 = 单图生组图; 2-14 张 = 多图生组图."
+                  },
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Reference Images",
+                    "zh": "参考图片"
+                  },
+                  "x-max-size-mb": 10,
+                  "x-role": "reference_material",
+                  "x-section": "basic",
+                  "x-sort-order": 2,
+                  "x-ui-component": "multi_image_upload"
+                },
+                "seed": {
+                  "default": -1,
+                  "maximum": 2147483647,
+                  "minimum": -1,
+                  "title": "Seed",
+                  "type": "integer",
+                  "x-group": "advanced",
+                  "x-label": {
+                    "en": "Seed",
+                    "zh": "随机种子"
+                  },
+                  "x-section": "advanced",
+                  "x-sort-order": 2,
+                  "x-ui-component": "number_input",
+                  "x-value-kind": "seed"
+                },
+                "size": {
+                  "default": "2048x2048",
+                  "description": "Seedream 5.0 minimum 3,686,400 pixels (about 1920×1920)",
+                  "enum": [
+                    "2048x2048",
+                    "2560x1440",
+                    "1440x2560"
+                  ],
+                  "title": "Image Size",
+                  "type": "string",
+                  "x-description": {
+                    "en": "Seedream 5.0 minimum 3,686,400 pixels (about 1920×1920)",
+                    "zh": "Seedream 5.0 最小像素 3,686,400 (约 1920×1920)"
+                  },
+                  "x-enum-labels": {
+                    "1440x2560": {
+                      "en": "9:16 2K",
+                      "zh": "9:16 2K"
+                    },
+                    "2048x2048": {
+                      "en": "1:1 Large",
+                      "zh": "1:1 大图"
+                    },
+                    "2560x1440": {
+                      "en": "16:9 2K",
+                      "zh": "16:9 2K"
+                    }
+                  },
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Image Size",
+                    "zh": "图片尺寸"
+                  },
+                  "x-section": "basic",
+                  "x-sort-order": 3,
+                  "x-ui-component": "select",
+                  "x-value-kind": "pixel_dimensions"
+                },
+                "watermark": {
+                  "default": false,
+                  "title": "Watermark",
+                  "type": "boolean",
+                  "x-group": "advanced",
+                  "x-label": {
+                    "en": "Watermark",
+                    "zh": "水印"
+                  },
+                  "x-section": "advanced",
+                  "x-sort-order": 1,
+                  "x-ui-component": "switch"
+                }
+              },
+              "required": [
+                "prompt",
+                "size"
+              ],
+              "type": "object",
+              "x-groups": [
+                {
+                  "key": "basic",
+                  "label": {
+                    "en": "Basic",
+                    "zh": "基础设置"
+                  },
+                  "section": "basic",
+                  "sort": 1
+                },
+                {
+                  "key": "advanced",
+                  "label": {
+                    "en": "Advanced",
+                    "zh": "高级设置"
+                  },
+                  "section": "advanced",
+                  "sort": 2
+                }
+              ]
+            },
+            "is_async": false,
+            "estimate_ms": 8000,
+            "credit_cost": {
+              "amount": 18,
+              "unit": "per_request"
+            },
+            "status": "published"
+          }
+        ]
+      },
+      {
+        "model_bid": "c7f99f08-6a33-4a75-802f-34d0f52fb7ff",
+        "model_code": "seedream-4.5",
+        "model_name": {
+          "en": "Seedream 4.5",
+          "zh": "Seedream 4.5 图片生成"
+        },
+        "description": {
+          "en": "[Doubao Seedream 4.5 · Previous-Generation Image Generation]\n▸ What it does: Turn a text prompt into quality images across a range of sizes and styles.\n▸ Highlights: cheaper than 5.0 — the smart pick when you need dependable, steady output rather than peak fidelity.\n▸ Perfect for: everyday content ops / social images / blog visuals / thumbnails / bulk content production",
+          "zh": "【豆包 Seedream 4.5 · 上一代图片生成】\n▸ 能做什么: 文字描述 → 高质量图片, 支持多种尺寸和风格\n▸ 亮点: 成本低于 5.0, 适合对画质要求不极端但需要稳定产能的场景\n▸ 典型场景: 日常运营内容 / 社媒图片 / 博客配图 / 缩略图 / 批量内容生产"
+        },
+        "media_type": "image",
+        "task_type": "txt2img",
+        "sort_order": 4,
+        "versions": [
+          {
+            "version_bid": "c083dc87-3d2f-4181-be41-e66f6bfc6324",
+            "version_code": "v1",
+            "version_name": "Seedream 4.5 v1",
+            "release_note": "Seedream 4.5: 上一代稳定版, 成本友好",
+            "param_schema": {
+              "$schema": "http://json-schema.org/draft-07/schema#",
+              "properties": {
+                "prompt": {
+                  "maxLength": 4000,
+                  "title": "Prompt",
+                  "type": "string",
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Prompt",
+                    "zh": "提示词"
+                  },
+                  "x-role": "prompt",
+                  "x-section": "basic",
+                  "x-sort-order": 1,
+                  "x-ui-component": "textarea"
+                },
+                "quantity": {
+                  "default": 1,
+                  "description": "Output count 1-14. n>1 auto-enables group mode. Constraint: ref images + n ≤ 15.",
+                  "maximum": 14,
+                  "minimum": 1,
+                  "title": "Count",
+                  "type": "integer",
+                  "x-description": {
+                    "en": "Output count 1-14. n>1 auto-enables group mode. Constraint: ref images + n ≤ 15.",
+                    "zh": "生成数量 1-14. 当 n>1 时自动启用组图模式 (sequential_image_generation=auto). 约束: 参考图数量 + 生成数量 ≤ 15."
+                  },
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Count",
+                    "zh": "生成数量"
+                  },
+                  "x-section": "basic",
+                  "x-sort-order": 4,
+                  "x-ui-component": "number_input",
+                  "x-value-kind": "count"
+                },
+                "reference_images": {
+                  "description": "0-14 reference images (optional). Group mode: refs + n ≤ 15. 0 = text-to-image; 1 = single-ref-to-group; 2-14 = multi-ref-to-group.",
+                  "items": {
+                    "format": "uri",
+                    "type": "string"
+                  },
+                  "maxItems": 14,
+                  "minItems": 0,
+                  "title": "Reference Images",
+                  "type": "array",
+                  "x-accept": [
+                    "image/*"
+                  ],
+                  "x-description": {
+                    "en": "0-14 reference images (optional). Group mode: refs + n ≤ 15. 0 = text-to-image; 1 = single-ref-to-group; 2-14 = multi-ref-to-group.",
+                    "zh": "可选 0-14 张参考图. 组图模式约束: 参考图数量 + 生成数量 ≤ 15. 0 张 = 文生图 / 文生组图; 1 张 = 单图生组图; 2-14 张 = 多图生组图."
+                  },
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Reference Images",
+                    "zh": "参考图片"
+                  },
+                  "x-max-size-mb": 10,
+                  "x-role": "reference_material",
+                  "x-section": "basic",
+                  "x-sort-order": 2,
+                  "x-ui-component": "multi_image_upload"
+                },
+                "seed": {
+                  "default": -1,
+                  "maximum": 2147483647,
+                  "minimum": -1,
+                  "title": "Seed",
+                  "type": "integer",
+                  "x-group": "advanced",
+                  "x-label": {
+                    "en": "Seed",
+                    "zh": "随机种子"
+                  },
+                  "x-section": "advanced",
+                  "x-sort-order": 2,
+                  "x-ui-component": "number_input",
+                  "x-value-kind": "seed"
+                },
+                "size": {
+                  "default": "2048x2048",
+                  "enum": [
+                    "1536x1024",
+                    "1024x1536",
+                    "2048x2048"
+                  ],
+                  "title": "Image Size",
+                  "type": "string",
+                  "x-enum-labels": {
+                    "1024x1536": {
+                      "en": "2:3 Portrait",
+                      "zh": "2:3 竖屏"
+                    },
+                    "1536x1024": {
+                      "en": "3:2 Landscape",
+                      "zh": "3:2 横屏"
+                    },
+                    "2048x2048": {
+                      "en": "1:1 Large",
+                      "zh": "1:1 大图"
+                    }
+                  },
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Image Size",
+                    "zh": "图片尺寸"
+                  },
+                  "x-section": "basic",
+                  "x-sort-order": 3,
+                  "x-ui-component": "select",
+                  "x-value-kind": "pixel_dimensions"
+                },
+                "watermark": {
+                  "default": false,
+                  "title": "Watermark",
+                  "type": "boolean",
+                  "x-group": "advanced",
+                  "x-label": {
+                    "en": "Watermark",
+                    "zh": "水印"
+                  },
+                  "x-section": "advanced",
+                  "x-sort-order": 1,
+                  "x-ui-component": "switch"
+                }
+              },
+              "required": [
+                "prompt",
+                "size"
+              ],
+              "type": "object",
+              "x-groups": [
+                {
+                  "key": "basic",
+                  "label": {
+                    "en": "Basic",
+                    "zh": "基础设置"
+                  },
+                  "section": "basic",
+                  "sort": 1
+                },
+                {
+                  "key": "advanced",
+                  "label": {
+                    "en": "Advanced",
+                    "zh": "高级设置"
+                  },
+                  "section": "advanced",
+                  "sort": 2
+                }
+              ]
+            },
+            "is_async": false,
+            "estimate_ms": 8000,
+            "credit_cost": {
+              "amount": 20,
+              "unit": "per_request"
+            },
+            "status": "published"
+          }
+        ]
+      },
+      {
+        "model_bid": "df4aedb3-6436-497d-b0ad-51d0252aee79",
+        "model_code": "qwen-image-2.0-pro",
+        "model_name": {
+          "en": "Qwen-Image 2.0 Pro",
+          "zh": "通义千问图像 2.0 Pro"
+        },
+        "description": {
+          "en": "[Qwen-Image 2.0 Pro · Core Workhorse Image Generation]\n▸ What it does: text-to-image + image-to-image + text rendering + multi-image blending + multi-image sequences — up to 6 images per request.\n▸ Highlights: Tongyi Qianwen's latest image model — excellent Chinese semantic understanding and pixel-accurate Chinese text rendering inside images (a must for posters and covers).\n▸ Perfect for: e-commerce hero shots / social visuals / article covers / ad assets / typographic posters / multi-image story sequences.\n▸ Edge: direct China connectivity with low latency and friendly pricing — the go-to for everyday, high-frequency creation",
+          "zh": "【Qwen-Image 2.0 Pro · 基础主力款图像生成】\n▸ 能做什么: 文生图 + 图生图 + 文字渲染 + 多图融合 + 多图连续 (单次最多 6 张)\n▸ 亮点: 通义千问最新图像模型, 中文语义理解优秀, 支持在图片中精准渲染中文文字 (海报/封面必备)\n▸ 典型场景: 电商主图 / 社媒配图 / 公众号封面 / 广告素材 / 文字海报 / 多图故事连续生成\n▸ 优势: 国内直连低延迟, 成本亲民, 适合全量用户日常高频创作"
+        },
+        "media_type": "image",
+        "task_type": "txt2img",
+        "sort_order": 10,
+        "versions": [
+          {
+            "version_bid": "5fc19fda-7d6d-42d3-a7bd-6f29b4970e01",
+            "version_code": "v1",
+            "version_name": "Qwen-Image 2.0 Pro v1",
+            "release_note": "DashScope multimodal-generation 同步接口, 支持单次 1-6 张, n=1 起步",
+            "param_schema": {
+              "$schema": "http://json-schema.org/draft-07/schema#",
+              "properties": {
+                "mode": {
+                  "default": "txt2img",
+                  "description": "Choose a creation mode: generate an image from text only, or upload a reference image to edit",
+                  "enum": [
+                    "txt2img",
+                    "img2img"
+                  ],
+                  "title": "Mode",
+                  "type": "string",
+                  "x-description": {
+                    "en": "Choose a creation mode: generate an image from text only, or upload a reference image to edit",
+                    "zh": "选择创作模式: 纯文本生成图片, 或上传参考图进行编辑"
+                  },
+                  "x-enum-labels": {
+                    "img2img": {
+                      "en": "Image Edit",
+                      "zh": "图生图 / 编辑"
+                    },
+                    "txt2img": {
+                      "en": "Text-to-Image",
+                      "zh": "文生图"
+                    }
+                  },
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Mode",
+                    "zh": "创作模式"
+                  },
+                  "x-section": "basic",
+                  "x-sort-order": 1,
+                  "x-ui-component": "radio_group",
+                  "x-value-kind": "generation_mode"
+                },
+                "negative_prompt": {
+                  "description": "Describe content you do not want to appear",
+                  "maxLength": 500,
+                  "title": "Negative Prompt",
+                  "type": "string",
+                  "x-description": {
+                    "en": "Describe content you do not want to appear",
+                    "zh": "描述不希望出现的内容"
+                  },
+                  "x-group": "advanced",
+                  "x-label": {
+                    "en": "Negative Prompt",
+                    "zh": "负向提示词"
+                  },
+                  "x-role": "negative_prompt",
+                  "x-section": "advanced",
+                  "x-sort-order": 1,
+                  "x-ui-component": "textarea"
+                },
+                "prompt": {
+                  "description": "Supports Chinese and English — describe the scene / add text / give editing instructions (e.g. 'change the background to a beach')",
+                  "maxLength": 2000,
+                  "title": "Prompt",
+                  "type": "string",
+                  "x-description": {
+                    "en": "Supports Chinese and English — describe the scene / add text / give editing instructions (e.g. 'change the background to a beach')",
+                    "zh": "支持中英文, 可描述画面 / 添加文字 / 编辑指令 (如 '把背景换成海滩')"
+                  },
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Prompt",
+                    "zh": "提示词"
+                  },
+                  "x-role": "prompt",
+                  "x-section": "basic",
+                  "x-sort-order": 2,
+                  "x-ui-component": "textarea"
+                },
+                "prompt_extend": {
+                  "default": true,
+                  "description": "When enabled, the model automatically refines the prompt to improve results",
+                  "title": "Prompt Rewrite",
+                  "type": "boolean",
+                  "x-description": {
+                    "en": "When enabled, the model automatically refines the prompt to improve results",
+                    "zh": "开启后模型会自动优化提示词以提升效果"
+                  },
+                  "x-group": "advanced",
+                  "x-label": {
+                    "en": "Prompt Rewrite",
+                    "zh": "智能改写提示词"
+                  },
+                  "x-section": "advanced",
+                  "x-sort-order": 2,
+                  "x-ui-component": "switch"
+                },
+                "quantity": {
+                  "default": 1,
+                  "description": "Number of images generated per request (billed per image)",
+                  "maximum": 6,
+                  "minimum": 1,
+                  "title": "Number of Images",
+                  "type": "integer",
+                  "x-description": {
+                    "en": "Number of images generated per request (billed per image)",
+                    "zh": "一次请求生成的图像数量 (按张收费)"
+                  },
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Number of Images",
+                    "zh": "生成数量"
+                  },
+                  "x-section": "basic",
+                  "x-sort-order": 5,
+                  "x-ui-component": "number_input",
+                  "x-value-kind": "count"
+                },
+                "reference_images": {
+                  "description": "Up to 3 images, each ≤ 10MB, resolution 384–3072px. For multi-image blending or multi-image sequences, pass them in order",
+                  "items": {
+                    "format": "uri",
+                    "type": "string"
+                  },
+                  "title": "Reference Images",
+                  "type": "array",
+                  "x-accept": [
+                    "image/jpeg",
+                    "image/png",
+                    "image/webp",
+                    "image/bmp"
+                  ],
+                  "x-conditions": [
+                    {
+                      "action": "show",
+                      "eq": "img2img",
+                      "when": "mode"
+                    }
+                  ],
+                  "x-description": {
+                    "en": "Up to 3 images, each ≤ 10MB, resolution 384–3072px. For multi-image blending or multi-image sequences, pass them in order",
+                    "zh": "最多 3 张, 每张 ≤ 10MB, 分辨率 384-3072px。多图融合 / 多图连续生成时按顺序传入"
+                  },
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Reference Images",
+                    "zh": "参考图片"
+                  },
+                  "x-max-size-mb": 10,
+                  "x-role": "reference_material",
+                  "x-section": "basic",
+                  "x-sort-order": 3,
+                  "x-ui-component": "multi_image_upload"
+                },
+                "seed": {
+                  "description": "A fixed seed makes results reproducible",
+                  "maximum": 2147483647,
+                  "minimum": 0,
+                  "title": "Seed",
+                  "type": "integer",
+                  "x-description": {
+                    "en": "A fixed seed makes results reproducible",
+                    "zh": "固定种子可复现结果"
+                  },
+                  "x-group": "advanced",
+                  "x-label": {
+                    "en": "Seed",
+                    "zh": "随机种子"
+                  },
+                  "x-section": "advanced",
+                  "x-sort-order": 3,
+                  "x-ui-component": "number_input",
+                  "x-value-kind": "seed"
+                },
+                "size": {
+                  "default": "1024*1024",
+                  "enum": [
+                    "1024*1024",
+                    "1664*928",
+                    "928*1664",
+                    "1472*1140",
+                    "1140*1472",
+                    "2048*2048"
+                  ],
+                  "title": "Image Size",
+                  "type": "string",
+                  "x-enum-labels": {
+                    "1024*1024": {
+                      "en": "1:1 (1024×1024)",
+                      "zh": "1:1 (1024×1024)"
+                    },
+                    "1140*1472": {
+                      "en": "3:4 (1140×1472)",
+                      "zh": "3:4 (1140×1472)"
+                    },
+                    "1472*1140": {
+                      "en": "4:3 (1472×1140)",
+                      "zh": "4:3 (1472×1140)"
+                    },
+                    "1664*928": {
+                      "en": "16:9 (1664×928)",
+                      "zh": "16:9 (1664×928)"
+                    },
+                    "2048*2048": {
+                      "en": "2K Large",
+                      "zh": "2K 大图"
+                    },
+                    "928*1664": {
+                      "en": "9:16 (928×1664)",
+                      "zh": "9:16 (928×1664)"
+                    }
+                  },
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Image Size",
+                    "zh": "图片尺寸"
+                  },
+                  "x-section": "basic",
+                  "x-sort-order": 4,
+                  "x-ui-component": "select",
+                  "x-value-kind": "pixel_dimensions"
+                },
+                "watermark": {
+                  "default": false,
+                  "title": "Watermark",
+                  "type": "boolean",
+                  "x-group": "advanced",
+                  "x-label": {
+                    "en": "Watermark",
+                    "zh": "水印"
+                  },
+                  "x-section": "advanced",
+                  "x-sort-order": 4,
+                  "x-ui-component": "switch"
+                }
+              },
+              "required": [
+                "mode",
+                "prompt"
+              ],
+              "type": "object",
+              "x-groups": [
+                {
+                  "description": {
+                    "en": "Required core parameters defining the generation",
+                    "zh": "必填的核心参数,定义生成的画面内容"
+                  },
+                  "key": "basic",
+                  "label": {
+                    "en": "Basic",
+                    "zh": "基础设置"
+                  },
+                  "section": "basic",
+                  "sort": 1
+                },
+                {
+                  "description": {
+                    "en": "Seed, negative prompt and advanced controls",
+                    "zh": "随机种子、负向提示词等高级控制"
+                  },
+                  "key": "advanced",
+                  "label": {
+                    "en": "Advanced",
+                    "zh": "高级设置"
+                  },
+                  "section": "advanced",
+                  "sort": 2
+                }
+              ]
+            },
+            "is_async": false,
+            "estimate_ms": 8000,
+            "credit_cost": {
+              "amount": 39,
+              "unit": "per_request"
+            },
+            "status": "published"
+          }
+        ]
+      },
+      {
+        "model_bid": "e4aa320a-7274-4209-99c5-80a87e977f63",
+        "model_code": "wan2.7-image-pro",
+        "model_name": {
+          "en": "Wan 2.7 Image Pro",
+          "zh": "万相 2.7 图像 Pro"
+        },
+        "description": {
+          "en": "[Wan 2.7 Image Pro · Premium Flagship Image Generation]\n▸ What it does: 2K resolution (2048×2048) + precise local editing (box-select a region and swap objects) + multi-panel sequences + multi-reference style transfer.\n▸ Highlights: Wan 2.7's newest flagship — industry-leading photorealism, with object detection & segmentation, viewpoint editing, and subject-feature preservation.\n▸ Perfect for: professional poster design / premium ad creative / brand visuals / film concept art / game key art / architectural renders.\n▸ Edge: 2K fidelity rivaling Midjourney — built for the advanced needs of professional creators and designers",
+          "zh": "【Wan 2.7 Image Pro · 高端旗舰款图像生成】\n▸ 能做什么: 2K 高分辨率 (2048×2048) + 精准局部编辑 (框选区域换物) + 多格连续图 + 多参考图风格迁移\n▸ 亮点: 万相 2.7 最新旗舰, 写实质感业内领先, 支持目标检测分割 / 镜头视角编辑 / 主体特征保持\n▸ 典型场景: 专业海报设计 / 高端广告创意 / 品牌视觉 / 影视概念图 / 游戏原画 / 建筑效果图\n▸ 优势: 2K 分辨率保真度媲美 Midjourney, 针对专业创作者和设计师的进阶场景"
+        },
+        "media_type": "image",
+        "task_type": "img2img",
+        "sort_order": 20,
+        "versions": [
+          {
+            "version_bid": "732b54dc-7443-4609-944c-96f96f739854",
+            "version_code": "v1",
+            "version_name": "Wan 2.7 Image Pro v1",
+            "release_note": "DashScope multimodal-generation, 2K 分辨率, 精准局部编辑, 多格连续图",
+            "param_schema": {
+              "$schema": "http://json-schema.org/draft-07/schema#",
+              "properties": {
+                "mode": {
+                  "default": "txt2img",
+                  "description": "Wan 2.7 Pro supports 2K high resolution and multi-panel sequence generation",
+                  "enum": [
+                    "txt2img",
+                    "img2img",
+                    "multi_frame"
+                  ],
+                  "title": "Mode",
+                  "type": "string",
+                  "x-description": {
+                    "en": "Wan 2.7 Pro supports 2K high resolution and multi-panel sequence generation",
+                    "zh": "Wan 2.7 Pro 支持 2K 高分辨率与多格连续图生成"
+                  },
+                  "x-enum-labels": {
+                    "img2img": {
+                      "en": "Image Edit",
+                      "zh": "精准局部编辑"
+                    },
+                    "multi_frame": {
+                      "en": "Multi-Frame",
+                      "zh": "多格连续图"
+                    },
+                    "txt2img": {
+                      "en": "Text-to-Image",
+                      "zh": "文生图 (2K)"
+                    }
+                  },
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Mode",
+                    "zh": "创作模式"
+                  },
+                  "x-section": "basic",
+                  "x-sort-order": 1,
+                  "x-ui-component": "radio_group",
+                  "x-value-kind": "generation_mode"
+                },
+                "negative_prompt": {
+                  "maxLength": 500,
+                  "title": "Negative Prompt",
+                  "type": "string",
+                  "x-group": "advanced",
+                  "x-label": {
+                    "en": "Negative Prompt",
+                    "zh": "负向提示词"
+                  },
+                  "x-role": "negative_prompt",
+                  "x-section": "advanced",
+                  "x-sort-order": 1,
+                  "x-ui-component": "textarea"
+                },
+                "prompt": {
+                  "description": "Supports Chinese and English. In multi-panel sequence mode you can describe each panel, e.g. 'Panel 1: ... Panel 2: ...'",
+                  "maxLength": 2000,
+                  "title": "Prompt",
+                  "type": "string",
+                  "x-description": {
+                    "en": "Supports Chinese and English. In multi-panel sequence mode you can describe each panel, e.g. 'Panel 1: ... Panel 2: ...'",
+                    "zh": "支持中英文。多格连续图模式下可描述每格画面, 如 '第一格: ... 第二格: ...'"
+                  },
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Prompt",
+                    "zh": "提示词"
+                  },
+                  "x-role": "prompt",
+                  "x-section": "basic",
+                  "x-sort-order": 2,
+                  "x-ui-component": "textarea"
+                },
+                "prompt_extend": {
+                  "default": true,
+                  "title": "Prompt Rewrite",
+                  "type": "boolean",
+                  "x-group": "advanced",
+                  "x-label": {
+                    "en": "Prompt Rewrite",
+                    "zh": "智能改写"
+                  },
+                  "x-section": "advanced",
+                  "x-sort-order": 2,
+                  "x-ui-component": "switch"
+                },
+                "quantity": {
+                  "default": 1,
+                  "maximum": 4,
+                  "minimum": 1,
+                  "title": "Number of Images",
+                  "type": "integer",
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Number of Images",
+                    "zh": "生成数量"
+                  },
+                  "x-section": "basic",
+                  "x-sort-order": 5,
+                  "x-ui-component": "number_input",
+                  "x-value-kind": "count"
+                },
+                "reference_images": {
+                  "description": "Up to 4 HD reference images; supports subject-feature preservation and style transfer",
+                  "items": {
+                    "format": "uri",
+                    "type": "string"
+                  },
+                  "title": "Reference Images",
+                  "type": "array",
+                  "x-accept": [
+                    "image/jpeg",
+                    "image/png",
+                    "image/webp"
+                  ],
+                  "x-conditions": [
+                    {
+                      "action": "show",
+                      "eq": [
+                        "img2img",
+                        "multi_frame"
+                      ],
+                      "when": "mode"
+                    }
+                  ],
+                  "x-description": {
+                    "en": "Up to 4 HD reference images; supports subject-feature preservation and style transfer",
+                    "zh": "最多 4 张高清参考图, 支持主体特征保持和风格迁移"
+                  },
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Reference Images",
+                    "zh": "参考图片"
+                  },
+                  "x-max-size-mb": 10,
+                  "x-role": "reference_material",
+                  "x-section": "basic",
+                  "x-sort-order": 3,
+                  "x-ui-component": "multi_image_upload"
+                },
+                "resolution": {
+                  "default": "2048*2048",
+                  "description": "Wan 2.7 Pro's core strength is 2K high resolution",
+                  "enum": [
+                    "2048*2048",
+                    "2560*1440",
+                    "1440*2560",
+                    "1024*1024"
+                  ],
+                  "title": "Resolution",
+                  "type": "string",
+                  "x-description": {
+                    "en": "Wan 2.7 Pro's core strength is 2K high resolution",
+                    "zh": "Wan 2.7 Pro 的核心优势是 2K 高分辨率"
+                  },
+                  "x-enum-labels": {
+                    "1024*1024": {
+                      "en": "1K Square (1024×1024)",
+                      "zh": "1K 方形 (1024×1024)"
+                    },
+                    "1440*2560": {
+                      "en": "2K Portrait (1440×2560)",
+                      "zh": "2K 竖屏 (1440×2560)"
+                    },
+                    "2048*2048": {
+                      "en": "2K Square (2048×2048)",
+                      "zh": "2K 方形 (2048×2048)"
+                    },
+                    "2560*1440": {
+                      "en": "2K Landscape (2560×1440)",
+                      "zh": "2K 横屏 (2560×1440)"
+                    }
+                  },
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Resolution",
+                    "zh": "分辨率"
+                  },
+                  "x-section": "basic",
+                  "x-sort-order": 4,
+                  "x-ui-component": "select",
+                  "x-value-kind": "pixel_dimensions"
+                },
+                "seed": {
+                  "maximum": 2147483647,
+                  "minimum": 0,
+                  "title": "Seed",
+                  "type": "integer",
+                  "x-group": "advanced",
+                  "x-label": {
+                    "en": "Seed",
+                    "zh": "随机种子"
+                  },
+                  "x-section": "advanced",
+                  "x-sort-order": 3,
+                  "x-ui-component": "number_input",
+                  "x-value-kind": "seed"
+                },
+                "watermark": {
+                  "default": false,
+                  "title": "Watermark",
+                  "type": "boolean",
+                  "x-group": "advanced",
+                  "x-label": {
+                    "en": "Watermark",
+                    "zh": "水印"
+                  },
+                  "x-section": "advanced",
+                  "x-sort-order": 4,
+                  "x-ui-component": "switch"
+                }
+              },
+              "required": [
+                "mode",
+                "prompt"
+              ],
+              "type": "object",
+              "x-groups": [
+                {
+                  "description": {
+                    "en": "Required core parameters defining the generation",
+                    "zh": "必填的核心参数,定义生成的画面内容"
+                  },
+                  "key": "basic",
+                  "label": {
+                    "en": "Basic",
+                    "zh": "基础设置"
+                  },
+                  "section": "basic",
+                  "sort": 1
+                },
+                {
+                  "description": {
+                    "en": "Seed, negative prompt and advanced controls",
+                    "zh": "随机种子、负向提示词等高级控制"
+                  },
+                  "key": "advanced",
+                  "label": {
+                    "en": "Advanced",
+                    "zh": "高级设置"
+                  },
+                  "section": "advanced",
+                  "sort": 2
+                }
+              ]
+            },
+            "is_async": false,
+            "estimate_ms": 8000,
+            "credit_cost": {
+              "amount": 39,
+              "unit": "per_request"
+            },
+            "status": "published"
+          }
+        ]
+      },
+      {
+        "model_bid": "019e72ea-5196-7c77-a45f-d46898beed01",
+        "model_code": "gpt_image_2",
+        "model_name": {
+          "en": "GPT Image 2",
+          "zh": "GPT Image 2"
+        },
+        "description": {
+          "en": "OpenAI GPT Image 2 via Runway — high-quality text/image to image generation (fixed high quality).",
+          "zh": "经 Runway 调用的 OpenAI GPT Image 2 文/图生图模型,固定高画质输出。"
+        },
+        "media_type": "image",
+        "task_type": "txt2img",
+        "capability_tags": [
+          "文生图",
+          "参考图",
+          "高清"
+        ],
+        "display_tags": [
+          "new"
+        ],
+        "sort_order": 20,
+        "versions": [
+          {
+            "version_bid": "019e72ea-5198-77b3-8715-d6114ee1df99",
+            "version_code": "v1",
+            "version_name": "GPT Image 2 v1",
+            "param_schema": {
+              "$schema": "http://json-schema.org/draft-07/schema#",
+              "properties": {
+                "background": {
+                  "default": "auto",
+                  "enum": [
+                    "opaque",
+                    "auto"
+                  ],
+                  "title": "Background",
+                  "type": "string",
+                  "x-enum-labels": {
+                    "auto": {
+                      "en": "Auto",
+                      "zh": "自动"
+                    },
+                    "opaque": {
+                      "en": "Opaque",
+                      "zh": "不透明"
+                    }
+                  },
+                  "x-group": "advanced",
+                  "x-label": {
+                    "en": "Background",
+                    "zh": "背景"
+                  },
+                  "x-section": "advanced",
+                  "x-sort-order": 5,
+                  "x-ui-component": "select"
+                },
+                "prompt": {
+                  "maxLength": 32000,
+                  "title": "Prompt",
+                  "type": "string",
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Prompt",
+                    "zh": "提示词"
+                  },
+                  "x-placeholder": {
+                    "en": "Describe the image to generate",
+                    "zh": "描述要生成的图像"
+                  },
+                  "x-role": "prompt",
+                  "x-section": "basic",
+                  "x-sort-order": 1,
+                  "x-ui-component": "textarea"
+                },
+                "quantity": {
+                  "default": 1,
+                  "maximum": 10,
+                  "minimum": 1,
+                  "title": "Count",
+                  "type": "integer",
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Count",
+                    "zh": "数量"
+                  },
+                  "x-section": "basic",
+                  "x-sort-order": 4,
+                  "x-ui-component": "number_input",
+                  "x-value-kind": "count"
+                },
+                "ratio": {
+                  "default": "auto",
+                  "enum": [
+                    "auto",
+                    "2048:880",
+                    "1920:1088",
+                    "1920:1280",
+                    "1920:1440",
+                    "1920:1536",
+                    "1920:1920",
+                    "1536:1920",
+                    "1440:1920",
+                    "1280:1920",
+                    "1088:1920",
+                    "2912:1248",
+                    "2560:1440",
+                    "2560:1712",
+                    "2560:1920",
+                    "2560:2048",
+                    "2560:2560",
+                    "2048:2560",
+                    "1920:2560",
+                    "1712:2560",
+                    "1440:2560",
+                    "3840:1648",
+                    "3840:2160",
+                    "3504:2336",
+                    "3264:2448",
+                    "3200:2560",
+                    "2880:2880",
+                    "2560:3200",
+                    "2448:3264",
+                    "2336:3504",
+                    "2160:3840"
+                  ],
+                  "title": "Aspect Ratio",
+                  "type": "string",
+                  "x-enum-labels": {
+                    "1088:1920": {
+                      "en": "1088:1920",
+                      "zh": "1088:1920"
+                    },
+                    "1280:1920": {
+                      "en": "1280:1920",
+                      "zh": "1280:1920"
+                    },
+                    "1440:1920": {
+                      "en": "1440:1920",
+                      "zh": "1440:1920"
+                    },
+                    "1440:2560": {
+                      "en": "1440:2560",
+                      "zh": "1440:2560"
+                    },
+                    "1536:1920": {
+                      "en": "1536:1920",
+                      "zh": "1536:1920"
+                    },
+                    "1712:2560": {
+                      "en": "1712:2560",
+                      "zh": "1712:2560"
+                    },
+                    "1920:1088": {
+                      "en": "1920:1088",
+                      "zh": "1920:1088"
+                    },
+                    "1920:1280": {
+                      "en": "1920:1280",
+                      "zh": "1920:1280"
+                    },
+                    "1920:1440": {
+                      "en": "1920:1440",
+                      "zh": "1920:1440"
+                    },
+                    "1920:1536": {
+                      "en": "1920:1536",
+                      "zh": "1920:1536"
+                    },
+                    "1920:1920": {
+                      "en": "1920:1920",
+                      "zh": "1920:1920"
+                    },
+                    "1920:2560": {
+                      "en": "1920:2560",
+                      "zh": "1920:2560"
+                    },
+                    "2048:2560": {
+                      "en": "2048:2560",
+                      "zh": "2048:2560"
+                    },
+                    "2048:880": {
+                      "en": "2048:880",
+                      "zh": "2048:880"
+                    },
+                    "2160:3840": {
+                      "en": "2160:3840",
+                      "zh": "2160:3840"
+                    },
+                    "2336:3504": {
+                      "en": "2336:3504",
+                      "zh": "2336:3504"
+                    },
+                    "2448:3264": {
+                      "en": "2448:3264",
+                      "zh": "2448:3264"
+                    },
+                    "2560:1440": {
+                      "en": "2560:1440",
+                      "zh": "2560:1440"
+                    },
+                    "2560:1712": {
+                      "en": "2560:1712",
+                      "zh": "2560:1712"
+                    },
+                    "2560:1920": {
+                      "en": "2560:1920",
+                      "zh": "2560:1920"
+                    },
+                    "2560:2048": {
+                      "en": "2560:2048",
+                      "zh": "2560:2048"
+                    },
+                    "2560:2560": {
+                      "en": "2560:2560",
+                      "zh": "2560:2560"
+                    },
+                    "2560:3200": {
+                      "en": "2560:3200",
+                      "zh": "2560:3200"
+                    },
+                    "2880:2880": {
+                      "en": "2880:2880",
+                      "zh": "2880:2880"
+                    },
+                    "2912:1248": {
+                      "en": "2912:1248",
+                      "zh": "2912:1248"
+                    },
+                    "3200:2560": {
+                      "en": "3200:2560",
+                      "zh": "3200:2560"
+                    },
+                    "3264:2448": {
+                      "en": "3264:2448",
+                      "zh": "3264:2448"
+                    },
+                    "3504:2336": {
+                      "en": "3504:2336",
+                      "zh": "3504:2336"
+                    },
+                    "3840:1648": {
+                      "en": "3840:1648",
+                      "zh": "3840:1648"
+                    },
+                    "3840:2160": {
+                      "en": "3840:2160",
+                      "zh": "3840:2160"
+                    },
+                    "auto": {
+                      "en": "auto",
+                      "zh": "auto"
+                    }
+                  },
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Aspect Ratio",
+                    "zh": "画面比例"
+                  },
+                  "x-section": "basic",
+                  "x-sort-order": 2,
+                  "x-ui-component": "select",
+                  "x-value-kind": "pixel_dimensions"
+                },
+                "reference_images": {
+                  "description": "Optional reference images. None = text-to-image; with images = image-to-image.",
+                  "items": {
+                    "format": "uri",
+                    "type": "string"
+                  },
+                  "maxItems": 16,
+                  "minItems": 0,
+                  "title": "Reference Images",
+                  "type": "array",
+                  "x-accept": [
+                    "image/*"
+                  ],
+                  "x-description": {
+                    "en": "Optional reference images. None = text-to-image; with images = image-to-image.",
+                    "zh": "可选参考图。不传 = 文生图;传 = 图生图。"
+                  },
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Reference Images",
+                    "zh": "参考图片"
+                  },
+                  "x-max-size-mb": 25,
+                  "x-role": "reference_material",
+                  "x-section": "basic",
+                  "x-sort-order": 3,
+                  "x-ui-component": "multi_image_upload"
+                },
+                "seed": {
+                  "maximum": 4294967295,
+                  "minimum": 0,
+                  "title": "Seed",
+                  "type": "integer",
+                  "x-group": "advanced",
+                  "x-label": {
+                    "en": "Seed",
+                    "zh": "随机种子"
+                  },
+                  "x-section": "advanced",
+                  "x-sort-order": 6,
+                  "x-ui-component": "number_input",
+                  "x-value-kind": "seed"
+                }
+              },
+              "required": [
+                "prompt",
+                "ratio"
+              ],
+              "type": "object",
+              "x-groups": [
+                {
+                  "key": "basic",
+                  "label": {
+                    "en": "Basic",
+                    "zh": "基础设置"
+                  },
+                  "section": "basic",
+                  "sort": 1
+                },
+                {
+                  "key": "advanced",
+                  "label": {
+                    "en": "Advanced",
+                    "zh": "高级设置"
+                  },
+                  "section": "advanced",
+                  "sort": 2
+                }
+              ]
+            },
+            "is_async": true,
+            "estimate_ms": 90000,
+            "async_strategy": {
+              "mode": "polling",
+              "interval_ms": 5000,
+              "max_wait_ms": 180000
+            },
+            "credit_cost": {
+              "amount": 217,
+              "unit": "per_request"
+            },
+            "status": "published"
+          }
+        ]
+      },
+      {
+        "model_bid": "019ff5ec-dc18-78bf-a516-c0c484b57ff3",
+        "model_code": "gpt-image-2",
+        "model_name": {
+          "en": "GPT Image 2",
+          "zh": "GPT Image 2"
+        },
+        "description": {
+          "en": "[OpenAI GPT Image 2 - High-fidelity text-to-image]\n- What it does: turns a text description into a single high-quality image, from 1K up to 4K (3840x2160)\n- Highlights: strong prompt adherence and legible in-image text; fixed high quality output, no quality knob to get wrong\n- Typical uses: posters and covers, marketing creatives, concept art, illustrations\n- Note: pick the size before generating - it decides both the output resolution and the credits charged",
+          "zh": "【OpenAI GPT Image 2 · 高保真文生图】\n▸ 能做什么: 文字描述 → 单张高质量图片, 覆盖 1K 至 4K(3840×2160)\n▸ 亮点: 提示词遵循度高, 图内文字清晰可读; 固定高画质输出, 无需纠结画质档\n▸ 典型场景: 海报与封面 / 营销素材 / 概念设计 / 插画创作\n▸ 提示: 生成前先选尺寸 —— 它同时决定出图分辨率与消耗积分"
+        },
+        "media_type": "image",
+        "task_type": "txt2img",
+        "capability_tags": [
+          "文生图",
+          "高清",
+          "4K",
+          "文字渲染"
+        ],
+        "display_tags": [
+          "new"
+        ],
+        "sort_order": 21,
+        "versions": [
+          {
+            "version_bid": "019ff5ec-dc1a-713a-b967-dc35b689a173",
+            "version_code": "v1",
+            "version_name": "GPT Image 2 v1",
+            "param_schema": {
+              "$schema": "http://json-schema.org/draft-07/schema#",
+              "properties": {
+                "prompt": {
+                  "maxLength": 32000,
+                  "title": "Prompt",
+                  "type": "string",
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Prompt",
+                    "zh": "提示词"
+                  },
+                  "x-placeholder": {
+                    "en": "Describe the image to generate",
+                    "zh": "描述要生成的图像"
+                  },
+                  "x-role": "prompt",
+                  "x-section": "basic",
+                  "x-sort-order": 1,
+                  "x-ui-component": "textarea"
+                },
+                "size": {
+                  "default": "1024x1024",
+                  "enum": [
+                    "1024x1024",
+                    "1536x1024",
+                    "1024x1536",
+                    "2048x1152",
+                    "2048x2048",
+                    "3840x2160",
+                    "2160x3840"
+                  ],
+                  "title": "Size",
+                  "type": "string",
+                  "x-enum-labels": {
+                    "1024x1024": {
+                      "en": "1024×1024 (1K)",
+                      "zh": "1024×1024(1K 方图)"
+                    },
+                    "1024x1536": {
+                      "en": "1024×1536 (1K)",
+                      "zh": "1024×1536(1K 竖图)"
+                    },
+                    "1536x1024": {
+                      "en": "1536×1024 (1K)",
+                      "zh": "1536×1024(1K 横图)"
+                    },
+                    "2048x1152": {
+                      "en": "2048×1152 (2K)",
+                      "zh": "2048×1152(2K 横图)"
+                    },
+                    "2048x2048": {
+                      "en": "2048×2048 (2K)",
+                      "zh": "2048×2048(2K 方图)"
+                    },
+                    "2160x3840": {
+                      "en": "2160×3840 (4K)",
+                      "zh": "2160×3840(4K 竖图)"
+                    },
+                    "3840x2160": {
+                      "en": "3840×2160 (4K)",
+                      "zh": "3840×2160(4K 横图)"
+                    }
+                  },
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Size",
+                    "zh": "尺寸"
+                  },
+                  "x-section": "basic",
+                  "x-sort-order": 2,
+                  "x-ui-component": "select"
+                }
+              },
+              "required": [
+                "prompt",
+                "size"
+              ],
+              "type": "object",
+              "x-groups": [
+                {
+                  "key": "basic",
+                  "label": {
+                    "en": "Basic",
+                    "zh": "基础设置"
+                  },
+                  "section": "basic",
+                  "sort": 1
+                },
+                {
+                  "key": "advanced",
+                  "label": {
+                    "en": "Advanced",
+                    "zh": "高级设置"
+                  },
+                  "section": "advanced",
+                  "sort": 2
+                }
+              ]
+            },
+            "is_async": false,
+            "estimate_ms": 30000,
+            "credit_cost": {
+              "amount": 142,
+              "unit": "per_request"
+            },
+            "status": "published"
+          }
+        ]
+      },
+      {
+        "model_bid": "c60f80f5-0149-46aa-b9ce-1b5a8ca52318",
+        "model_code": "wanx-style-repaint-v1",
+        "model_name": {
+          "en": "WanX Style Repaint",
+          "zh": "万相人像风格重绘"
+        },
+        "description": {
+          "en": "[WanX Style Repaint V1 · Fun Portrait Restyling for Growth]\n▸ What it does: one tap turns a portrait photo into comic, 3D cartoon, anime, Chinese-style, sci-fi, and many more preset art styles.\n▸ Highlights: 10+ curated preset styles, zero-effort one-tap output, plus custom style reference images (style_index=-1).\n▸ Perfect for: social avatars / feed decoration / holiday-themed avatars / restyled Spring Festival family photos / school graduation shots.\n▸ Edge: ultra-affordable and great value, with 500 free credits for new users — a consumer-facing fun feature tailor-made for new-user acquisition and viral sharing.\n▸ Note: needs a clear portrait photo (face well-framed); asynchronous API, results in roughly 5–15s",
+          "zh": "【WanX Style Repaint V1 · 引流娱乐款人像风格化】\n▸ 能做什么: 一键把人像照片转换为漫画/3D卡通/二次元/国风/未来科技等多种预设艺术风格\n▸ 亮点: 10+ 精选预置风格, 零门槛一键出图, 支持自定义风格参考图 (style_index=-1)\n▸ 典型场景: 社交头像生成 / 朋友圈装饰 / 节日主题头像 / 春节全家福风格化 / 学校毕业照\n▸ 优势: 成本极低、超高性价比, 新用户赠 500 张免费额度, 面向 C 端娱乐场景, 适合新用户引流和病毒传播\n▸ 注意: 需要清晰人像照 (脸部占比合适), 异步接口, 约 5-15 秒出图"
+        },
+        "media_type": "image",
+        "task_type": "style_transfer",
+        "sort_order": 30,
+        "versions": [
+          {
+            "version_bid": "a83923bc-6104-4c1c-808a-5d2b72cc8e90",
+            "version_code": "v1",
+            "version_name": "WanX Style Repaint V1",
+            "release_note": "DashScope image-generation 异步接口, X-DashScope-Async + 任务轮询",
+            "param_schema": {
+              "$schema": "http://json-schema.org/draft-07/schema#",
+              "properties": {
+                "image_url": {
+                  "description": "A photo with a clear face, aspect ratio no greater than 2:1, avoiding exaggerated poses and expressions",
+                  "format": "uri",
+                  "title": "Portrait Photo",
+                  "type": "string",
+                  "x-accept": [
+                    "image/jpeg",
+                    "image/png",
+                    "image/bmp",
+                    "image/webp"
+                  ],
+                  "x-description": {
+                    "en": "A photo with a clear face, aspect ratio no greater than 2:1, avoiding exaggerated poses and expressions",
+                    "zh": "脸部清晰照片, 长短边比例不超过 2:1, 避免夸张姿势和表情"
+                  },
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Portrait Photo",
+                    "zh": "人像照片"
+                  },
+                  "x-max-size-mb": 10,
+                  "x-role": "reference_material",
+                  "x-section": "basic",
+                  "x-sort-order": 1,
+                  "x-ui-component": "image_upload"
+                },
+                "style_index": {
+                  "default": "0",
+                  "description": "Click a style preview card to pick one, or choose 'Custom Style' to upload a reference image",
+                  "enum": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "-1"
+                  ],
+                  "title": "Style",
+                  "type": "string",
+                  "x-description": {
+                    "en": "Click a style preview card to pick one, or choose 'Custom Style' to upload a reference image",
+                    "zh": "点击风格预览卡片选择一种, 或选 '自定义风格' 上传参考图"
+                  },
+                  "x-enum-labels": {
+                    "-1": {
+                      "en": "Custom Style",
+                      "zh": "自定义风格"
+                    },
+                    "0": {
+                      "en": "Retro Comic",
+                      "zh": "复古漫画"
+                    },
+                    "1": {
+                      "en": "3D Fairytale",
+                      "zh": "3D 童话"
+                    },
+                    "2": {
+                      "en": "Anime",
+                      "zh": "二次元"
+                    },
+                    "3": {
+                      "en": "Fresh & Light",
+                      "zh": "小清新"
+                    },
+                    "4": {
+                      "en": "Futuristic Sci-Fi",
+                      "zh": "未来科技"
+                    },
+                    "5": {
+                      "en": "Classical Ink Painting",
+                      "zh": "国画古风"
+                    },
+                    "6": {
+                      "en": "Warrior Saga",
+                      "zh": "将军百战"
+                    },
+                    "7": {
+                      "en": "Vibrant Cartoon",
+                      "zh": "炫彩卡通"
+                    },
+                    "8": {
+                      "en": "Elegant Chinese Style",
+                      "zh": "清雅国风"
+                    },
+                    "9": {
+                      "en": "Chinese New Year",
+                      "zh": "喜迎新年"
+                    }
+                  },
+                  "x-enum-previews": {
+                    "-1": "https://r2.showsapp.org/preset-thumbnails/wanx-style-repaint/style_-1_custom_upload.jpg",
+                    "0": "https://r2.showsapp.org/preset-thumbnails/wanx-style-repaint/style_0_retro_comic.jpg",
+                    "1": "https://r2.showsapp.org/preset-thumbnails/wanx-style-repaint/style_1_3d_fairytale.jpg",
+                    "2": "https://r2.showsapp.org/preset-thumbnails/wanx-style-repaint/style_2_anime.jpg",
+                    "3": "https://r2.showsapp.org/preset-thumbnails/wanx-style-repaint/style_3_fresh.jpg",
+                    "4": "https://r2.showsapp.org/preset-thumbnails/wanx-style-repaint/style_4_future_tech.jpg",
+                    "5": "https://r2.showsapp.org/preset-thumbnails/wanx-style-repaint/style_5_ink_painting.jpg",
+                    "6": "https://r2.showsapp.org/preset-thumbnails/wanx-style-repaint/style_6_warrior.jpg",
+                    "7": "https://r2.showsapp.org/preset-thumbnails/wanx-style-repaint/style_7_vivid_cartoon.jpg",
+                    "8": "https://r2.showsapp.org/preset-thumbnails/wanx-style-repaint/style_8_elegant_chinese.jpg",
+                    "9": "https://r2.showsapp.org/preset-thumbnails/wanx-style-repaint/style_9_chinese_new_year.jpg"
+                  },
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Style",
+                    "zh": "风格"
+                  },
+                  "x-section": "basic",
+                  "x-sort-order": 2,
+                  "x-ui-component": "image_selector"
+                },
+                "style_ref_url": {
+                  "description": "Required only when 'Custom Style' is selected; the model learns the style features of the reference image",
+                  "format": "uri",
+                  "title": "Custom Style Reference",
+                  "type": "string",
+                  "x-accept": [
+                    "image/jpeg",
+                    "image/png",
+                    "image/webp"
+                  ],
+                  "x-conditions": [
+                    {
+                      "action": "show",
+                      "eq": "-1",
+                      "when": "style_index"
+                    }
+                  ],
+                  "x-description": {
+                    "en": "Required only when 'Custom Style' is selected; the model learns the style features of the reference image",
+                    "zh": "仅当选择 '自定义风格' 时需要。模型会学习参考图的风格特征"
+                  },
+                  "x-group": "basic",
+                  "x-label": {
+                    "en": "Custom Style Reference",
+                    "zh": "自定义风格参考图"
+                  },
+                  "x-max-size-mb": 10,
+                  "x-role": "reference_material",
+                  "x-section": "basic",
+                  "x-sort-order": 3,
+                  "x-ui-component": "image_upload"
+                }
+              },
+              "required": [
+                "image_url",
+                "style_index"
+              ],
+              "type": "object",
+              "x-groups": [
+                {
+                  "key": "basic",
+                  "label": {
+                    "en": "Basic",
+                    "zh": "基础设置"
+                  },
+                  "section": "basic",
+                  "sort": 1
+                }
+              ]
+            },
+            "is_async": true,
+            "estimate_ms": 90000,
+            "async_strategy": {
+              "mode": "polling",
+              "interval_ms": 3000,
+              "max_wait_ms": 180000
+            },
+            "credit_cost": {
+              "amount": 10,
+              "unit": "per_request"
+            },
+            "status": "published"
+          }
+        ]
+      }
+    ],
+    "total": 9
+  },
+  "request_id": "857b2bfb-af28-421d-9070-cc575902743f",
+  "timestamp": 1787560250
+}

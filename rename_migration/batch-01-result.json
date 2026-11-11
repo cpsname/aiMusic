@@ -1,0 +1,18 @@
+{
+  "batch": "01",
+  "status": "passed-analyze",
+  "files": {
+    "lib/main.dart": {
+      "size": 1579,
+      "sha256": "84aded4f95b058903cd3f02a3caa01b1cb4dba075690d8aced794581f5a1404b"
+    },
+    "lib/ui/music_app.dart": {
+      "size": 2531,
+      "sha256": "b418c2686111787e8601bccc591c29630e437a8dd64655d78633344abb8a746f"
+    },
+    "test/l10n/ui_language_test.dart": {
+      "size": 11000,
+      "sha256": "e4a46dcf38ab493c5f30b67401b604a92c549843310334a46482c3ebeed0c987"
+    }
+  }
+}

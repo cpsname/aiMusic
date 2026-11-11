@@ -1,0 +1,32 @@
+name: commerce_kit
+description: "Commercialization core: auth + iap + wallet (domain / data / application)."
+publish_to: "none"
+version: 0.1.0
+resolution: workspace
+
+environment:
+  sdk: ^3.11.0
+  flutter: ">=3.44.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  infra_core:
+    path: ../infra_core
+  dio: ^5.9.2
+  flutter_riverpod: ^3.3.2
+  riverpod: ^3.3.2
+  in_app_purchase: ^3.3.0
+  # Platform implementations are direct deps so ProductDetailExtractor can read
+  # the StoreKit (SK1/SK2) + Play Billing wrapper types for offers/periods.
+  in_app_purchase_storekit: ^0.4.10
+  in_app_purchase_android: ^0.5.1
+  meta: ^1.15.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  mocktail: ^1.0.5
+  shared_preferences: ^2.5.5
+  package_info_plus: ">=8.0.0 <9.0.0"

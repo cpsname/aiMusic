@@ -1,0 +1,145 @@
+# Script B — "Your photos set the mood" (照片变成歌和视频), 25 s: input → wait →
+# result → share → proof (packages/store_preview/templates/
+# input_wait_result_share.yaml).
+#
+# The claim on the intro card over one of the storefront's photos → four of
+# them picked from the library → Standard and "also make a lyric video" on (options),
+# "Create from photos" → the wait (sped up) → a dissolve through a photo → the
+# platform's lyric video (a still made with the photos as its style reference,
+# Ken Burns, synced lyrics, the AI label; the poster frame) → the share sheet →
+# the country and lyric language picked (the many-languages proof, script C's
+# claim folded in, ADR-0038) → the end card. Photos are a style reference only:
+# the video shows no photo carousel (PRD §15).
+#
+# The take ends on the system share sheet, which nothing in the app can
+# dismiss: B is filmed after A, and its last scene ("languages") is filmed
+# first.
+id: B
+title: Your photos set the mood. Share the video.
+template: input_wait_result_share
+rhythm: 25
+poster_at: 13
+ends_on_system_ui: true
+
+requires:
+  - {role: song, vars: [chorus_index, lyric_language]}
+  - {role: lyric_video}
+  - {role: photo, count: 4}
+
+setup:
+  - {do: newDraft}
+  - {do: use, role: song}
+
+segments:
+  - card: intro
+    duration: 1.0
+    text: storePreviewBMood
+    background: {image: {role: photo, index: 3}}
+
+  - scene: photos
+    beat: input
+    duration: 3.0
+    # The four generated photos on screen in the picker and the strip.
+    shows:
+      - {role: photo, index: 0}
+      - {role: photo, index: 1}
+      - {role: photo, index: 2}
+      - {role: photo, index: 3}
+    # The system picker is driven over XCUITest, slower than a hand.
+    max_speed: 4
+    before:
+      # Off camera, after the languages scene: the language checked, the
+      # sheet closed; the picker's first-run card closed once (session 0@0).
+      - {do: checkLyricLanguage, language: "{lyric_language}"}
+      - {do: tap, key: region.done}
+      - {do: waitFor, key: composer}
+      - {do: tap, key: composer.photos}
+      - {do: pickPhotos, count: 0}
+      - {do: go, location: /create}
+      - {do: pause, ms: 800}
+    steps:
+      - {do: tap, key: composer.photos}
+      - {do: pickPhotos, count: 4}
+      - {do: waitPhotos, count: 4}
+      - {do: waitFor, key: photos.strip}
+      - {do: pause, ms: 600}
+
+  - scene: video
+    beat: input
+    duration: 4.0
+    steps:
+      # Back on the composer: the options under the summary row — Length →
+      # Standard, then "Also make a lyric video" (offered with the full song).
+      - {do: pop}
+      - {do: go, location: "/create?options=1"}
+      - {do: tap, key: composer.length}
+      - {do: tap, key: panel.length.standard}
+      - {do: waitFor, key: composer.video}
+      - {do: tap, key: composer.video}
+      - {do: pause, ms: 600}
+      # Back on the photos page (the photos are kept): make the song.
+      - {do: tap, key: composer.photos}
+      - {do: tap, key: photos.create}
+
+  - scene: progress
+    beat: wait
+    duration: 2.0
+    steps:
+      - {do: waitFor, key: generating.progress}
+      - {do: pause, ms: 3000}
+
+  - bridge: toVideo
+    duration: 0.5
+    image: {role: photo, index: 1}
+
+  - scene: lyricVideo
+    beat: result
+    duration: 6.5
+    finished: true
+    follow: video
+    audio: {role: lyric_video}
+    before:
+      # The app asked for notifications when the video started; the helper
+      # has answered (Allow) before anything is filmed.
+      - {do: waitSync, name: alert.done, timeout: 240}
+      - {do: waitFor, key: mv.auto.watch, timeout: 180}
+      - {do: tap, key: mv.auto.watch}
+      - {do: waitFor, key: mv.player}
+      - {do: playVideo, key: mv.toggle}
+      - {do: tap, key: mv.sections, widget: GestureDetector, index: "{chorus_index}"}
+      - {do: pause, ms: 400}
+
+  - scene: share
+    beat: share
+    duration: 2.5
+    steps:
+      - {do: tap, key: mv.share}
+      - {do: pause, ms: 2500}
+
+  - scene: languages
+    beat: proof
+    duration: 3.5
+    max_speed: 4
+    # Filmed first: the share sheet above ends the take.
+    shoot_order: -1
+    before:
+      - {do: waitFor, key: composer}
+    steps:
+      - {do: go, location: /create/region}
+      - {do: pause, ms: 600}
+      - {do: tap, key: "region.{region}", within: 'widget:CountryRow'}
+      - {do: tap, key: region.language}
+      - {do: tapLyricLanguage, language: "{lyric_language}"}
+      - {do: pause, ms: 500}
+
+  - card: outro
+    duration: 2.0
+    background: {image: {role: photo, index: 2}}
+
+captions:
+  - {key: storePreviewBHook, from: 1.0, to: 4.0}
+  - {key: storePreviewBVideo, from: 4.0, to: 8.0}
+  - {key: storePreviewBWait, from: 8.0, to: 10.0}
+  - {key: storePreviewBLyrics, from: 10.5, to: 17.0}
+  - {key: storePreviewBShare, from: 17.0, to: 19.5}
+  - {key: storePreviewBLanguage, from: 19.5, to: 23.0}

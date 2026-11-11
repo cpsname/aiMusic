@@ -1,0 +1,6 @@
+/* Microphone: on-device dictation (docs/ui P03a, ADR-0006). */
+"NSMicrophoneUsageDescription" = "जब आप गीत का विचार बोलकर लिखते हैं, तब Songlet माइक्रोफ़ोन का उपयोग करता है। ऑडियो इसी iPhone पर लिखा जाता है और कभी अपलोड नहीं होता।";
+/* Speech recognition: on-device transcription. */
+"NSSpeechRecognitionUsageDescription" = "Songlet आपके बोले गए विचार को इसी iPhone पर टेक्स्ट में बदलता है, ताकि आप उसे कीवर्ड या बोल के रूप में इस्तेमाल कर सकें।";
+/* Photos add-only: "Save video" on the share card (docs/ui P10). */
+"NSPhotoLibraryAddUsageDescription" = "वीडियो सहेजें पर टैप करने पर Songlet आपके शेयर कार्ड वीडियो Photos में सहेजता है।";

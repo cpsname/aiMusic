@@ -1,0 +1,33 @@
+# Input → wait → result → share: the user puts something in, the app makes
+# it, the result plays, the user shares it. For generators (songs, images,
+# videos, documents).
+#
+# Rhythms: each beat's nominal seconds; a script may stretch or squeeze a beat
+# by ±flex, drop optional beats, and must total the rhythm's seconds. A beat a
+# rhythm leaves out is not played in it. Every rhythm's beats add up to its
+# seconds, and that nominal timeline keeps app footage at ≥ 85 % (the cards and
+# bridges stay under 15 %); a script that drops an optional beat stretches
+# others.
+#
+# Hook: the first `hook.seconds` must explain themselves muted — the intro
+# card states the claim (not only the brand) and the first scene's caption
+# picks up at the card's end and runs past the hook.
+id: input_wait_result_share
+title: Input → wait → result → share
+description: The user gives the app something, the app makes it, it plays, the user shares it.
+flex: 2.0
+hook:
+  seconds: 3
+beats:
+  - {id: intro, kind: card}
+  - {id: input, kind: scene}
+  - {id: wait, kind: scene, optional: true}
+  - {id: bridge, kind: bridge, optional: true}
+  - {id: result, kind: scene, finished: true}
+  - {id: share, kind: scene, optional: true}
+  - {id: proof, kind: scene, optional: true}
+  - {id: outro, kind: card}
+rhythms:
+  15: {intro: 0.8, input: 3.5, wait: 1.2, result: 5.6, share: 2.5, outro: 1.4}
+  22: {intro: 0.8, input: 5.0, wait: 1.6, bridge: 0.5, result: 6.5, share: 3.0, proof: 3.0, outro: 1.6}
+  25: {intro: 1.0, input: 6.5, wait: 2.0, bridge: 0.5, result: 7.5, share: 3.0, proof: 2.5, outro: 2.0}

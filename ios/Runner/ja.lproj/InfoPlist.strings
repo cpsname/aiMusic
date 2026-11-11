@@ -1,0 +1,6 @@
+/* Microphone: on-device dictation (docs/ui P03a, ADR-0006). */
+"NSMicrophoneUsageDescription" = "曲のアイデアを音声入力するときにマイクを使用します。音声はこの iPhone 上で文字起こしされ、アップロードされません。";
+/* Speech recognition: on-device transcription. */
+"NSSpeechRecognitionUsageDescription" = "話したアイデアをこの iPhone 上でテキストにし、キーワードや歌詞として使えるようにします。";
+/* Photos add-only: "Save video" on the share card (docs/ui P10). */
+"NSPhotoLibraryAddUsageDescription" = "「動画を保存」をタップすると、シェアカードの動画を写真に保存します。";

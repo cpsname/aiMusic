@@ -1,0 +1,20 @@
+{
+  "@@locale": "zh",
+  "title": "随手笔记",
+  "storePreviewAIntro": "把灵感留在身边",
+  "storePreviewAHook": "留住一个想法",
+  "storePreviewAFeature2": "把想法变成清单",
+  "storePreviewAFeature3": "置顶重要的笔记",
+  "storePreviewCta": "记下下一个灵感",
+  "storePreviewDisclosure": "部分功能需要订阅",
+  "storeCreativeHeader": "把灵感留在身边",
+  "storeCreativeSearch": "把想法变成清单",
+  "storeCreativeCppDailyPlanners": "安排明天的行动",
+  "tagline": "给想法留一个位置",
+  "noteTitle": "周末灵感",
+  "noteBody": "沿河散步，逛逛书店。记下值得留住的小事。",
+  "noteChecklist": "☐ 带上笔记本  ☐ 留点时间探索",
+  "notePinned": "已置顶到笔记本",
+  "actionChecklist": "把想法变成清单",
+  "actionPin": "置顶这条笔记"
+}

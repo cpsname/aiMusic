@@ -1,0 +1,28 @@
+name: store_preview
+description: "App Store preview videos for any app on this template: config-driven recording on the simulator, post-production (brand cards, motion captions, image transitions, soundtrack) and three-layer validation (spec, compliance, narrative). Dev-only tooling, never shipped."
+publish_to: "none"
+version: 1.0.0
+resolution: workspace
+
+# Pure-Dart dev tooling, like arch_guard: never imported by app code. Runs as
+# `dart run store_preview <command>` (or `store-preview <command>` once
+# activated with `dart pub global activate --source path packages/store_preview`).
+environment:
+  sdk: ^3.11.0
+  flutter: ">=3.44.0"
+
+executables:
+  store-preview: store_preview
+
+dependencies:
+  crypto: ^3.0.6
+  json_schema: ^5.2.2
+  path: ^1.9.0
+  pub_semver: ^2.2.0
+  yaml: ^3.1.3
+  yaml_edit: ^2.2.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0

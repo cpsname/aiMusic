@@ -1,0 +1,163 @@
+### Capability BC — 实时语音会话(客户端直连上游 + 按时长预扣)
+###
+### 对接文档: docs/api/live-session.md
+### 实现:     internal/capability/port/http/live_session_handler.go
+###           internal/capability/app/builtins/live_session_token/
+###
+### 计费模型: 签发时按 granted_minutes 预扣 → 通话结束上报真实用时 → 差额自动退回;
+###           不上报则约 30 分钟后由兜底 worker 按预扣全额扣除。
+###
+### env 变量: see docs/api/http-requests/http-client.env.json
+###   - {{base_url}}     e.g. http://localhost:8080
+###   - {{access_token}} JWT
+###   - {{app_id}} + {{app_signature}}  see cmd/signtool
+###
+### 前置(否则稳定返 50084):
+###   1. cap_capabilities.metadata.live_model_version_bid 已配真实实时模型版本
+###   2. 该模型版本的渠道是 Gemini Developer API(Vertex 后端无法签发临时令牌)
+###   迁移: 20260804_cap_deferred_settlement_columns.sql → 20260804b_live_session_token_capability.sql
+
+############################################
+# 1. 开始会话 — 签发令牌(此刻预扣积分)
+############################################
+
+# @name startLiveSession
+POST {{base_url}}/v1/live-sessions
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+X-App-ID: {{app_id}}
+X-App-Signature: {{app_signature}}
+
+{
+  "requested_minutes": 15
+}
+
+### 响应关注点:
+###   execution_bid          → 必须保存, 结算要用
+###   granted_minutes        → 实际授予(= 实际预扣), 可能小于请求值
+###   new_session_expires_at → 必须在此之前发起上游连接(默认仅 60s)
+###   expires_at             → 令牌总有效期; 临近时需先 settle 再重新签发
+
+############################################
+# 2. 缺省时长(取平台上限)
+############################################
+
+POST {{base_url}}/v1/live-sessions
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+X-App-ID: {{app_id}}
+X-App-Signature: {{app_signature}}
+
+{}
+
+############################################
+# 3. 超限请求 — 应被钳制到上限而非报错
+############################################
+
+POST {{base_url}}/v1/live-sessions
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+X-App-ID: {{app_id}}
+X-App-Signature: {{app_signature}}
+
+{
+  "requested_minutes": 600
+}
+
+### 期望: 200 且 granted_minutes = 15(上游纯音频单会话硬限)
+
+############################################
+# 4. 非法入参 — 应 40033 且不产生冻结
+############################################
+
+POST {{base_url}}/v1/live-sessions
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+X-App-ID: {{app_id}}
+X-App-Signature: {{app_signature}}
+
+{
+  "requested_minutes": 0
+}
+
+############################################
+# 5. 结算 — 上报真实用时(差额自动退回)
+############################################
+
+@executionBid = {{startLiveSession.response.body.data.execution_bid}}
+
+POST {{base_url}}/v1/live-sessions/{{executionBid}}/settle
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+X-App-ID: {{app_id}}
+X-App-Signature: {{app_signature}}
+
+{
+  "used_minutes": 4
+}
+
+### 期望: settled=true, cost_credits = 冻结额 × 4 / granted_minutes(向下取整)
+
+############################################
+# 6. 重复结算 — 幂等, 不二次扣费
+############################################
+
+POST {{base_url}}/v1/live-sessions/{{executionBid}}/settle
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+X-App-ID: {{app_id}}
+X-App-Signature: {{app_signature}}
+
+{
+  "used_minutes": 4
+}
+
+### 期望: 200 且 settled=false(已结算), 钱包余额不再变化
+
+############################################
+# 7. 超报用量 — 应被钳制到已授予时长, 绝不超扣
+############################################
+
+POST {{base_url}}/v1/live-sessions/{{executionBid}}/settle
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+X-App-ID: {{app_id}}
+X-App-Signature: {{app_signature}}
+
+{
+  "used_minutes": 9999
+}
+
+############################################
+# 8. 越权结算 — 用他人账号的 JWT 结算, 应 40300
+############################################
+
+POST {{base_url}}/v1/live-sessions/{{executionBid}}/settle
+Content-Type: application/json
+Authorization: Bearer {{other_access_token}}
+X-App-ID: {{app_id}}
+X-App-Signature: {{app_signature}}
+
+{
+  "used_minutes": 1
+}
+
+############################################
+# 9. 核对账本 — 结算后钱包与冻结应自洽
+############################################
+
+GET {{base_url}}/v1/wallet
+Authorization: Bearer {{access_token}}
+X-App-ID: {{app_id}}
+X-App-Signature: {{app_signature}}
+
+### 排障 SQL(服务端):
+###   -- 挂起中的会话(status=running = 已签发未结算)
+###   SELECT bid, invoker_account_id, estimated_credits, billable_quantity,
+###          cost_credits, freeze_id, finished_at
+###     FROM cap_executions
+###    WHERE status = 'running'
+###    ORDER BY finished_at;
+###
+###   -- 兜底 worker 会回收 finished_at 早于 (now - grace_period) 的行
+###   -- grace_period 默认 30min, 见 config.capability.deferred_settlement

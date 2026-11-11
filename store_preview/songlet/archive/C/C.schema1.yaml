@@ -1,0 +1,153 @@
+# Script C — "Your language, your style" (你的语言，你的风格), 23 s.
+# The country picker switching Japan → Brazil → India (hook) → one song each
+# in Japanese, Brazilian Portuguese and Hindi on the player, its genre
+# changing with the country → the download page (song, lyrics, license PDF).
+# The same three songs in every storefront; the interface speaks the
+# storefront's language.
+id: C
+title: Yours to keep. Commercial license included
+duration: 23
+poster_at: 5
+song_locales: [ja, pt-BR, hi]
+
+# Off camera: the three songs, made the way a user makes them — the
+# country, the country's lyric language, its first popular genre, a full
+# song, the words, send.
+setup:
+  - {do: newDraft}
+  - {do: demo, locale: ja}
+  - {do: go, location: /create/region}
+  - {do: tap, key: "region.{region}", within: 'widget:CountryRow'}
+  - {do: tap, key: region.language}
+  - {do: tapLyricLanguage, language: "{lyric_language}"}
+  - {do: checkLyricLanguage, language: "{lyric_language}"}
+  - {do: tap, key: region.done}
+  - {do: tap, key: composer.genre}
+  - {do: tap, key: panel.genre.popular.0}
+  - {do: tap, key: composer.length, widget: ParamChip}
+  - {do: tap, key: panel.length.standard}
+  - {do: type, key: composer, widget: TextField, index: 0, text: "{description}", cps: 40}
+  - {do: dismissKeyboard}
+  - {do: tap, key: composer.create, widget: IconButton}
+  - {do: waitFor, key: player.sections, timeout: 90}
+  - {do: remember, as: ja}
+  - {do: newDraft}
+  - {do: demo, locale: pt-BR}
+  - {do: go, location: /create/region}
+  - {do: tap, key: "region.{region}", within: 'widget:CountryRow'}
+  - {do: tap, key: region.language}
+  - {do: tapLyricLanguage, language: "{lyric_language}"}
+  - {do: checkLyricLanguage, language: "{lyric_language}"}
+  - {do: tap, key: region.done}
+  - {do: tap, key: composer.genre}
+  - {do: tap, key: panel.genre.popular.0}
+  - {do: tap, key: composer.length, widget: ParamChip}
+  - {do: tap, key: panel.length.standard}
+  - {do: type, key: composer, widget: TextField, index: 0, text: "{description}", cps: 40}
+  - {do: dismissKeyboard}
+  - {do: tap, key: composer.create, widget: IconButton}
+  - {do: waitFor, key: player.sections, timeout: 90}
+  - {do: remember, as: pt-BR}
+  - {do: newDraft}
+  - {do: demo, locale: hi}
+  - {do: go, location: /create/region}
+  - {do: tap, key: "region.{region}", within: 'widget:CountryRow'}
+  - {do: tap, key: region.language}
+  - {do: tapLyricLanguage, language: "{lyric_language}"}
+  - {do: checkLyricLanguage, language: "{lyric_language}"}
+  - {do: tap, key: region.done}
+  - {do: tap, key: composer.genre}
+  - {do: tap, key: panel.genre.popular.0}
+  - {do: tap, key: composer.length, widget: ParamChip}
+  - {do: tap, key: panel.length.standard}
+  - {do: type, key: composer, widget: TextField, index: 0, text: "{description}", cps: 40}
+  - {do: dismissKeyboard}
+  - {do: tap, key: composer.create, widget: IconButton}
+  - {do: waitFor, key: player.sections, timeout: 90}
+  - {do: remember, as: hi}
+  - {do: newDraft}
+  - {do: pause, ms: 800}
+
+scenes:
+  - id: countries
+    start: 0
+    end: 3
+    before:
+      - {do: newDraft}
+      - {do: go, location: /create/region}
+      - {do: waitFor, key: region.done}
+      - {do: pause, ms: 600}
+    steps:
+      - {do: tap, key: region.JP, within: 'widget:CountryRow'}
+      - {do: pause, ms: 550}
+      - {do: tap, key: region.BR, within: 'widget:CountryRow'}
+      - {do: pause, ms: 550}
+      - {do: tap, key: region.IN, within: 'widget:CountryRow'}
+      - {do: pause, ms: 550}
+
+  - id: japanese
+    start: 3
+    end: 6.5
+    finished: true
+    follow: song
+    audio: {source: song, script: C, locale: ja}
+    before:
+      - {do: tap, key: region.done}
+      - {do: demo, locale: ja}
+      - {do: go, location: "@ja"}
+      - {do: waitFor, key: player.sections}
+      - {do: play, key: player.toggle}
+      - {do: tap, key: player.sections, widget: GestureDetector, index: "{chorus}"}
+      - {do: pause, ms: 300}
+
+  - id: portuguese
+    start: 6.5
+    end: 10
+    finished: true
+    follow: song
+    audio: {source: song, script: C, locale: pt-BR}
+    before:
+      - {do: demo, locale: pt-BR}
+      - {do: go, location: "@pt-BR"}
+      - {do: waitFor, key: player.sections}
+      - {do: play, key: player.toggle}
+      - {do: tap, key: player.sections, widget: GestureDetector, index: "{chorus}"}
+      - {do: pause, ms: 300}
+
+  - id: hindi
+    start: 10
+    end: 14
+    finished: true
+    follow: song
+    audio: {source: song, script: C, locale: hi}
+    before:
+      - {do: demo, locale: hi}
+      - {do: go, location: "@hi"}
+      - {do: waitFor, key: player.sections}
+      - {do: play, key: player.toggle}
+      - {do: tap, key: player.sections, widget: GestureDetector, index: "{chorus}"}
+      - {do: pause, ms: 300}
+
+  - id: download
+    start: 14
+    end: 19
+    steps:
+      - {do: tap, key: player.download}
+      - {do: waitFor, key: download.mp3}
+      - {do: pause, ms: 1500}
+      - {do: scrollTo, key: download.license, alignment: 0.5}
+      - {do: pause, ms: 1500}
+
+  - id: keep
+    start: 19
+    end: 23
+    steps:
+      - {do: pause, ms: 3800}
+
+captions:
+  - {key: storePreviewCHook, from: 0, to: 3}
+  - {key: storePreviewCLanguage, from: 3, to: 8.5}
+  - {key: storePreviewCStyle, from: 8.5, to: 14}
+  - {key: storePreviewCDownload, from: 14, to: 19}
+  - {key: storePreviewCKeep, from: 19, to: 21}
+  - {key: storePreviewCLicense, from: 21, to: 23}

@@ -1,0 +1,206 @@
+{
+  "entries": [
+    {
+      "id": "song.C.hi",
+      "type": "audio",
+      "role": "song",
+      "locale": "hi",
+      "script": "C",
+      "file": "songs/hi_C.mp3",
+      "license": {
+        "provider": "lyria",
+        "id": "v1_ChdEbWZEYW9EbEFfelZ6N0lQdTZxTS1RaxIXRG1mRGFvRGxBX3pWejdJUHU2cU0tUWs",
+        "model": "lyria-3.5",
+        "generated_at": "2026-10-05T09:01:04Z"
+      },
+      "vars": {
+        "chorus_index": "2",
+        "description": "दिवाली की रात का गीत",
+        "genre": "Bhangra",
+        "lyric_language": "hi"
+      },
+      "data": {
+        "job_id": "4a75d959-0c68-4e5e-b08c-fc407a8ffe22",
+        "lyrics": "[Intro]\n\n[Verse 1]\nअँधेरी रात में ये कैसा उजाला छाया है\nहर आँगन में दीपों का इक मेला सा आया है\nमन में जगी है इक नई सी आस की किरण\nख़ुशियों की महक से महक उठा है ये चमन\n\n[Chorus]\nआई है दीवाली, ख़ुशियों की ये रात है!\nहर तरफ उजाला, अपनों का ये साथ है!\nझूमे है ज़माना, नाचे है ये जिया!\nप्यार की रोशनी से हर इक दिल को भर दिया!\n\n[Verse 2]\nरंगोली के रंगों में घुली है एक नई कहानी\nसदियों से चली आ रही है ये रीत सुहानी\nमिठाइयों की मिठास में है अपनों का ये प्यार\nमुबारक हो सबको ये ख़ुशियों का त्यौहार\n\n[Chorus]\nआई है दीवाली, ख़ुशियों की ये रात है!\nहर तरफ उजाला, अपनों का ये साथ है!\nझूमे है ज़माना, नाचे है ये जिया!\nप्यार की रोशनी से हर इक दिल को भर दिया!\n\n[Bridge]\nमिट जाए हर अंधेरा इस जग से आज रात\nहो बस मुहब्बत की और अमन की ही बात\nये दीये सिर्फ़ रौशनी नहीं फैलाते हैं\nदिल से दिल को मिलाने का पैग़ाम लाते हैं\n\n[Chorus]\nआई है दीवाली, ख़ुशियों की ये रात है!\nहर तरफ उजाला, अपनों का ये साथ है!\nझूमे है ज़माना, नाचे है ये जिया!\nप्यार की रोशनी से हर इक दिल को भर दिया!\n\n[Outro]\nशुभ दीपावली, मंगलमय हो सबका ये जीवन\n(रोशनी से जगमगाता रहे हर इक आँगन)\n(शुभ दीपावली, मुबारक हो त्यौहार)",
+        "prompt": "description: दिवाली की रात का गीत\ngenre: Bhangra\nvocals: vocals\nlyric_language: hi\nphotos: 4",
+        "structure": [
+          {
+            "end": 20.2,
+            "section": "Intro",
+            "start": 0
+          },
+          {
+            "end": 38.3,
+            "section": "Verse 1",
+            "start": 20.2
+          },
+          {
+            "end": 53.1,
+            "section": "Chorus",
+            "start": 39.1
+          },
+          {
+            "end": 75.8,
+            "section": "Verse 2",
+            "start": 57.9
+          },
+          {
+            "end": 86.1,
+            "section": "Chorus",
+            "start": 76.7
+          },
+          {
+            "end": 94.5,
+            "section": "Bridge",
+            "start": 86.1
+          },
+          {
+            "end": 109.5,
+            "section": "Chorus",
+            "start": 95.6
+          },
+          {
+            "end": 128.6,
+            "section": "Outro",
+            "start": 114.2
+          }
+        ]
+      }
+    },
+    {
+      "id": "song.C.ja",
+      "type": "audio",
+      "role": "song",
+      "locale": "ja",
+      "script": "C",
+      "file": "songs/ja_C.mp3",
+      "license": {
+        "provider": "lyria",
+        "id": "v1_ChdzR25EYXVTNk5mWG1xdHNQak5mVndRZxIXc0duRGF1UzZOZlhtcXRzUGpOZlZ3UWc",
+        "model": "lyria-3.5",
+        "generated_at": "2026-10-05T09:12:09Z"
+      },
+      "vars": {
+        "chorus_index": "2",
+        "description": "夏祭りの夜に贈る歌",
+        "genre": "J-pop Indie Pop",
+        "lyric_language": "ja"
+      },
+      "data": {
+        "job_id": "d304bd2f-7637-440c-9fee-54bf3731ba09",
+        "lyrics": "[Intro]\n\n[Verse]\nちょうちんの灯り 揺れる石段\n君の浴衣姿 まぶしくて\n言葉にできない この気持ちを\n今夜こそ 伝えたいんだ\n\n[Chorus]\n打ち上がる花火よりも 輝く君へ\nこの歌を 贈りたいんだ\nずっとそばに いたいなんて\n言えないままの 夜空の下で\n\n[Bridge]\n人混みの中で はぐれないように\nそっと伸ばした 手の温もり\n時計の針を 止めてしまいたい\nそんなことばかり 考えてる\n\n[Chorus]\n打ち上がる花火よりも 輝く君へ\nこの歌を 贈りたいんだ\nずっとそばに いたいなんて\n言えないままの 夜空の下で\n\n[Bridge]\n夏の終わりが 近づくように\nこの夜も 明けてしまうけれど\n僕の想いは 変わらないから\nねえ、聞いていて ほしいんだ\n\n[Chorus]\n打ち上がる花火よりも 輝く君へ\nこの歌を 贈りたいんだ\nずっとそばに いたいなんて\n言えないままの 夜空の下で\n\n[Outro]\n夏祭りの夜に、君に…",
+        "prompt": "description: 夏祭りの夜に贈る歌\ngenre: J-pop Indie Pop\nvocals: vocals\nlyric_language: ja\nphotos: 4",
+        "structure": [
+          {
+            "end": 11.2,
+            "section": "Intro",
+            "start": 0
+          },
+          {
+            "end": 28.5,
+            "section": "Verse",
+            "start": 11.2
+          },
+          {
+            "end": 45.4,
+            "section": "Chorus",
+            "start": 29.6
+          },
+          {
+            "end": 65.9,
+            "section": "Bridge",
+            "start": 48.4
+          },
+          {
+            "end": 82,
+            "section": "Chorus",
+            "start": 66.7
+          },
+          {
+            "end": 101.9,
+            "section": "Bridge",
+            "start": 85.5
+          },
+          {
+            "end": 121.4,
+            "section": "Chorus",
+            "start": 106.4
+          },
+          {
+            "end": 131.3,
+            "section": "Outro",
+            "start": 127.7
+          }
+        ]
+      }
+    },
+    {
+      "id": "song.C.pt-BR",
+      "type": "audio",
+      "role": "song",
+      "locale": "pt-BR",
+      "script": "C",
+      "file": "songs/pt-BR_C.mp3",
+      "license": {
+        "provider": "lyria",
+        "id": "v1_ChdBbWpEYXJ1SU5vaWR6N0lQaFBPWXFRbxIXQW1qRGFydUlOb2lkejdJUGhQT1lxUW8",
+        "model": "lyria-3.5",
+        "generated_at": "2026-10-05T09:05:06Z"
+      },
+      "vars": {
+        "chorus_index": "2",
+        "description": "Uma canção para o pôr do sol na praia",
+        "genre": "Bossa Nova",
+        "lyric_language": "pt-BR"
+      },
+      "data": {
+        "job_id": "fcf45e0a-0000-4ca2-9ba3-3d6ee008cb36",
+        "lyrics": "[Intro]\n\n[Verse]\nO mar beija a areia sem pressa\nO sol já se vai, me confessa\nQue o dia valeu a pena guardar\nEm cada onda que vem nos tocar\n\n[Chorus]\nBrilha o sol no horizonte a queimar!\nDeixa a música nos levar!\nO pôr do sol é a canção mais linda!\nQue a vida nos faz cantar!\n\n[Bridge]\nA brisa sopra leve no rosto\nTrazendo o perfume e o gosto\nDessa tarde que não quer ter fim\nGuarda esse momento pra mim\n\n[Chorus]\nBrilha o sol no horizonte a queimar!\nDeixa a música nos levar!\nO pôr do sol é a canção mais linda!\nQue a vida nos faz cantar!\n\n[Bridge]\n(E o tempo parece que para)\nNessa beleza que nos depara\nCoração bate no mesmo compasso\nE me perco no seu abraço\n\n[Chorus]\nBrilha o sol no horizonte a queimar!\nDeixa a música nos levar!\nO pôr do sol é a canção mais linda!\nQue a vida nos faz cantar!\n\n[Outro]\n(Até o próximo pôr do sol...)",
+        "prompt": "description: Uma canção para o pôr do sol na praia\ngenre: Bossa Nova\nvocals: vocals\nlyric_language: pt-BR\nphotos: 4",
+        "structure": [
+          {
+            "end": 11.7,
+            "section": "Intro",
+            "start": 0
+          },
+          {
+            "end": 28.1,
+            "section": "Verse",
+            "start": 11.7
+          },
+          {
+            "end": 46.5,
+            "section": "Chorus",
+            "start": 30.3
+          },
+          {
+            "end": 65.2,
+            "section": "Bridge",
+            "start": 49.5
+          },
+          {
+            "end": 83.3,
+            "section": "Chorus",
+            "start": 67.4
+          },
+          {
+            "end": 94.2,
+            "section": "Bridge",
+            "start": 85.8
+          },
+          {
+            "end": 111.3,
+            "section": "Chorus",
+            "start": 95.8
+          },
+          {
+            "end": 115.4,
+            "section": "Outro",
+            "start": 114.1
+          }
+        ]
+      }
+    }
+  ],
+  "schema": 2
+}

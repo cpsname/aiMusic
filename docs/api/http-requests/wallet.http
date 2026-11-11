@@ -1,0 +1,115 @@
+### Wallet BC — 积分余额 / 账本流水 / 项目池审批
+###
+### 权威路由: internal/wallet/port/http/routes.go (4 endpoints, 全部 JWT + App 签名)
+### 文档:     docs/api/wallet.md · docs/api/frontend-integration.md §8/§8.1
+### 机器契约: api/openapi/openapi.yaml#/paths/~1wallet 与 ~1wallet~1ledger
+###
+### 中间件链 (internal/platform/httpserver/router/router.go):
+###   /v1 全局: requestID → serverTime → traceID → recovery → logger → securityHeaders → appSignature
+###   /v1 鉴权子组再加: accountAuth(JWT) → tenantContext → rateLimit
+###   ⇒ 本文件全部请求都要 4 个签名头 + Bearer JWT
+###
+### 签名头 (internal/platform/httpserver/middleware/app_signature.go:74-77):
+###   X-Distribution-Code / X-App-Signature / X-Timestamp(秒) / X-Nonce
+###   签名 = HMAC-SHA256(distribution.secret_key, timestamp+nonce+sorted(body)),算法见 pkg/aigcsign
+###   调试签名用 cmd/signtool (与 server middleware byte-for-byte 一致)
+###
+### 变量 (自行在 REST Client 环境里定义):
+###   {{base_url}} e.g. http://localhost:8080   {{access_token}} JWT
+###   {{distribution_code}} {{app_signature}} {{ts}} {{nonce}}
+###
+### 红线:严禁在 query / body 传 account_id / app_id / tenant_id —— 由中间件注入,
+###      客户端传值会被忽略(传了也不生效,不要据此设计跨账号查询)。
+
+############################################
+# 1. 积分胶囊 — GET /v1/wallet
+#
+# 单一职责轻查询(只打钱包表)。用于:胶囊刷新 / 提交任务后轮询 frozen 变化 / 充值回来对余额。
+# 200 → data { balance, frozen, total_credited, total_debited, features[] }
+#   balance = 可用积分 = 总额 - 冻结 (domain Wallet.Available())
+# 新访客钱包行未建 → 全 0 + features:[],code 仍为 0(不报错)
+#
+# ⚠ 与 GET /v1/auth/me 的 data.wallet 同源同字段(都出自 WalletSummaryHandler.GetWalletDetail)。
+#   /auth/me 是冷启动 4 路并行聚合(还查会话计数 + 订阅),不要拿它做余额轮询。
+############################################
+
+GET {{base_url}}/v1/wallet
+Authorization: Bearer {{access_token}}
+X-Distribution-Code: {{distribution_code}}
+X-App-Signature: {{app_signature}}
+X-Timestamp: {{ts}}
+X-Nonce: {{nonce}}
+
+############################################
+# 2. 账本流水首页 — GET /v1/wallet/ledger
+#
+# ★ 已上线端点(081367bf,2026-07-16 起在册)。做积分流水 / 账本面板直接接它,
+#   禁止另起一套流水接口 —— 全仓仅此一个流水读面。
+#
+# 倒序 keyset 分页:首页省略 cursor;limit 默认 20,服务端钳制上限 100。
+# 200 → data { entries[], next_cursor }   next_cursor 缺省或 0 = 没有更多
+# 新访客钱包未建 → entries:[] 空页(非报错)
+############################################
+
+GET {{base_url}}/v1/wallet/ledger?limit=20
+Authorization: Bearer {{access_token}}
+X-Distribution-Code: {{distribution_code}}
+X-App-Signature: {{app_signature}}
+X-Timestamp: {{ts}}
+X-Nonce: {{nonce}}
+
+############################################
+# 3. 账本流水翻页 — 把上一页返回的 next_cursor 原样回传
+#
+# cursor 是不透明 keyset token(内部取 id < cursor),不要当资源 ID 用、不要自行推算。
+############################################
+
+GET {{base_url}}/v1/wallet/ledger?cursor=81&limit=50
+Authorization: Bearer {{access_token}}
+X-Distribution-Code: {{distribution_code}}
+X-App-Signature: {{app_signature}}
+X-Timestamp: {{ts}}
+X-Nonce: {{nonce}}
+
+### 链路核对(checklist §7):一次生成的 预扣 freeze → 结算 debit → 差额退 unfreeze
+### 三条流水共享同一 group_bid(= 该次 freeze 流水的 bid)。并发多任务交错时按 group_bid
+### 聚合即得完整链路("预扣 100 → 结算 80 → 退 20")。充值 credit / 过期 expire /
+### 调整 adjust 无冻结关联,group_bid 为空 —— 前端退化为不分组(不要误合并)。
+### amount 正=充入 / 负=扣减(按符号上色);balance_after / frozen_after 是该笔后的快照。
+
+############################################
+# 4. 项目池超额预授权 — 申请 (POST /v1/wallet/pool-approvals)
+#
+# 池余额不足触发 40203 之后的自助通道 (ADR-016 D4)。
+# app_id 由签名中间件注入,不收 body。
+# 错误码:40205 超 headroom · 40332 池不可用/无权 · 40421 不存在 · 40922 已处置或过期
+############################################
+
+POST {{base_url}}/v1/wallet/pool-approvals
+Authorization: Bearer {{access_token}}
+X-Distribution-Code: {{distribution_code}}
+X-App-Signature: {{app_signature}}
+X-Timestamp: {{ts}}
+X-Nonce: {{nonce}}
+Content-Type: application/json
+
+{
+  "workspace_bid": "REPLACE_ME_WORKSPACE_BID",
+  "requested_total": 500,
+  "reason": "批量出图预算追加"
+}
+
+############################################
+# 5. 项目池超额预授权 — 申请人自查 (GET /v1/wallet/pool-approvals)
+#
+# 账号归属即授权,只返回本人发起的申请;审批处置(approve/reject/headroom 配置)
+# 归独立 console 经 facade 消费,本仓 API-Only 不设 /admin HTTP。
+# 200 → data { approvals[] }(审批人内部账号 ID 不外露)
+############################################
+
+GET {{base_url}}/v1/wallet/pool-approvals?limit=20
+Authorization: Bearer {{access_token}}
+X-Distribution-Code: {{distribution_code}}
+X-App-Signature: {{app_signature}}
+X-Timestamp: {{ts}}
+X-Nonce: {{nonce}}

@@ -1,0 +1,31 @@
+# The "Photo to Song" custom product page's creative assets (ADR-0039): page
+# cpp/photo.yaml in ascpub's listing (its deep link and keywords live there),
+# target custom_product_page:photo. Header and search results images: one
+# universal (no text) for the page's default, one per storefront with the
+# phrase. Header: the lyric video made from the photos; search results: the
+# four photos picked.
+id: cpp-photo
+title: Custom product page "Photo to Song"
+targets: ["custom_product_page:photo"]
+universal_from: en-US
+backdrop: {role: photo, script: B, index: 2}
+text: storeCreativePhoto
+tags: ["cpp:photo"]
+
+# What the page shows (template ADR-0015): per localization the page has the
+# localized image (product decision 2026-10-16), the universal one elsewhere.
+shelf:
+  header: {default: cpp.photo.header, locales: "cpp.photo.header.{storefront}"}
+  search_results: {default: cpp.photo.search, locales: "cpp.photo.search.{storefront}"}
+
+slots:
+  - placements: [product_page_header]
+    spec: header_21x9
+    assets:
+      - {id: cpp.photo.header, type: image, frame: {script: B, scene: lyricVideo, at: 3.0}}
+      - {id: "cpp.photo.header.{storefront}", type: image, frame: {script: B, scene: lyricVideo, at: 3.0}}
+  - placements: [app_store_search_results]
+    spec: search_3x2
+    assets:
+      - {id: cpp.photo.search, type: image, frame: {script: B, scene: photos, at: -0.3}}
+      - {id: "cpp.photo.search.{storefront}", type: image, frame: {script: B, scene: photos, at: -0.3}}

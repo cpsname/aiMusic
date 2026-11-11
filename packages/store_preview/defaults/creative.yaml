@@ -1,0 +1,161 @@
+# App Store creative assets — the product page header and the search results
+# asset (iOS 27 and later). Apple's text, verbatim, with every threshold below:
+# docs/store/creative-assets-specs.md. Decisions: template ADR-0009 – 0013.
+#
+# Sources (all read 2026-10-08):
+#   [A] App Store Connect Help › Creative assets specifications
+#   [R] App Store Connect API › RefData (GET /v1/appAssetLibraryRefData), as
+#       ascpub captured it (src/schema/asset-refdata.snapshot.json)
+#   [B] Apple › App Store asset best practices
+#   [M] a third-party measurement of App Store Connect's device preview
+#       (github.com/dredfort42/dredfit/pull/306): on iPhone the header shows
+#       x 330–3530 of 3840, content belongs inside x 520–3320. Apple publishes
+#       no pixel safe area, only "within the center of your composition" [B].
+#
+# Where [A] and [R] differ, the stricter holds (ADR-0013): Header images are
+# PNG only [R] ([A] also lists JPEG); Header videos last at least 10 s and
+# Search videos at least 15 s, as RefData's spec names say (t10~30, t15~30)
+# while [A] and RefData's own duration field say 5 s.
+
+# Where an asset goes: the App Store Connect placement type, and the manifest
+# type prefix (header_image, search_video, …; contract assets-manifest).
+placements:
+  app_screenshot: {asc: APP_SCREENSHOT, manifest_types: {image: screenshot}}
+  product_page_header: {asc: PRODUCT_PAGE_HEADER_ASSET, type_prefix: header}
+  app_store_search_results: {asc: APP_STORE_SEARCH_RESULTS_ASSET, type_prefix: search}
+
+# Each spec: the placements it serves, its nominal aspect ratio, and what an
+# image and a video must be. `width`/`height` = an exact size (matched pixel
+# for pixel, never by a ratio: 3840×1646 is not exactly 21:9); `min`/`max` = a
+# range, whose sizes must hold the aspect exactly (w·b = h·a in integers, no
+# tolerance: Apple publishes none). `render` = the size this tool renders a
+# range spec at.
+specs:
+  screenshot_iphone_6_9:
+    placements: [app_screenshot]
+    aspect: "110:239"
+    image: {width: 1320, height: 2868, extensions: [.png]}
+  screenshot_ipad_13:
+    placements: [app_screenshot]
+    aspect: "3:4"
+    image: {width: 2064, height: 2752, extensions: [.png]}
+  header_21x9:
+    placements: [product_page_header]
+    aspect: "21:9"
+    image: {width: 3840, height: 1646, extensions: [.png]}                     # [A] [R] i3840x1646a0
+    video: {width: 3840, height: 1646, extensions: [.mp4, .m4v, .mov],         # [A] [R] v3840x1646f30f60t10~30u0
+            fps: [30, 60], min_seconds: 10, max_seconds: 30}
+  search_3x2:
+    placements: [app_store_search_results]
+    aspect: "3:2"
+    image: {min: [1920, 1280], max: [3840, 2560], render: [3840, 2560],        # [A] [R] i3x2w1920~3840a0
+            extensions: [.png, .jpg, .jpeg]}
+    # 2880×1920 keeps H.264 within Level 5.1 (3840×2560 does not).
+    video: {min: [1920, 1280], max: [3840, 2560], render: [2880, 1920],        # [A] [R] v3x2w1920~3840f30f60t15~30u0
+            extensions: [.mp4, .m4v, .mov], fps: [30, 60], min_seconds: 15, max_seconds: 30}
+  universal_16x9:
+    placements: [product_page_header, app_store_search_results]
+    aspect: "16:9"
+    image: {width: 5244, height: 2950, extensions: [.png]}                     # [A] [R] i5244x2950a0
+
+# The App Store Connect localizations a per-storefront asset's locale must be
+# one of (App Store Connect's locale codes, as ascpub lists them; a storefront
+# id outside this list cannot be bound to a localization).
+asc_locales: [ar-SA, bn-BD, ca, cs, da, de-DE, el, en-AU, en-CA, en-GB, en-US,
+  es-ES, es-MX, fi, fr-CA, fr-FR, gu-IN, he, hi, hr, hu, id, it, ja, kn-IN, ko,
+  ml-IN, mr-IN, ms, nl-NL, 'no', or-IN, pa-IN, pl, pt-BR, pt-PT, ro, ru, sk,
+  sl-SI, sv, ta-IN, te-IN, th, tr, uk, ur-PK, vi, zh-Hans, zh-Hant]
+
+limits:
+  max_bytes: 524288000        # [R] maxFileSize of every creative spec
+  # Images carry no alpha [A] [R]. Videos carry no audio stream: muted in
+  # search results (can't be unmuted) and by default on the product page [A].
+  video_codecs: [h264, hevc]
+
+# Composition, per aspect ratio. Every length is a fraction of the canvas
+# height, except the safe area's width (of the canvas width). One phone
+# panel of real app footage and, beside it, a text block (the brand row and
+# the phrase); the two centred together inside the safe area. The panel is
+# never enlarged (a recording is only scaled down).
+#
+# safe     the central area every element stays in ([B]; 21:9 from [M]:
+#          0.72 × 3840 = x 538–3302, inside 520–3320)
+# panel    its height, as a fraction of the safe area's height; corner radius
+#          as a fraction of its width; a hairline edge (in the text colour) so
+#          a dark screen stays distinct from a dark backdrop
+# gap      between the panel and the text block
+# brand    the icon's size, the name's type size, the space under the row
+# text     the phrase's type size and its line limit
+# backdrop the licensed photo behind: cover-scaled, blurred, darkened, and in a
+#          video pushed in and back out once (`zoom` at the midpoint), so the
+#          last frame meets the first
+# shadow   under the panel
+layouts:
+  "21:9":
+    safe: {width: 0.72, height: 0.84}
+    panel: {height: 1.0, corner: 0.11, edge: {width: 0.0018, opacity: 0.28}}
+    gap: 0.065
+    brand: {icon: 0.105, name: 0.062, space: 0.05}
+    text: {size: 0.088, max_lines: 2}
+    backdrop: {zoom: 0.05, blur: 0.022, brightness: -0.26, saturation: 0.85}
+    shadow: {opacity: 0.45, blur: 0.03, offset: 0.012}
+  "3:2":
+    safe: {width: 0.84, height: 0.84}
+    panel: {height: 1.0, corner: 0.11, edge: {width: 0.0018, opacity: 0.28}}
+    gap: 0.055
+    brand: {icon: 0.085, name: 0.05, space: 0.04}
+    text: {size: 0.07, max_lines: 3}
+    backdrop: {zoom: 0.05, blur: 0.02, brightness: -0.26, saturation: 0.85}
+    shadow: {opacity: 0.45, blur: 0.025, offset: 0.01}
+  "16:9":
+    safe: {width: 0.70, height: 0.74}
+    panel: {height: 1.0, corner: 0.11, edge: {width: 0.0018, opacity: 0.28}}
+    gap: 0.06
+    brand: {icon: 0.1, name: 0.06, space: 0.045}
+    text: {size: 0.075, max_lines: 2}
+    backdrop: {zoom: 0.05, blur: 0.02, brightness: -0.26, saturation: 0.85}
+    shadow: {opacity: 0.45, blur: 0.028, offset: 0.011}
+
+  "110:239":
+    axis: vertical
+    safe: {width: 0.88, height: 0.92}
+    panel: {height: 0.72, corner: 0.06, edge: {width: 0.001, opacity: 0.28}}
+    gap: 0.02
+    brand: {icon: 0.022, name: 0.014, space: 0.018}
+    text: {size: 0.037, max_lines: 3}
+    backdrop: {zoom: 0.05, blur: 0.022, brightness: -0.30, saturation: 0.85}
+    shadow: {opacity: 0.45, blur: 0.02, offset: 0.008}
+  "3:4":
+    axis: vertical
+    safe: {width: 0.90, height: 0.92}
+    panel: {height: 0.72, corner: 0.04, edge: {width: 0.001, opacity: 0.28}}
+    gap: 0.02
+    brand: {icon: 0.028, name: 0.018, space: 0.018}
+    text: {size: 0.04, max_lines: 3}
+    backdrop: {zoom: 0.05, blur: 0.022, brightness: -0.30, saturation: 0.85}
+    shadow: {opacity: 0.45, blur: 0.02, offset: 0.008}
+
+encoding:
+  video:
+    profile: high
+    level: '5.1'
+    crf: 16
+    max_bitrate: 50000000
+    preset: slow
+    fps: 30
+    gop_seconds: 1
+  # Scene to scene in the panel: a dissolve (a cut where the footage runs on
+  # in the same recording); the last frames dissolve into the first ([B]
+  # "Loop seamlessly").
+  scene_dissolve: 0.4
+  loop_dissolve: 0.5
+
+checks:
+  # White-on-backdrop legibility under the phrase (WCAG 2 contrast ratio):
+  # the backdrop's mean and its 90th-percentile luma, measured where the text
+  # block sits ([B] "Keep it legible").
+  min_contrast_mean: 4.5
+  min_contrast_p90: 3.0
+  # The loop's seam: PSNR between the last and the first frame ([B] "Loop
+  # seamlessly … without visible jumps").
+  min_loop_psnr: 40

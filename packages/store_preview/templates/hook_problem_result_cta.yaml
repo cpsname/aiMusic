@@ -1,0 +1,24 @@
+# Hook → problem → result → call to action: open on the moment the app
+# solves, show the friction it removes, then the result. For utilities and
+# tools whose value is a before/after.
+#
+# Rhythms (each adds up to its seconds, ≥ 85 % footage), flex and the hook
+# rule: see input_wait_result_share.yaml.
+id: hook_problem_result_cta
+title: Hook → problem → result → call to action
+description: Open on the payoff, show the friction the app removes, then the result and the call to action.
+flex: 2.0
+hook:
+  seconds: 3
+beats:
+  - {id: intro, kind: card}
+  - {id: hook, kind: scene}
+  - {id: problem, kind: scene}
+  - {id: bridge, kind: bridge, optional: true}
+  - {id: result, kind: scene, finished: true}
+  - {id: proof, kind: scene, optional: true}
+  - {id: outro, kind: card}
+rhythms:
+  15: {intro: 0.8, hook: 2.7, problem: 3.0, result: 7.1, outro: 1.4}
+  22: {intro: 0.8, hook: 3.0, problem: 4.5, bridge: 0.5, result: 8.6, proof: 3.0, outro: 1.6}
+  25: {intro: 1.0, hook: 3.0, problem: 5.0, bridge: 0.5, result: 9.5, proof: 4.0, outro: 2.0}

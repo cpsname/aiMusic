@@ -1,0 +1,32 @@
+# The product page header's video: a muted loop that leads with the value.
+# Apple (asset best practices): "Focus on a single, clear idea", "Start
+# strong. Lead with your value proposition or most compelling feature",
+# "Loop seamlessly", and the creative "must work silently first".
+#
+# The finished result plays first (`hero`, the poster frame's scene), then an
+# optional detail of it. Scenes run in real time (no speed-up: "Avoid quick
+# cuts and fast-moving visuals"); scene to scene the panel dissolves (a cut
+# where the footage runs on in the same recording), and the last frames
+# dissolve into the first, so the loop has no seam.
+#
+# The product page header video's floor is 10 s (defaults/creative.yaml,
+# ADR-0013): 12 and 16 s fit it, 8 s suits a spec whose floor is 5 s.
+#
+# Rhythms: each beat's nominal seconds; a creative may stretch or squeeze a
+# beat by ±flex, drop the optional one, and must total the rhythm. Hook: the
+# phrase is on screen from the first frame through `hook.seconds` (a
+# creative's text stays for the whole loop).
+id: banner_loop
+format: loop
+title: Banner loop
+description: The finished result first, then a detail of it; muted, looping without a seam.
+flex: 2.0
+hook:
+  seconds: 2
+beats:
+  - {id: hero, kind: scene, finished: true}
+  - {id: detail, kind: scene, optional: true}
+rhythms:
+  8: {hero: 5.5, detail: 2.5}
+  12: {hero: 7.0, detail: 5.0}
+  16: {hero: 8.5, detail: 7.5}

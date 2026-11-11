@@ -1,0 +1,56 @@
+### Runtime BC — 语音拨号前预检(2026-08-24)
+###
+### 契约:     docs/api/live-audio-client-contract-v1.0.md §3.1.1
+### 实现:     internal/runtime/port/http/live_handler.go (Quote)
+###           internal/runtime/app/service/live_quote.go
+###
+### 用途:
+###   主: 详情页 T0 费用展示数据源 — 单价/余额/可通话分钟, 服务端权威计算,
+###       单价在拨号前唯一可查面; 可据此拨号前就把按钮切「去充值」态
+###   兜底: 握手栈取不到状态码的实现用它判因 (2026-08-24 勘误: xing_yuan 实测
+###       可直读握手 402 + body code=40200, 判因首选直读, 契约 §3.1)
+###
+### 纯读零副作用(不冻结/不占租约/不建上游连接), 可反复调用。
+### 硬闸仍在 WS 握手(Admit): 预检说可拨、拨号时余额已花掉, 握手照样 402。
+###
+### env 变量: see docs/api/http-requests/http-client.env.json
+###   - {{base_url}}     e.g. http://localhost:8080
+###   - {{access_token}} JWT
+###   - {{app_id}} + {{app_signature}}  see cmd/signtool
+
+############################################
+# 拨号前预检
+############################################
+
+# @name liveQuote
+GET {{base_url}}/v1/live/quote
+Authorization: Bearer {{access_token}}
+X-App-ID: {{app_id}}
+X-App-Signature: {{app_signature}}
+
+### 响应形态(计费模式 · 余额不足 → 客户端弹购买):
+# {
+#   "code": 0,
+#   "data": {
+#     "available": false,
+#     "reason": "insufficient_credits",
+#     "credit_per_minute": 12,
+#     "balance_credits": 0,
+#     "callable_minutes": 0,
+#     "max_duration_seconds": 2700
+#   }
+# }
+#
+### 响应形态(计费模式 · 余额充足):
+# { "data": { "available": true, "credit_per_minute": 12,
+#             "balance_credits": 100, "callable_minutes": 8,
+#             "max_duration_seconds": 2700 } }
+#
+### 响应形态(免费模式 — 费用三字段**缺席**, 客户端隐藏全部费用 UI):
+# { "data": { "available": true, "max_duration_seconds": 2700 } }
+#
+### 响应形态(面未开启/配置不完整 — 确定性, 客户端隐藏语音入口):
+# { "data": { "available": false, "reason": "unavailable" } }
+#
+### 基础设施故障(可重试, **不要**据此弹购买):
+# { "code": 50323, "message": "voice sessions are temporarily unavailable" }

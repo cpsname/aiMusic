@@ -1,0 +1,34 @@
+# App Store preview slots (App Store Connect › App preview specifications,
+# docs/store/apple-preview-rules.md). An app records the slots its app.yaml
+# lists under `devices`; `ipad` only when the app ships for iPad
+# (UIDeviceFamily contains 2), otherwise an iPad would film a phone-sized
+# compatibility window.
+#
+# id            the slot id app.yaml and --devices use
+# width/height  the accepted portrait resolution the preview is rendered at
+# asc_display   the App Store Connect slot the file is uploaded to
+# simulator     the simulator device type recordings are filmed on
+# caption_size  caption type size (px) at this resolution
+# caption_bottom the caption plate's distance from the bottom edge (px):
+#               inside the safe area, above the home indicator
+# device_family the UIDeviceFamily value the app must declare for this slot
+# file_suffix   inserted before .mp4 in dist (A.mp4 / A.ipad.mp4)
+slots:
+  iphone:
+    width: 886
+    height: 1920
+    asc_display: 'iPhone 6.9" Display'
+    simulator: iPhone 17 Pro Max
+    caption_size: 44
+    caption_bottom: 168
+    device_family: 1
+    file_suffix: ''
+  ipad:
+    width: 1200
+    height: 1600
+    asc_display: 'iPad 13" Display'
+    simulator: iPad Pro 13-inch (M5)
+    caption_size: 46
+    caption_bottom: 96
+    device_family: 2
+    file_suffix: .ipad

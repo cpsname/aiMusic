@@ -1,0 +1,46 @@
+{
+  "_doc": "tool/diff_report settings (ADR-0007). Every entry that exempts a metric names its reason and decision record.",
+  "systemChromePt": {
+    "top": 54,
+    "bottom": 34
+  },
+  "sampledTokens": [
+    "canvas",
+    "surface",
+    "surfaceMuted",
+    "accent",
+    "accentSoft",
+    "ink",
+    "inkSecondary"
+  ],
+  "unsampledTokens": {
+    "hairline": "1-pt strokes: never a flat area large enough to sample",
+    "inkTertiary": "placeholder and disabled glyphs only",
+    "success": "no success state is drawn in the prototypes",
+    "danger": "error text only (P18); no flat danger fill to sample"
+  },
+  "specTokens": {
+    "_doc": "Values fixed by the phase-1 spec (#FFF6EE / #C9472B / #1A1A1A / #8A8A8A); a prototype raster that disagrees is reported, the spec value is kept.",
+    "canvas": "#fff6ee",
+    "accent": "#c9472b",
+    "ink": "#1a1a1a",
+    "inkSecondary": "#8a8a8a"
+  },
+  "geometryWaivers": {
+    "ctaHeight": "ADR-0019: primary buttons are 54 pt (HIG ≥ 44 pt tap target, Dynamic Type); the prototypes draw ≈ 40 pt"
+  },
+  "pageWaivers": {
+    "_doc": "Per-page metrics that do not measure what they claim on that page; each names its reason.",
+    "P03": {
+      "ctaWidth": "ADR-0033: P03 is the create home with the tile picked (composer state B); its one primary action spans the composer card, while the prototype draws a separate form page with its own CTA",
+      "ctaInset": "same as ctaWidth",
+      "gutter": "ADR-0033: the composer of state B sits on the create home's dense gutter (SongletSpace.gutterDense, 12 pt) like P01; the prototype's 17 pt is the margin of the separate form page it draws"
+    },
+    "P04": {
+      "gutter": "the prototype draws the system PhotosPicker over the page; its middle band is the picker grid, not a page edge"
+    }
+  },
+  "tokenNotes": {
+    "accentSoft": "the prototypes use several pale tints for this role (#fbe4d8 on P05 … #fbece5 on P03, near-white grey chips on P03); #fbece5 has the lowest median ΔE of the values tried (#fbe4da 3.3, #fde9e2 2.4) and the best accent-on-tint contrast"
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "de": {
+    "storePreviewCHook": "Wähle dein Land",
+    "storePreviewCStyle": "Stile aus deinem Land",
+    "storePreviewCDownload": "Song + Lyrics laden",
+    "storePreviewCKeep": "Für immer deins.",
+    "storePreviewCLicense": "Inkl. kommerzieller Lizenz"
+  },
+  "en": {
+    "storePreviewCHook": "Pick your country",
+    "storePreviewCStyle": "Styles from your country",
+    "storePreviewCDownload": "Download the song + lyrics",
+    "storePreviewCKeep": "Yours to keep.",
+    "storePreviewCLicense": "Commercial license included"
+  },
+  "es": {
+    "storePreviewCHook": "Elige tu país",
+    "storePreviewCStyle": "Estilos de tu país",
+    "storePreviewCDownload": "Descarga canción y letra",
+    "storePreviewCKeep": "Es tuya para siempre.",
+    "storePreviewCLicense": "Licencia comercial incluida"
+  },
+  "fr": {
+    "storePreviewCHook": "Choisissez votre pays",
+    "storePreviewCStyle": "Les styles de votre pays",
+    "storePreviewCDownload": "Téléchargez la chanson",
+    "storePreviewCKeep": "Elle est à vous.",
+    "storePreviewCLicense": "Licence commerciale incluse"
+  },
+  "hi": {
+    "storePreviewCHook": "अपना देश चुनें",
+    "storePreviewCStyle": "आपके देश की शैलियाँ",
+    "storePreviewCDownload": "गाना और बोल डाउनलोड करें",
+    "storePreviewCKeep": "हमेशा आपका।",
+    "storePreviewCLicense": "कमर्शियल लाइसेंस शामिल"
+  },
+  "id": {
+    "storePreviewCHook": "Pilih negaramu",
+    "storePreviewCStyle": "Gaya musik negaramu",
+    "storePreviewCDownload": "Unduh lagu dan liriknya",
+    "storePreviewCKeep": "Milikmu selamanya.",
+    "storePreviewCLicense": "Termasuk lisensi komersial"
+  },
+  "ja": {
+    "storePreviewCHook": "国を選ぶ",
+    "storePreviewCStyle": "あなたの国のスタイルで",
+    "storePreviewCDownload": "曲と歌詞をダウンロード",
+    "storePreviewCKeep": "ずっとあなたのもの。",
+    "storePreviewCLicense": "商用ライセンス付き"
+  },
+  "ko": {
+    "storePreviewCHook": "국가를 선택하세요",
+    "storePreviewCStyle": "내 나라의 장르로",
+    "storePreviewCDownload": "노래와 가사 다운로드",
+    "storePreviewCKeep": "영원히 내 것으로.",
+    "storePreviewCLicense": "상업용 라이선스 포함"
+  },
+  "pt_BR": {
+    "storePreviewCHook": "Escolha seu país",
+    "storePreviewCStyle": "Estilos do seu país",
+    "storePreviewCDownload": "Baixe a música e a letra",
+    "storePreviewCKeep": "É sua para sempre.",
+    "storePreviewCLicense": "Licença comercial inclusa"
+  },
+  "tr": {
+    "storePreviewCHook": "Ülkeni seç",
+    "storePreviewCStyle": "Ülkenin müzik tarzları",
+    "storePreviewCDownload": "Şarkıyı ve sözleri indir",
+    "storePreviewCKeep": "Sonsuza dek senin.",
+    "storePreviewCLicense": "Ticari lisans dahil"
+  },
+  "vi": {
+    "storePreviewCHook": "Chọn quốc gia của bạn",
+    "storePreviewCStyle": "Dòng nhạc của nước bạn",
+    "storePreviewCDownload": "Tải bài hát và lời",
+    "storePreviewCKeep": "Mãi là của bạn.",
+    "storePreviewCLicense": "Kèm giấy phép thương mại"
+  },
+  "zh_Hans": {
+    "storePreviewCHook": "选择你的国家",
+    "storePreviewCStyle": "你所在国家的曲风",
+    "storePreviewCDownload": "下载歌曲和歌词",
+    "storePreviewCKeep": "永久属于你。",
+    "storePreviewCLicense": "附商用许可"
+  },
+  "zh_Hant": {
+    "storePreviewCHook": "選擇你的國家",
+    "storePreviewCStyle": "你所在國家的曲風",
+    "storePreviewCDownload": "下載歌曲和歌詞",
+    "storePreviewCKeep": "永久屬於你。",
+    "storePreviewCLicense": "附商用授權"
+  }
+}

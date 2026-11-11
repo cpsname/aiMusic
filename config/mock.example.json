@@ -1,0 +1,11 @@
+{
+  "ENV": "mock",
+  "BASE_URL": "http://localhost:8787/v1",
+  "DISTRIBUTION_CODE": "songlet_ios",
+  "DISTRIBUTION_SECRET": "songlet-mock-secret",
+  "APP_CODE": "songlet",
+  "BUNDLE_ID": "com.songlet.ios",
+  "IAP_CHANNEL": "appstore",
+  "TERMS_URL": "https://songlet.app/terms",
+  "PRIVACY_URL": "https://r2.showsapp.org/Songlet/privacy_policy.html"
+}

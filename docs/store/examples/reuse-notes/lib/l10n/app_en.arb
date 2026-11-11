@@ -1,0 +1,47 @@
+{
+  "@@locale": "en",
+  "title": "Reuse Notes",
+  "storePreviewAIntro": "Ideas, kept close",
+  "@storePreviewAIntro": {
+    "description": "App Store preview text (store_preview/reuse_notes)."
+  },
+  "storePreviewAHook": "Keep a thought",
+  "@storePreviewAHook": {
+    "description": "App Store preview text (store_preview/reuse_notes)."
+  },
+  "storePreviewAFeature2": "Turn it into a list",
+  "@storePreviewAFeature2": {
+    "description": "App Store preview text (store_preview/reuse_notes)."
+  },
+  "storePreviewAFeature3": "Pin what matters",
+  "@storePreviewAFeature3": {
+    "description": "App Store preview text (store_preview/reuse_notes)."
+  },
+  "storePreviewCta": "Keep your next idea",
+  "@storePreviewCta": {
+    "description": "App Store preview text (store_preview/reuse_notes)."
+  },
+  "storePreviewDisclosure": "Some features require a subscription",
+  "@storePreviewDisclosure": {
+    "description": "App Store preview text (store_preview/reuse_notes)."
+  },
+  "storeCreativeHeader": "Ideas, kept close",
+  "@storeCreativeHeader": {
+    "description": "App Store creative asset phrase (store_preview/reuse_notes/creatives)."
+  },
+  "storeCreativeSearch": "From thought to checklist",
+  "@storeCreativeSearch": {
+    "description": "App Store creative asset phrase (store_preview/reuse_notes/creatives)."
+  },
+  "storeCreativeCppDailyPlanners": "Plan your next day",
+  "@storeCreativeCppDailyPlanners": {
+    "description": "App Store creative asset phrase (store_preview/reuse_notes/creatives)."
+  },
+  "tagline": "Make room for your ideas",
+  "noteTitle": "Weekend ideas",
+  "noteBody": "Walk by the water. Visit a bookshop. Write something worth keeping.",
+  "noteChecklist": "☐ Take a notebook  ☐ Leave time to explore",
+  "notePinned": "Pinned to your notebook",
+  "actionChecklist": "Turn ideas into a checklist",
+  "actionPin": "Pin this note"
+}

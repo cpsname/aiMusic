@@ -1,0 +1,152 @@
+[
+  {
+    "file": "assets/templates/birthday_wish.jpg",
+    "source": "docs/ui/P01.png",
+    "width": 177,
+    "height": 133
+  },
+  {
+    "file": "assets/templates/birthday_party.jpg",
+    "source": "docs/ui/P01.png",
+    "width": 173,
+    "height": 133
+  },
+  {
+    "file": "assets/templates/love_story.jpg",
+    "source": "docs/ui/P01.png",
+    "width": 174,
+    "height": 133
+  },
+  {
+    "file": "assets/templates/thank_a_friend.jpg",
+    "source": "docs/ui/P01.png",
+    "width": 177,
+    "height": 133
+  },
+  {
+    "file": "assets/templates/party_invite.jpg",
+    "source": "docs/ui/P01.png",
+    "width": 177,
+    "height": 133
+  },
+  {
+    "file": "assets/templates/wedding.jpg",
+    "source": "docs/ui/P01.png",
+    "width": 173,
+    "height": 133
+  },
+  {
+    "file": "assets/templates/in_memory.jpg",
+    "source": "docs/ui/P01.png",
+    "width": 174,
+    "height": 133
+  },
+  {
+    "file": "assets/templates/festival.jpg",
+    "source": "docs/ui/P01.png",
+    "width": 177,
+    "height": 133
+  },
+  {
+    "file": "assets/templates/ringtone.jpg",
+    "source": "docs/ui/P01.png",
+    "width": 177,
+    "height": 135
+  },
+  {
+    "file": "assets/templates/team_anthem.jpg",
+    "source": "docs/ui/P01.png",
+    "width": 173,
+    "height": 135
+  },
+  {
+    "file": "assets/templates/sports_recap.jpg",
+    "source": "docs/ui/P01.png",
+    "width": 174,
+    "height": 135
+  },
+  {
+    "file": "assets/templates/rap_battle.jpg",
+    "source": "docs/ui/P01.png",
+    "width": 177,
+    "height": 135
+  },
+  {
+    "file": "assets/templates/comedy.jpg",
+    "source": "docs/ui/P01.png",
+    "width": 177,
+    "height": 138
+  },
+  {
+    "file": "assets/templates/pet_anthem.jpg",
+    "source": "docs/ui/P01.png",
+    "width": 173,
+    "height": 138
+  },
+  {
+    "file": "assets/templates/hometown.jpg",
+    "source": "docs/ui/P01.png",
+    "width": 174,
+    "height": 138
+  },
+  {
+    "file": "assets/templates/business_promo.jpg",
+    "source": "docs/ui/P01.png",
+    "width": 177,
+    "height": 138
+  },
+  {
+    "file": "assets/occasions/birthday.jpg",
+    "source": "docs/ui/P16.png",
+    "width": 126,
+    "height": 170
+  },
+  {
+    "file": "assets/occasions/anniversary.jpg",
+    "source": "docs/ui/P16.png",
+    "width": 125,
+    "height": 170
+  },
+  {
+    "file": "assets/occasions/confession.jpg",
+    "source": "docs/ui/P16.png",
+    "width": 126,
+    "height": 172
+  },
+  {
+    "file": "assets/occasions/wedding.jpg",
+    "source": "docs/ui/P16.png",
+    "width": 125,
+    "height": 172
+  },
+  {
+    "file": "assets/occasions/memorial.jpg",
+    "source": "docs/ui/P16.png",
+    "width": 126,
+    "height": 175
+  },
+  {
+    "file": "assets/occasions/festival.jpg",
+    "source": "docs/ui/P16.png",
+    "width": 125,
+    "height": 175
+  },
+  {
+    "file": "assets/occasions/brand.jpg",
+    "source": "docs/ui/P16.png",
+    "width": 126,
+    "height": 175
+  },
+  {
+    "file": "assets/occasions/soundtrack.jpg",
+    "source": "docs/ui/P16.png",
+    "width": 125,
+    "height": 175
+  },
+  {
+    "file": "assets/festivals/carnival.jpg",
+    "source": "docs/ui/P16.png",
+    "width": 325,
+    "height": 240
+  }
+]

@@ -1,0 +1,5 @@
+# Script C
+c_songs:
+  ja: {region: JP, genre: J-pop Indie Pop, description: 夏祭りの夜に贈る歌}
+  pt-BR: {region: BR, genre: Bossa Nova, description: Uma canção para o pôr do sol na praia}
+  hi: {region: IN, genre: Bhangra, description: दिवाली की रात का गीत}

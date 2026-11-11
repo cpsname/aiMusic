@@ -1,0 +1,2645 @@
+{
+  "entries": [
+    {
+      "id": "song.A.de-DE",
+      "type": "audio",
+      "role": "song",
+      "locale": "de-DE",
+      "script": "A",
+      "file": "songs/de-DE_A.mp3",
+      "license": {
+        "provider": "lyria",
+        "id": "v1_Chd4R1BEYXNybk1fU3N6N0lQb1A2UHlRaxIXeEdQRGFzcm5NX1NzejdJUG9QNlB5UWs",
+        "model": "lyria-3.5",
+        "generated_at": "2026-10-05T08:46:53Z"
+      },
+      "vars": {
+        "chorus_index": "2",
+        "keyword1": "Kaffee",
+        "keyword2": "Wandern",
+        "keyword3": "Sonntag",
+        "lyric_language": "de",
+        "recipient": "Alex",
+        "sung_name": "Alex"
+      },
+      "data": {
+        "job_id": "6fe1058b-b70d-4517-a263-d802c2c2c319",
+        "lyrics": "[Intro]\n\n[Verse]\nGuten Morgen, der Kaffee ist heiß,\nWir tanzen ganz leise im Kreis.\nEin neuer Tag bricht sanft herein,\nSoll heute nur dein Sonntag sein.\n\n[Chorus]\nAlles Gute zum Geburtstag, lieber Alex!\nWir feiern das Leben, so schön und komplex.\nHeut' dreht sich die Welt nur um dich allein,\nMögest du immer so glücklich sein!\n\n[Bridge]\nLass uns rausgeh'n und wandern gehn,\nDie Schönheit der Natur ansehn.\nJeder Schritt an deiner Hand,\nBringt uns ins schönste Wunderland.\n\n[Chorus]\nAlles Gute zum Geburtstag, lieber Alex!\nWir feiern das Leben, so schön und komplex.\nHeut' dreht sich die Welt nur um dich allein,\nMögest du immer so glücklich sein!\n\n[Bridge]\nFür die Zukunft wünsch ich dir,\nDass Träume fliegen frei von hier.\nGesundheit, Glück auf jedem Pfad,\nDass nie dein Lebensmut erlahmt.\n\n[Chorus]\nAlles Gute zum Geburtstag, lieber Alex!\nWir feiern das Leben, so schön und komplex.\nHeut' dreht sich die Welt nur um dich allein,\nMögest du immer so glücklich sein!\n\n[Outro]\n(Happy Birthday...)\n(Für immer...)",
+        "prompt": "inspiration: birthday_wish\nrecipient: Alex\nkeywords: Kaffee | Wandern | Sonntag\nvocals: vocals\nlyric_language: de",
+        "structure": [
+          {
+            "end": 10.3,
+            "section": "Intro",
+            "start": 0
+          },
+          {
+            "end": 26.8,
+            "section": "Verse",
+            "start": 10.3
+          },
+          {
+            "end": 45.4,
+            "section": "Chorus",
+            "start": 27.5
+          },
+          {
+            "end": 63,
+            "section": "Bridge",
+            "start": 46.9
+          },
+          {
+            "end": 81.9,
+            "section": "Chorus",
+            "start": 64.1
+          },
+          {
+            "end": 91.1,
+            "section": "Bridge",
+            "start": 82.7
+          },
+          {
+            "end": 109.5,
+            "section": "Chorus",
+            "start": 91.6
+          },
+          {
+            "end": 114.6,
+            "section": "Outro",
+            "start": 113.5
+          }
+        ]
+      }
+    },
+    {
+      "id": "song.B.de-DE",
+      "type": "audio",
+      "role": "song",
+      "locale": "de-DE",
+      "script": "B",
+      "file": "songs/de-DE_B.mp3",
+      "license": {
+        "provider": "lyria",
+        "id": "v1_Chc4bTdEYXRDYUJjSHhxdHNQOE9pODJRbxIXOG03RGF0Q2FCY0h4cXRzUDhPaTgyUW8",
+        "model": "lyria-3.5",
+        "generated_at": "2026-10-05T09:34:38Z"
+      },
+      "vars": {
+        "chorus_index": "2",
+        "lyric_language": "de"
+      },
+      "data": {
+        "job_id": "082a0a36-ec42-459e-b585-02fdedf3f323",
+        "lyrics": "[Intro]\n\n[Verse]\nDer schnee fällt leise auf die stadt,\nEin lichtermeer, das uns gefangen hat.\nDu stehst hier und dein blick verrät,\nDass eine geschichte in dir lebt.\nErzähl sie mir, ich hör dir zu,\nIn dieser nacht bist nur noch du.\n\n[Chorus]\nEs ist dein lied, dein wort, dein schmerz!\nEs dringt direkt in mein herz.\nDie lichter funkeln, die welt steht still,\nIch höre das, was deine seele will.\nLass es heraus, befrei den geist!\nZeig mir, wohin dein weg dich weist.\n\n[Bridge]\nDie alten holzbuden im glanz,\nSie drehen sich im lichtertanz.\nDoch deine augen sehen mehr,\nSie spiegeln ein vergan'nes meer.\nVon hoffnung und von leisem glück,\nSchau nach vorn und nicht zurück.\n\n[Chorus]\nEs ist dein lied, dein wort, dein schmerz!\nEs dringt direkt in mein herz.\nDie lichter funkeln, die welt steht still,\nIch höre das, was deine seele will.\nLass es heraus, befrei den geist!\nZeig mir, wohin dein weg dich weist.\n\n[Bridge]\n(Ganz leise wird die welt um uns...)\n(Nur dein atem und dein herzschlag...)\nIn diesem augenblick des vertrauens,\nWächst aus der kälte neues licht.\nVergiss die angst, vergiss die zweifel,\nDein wahres ich verliert sich nicht.\n\n[Chorus]\nEs ist dein lied, dein wort, dein schmerz!\nEs dringt direkt in mein herz.\nDie lichter funkeln, die welt steht still,\nIch höre das, was deine seele will.\nLass es heraus, befrei den geist!\nZeig mir, wohin dein weg dich weist.\n\n[Outro]\n(Deine geschichte...)\nSie bleibt hier.\n(In der nacht...)\nBei mir.",
+        "prompt": "vocals: vocals\nlyric_language: de\nphotos: 4",
+        "structure": [
+          {
+            "end": 10.1,
+            "section": "Intro",
+            "start": 0
+          },
+          {
+            "end": 28.7,
+            "section": "Verse",
+            "start": 10.1
+          },
+          {
+            "end": 46,
+            "section": "Chorus",
+            "start": 29.1
+          },
+          {
+            "end": 65,
+            "section": "Bridge",
+            "start": 49.3
+          },
+          {
+            "end": 83.2,
+            "section": "Chorus",
+            "start": 66.1
+          },
+          {
+            "end": 93.6,
+            "section": "Bridge",
+            "start": 84.3
+          },
+          {
+            "end": 109.8,
+            "section": "Chorus",
+            "start": 93.8
+          },
+          {
+            "end": 119.2,
+            "section": "Outro",
+            "start": 114.8
+          }
+        ]
+      }
+    },
+    {
+      "id": "song.A.en-US",
+      "type": "audio",
+      "role": "song",
+      "locale": "en-US",
+      "script": "A",
+      "file": "songs/en-US_A.mp3",
+      "license": {
+        "provider": "lyria",
+        "id": "v1_Chd4R1BEYXR2NklMM1V6N0lQa3ItSXlBcxIXeEdQRGF0djZJTDNVejdJUGtyLUl5QXM",
+        "model": "lyria-3.5",
+        "generated_at": "2026-10-05T08:47:03Z"
+      },
+      "vars": {
+        "chorus_index": "2",
+        "keyword1": "coffee",
+        "keyword2": "hiking",
+        "keyword3": "Sunday",
+        "lyric_language": "en",
+        "recipient": "Alex",
+        "sung_name": "Alex"
+      },
+      "data": {
+        "job_id": "d96a5872-b876-40ae-be69-6f2845cc7347",
+        "lyrics": "[Intro]\n\n[Verse]\nSunday morning, sun is shining bright\nThe scent of fresh brewed coffee in the light\nLacing up our boots, ready for the trail\nOn this mountain peak, our spirits set to sail\n\n[Chorus]\nHappy birthday, Alex, have a beautiful day!\nLet the sunshine light up your way!\nMore coffee, more hiking, and more Sundays to share!\nJust know that we love you and always care!\n\n[Bridge]\nRemember that high ridge where the world stood still?\nA flask of hot brew and a quiet kind of thrill\nThat's the kind of peace I wish for you today\nIn every little step along your path and way\n\n[Chorus]\nHappy birthday, Alex, have a beautiful day!\nLet the sunshine light up your way!\nMore coffee, more hiking, and more Sundays to share!\nJust know that we love you and always care!\n\n[Bridge]\nYears may pass and trails may wind and bend\nBut on this Sunday, let the music never end\nYou're the best part of every trail we tread\nWishing you a lifetime of joy and light ahead\n\n[Chorus]\nHappy birthday, Alex, have a beautiful day!\nLet the sunshine light up your way!\nMore coffee, more hiking, and more Sundays to share!\nJust know that we love you and always care!\n\n[Outro]\nYeah, more Sundays to share...\n(Mmm, with you, Alex)\nHappy birthday.",
+        "prompt": "inspiration: birthday_wish\nrecipient: Alex\nkeywords: coffee | hiking | Sunday\nvocals: vocals\nlyric_language: en",
+        "structure": [
+          {
+            "end": 11.2,
+            "section": "Intro",
+            "start": 0
+          },
+          {
+            "end": 29.1,
+            "section": "Verse",
+            "start": 11.2
+          },
+          {
+            "end": 45,
+            "section": "Chorus",
+            "start": 29.5
+          },
+          {
+            "end": 64.7,
+            "section": "Bridge",
+            "start": 47.7
+          },
+          {
+            "end": 81.9,
+            "section": "Chorus",
+            "start": 66.2
+          },
+          {
+            "end": 99.1,
+            "section": "Bridge",
+            "start": 83.2
+          },
+          {
+            "end": 119.4,
+            "section": "Chorus",
+            "start": 106.2
+          },
+          {
+            "end": 127.4,
+            "section": "Outro",
+            "start": 120.8
+          }
+        ]
+      }
+    },
+    {
+      "id": "song.B.en-US",
+      "type": "audio",
+      "role": "song",
+      "locale": "en-US",
+      "script": "B",
+      "file": "songs/en-US_B.mp3",
+      "license": {
+        "provider": "lyria",
+        "id": "v1_ChdmR1REYXJTc050X3F6N0lQODdLYjhBaxIXZkdURGFyU3NOdF9xejdJUDg3S2I4QWs",
+        "model": "lyria-3.5",
+        "generated_at": "2026-10-05T08:50:11Z"
+      },
+      "vars": {
+        "chorus_index": "2",
+        "lyric_language": "en"
+      },
+      "data": {
+        "job_id": "c0f87da9-6a8a-4404-a44b-4736791ecec5",
+        "lyrics": "[Intro]\n\n[Verse]\nStep out onto this empty street, let's take a walk.\nI'm ready to listen to the things we never talk about.\nYou keep your feelings locked inside, in a hidden place.\nBut I can see the longing written all over your face.\n\n[Chorus]\nTell me the story that you're aching to unwind.\nThe one you keep a secret, buried in your mind.\nI wanna feel the laughter, I wanna share the pain.\nLet's write it down in indelible ink, let it remain.\n\n[Bridge]\nWe've seen the changing of the guard, the passing of the years.\nWe've chased away the monsters, and we've faced our greatest fears.\nBut there's a chapter still unwritten, waiting for your voice.\nTo fill the silence with your truth, let's make that choice.\n\n[Chorus]\nTell me the story that you're aching to unwind.\nThe one you keep a secret, buried in your mind.\nI wanna feel the laughter, I wanna share the pain.\nLet's write it down in indelible ink, let it remain.\n\n[Bridge]\n(And if the words are hard to find, that's okay, we've got all night.)\nTake all the time you need, let the feelings take their flight.\nBecause this is your story, this is your shining light.\nAnd I'm just here to hold you close and keep you warm tonight.\n\n[Chorus]\nTell me the story that you're aching to unwind!\nThe one you keep a secret, buried in your mind!\nI wanna feel the laughter, I wanna share the pain!\nLet's write it down in indelible ink, let it remain!\n\n[Outro]\nLet it remain... let it remain.\nMm, your story... is safe with me.",
+        "prompt": "vocals: vocals\nlyric_language: en\nphotos: 4",
+        "structure": [
+          {
+            "end": 10.6,
+            "section": "Intro",
+            "start": 0
+          },
+          {
+            "end": 29,
+            "section": "Verse",
+            "start": 10.6
+          },
+          {
+            "end": 47.4,
+            "section": "Chorus",
+            "start": 29.9
+          },
+          {
+            "end": 66.6,
+            "section": "Bridge",
+            "start": 48.6
+          },
+          {
+            "end": 85.6,
+            "section": "Chorus",
+            "start": 67.5
+          },
+          {
+            "end": 104.6,
+            "section": "Bridge",
+            "start": 86.4
+          },
+          {
+            "end": 118.3,
+            "section": "Chorus",
+            "start": 105.2
+          },
+          {
+            "end": 123.6,
+            "section": "Outro",
+            "start": 118.3
+          }
+        ]
+      }
+    },
+    {
+      "id": "song.A.es-MX",
+      "type": "audio",
+      "role": "song",
+      "locale": "es-MX",
+      "script": "A",
+      "file": "songs/es-MX_A.mp3",
+      "license": {
+        "provider": "lyria",
+        "id": "v1_ChdKMlhEYXRmVUc0bld6N0lQbWRQejhRaxIXSjJYRGF0ZlVHNG5XejdJUG1kUHo4UWs",
+        "model": "lyria-3.5",
+        "generated_at": "2026-10-05T08:52:52Z"
+      },
+      "vars": {
+        "chorus_index": "2",
+        "keyword1": "café",
+        "keyword2": "senderismo",
+        "keyword3": "domingo",
+        "lyric_language": "es-MX",
+        "recipient": "Alex",
+        "sung_name": "Alex"
+      },
+      "data": {
+        "job_id": "b3587c4d-cc63-402d-9b4d-2ed77ba38550",
+        "lyrics": "[Verse 1]\n¡Oye! Hoy es un día muy especial...\n¡A celebrar la vida! ¡Vámonos!\n\n[Verse 2]\nLa mañana empieza con olor a café,\nun aroma dulce que despierta la fe.\nEs un gran motivo para sonreír,\nun año más de vida que vamos a vivir.\n\n[Chorus]\n¡Qué feliz domingo para celebrar!\nA nuestro querido Alex vamos a abrazar.\nQue tus días brillen con mucha ilusión,\nte lo deseamos de todo corazón.\n\n[Bridge]\nEl senderismo libre nos invita a andar,\nmontañas y caminos listos para cruzar.\nCon cada paso firme, con cada gran rincón,\nse llena de alegría todo el corazón.\n\n[Chorus]\n¡Qué feliz domingo para celebrar!\nA nuestro querido Alex vamos a abrazar.\nQue tus días brillen con mucha ilusión,\nte lo deseamos de todo corazón.\n\n[Bridge]\nY que vengan muchos, muchos años más,\nllenos de salud, de amor y de paz.\n\n[Chorus]\n¡Qué feliz domingo para celebrar!\nA nuestro querido Alex vamos a abrazar.\nQue tus días brillen con mucha ilusión,\nte lo deseamos de todo corazón.\n\n[Outro]\n(¡Muchas felicidades!)\nQue te la pases increíble hoy y siempre.\n¡Salud!",
+        "prompt": "inspiration: birthday_wish\nrecipient: Alex\nkeywords: café | senderismo | domingo\nvocals: vocals\nlyric_language: es-MX",
+        "structure": [
+          {
+            "end": 8.4,
+            "section": "Verse 1",
+            "start": 2.1
+          },
+          {
+            "end": 27.8,
+            "section": "Verse 2",
+            "start": 10
+          },
+          {
+            "end": 45.2,
+            "section": "Chorus",
+            "start": 28.4
+          },
+          {
+            "end": 63.5,
+            "section": "Bridge",
+            "start": 46.6
+          },
+          {
+            "end": 81.6,
+            "section": "Chorus",
+            "start": 64.9
+          },
+          {
+            "end": 91.1,
+            "section": "Bridge",
+            "start": 83.1
+          },
+          {
+            "end": 109.1,
+            "section": "Chorus",
+            "start": 92.4
+          },
+          {
+            "end": 117.1,
+            "section": "Outro",
+            "start": 111.2
+          }
+        ]
+      }
+    },
+    {
+      "id": "song.B.es-MX",
+      "type": "audio",
+      "role": "song",
+      "locale": "es-MX",
+      "script": "B",
+      "file": "songs/es-MX_B.mp3",
+      "license": {
+        "provider": "lyria",
+        "id": "v1_ChdtbVhEYXR5Q0lZeWN6N0lQeGN6cGlRbxIXbW1YRGF0eUNJWXljejdJUHhjenBpUW8",
+        "model": "lyria-3.5",
+        "generated_at": "2026-10-05T08:54:40Z"
+      },
+      "vars": {
+        "chorus_index": "2",
+        "lyric_language": "es-MX"
+      },
+      "data": {
+        "job_id": "36dbf794-92be-4b12-be9f-6badc354e6d2",
+        "lyrics": "[Verse 1]\n¡Oye! Ven y cuéntame tu historia.\nLa que llevas guardada en el alma.\n¡Que suene la cumbia!\n\n[Verse 2]\nCaminando por las calles de este pueblo,\nMe crucé con tu mirada tan sincera.\nMe dijiste que tenías un secreto,\nUna historia que contara la vida entera.\nDe amores que se van y que regresan,\nDe sueños que se pintan de colores.\nAquí no hay espacio pa' las tristezas,\nVamos a cantarle a los dolores.\n\n[Chorus]\n¡Canta tu historia, que el mundo te escuche!\nCon el ritmo de esta cumbia que te llena el alma.\nBaila tus penas, que no quede un estuche,\nQue la música siempre nos devuelve la calma.\n¡Venga! ¡Con el corazón!\n\n[Bridge]\nMe hablaste de aquel viejo guitarrero,\nQue tocaba en la plaza de San Juan.\nY de cómo un amor tan verdadero,\nSe marchó con las olas del mar.\nPero no hay tiempo pa' echarse al olvido,\nTu historia merece ser cantada.\nCon este ritmo que hemos construido,\nLa pena se queda borrada.\n\n[Chorus]\n¡Canta tu historia, que el mundo te escuche!\nCon el ritmo de esta cumbia que te llena el alma.\nBaila tus penas, que no quede un estuche,\nQue la música siempre nos devuelve la calma.\n\n[Bridge]\nY si el viento se lleva las palabras,\nQue esta cumbia se quede en tu memoria.\nNo hay cerrojo que el alma no abra,\nCuando de veras se cuenta la historia.\n¡Dilo fuerte!\n\n[Chorus]\n¡Canta tu historia, que el mundo te escuche!\nCon el ritmo de esta cumbia que te llena el alma.\nBaila tus penas, que no quede un estuche,\nQue la música siempre nos devuelve la calma.\n\n[Outro]\nAsí es como se cuenta la vida...\nCon música, con alegría.\nTu historia es mi historia.\n¡Nos vemos en el baile!",
+        "prompt": "vocals: vocals\nlyric_language: es-MX\nphotos: 4",
+        "structure": [
+          {
+            "end": 8,
+            "section": "Verse 1",
+            "start": 1.7
+          },
+          {
+            "end": 28.7,
+            "section": "Verse 2",
+            "start": 10.2
+          },
+          {
+            "end": 47.9,
+            "section": "Chorus",
+            "start": 29.4
+          },
+          {
+            "end": 66,
+            "section": "Bridge",
+            "start": 48.3
+          },
+          {
+            "end": 83.7,
+            "section": "Chorus",
+            "start": 67.5
+          },
+          {
+            "end": 93.3,
+            "section": "Bridge",
+            "start": 86.2
+          },
+          {
+            "end": 109.4,
+            "section": "Chorus",
+            "start": 94.3
+          },
+          {
+            "end": 112.6,
+            "section": "Outro",
+            "start": 111.8
+          }
+        ]
+      }
+    },
+    {
+      "id": "song.A.fr-FR",
+      "type": "audio",
+      "role": "song",
+      "locale": "fr-FR",
+      "script": "A",
+      "file": "songs/fr-FR_A.mp3",
+      "license": {
+        "provider": "lyria",
+        "id": "v1_Chd3MlREYXZ5aUg1LWZ6N0lQMUl6Y2lBbxIXdzJURGF2eWlINS1mejdJUDFJemNpQW8",
+        "model": "lyria-3.5",
+        "generated_at": "2026-10-05T08:50:59Z"
+      },
+      "vars": {
+        "chorus_index": "2",
+        "keyword1": "café",
+        "keyword2": "randonnée",
+        "keyword3": "dimanche",
+        "lyric_language": "fr",
+        "recipient": "Alex",
+        "sung_name": "Alex"
+      },
+      "data": {
+        "job_id": "e4971670-659e-4281-8e4e-882176b3b91b",
+        "lyrics": "[Verse 1]\n(Mmm, mmm, c'est ton jour...)\n(Joyeux anniversaire...)\n\n[Verse 2]\nLe soleil se lève sur la ville en douceur\nOn va s'installer à la terrasse d'un café\nPour fêter ce jour qui fait battre mon cœur\nUne belle journée vient de commencer\nOn prend notre temps, rien ne presse aujourd'hui\nLe parfum du moka se mêle à nos rires\nC'est le début d'une parenthèse infinie\nAvec toi, j'aime voir l'avenir\n\n[Chorus]\nJoyeux anniversaire à toi, cher Alex\nQue ce jour soit doux et plein de lumière\nOn oublie les soucis et les complexes\nAlex, tu es ma plus belle prière\nJoyeux anniversaire, mon cher Alex!\nC'est ta fête et tout le monde est joyeux\nRegarde le ciel, il est si radieux!\n\n[Bridge]\nOn partira ensuite pour une belle randonnée\nÀ travers les sentiers et les bois fleuris\nPour respirer l'air de cette belle journée\nLoin du tumulte et du bruit de Paris\nOn marchera ensemble, la main dans la main\nEn admirant la nature qui s'éveille pour toi\nChaque pas nous rapproche d'un beau demain\nEt mon cœur est rempli de joie\n\n[Chorus]\nJoyeux anniversaire à toi, cher Alex\nQue ce jour soit doux et plein de lumière\nOn oublie les soucis et les complexes\nAlex, tu es ma plus belle prière\nJoyeux anniversaire, mon cher Alex!\nC'est ta fête et tout le monde est joyeux\nRegarde le ciel, il est si radieux!\n\n[Bridge]\nEt quand viendra le soir de ce doux dimanche\nOn trinquera à ta santé, à ton bonheur\nLes lumières douces danseront sur les branches\nEt nous garderons ces moments dans nos cœurs\nUn dimanche parfait, rien que pour nous deux\nGravé dans nos mémoires pour toujours\nJe te souhaite le meilleur, d'être heureux\nRempli de rires et de beaucoup d'amour\n\n[Chorus]\nJoyeux anniversaire à toi, cher Alex\nQue ce jour soit doux et plein de lumière\nOn oublie les soucis et les complexes\nAlex, tu es ma plus belle prière\nJoyeux anniversaire, mon cher Alex!\nC'est ta fête et tout le monde est joyeux\nRegarde le ciel, il est si radieux!\n\n[Outro]\nBon anniversaire, Alex...\nRien que du bonheur pour toi...\n(Oh, joyeux anniversaire...)\n(Je t'aime, Alex...)",
+        "prompt": "inspiration: birthday_wish\nrecipient: Alex\nkeywords: café | randonnée | dimanche\nvocals: vocals\nlyric_language: fr",
+        "structure": [
+          {
+            "end": 8.9,
+            "section": "Verse 1",
+            "start": 4.3
+          },
+          {
+            "end": 28,
+            "section": "Verse 2",
+            "start": 10
+          },
+          {
+            "end": 44.4,
+            "section": "Chorus",
+            "start": 28.3
+          },
+          {
+            "end": 64.9,
+            "section": "Bridge",
+            "start": 47.2
+          },
+          {
+            "end": 81.2,
+            "section": "Chorus",
+            "start": 65.1
+          },
+          {
+            "end": 101.9,
+            "section": "Bridge",
+            "start": 83.4
+          },
+          {
+            "end": 118,
+            "section": "Chorus",
+            "start": 102
+          },
+          {
+            "end": 126.5,
+            "section": "Outro",
+            "start": 121.7
+          }
+        ]
+      }
+    },
+    {
+      "id": "song.B.fr-FR",
+      "type": "audio",
+      "role": "song",
+      "locale": "fr-FR",
+      "script": "B",
+      "file": "songs/fr-FR_B.mp3",
+      "license": {
+        "provider": "lyria",
+        "id": "v1_ChdDMl9EYXBYd0JkZUttdGtQaTg2QnVBdxIXQzJfRGFwWHdCZGVLbXRrUGk4NkJ1QXc",
+        "model": "lyria-3.5",
+        "generated_at": "2026-10-05T09:35:09Z"
+      },
+      "vars": {
+        "chorus_index": "2",
+        "lyric_language": "fr"
+      },
+      "data": {
+        "job_id": "ceaeb6d7-cc81-4816-9e8a-8166e2ff3a68",
+        "lyrics": "[Verse 1]\n(La la la, la la la...)\nC'est ton histoire que je veux entendre.\n(La la la, la la la...)\n\n[Verse 2]\nTu t'assois là à la table du café\nLe regard vague, un peu perdu dans tes pensées\nLe soleil brille et le vent joue dans tes cheveux\nC'est le moment de me dire tout ce que tu veux\nRaconte-moi les secrets que tu gardes en toi\nLes petits riens et les grands rêves de ton choix\n\n[Chorus]\nC'est ton histoire, le roman de ta vie!\nChaque mot me touche, chaque phrase m'éblouit!\nNe cache rien, laisse parler ton cœur!\nJe veux connaître tes joies et tes douleurs!\nOui, c'est ton histoire, unique et si belle!\nComme une chanson qui s'envole vers le ciel!\n\n[Bridge]\nParle-moi d'amour, de chagrins et d'espoirs fous\nDes souvenirs doux qui nous rendent un peu jaloux\nJe t'écoute attentive, je ne perds pas un mot\nDans le miroir de tes yeux, tout est si beau\nMets tes doutes de côté et ouvre grand ton âme\nLaisse briller en toi cette précieuse flamme\n\n[Chorus]\nC'est ton histoire, le roman de ta vie!\nChaque mot me touche, chaque phrase m'éblouit!\nNe cache rien, laisse parler ton cœur!\nJe veux connaître tes joies et tes douleurs!\nOui, c'est ton histoire, unique et si belle!\nComme une chanson qui s'envole vers le ciel!\n\n[Bridge]\nEt si le monde entier s'arrêtait de tourner?\nJe resterais là, juste pour t'écouter.\n(Juste pour t'écouter...)\nParce que tes mots ont le pouvoir de tout changer.\n\n[Chorus]\nC'est ton histoire, le roman de ta vie!\nChaque mot me touche, chaque phrase m'éblouit!\nNe cache rien, laisse parler ton cœur!\nJe veux connaître tes joies et tes douleurs!\nOui, c'est ton histoire, unique et si belle!\nComme une chanson qui s'envole vers le ciel!\n\n[Outro]\nC'est ton histoire... que tu m'as racontée.\n(La la la, la la la...)\nEt je l'aimerai pour toujours.",
+        "prompt": "vocals: vocals\nlyric_language: fr\nphotos: 4",
+        "structure": [
+          {
+            "end": 7.4,
+            "section": "Verse 1",
+            "start": 6
+          },
+          {
+            "end": 28.3,
+            "section": "Verse 2",
+            "start": 11.9
+          },
+          {
+            "end": 47.2,
+            "section": "Chorus",
+            "start": 29.5
+          },
+          {
+            "end": 65.9,
+            "section": "Bridge",
+            "start": 49.6
+          },
+          {
+            "end": 84.9,
+            "section": "Chorus",
+            "start": 67.2
+          },
+          {
+            "end": 93.9,
+            "section": "Bridge",
+            "start": 87.5
+          },
+          {
+            "end": 114.7,
+            "section": "Chorus",
+            "start": 97
+          },
+          {
+            "end": 121.4,
+            "section": "Outro",
+            "start": 115.7
+          }
+        ]
+      }
+    },
+    {
+      "id": "song.A.hi",
+      "type": "audio",
+      "role": "song",
+      "locale": "hi",
+      "script": "A",
+      "file": "songs/hi_A.mp3",
+      "license": {
+        "provider": "lyria",
+        "id": "v1_Chd3MlREYXY2aEk5SFZ6N0lQb0tlNy1BaxIXdzJURGF2NmhJOUhWejdJUG9LZTctQWs",
+        "model": "lyria-3.5",
+        "generated_at": "2026-10-05T08:51:09Z"
+      },
+      "vars": {
+        "chorus_index": "2",
+        "keyword1": "चाय",
+        "keyword2": "पहाड़",
+        "keyword3": "रविवार",
+        "lyric_language": "hi",
+        "recipient": "Alex",
+        "sung_name": "अलेक्स"
+      },
+      "data": {
+        "job_id": "340eea04-635f-4ffa-865d-0d09f3cd0911",
+        "lyrics": "[Intro]\n\n[Verse]\nसुबह की वो पहली किरण, और पहाड़ों की वो छांव,\nदिल को छू लेती है ये ठंडी, मीठी सी हवा का बहाव।\nप्याली में है महकती चाय, हर घूंट में एक सुकून है,\nतेरा ये खास दिन मनाने का, छाया मुझपे एक जुनून है।\n\n[Chorus]\nहैप्पी बर्थडे अलेक्स, तू सदा यूँ ही मुस्कुराए,\nखुशियों के ये प्यारे लम्हे, तेरी जिंदगी में आएं।\nपहाड़ों से भी ऊंचा हो, तेरा ये सुहाना मुकाम,\nअलेक्स तेरे जन्मदिन पे, खुशियों का हो पैगाम।\n\n[Bridge]\nरविवार का वो आलस भरा दिन, और बातों का वो सिलसिला,\nतुझ जैसा यारा पाकर ही तो, मुझको सब कुछ है मिला।\nचाय की उस गरम चुस्की में, यादें हमारी घुली हुई हैं,\nतेरे लिए इस दिल के दरिया की, हर एक लहर खुली हुई है।\n\n[Chorus]\nहैप्पी बर्थडे अलेक्स, तू सदा यूँ ही मुस्कुराए,\nखुशियों के ये प्यारे लम्हे, तेरी जिंदगी में आएं।\nपहाड़ों से भी ऊंचा हो, तेरा ये सुहाना मुकाम,\nअलेक्स तेरे जन्मदिन पे, खुशियों का हो पैगाम।\n\n[Bridge]\nये दुआ है मेरी रब्ब से, तू हर वो खुशी पाए,\nतेरी राहों में सदा ही, ये बहारें मुस्कुराएं।\nसाथ हमारा ये यूँ ही, जन्मों तलक रहे कायम,\nतेरे आने से ही तो रोशन हुआ है मेरा हर एक मौसम।\n\n[Chorus]\nहैप्पी बर्थडे अलेक्स, तू सदा यूँ ही मुस्कुराए,\nखुशियों के ये प्यारे लम्हे, तेरी जिंदगी में आएं।\nपहाड़ों से भी ऊंचा हो, तेरा ये सुहाना मुकाम,\nअलेक्स तेरे जन्मदिन पे, खुशियों का हो पैगाम।\n\n[Outro]\n(हाँ, खुश रहे तू सदा...)\nजन्मदिन मुबारक हो, मेरे यार... अलेक्स।",
+        "prompt": "inspiration: birthday_wish\nrecipient: Alex\nkeywords: चाय | पहाड़ | रविवार\nvocals: vocals\nlyric_language: hi",
+        "structure": [
+          {
+            "end": 9.4,
+            "section": "Intro",
+            "start": 0
+          },
+          {
+            "end": 27.5,
+            "section": "Verse",
+            "start": 9.4
+          },
+          {
+            "end": 42,
+            "section": "Chorus",
+            "start": 28
+          },
+          {
+            "end": 64,
+            "section": "Bridge",
+            "start": 46.1
+          },
+          {
+            "end": 81.4,
+            "section": "Chorus",
+            "start": 64.7
+          },
+          {
+            "end": 92.7,
+            "section": "Bridge",
+            "start": 82.6
+          },
+          {
+            "end": 107.6,
+            "section": "Chorus",
+            "start": 92.7
+          },
+          {
+            "end": 119.3,
+            "section": "Outro",
+            "start": 112.8
+          }
+        ]
+      }
+    },
+    {
+      "id": "song.B.hi",
+      "type": "audio",
+      "role": "song",
+      "locale": "hi",
+      "script": "B",
+      "file": "songs/hi_B.mp3",
+      "license": {
+        "provider": "lyria",
+        "id": "v1_ChdYR3pEYXBTMUxmQ2Q2ZGtQbXBmWW9RRRIXWEd6RGFwUzFMZkNkNmRrUG1wZllvUUU",
+        "model": "lyria-3.5",
+        "generated_at": "2026-10-05T09:23:38Z"
+      },
+      "vars": {
+        "chorus_index": "2",
+        "lyric_language": "hi"
+      },
+      "data": {
+        "job_id": "84fe7f92-f350-4cdc-85f8-7b0ae6e3de95",
+        "lyrics": "[Verse 1]\n(हो, आहा, सुनिए ये कहानी)\n(दिल की जुबानी, आप ही की जुबानी)\n\n[Verse 2]\nआंखों में ख्वाब लिए, आप चल पड़े\nरास्ते कठिन थे, पर कदम न रुके\nमंजिल की तलाश में, हर दर्द सहा\nजो आपके दिल में था, वो किसी ने न कहा\nआज वो दास्तान, महफिल में गाएंगे\nआपकी इस कहानी को, सब तक पहुंचाएंगे\n\n[Chorus]\nनाचो, गाओ, जश्न मनाओ, ये आपकी कहानी है!\nहर एक दिल में बसने वाली, ये वो निशानी है!\nभांगड़ा के ताल पे, झूमे सारा जहां!\nआपके जैसा कोई और कहां!\nहाँ, आपके जैसा कोई और कहां!\n\n[Bridge]\nगिर कर संभलना, ये हुनर था आपका\nअंधेरों में भी, जलता रहा दिया आपका\nमेहनत और लगन की, वो मिसाल हैं आप\nहर सवाल का, एक खूबसूरत जवाब हैं आप\nआज ये समां भी, आपके नाम कर दें\nआपके जज्बे को, हम सलाम कर दें\n\n[Chorus]\nनाचो, गाओ, जश्न मनाओ, ये आपकी कहानी है!\nहर एक दिल में बसने वाली, ये वो निशानी है!\nभांगड़ा के ताल पे, झूमे सारा जहां!\nआपके जैसा कोई और कहां!\nहाँ, आपके जैसा कोई और कहां!\n\n[Bridge]\nये सिर्फ एक गीत नहीं, आपकी जिंदगी का सार है\nआपकी हर जीत में, छुपा एक बड़ा प्यार है\n(ओहो, सुनिए जरा, इस दिल की सदा)\nअब वक्त है कि दुनिया जाने, आपकी ये अदा!\n\n[Chorus]\nनाचो, गाओ, जश्न मनाओ, ये आपकी कहानी है!\nहर एक दिल में बसने वाली, ये वो निशानी है!\nभांगड़ा के ताल पे, झूमे सारा जहां!\nआपके जैसा कोई और कहां!\nहाँ, आपके जैसा कोई और कहां!\n\n[Outro]\nहाँ, ये थी वो कहानी...\nसच्ची और बड़ी सुहानी...\n(आपकी कहानी... हमारी जुबानी...)\n(भांगड़ा पा लो, खुशियां मना लो!)",
+        "prompt": "vocals: vocals\nlyric_language: hi\nphotos: 4",
+        "structure": [
+          {
+            "end": 12.5,
+            "section": "Verse 1",
+            "start": 9
+          },
+          {
+            "end": 26.3,
+            "section": "Verse 2",
+            "start": 12.8
+          },
+          {
+            "end": 38.2,
+            "section": "Chorus",
+            "start": 26.5
+          },
+          {
+            "end": 57,
+            "section": "Bridge",
+            "start": 45.1
+          },
+          {
+            "end": 69.4,
+            "section": "Chorus",
+            "start": 60.8
+          },
+          {
+            "end": 91.2,
+            "section": "Bridge",
+            "start": 76.9
+          },
+          {
+            "end": 101.4,
+            "section": "Chorus",
+            "start": 92.8
+          },
+          {
+            "end": 116.2,
+            "section": "Outro",
+            "start": 107.4
+          }
+        ]
+      }
+    },
+    {
+      "id": "song.A.id",
+      "type": "audio",
+      "role": "song",
+      "locale": "id",
+      "script": "A",
+      "file": "songs/id_A.mp3",
+      "license": {
+        "provider": "lyria",
+        "id": "v1_ChdJM0REYXFhVkFzR2Q2ZGtQOHQyeGdRRRIXSTNERGFxYVZBc0dkNmRrUDh0MnhnUUU",
+        "model": "lyria-3.5",
+        "generated_at": "2026-10-05T09:39:47Z"
+      },
+      "vars": {
+        "chorus_index": "2",
+        "keyword1": "kopi",
+        "keyword2": "mendaki",
+        "keyword3": "Minggu",
+        "lyric_language": "id",
+        "recipient": "Alex",
+        "sung_name": "Alex"
+      },
+      "data": {
+        "job_id": "911829d1-f6de-45b8-8ec4-93eb2bdff8d9",
+        "lyrics": "[Intro]\n\n[Verse]\nPagi hari di hari Minggu yang tenang,\nSinar mentari hangatkan kamarmu yang terang.\nAku teringat saat kita mendaki tinggi,\nMelewati rintangan demi mimpi yang suci.\nKini kita duduk bersama di sini,\nMenikmati waktu yang kian berarti.\n\n[Chorus]\nSelamat ulang tahun untukmu, Alex, oh temanku!\nSemoga bahagiamu meluap bagai kopi yang hangat.\nDi hari Minggu ini kita rayakan bersama-sama,\nTawa dan candamu adalah anugerah terindah di dunia.\nAlex, teruslah bersinar, teruslah melangkah maju!\n\n[Bridge]\nAroma kopi mengepul di antara kita,\nMenemani obrolan tentang masa lalu kita yang indah.\nSetiap langkah kita saat mendaki puncak itu,\nMenjadi kenangan manis yang takkan pernah layu.\nAku bersyukur memilikimu di dalam hidupku,\nKau sahabat terbaik yang selalu ada di sampingku.\n\n[Chorus]\nSelamat ulang tahun untukmu, Alex, oh temanku!\nSemoga bahagiamu meluap bagai kopi yang hangat.\nDi hari Minggu ini kita rayakan bersama-sama,\nTawa dan candamu adalah anugerah terindah di dunia.\nAlex, teruslah bersinar, teruslah melangkah maju!\n\n[Bridge]\nWaktu terus berjalan, musim pun berganti bergantian,\nNamun persahabatan kita kan abadi takkan pernah hilang.\nTerima kasih telah menjadi bagian dari ceritaku yang indah,\nBersamamu, setiap hari Minggu terasa lebih bermakna dan cerah.\n\n[Chorus]\nSelamat ulang tahun untukmu, Alex, oh temanku!\nSemoga bahagiamu meluap bagai kopi yang hangat.\nDi hari Minggu ini kita rayakan bersama-sama,\nTawa dan candamu adalah anugerah terindah di dunia.\nAlex, teruslah bersinar, teruslah melangkah maju!\n\n[Outro]\n(Selamat ulang tahun...)\nDi hari Minggu yang indah ini...\nTetaplah bahagia, Alex.",
+        "prompt": "inspiration: birthday_wish\nrecipient: Alex\nkeywords: kopi | mendaki | Minggu\nvocals: vocals\nlyric_language: id",
+        "structure": [
+          {
+            "end": 10.4,
+            "section": "Intro",
+            "start": 0
+          },
+          {
+            "end": 28,
+            "section": "Verse",
+            "start": 10.4
+          },
+          {
+            "end": 48.2,
+            "section": "Chorus",
+            "start": 28.2
+          },
+          {
+            "end": 64.9,
+            "section": "Bridge",
+            "start": 48.2
+          },
+          {
+            "end": 83.2,
+            "section": "Chorus",
+            "start": 65
+          },
+          {
+            "end": 100.6,
+            "section": "Bridge",
+            "start": 83.3
+          },
+          {
+            "end": 121.3,
+            "section": "Chorus",
+            "start": 101.6
+          },
+          {
+            "end": 134.4,
+            "section": "Outro",
+            "start": 123.1
+          }
+        ]
+      }
+    },
+    {
+      "id": "song.B.id",
+      "type": "audio",
+      "role": "song",
+      "locale": "id",
+      "script": "B",
+      "file": "songs/id_B.mp3",
+      "license": {
+        "provider": "lyria",
+        "id": "v1_ChZDWEhEYXZpdUxzQ3RxdHNQelphOUtREhZDWEhEYXZpdUxzQ3RxdHNQelphOUtR",
+        "model": "lyria-3.5",
+        "generated_at": "2026-10-05T09:43:42Z"
+      },
+      "vars": {
+        "chorus_index": "2",
+        "lyric_language": "id"
+      },
+      "data": {
+        "job_id": "a54e0119-463c-4ca1-9f58-eee03dc623e9",
+        "lyrics": "[Intro]\n\n[Verse]\nKatakan padaku apa yang kau simpan\nDi balik senyummu yang penuh dengan misteri\nAku di sini siap untuk mendengarkan\nKisah terindah yang belum sempat kau bagi\n\n[Chorus]\nIni kisahmu yang ingin kau ceritakan\nBiarkan dunia mendengar suaramu yang merdu\nSetiap kata setiap rasa yang terpendam\nAkan abadi dalam bait lagu ini bersamamu\n\n[Bridge]\nJangan kau ragu tuk luapkan segalanya\nTangis dan tawa yang membentuk dirimu kini\nAku merangkum semua memori berharga\nDalam melodi yang tercipta dari hati\n\n[Chorus]\nIni kisahmu yang ingin kau ceritakan\nBiarkan dunia mendengar suaramu yang merdu\nSetiap kata setiap rasa yang terpendam\nAkan abadi dalam bait lagu ini bersamamu\n\n[Bridge]\nWalau badai datang menerjang langkahmu\nKau tetap berdiri tegak takkan menyerah\nLihatlah betapa indahnya jiwamu\nKisahmu adalah cahaya di tengah gundah\n\n[Chorus]\nIni kisahmu yang ingin kau ceritakan\nBiarkan dunia mendengar suaramu yang merdu\nSetiap kata setiap rasa yang terpendam\nAkan abadi dalam bait lagu ini bersamamu\n\n[Outro]\n(Kisahmu...)\nBersamamu...",
+        "prompt": "vocals: vocals\nlyric_language: id\nphotos: 4",
+        "structure": [
+          {
+            "end": 11,
+            "section": "Intro",
+            "start": 0
+          },
+          {
+            "end": 28.8,
+            "section": "Verse",
+            "start": 11
+          },
+          {
+            "end": 48.2,
+            "section": "Chorus",
+            "start": 30.2
+          },
+          {
+            "end": 66.6,
+            "section": "Bridge",
+            "start": 48.5
+          },
+          {
+            "end": 86.1,
+            "section": "Chorus",
+            "start": 67.2
+          },
+          {
+            "end": 108.1,
+            "section": "Bridge",
+            "start": 90.6
+          },
+          {
+            "end": 128,
+            "section": "Chorus",
+            "start": 109
+          },
+          {
+            "end": 133,
+            "section": "Outro",
+            "start": 131.3
+          }
+        ]
+      }
+    },
+    {
+      "id": "song.A.ja",
+      "type": "audio",
+      "role": "song",
+      "locale": "ja",
+      "script": "A",
+      "file": "songs/ja_A.mp3",
+      "license": {
+        "provider": "lyria",
+        "id": "v1_ChdIMnpEYXAzREI3S3NxdHNQOVBiU2lRMBIXSDJ6RGFwM0RCN0tzcXRzUDlQYlNpUTA",
+        "model": "lyria-3.5",
+        "generated_at": "2026-10-05T09:22:29Z"
+      },
+      "vars": {
+        "chorus_index": "2",
+        "keyword1": "珈琲",
+        "keyword2": "山歩き",
+        "keyword3": "日曜日",
+        "lyric_language": "ja",
+        "recipient": "Alex",
+        "sung_name": "Alex"
+      },
+      "data": {
+        "job_id": "cbfc9c12-b85a-4f3b-9356-0e0b79d073d5",
+        "lyrics": "[Intro]\n\n[Verse]\n窓から差し込む　温かい光\n特別な朝が　今日も始まるよ\n淹れたての珈琲　香りが部屋に満ちて\n君の笑顔を　そっと思い浮かべる\n\n[Chorus]\nハッピーバースデー、Alex　心から\n生まれてきてくれて　ありがとうの日\n君と出会えた奇跡に　そっと感謝して\n笑顔あふれる　一年にしよう\n\n[Bridge]\n晴れ渡る空の下　山歩きに出かけよう\n一歩ずつ進む　その足跡が愛おしい\n風が囁く　二人の未来を祝うように\n穏やかな時間が　ゆっくり流れていく\n\n[Chorus]\nハッピーバースデー、Alex　大好きな人\n君の夢が全部　叶いますように\nどんな時もそばにいるよ　約束するから\n輝く未来を　共に見つめよう\n\n[Bridge]\n明日は何気ない　普通の日曜日だけど\n君といられるだけで　それは特別な記念日\nいつも支えてくれて　本当にありがとう\n言葉にできないほどの　愛を込めて\n\n[Chorus]\nハッピーバースデー、Alex　心から\n生まれてきてくれて　ありがとうの日\n君と出会えた奇跡に　そっと感謝して\n笑顔あふれる　一年にしよう\n\n[Outro]\nラララ…　おめでとう\n大好きな　君へ",
+        "prompt": "inspiration: birthday_wish\nrecipient: Alex\nkeywords: 珈琲 | 山歩き | 日曜日\nvocals: vocals\nlyric_language: ja",
+        "structure": [
+          {
+            "end": 10.5,
+            "section": "Intro",
+            "start": 0
+          },
+          {
+            "end": 27.8,
+            "section": "Verse",
+            "start": 10.5
+          },
+          {
+            "end": 44.9,
+            "section": "Chorus",
+            "start": 31.1
+          },
+          {
+            "end": 64.4,
+            "section": "Bridge",
+            "start": 47.4
+          },
+          {
+            "end": 81.8,
+            "section": "Chorus",
+            "start": 65.5
+          },
+          {
+            "end": 101.5,
+            "section": "Bridge",
+            "start": 84.5
+          },
+          {
+            "end": 119.1,
+            "section": "Chorus",
+            "start": 102.6
+          },
+          {
+            "end": 124.2,
+            "section": "Outro",
+            "start": 121.8
+          }
+        ]
+      }
+    },
+    {
+      "id": "song.B.ja",
+      "type": "audio",
+      "role": "song",
+      "locale": "ja",
+      "script": "B",
+      "file": "songs/ja_B.mp3",
+      "license": {
+        "provider": "lyria",
+        "id": "v1_ChdwV2JEYXFXT05lX216N0lQM05tLXlRcxIXcFdiRGFxV09OZV9tejdJUDNObS15UXM",
+        "model": "lyria-3.5",
+        "generated_at": "2026-10-05T08:59:21Z"
+      },
+      "vars": {
+        "chorus_index": "2",
+        "lyric_language": "ja"
+      },
+      "data": {
+        "job_id": "fbcf7326-a046-4ada-9e84-24f59156840e",
+        "lyrics": "[Intro]\n\n[Verse]\n石畳の道　灯る灯り\nあなたが紡ぐ　物語の始まり\n言葉にできない　その胸の奥\nそっと聴かせて　私だけに\n\n[Chorus]\nさあ、話してごらん　君のストーリー\n風に揺れる　願いの布のように\n涙も笑顔も　全部宝物\nここから始まる　新しい明日へ\n\n[Bridge]\n風がささやく　遠い日の記憶\n結んだ絆は　今もここにある\n戸惑いや迷い　抱きしめたままで\nゆっくりでいい　歩き出そう\n\n[Chorus]\nさあ、話してごらん　君のストーリー\n風に揺れる　願いの布のように\n涙も笑顔も　全部宝物\nここから始まる　新しい明日へ\n\n[Bridge]\n誰にも言えない　夜もあっただろう\nだけどその全てが　今の君を作る\n信じていいんだよ　自分の力を\nほら、光が射す方へ\n\n[Chorus]\nさあ、話してごらん　君のストーリー\n風に揺れる　願いの布のように\n涙も笑顔も　全部宝物\nここから始まる　新しい明日へ\n\n[Outro]\n君の物語を　いつまでも…\nLa la la…",
+        "prompt": "vocals: vocals\nlyric_language: ja\nphotos: 4",
+        "structure": [
+          {
+            "end": 11.1,
+            "section": "Intro",
+            "start": 0
+          },
+          {
+            "end": 28.6,
+            "section": "Verse",
+            "start": 11.1
+          },
+          {
+            "end": 47.5,
+            "section": "Chorus",
+            "start": 29.5
+          },
+          {
+            "end": 66,
+            "section": "Bridge",
+            "start": 48.7
+          },
+          {
+            "end": 85.3,
+            "section": "Chorus",
+            "start": 67.4
+          },
+          {
+            "end": 103.3,
+            "section": "Bridge",
+            "start": 86.6
+          },
+          {
+            "end": 125.1,
+            "section": "Chorus",
+            "start": 107
+          },
+          {
+            "end": 130.1,
+            "section": "Outro",
+            "start": 126
+          }
+        ]
+      }
+    },
+    {
+      "id": "song.A.ko",
+      "type": "audio",
+      "role": "song",
+      "locale": "ko",
+      "script": "A",
+      "file": "songs/ko_A.mp3",
+      "license": {
+        "provider": "lyria",
+        "id": "v1_ChdoV1hEYXFTOUk5YlJ6N0lQalphZG1RbxIXaFdYRGFxUzlJOWJSejdJUGpaYWRtUW8",
+        "model": "lyria-3.5",
+        "generated_at": "2026-10-05T08:54:15Z"
+      },
+      "vars": {
+        "chorus_index": "2",
+        "keyword1": "커피",
+        "keyword2": "등산",
+        "keyword3": "일요일",
+        "lyric_language": "ko",
+        "recipient": "Alex",
+        "sung_name": "알렉스"
+      },
+      "data": {
+        "job_id": "231da553-26e8-406f-9eea-60e8ab689df6",
+        "lyrics": "[Intro]\n\n[Verse]\n햇살이 가득한 일요일 아침에\n커피 한 잔의 여유를 나누며\n바쁜 일상은 저 멀리 뒤로하고\n우리의 소중한 시간을 그려봐\n\n[Chorus]\n생일 축하해 알렉스, 내 곁에 있어 줘서\n너라는 선물에 난 항상 감사해\n따스한 이 멜로디에 내 맘을 다 담아\n알렉스, 영원히 널 응원하고 사랑할게\n\n[Bridge]\n우리 함께 산을 오르던 그날처럼\n힘들어도 웃던 너의 모습이 선해\n등산길 끝에 만난 멋진 풍경보다\n더 빛나던 건 바로 너의 미소였어\n\n[Chorus]\n생일 축하해 알렉스, 내 곁에 있어 줘서\n너라는 선물에 난 항상 감사해\n따스한 이 멜로디에 내 맘을 다 담아\n알렉스, 영원히 널 응원하고 사랑할게\n\n[Bridge]\n때로는 지치고 힘든 날이 온다 해도\n걱정 마 내가 네 손을 꼭 잡아줄게\n우리가 함께할 수많은 내일들이\n오늘보다 더 찬란하게 빛날 거야\n\n[Chorus]\n생일 축하해 알렉스, 내 곁에 있어 줘서\n너라는 선물에 난 항상 감사해\n따스한 이 멜로디에 내 맘을 다 담아\n알렉스, 영원히 널 응원하고 사랑할게\n\n[Outro]\n알렉스, 네가 있어서 행복해\n태어나 줘서 정말 고마워\n언제나 네 편이 되어줄게",
+        "prompt": "inspiration: birthday_wish\nrecipient: Alex\nkeywords: 커피 | 등산 | 일요일\nvocals: vocals\nlyric_language: ko",
+        "structure": [
+          {
+            "end": 10.7,
+            "section": "Intro",
+            "start": 0
+          },
+          {
+            "end": 27,
+            "section": "Verse",
+            "start": 10.7
+          },
+          {
+            "end": 45.5,
+            "section": "Chorus",
+            "start": 27.2
+          },
+          {
+            "end": 62.8,
+            "section": "Bridge",
+            "start": 47.6
+          },
+          {
+            "end": 82.3,
+            "section": "Chorus",
+            "start": 64.2
+          },
+          {
+            "end": 98.7,
+            "section": "Bridge",
+            "start": 82.6
+          },
+          {
+            "end": 119.4,
+            "section": "Chorus",
+            "start": 101.1
+          },
+          {
+            "end": 133.3,
+            "section": "Outro",
+            "start": 120
+          }
+        ]
+      }
+    },
+    {
+      "id": "song.B.ko",
+      "type": "audio",
+      "role": "song",
+      "locale": "ko",
+      "script": "B",
+      "file": "songs/ko_B.mp3",
+      "license": {
+        "provider": "lyria",
+        "id": "v1_ChdCR2JEYXZuUkJyTHJ6N0lQdDR5OG9RbxIXQkdiRGF2blJCckxyejdJUHQ0eThvUW8",
+        "model": "lyria-3.5",
+        "generated_at": "2026-10-05T08:56:37Z"
+      },
+      "vars": {
+        "chorus_index": "2",
+        "lyric_language": "ko"
+      },
+      "data": {
+        "job_id": "c9f79cbb-135f-4de3-942c-d5186f38c593",
+        "lyrics": "[Intro]\n\n[Verse]\n흐르는 불빛 속에 숨겨둔 너의 맘\n아무도 듣지 못한 긴 이야기들\n흩어지는 바람에 넌지시 실어 보내\n나만이 아는 그곳으로, 우린 가고 있어\n\n[Chorus]\n이게 네가 들려주고 싶던 이야기야\n밤하늘을 수놓은 저 많은 별들처럼\n가장 빛나는 순간을 내가 기억할게\n숨겨둔 아픔까지 다, 안아줄게 난\n\n[Bridge]\n가만히 눈을 감고 귀를 기울여봐\n네 침묵 속에 담긴 많은 의미들\n애써 웃지 않아도 난 모두 알 수 있어\n내 품에 기대어 편히 쉬어도 돼\n\n[Chorus]\n이게 네가 들려주고 싶던 이야기야\n밤하늘을 수놓은 저 많은 별들처럼\n가장 빛나는 순간을 내가 기억할게\n숨겨둔 아픔까지 다, 안아줄게 난\n\n[Bridge]\n(시간이 멈춘 것만 같은 이 순간에)\n너와 나만이 아는 그 비밀을 속삭여줘\n어떤 어둠이 와도 난 네 손을 놓지 않아\n이 노래처럼 우리 영원히 빛날 거야\n\n[Chorus]\n이게 네가 들려주고 싶던 이야기야\n밤하늘을 수놓은 저 많은 별들처럼\n가장 빛나는 순간을 내가 기억할게\n숨겨둔 아픔까지 다, 안아줄게 난\n\n[Outro]\n네 이야기, 언제나 내가 들어줄게...\n(영원히...)\n음... 오직 너만을 위한 노래...",
+        "prompt": "vocals: vocals\nlyric_language: ko\nphotos: 4",
+        "structure": [
+          {
+            "end": 9.9,
+            "section": "Intro",
+            "start": 0
+          },
+          {
+            "end": 27.8,
+            "section": "Verse",
+            "start": 9.9
+          },
+          {
+            "end": 41.6,
+            "section": "Chorus",
+            "start": 28
+          },
+          {
+            "end": 60.9,
+            "section": "Bridge",
+            "start": 42.9
+          },
+          {
+            "end": 80.7,
+            "section": "Chorus",
+            "start": 62.1
+          },
+          {
+            "end": 89.9,
+            "section": "Bridge",
+            "start": 80.9
+          },
+          {
+            "end": 99.1,
+            "section": "Chorus",
+            "start": 90.4
+          },
+          {
+            "end": 117.7,
+            "section": "Outro",
+            "start": 99.3
+          }
+        ]
+      }
+    },
+    {
+      "id": "song.A.pt-BR",
+      "type": "audio",
+      "role": "song",
+      "locale": "pt-BR",
+      "script": "A",
+      "file": "songs/pt-BR_A.mp3",
+      "license": {
+        "provider": "lyria",
+        "id": "v1_Chd4MlREYXF1TU1LYlZ6N0lQM29hdXdBcxIXeDJURGFxdU1NS2JWejdJUDNvYXV3QXM",
+        "model": "lyria-3.5",
+        "generated_at": "2026-10-05T08:51:19Z"
+      },
+      "vars": {
+        "chorus_index": "2",
+        "keyword1": "café",
+        "keyword2": "trilha",
+        "keyword3": "domingo",
+        "lyric_language": "pt-BR",
+        "recipient": "Alex",
+        "sung_name": "Alex"
+      },
+      "data": {
+        "job_id": "83979abd-8c62-422c-9585-2aa6a8fe33c8",
+        "lyrics": "[Intro]\n\n[Verse]\nUm cheiro de café se espalha pelo ar\nO sol de um domingo vem nos abraçar\nUma trilha linda pra gente seguir\nE tantos motivos pra poder sorrir\n\n[Chorus]\nParabéns pra você, querido Alex!\nNesse domingo que o céu se fez mais azul!\nCom café e amor, celebramos Alex!\nDe norte a sul, sua vida é luz!\n\n[Bridge]\nDepois da trilha, a gente vai descansar\nNum cantinho calmo, pra poder brindar\nCom mais um café e o sorriso na mão\nBatendo no ritmo do coração\n\n[Chorus]\nParabéns pra você, querido Alex!\nNesse domingo que o céu se fez mais azul!\nCom café e amor, celebramos Alex!\nDe norte a sul, sua vida é luz!\n\n[Bridge]\nA vida é uma trilha de amor pra seguir\nE com você fica fácil sorrir\nObrigado por ser essa luz a brilhar\nNesse domingo, vamos celebrar!\n\n[Chorus]\nParabéns pra você, querido Alex!\nNesse domingo que o céu se fez mais azul!\nCom café e amor, celebramos Alex!\nDe norte a sul, sua vida é luz!\n\n[Outro]\n(Ooh...) Viva o Alex... (ooh...)\nUm lindo domingo...\nUm brinde à sua vida... Alex.",
+        "prompt": "inspiration: birthday_wish\nrecipient: Alex\nkeywords: café | trilha | domingo\nvocals: vocals\nlyric_language: pt-BR",
+        "structure": [
+          {
+            "end": 11.5,
+            "section": "Intro",
+            "start": 0
+          },
+          {
+            "end": 28.9,
+            "section": "Verse",
+            "start": 11.5
+          },
+          {
+            "end": 46.4,
+            "section": "Chorus",
+            "start": 29.3
+          },
+          {
+            "end": 65.4,
+            "section": "Bridge",
+            "start": 47.9
+          },
+          {
+            "end": 83,
+            "section": "Chorus",
+            "start": 66
+          },
+          {
+            "end": 101.6,
+            "section": "Bridge",
+            "start": 85.2
+          },
+          {
+            "end": 120,
+            "section": "Chorus",
+            "start": 102.5
+          },
+          {
+            "end": 130.7,
+            "section": "Outro",
+            "start": 128
+          }
+        ]
+      }
+    },
+    {
+      "id": "song.B.pt-BR",
+      "type": "audio",
+      "role": "song",
+      "locale": "pt-BR",
+      "script": "B",
+      "file": "songs/pt-BR_B.mp3",
+      "license": {
+        "provider": "lyria",
+        "id": "v1_ChdZMjdEYW9URUZ0Q1A2ZGtQX04yZHVBMBIXWTI3RGFvVEVGdENQNmRrUF9OMmR1QTA",
+        "model": "lyria-3.5",
+        "generated_at": "2026-10-05T09:32:26Z"
+      },
+      "vars": {
+        "chorus_index": "2",
+        "lyric_language": "pt-BR"
+      },
+      "data": {
+        "job_id": "a4618038-4b66-42a1-a79f-4691a3b2d514",
+        "lyrics": "[Intro]\n\n[Verse]\nA areia guarda os passos do que a gente viveu\nO confete que resta é do sonho que foi seu\nVocê me olha e diz que quer me confessar\nA história mais bonita que o tempo não vai apagar\n\n[Chorus]\nCanta a sua história, me deixa ouvir você!\nO mundo quer saber o que te faz viver\nDessa praia bonita, sob o sol a brilhar\nÉ a sua verdade que vai nos guiar\n\n[Bridge]\nAs ondas do mar parecem te entender\nO que a boca não diz, o olhar vai dizer\nNão tenha medo de ser quem você é\nSua história tem força e muita fé\n\n[Chorus]\nCanta a sua história, me deixa ouvir você!\nO mundo quer saber o que te faz viver\nDessa praia bonita, sob o sol a brilhar\nÉ a sua verdade que vai nos guiar\n\n[Bridge]\nE se o mundo não quiser escutar\nEu estarei aqui para te acompanhar\nSua voz é linda, seu canto é real\nUm brilho eterno, sem igual\n\n[Chorus]\nCanta a sua história, me deixa ouvir você!\nO mundo quer saber o que te faz viver\nDessa praia bonita, sob o sol a brilhar\nÉ a sua verdade que vai nos guiar\n\n[Outro]\nA sua verdade...\nQue vai nos guiar...\n(História de amor)\nCanta... canta...",
+        "prompt": "vocals: vocals\nlyric_language: pt-BR\nphotos: 4",
+        "structure": [
+          {
+            "end": 15.6,
+            "section": "Intro",
+            "start": 0
+          },
+          {
+            "end": 32.6,
+            "section": "Verse",
+            "start": 15.6
+          },
+          {
+            "end": 47.9,
+            "section": "Chorus",
+            "start": 33.7
+          },
+          {
+            "end": 66.1,
+            "section": "Bridge",
+            "start": 49.6
+          },
+          {
+            "end": 84.5,
+            "section": "Chorus",
+            "start": 68
+          },
+          {
+            "end": 103.3,
+            "section": "Bridge",
+            "start": 88.1
+          },
+          {
+            "end": 123.6,
+            "section": "Chorus",
+            "start": 106.8
+          },
+          {
+            "end": 138.1,
+            "section": "Outro",
+            "start": 128.1
+          }
+        ]
+      }
+    },
+    {
+      "id": "song.A.tr",
+      "type": "audio",
+      "role": "song",
+      "locale": "tr",
+      "script": "A",
+      "file": "songs/tr_A.mp3",
+      "license": {
+        "provider": "lyria",
+        "id": "v1_ChdPbkhEYXNpOEh1ZXNxdHNQbWJXRWdBcxIXT25IRGFzaThIdWVzcXRzUG1iV0VnQXM",
+        "model": "lyria-3.5",
+        "generated_at": "2026-10-05T09:44:14Z"
+      },
+      "vars": {
+        "chorus_index": "2",
+        "keyword1": "kahve",
+        "keyword2": "yürüyüş",
+        "keyword3": "pazar",
+        "lyric_language": "tr",
+        "recipient": "Alex",
+        "sung_name": "Alex"
+      },
+      "data": {
+        "job_id": "332f4b87-1779-4814-8277-060b0e0b9a5c",
+        "lyrics": "[Intro]\n\n[Verse]\nGüneş sızar camdan içeri yavaşça,\nBir pazar sabahı, her şey çok sakin.\nMutfağa süzülen taze kahve kokusu,\nGünün en güzel anı başladı velhasıl.\nSonra küçük bir yürüyüşe çıkarız belki,\nSokaklar sessiz, ellerimiz sıcacık.\n\n[Chorus]\nİyi ki doğdun, iyi ki varsın Alex!\nHayat seninle güzel, seninle güneşli.\nNice mutlu yıllara, canım benim Alex,\nBugün sadece senin, bugün bizim pazarımız.\n\n[Bridge]\nDönüşte yine bir fincan kahve yaparız,\nEn sevdiğin plağı koyarız masaya.\nBu pazar günü sadece bize özel,\nZaman dursun isteriz bu huzurlu yuvada.\nYürüyüşün yorgunluğu tatlı bir huzur olur,\nSeninle geçen her saniye bir ömre bedel.\n\n[Chorus]\nİyi ki doğdun, iyi ki varsın Alex!\nHayat seninle güzel, seninle güneşli.\nNice mutlu yıllara, canım benim Alex,\nBugün sadece senin, bugün bizim pazarımız.\n\n[Bridge]\nYıllar geçse de bu sevgi hiç bitmez,\nHer pazar aynı huzurla dolar içimiz.\nGözlerinde gördüğüm o ışık sönmez,\nSeninle her adımda yeni bir dünyayız biz.\n\n[Chorus]\nİyi ki doğdun, iyi ki varsın Alex!\nHayat seninle güzel, seninle güneşli.\nNice mutlu yıllara, canım benim Alex,\nBugün sadece senin, bugün bizim pazarımız.\n\n[Outro]\nKahvemiz bitti ama gün daha yeni başlıyor...\nSeni çok seviyorum.",
+        "prompt": "inspiration: birthday_wish\nrecipient: Alex\nkeywords: kahve | yürüyüş | pazar\nvocals: vocals\nlyric_language: tr",
+        "structure": [
+          {
+            "end": 10.2,
+            "section": "Intro",
+            "start": 0
+          },
+          {
+            "end": 28.5,
+            "section": "Verse",
+            "start": 10.2
+          },
+          {
+            "end": 44.6,
+            "section": "Chorus",
+            "start": 28.9
+          },
+          {
+            "end": 64.7,
+            "section": "Bridge",
+            "start": 47.1
+          },
+          {
+            "end": 81.6,
+            "section": "Chorus",
+            "start": 66
+          },
+          {
+            "end": 93.5,
+            "section": "Bridge",
+            "start": 83.4
+          },
+          {
+            "end": 109.6,
+            "section": "Chorus",
+            "start": 93.9
+          },
+          {
+            "end": 117.9,
+            "section": "Outro",
+            "start": 111.9
+          }
+        ]
+      }
+    },
+    {
+      "id": "song.B.tr",
+      "type": "audio",
+      "role": "song",
+      "locale": "tr",
+      "script": "B",
+      "file": "songs/tr_B.mp3",
+      "license": {
+        "provider": "lyria",
+        "id": "v1_ChdvbkhEYXY3TkVhYUFtdGtQdmVtTXdBYxIXb25IRGF2N05FYWFBbXRrUHZlbU13QWM",
+        "model": "lyria-3.5",
+        "generated_at": "2026-10-05T09:46:26Z"
+      },
+      "vars": {
+        "chorus_index": "2",
+        "lyric_language": "tr"
+      },
+      "data": {
+        "job_id": "7b00cadd-facf-4719-96c7-73a6e50f0895",
+        "lyrics": "[Verse 1]\nBak bu şehre, ışıkları sönmeden\nGözlerindeki o hikayeyi anlat bana\n\n[Verse 2]\nYüreğinde taşıdığın o ağır yükleri\nRüzgara bırak, dağılsınlar tek tek\nSen susunca bile her şey o kadar derin ki\nBu sessizlikte can bulacak o gerçek\n\n[Chorus]\nANLAT BANA, SENİN HİKAYEN BU!\nKaranlıktan doğan o ışığı göster\nHer kırık parçan, her bir yaranla\nSen varsın bu hayatta, unutma ne olur\n\n[Bridge]\nKöprüler kurulur geçmişle gelecek arasında\nSenin adımlarınla şekillenir her yol\nKorkma o karanlık koridorlardan geçerken\nKendi masalının kahramanı sen ol\n\n[Chorus]\nANLAT BANA, SENİN HİKAYEN BU!\nKaranlıktan doğan o ışığı göster\nHer kırık parçan, her bir yaranla\nSen varsın bu hayatta, unutma ne olur\n\n[Bridge]\nVE BİR GÜN GELECEK, GÜNEŞ DOĞDUĞUNDA\nBÜTÜN BU YAŞANANLAR BİRER İZ OLACAK\nSADECE SENİN OLAN, SENİ VAR EDEN\nO BÜYÜK HİKAYENİN BİR PARÇASI OLACAK\n\n[Chorus]\nANLAT BANA, SENİN HİKAYEN BU!\nKaranlıktan doğan o ışığı göster\nHer kırık parçan, her bir yaranla\nSen varsın bu hayatta, unutma ne olur\n\n[Outro]\nAnlat bana...\nSenin hikayen bu...\n(Unutma ne olur)",
+        "prompt": "vocals: vocals\nlyric_language: tr\nphotos: 4",
+        "structure": [
+          {
+            "end": 11,
+            "section": "Verse 1",
+            "start": 1.9
+          },
+          {
+            "end": 29.4,
+            "section": "Verse 2",
+            "start": 11.6
+          },
+          {
+            "end": 47.8,
+            "section": "Chorus",
+            "start": 30
+          },
+          {
+            "end": 66.8,
+            "section": "Bridge",
+            "start": 49
+          },
+          {
+            "end": 85.6,
+            "section": "Chorus",
+            "start": 67.4
+          },
+          {
+            "end": 104.1,
+            "section": "Bridge",
+            "start": 86.5
+          },
+          {
+            "end": 122.7,
+            "section": "Chorus",
+            "start": 104.8
+          },
+          {
+            "end": 127,
+            "section": "Outro",
+            "start": 123.6
+          }
+        ]
+      }
+    },
+    {
+      "id": "song.A.vi",
+      "type": "audio",
+      "role": "song",
+      "locale": "vi",
+      "script": "A",
+      "file": "songs/vi_A.mp3",
+      "license": {
+        "provider": "lyria",
+        "id": "v1_ChdvbVhEYW9Pd0NKUFh6N0lQaTlPTG9BbxIXb21YRGFvT3dDSlBYejdJUGk5T0xvQW8",
+        "model": "lyria-3.5",
+        "generated_at": "2026-10-05T08:54:48Z"
+      },
+      "vars": {
+        "chorus_index": "2",
+        "keyword1": "cà phê",
+        "keyword2": "leo núi",
+        "keyword3": "Chủ nhật",
+        "lyric_language": "vi",
+        "recipient": "Alex",
+        "sung_name": "Alex"
+      },
+      "data": {
+        "job_id": "1d5e1d53-4730-4728-b8dd-12e25aeb0abe",
+        "lyrics": "[Intro]\n\n[Verse]\nSáng Chủ nhật nắng rơi bên thềm, bình yên quá\nLy cà phê ấm thơm hương nồng, ta cùng say\nNgắm mây bay lững lờ, lòng thảnh thơi biết bao\nNhững lo toan thường ngày, tạm gác lại phía sau\n\n[Chorus]\nChúc mừng sinh nhật nhé, Alex yêu dấu ơi!\nMong nụ cười mãi luôn rạng rỡ trên môi người\nĐường đời dẫu có xa, gập ghềnh bao sóng gió\nVẫn luôn có tôi đây, cùng Alex bước qua\n\n[Bridge]\nNhớ những lúc ta cùng đi leo núi, mệt mà vui\nĐỉnh cao kia vẫy chào, cả đất trời bao la\nCùng nhau sẻ chia bao buồn vui, bao ước mơ\nTình bạn ta sáng ngời, tựa như một bài thơ\n\n[Chorus]\nChúc mừng sinh nhật nhé, Alex yêu dấu ơi!\nMong nụ cười mãi luôn rạng rỡ trên môi người\nĐường đời dẫu có xa, gập ghềnh bao sóng gió\nVẫn luôn có tôi đây, cùng Alex bước qua\n\n[Bridge]\nCảm ơn cuộc đời đã cho ta gặp gỡ nhau\nĐể cùng viết nên bao kỉ niệm thật muôn màu\nDù thời gian có trôi, vạn vật có đổi thay\nThì tình bạn chúng ta, vẫn mãi luôn đong đầy\n\n[Chorus]\nChúc mừng sinh nhật nhé, Alex yêu dấu ơi!\nMong nụ cười mãi luôn rạng rỡ trên môi người\nĐường đời dẫu có xa, gập ghềnh bao sóng gió\nVẫn luôn có tôi đây, cùng Alex bước qua\n\n[Outro]\n(Chúc mừng sinh nhật, Alex...)\n(Mãi luôn hạnh phúc nhé...)",
+        "prompt": "inspiration: birthday_wish\nrecipient: Alex\nkeywords: cà phê | leo núi | Chủ nhật\nvocals: vocals\nlyric_language: vi",
+        "structure": [
+          {
+            "end": 10.3,
+            "section": "Intro",
+            "start": 0
+          },
+          {
+            "end": 28.4,
+            "section": "Verse",
+            "start": 10.3
+          },
+          {
+            "end": 46.6,
+            "section": "Chorus",
+            "start": 28.9
+          },
+          {
+            "end": 64.6,
+            "section": "Bridge",
+            "start": 47.8
+          },
+          {
+            "end": 83.1,
+            "section": "Chorus",
+            "start": 65.8
+          },
+          {
+            "end": 101.2,
+            "section": "Bridge",
+            "start": 83.8
+          },
+          {
+            "end": 120,
+            "section": "Chorus",
+            "start": 102.4
+          },
+          {
+            "end": 123.1,
+            "section": "Outro",
+            "start": 121.8
+          }
+        ]
+      }
+    },
+    {
+      "id": "song.B.vi",
+      "type": "audio",
+      "role": "song",
+      "locale": "vi",
+      "script": "B",
+      "file": "songs/vi_B.mp3",
+      "license": {
+        "provider": "lyria",
+        "id": "v1_ChdFV2JEYXMtWUx2TG56N0lQeXJqRW9RbxIXRVdiRGFzLVlMdkxuejdJUHlyakVvUW8",
+        "model": "lyria-3.5",
+        "generated_at": "2026-10-05T08:56:48Z"
+      },
+      "vars": {
+        "chorus_index": "2",
+        "lyric_language": "vi"
+      },
+      "data": {
+        "job_id": "304f7e4c-5b6f-45d0-8555-028c63ffbc2c",
+        "lyrics": "[Intro]\n\n[Verse]\nĐêm dần buông trên dòng sông vắng tanh\nChiếc thuyền trôi mang theo những mong manh\nNghe thời gian trôi đi chẳng thể giữ\nNhững lời ca như câu chuyện xưa cũ\n\n[Chorus]\nKỂ TÔI NGHE CÂU CHUYỆN BẠN GIẤU KÍN\nNHỮNG VẦNG THƠ VIẾT TRÊN NỖI NIỀM TIN\nĐỂ GIAI ĐIỆU NÀY ÔM LẤY NHỮNG ƯỚC MƠ\nBẢN TÌNH CA CHỈ CÓ HAI CHÚNG TA!\n\n[Bridge]\nHội An xưa rực rỡ những đèn hoa\nNhư chứng nhân cho tình cảm đôi ta\nMỗi ánh nến là một lời nguyện ước\nDìu nhau đi qua bão dông phía trước\n\n[Chorus]\nKỂ TÔI NGHE CÂU CHUYỆN BẠN GIẤU KÍN\nNHỮNG VẦNG THƠ VIẾT TRÊN NỖI NIỀM TIN\nĐỂ GIAI ĐIỆU NÀY ÔM LẤY NHỮNG ƯỚC MƠ\nBẢN TÌNH CA CHỈ CÓ HAI CHÚNG TA!\n\n[Bridge]\nVà khi bình minh rạng rỡ muôn nơi\nCâu chuyện chúng ta sẽ vang vọng khắp trời\nMãi bên nhau, không bao giờ xa cách...\n\n[Chorus]\nKỂ TÔI NGHE CÂU CHUYỆN BẠN GIẤU KÍN\nNHỮNG VẦNG THƠ VIẾT TRÊN NỖI NIỀM TIN\nĐỂ GIAI ĐIỆU NÀY ÔM LẤY NHỮNG ƯỚC MƠ\nBẢN TÌNH CA CHỈ CÓ HAI CHÚNG TA!\n\n[Outro]\n(Giai điệu này... mãi thuộc về bạn...)",
+        "prompt": "vocals: vocals\nlyric_language: vi\nphotos: 4",
+        "structure": [
+          {
+            "end": 11.6,
+            "section": "Intro",
+            "start": 0
+          },
+          {
+            "end": 27.9,
+            "section": "Verse",
+            "start": 11.6
+          },
+          {
+            "end": 46.2,
+            "section": "Chorus",
+            "start": 30.1
+          },
+          {
+            "end": 64.8,
+            "section": "Bridge",
+            "start": 49
+          },
+          {
+            "end": 83.1,
+            "section": "Chorus",
+            "start": 67
+          },
+          {
+            "end": 93.4,
+            "section": "Bridge",
+            "start": 84.6
+          },
+          {
+            "end": 110.8,
+            "section": "Chorus",
+            "start": 94.7
+          },
+          {
+            "end": 115.7,
+            "section": "Outro",
+            "start": 112.4
+          }
+        ]
+      }
+    },
+    {
+      "id": "song.A.zh-Hans",
+      "type": "audio",
+      "role": "song",
+      "locale": "zh-Hans",
+      "script": "A",
+      "file": "songs/zh-Hans_A.mp3",
+      "license": {
+        "provider": "lyria",
+        "id": "v1_ChY2R3ZEYXZ1YUdmNmo2ZGtQdmRLdU1BEhY2R3ZEYXZ1YUdmNmo2ZGtQdmRLdU1B",
+        "model": "lyria-3.5",
+        "generated_at": "2026-10-05T09:21:48Z"
+      },
+      "vars": {
+        "chorus_index": "2",
+        "keyword1": "咖啡",
+        "keyword2": "爬山",
+        "keyword3": "星期天",
+        "lyric_language": "zh-Hans",
+        "recipient": "Alex",
+        "sung_name": "Alex"
+      },
+      "data": {
+        "job_id": "1df3f615-6813-4a3f-bbdb-38222fe7473f",
+        "lyrics": "[Intro]\n\n[Verse]\n(Mmm) 又是阳光灿烂的星期天\n阳光洒在 窗前的咖啡垫\n这香气 像你给的温暖\n一点一滴 甜进我心坎\n\n[Chorus]\n祝你生日快乐，我亲爱的Alex\n愿你的笑容 永远像今天这样澈\n无论走多远 我都在你身侧\nAlex，你是最美的颜色\n\n[Bridge]\n记得那天 我们一起去爬山\n一步步 走过陡峭的弯\n在山顶 看着夕阳落山\n有你陪伴 就不觉得孤单\n\n[Chorus]\n祝你生日快乐，我亲爱的Alex\n愿你的笑容 永远像今天这样澈\n无论走多远 我都在你身侧\nAlex，你是最美的颜色\n\n[Bridge]\n未来的路 也许会有风雨交加\n但别怕 有我陪你一起到达\n把所有的美好 都送给你吧\n（送给你吧） 愿你永远快乐像朵花\n\n[Chorus]\n祝你生日快乐，我亲爱的Alex\n愿你的笑容 永远像今天这样澈\n无论走多远 我都在你身侧\nAlex，你是最美的颜色\n\n[Outro]\n(祝你生日快乐，Alex)\n(每个星期天 都要快乐)\n(天天快乐...)",
+        "prompt": "inspiration: birthday_wish\nrecipient: Alex\nkeywords: 咖啡 | 爬山 | 星期天\nvocals: vocals\nlyric_language: zh-Hans",
+        "structure": [
+          {
+            "end": 12.7,
+            "section": "Intro",
+            "start": 0
+          },
+          {
+            "end": 28,
+            "section": "Verse",
+            "start": 12.7
+          },
+          {
+            "end": 44.6,
+            "section": "Chorus",
+            "start": 28.7
+          },
+          {
+            "end": 63.5,
+            "section": "Bridge",
+            "start": 47.6
+          },
+          {
+            "end": 80.1,
+            "section": "Chorus",
+            "start": 64.4
+          },
+          {
+            "end": 99.1,
+            "section": "Bridge",
+            "start": 82.6
+          },
+          {
+            "end": 115.7,
+            "section": "Chorus",
+            "start": 100
+          },
+          {
+            "end": 124.2,
+            "section": "Outro",
+            "start": 117.5
+          }
+        ]
+      }
+    },
+    {
+      "id": "song.B.zh-Hans",
+      "type": "audio",
+      "role": "song",
+      "locale": "zh-Hans",
+      "script": "B",
+      "file": "songs/zh-Hans_B.mp3",
+      "license": {
+        "provider": "lyria",
+        "id": "v1_ChdlMlREYXV2Q0g1Mmd6N0lQeGJmazJBYxIXZTJURGF1dkNINTJnejdJUHhiZmsyQWM",
+        "model": "lyria-3.5",
+        "generated_at": "2026-10-05T08:50:15Z"
+      },
+      "vars": {
+        "chorus_index": "2",
+        "lyric_language": "zh-Hans"
+      },
+      "data": {
+        "job_id": "fff73b84-6ecd-4e48-85ce-e550964239dc",
+        "lyrics": "[Verse 1]\n(嗯... 你的故事...)\n\n[Verse 2]\n泛黄的路灯 照亮了街角\n热气腾腾的摊子 飘着家乡的味道\n你说你有一个故事 藏在心底很久了\n今夜 借着这微光 能否对我聊聊\n\n[Chorus]\n把你的故事 写在风里吧\n让那些遗憾和美丽 都开出花\n红灯笼摇曳 像是你的眼眸\n诉说着那些 没能说出口的温柔\n\n[Verse 3]\n青石板路上 留着谁的脚步\n转角那家茶馆 还在为谁守候\n你说时间太快 很多事来不及抓住\n但那些真心 永远不会被尘埃掩埋\n\n[Chorus]\n把你的故事 写在风里吧\n让那些遗憾和美丽 都开出花\n红灯笼摇曳 像是你的眼眸\n诉说着那些 没能说出口的温柔\n\n[Bridge]\n也许路途遥远 充满了迷惘\n但只要心中 还有那一缕光\n你的故事 就会继续写下去\n成为夜空中 最亮的星光\n\n[Chorus]\n把你的故事 写在风里吧\n让那些遗憾和美丽 都开出花\n红灯笼摇曳 像是你的眼眸\n诉说着那些 没能说出口的温柔\n\n[Outro]\n(你的故事...)\n(我都听到了...)\n在这漫漫长夜里... 愿你一切安好...",
+        "prompt": "vocals: vocals\nlyric_language: zh-Hans\nphotos: 4",
+        "structure": [
+          {
+            "end": 7.2,
+            "section": "Verse 1",
+            "start": 6.2
+          },
+          {
+            "end": 26,
+            "section": "Verse 2",
+            "start": 10
+          },
+          {
+            "end": 40,
+            "section": "Chorus",
+            "start": 27.2
+          },
+          {
+            "end": 54.6,
+            "section": "Verse 3",
+            "start": 41.2
+          },
+          {
+            "end": 67.4,
+            "section": "Chorus",
+            "start": 54.6
+          },
+          {
+            "end": 82.1,
+            "section": "Bridge",
+            "start": 68.4
+          },
+          {
+            "end": 94.9,
+            "section": "Chorus",
+            "start": 82.1
+          },
+          {
+            "end": 108.4,
+            "section": "Outro",
+            "start": 97.7
+          }
+        ]
+      }
+    },
+    {
+      "id": "lyric_video.B.de-DE",
+      "type": "video",
+      "role": "lyric_video",
+      "locale": "de-DE",
+      "script": "B",
+      "file": "videos/de-DE_B.mp4",
+      "license": {
+        "provider": "platform",
+        "id": "885a4a90-d3dd-4b50-94cd-8368470993ca",
+        "model": "pipeline:songlet_lyric_video_v1",
+        "generated_at": "2026-10-05T11:18:37Z"
+      },
+      "data": {
+        "job_id": "082a0a36-ec42-459e-b585-02fdedf3f323"
+      }
+    },
+    {
+      "id": "lyric_video.B.en-US",
+      "type": "video",
+      "role": "lyric_video",
+      "locale": "en-US",
+      "script": "B",
+      "file": "videos/en-US_B.mp4",
+      "license": {
+        "provider": "platform",
+        "id": "f63b5083-e071-480a-a7a8-914175174241",
+        "model": "pipeline:songlet_lyric_video_v1",
+        "generated_at": "2026-10-05T11:21:34Z"
+      },
+      "data": {
+        "job_id": "c0f87da9-6a8a-4404-a44b-4736791ecec5"
+      }
+    },
+    {
+      "id": "lyric_video.B.es-MX",
+      "type": "video",
+      "role": "lyric_video",
+      "locale": "es-MX",
+      "script": "B",
+      "file": "videos/es-MX_B.mp4",
+      "license": {
+        "provider": "platform",
+        "id": "5762d203-7168-42da-a731-1038bb445c8f",
+        "model": "pipeline:songlet_lyric_video_v1",
+        "generated_at": "2026-10-05T11:17:19Z"
+      },
+      "data": {
+        "job_id": "36dbf794-92be-4b12-be9f-6badc354e6d2"
+      }
+    },
+    {
+      "id": "lyric_video.B.fr-FR",
+      "type": "video",
+      "role": "lyric_video",
+      "locale": "fr-FR",
+      "script": "B",
+      "file": "videos/fr-FR_B.mp4",
+      "license": {
+        "provider": "platform",
+        "id": "eb3a6db8-a0d7-4538-98e9-43ac76779346",
+        "model": "pipeline:songlet_lyric_video_v1",
+        "generated_at": "2026-10-05T11:20:14Z"
+      },
+      "data": {
+        "job_id": "ceaeb6d7-cc81-4816-9e8a-8166e2ff3a68"
+      }
+    },
+    {
+      "id": "lyric_video.B.hi",
+      "type": "video",
+      "role": "lyric_video",
+      "locale": "hi",
+      "script": "B",
+      "file": "videos/hi_B.mp4",
+      "license": {
+        "provider": "platform",
+        "id": "1ecd038f-4822-48fc-afed-3374e225573c",
+        "model": "pipeline:songlet_lyric_video_v1",
+        "generated_at": "2026-10-05T11:24:09Z"
+      },
+      "data": {
+        "job_id": "84fe7f92-f350-4cdc-85f8-7b0ae6e3de95"
+      }
+    },
+    {
+      "id": "lyric_video.B.id",
+      "type": "video",
+      "role": "lyric_video",
+      "locale": "id",
+      "script": "B",
+      "file": "videos/id_B.mp4",
+      "license": {
+        "provider": "platform",
+        "id": "00f447e3-8808-4491-9f70-b4ecb9acecf5",
+        "model": "pipeline:songlet_lyric_video_v1",
+        "generated_at": "2026-10-05T11:27:17Z"
+      },
+      "data": {
+        "job_id": "a54e0119-463c-4ca1-9f58-eee03dc623e9"
+      }
+    },
+    {
+      "id": "lyric_video.B.ja",
+      "type": "video",
+      "role": "lyric_video",
+      "locale": "ja",
+      "script": "B",
+      "file": "videos/ja_B.mp4",
+      "license": {
+        "provider": "platform",
+        "id": "107e7c02-84c7-4843-8a6c-fb9b8229fd0b",
+        "model": "pipeline:songlet_lyric_video_v1",
+        "generated_at": "2026-10-05T11:28:26Z"
+      },
+      "data": {
+        "job_id": "fbcf7326-a046-4ada-9e84-24f59156840e"
+      }
+    },
+    {
+      "id": "lyric_video.B.ko",
+      "type": "video",
+      "role": "lyric_video",
+      "locale": "ko",
+      "script": "B",
+      "file": "videos/ko_B.mp4",
+      "license": {
+        "provider": "platform",
+        "id": "fea09067-5edd-41cf-b42f-7f872057e823",
+        "model": "pipeline:songlet_lyric_video_v1",
+        "generated_at": "2026-10-05T11:22:51Z"
+      },
+      "data": {
+        "job_id": "c9f79cbb-135f-4de3-942c-d5186f38c593"
+      }
+    },
+    {
+      "id": "lyric_video.B.pt-BR",
+      "type": "video",
+      "role": "lyric_video",
+      "locale": "pt-BR",
+      "script": "B",
+      "file": "videos/pt-BR_B.mp4",
+      "license": {
+        "provider": "platform",
+        "id": "7b5123ae-6ebc-46fa-b29e-d19eb922b6c0",
+        "model": "pipeline:songlet_lyric_video_v1",
+        "generated_at": "2026-10-05T11:29:52Z"
+      },
+      "data": {
+        "job_id": "a4618038-4b66-42a1-a79f-4691a3b2d514"
+      }
+    },
+    {
+      "id": "lyric_video.B.tr",
+      "type": "video",
+      "role": "lyric_video",
+      "locale": "tr",
+      "script": "B",
+      "file": "videos/tr_B.mp4",
+      "license": {
+        "provider": "platform",
+        "id": "f316f399-66f2-40a4-95f7-3c8c0049c135",
+        "model": "pipeline:songlet_lyric_video_v1",
+        "generated_at": "2026-10-05T11:24:31Z"
+      },
+      "data": {
+        "job_id": "7b00cadd-facf-4719-96c7-73a6e50f0895"
+      }
+    },
+    {
+      "id": "lyric_video.B.vi",
+      "type": "video",
+      "role": "lyric_video",
+      "locale": "vi",
+      "script": "B",
+      "file": "videos/vi_B.mp4",
+      "license": {
+        "provider": "platform",
+        "id": "bc1946e4-67d9-4e0c-996a-8cb4e724f885",
+        "model": "pipeline:songlet_lyric_video_v1",
+        "generated_at": "2026-10-05T11:25:48Z"
+      },
+      "data": {
+        "job_id": "304f7e4c-5b6f-45d0-8555-028c63ffbc2c"
+      }
+    },
+    {
+      "id": "lyric_video.B.zh-Hans",
+      "type": "video",
+      "role": "lyric_video",
+      "locale": "zh-Hans",
+      "script": "B",
+      "file": "videos/zh-Hans_B.mp4",
+      "license": {
+        "provider": "platform",
+        "id": "25289d41-7389-4963-af93-3124bee05d0d",
+        "model": "pipeline:songlet_lyric_video_v1",
+        "generated_at": "2026-10-05T11:18:57Z"
+      },
+      "data": {
+        "job_id": "fff73b84-6ecd-4e48-85ce-e550964239dc"
+      }
+    },
+    {
+      "id": "photo.B.de-DE.1",
+      "type": "image",
+      "role": "photo",
+      "locale": "de-DE",
+      "script": "B",
+      "file": "images/de-DE_B_1.png",
+      "license": {
+        "provider": "platform",
+        "id": "5306",
+        "model": "gemini-3.1-flash-image",
+        "generated_at": "2026-10-05T08:20:52Z"
+      },
+      "data": {
+        "prompt": "Christmas-market wooden stalls with warm lights, gingerbread hearts, snow on cobblestones, wide establishing shot. Photorealistic smartphone photo, natural colours, portrait 3:4. An empty scene: no people anywhere (not even blurred in the background), no faces, no hands, no text, no lettering, no characters, no logos, no brand names."
+      }
+    },
+    {
+      "id": "photo.B.de-DE.2",
+      "type": "image",
+      "role": "photo",
+      "locale": "de-DE",
+      "script": "B",
+      "file": "images/de-DE_B_2.png",
+      "license": {
+        "provider": "platform",
+        "id": "5277",
+        "model": "gemini-3.1-flash-image",
+        "generated_at": "2026-10-05T05:57:38Z"
+      },
+      "data": {
+        "prompt": "Christmas-market wooden stalls with warm lights, gingerbread hearts, snow on cobblestones, close-up detail shot with shallow depth of field. Photorealistic smartphone photo, natural colours, portrait 3:4. No people, no faces, no hands, no text, no lettering, no logos, no brand names."
+      }
+    },
+    {
+      "id": "photo.B.de-DE.3",
+      "type": "image",
+      "role": "photo",
+      "locale": "de-DE",
+      "script": "B",
+      "file": "images/de-DE_B_3.png",
+      "license": {
+        "provider": "platform",
+        "id": "5280",
+        "model": "gemini-3.1-flash-image",
+        "generated_at": "2026-10-05T05:58:53Z"
+      },
+      "data": {
+        "prompt": "Christmas-market wooden stalls with warm lights, gingerbread hearts, snow on cobblestones, medium shot, golden-hour light. Photorealistic smartphone photo, natural colours, portrait 3:4. No people, no faces, no hands, no text, no lettering, no logos, no brand names."
+      }
+    },
+    {
+      "id": "photo.B.de-DE.4",
+      "type": "image",
+      "role": "photo",
+      "locale": "de-DE",
+      "script": "B",
+      "file": "images/de-DE_B_4.png",
+      "license": {
+        "provider": "platform",
+        "id": "5283",
+        "model": "gemini-3.1-flash-image",
+        "generated_at": "2026-10-05T06:00:05Z"
+      },
+      "data": {
+        "prompt": "Christmas-market wooden stalls with warm lights, gingerbread hearts, snow on cobblestones, evening ambience with warm practical lights. Photorealistic smartphone photo, natural colours, portrait 3:4. No people, no faces, no hands, no text, no lettering, no logos, no brand names."
+      }
+    },
+    {
+      "id": "photo.B.en-US.1",
+      "type": "image",
+      "role": "photo",
+      "locale": "en-US",
+      "script": "B",
+      "file": "images/en-US_B_1.png",
+      "license": {
+        "provider": "platform",
+        "id": "5228",
+        "model": "gemini-3.1-flash-image",
+        "generated_at": "2026-10-05T05:41:42Z"
+      },
+      "data": {
+        "prompt": "small-town American main street at golden hour, string lights, a diner sign without lettering, wide establishing shot. Photorealistic smartphone photo, natural colours, portrait 3:4. No people, no faces, no hands, no text, no lettering, no logos, no brand names."
+      }
+    },
+    {
+      "id": "photo.B.en-US.2",
+      "type": "image",
+      "role": "photo",
+      "locale": "en-US",
+      "script": "B",
+      "file": "images/en-US_B_2.png",
+      "license": {
+        "provider": "platform",
+        "id": "5229",
+        "model": "gemini-3.1-flash-image",
+        "generated_at": "2026-10-05T05:42:05Z"
+      },
+      "data": {
+        "prompt": "small-town American main street at golden hour, string lights, a diner sign without lettering, close-up detail shot with shallow depth of field. Photorealistic smartphone photo, natural colours, portrait 3:4. No people, no faces, no hands, no text, no lettering, no logos, no brand names."
+      }
+    },
+    {
+      "id": "photo.B.en-US.3",
+      "type": "image",
+      "role": "photo",
+      "locale": "en-US",
+      "script": "B",
+      "file": "images/en-US_B_3.png",
+      "license": {
+        "provider": "platform",
+        "id": "5230",
+        "model": "gemini-3.1-flash-image",
+        "generated_at": "2026-10-05T05:42:28Z"
+      },
+      "data": {
+        "prompt": "small-town American main street at golden hour, string lights, a diner sign without lettering, medium shot, golden-hour light. Photorealistic smartphone photo, natural colours, portrait 3:4. No people, no faces, no hands, no text, no lettering, no logos, no brand names."
+      }
+    },
+    {
+      "id": "photo.B.en-US.4",
+      "type": "image",
+      "role": "photo",
+      "locale": "en-US",
+      "script": "B",
+      "file": "images/en-US_B_4.png",
+      "license": {
+        "provider": "platform",
+        "id": "5231",
+        "model": "gemini-3.1-flash-image",
+        "generated_at": "2026-10-05T05:42:51Z"
+      },
+      "data": {
+        "prompt": "small-town American main street at golden hour, string lights, a diner sign without lettering, evening ambience with warm practical lights. Photorealistic smartphone photo, natural colours, portrait 3:4. No people, no faces, no hands, no text, no lettering, no logos, no brand names."
+      }
+    },
+    {
+      "id": "photo.B.es-MX.1",
+      "type": "image",
+      "role": "photo",
+      "locale": "es-MX",
+      "script": "B",
+      "file": "images/es-MX_B_1.png",
+      "license": {
+        "provider": "platform",
+        "id": "5285",
+        "model": "gemini-3.1-flash-image",
+        "generated_at": "2026-10-05T06:00:59Z"
+      },
+      "data": {
+        "prompt": "papel picado over a colonial plaza, marigolds, a guitar resting on a bench, wide establishing shot. Photorealistic smartphone photo, natural colours, portrait 3:4. No people, no faces, no hands, no text, no lettering, no logos, no brand names."
+      }
+    },
+    {
+      "id": "photo.B.es-MX.2",
+      "type": "image",
+      "role": "photo",
+      "locale": "es-MX",
+      "script": "B",
+      "file": "images/es-MX_B_2.png",
+      "license": {
+        "provider": "platform",
+        "id": "5287",
+        "model": "gemini-3.1-flash-image",
+        "generated_at": "2026-10-05T06:01:44Z"
+      },
+      "data": {
+        "prompt": "papel picado over a colonial plaza, marigolds, a guitar resting on a bench, close-up detail shot with shallow depth of field. Photorealistic smartphone photo, natural colours, portrait 3:4. No people, no faces, no hands, no text, no lettering, no logos, no brand names."
+      }
+    },
+    {
+      "id": "photo.B.es-MX.3",
+      "type": "image",
+      "role": "photo",
+      "locale": "es-MX",
+      "script": "B",
+      "file": "images/es-MX_B_3.png",
+      "license": {
+        "provider": "platform",
+        "id": "5289",
+        "model": "gemini-3.1-flash-image",
+        "generated_at": "2026-10-05T06:02:27Z"
+      },
+      "data": {
+        "prompt": "papel picado over a colonial plaza, marigolds, a guitar resting on a bench, medium shot, golden-hour light. Photorealistic smartphone photo, natural colours, portrait 3:4. No people, no faces, no hands, no text, no lettering, no logos, no brand names."
+      }
+    },
+    {
+      "id": "photo.B.es-MX.4",
+      "type": "image",
+      "role": "photo",
+      "locale": "es-MX",
+      "script": "B",
+      "file": "images/es-MX_B_4.png",
+      "license": {
+        "provider": "platform",
+        "id": "5293",
+        "model": "gemini-3.1-flash-image",
+        "generated_at": "2026-10-05T06:03:07Z"
+      },
+      "data": {
+        "prompt": "papel picado over a colonial plaza, marigolds, a guitar resting on a bench, evening ambience with warm practical lights. Photorealistic smartphone photo, natural colours, portrait 3:4. No people, no faces, no hands, no text, no lettering, no logos, no brand names."
+      }
+    },
+    {
+      "id": "photo.B.fr-FR.1",
+      "type": "image",
+      "role": "photo",
+      "locale": "fr-FR",
+      "script": "B",
+      "file": "images/fr-FR_B_1.png",
+      "license": {
+        "provider": "platform",
+        "id": "5284",
+        "model": "gemini-3.1-flash-image",
+        "generated_at": "2026-10-05T06:00:33Z"
+      },
+      "data": {
+        "prompt": "Paris café terrace at blue hour, bistro chairs, river quay with lamps, wide establishing shot. Photorealistic smartphone photo, natural colours, portrait 3:4. No people, no faces, no hands, no text, no lettering, no logos, no brand names."
+      }
+    },
+    {
+      "id": "photo.B.fr-FR.2",
+      "type": "image",
+      "role": "photo",
+      "locale": "fr-FR",
+      "script": "B",
+      "file": "images/fr-FR_B_2.png",
+      "license": {
+        "provider": "platform",
+        "id": "5286",
+        "model": "gemini-3.1-flash-image",
+        "generated_at": "2026-10-05T06:01:20Z"
+      },
+      "data": {
+        "prompt": "Paris café terrace at blue hour, bistro chairs, river quay with lamps, close-up detail shot with shallow depth of field. Photorealistic smartphone photo, natural colours, portrait 3:4. No people, no faces, no hands, no text, no lettering, no logos, no brand names."
+      }
+    },
+    {
+      "id": "photo.B.fr-FR.3",
+      "type": "image",
+      "role": "photo",
+      "locale": "fr-FR",
+      "script": "B",
+      "file": "images/fr-FR_B_3.png",
+      "license": {
+        "provider": "platform",
+        "id": "5288",
+        "model": "gemini-3.1-flash-image",
+        "generated_at": "2026-10-05T06:02:08Z"
+      },
+      "data": {
+        "prompt": "Paris café terrace at blue hour, bistro chairs, river quay with lamps, medium shot, golden-hour light. Photorealistic smartphone photo, natural colours, portrait 3:4. No people, no faces, no hands, no text, no lettering, no logos, no brand names."
+      }
+    },
+    {
+      "id": "photo.B.fr-FR.4",
+      "type": "image",
+      "role": "photo",
+      "locale": "fr-FR",
+      "script": "B",
+      "file": "images/fr-FR_B_4.png",
+      "license": {
+        "provider": "platform",
+        "id": "5292",
+        "model": "gemini-3.1-flash-image",
+        "generated_at": "2026-10-05T06:02:48Z"
+      },
+      "data": {
+        "prompt": "Paris café terrace at blue hour, bistro chairs, river quay with lamps, evening ambience with warm practical lights. Photorealistic smartphone photo, natural colours, portrait 3:4. No people, no faces, no hands, no text, no lettering, no logos, no brand names."
+      }
+    },
+    {
+      "id": "photo.B.hi.1",
+      "type": "image",
+      "role": "photo",
+      "locale": "hi",
+      "script": "B",
+      "file": "images/hi_B_1.png",
+      "license": {
+        "provider": "platform",
+        "id": "5250",
+        "model": "gemini-3.1-flash-image",
+        "generated_at": "2026-10-05T05:51:06Z"
+      },
+      "data": {
+        "prompt": "Diwali oil lamps on a courtyard step, rangoli powder patterns, marigold garlands, wide establishing shot. Photorealistic smartphone photo, natural colours, portrait 3:4. No people, no faces, no hands, no text, no lettering, no logos, no brand names."
+      }
+    },
+    {
+      "id": "photo.B.hi.2",
+      "type": "image",
+      "role": "photo",
+      "locale": "hi",
+      "script": "B",
+      "file": "images/hi_B_2.png",
+      "license": {
+        "provider": "platform",
+        "id": "5255",
+        "model": "gemini-3.1-flash-image",
+        "generated_at": "2026-10-05T05:52:17Z"
+      },
+      "data": {
+        "prompt": "Diwali oil lamps on a courtyard step, rangoli powder patterns, marigold garlands, close-up detail shot with shallow depth of field. Photorealistic smartphone photo, natural colours, portrait 3:4. No people, no faces, no hands, no text, no lettering, no logos, no brand names."
+      }
+    },
+    {
+      "id": "photo.B.hi.3",
+      "type": "image",
+      "role": "photo",
+      "locale": "hi",
+      "script": "B",
+      "file": "images/hi_B_3.png",
+      "license": {
+        "provider": "platform",
+        "id": "5258",
+        "model": "gemini-3.1-flash-image",
+        "generated_at": "2026-10-05T05:53:26Z"
+      },
+      "data": {
+        "prompt": "Diwali oil lamps on a courtyard step, rangoli powder patterns, marigold garlands, medium shot, golden-hour light. Photorealistic smartphone photo, natural colours, portrait 3:4. No people, no faces, no hands, no text, no lettering, no logos, no brand names."
+      }
+    },
+    {
+      "id": "photo.B.hi.4",
+      "type": "image",
+      "role": "photo",
+      "locale": "hi",
+      "script": "B",
+      "file": "images/hi_B_4.png",
+      "license": {
+        "provider": "platform",
+        "id": "5263",
+        "model": "gemini-3.1-flash-image",
+        "generated_at": "2026-10-05T05:54:34Z"
+      },
+      "data": {
+        "prompt": "Diwali oil lamps on a courtyard step, rangoli powder patterns, marigold garlands, evening ambience with warm practical lights. Photorealistic smartphone photo, natural colours, portrait 3:4. No people, no faces, no hands, no text, no lettering, no logos, no brand names."
+      }
+    },
+    {
+      "id": "photo.B.id.1",
+      "type": "image",
+      "role": "photo",
+      "locale": "id",
+      "script": "B",
+      "file": "images/id_B_1.png",
+      "license": {
+        "provider": "platform",
+        "id": "5254",
+        "model": "gemini-3.1-flash-image",
+        "generated_at": "2026-10-05T05:51:53Z"
+      },
+      "data": {
+        "prompt": "Bali rice terraces at sunrise, temple gate silhouette, frangipani flowers, wide establishing shot. Photorealistic smartphone photo, natural colours, portrait 3:4. No people, no faces, no hands, no text, no lettering, no logos, no brand names."
+      }
+    },
+    {
+      "id": "photo.B.id.2",
+      "type": "image",
+      "role": "photo",
+      "locale": "id",
+      "script": "B",
+      "file": "images/id_B_2.png",
+      "license": {
+        "provider": "platform",
+        "id": "5257",
+        "model": "gemini-3.1-flash-image",
+        "generated_at": "2026-10-05T05:53:04Z"
+      },
+      "data": {
+        "prompt": "Bali rice terraces at sunrise, temple gate silhouette, frangipani flowers, close-up detail shot with shallow depth of field. Photorealistic smartphone photo, natural colours, portrait 3:4. No people, no faces, no hands, no text, no lettering, no logos, no brand names."
+      }
+    },
+    {
+      "id": "photo.B.id.3",
+      "type": "image",
+      "role": "photo",
+      "locale": "id",
+      "script": "B",
+      "file": "images/id_B_3.png",
+      "license": {
+        "provider": "platform",
+        "id": "5262",
+        "model": "gemini-3.1-flash-image",
+        "generated_at": "2026-10-05T05:54:10Z"
+      },
+      "data": {
+        "prompt": "Bali rice terraces at sunrise, temple gate silhouette, frangipani flowers, medium shot, golden-hour light. Photorealistic smartphone photo, natural colours, portrait 3:4. No people, no faces, no hands, no text, no lettering, no logos, no brand names."
+      }
+    },
+    {
+      "id": "photo.B.id.4",
+      "type": "image",
+      "role": "photo",
+      "locale": "id",
+      "script": "B",
+      "file": "images/id_B_4.png",
+      "license": {
+        "provider": "platform",
+        "id": "5267",
+        "model": "gemini-3.1-flash-image",
+        "generated_at": "2026-10-05T05:55:21Z"
+      },
+      "data": {
+        "prompt": "Bali rice terraces at sunrise, temple gate silhouette, frangipani flowers, evening ambience with warm practical lights. Photorealistic smartphone photo, natural colours, portrait 3:4. No people, no faces, no hands, no text, no lettering, no logos, no brand names."
+      }
+    },
+    {
+      "id": "photo.B.ja.1",
+      "type": "image",
+      "role": "photo",
+      "locale": "ja",
+      "script": "B",
+      "file": "images/ja_B_1.png",
+      "license": {
+        "provider": "platform",
+        "id": "5269",
+        "model": "gemini-3.1-flash-image",
+        "generated_at": "2026-10-05T05:56:07Z"
+      },
+      "data": {
+        "prompt": "summer festival paper lanterns along a shrine path at dusk, yukata fabric on a railing, wide establishing shot. Photorealistic smartphone photo, natural colours, portrait 3:4. No people, no faces, no hands, no text, no lettering, no logos, no brand names."
+      }
+    },
+    {
+      "id": "photo.B.ja.2",
+      "type": "image",
+      "role": "photo",
+      "locale": "ja",
+      "script": "B",
+      "file": "images/ja_B_2.png",
+      "license": {
+        "provider": "platform",
+        "id": "5274",
+        "model": "gemini-3.1-flash-image",
+        "generated_at": "2026-10-05T05:57:12Z"
+      },
+      "data": {
+        "prompt": "summer festival paper lanterns along a shrine path at dusk, yukata fabric on a railing, close-up detail shot with shallow depth of field. Photorealistic smartphone photo, natural colours, portrait 3:4. No people, no faces, no hands, no text, no lettering, no logos, no brand names."
+      }
+    },
+    {
+      "id": "photo.B.ja.3",
+      "type": "image",
+      "role": "photo",
+      "locale": "ja",
+      "script": "B",
+      "file": "images/ja_B_3.png",
+      "license": {
+        "provider": "platform",
+        "id": "5279",
+        "model": "gemini-3.1-flash-image",
+        "generated_at": "2026-10-05T05:58:28Z"
+      },
+      "data": {
+        "prompt": "summer festival paper lanterns along a shrine path at dusk, yukata fabric on a railing, medium shot, golden-hour light. Photorealistic smartphone photo, natural colours, portrait 3:4. No people, no faces, no hands, no text, no lettering, no logos, no brand names."
+      }
+    },
+    {
+      "id": "photo.B.ja.4",
+      "type": "image",
+      "role": "photo",
+      "locale": "ja",
+      "script": "B",
+      "file": "images/ja_B_4.png",
+      "license": {
+        "provider": "platform",
+        "id": "5282",
+        "model": "gemini-3.1-flash-image",
+        "generated_at": "2026-10-05T05:59:39Z"
+      },
+      "data": {
+        "prompt": "summer festival paper lanterns along a shrine path at dusk, yukata fabric on a railing, evening ambience with warm practical lights. Photorealistic smartphone photo, natural colours, portrait 3:4. No people, no faces, no hands, no text, no lettering, no logos, no brand names."
+      }
+    },
+    {
+      "id": "photo.B.ko.1",
+      "type": "image",
+      "role": "photo",
+      "locale": "ko",
+      "script": "B",
+      "file": "images/ko_B_1.png",
+      "license": {
+        "provider": "platform",
+        "id": "5235",
+        "model": "gemini-3.1-flash-image",
+        "generated_at": "2026-10-05T05:46:45Z"
+      },
+      "data": {
+        "prompt": "Seoul night street with neon glow (no lettering), cherry blossoms over a stream, wide establishing shot. Photorealistic smartphone photo, natural colours, portrait 3:4. No people, no faces, no hands, no text, no lettering, no logos, no brand names."
+      }
+    },
+    {
+      "id": "photo.B.ko.2",
+      "type": "image",
+      "role": "photo",
+      "locale": "ko",
+      "script": "B",
+      "file": "images/ko_B_2.png",
+      "license": {
+        "provider": "platform",
+        "id": "5238",
+        "model": "gemini-3.1-flash-image",
+        "generated_at": "2026-10-05T05:47:54Z"
+      },
+      "data": {
+        "prompt": "Seoul night street with neon glow (no lettering), cherry blossoms over a stream, close-up detail shot with shallow depth of field. Photorealistic smartphone photo, natural colours, portrait 3:4. No people, no faces, no hands, no text, no lettering, no logos, no brand names."
+      }
+    },
+    {
+      "id": "photo.B.ko.3",
+      "type": "image",
+      "role": "photo",
+      "locale": "ko",
+      "script": "B",
+      "file": "images/ko_B_3.png",
+      "license": {
+        "provider": "platform",
+        "id": "5243",
+        "model": "gemini-3.1-flash-image",
+        "generated_at": "2026-10-05T05:49:02Z"
+      },
+      "data": {
+        "prompt": "Seoul night street with neon glow (no lettering), cherry blossoms over a stream, medium shot, golden-hour light. Photorealistic smartphone photo, natural colours, portrait 3:4. No people, no faces, no hands, no text, no lettering, no logos, no brand names."
+      }
+    },
+    {
+      "id": "photo.B.ko.4",
+      "type": "image",
+      "role": "photo",
+      "locale": "ko",
+      "script": "B",
+      "file": "images/ko_B_4.png",
+      "license": {
+        "provider": "platform",
+        "id": "5248",
+        "model": "gemini-3.1-flash-image",
+        "generated_at": "2026-10-05T05:50:16Z"
+      },
+      "data": {
+        "prompt": "Seoul night street with neon glow (no lettering), cherry blossoms over a stream, evening ambience with warm practical lights. Photorealistic smartphone photo, natural colours, portrait 3:4. No people, no faces, no hands, no text, no lettering, no logos, no brand names."
+      }
+    },
+    {
+      "id": "photo.B.pt-BR.1",
+      "type": "image",
+      "role": "photo",
+      "locale": "pt-BR",
+      "script": "B",
+      "file": "images/pt-BR_B_1.png",
+      "license": {
+        "provider": "platform",
+        "id": "5236",
+        "model": "gemini-3.1-flash-image",
+        "generated_at": "2026-10-05T05:47:07Z"
+      },
+      "data": {
+        "prompt": "Brazilian beach at sunset, palm silhouettes, carnival confetti on sand, wide establishing shot. Photorealistic smartphone photo, natural colours, portrait 3:4. No people, no faces, no hands, no text, no lettering, no logos, no brand names."
+      }
+    },
+    {
+      "id": "photo.B.pt-BR.2",
+      "type": "image",
+      "role": "photo",
+      "locale": "pt-BR",
+      "script": "B",
+      "file": "images/pt-BR_B_2.png",
+      "license": {
+        "provider": "platform",
+        "id": "5239",
+        "model": "gemini-3.1-flash-image",
+        "generated_at": "2026-10-05T05:48:16Z"
+      },
+      "data": {
+        "prompt": "Brazilian beach at sunset, palm silhouettes, carnival confetti on sand, close-up detail shot with shallow depth of field. Photorealistic smartphone photo, natural colours, portrait 3:4. No people, no faces, no hands, no text, no lettering, no logos, no brand names."
+      }
+    },
+    {
+      "id": "photo.B.pt-BR.3",
+      "type": "image",
+      "role": "photo",
+      "locale": "pt-BR",
+      "script": "B",
+      "file": "images/pt-BR_B_3.png",
+      "license": {
+        "provider": "platform",
+        "id": "5244",
+        "model": "gemini-3.1-flash-image",
+        "generated_at": "2026-10-05T05:49:19Z"
+      },
+      "data": {
+        "prompt": "Brazilian beach at sunset, palm silhouettes, carnival confetti on sand, medium shot, golden-hour light. Photorealistic smartphone photo, natural colours, portrait 3:4. No people, no faces, no hands, no text, no lettering, no logos, no brand names."
+      }
+    },
+    {
+      "id": "photo.B.pt-BR.4",
+      "type": "image",
+      "role": "photo",
+      "locale": "pt-BR",
+      "script": "B",
+      "file": "images/pt-BR_B_4.png",
+      "license": {
+        "provider": "platform",
+        "id": "5249",
+        "model": "gemini-3.1-flash-image",
+        "generated_at": "2026-10-05T05:50:44Z"
+      },
+      "data": {
+        "prompt": "Brazilian beach at sunset, palm silhouettes, carnival confetti on sand, evening ambience with warm practical lights. Photorealistic smartphone photo, natural colours, portrait 3:4. No people, no faces, no hands, no text, no lettering, no logos, no brand names."
+      }
+    },
+    {
+      "id": "photo.B.tr.1",
+      "type": "image",
+      "role": "photo",
+      "locale": "tr",
+      "script": "B",
+      "file": "images/tr_B_1.png",
+      "license": {
+        "provider": "platform",
+        "id": "5268",
+        "model": "gemini-3.1-flash-image",
+        "generated_at": "2026-10-05T05:55:47Z"
+      },
+      "data": {
+        "prompt": "Istanbul Bosphorus at sunset, tea glasses on a ledge, mosaic lamps, wide establishing shot. Photorealistic smartphone photo, natural colours, portrait 3:4. No people, no faces, no hands, no text, no lettering, no logos, no brand names."
+      }
+    },
+    {
+      "id": "photo.B.tr.2",
+      "type": "image",
+      "role": "photo",
+      "locale": "tr",
+      "script": "B",
+      "file": "images/tr_B_2.png",
+      "license": {
+        "provider": "platform",
+        "id": "5273",
+        "model": "gemini-3.1-flash-image",
+        "generated_at": "2026-10-05T05:56:55Z"
+      },
+      "data": {
+        "prompt": "Istanbul Bosphorus at sunset, tea glasses on a ledge, mosaic lamps, close-up detail shot with shallow depth of field. Photorealistic smartphone photo, natural colours, portrait 3:4. No people, no faces, no hands, no text, no lettering, no logos, no brand names."
+      }
+    },
+    {
+      "id": "photo.B.tr.3",
+      "type": "image",
+      "role": "photo",
+      "locale": "tr",
+      "script": "B",
+      "file": "images/tr_B_3.png",
+      "license": {
+        "provider": "platform",
+        "id": "5278",
+        "model": "gemini-3.1-flash-image",
+        "generated_at": "2026-10-05T05:58:01Z"
+      },
+      "data": {
+        "prompt": "Istanbul Bosphorus at sunset, tea glasses on a ledge, mosaic lamps, medium shot, golden-hour light. Photorealistic smartphone photo, natural colours, portrait 3:4. No people, no faces, no hands, no text, no lettering, no logos, no brand names."
+      }
+    },
+    {
+      "id": "photo.B.tr.4",
+      "type": "image",
+      "role": "photo",
+      "locale": "tr",
+      "script": "B",
+      "file": "images/tr_B_4.png",
+      "license": {
+        "provider": "platform",
+        "id": "5281",
+        "model": "gemini-3.1-flash-image",
+        "generated_at": "2026-10-05T05:59:13Z"
+      },
+      "data": {
+        "prompt": "Istanbul Bosphorus at sunset, tea glasses on a ledge, mosaic lamps, evening ambience with warm practical lights. Photorealistic smartphone photo, natural colours, portrait 3:4. No people, no faces, no hands, no text, no lettering, no logos, no brand names."
+      }
+    },
+    {
+      "id": "photo.B.vi.1",
+      "type": "image",
+      "role": "photo",
+      "locale": "vi",
+      "script": "B",
+      "file": "images/vi_B_1.png",
+      "license": {
+        "provider": "platform",
+        "id": "5253",
+        "model": "gemini-3.1-flash-image",
+        "generated_at": "2026-10-05T05:51:31Z"
+      },
+      "data": {
+        "prompt": "Hoi An silk lanterns over the river at night, a boat with candles, wide establishing shot. Photorealistic smartphone photo, natural colours, portrait 3:4. No people, no faces, no hands, no text, no lettering, no logos, no brand names."
+      }
+    },
+    {
+      "id": "photo.B.vi.2",
+      "type": "image",
+      "role": "photo",
+      "locale": "vi",
+      "script": "B",
+      "file": "images/vi_B_2.png",
+      "license": {
+        "provider": "platform",
+        "id": "5256",
+        "model": "gemini-3.1-flash-image",
+        "generated_at": "2026-10-05T05:52:41Z"
+      },
+      "data": {
+        "prompt": "Hoi An silk lanterns over the river at night, a boat with candles, close-up detail shot with shallow depth of field. Photorealistic smartphone photo, natural colours, portrait 3:4. No people, no faces, no hands, no text, no lettering, no logos, no brand names."
+      }
+    },
+    {
+      "id": "photo.B.vi.3",
+      "type": "image",
+      "role": "photo",
+      "locale": "vi",
+      "script": "B",
+      "file": "images/vi_B_3.png",
+      "license": {
+        "provider": "platform",
+        "id": "5261",
+        "model": "gemini-3.1-flash-image",
+        "generated_at": "2026-10-05T05:53:49Z"
+      },
+      "data": {
+        "prompt": "Hoi An silk lanterns over the river at night, a boat with candles, medium shot, golden-hour light. Photorealistic smartphone photo, natural colours, portrait 3:4. No people, no faces, no hands, no text, no lettering, no logos, no brand names."
+      }
+    },
+    {
+      "id": "photo.B.vi.4",
+      "type": "image",
+      "role": "photo",
+      "locale": "vi",
+      "script": "B",
+      "file": "images/vi_B_4.png",
+      "license": {
+        "provider": "platform",
+        "id": "5264",
+        "model": "gemini-3.1-flash-image",
+        "generated_at": "2026-10-05T05:54:51Z"
+      },
+      "data": {
+        "prompt": "Hoi An silk lanterns over the river at night, a boat with candles, evening ambience with warm practical lights. Photorealistic smartphone photo, natural colours, portrait 3:4. No people, no faces, no hands, no text, no lettering, no logos, no brand names."
+      }
+    },
+    {
+      "id": "photo.B.zh-Hans.1",
+      "type": "image",
+      "role": "photo",
+      "locale": "zh-Hans",
+      "script": "B",
+      "file": "images/zh-Hans_B_1.png",
+      "license": {
+        "provider": "platform",
+        "id": "5296",
+        "model": "gemini-3.1-flash-image",
+        "generated_at": "2026-10-05T08:16:42Z"
+      },
+      "data": {
+        "prompt": "plain red silk lanterns with no characters or symbols over a night-market street, steaming bamboo dumpling baskets, paper-cut flower patterns without any characters, wide establishing shot. Photorealistic smartphone photo, natural colours, portrait 3:4. No people, no faces, no hands, no text, no lettering, no logos, no brand names."
+      }
+    },
+    {
+      "id": "photo.B.zh-Hans.2",
+      "type": "image",
+      "role": "photo",
+      "locale": "zh-Hans",
+      "script": "B",
+      "file": "images/zh-Hans_B_2.png",
+      "license": {
+        "provider": "platform",
+        "id": "5302",
+        "model": "gemini-3.1-flash-image",
+        "generated_at": "2026-10-05T08:19:06Z"
+      },
+      "data": {
+        "prompt": "plain red silk lanterns with no characters or symbols over a night-market street, steaming bamboo dumpling baskets, paper-cut flower patterns without any characters, close-up detail shot with shallow depth of field. Photorealistic smartphone photo, natural colours, portrait 3:4. An empty scene: no people anywhere (not even blurred in the background), no faces, no hands, no text, no lettering, no characters, no logos, no brand names."
+      }
+    },
+    {
+      "id": "photo.B.zh-Hans.3",
+      "type": "image",
+      "role": "photo",
+      "locale": "zh-Hans",
+      "script": "B",
+      "file": "images/zh-Hans_B_3.png",
+      "license": {
+        "provider": "platform",
+        "id": "5298",
+        "model": "gemini-3.1-flash-image",
+        "generated_at": "2026-10-05T08:17:27Z"
+      },
+      "data": {
+        "prompt": "plain red silk lanterns with no characters or symbols over a night-market street, steaming bamboo dumpling baskets, paper-cut flower patterns without any characters, medium shot, golden-hour light. Photorealistic smartphone photo, natural colours, portrait 3:4. No people, no faces, no hands, no text, no lettering, no logos, no brand names."
+      }
+    },
+    {
+      "id": "photo.B.zh-Hans.4",
+      "type": "image",
+      "role": "photo",
+      "locale": "zh-Hans",
+      "script": "B",
+      "file": "images/zh-Hans_B_4.png",
+      "license": {
+        "provider": "platform",
+        "id": "5303",
+        "model": "gemini-3.1-flash-image",
+        "generated_at": "2026-10-05T08:19:29Z"
+      },
+      "data": {
+        "prompt": "plain red silk lanterns with no characters or symbols over a night-market street, steaming bamboo dumpling baskets, paper-cut flower patterns without any characters, evening ambience with warm practical lights. Photorealistic smartphone photo, natural colours, portrait 3:4. An empty scene: no people anywhere (not even blurred in the background), no faces, no hands, no text, no lettering, no characters, no logos, no brand names."
+      }
+    }
+  ],
+  "schema": 2
+}

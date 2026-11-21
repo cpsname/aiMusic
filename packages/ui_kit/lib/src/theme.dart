@@ -163,19 +163,19 @@ abstract final class AuraTheme {
         titleTextStyle: SongletType.title2.copyWith(color: c.ink),
         contentTextStyle: SongletType.subhead.copyWith(color: c.inkSecondary),
       ),
-      // The one action is printed in ink, not in the signal colour: the coral
-      // is a spot that marks selection and progress, never a field.
+      // The one action is printed on the brand plate: vermilion stock with
+      // cream lettering.
       filledButtonTheme: FilledButtonThemeData(
         style: ButtonStyle(
-          backgroundColor: WidgetStatePropertyAll(c.ink),
-          foregroundColor: WidgetStatePropertyAll(c.canvas),
+          backgroundColor: WidgetStatePropertyAll(c.accent),
+          foregroundColor: WidgetStatePropertyAll(c.onAccent),
           elevation: const WidgetStatePropertyAll(0),
           shape: const WidgetStatePropertyAll(
             RoundedRectangleBorder(borderRadius: SongletRadius.controlAll),
           ),
           textStyle: WidgetStatePropertyAll(
             SongletType.headline.copyWith(
-              color: c.canvas,
+              color: c.onAccent,
               fontWeight: FontWeight.w700,
               letterSpacing: 0.1,
             ),

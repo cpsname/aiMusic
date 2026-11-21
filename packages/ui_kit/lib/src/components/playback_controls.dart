@@ -130,9 +130,14 @@ class PlayButton extends StatelessWidget {
       excludeSemantics: true,
       child: DecoratedBox(
         decoration: BoxDecoration(
-          color: c.ink,
+          color: c.accent,
           borderRadius: radius,
-          border: Border.all(color: c.ink),
+          border: Border.all(
+            color: Color.alphaBlend(
+              Colors.black.withValues(alpha: 0.22),
+              c.accent,
+            ),
+          ),
           boxShadow: SongletElevation.of(context).level1,
         ),
         child: Material(
@@ -146,14 +151,14 @@ class PlayButton extends StatelessWidget {
                   ? Padding(
                       padding: EdgeInsets.all(size * _spinnerInset),
                       child: CircularProgressIndicator(
-                        color: c.canvas,
+                        color: c.onAccent,
                         strokeWidth: SongletSize.focusRing,
                       ),
                     )
                   : Icon(
                       playing ? Icons.pause_rounded : Icons.play_arrow_rounded,
                       size: size * 0.46,
-                      color: c.canvas,
+                      color: c.onAccent,
                       textDirection: TextDirection.ltr,
                     ),
             ),

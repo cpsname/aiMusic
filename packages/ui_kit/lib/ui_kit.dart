@@ -44,6 +44,7 @@ export 'src/components/search_field.dart';
 export 'src/components/segmented_toggle.dart';
 export 'src/components/selection_mark.dart';
 export 'src/components/share_card_canvas.dart';
+export 'src/components/staff_divider.dart';
 export 'src/components/share_target.dart';
 export 'src/components/songlet_mark.dart';
 export 'src/components/status_pill.dart';

@@ -37,8 +37,8 @@ class ObsButton extends StatelessWidget {
   Widget build(BuildContext context) {
     final enabled = onPressed != null && !loading;
     final c = SongletColors.of(context);
-    final onInk = c.canvas;
-    final labelColor = enabled ? onInk : c.inkTertiary;
+    final onPlate = enabled ? c.onAccent : c.inkTertiary;
+    final labelColor = onPlate;
     final radius = BorderRadius.circular(SongletRadius.control);
     final labelStyle =
         (Theme.of(context).textTheme.labelLarge ?? const TextStyle()).copyWith(
@@ -76,10 +76,12 @@ class ObsButton extends StatelessWidget {
 
     return DecoratedBox(
       decoration: BoxDecoration(
-        color: enabled ? c.ink : c.surfaceMuted,
+        color: enabled ? c.accent : c.surfaceMuted,
         borderRadius: radius,
         border: Border.all(
-          color: enabled ? c.ink : c.hairline,
+          color: enabled
+              ? Color.alphaBlend(Colors.black.withValues(alpha: 0.22), c.accent)
+              : c.hairline,
           width: SongletSize.rule,
         ),
         boxShadow: enabled
@@ -97,8 +99,8 @@ class ObsButton extends StatelessWidget {
         child: InkWell(
           onTap: enabled ? onPressed : null,
           borderRadius: radius,
-          splashColor: onInk.withValues(alpha: 0.16),
-          highlightColor: onInk.withValues(alpha: 0.08),
+          splashColor: c.onAccent.withValues(alpha: 0.16),
+          highlightColor: c.onAccent.withValues(alpha: 0.08),
           child: ConstrainedBox(
             constraints: BoxConstraints(minHeight: height),
             child: SizedBox(

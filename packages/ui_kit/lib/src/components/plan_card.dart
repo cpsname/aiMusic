@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../tokens/songlet_colors.dart';
 import '../tokens/songlet_metrics.dart';
 import '../tokens/songlet_type.dart';
+import 'detail_rows.dart';
 
 /// A subscription plan (docs/ui P08), set as a menu entry: the name and the
 /// price on one line, the trial as a stamp, the benefits struck in beneath.
@@ -40,9 +41,11 @@ class PlanCard extends StatelessWidget {
     final head = Row(
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [
-        Expanded(
+        Flexible(
           child: Text(
             title,
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
             style: SongletType.title2.copyWith(
               color: ink,
               fontSize: 21,
@@ -50,7 +53,23 @@ class PlanCard extends StatelessWidget {
             ),
           ),
         ),
-        const SizedBox(width: SongletSpace.x2),
+        // The leader: the name and the price are set like a menu line.
+        Expanded(
+          child: Padding(
+            padding: const EdgeInsetsDirectional.fromSTEB(
+              SongletSpace.x2,
+              0,
+              SongletSpace.x2,
+              5,
+            ),
+            child: SizedBox(
+              height: 1,
+              child: CustomPaint(
+                painter: DottedLeaderPainter(color: c.inkTertiary),
+              ),
+            ),
+          ),
+        ),
         Text(
           price,
           style: SongletType.folio.copyWith(

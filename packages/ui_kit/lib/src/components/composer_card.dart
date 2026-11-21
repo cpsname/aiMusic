@@ -99,7 +99,9 @@ class ComposerCard extends StatelessWidget {
         boxShadow: e.level2,
       ),
       child: Material(
-        color: c.surface,
+        // The composer is the page's warmest plate: cream pulled towards the
+        // brand's blush, so the one place you write is tinted, not white.
+        color: Color.alphaBlend(c.accentSoft.withValues(alpha: 0.42), c.surface),
         shape: const RoundedRectangleBorder(
           borderRadius: radius,
         ),

@@ -16,18 +16,18 @@ import 'package:flutter/material.dart';
 abstract final class SongletType {
   /// The masthead: the publication's name, black and tight.
   static const TextStyle masthead = TextStyle(
-    fontSize: 44,
-    height: 1.02,
+    fontSize: 48,
+    height: 1.0,
     fontWeight: FontWeight.w800,
-    letterSpacing: -2.2,
+    letterSpacing: -2.6,
   );
 
   /// A struck figure — credits, percent, counts — tabular so it never jitters.
   static const TextStyle numeral = TextStyle(
-    fontSize: 46,
+    fontSize: 50,
     height: 1.0,
     fontWeight: FontWeight.w800,
-    letterSpacing: -2.4,
+    letterSpacing: -2.6,
     fontFeatures: [FontFeature.tabularFigures()],
   );
 

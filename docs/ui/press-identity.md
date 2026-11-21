@@ -20,30 +20,33 @@ That split is the whole design argument: the app *shouts* in the grotesque,
 
 | Role | Daylight | Night |
 | --- | --- | --- |
-| `canvas` (stock) | `#F2EFE9` | `#0E0D0C` |
-| `surface` (plate) | `#FCFBF8` | `#171513` |
-| `surfaceMuted` (field) | `#E7E2D8` | `#211E1B` |
-| `hairline` | `#CFC8BA` | `#332E29` |
-| `ink` | `#111010` | `#F5F0E8` |
-| `inkSecondary` | `#6A6357` | `#ADA396` |
-| `inkTertiary` | `#9C9487` | `#776F64` |
-| `accent` (signal) | `#F2401C` | `#FF5A34` |
-| `onAccent` | `#160A06` | `#160A06` |
-| `accentSoft` | `#FBD9CF` | `#3A1C13` |
-| `highlight` (second ink) | `#1B33F0` | `#5B72FF` |
-| `success` / `warning` / `danger` | `#3E6B4F` / `#A96A12` / `#A3201B` | `#8FB49A` / `#E0A45A` / `#FF6B5A` |
+| `canvas` (clay stock) | `#F4E6D7` | `#1A1410` |
+| `surface` (cream plate) | `#FDF7EE` | `#241C16` |
+| `surfaceMuted` (field) | `#EBD9C6` | `#2E241C` |
+| `hairline` | `#D9C3AC` | `#3E3229` |
+| `ink` (espresso) | `#241A14` | `#F6EADC` |
+| `inkSecondary` | `#6F5A4A` | `#C0A895` |
+| `inkTertiary` | `#A38B78` | `#8A7563` |
+| `accent` (vermilion plate) | `#C93C17` | `#FF7A4D` |
+| `onAccent` (cream) | `#FFF6EC` | `#1A0C06` |
+| `accentSoft` (blush) | `#F9D9CB` | `#3D1F14` |
+| `highlight` (honey) | `#A9762A` | `#E7B06A` |
+| `success` / `warning` / `danger` | `#4E7A52` / `#A96A12` / `#A3231B` | `#9CC08A` / `#E7B06A` / `#FF7A63` |
 
 Rules of the road:
 
-* **The action is ink, not coral.** A poster's call to action is the darkest
-  thing on the page (`ObsButton`, filled buttons, the play key, the active tab).
-* **Coral is a spot.** Selection marks, progress, the numbered folio, the
-  composer's perforation mark, the AI stamp. It never fills a large field.
-* **The second ink is cobalt.** Reserved for offers and counters ("Best value",
-  "Recommended"). Used twice on a page at most.
-* **Coral text is set in `accentPressed`** when it is small (`#C93012`), because
-  the signal itself only reaches ~3.4:1 on bone. The contrast test enforces what
-  must pass: ink ≥ 7:1 on stock, action label ≥ 4.5:1 on ink, secondary ≥ 3:1.
+* **The brand plate carries the action.** Primary actions, the play key and the
+  filled buttons are printed on vermilion with cream lettering — the app has a
+  main colour, and it is the colour of the icon.
+* **Ink carries the reading.** Text, rules, the tab bar's current cell and the
+  masthead rule stay espresso, so the colour never competes with the words.
+* **Blush is the writing surface.** The composer is cream pulled towards the
+  blush tint, the one warm plate on the page.
+* **Honey is the second ink.** Offers, "Best value", counters. Used twice on a
+  page at most.
+* Small vermilion text is set in `accentPressed` where the plate itself is too
+  bright behind it. The contrast test enforces what must pass: ink ≥ 7:1 on
+  stock, the cream action label ≥ 4.5:1 on vermilion, secondary ink ≥ 3:1.
 
 ## Grid and rules
 
@@ -51,24 +54,46 @@ Rules of the road:
   stamps 2. Nothing is a capsule.
 * **Rules do the work**: 1 pt hairlines separate everything; a 2 pt ink rule
   closes a masthead or opens a section.
+* **The staff is the signature.** Where another app draws a divider, this one
+  draws five hairlines — a stave (`StaffDivider`). It closes every section head,
+  opens the player (first line in the signal coral), and sits above the lyric
+  sheet. A page changes subject the way a score does.
 * **Numbers are printed**: `01` folios on sections and list rows, mono and
   tracked, in the signal coral.
+* **The sleeve has a spine.** The player's plate carries a folded edge lettered
+  bottom-to-top with the catalogue mark (`A1 · LYRIA 3.5`).
+* **Prices are set as a menu**: dotted leaders from the entry name to the price
+  (`PlanCard`), dashes for benefits.
 * **Tickets tear**: the composer closes with a dashed perforation before its one
   action.
 * **Mono stamps** carry status (`Preview`, `Full song`, `AI generated`): a label
   between two rules, not a tinted capsule.
 
+## The generic-pattern check
+
+What this interface deliberately does *not* do, because every App Store app does
+it:
+
+| The pattern everywhere | What this does instead |
+| --- | --- |
+| Circular icon + label tab bar | an index strip: `01 Create · 02 Library · 03 Settings`, the current cell printed as an ink block with a coral folio |
+| large title + search field | a masthead: 48 pt tight wordmark, mono standfirst, 2 pt rule with a coral block |
+| rounded card per item, thumbnail at the left, chevron at the right | a ruled index: folio, title in type, mono metadata, keys at the margin |
+| three plan cards with a "best value" corner ribbon | a menu: leader dots to the price, mono stamps, a cobalt second ink, a perforated tear-off action |
+| centred cover, capsule progress bar, round play button | a record sleeve: plate plus spine, waveform under a stave, segment rule, ink square transport key |
+| the same thumbnail repeated on every library row | one filmstrip of plates above a pure-type index |
+
 ## Component vocabulary
 
-`PaperBackground` · `BrandHeader` (masthead: mark + tight wordmark + mono
-standfirst + 2 pt rule) · `SectionHeader` (folio + coral block + title + rule) ·
-`SurfaceCard` (plate) · `TemplateTile` (contact-sheet plate with a mono caption
-on the paper margin) · `ComposerCard` (ticket stub: ink border, ruled summary,
-perforation) · `ParamChip` (spec cell) · `ObsButton` (ink plate) · `WorkRow`
-(index entry) · `LeaderRow` (dotted leader) · `SettingsGroup` / `SettingsRow`
-(ruled block) · `PlanCard` / `MvLevelCard` (menu entries) · `StatusPill` (stamp) ·
-`SelectionMark` (struck square) · `AiGeneratedBadge` (stamp) · `MessageView`
-(notice slip) · `PlaybackControls` (ruled transport strip with an ink key).
+`PaperBackground` · `StaffDivider` · `BrandHeader` (masthead) · `SectionHeader`
+(folio + title + staff) · `SurfaceCard` (plate) · `TemplateTile` (contact-sheet
+plate with a mono caption on the paper margin) · `ComposerCard` (ticket stub:
+ink border, ruled summary, perforation) · `ParamChip` (spec cell) · `ObsButton`
+(ink plate) · `WorkRow` (index entry, plate optional) · `LeaderRow` (dotted
+leader) · `SettingsGroup` / `SettingsRow` (ruled block) · `PlanCard` /
+`MvLevelCard` (menu entries) · `StatusPill` (stamp) · `SelectionMark` (struck
+square) · `AiGeneratedBadge` (stamp) · `MessageView` (notice slip) ·
+`PlaybackControls` (ruled transport strip with an ink key).
 
 ## Screens
 

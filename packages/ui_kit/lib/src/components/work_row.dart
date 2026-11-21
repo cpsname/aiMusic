@@ -5,14 +5,17 @@ import '../tokens/songlet_metrics.dart';
 import '../tokens/songlet_type.dart';
 import 'meta_line.dart';
 
-/// A library song (docs/ui P12), set as an index entry: plate, title in the
-/// serif, the metadata line under it, and the badge and keys at the margin.
-/// The row is closed by a hairline — the list is a printed index, not a stack
-/// of cards.
+/// A library song (docs/ui P12), set as an index entry: folio, title, the
+/// metadata line under it, and the badge and keys at the margin. The row is
+/// closed by a hairline — the list is a printed index, not a stack of cards.
+///
+/// [cover] is optional: with it the entry carries its plate; without it the
+/// entry is pure type (the library shows its covers in the filmstrip above the
+/// index instead of repeating one per row).
 class WorkRow extends StatelessWidget {
   const WorkRow({
     super.key,
-    required this.cover,
+    this.cover,
     required this.title,
     required this.subtitle,
     required this.meta,
@@ -26,7 +29,7 @@ class WorkRow extends StatelessWidget {
     this.ordinal,
   });
 
-  final Widget cover;
+  final Widget? cover;
   final String title;
   final String subtitle;
   final List<String> meta;
@@ -73,22 +76,24 @@ class WorkRow extends StatelessWidget {
                     ),
                   ),
                 ],
-                SizedBox.square(
-                  dimension: SongletSize.thumbnail,
-                  child: DecoratedBox(
-                    decoration: BoxDecoration(
-                      borderRadius: SongletRadius.thumbAll,
-                      border: Border.all(color: c.hairline),
-                    ),
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(SongletRadius.thumb - 1),
+                if (cover != null) ...[
+                  SizedBox.square(
+                    dimension: SongletSize.thumbnail,
+                    child: DecoratedBox(
+                      decoration: BoxDecoration(
+                        borderRadius: SongletRadius.thumbAll,
+                        border: Border.all(color: c.hairline),
                       ),
-                      child: cover,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(SongletRadius.thumb - 1),
+                        ),
+                        child: cover,
+                      ),
                     ),
                   ),
-                ),
-                const SizedBox(width: SongletSpace.x3),
+                  const SizedBox(width: SongletSpace.x3),
+                ],
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,

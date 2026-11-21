@@ -4,6 +4,7 @@ import '../tokens/songlet_colors.dart';
 import '../tokens/songlet_elevation.dart';
 import '../tokens/songlet_metrics.dart';
 import '../tokens/songlet_type.dart';
+import 'staff_divider.dart';
 
 /// The standard content plate: paper fill, one hairline, nothing floating.
 class SurfaceCard extends StatelessWidget {
@@ -43,9 +44,9 @@ class SurfaceCard extends StatelessWidget {
 }
 
 /// A printed section head: a mono folio, the title set black and tight, and a
-/// heavy rule that runs to the margin, with an optional mono link.
+/// staff running to the margin, with an optional mono link.
 ///
-///    01 ── Inspirations ─────────────────  SEE ALL
+///    01  Inspirations ≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣  SEE ALL
 class SectionHeader extends StatelessWidget {
   const SectionHeader({
     super.key,
@@ -64,7 +65,7 @@ class SectionHeader extends StatelessWidget {
   /// Printed folio ("01", "02") ahead of the title.
   final String? index;
 
-  /// Draws the rule that runs from the title to the margin.
+  /// Draws the staff that runs from the title to the margin.
   final bool rule;
 
   /// Space under the head.
@@ -86,16 +87,7 @@ class SectionHeader extends StatelessWidget {
                 fontSize: 12,
               ),
             ),
-            if (rule) ...[
-              const SizedBox(width: SongletSpace.x2),
-              Container(
-                width: SongletSpace.x4,
-                height: SongletSize.ruleStrong,
-                color: c.accent,
-              ),
-              const SizedBox(width: SongletSpace.x2),
-            ] else
-              const SizedBox(width: SongletSpace.x2),
+            const SizedBox(width: SongletSpace.x2),
           ],
           Flexible(
             child: Semantics(
@@ -115,7 +107,7 @@ class SectionHeader extends StatelessWidget {
           ),
           if (rule) ...[
             const SizedBox(width: SongletSpace.x3),
-            Expanded(child: Container(height: SongletSize.rule, color: c.ink)),
+            const Expanded(child: StaffDivider()),
           ],
           if (trailing != null) ...[
             const SizedBox(width: SongletSpace.x3),

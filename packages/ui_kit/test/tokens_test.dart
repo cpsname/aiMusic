@@ -40,12 +40,12 @@ void main() {
     expect(SongletRadius.cardAll, const BorderRadius.all(Radius.circular(4)));
   });
 
-  test('light roles use the bone stock and signal coral', () {
+  test('light roles use the warm clay stock and the vermilion plate', () {
     const c = SongletColors.light;
-    expect(c.canvas, const Color(0xFFF2EFE9));
-    expect(c.accent, const Color(0xFFF2401C));
-    expect(c.ink, const Color(0xFF111010));
-    expect(c.inkSecondary, const Color(0xFF6A6357));
+    expect(c.canvas, const Color(0xFFF4E6D7));
+    expect(c.accent, const Color(0xFFC93C17));
+    expect(c.ink, const Color(0xFF241A14));
+    expect(c.inkSecondary, const Color(0xFF6F5A4A));
   });
 
   group('contrast', () {

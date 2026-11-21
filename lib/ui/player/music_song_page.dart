@@ -60,8 +60,7 @@ class _SongPageState extends ConsumerState<MusicSongPage> with MusicWorkPlayback
     final language = MusicLyricLanguage.fromCode(work.lyricLanguage);
 
     return Scaffold(
-      body: MusicPageFrame(
-        header: MusicPushedHeader(
+      body: MusicPageFrame(        header: MusicPushedHeader(
           actions: [
             IconCircleButton(
               icon: Icons.more_horiz_rounded,
@@ -73,11 +72,13 @@ class _SongPageState extends ConsumerState<MusicSongPage> with MusicWorkPlayback
         children: [
           // The video the length panel asked for (docs/ui P23).
           MusicAutoVideoBanner(workId: work.id),
-          // The sleeve head: the plate at the margin, the title set beside it
-          // like a record's spine note, then the rule that opens the player.
+          // The sleeve head: the plate at the margin with its catalogue spine,
+          // the title set beside it, then the staff that opens the player.
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              _Spine(label: work.isClip ? 'A1 · LYRIA 3' : 'A1 · LYRIA 3.5'),
+              const SizedBox(width: SongletSpace.x1),
               SizedBox.square(
                 dimension: SongletSize.thumbnail * 1.7,
                 child: DecoratedBox(
@@ -130,7 +131,7 @@ class _SongPageState extends ConsumerState<MusicSongPage> with MusicWorkPlayback
             ],
           ),
           const SizedBox(height: SongletSpace.x4),
-          Container(height: SongletSize.rule, color: c.hairline),
+          const StaffDivider(accentFirst: true),
           const SizedBox(height: SongletSpace.x3),
           if (path == null)
             audio.isLoading ? const MusicAudioLoading() : const MusicMissingAudio()
@@ -256,6 +257,48 @@ class _SongPageState extends ConsumerState<MusicSongPage> with MusicWorkPlayback
             style: SongletType.footnote.copyWith(color: c.inkSecondary),
           ),
         ],
+      ),
+    );
+  }
+}
+
+/// The catalogue spine of the sleeve: the folded edge of the plate, lettered
+/// with the model's mark and ruled in ink — the one place the player says what
+/// made this recording, without a badge or an icon.
+class _Spine extends StatelessWidget {
+  const _Spine({required this.label});
+
+  final String label;
+
+  @override
+  Widget build(BuildContext context) {
+    final c = SongletColors.of(context);
+    return Container(
+      width: 20,
+      height: SongletSize.thumbnail * 1.7,
+      decoration: BoxDecoration(
+        color: c.surfaceMuted.withValues(alpha: 0.45),
+        border: BorderDirectional(
+          start: BorderSide(color: c.ink, width: SongletSize.rule),
+          end: BorderSide(color: c.hairline),
+        ),
+      ),
+      child: ExcludeSemantics(
+        child: RotatedBox(
+          quarterTurns: 3,
+          child: Center(
+            child: Text(
+              label,
+              maxLines: 1,
+              overflow: TextOverflow.clip,
+              style: SongletType.folio.copyWith(
+                color: c.inkSecondary,
+                fontSize: 8.5,
+                letterSpacing: 1.2,
+              ),
+            ),
+          ),
+        ),
       ),
     );
   }

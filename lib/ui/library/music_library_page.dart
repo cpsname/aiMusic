@@ -171,6 +171,11 @@ class _LibraryPageState extends ConsumerState<MusicLibraryPage> {
                       ],
                     ),
                   ),
+                if (works.isNotEmpty) ...[
+                  const SizedBox(height: SongletSpace.x4),
+                  _Filmstrip(works: works),
+                  const SizedBox(height: SongletSpace.x2),
+                ],
                 if (shown.isEmpty)
                   Padding(
                     padding: const EdgeInsetsDirectional.only(
@@ -318,11 +323,6 @@ class _WorkTile extends ConsumerWidget {
       'library.work.${work.id}',
       child: WorkRow(
         ordinal: ordinal,
-        cover: CoverArt(
-          seed: work.id,
-          image: MusicSongletArt.cover(work),
-          radius: SongletRadius.thumb,
-        ),
         title: title,
         subtitle: work.recipient,
         meta: [
@@ -340,6 +340,57 @@ class _WorkTile extends ConsumerWidget {
             ? null
             : () => ref.read(playerControllerProvider.notifier).toggle(path),
         onMore: () => _actions(context, ref),
+      ),
+    );
+  }
+}
+
+/// The library's plates, gathered into one strip above the index instead of
+/// being repeated on every row: the covers are still there to recognise a song
+/// by, and the index below is pure type.
+class _Filmstrip extends StatelessWidget {
+  const _Filmstrip({required this.works});
+
+  final List<MusicWork> works;
+
+  /// Plates drawn in the strip (a library of hundreds keeps a 24-wide band).
+  static const int _maxPlates = 24;
+  static const double _plate = 64;
+
+  @override
+  Widget build(BuildContext context) {
+    final c = SongletColors.of(context);
+    final count = works.length < _maxPlates ? works.length : _maxPlates;
+    return ExcludeSemantics(
+      child: SizedBox(
+        height: _plate + 2,
+        child: ListView.separated(
+          scrollDirection: Axis.horizontal,
+          itemCount: count,
+          separatorBuilder: (_, _) => const SizedBox(width: 6),
+          itemBuilder: (context, i) {
+            final work = works[i];
+            return SizedBox.square(
+              dimension: _plate,
+              child: DecoratedBox(
+                decoration: BoxDecoration(
+                  borderRadius: SongletRadius.thumbAll,
+                  border: Border.all(color: c.hairline),
+                ),
+                child: ClipRRect(
+                  borderRadius: const BorderRadius.all(
+                    Radius.circular(SongletRadius.thumb),
+                  ),
+                  child: CoverArt(
+                    seed: work.id,
+                    image: MusicSongletArt.cover(work),
+                    radius: SongletRadius.thumb,
+                  ),
+                ),
+              ),
+            );
+          },
+        ),
       ),
     );
   }

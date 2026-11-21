@@ -23,25 +23,25 @@ abstract final class StudioTokens {
 
   // Ink palette.
   static const Color voidBlack = Color(0xFF12100E);
-  static const Color deepSpace = Color(0xFF171310);
-  static const Color nebula = Color(0xFF221C18);
-  static const Color auroraViolet = Color(0xFFC6431D);
-  static const Color auroraBlue = Color(0xFFC8842A);
-  static const Color auroraTeal = Color(0xFF6C8560);
-  static const Color auroraPink = Color(0xFFB4553F);
-  static const Color textPrimary = Color(0xFFF3E9DE);
-  static const Color textSecondary = Color(0xFFB5A698);
+  static const Color deepSpace = Color(0xFF1A1410);
+  static const Color nebula = Color(0xFF241C16);
+  static const Color auroraViolet = Color(0xFFC93C17);
+  static const Color auroraBlue = Color(0xFFA9762A);
+  static const Color auroraTeal = Color(0xFF4E7A52);
+  static const Color auroraPink = Color(0xFF8E3A22);
+  static const Color textPrimary = Color(0xFFF6EADC);
+  static const Color textSecondary = Color(0xFFC0A895);
 
   // Semantic feedback colours (Message component + status surfaces).
-  static const Color successColor = Color(0xFF6C8560);
-  static const Color warningColor = Color(0xFFC8842A);
-  static const Color errorColor = Color(0xFFB33327);
-  static const Color infoColor = Color(0xFF8A6A4F);
+  static const Color successColor = Color(0xFF4E7A52);
+  static const Color warningColor = Color(0xFFA96A12);
+  static const Color errorColor = Color(0xFFA3231B);
+  static const Color infoColor = Color(0xFFA9762A);
 
   // Light plates (the sample app's light theme).
-  static const Color lightBackground = Color(0xFFF4EDE2);
-  static const Color lightTextPrimary = Color(0xFF221C17);
-  static const Color lightTextSecondary = Color(0xFF6B5F53);
+  static const Color lightBackground = Color(0xFFF4E6D7);
+  static const Color lightTextPrimary = Color(0xFF241A14);
+  static const Color lightTextSecondary = Color(0xFF6F5A4A);
 
   // Rule and plate tints.
   static const Color glassFill = Color(0x14FFFFFF); // white @ 8%
@@ -70,18 +70,18 @@ abstract final class StudioTokens {
 /// (the share-card renderer paints on a `dart:ui` canvas). Widgets read
 /// [SongletColors.of] instead so dark mode applies.
 abstract final class SongletPalette {
-  static const Color canvas = Color(0xFFF2EFE9);
-  static const Color card = Color(0xFFFCFBF8);
-  static const Color hairline = Color(0xFFCFC8BA);
-  static const Color terracotta = Color(0xFFF2401C);
-  static const Color terracottaDeep = Color(0xFFC93012);
-  static const Color blush = Color(0xFFFBD9CF);
-  static const Color ink = Color(0xFF111010);
-  static const Color inkSoft = Color(0xFF6A6357);
-  static const Color field = Color(0xFFE7E2D8);
+  static const Color canvas = Color(0xFFF4E6D7);
+  static const Color card = Color(0xFFFDF7EE);
+  static const Color hairline = Color(0xFFD9C3AC);
+  static const Color terracotta = Color(0xFFC93C17);
+  static const Color terracottaDeep = Color(0xFFA32F10);
+  static const Color blush = Color(0xFFF9D9CB);
+  static const Color ink = Color(0xFF241A14);
+  static const Color inkSoft = Color(0xFF6F5A4A);
+  static const Color field = Color(0xFFEBD9C6);
 
   static const LinearGradient actionGradient = LinearGradient(
-    colors: [ink, Color(0xFF2B2825)],
+    colors: [terracotta, terracottaDeep],
     begin: AlignmentDirectional.topStart,
     end: AlignmentDirectional.bottomEnd,
   );

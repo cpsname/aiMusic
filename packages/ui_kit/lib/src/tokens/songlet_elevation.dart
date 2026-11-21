@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
-/// Shadow levels. Light mode uses warm, soft shadows; dark mode relies on
-/// surface tone and keeps only a faint ambient shadow.
+/// Shadow levels. The press does not float: plates sit on the paper with a
+/// keyline and, at most, the faintest ambient lift. Depth is carried by rules
+/// and surface tone, not by glow — so the three levels differ mainly in how
+/// far a floating thing (composer, popover, sheet) is allowed to lift.
 @immutable
 class SongletElevation extends ThemeExtension<SongletElevation> {
   const SongletElevation({
@@ -10,56 +12,36 @@ class SongletElevation extends ThemeExtension<SongletElevation> {
     required this.level3,
   });
 
+  /// Daylight press: warm keyline, almost no blur.
   static const SongletElevation light = SongletElevation(
     level1: [
-      BoxShadow(color: Color(0x180C1740), blurRadius: 12, offset: Offset(0, 4)),
-      BoxShadow(color: Color(0x147C5CFF), blurRadius: 18),
+      BoxShadow(color: Color(0x0F3A2418), blurRadius: 1, offset: Offset(0, 1)),
     ],
     level2: [
-      BoxShadow(
-        color: Color(0x260C1740),
-        blurRadius: 24,
-        offset: Offset(0, 10),
-      ),
-      BoxShadow(color: Color(0x1C2FB6FF), blurRadius: 28),
+      BoxShadow(color: Color(0x143A2418), blurRadius: 8, offset: Offset(0, 4)),
     ],
     level3: [
-      BoxShadow(
-        color: Color(0x330C1740),
-        blurRadius: 40,
-        offset: Offset(0, 18),
-      ),
-      BoxShadow(color: Color(0x227C5CFF), blurRadius: 36),
+      BoxShadow(color: Color(0x1F3A2418), blurRadius: 18, offset: Offset(0, 10)),
     ],
   );
 
+  /// Night press: the same keyline, read as a drop into the dark.
   static const SongletElevation dark = SongletElevation(
     level1: [
-      BoxShadow(color: Color(0x66000000), blurRadius: 14, offset: Offset(0, 5)),
-      BoxShadow(color: Color(0x267C5CFF), blurRadius: 20),
+      BoxShadow(color: Color(0x1F000000), blurRadius: 1, offset: Offset(0, 1)),
     ],
     level2: [
-      BoxShadow(
-        color: Color(0x99000000),
-        blurRadius: 28,
-        offset: Offset(0, 12),
-      ),
-      BoxShadow(color: Color(0x332FB6FF), blurRadius: 32),
+      BoxShadow(color: Color(0x33000000), blurRadius: 8, offset: Offset(0, 4)),
     ],
     level3: [
-      BoxShadow(
-        color: Color(0xCC000000),
-        blurRadius: 44,
-        offset: Offset(0, 20),
-      ),
-      BoxShadow(color: Color(0x447C5CFF), blurRadius: 48),
+      BoxShadow(color: Color(0x4D000000), blurRadius: 18, offset: Offset(0, 10)),
     ],
   );
 
-  /// Cards and tiles resting on the canvas.
+  /// Plates resting on the paper.
   final List<BoxShadow> level1;
 
-  /// Floating composer, sticky bars.
+  /// The pinned composer, sticky bars.
   final List<BoxShadow> level2;
 
   /// Popovers, anchored panels, sheets.

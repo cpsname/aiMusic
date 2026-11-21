@@ -73,33 +73,65 @@ class _SongPageState extends ConsumerState<MusicSongPage> with MusicWorkPlayback
         children: [
           // The video the length panel asked for (docs/ui P23).
           MusicAutoVideoBanner(workId: work.id),
-          Center(
-            child: SizedBox(
-              width: SongletSize.coverLarge,
-              child: CoverArt(
-                seed: work.id,
-                image: MusicSongletArt.cover(work),
-                badgeLabel: l10n.playerAiGenerated,
+          // The sleeve head: the plate at the margin, the title set beside it
+          // like a record's spine note, then the rule that opens the player.
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox.square(
+                dimension: SongletSize.thumbnail * 1.7,
+                child: DecoratedBox(
+                  decoration: BoxDecoration(
+                    borderRadius: SongletRadius.thumbAll,
+                    border: Border.all(color: c.hairline),
+                  ),
+                  child: ClipRRect(
+                    borderRadius: const BorderRadius.all(
+                      Radius.circular(SongletRadius.thumb),
+                    ),
+                    child: CoverArt(
+                      seed: work.id,
+                      image: MusicSongletArt.cover(work),
+                      badgeLabel: l10n.playerAiGenerated,
+                    ),
+                  ),
+                ),
               ),
-            ),
-          ),
-          const SizedBox(height: SongletSpace.x4),
-          Text(
-            workTitle(l10n, work),
-            textAlign: TextAlign.center,
-            style: SongletType.title1.copyWith(color: c.ink),
-          ),
-          MetaLine(
-            parts: [
-              clockLabel(view.duration, l10n.localeName),
-              workGenre(l10n, work),
-              if (language != null)
-                languageName(l10n, language)
-              else if (region != null)
-                countryName(l10n, region.code),
+              const SizedBox(width: SongletSpace.x4),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      workTitle(l10n, work),
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                      style: SongletType.largeTitle.copyWith(color: c.ink),
+                    ),
+                    const SizedBox(height: 6),
+                    MetaLine(
+                      parts: [
+                        clockLabel(view.duration, l10n.localeName),
+                        workGenre(l10n, work),
+                        if (language != null)
+                          languageName(l10n, language)
+                        else if (region != null)
+                          countryName(l10n, region.code),
+                      ],
+                      textAlign: TextAlign.start,
+                      style: SongletType.folio.copyWith(
+                        color: c.inkSecondary,
+                        fontSize: 10,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
           const SizedBox(height: SongletSpace.x4),
+          Container(height: SongletSize.rule, color: c.hairline),
+          const SizedBox(height: SongletSpace.x3),
           if (path == null)
             audio.isLoading ? const MusicAudioLoading() : const MusicMissingAudio()
           else ...[

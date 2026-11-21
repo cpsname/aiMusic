@@ -32,19 +32,20 @@ void main() {
     });
   });
 
-  test('radii follow docs/ui (cards 20, sheets 24, controls 16)', () {
-    expect(SongletRadius.card, 20);
-    expect(SongletRadius.sheet, 24);
-    expect(SongletRadius.control, 16);
-    expect(SongletRadius.cardAll, const BorderRadius.all(Radius.circular(20)));
+  test('radii follow the poster (plates 2, cards 4, sheets 16)', () {
+    expect(SongletRadius.thumb, 2);
+    expect(SongletRadius.card, 4);
+    expect(SongletRadius.sheet, 16);
+    expect(SongletRadius.control, 8);
+    expect(SongletRadius.cardAll, const BorderRadius.all(Radius.circular(4)));
   });
 
-  test('light roles use the specified brand colours', () {
+  test('light roles use the bone stock and signal coral', () {
     const c = SongletColors.light;
-    expect(c.canvas, const Color(0xFFFFF6EE));
-    expect(c.accent, const Color(0xFFC9472B));
-    expect(c.ink, const Color(0xFF1A1A1A));
-    expect(c.inkSecondary, const Color(0xFF8A8A8A));
+    expect(c.canvas, const Color(0xFFF2EFE9));
+    expect(c.accent, const Color(0xFFF2401C));
+    expect(c.ink, const Color(0xFF111010));
+    expect(c.inkSecondary, const Color(0xFF6A6357));
   });
 
   group('contrast', () {

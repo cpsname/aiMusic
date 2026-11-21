@@ -14,10 +14,13 @@ import 'meta_line.dart';
 /// [primaryAction] under them. Pure layout: every control is passed in, so
 /// the app owns state and copy.
 ///
-/// Given a bounded height, the head and the primary action stay put and the
-/// part between them scrolls; unbounded (inside an outer scroll view), it is
-/// laid out in full. Switching [body] (give each state its own key), showing
-/// or hiding [head] and [options] animate over [SongletMotion.state].
+/// Printed as a ruled index card: the head sits above a rule, the writing
+/// space under it, the specification line between two more rules, and the one
+/// action at the foot. Given a bounded height, the head and the primary action
+/// stay put and the part between them scrolls; unbounded (inside an outer
+/// scroll view), it is laid out in full. Switching [body] (give each state its
+/// own key), showing or hiding [head] and [options] animate over
+/// [SongletMotion.state].
 class ComposerCard extends StatelessWidget {
   const ComposerCard({
     super.key,
@@ -75,56 +78,67 @@ class ComposerCard extends StatelessWidget {
       children: [
         resize(swap(body)),
         const SizedBox(height: SongletSpace.x2),
+        _RuleLine(color: c.hairline),
         summary,
         resize(
           options == null
               ? const SizedBox(width: double.infinity)
               : Padding(
                   padding: const EdgeInsetsDirectional.only(
-                    top: SongletSpace.x2,
+                    top: SongletSpace.x1,
                   ),
                   child: options,
                 ),
         ),
       ],
     );
-    const radius = BorderRadius.all(Radius.circular(SongletRadius.sheet));
-    // A Material surface, so the list tiles and ink inside paint on it. The
-    // composer is the page's hero surface: a raised glass panel with an
-    // aurora halo, distinct from the ordinary content cards.
+    const radius = BorderRadius.all(Radius.circular(SongletRadius.card));
     return DecoratedBox(
       decoration: BoxDecoration(
         borderRadius: radius,
         boxShadow: e.level2,
-        border: Border.all(color: c.hairline),
       ),
       child: Material(
-        color: c.surfaceRaised,
-        borderRadius: radius,
-        child: Padding(
-          padding: const EdgeInsetsDirectional.all(SongletSpace.x3),
-          child: LayoutBuilder(
-            builder: (context, constraints) => Column(
-              mainAxisSize: MainAxisSize.min,
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                resize(
-                  head == null
-                      ? const SizedBox(width: double.infinity)
-                      : Padding(
-                          padding: const EdgeInsetsDirectional.only(
-                            bottom: SongletSpace.x2,
+        color: c.surface,
+        shape: const RoundedRectangleBorder(
+          borderRadius: radius,
+        ),
+        child: DecoratedBox(
+          decoration: BoxDecoration(
+            borderRadius: radius,
+            border: Border.all(color: c.ink, width: SongletSize.rule),
+          ),
+          child: Padding(
+            padding: const EdgeInsetsDirectional.all(SongletSpace.x3),
+            child: LayoutBuilder(
+              builder: (context, constraints) => Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  resize(
+                    head == null
+                        ? const SizedBox(width: double.infinity)
+                        : Padding(
+                            padding: const EdgeInsetsDirectional.only(
+                              bottom: SongletSpace.x2,
+                            ),
+                            child: head,
                           ),
-                          child: head,
-                        ),
-                ),
-                if (constraints.hasBoundedHeight)
-                  Flexible(child: SingleChildScrollView(child: fields))
-                else
-                  fields,
-                const SizedBox(height: SongletSpace.x3),
-                primaryAction,
-              ],
+                  ),
+                  if (constraints.hasBoundedHeight)
+                    Flexible(child: SingleChildScrollView(child: fields))
+                  else
+                    fields,
+                  // The ticket's perforation: the one action tears off here.
+                  const Padding(
+                    padding: EdgeInsetsDirectional.symmetric(
+                      vertical: SongletSpace.x2,
+                    ),
+                    child: Perforation(),
+                  ),
+                  primaryAction,
+                ],
+              ),
             ),
           ),
         ),
@@ -133,7 +147,52 @@ class ComposerCard extends StatelessWidget {
   }
 }
 
-/// The composer's summary row ("Preview · Vocals on · Indie Pop ›",
+/// A dashed rule between the composer's body and its one action — the
+/// perforation of a ticket stub.
+class Perforation extends StatelessWidget {
+  const Perforation({super.key, this.dash = 4, this.gap = 4});
+
+  final double dash;
+  final double gap;
+
+  @override
+  Widget build(BuildContext context) {
+    final c = SongletColors.of(context);
+    return SizedBox(
+      height: 1,
+      child: LayoutBuilder(
+        builder: (context, constraints) {
+          final count = (constraints.maxWidth / (dash + gap)).floor();
+          if (count <= 0) return const SizedBox.shrink();
+          final width =
+              (constraints.maxWidth - (count - 1) * gap) / count;
+          return Row(
+            children: [
+              for (var i = 0; i < count; i++) ...[
+                if (i > 0) SizedBox(width: gap),
+                Container(width: width, height: 1, color: c.hairline),
+              ],
+            ],
+          );
+        },
+      ),
+    );
+  }
+}
+
+class _RuleLine extends StatelessWidget {
+  const _RuleLine({required this.color});
+
+  final Color color;
+
+  @override
+  Widget build(BuildContext context) => Container(
+    height: SongletSize.rule,
+    color: color,
+  );
+}
+
+/// The composer's specification line ("Preview · Vocals on · Indie Pop ›",
 /// ADR-0033): what will be made, and the way to the options. Tapping it
 /// unfolds or folds them.
 class ComposerSummary extends StatelessWidget {
@@ -182,8 +241,7 @@ class ComposerSummary extends StatelessWidget {
             constraints: const BoxConstraints(minHeight: SongletSize.minTap),
             child: Padding(
               padding: const EdgeInsetsDirectional.symmetric(
-                horizontal: SongletSpace.x2,
-                vertical: SongletSpace.x1,
+                horizontal: SongletSpace.x1,
               ),
               child: Row(
                 children: [
@@ -192,9 +250,11 @@ class ComposerSummary extends StatelessWidget {
                       MetaLine.join(parts),
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
-                      style: SongletType.subhead.copyWith(
+                      style: SongletType.eyebrow.copyWith(
                         color: c.inkSecondary,
-                        fontWeight: FontWeight.w600,
+                        fontSize: 10,
+                        letterSpacing: 0.9,
+                        height: 1.6,
                       ),
                     ),
                   ),
@@ -204,10 +264,10 @@ class ComposerSummary extends StatelessWidget {
                     child: Icon(
                       expanded
                           ? Icons.expand_less_rounded
-                          : Icons.chevron_right_rounded,
+                          : Icons.expand_more_rounded,
                       key: ValueKey(expanded),
                       size: SongletSize.iconMd,
-                      color: c.inkSecondary,
+                      color: c.accent,
                     ),
                   ),
                 ],
@@ -220,7 +280,8 @@ class ComposerSummary extends StatelessWidget {
   }
 }
 
-/// The prompt text field of the composer.
+/// The writing space of the composer: borderless, set in the reading serif, so
+/// the page reads as a note being written rather than a form being filled.
 class ComposerPromptField extends StatelessWidget {
   const ComposerPromptField({
     super.key,
@@ -264,36 +325,60 @@ class ComposerPromptField extends StatelessWidget {
       textInputAction: TextInputAction.done,
       onChanged: onChanged,
       onSubmitted: onSubmitted,
-      style: SongletType.callout.copyWith(color: c.ink),
+      style: SongletType.lede.copyWith(color: c.ink, height: 1.35),
       decoration: InputDecoration(
+        filled: false,
+        isDense: true,
         hintText: hint,
         errorText: errorText,
         counterText: '',
+        contentPadding: const EdgeInsetsDirectional.symmetric(
+          vertical: SongletSpace.x2,
+        ),
+        border: InputBorder.none,
+        enabledBorder: InputBorder.none,
+        focusedBorder: InputBorder.none,
+        errorBorder: InputBorder.none,
+        focusedErrorBorder: InputBorder.none,
+        hintStyle: SongletType.lede.copyWith(
+          color: c.inkTertiary,
+          height: 1.35,
+        ),
+        errorStyle: SongletType.footnote.copyWith(color: c.danger),
         constraints: const BoxConstraints(
           minHeight: SongletSize.promptMinHeight,
         ),
         prefixIcon: leading == null
             ? null
             : Padding(
-                padding: const EdgeInsetsDirectional.symmetric(
-                  horizontal: SongletSpace.x1,
+                padding: const EdgeInsetsDirectional.only(
+                  end: SongletSpace.x2,
                 ),
                 child: leading,
               ),
+        prefixIconConstraints: const BoxConstraints(
+          minWidth: SongletSize.minTap,
+          minHeight: SongletSize.minTap,
+        ),
         suffixIcon: trailing == null
             ? null
             : Padding(
-                padding: const EdgeInsetsDirectional.symmetric(
-                  horizontal: SongletSpace.x1,
+                padding: const EdgeInsetsDirectional.only(
+                  start: SongletSpace.x2,
                 ),
                 child: trailing,
               ),
+        suffixIconConstraints: const BoxConstraints(
+          minWidth: SongletSize.minTap,
+          minHeight: SongletSize.minTap,
+        ),
       ),
     );
   }
 }
 
-/// Round tonal control of the composer ("+", mic / stop).
+/// Ruled key of the composer ("+", mic / stop) — the control is a small
+/// square, consistent with the page's other keys.
 class ComposerRoundButton extends StatelessWidget {
   const ComposerRoundButton({
     super.key,
@@ -311,11 +396,12 @@ class ComposerRoundButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final c = SongletColors.of(context);
-    final (fill, ink) = switch (emphasis) {
-      ComposerButtonEmphasis.neutral => (c.surfaceMuted, c.ink),
-      ComposerButtonEmphasis.tinted => (c.accentSoft, c.accent),
-      ComposerButtonEmphasis.solid => (c.accent, c.onAccent),
+    final (fill, ink, stroke) = switch (emphasis) {
+      ComposerButtonEmphasis.neutral => (Colors.transparent, c.ink, c.hairline),
+      ComposerButtonEmphasis.tinted => (c.accentSoft, c.accent, c.accentSoft),
+      ComposerButtonEmphasis.solid => (c.accent, c.onAccent, c.accent),
     };
+    final radius = BorderRadius.circular(SongletRadius.control);
     return Tooltip(
       message: tooltip,
       child: Semantics(
@@ -325,13 +411,16 @@ class ComposerRoundButton extends StatelessWidget {
         excludeSemantics: true,
         child: Material(
           color: fill,
-          shape: const CircleBorder(),
+          shape: RoundedRectangleBorder(
+            borderRadius: radius,
+            side: BorderSide(color: stroke),
+          ),
           child: InkWell(
-            customBorder: const CircleBorder(),
+            borderRadius: radius,
             onTap: onPressed,
             child: SizedBox.square(
               dimension: SongletSize.minTap,
-              child: Icon(icon, color: ink, size: SongletSize.iconLg),
+              child: Icon(icon, color: ink, size: SongletSize.iconMd),
             ),
           ),
         ),

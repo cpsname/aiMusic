@@ -4,9 +4,9 @@ import 'tokens.dart';
 import 'tokens/songlet_colors.dart';
 import 'tokens/songlet_elevation.dart';
 
-/// Surface + accent styling the Aura primitives read from the ambient theme,
-/// so one component set serves both the signature dark "Aura" look and the
-/// warm light "Songlet" look. Absent from a theme → the dark Aura defaults.
+/// Surface + accent styling the primitives read from the ambient theme, so one
+/// component set serves both runs of the press. Absent from a theme → the
+/// warm daylight defaults.
 @immutable
 class AuraStyle extends ThemeExtension<AuraStyle> {
   const AuraStyle({
@@ -15,44 +15,36 @@ class AuraStyle extends ThemeExtension<AuraStyle> {
     required this.actionGradient,
     required this.accent,
     this.cardShadow = const <BoxShadow>[],
-    this.cardBlur = true,
-    this.onAction = const Color(0xFFFFFFFF),
+    this.cardBlur = false,
+    this.onAction = const Color(0xFFFFF8F1),
   });
 
-  /// The dark Aura defaults (frosted glass, aurora gradient).
+  /// Warm daylight defaults, for a context without the Songlet extension.
   static const AuraStyle aura = AuraStyle(
-    cardFill: StudioTokens.glassFill,
-    cardStroke: StudioTokens.glassStroke,
-    actionGradient: StudioTokens.auroraGradient,
-    accent: StudioTokens.auroraViolet,
+    cardFill: SongletPalette.card,
+    cardStroke: SongletPalette.hairline,
+    actionGradient: SongletPalette.actionGradient,
+    accent: SongletPalette.terracotta,
   );
 
-  /// Light holographic surfaces: opaque enough for daylight readability while
-  /// retaining the cool aurora language.
+  /// Light paper run.
   static final AuraStyle warm = _songlet(
     SongletColors.light,
     SongletElevation.light,
-    blur: false,
   );
 
-  /// Signature dark theme: translucent glass over the deep-space canvas.
+  /// Night paper run.
   static final AuraStyle warmDark = _songlet(
     SongletColors.dark,
     SongletElevation.dark,
-    blur: true,
   );
 
-  static AuraStyle _songlet(
-    SongletColors c,
-    SongletElevation e, {
-    required bool blur,
-  }) => AuraStyle(
+  static AuraStyle _songlet(SongletColors c, SongletElevation e) => AuraStyle(
     cardFill: c.surface,
     cardStroke: c.hairline,
     actionGradient: c.actionGradient,
     accent: c.accent,
     cardShadow: e.level1,
-    cardBlur: blur,
     onAction: c.onAccent,
   );
 
@@ -61,6 +53,8 @@ class AuraStyle extends ThemeExtension<AuraStyle> {
   final Gradient actionGradient;
   final Color accent;
   final List<BoxShadow> cardShadow;
+
+  /// Kept for the template's primitives; the press never frosts glass.
   final bool cardBlur;
 
   /// Label and icon colour on [actionGradient].

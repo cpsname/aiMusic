@@ -11,7 +11,7 @@ import '../create/music_region_sheet.dart';
 import '../download/music_download_page.dart';
 import '../festival/music_festival_page.dart';
 import '../library/music_library_page.dart';
-import '../mv/mv_music_generating_page.dart';
+import '../mv/music_mv_generating_page.dart';
 import '../mv/music_mv_hub_page.dart';
 import '../mv/music_mv_player_page.dart';
 import '../paywall/music_paywall_page.dart';

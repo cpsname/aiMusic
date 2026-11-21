@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'glass_card.dart';
 import 'obs_button.dart';
 import 'tokens.dart';
+import 'tokens/songlet_colors.dart';
 
 /// A centered, glass status panel for a terminal state that occupies a content
 /// region — load failures, empty results, blocking notices. It replaces the
@@ -64,7 +65,7 @@ class StatusView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final accent = accentColor ?? StudioTokens.errorColor;
+    final accent = accentColor ?? SongletColors.of(context).accent;
     final hasAction = actionLabel != null && actionLabel!.isNotEmpty;
 
     final card = GlassCard(
@@ -74,19 +75,27 @@ class StatusView extends StatelessWidget {
         // forces the column wide; the other children stay centered either way.
         children: [
           if (icon != null) ...[
-            Icon(icon, color: accent, size: 40),
+            Icon(icon, color: accent, size: StudioTokens.spaceXl),
+            const SizedBox(height: StudioTokens.spaceMd),
+            Container(
+              width: StudioTokens.spaceXl,
+              height: StudioTokens.spaceXs / 2,
+              color: accent,
+            ),
             const SizedBox(height: StudioTokens.spaceMd),
           ],
           Text(
             title,
-            style: theme.textTheme.titleLarge,
+            style: theme.textTheme.headlineMedium?.copyWith(
+              color: SongletColors.of(context).ink,
+            ),
             textAlign: TextAlign.center,
           ),
           if (message != null && message!.isNotEmpty) ...[
             const SizedBox(height: StudioTokens.spaceSm),
             Text(
               message!,
-              style: theme.textTheme.bodyMedium,
+              style: theme.textTheme.bodyMedium?.copyWith(height: 1.5),
               textAlign: TextAlign.center,
             ),
           ],

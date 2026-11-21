@@ -1,7 +1,7 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:songlet_kit/songlet_kit.dart';
-import 'package:songlet_kit/src/platform/data/channel_music_local_notifications.dart';
+import 'package:songlet_kit/src/platform/data/music_channel_local_notifications.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();

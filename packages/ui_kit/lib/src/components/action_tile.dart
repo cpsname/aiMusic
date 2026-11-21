@@ -4,8 +4,9 @@ import '../tokens/songlet_colors.dart';
 import '../tokens/songlet_metrics.dart';
 import '../tokens/songlet_type.dart';
 
-/// Icon-over-label action card (docs/ui P09: Download · Share · License ·
-/// Regenerate), laid out in equal columns by the caller.
+/// Icon-over-label action key (docs/ui P09: Download · Share · License ·
+/// Regenerate), laid out in equal columns by the caller. A ruled key: one
+/// hairline box, the glyph, and a tracked caption.
 class ActionTile extends StatelessWidget {
   const ActionTile({
     super.key,
@@ -32,7 +33,7 @@ class ActionTile extends StatelessWidget {
       label: label,
       excludeSemantics: true,
       child: Material(
-        color: c.surface,
+        color: Colors.transparent,
         shape: RoundedRectangleBorder(
           borderRadius: SongletRadius.controlAll,
           side: BorderSide(color: c.hairline),
@@ -42,7 +43,8 @@ class ActionTile extends StatelessWidget {
           onTap: onPressed,
           child: Padding(
             padding: const EdgeInsetsDirectional.symmetric(
-              vertical: SongletSpace.x4,
+              vertical: SongletSpace.x3,
+              horizontal: SongletSpace.x1,
             ),
             child: Column(
               mainAxisSize: MainAxisSize.min,
@@ -50,24 +52,29 @@ class ActionTile extends StatelessWidget {
                 Stack(
                   clipBehavior: Clip.none,
                   children: [
-                    Icon(icon, color: ink, size: SongletSize.iconXl),
+                    Icon(icon, color: ink, size: SongletSize.iconMd),
                     if (locked)
                       PositionedDirectional(
                         end: -SongletSpace.x2,
                         bottom: -SongletSpace.x1,
                         child: Icon(
                           Icons.lock_rounded,
-                          size: SongletSize.iconSm,
+                          size: SongletSize.iconXs,
                           color: c.accent,
                         ),
                       ),
                   ],
                 ),
-                const SizedBox(height: SongletSpace.x2),
+                const SizedBox(height: 6),
                 Text(
                   label,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                   textAlign: TextAlign.center,
-                  style: SongletType.subhead.copyWith(color: ink),
+                  style: SongletType.caption.copyWith(
+                    color: ink,
+                    letterSpacing: 0.2,
+                  ),
                 ),
               ],
             ),

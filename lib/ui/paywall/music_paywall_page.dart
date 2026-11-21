@@ -254,9 +254,8 @@ class _Hero extends StatelessWidget {
   /// full song.
   final bool forVideo;
 
-  /// Flex weights of the hero copy column and the cover art beside it.
+  /// Flex weight of the hero copy column (the plate sits at its end).
   static const int _copyFlex = 3;
-  static const int _artFlex = 2;
 
   @override
   Widget build(BuildContext context) {
@@ -273,6 +272,16 @@ class _Hero extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  // A coral block opens the page, then the offer set in the
+                  // serif — a title page, not a banner.
+                  Container(
+                    width: SongletSpace.x8,
+                    height: SongletSize.ruleStrong,
+                    margin: const EdgeInsetsDirectional.only(
+                      bottom: SongletSpace.x3,
+                    ),
+                    color: c.accent,
+                  ),
                   Semantics(
                     header: true,
                     child: Text(
@@ -287,46 +296,86 @@ class _Hero extends StatelessWidget {
                     forVideo
                         ? l10n.paywallMvHeroSubtitle
                         : l10n.paywallHeroSubtitle,
-                    style: SongletType.callout.copyWith(color: c.inkSecondary),
+                    style: SongletType.subhead.copyWith(
+                      color: c.inkSecondary,
+                      height: 1.5,
+                    ),
                   ),
                 ],
               ),
             ),
             const SizedBox(width: SongletSpace.x3),
-            const Expanded(
-              flex: _artFlex,
-              child: ExcludeSemantics(
-                child: CoverArt(
-                  seed: 'songlet-paywall',
-                  palette: ArtPalette.terracotta,
+            SizedBox.square(
+              dimension: SongletSize.coverLarge * 0.4,
+              child: DecoratedBox(
+                decoration: BoxDecoration(
+                  borderRadius: SongletRadius.thumbAll,
+                  border: Border.all(color: c.hairline),
+                ),
+                child: ClipRRect(
+                  borderRadius: const BorderRadius.all(
+                    Radius.circular(SongletRadius.thumb),
+                  ),
+                  child: const ExcludeSemantics(
+                    child: CoverArt(
+                      seed: 'songlet-paywall',
+                      palette: ArtPalette.terracotta,
+                    ),
+                  ),
                 ),
               ),
             ),
           ],
         ),
         const SizedBox(height: SongletSpace.x5),
-        // Equal thirds: long or enlarged captions wrap in their column.
+        Container(height: SongletSize.rule, color: c.hairline),
+        const SizedBox(height: SongletSpace.x3),
+        // The value strip: three numbered columns, ruled apart.
         Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Expanded(
-              child: IconCaption(
-                icon: Icons.music_note_outlined,
-                label: l10n.paywallBenefitSongs,
+            for (final (i, benefit) in [
+              (Icons.music_note_outlined, l10n.paywallBenefitSongs),
+              (Icons.diamond_outlined, l10n.paywallBenefitQuality),
+              (Icons.verified_user_outlined, l10n.paywallBenefitCommercial),
+            ].indexed) ...[
+              if (i > 0)
+                Padding(
+                  padding: const EdgeInsetsDirectional.symmetric(
+                    horizontal: SongletSpace.x2,
+                  ),
+                  child: Container(width: SongletSize.rule, height: 34, color: c.hairline),
+                ),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Text(
+                          (i + 1).toString().padLeft(2, '0'),
+                          style: SongletType.folio.copyWith(color: c.accent),
+                        ),
+                        const SizedBox(width: 6),
+                        Icon(
+                          benefit.$1,
+                          size: SongletSize.iconXs,
+                          color: c.inkTertiary,
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 6),
+                    Text(
+                      benefit.$2,
+                      style: SongletType.caption.copyWith(
+                        color: c.inkSecondary,
+                        height: 1.35,
+                      ),
+                    ),
+                  ],
+                ),
               ),
-            ),
-            Expanded(
-              child: IconCaption(
-                icon: Icons.diamond_outlined,
-                label: l10n.paywallBenefitQuality,
-              ),
-            ),
-            Expanded(
-              child: IconCaption(
-                icon: Icons.verified_user_outlined,
-                label: l10n.paywallBenefitCommercial,
-              ),
-            ),
+            ],
           ],
         ),
       ],

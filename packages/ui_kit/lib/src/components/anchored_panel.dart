@@ -316,7 +316,7 @@ class AnchoredPanelBody extends StatelessWidget {
         SongletSpace.x4,
         SongletSpace.x3,
         SongletSpace.x4,
-        SongletSpace.x3,
+        SongletSpace.x2,
       ),
       child: Column(
         mainAxisSize: MainAxisSize.min,
@@ -330,7 +330,11 @@ class AnchoredPanelBody extends StatelessWidget {
                   child: Text(
                     title,
                     style: onClose == null
-                        ? SongletType.subhead.copyWith(color: c.inkSecondary)
+                        ? SongletType.eyebrow.copyWith(
+                            color: c.inkTertiary,
+                            fontSize: 10.5,
+                            letterSpacing: 1.5,
+                          )
                         : SongletType.title3.copyWith(color: c.ink),
                   ),
                 ),
@@ -340,10 +344,17 @@ class AnchoredPanelBody extends StatelessWidget {
                   tooltip: closeLabel,
                   onPressed: onClose,
                   icon: const Icon(Icons.close_rounded),
-                  style: IconButton.styleFrom(backgroundColor: c.surfaceMuted),
+                  style: IconButton.styleFrom(
+                    foregroundColor: c.ink,
+                    side: BorderSide(color: c.hairline),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(SongletRadius.control),
+                    ),
+                  ),
                 ),
             ],
           ),
+          Container(height: SongletSize.rule, color: c.hairline),
           // The footer scrolls with the rows: at the largest text sizes the
           // room beside the anchor may hold little more than the title.
           Flexible(

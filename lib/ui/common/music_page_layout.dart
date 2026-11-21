@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:ui_kit/ui_kit.dart';
@@ -63,7 +61,7 @@ class MusicPageFrame extends StatelessWidget {
     // screen, so it scrolls in after the content instead.
     final pinFooter =
         footer != null && !SongletType.isAccessibilitySize(context);
-    return AuroraBackground(
+    return PaperBackground(
       child: SafeArea(
         bottom: !pinFooter,
         child: Column(
@@ -136,41 +134,45 @@ class MusicPushedHeader extends StatelessWidget {
     final l10n = AppLocalizations.of(context);
     final c = SongletColors.of(context);
     final canPop = onBack != null || context.canPop();
-    return ClipRect(
-      child: BackdropFilter(
-        filter: ImageFilter.blur(sigmaX: 18, sigmaY: 18),
-        child: Container(
-          height: SongletSize.minTap + SongletSpace.x4,
-          decoration: BoxDecoration(
-            color: c.surface.withValues(alpha: 0.6),
-            border: Border(bottom: BorderSide(color: c.hairline)),
-          ),
-          // Keeps the brand centred whatever the widths of the two sides.
-          child: NavigationToolbar(
-            leading: canPop
-                ? MusicTestId(
-                    'nav.back',
-                    child: IconCircleButton(
-                      icon: Icons.arrow_back_ios_new_rounded,
-                      tooltip: l10n.commonBack,
-                      onPressed: onBack ?? () => context.pop(),
-                    ),
-                  )
-                : null,
-            middle: showBrand
-                ? BrandHeader(
-                    title: MusicSongletBrand.name,
-                    tagline: l10n.appTagline,
-                    centered: true,
-                    markSize: SongletSize.minTap,
-                  )
-                : null,
-            trailing: actions.isEmpty
-                ? null
-                : Row(mainAxisSize: MainAxisSize.min, children: actions),
-            middleSpacing: SongletSpace.x2,
-          ),
-        ),
+    return Container(
+      height: SongletSize.minTap + SongletSpace.x3,
+      decoration: BoxDecoration(
+        color: c.canvas,
+        border: Border(bottom: BorderSide(color: c.ink)),
+      ),
+      // Keeps the brand centred whatever the widths of the two sides.
+      child: NavigationToolbar(
+        leading: canPop
+            ? Padding(
+                padding: const EdgeInsetsDirectional.only(
+                  start: SongletSpace.x2,
+                ),
+                child: MusicTestId(
+                  'nav.back',
+                  child: IconCircleButton(
+                    icon: Icons.arrow_back_rounded,
+                    tooltip: l10n.commonBack,
+                    onPressed: onBack ?? () => context.pop(),
+                  ),
+                ),
+              )
+            : null,
+        middle: showBrand
+            ? BrandHeader(
+                title: MusicSongletBrand.name,
+                centered: true,
+                markSize: SongletSize.iconLg,
+              )
+            : null,
+        trailing: actions.isEmpty
+            ? null
+            : Padding(
+                padding: const EdgeInsetsDirectional.only(
+                  end: SongletSpace.x2,
+                ),
+                child: Row(mainAxisSize: MainAxisSize.min, children: actions),
+              ),
+        middleSpacing: SongletSpace.x2,
       ),
     );
   }
@@ -191,16 +193,8 @@ class MusicPageTitle extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Aurora kicker: a small gradient rule that announces the title.
-          Container(
-            width: SongletSpace.x10,
-            height: SongletSpace.x1,
-            margin: const EdgeInsetsDirectional.only(bottom: SongletSpace.x3),
-            decoration: BoxDecoration(
-              gradient: c.actionGradient,
-              borderRadius: SongletRadius.pillAll,
-            ),
-          ),
+          // The title is set, not decorated: the masthead above already opens
+          // the page with its rule, so a second mark here would repeat it.
           Semantics(
             header: true,
             child: Text(
@@ -209,10 +203,13 @@ class MusicPageTitle extends StatelessWidget {
             ),
           ),
           if (subtitle != null) ...[
-            const SizedBox(height: SongletSpace.x1),
+            const SizedBox(height: SongletSpace.x2),
             Text(
               subtitle!,
-              style: SongletType.body.copyWith(color: c.inkSecondary),
+              style: SongletType.subhead.copyWith(
+                color: c.inkSecondary,
+                height: 1.5,
+              ),
             ),
           ],
         ],

@@ -14,28 +14,38 @@ abstract final class SongletSpace {
   static const double x12 = 48;
   static const double x16 = 64;
 
-  /// Horizontal page gutter on compact widths: 16 pt, the prototypes' edge
-  /// and UIKit's compact layout margin (docs/ui/diff-report.md).
-  static const double gutter = x4;
+  /// Horizontal page gutter on compact widths: a printed margin rather than a
+  /// device edge (docs/ui).
+  static const double gutter = x5;
 
-  /// Denser gutter of the create home, whose template grid and composer run
-  /// closer to the edge (docs/ui P01, diff report).
-  static const double gutterDense = x3;
+  /// Denser gutter of the create home, whose contact sheet runs closer to the
+  /// edge than the text pages do.
+  static const double gutterDense = x4;
 
-  /// Sheet content inset (docs/ui P02, diff report).
-  static const double sheetInset = x5;
+  /// Sheet content inset.
+  static const double sheetInset = x6;
 
   /// Horizontal page gutter on regular widths (iPad).
   static const double gutterRegular = x8;
+
+  /// Vertical rhythm between two printed blocks (sections, cards).
+  static const double block = x6;
+
+  /// Space between a rule and the text above or below it.
+  static const double ruleGap = x3;
 }
 
-/// Corner radii (docs/ui): cards 20, sheets 24, controls 16.
+/// Corner radii (docs/ui): printed matter is nearly square — plates 4, cards
+/// 10, controls 10, sheets 20.
 abstract final class SongletRadius {
-  static const double thumb = 12;
-  static const double control = 18;
-  static const double card = 24;
-  static const double sheet = 28;
-  static const double pill = 999;
+  static const double thumb = 2;
+  static const double control = 8;
+  static const double card = 4;
+  static const double sheet = 16;
+
+  /// Stamps, bars and tracks: the press has no capsules. Used by the components
+  /// that were built as pills, so one number squares them all.
+  static const double pill = 2;
 
   static const BorderRadius controlAll = BorderRadius.all(
     Radius.circular(control),
@@ -53,32 +63,39 @@ abstract final class SongletRadius {
 abstract final class SongletSize {
   /// Apple HIG minimum hit target.
   static const double minTap = 44;
-  static const double controlHeight = 52;
+  static const double controlHeight = 50;
 
-  /// The primary gradient action (ObsButton) — the page's one main action.
-  static const double primaryAction = 54;
+  /// The primary action bar — the page's one main action.
+  static const double primaryAction = 52;
 
   /// Spinner inside a primary action while it is busy.
-  static const double actionSpinner = 22;
-  static const double compactControlHeight = 36;
-  static const double chipHeight = 32;
+  static const double actionSpinner = 20;
+  static const double compactControlHeight = 34;
+  static const double chipHeight = 30;
   static const double iconXs = 12;
   static const double iconSm = 16;
   static const double iconMd = 20;
   static const double iconLg = 24;
   static const double iconXl = 32;
-  static const double playButton = 64;
-  static const double playButtonSm = 36;
-  static const double brandMark = 40;
+  static const double playButton = 60;
+  static const double playButtonSm = 32;
+  static const double brandMark = 34;
   static const double thumbnail = 56;
   static const double coverLarge = 240;
-  static const double waveformHeight = 56;
-  static const double progressHeight = 6;
+  static const double waveformHeight = 52;
+  static const double progressHeight = 3;
   static const double hairline = 1;
+
+  /// The heavier rule that closes a masthead or opens a section.
+  static const double rule = 1;
+  static const double ruleStrong = 2;
   static const double focusRing = 2;
 
   /// Unselected radio ring stroke.
   static const double ring = 1.5;
+
+  /// Width of the serif folio that numbers a list row or a section.
+  static const double folioColumn = 34;
 
   /// Readable column width for forms and players on wide screens.
   static const double contentMaxWidth = 600;
@@ -95,19 +112,19 @@ abstract final class SongletSize {
   /// Max width of a roomier anchored panel (genre list, template options).
   static const double anchoredPanelWideWidth = contentMaxWidth * 0.7;
 
-  /// Minimum template tile width in the adaptive grid (four per row on a
-  /// 393 pt phone, docs/ui P01).
-  static const double tileMinExtent = 80;
+  /// Minimum plate width in the adaptive contact sheet (four across on a
+  /// 393 pt phone, docs/ui).
+  static const double tileMinExtent = 74;
 
-  /// Template tile width ÷ height (docs/ui P01).
-  static const double tileAspect = 0.86;
+  /// Plate width ÷ height: a portrait photo frame, not a square button.
+  static const double tileAspect = 0.76;
 
-  /// Tile width ÷ height at accessibility text sizes: one tile per row, so a
+  /// Tile width ÷ height at accessibility text sizes: one plate per row, so a
   /// landscape card keeps the art visible without a screen-tall tile.
   static const double tileAspectWide = 1.6;
 
   /// Minimum height of the composer's prompt field.
-  static const double promptMinHeight = 48;
+  static const double promptMinHeight = 46;
 
   /// Bars in a live level meter / generated waveform.
   static const int waveformBars = 48;

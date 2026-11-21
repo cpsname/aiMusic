@@ -45,9 +45,9 @@ class _MusicAppState extends ConsumerState<MusicApp> {
       debugShowCheckedModeBanner: false,
       theme: AuraTheme.warm,
       darkTheme: AuraTheme.warmDark,
-      // The deep-space aurora language is the product's primary canvas.
-      // Light remains available for system-level accessibility and previews.
-      themeMode: ThemeMode.dark,
+      // The product is printed on paper: the daylight press run is the
+      // signature, the night stock is there for dark environments.
+      themeMode: ThemeMode.light,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: supportedUiLocales,
       routerConfig: _router,

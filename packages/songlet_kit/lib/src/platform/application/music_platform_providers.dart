@@ -2,7 +2,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../share/data/music_method_channel_video_composer.dart';
 import '../../store/application/music_store_providers.dart';
-import '../data/channel_music_local_notifications.dart';
+import '../data/music_channel_local_notifications.dart';
 import '../data/music_native_bridge.dart';
 import '../domain/music_local_notifications.dart';
 import '../domain/music_native_gateways.dart';

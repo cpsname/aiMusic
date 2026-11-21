@@ -4,7 +4,8 @@ import '../tokens/songlet_colors.dart';
 import '../tokens/songlet_metrics.dart';
 import '../tokens/songlet_type.dart';
 
-/// Icon · label · value row (docs/ui P13 "Prompt used").
+/// Icon · label · value row (docs/ui P13 "Prompt used"), ruled rather than
+/// boxed.
 class InfoRow extends StatelessWidget {
   const InfoRow({
     super.key,
@@ -18,7 +19,7 @@ class InfoRow extends StatelessWidget {
   final String value;
 
   /// Label column width (aligns values across rows).
-  static const double labelWidth = SongletSize.minTap * 3;
+  static const double labelWidth = SongletSize.minTap * 2.2;
 
   @override
   Widget build(BuildContext context) {
@@ -26,31 +27,34 @@ class InfoRow extends StatelessWidget {
     return MergeSemantics(
       child: Padding(
         padding: const EdgeInsetsDirectional.symmetric(
-          vertical: SongletSpace.x1,
+          vertical: SongletSpace.x2,
         ),
         child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-              width: SongletSize.iconXl + SongletSpace.x2,
-              height: SongletSize.iconXl + SongletSpace.x2,
-              decoration: BoxDecoration(
-                color: c.accentSoft,
-                shape: BoxShape.circle,
-              ),
-              child: Icon(icon, color: c.accent, size: SongletSize.iconMd),
+            Padding(
+              padding: const EdgeInsetsDirectional.only(top: 2),
+              child: Icon(icon, color: c.inkTertiary, size: SongletSize.iconSm),
             ),
-            const SizedBox(width: SongletSpace.x4),
+            const SizedBox(width: SongletSpace.x3),
             SizedBox(
               width: labelWidth,
               child: Text(
                 label,
-                style: SongletType.subhead.copyWith(color: c.inkSecondary),
+                style: SongletType.eyebrow.copyWith(
+                  color: c.inkSecondary,
+                  fontSize: 10.5,
+                  letterSpacing: 1.1,
+                ),
               ),
             ),
             Expanded(
               child: Text(
                 value,
-                style: SongletType.callout.copyWith(color: c.ink),
+                style: SongletType.subhead.copyWith(
+                  color: c.ink,
+                  height: 1.45,
+                ),
               ),
             ),
           ],
@@ -58,6 +62,81 @@ class InfoRow extends StatelessWidget {
       ),
     );
   }
+}
+
+/// Label, dotted leader, value — the way a menu or a receipt sets a price.
+///
+///     Full song .......................... 1
+class LeaderRow extends StatelessWidget {
+  const LeaderRow({
+    super.key,
+    required this.label,
+    required this.value,
+    this.emphasised = false,
+  });
+
+  final String label;
+  final String value;
+
+  /// Sets both sides in ink at weight (the total line).
+  final bool emphasised;
+
+  @override
+  Widget build(BuildContext context) {
+    final c = SongletColors.of(context);
+    final labelStyle = (emphasised ? SongletType.headline : SongletType.subhead)
+        .copyWith(color: c.ink);
+    final valueStyle =
+        (emphasised ? SongletType.headline : SongletType.folio).copyWith(
+          color: c.ink,
+        );
+    return MergeSemantics(
+      child: Padding(
+        padding: const EdgeInsetsDirectional.symmetric(vertical: 6),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: [
+            Flexible(child: Text(label, style: labelStyle)),
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsetsDirectional.symmetric(
+                  horizontal: SongletSpace.x2,
+                  vertical: 5,
+                ),
+                child: CustomPaint(
+                  painter: DottedLeaderPainter(color: c.inkTertiary),
+                  child: const SizedBox(height: 1, width: double.infinity),
+                ),
+              ),
+            ),
+            Text(value, style: valueStyle),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+/// The dotted leader of a [LeaderRow].
+class DottedLeaderPainter extends CustomPainter {
+  const DottedLeaderPainter({required this.color});
+
+  final Color color;
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final paint = Paint()
+      ..color = color.withValues(alpha: 0.55)
+      ..strokeWidth = 1
+      ..strokeCap = StrokeCap.round;
+    for (var x = 0.0; x < size.width; x += 4) {
+      canvas.drawLine(Offset(x, 0), Offset(x + 1, 0), paint);
+    }
+  }
+
+  @override
+  bool shouldRepaint(covariant DottedLeaderPainter old) =>
+      old.color != color;
 }
 
 /// A monospaced value with a copy button (P13 "Generation ID").
@@ -81,56 +160,77 @@ class CopyField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final c = SongletColors.of(context);
-    return Row(
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(label, style: SongletType.headline.copyWith(color: c.ink)),
-        const SizedBox(width: SongletSpace.x4),
-        Expanded(
-          child: Container(
-            padding: const EdgeInsetsDirectional.symmetric(
-              horizontal: SongletSpace.x3,
-              vertical: SongletSpace.x2,
-            ),
-            decoration: BoxDecoration(
-              color: c.surfaceMuted,
-              borderRadius: SongletRadius.thumbAll,
-            ),
-            child: SelectableText(
-              value,
-              maxLines: 1,
-              style: SongletType.subhead.copyWith(
-                color: c.inkSecondary,
-                fontFeatures: const [FontFeature.tabularFigures()],
-                letterSpacing: _valueTracking,
-              ),
-            ),
+        Text(
+          label,
+          style: SongletType.eyebrow.copyWith(
+            color: c.inkSecondary,
+            fontSize: 10.5,
+            letterSpacing: 1.3,
           ),
         ),
-        const SizedBox(width: SongletSpace.x2),
-        IconButton(
-          tooltip: copyLabel,
-          onPressed: onCopy,
-          style: IconButton.styleFrom(backgroundColor: c.surfaceMuted),
-          icon: Icon(
-            Icons.copy_rounded,
-            color: c.ink,
-            size: SongletSize.iconMd,
-          ),
+        const SizedBox(height: 6),
+        Row(
+          children: [
+            Expanded(
+              child: Container(
+                padding: const EdgeInsetsDirectional.symmetric(
+                  horizontal: SongletSpace.x3,
+                  vertical: SongletSpace.x2,
+                ),
+                decoration: BoxDecoration(
+                  color: c.surfaceMuted,
+                  borderRadius: SongletRadius.controlAll,
+                  border: Border.all(color: c.hairline),
+                ),
+                child: SelectableText(
+                  value,
+                  maxLines: 1,
+                  style: SongletType.subhead.copyWith(
+                    color: c.inkSecondary,
+                    fontFeatures: const [FontFeature.tabularFigures()],
+                    letterSpacing: _valueTracking,
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(width: SongletSpace.x2),
+            IconButton(
+              tooltip: copyLabel,
+              onPressed: onCopy,
+              style: IconButton.styleFrom(
+                foregroundColor: c.ink,
+                side: BorderSide(color: c.hairline),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(SongletRadius.control),
+                ),
+              ),
+              icon: const Icon(Icons.copy_rounded, size: SongletSize.iconMd),
+            ),
+          ],
         ),
       ],
     );
   }
 }
 
-/// A grouped list (P14 settings): rounded surface with hairline dividers.
+/// A section of the settings page (P14): a tracked heading over a ruled block.
+/// No card: the rules do the grouping.
 class SettingsGroup extends StatelessWidget {
-  const SettingsGroup({super.key, required this.children, this.title});
+  const SettingsGroup({
+    super.key,
+    required this.children,
+    this.title,
+    this.index,
+  });
 
   final String? title;
   final List<Widget> children;
 
-  /// Divider inset, aligning dividers with the rows' text past the icon.
-  static const double _dividerIndent = SongletSpace.x4 * 3;
+  /// Printed folio of the section ("01").
+  final String? index;
 
   @override
   Widget build(BuildContext context) {
@@ -141,30 +241,50 @@ class SettingsGroup extends StatelessWidget {
         if (title != null)
           Padding(
             padding: const EdgeInsetsDirectional.only(
-              start: SongletSpace.x4,
-              bottom: SongletSpace.x2,
+              bottom: SongletSpace.x1,
             ),
             child: Semantics(
               header: true,
-              child: Text(
-                title!,
-                style: SongletType.footnote.copyWith(color: c.inkSecondary),
+              child: Row(
+                children: [
+                  if (index != null) ...[
+                    Text(
+                      index!,
+                      style: SongletType.folio.copyWith(
+                        color: c.accent,
+                        fontSize: 11,
+                      ),
+                    ),
+                    const SizedBox(width: SongletSpace.x2),
+                  ],
+                  Expanded(
+                    child: Text(
+                      title!,
+                      style: SongletType.eyebrow.copyWith(
+                        color: c.inkTertiary,
+                        fontSize: 10.5,
+                        letterSpacing: 1.5,
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
-        Material(
-          color: c.surface,
-          shape: const RoundedRectangleBorder(
-            borderRadius: SongletRadius.cardAll,
+        DecoratedBox(
+          decoration: BoxDecoration(
+            border: Border(
+              top: BorderSide(color: c.hairline),
+              bottom: BorderSide(color: c.hairline),
+            ),
           ),
-          clipBehavior: Clip.antiAlias,
           child: Column(
             children: [
               for (var i = 0; i < children.length; i++) ...[
                 if (i > 0)
                   Divider(
-                    height: SongletSize.hairline,
-                    indent: _dividerIndent,
+                    height: SongletSize.rule,
+                    thickness: SongletSize.rule,
                     color: c.hairline,
                   ),
                 children[i],
@@ -177,8 +297,8 @@ class SettingsGroup extends StatelessWidget {
   }
 }
 
-/// One settings row: leading glyph, title, optional subtitle, and a trailing
-/// value, switch or chevron.
+/// One settings row: a quiet glyph, the title, an optional subtitle, and a
+/// trailing value, switch or chevron.
 class SettingsRow extends StatelessWidget {
   const SettingsRow({
     super.key,
@@ -213,7 +333,8 @@ class SettingsRow extends StatelessWidget {
     final c = SongletColors.of(context);
     final ink = destructive ? c.danger : c.ink;
     final hasToggle = toggle != null;
-    final stackValue = SongletType.isAccessibilitySize(context) || subtitle != null;
+    final stackValue =
+        SongletType.isAccessibilitySize(context) || subtitle != null;
     return MergeSemantics(
       child: InkWell(
         onTap: hasToggle
@@ -221,29 +342,20 @@ class SettingsRow extends StatelessWidget {
             : onTap,
         child: ConstrainedBox(
           constraints: const BoxConstraints(
-            minHeight: SongletSize.controlHeight,
+            minHeight: SongletSize.controlHeight + SongletSpace.x2,
           ),
           child: Padding(
             padding: const EdgeInsetsDirectional.symmetric(
-              horizontal: SongletSpace.x4,
               vertical: SongletSpace.x2,
             ),
             child: Row(
               children: [
-                Container(
-                  width: SongletSize.iconXl,
-                  height: SongletSize.iconXl,
-                  decoration: BoxDecoration(
-                    color: destructive ? c.dangerSoft : c.accentSoft,
-                    borderRadius: SongletRadius.thumbAll,
-                  ),
-                  child: Icon(
-                    icon,
-                    color: destructive ? c.danger : c.accent,
-                    size: SongletSize.iconMd,
-                  ),
+                Icon(
+                  icon,
+                  color: destructive ? c.danger : c.inkSecondary,
+                  size: SongletSize.iconMd,
                 ),
-                const SizedBox(width: SongletSpace.x4),
+                const SizedBox(width: SongletSpace.x3),
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -257,10 +369,14 @@ class SettingsRow extends StatelessWidget {
                           ),
                         ),
                       if (subtitle != null)
-                        Text(
-                          subtitle!,
-                          style: SongletType.footnote.copyWith(
-                            color: c.inkSecondary,
+                        Padding(
+                          padding: const EdgeInsetsDirectional.only(top: 1),
+                          child: Text(
+                            subtitle!,
+                            style: SongletType.footnote.copyWith(
+                              color: c.inkSecondary,
+                              height: 1.4,
+                            ),
                           ),
                         ),
                     ],
@@ -274,7 +390,8 @@ class SettingsRow extends StatelessWidget {
                       ),
                       child: Text(
                         value!,
-                        style: SongletType.subhead.copyWith(
+                        textAlign: TextAlign.end,
+                        style: SongletType.folio.copyWith(
                           color: c.inkSecondary,
                         ),
                       ),
@@ -285,7 +402,14 @@ class SettingsRow extends StatelessWidget {
                 else if (trailing != null)
                   trailing!
                 else if (onTap != null)
-                  Icon(Icons.chevron_right_rounded, color: c.inkTertiary),
+                  Padding(
+                    padding: const EdgeInsetsDirectional.only(start: 4),
+                    child: Icon(
+                      Icons.arrow_forward_rounded,
+                      size: SongletSize.iconSm,
+                      color: c.inkTertiary,
+                    ),
+                  ),
               ],
             ),
           ),

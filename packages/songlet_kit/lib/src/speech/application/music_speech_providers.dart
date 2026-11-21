@@ -1,6 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../data/channel_music_speech_gateway.dart';
+import '../data/music_channel_speech_gateway.dart';
 import '../domain/music_speech_gateway.dart';
 import 'music_dictation_controller.dart';
 

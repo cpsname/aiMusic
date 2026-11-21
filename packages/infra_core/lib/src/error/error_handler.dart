@@ -114,6 +114,9 @@ class ErrorHandler {
       case DioExceptionType.connectionTimeout:
       case DioExceptionType.sendTimeout:
       case DioExceptionType.receiveTimeout:
+      // Dio 5.9 splits transform timeouts out of the three above; a body that
+      // took too long to decode is the same user-visible timeout.
+      case DioExceptionType.transformTimeout:
         return const NetworkFailure(message: '', kind: NetworkFailureKind.timeout);
       case DioExceptionType.connectionError:
         return const NetworkFailure(message: '', kind: NetworkFailureKind.offline);

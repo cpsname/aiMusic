@@ -277,25 +277,43 @@ class _Progress extends StatelessWidget {
           ),
           const SizedBox(height: SongletSpace.x4),
         ],
-        Center(child: PulsingMark(label: l10n.mvGeneratingTitle)),
-        MusicTestId(
-          'mv.progressTitle',
-          child: Text(
-            l10n.mvGeneratingTitle,
-            textAlign: TextAlign.center,
-            style: SongletType.title1.copyWith(color: c.ink),
-          ),
+        // The working head, set like the song's own generating page: the state
+        // on the left, the figure struck at the right margin.
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: [
+            Expanded(
+              child: MusicTestId(
+                'mv.progressTitle',
+                child: Text(
+                  l10n.mvGeneratingTitle,
+                  style: SongletType.title1.copyWith(color: c.ink),
+                ),
+              ),
+            ),
+            if (value != null && showPercent) ...[
+              const SizedBox(width: SongletSpace.x3),
+              Text(
+                l10n.generatingPercent(
+                  progressPercent(value, l10n.localeName),
+                ),
+                style: SongletType.numeral.copyWith(color: c.accent),
+              ),
+            ],
+          ],
         ),
-        const SizedBox(height: SongletSpace.x2),
+        const SizedBox(height: 6),
         MusicTestId(
           'mv.stage',
           child: Text(
             stage,
-            textAlign: TextAlign.center,
-            style: SongletType.body.copyWith(color: c.inkSecondary),
+            style: SongletType.caption.copyWith(
+              color: c.inkTertiary,
+              letterSpacing: 0.3,
+            ),
           ),
         ),
-        const SizedBox(height: SongletSpace.x5),
+        const SizedBox(height: SongletSpace.x4),
         if (value == null)
           InlineProgressBanner(icon: Icons.cloud_upload_outlined, title: stage)
         else
@@ -303,11 +321,6 @@ class _Progress extends StatelessWidget {
             'mv.progress',
             child: ProgressMeter(
               value: value,
-              percentLabel: showPercent
-                  ? l10n.generatingPercent(
-                      progressPercent(value, l10n.localeName),
-                    )
-                  : null,
               semanticsLabel: l10n.generatingProgress,
             ),
           ),
@@ -317,12 +330,14 @@ class _Progress extends StatelessWidget {
             'mv.scenes',
             child: Text(
               l10n.mvScenes(done ?? 0, total),
-              textAlign: TextAlign.center,
-              style: SongletType.footnote.copyWith(color: c.inkSecondary),
+              style: SongletType.folio.copyWith(
+                color: c.inkSecondary,
+                fontSize: 11,
+              ),
             ),
           ),
         ],
-        const SizedBox(height: SongletSpace.x4),
+        const SizedBox(height: SongletSpace.x3),
         MetaLine(
           parts: [
             mvLevelName(l10n, level),
@@ -332,24 +347,32 @@ class _Progress extends StatelessWidget {
                 (remaining / Duration.secondsPerMinute).ceil().clamp(1, 99),
               ),
           ],
+          textAlign: TextAlign.start,
         ),
         const SizedBox(height: SongletSpace.x4),
         MusicTestId(
           'mv.leaveHint',
           child: Text(
             l10n.mvLeaveHint,
-            textAlign: TextAlign.center,
-            style: SongletType.footnote.copyWith(color: c.inkTertiary),
+            style: SongletType.footnote.copyWith(
+              color: c.inkTertiary,
+              height: 1.5,
+            ),
           ),
         ),
-        const SizedBox(height: SongletSpace.x2),
         if (onCancel != null || cancelling)
-          Center(
+          Align(
+            alignment: AlignmentDirectional.centerStart,
             child: MusicTestId(
               'mv.cancel',
               child: TextButton(
                 onPressed: onCancel,
-                style: TextButton.styleFrom(foregroundColor: c.accent),
+                style: TextButton.styleFrom(
+                  foregroundColor: c.inkSecondary,
+                  padding: EdgeInsetsDirectional.zero,
+                  minimumSize: const Size(0, SongletSize.minTap),
+                  tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                ),
                 child: Text(l10n.commonCancel),
               ),
             ),

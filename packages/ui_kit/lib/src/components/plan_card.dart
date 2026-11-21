@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
 import '../tokens/songlet_colors.dart';
-import '../tokens/songlet_elevation.dart';
 import '../tokens/songlet_metrics.dart';
 import '../tokens/songlet_type.dart';
 
-/// A subscription plan (docs/ui P08): name, price, optional trial pill and
-/// "Best value" ribbon on the start side; benefits with checks on the end
-/// side. Selected = accent outline and accent checks.
+/// A subscription plan (docs/ui P08), set as a menu entry: the name and the
+/// price on one line, the trial as a stamp, the benefits struck in beneath.
+///
+/// A selected entry takes a coral margin rule and the coral price; there is no
+/// card, no glow and no checkmark discs — the printed page does not decorate
+/// its prices.
 class PlanCard extends StatelessWidget {
   const PlanCard({
     super.key,
@@ -28,177 +30,156 @@ class PlanCard extends StatelessWidget {
   final String? ribbon;
   final String? trial;
 
-  /// Fill tint of the selected card (accent-soft over the surface).
-  static const double _selectedTintAlpha = 0.35;
-
-  /// Width below which the price and the benefits stack instead of sitting
-  /// side by side.
-  static const double _stackBelowWidth = SongletSize.minTap * 7;
-
-  /// Flex weights of the price column and the benefit list side by side.
-  static const int _headFlex = 5;
-  static const int _listFlex = 6;
+  /// Width below which the price moves under the name.
+  static const double _stackBelowWidth = SongletSize.minTap * 6;
 
   @override
   Widget build(BuildContext context) {
     final c = SongletColors.of(context);
-    final e = SongletElevation.of(context);
-    final card = Material(
-      color: selected
-          ? Color.alphaBlend(
-              c.accentSoft.withValues(alpha: _selectedTintAlpha),
-              c.surface,
-            )
-          : c.surface,
-      shape: RoundedRectangleBorder(
-        borderRadius: SongletRadius.cardAll,
-        side: BorderSide(
-          color: selected ? c.accent : c.hairline,
-          width: selected ? SongletSize.focusRing : SongletSize.hairline,
-        ),
-      ),
-      child: InkWell(
-        borderRadius: SongletRadius.cardAll,
-        onTap: onTap,
-        child: Padding(
-          padding: const EdgeInsetsDirectional.all(SongletSpace.x5),
-          child: LayoutBuilder(
-            builder: (context, constraints) {
-              final narrow = constraints.maxWidth < _stackBelowWidth;
-              final head = Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    title,
-                    style: SongletType.title3.copyWith(
-                      color: c.ink,
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
-                  // One line: "$4.99/week" shrinks to the column rather than
-                  // breaking at the slash.
-                  FittedBox(
-                    fit: BoxFit.scaleDown,
-                    alignment: AlignmentDirectional.centerStart,
-                    child: Text(
-                      price,
-                      maxLines: 1,
-                      style: SongletType.title1.copyWith(color: c.accent),
-                    ),
-                  ),
-                  if (trial != null) ...[
-                    const SizedBox(height: SongletSpace.x2),
-                    Container(
-                      padding: const EdgeInsetsDirectional.symmetric(
-                        horizontal: SongletSpace.x3,
-                        vertical: SongletSpace.x1,
-                      ),
-                      decoration: BoxDecoration(
-                        color: c.accentSoft,
-                        borderRadius: SongletRadius.pillAll,
-                      ),
-                      child: Text(
-                        trial!,
-                        style: SongletType.subhead.copyWith(color: c.accent),
-                      ),
-                    ),
-                  ],
-                ],
-              );
-              final list = Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  for (final b in benefits)
-                    Padding(
-                      padding: const EdgeInsetsDirectional.only(
-                        bottom: SongletSpace.x1,
-                      ),
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Icon(
-                            Icons.check_circle_rounded,
-                            size: SongletSize.iconMd,
-                            color: selected ? c.accent : c.inkTertiary,
-                          ),
-                          const SizedBox(width: SongletSpace.x2),
-                          Expanded(
-                            child: Text(
-                              b,
-                              style: SongletType.subhead.copyWith(color: c.ink),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                ],
-              );
-              return narrow
-                  ? Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        head,
-                        const SizedBox(height: SongletSpace.x3),
-                        list,
-                      ],
-                    )
-                  : Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Expanded(flex: _headFlex, child: head),
-                        const SizedBox(width: SongletSpace.x3),
-                        Expanded(flex: _listFlex, child: list),
-                      ],
-                    );
-            },
+    final ink = selected ? c.accent : c.ink;
+    final head = Row(
+      crossAxisAlignment: CrossAxisAlignment.end,
+      children: [
+        Expanded(
+          child: Text(
+            title,
+            style: SongletType.title2.copyWith(
+              color: ink,
+              fontSize: 21,
+              letterSpacing: -0.3,
+            ),
           ),
         ),
-      ),
+        const SizedBox(width: SongletSpace.x2),
+        Text(
+          price,
+          style: SongletType.folio.copyWith(
+            color: ink,
+            fontSize: 14,
+            fontWeight: FontWeight.w700,
+            letterSpacing: 0.4,
+          ),
+        ),
+      ],
+    );
+    final body = Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        if (trial != null)
+          Padding(
+            padding: const EdgeInsetsDirectional.only(top: 6),
+            child: Container(
+              padding: const EdgeInsetsDirectional.symmetric(
+                horizontal: SongletSpace.x2,
+                vertical: 3,
+              ),
+              decoration: BoxDecoration(
+                color: c.accentSoft,
+                borderRadius: BorderRadius.circular(SongletRadius.thumb),
+              ),
+              child: Text(
+                trial!,
+                style: SongletType.stamp.copyWith(color: c.accentPressed),
+              ),
+            ),
+          ),
+        const SizedBox(height: SongletSpace.x2),
+        for (final b in benefits)
+          Padding(
+            padding: const EdgeInsetsDirectional.only(bottom: 3),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  '—',
+                  style: SongletType.footnote.copyWith(
+                    color: selected ? c.accent : c.inkTertiary,
+                  ),
+                ),
+                const SizedBox(width: SongletSpace.x2),
+                Expanded(
+                  child: Text(
+                    b,
+                    style: SongletType.subhead.copyWith(
+                      color: c.inkSecondary,
+                      height: 1.4,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+      ],
     );
     return Semantics(
       container: true,
       button: true,
       selected: selected,
       inMutuallyExclusiveGroup: true,
-      child: Stack(
-        clipBehavior: Clip.none,
-        children: [
-          DecoratedBox(
+      child: Material(
+        type: MaterialType.transparency,
+        child: InkWell(
+          onTap: onTap,
+          child: Container(
+            margin: const EdgeInsetsDirectional.only(bottom: SongletSpace.x2),
             decoration: BoxDecoration(
-              borderRadius: SongletRadius.cardAll,
-              boxShadow: selected ? e.level2 : e.level1,
-            ),
-            child: card,
-          ),
-          if (ribbon != null)
-            PositionedDirectional(
-              top: -SongletSpace.x3,
-              end: SongletSpace.x4,
-              child: Container(
-                padding: const EdgeInsetsDirectional.symmetric(
-                  horizontal: SongletSpace.x3,
-                  vertical: SongletSpace.x1,
+              border: BorderDirectional(
+                start: BorderSide(
+                  color: selected ? c.accent : c.hairline,
+                  width: selected ? SongletSize.ruleStrong * 2 : SongletSize.rule,
                 ),
-                decoration: BoxDecoration(
-                  color: c.accent,
-                  borderRadius: SongletRadius.pillAll,
-                ),
-                child: Text(
-                  ribbon!,
-                  style: SongletType.footnote.copyWith(
-                    color: c.onAccent,
-                    fontWeight: FontWeight.w600,
-                  ),
-                ),
+                bottom: BorderSide(color: c.hairline),
               ),
             ),
-        ],
+            padding: const EdgeInsetsDirectional.fromSTEB(
+              SongletSpace.x3,
+              SongletSpace.x3,
+              SongletSpace.x2,
+              SongletSpace.x3,
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                if (ribbon != null)
+                  Padding(
+                    padding: const EdgeInsetsDirectional.only(
+                      bottom: SongletSpace.x1,
+                    ),
+                    child: Align(
+                      alignment: AlignmentDirectional.centerStart,
+                      child: Text(
+                        ribbon!,
+                        style: SongletType.stamp.copyWith(color: c.highlight),
+                      ),
+                    ),
+                  ),
+                LayoutBuilder(
+                  builder: (context, constraints) => constraints.maxWidth <
+                          _stackBelowWidth
+                      ? Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            head,
+                            const SizedBox(height: SongletSpace.x2),
+                            body,
+                          ],
+                        )
+                      : Column(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: [head, body],
+                        ),
+                ),
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }
 }
 
-/// The one-off pack row (docs/ui P08 "Just need a few? 10-song pack").
+/// The one-off pack row (docs/ui P08 "Just need a few? 10-song pack"): a
+/// ruled entry with the price at the margin and a struck square when picked.
 class PackRow extends StatelessWidget {
   const PackRow({
     super.key,
@@ -220,86 +201,113 @@ class PackRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final c = SongletColors.of(context);
-    final disc = Container(
-      width: SongletSize.thumbnail,
-      height: SongletSize.thumbnail,
-      decoration: BoxDecoration(color: c.accentSoft, shape: BoxShape.circle),
-      child: Icon(
-        Icons.toll_rounded,
-        color: c.accent,
-        size: SongletSize.iconXl,
+    final mark = Container(
+      width: SongletSize.iconMd,
+      height: SongletSize.iconMd,
+      decoration: BoxDecoration(
+        color: selected ? c.accent : Colors.transparent,
+        border: Border.all(
+          color: selected ? c.accent : c.inkTertiary,
+          width: SongletSize.rule,
+        ),
+        borderRadius: BorderRadius.circular(2),
       ),
+      child: selected
+          ? Icon(
+              Icons.check_rounded,
+              size: SongletSize.iconSm,
+              color: c.onAccent,
+            )
+          : null,
     );
     final texts = Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
           title,
-          style: SongletType.callout.copyWith(
-            color: c.ink,
-            fontWeight: FontWeight.w600,
+          style: SongletType.title3.copyWith(color: c.ink, fontSize: 16),
+        ),
+        Text(
+          subtitle,
+          style: SongletType.footnote.copyWith(color: c.inkSecondary),
+        ),
+      ],
+    );
+    final priceBlock = Column(
+      crossAxisAlignment: CrossAxisAlignment.end,
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Text(
+          price,
+          style: SongletType.folio.copyWith(
+            color: selected ? c.accent : c.ink,
+            fontSize: 14,
+            fontWeight: FontWeight.w700,
           ),
         ),
-        Text(subtitle, style: SongletType.callout.copyWith(color: c.ink)),
+        Text(
+          note,
+          style: SongletType.caption2.copyWith(color: c.inkTertiary),
+        ),
       ],
     );
-    final price = Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(this.price, style: SongletType.title3.copyWith(color: c.accent)),
-        Text(note, style: SongletType.footnote.copyWith(color: c.inkSecondary)),
-      ],
-    );
-    final chevron = Icon(Icons.chevron_right_rounded, color: c.inkSecondary);
     return Semantics(
       container: true,
       button: true,
       selected: selected,
       inMutuallyExclusiveGroup: true,
       child: Material(
-        color: c.surface,
-        shape: RoundedRectangleBorder(
-          borderRadius: SongletRadius.cardAll,
-          side: BorderSide(
-            color: selected ? c.accent : c.hairline,
-            width: selected ? SongletSize.focusRing : SongletSize.hairline,
-          ),
-        ),
+        type: MaterialType.transparency,
         child: InkWell(
-          borderRadius: SongletRadius.cardAll,
           onTap: onTap,
-          child: Padding(
-            padding: const EdgeInsetsDirectional.all(SongletSpace.x4),
-            // Accessibility sizes: the price moves under the title.
-            child: SongletType.isAccessibilitySize(context)
-                ? Column(
+          child: Container(
+            decoration: BoxDecoration(
+              border: Border(
+                bottom: BorderSide(color: c.hairline),
+              ),
+            ),
+            padding: const EdgeInsetsDirectional.symmetric(
+              vertical: SongletSpace.x3,
+            ),
+            // Accessibility sizes: the price moves under the entry rather than
+            // being squeezed off the row.
+            child: LayoutBuilder(
+              builder: (context, constraints) {
+                final stack = SongletType.isAccessibilitySize(context) ||
+                    constraints.maxWidth < 260;
+                if (stack) {
+                  return Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          disc,
-                          const SizedBox(width: SongletSpace.x4),
+                          mark,
+                          const SizedBox(width: SongletSpace.x3),
                           Expanded(child: texts),
                         ],
                       ),
-                      const SizedBox(height: SongletSpace.x3),
-                      Row(
-                        children: [
-                          Expanded(child: price),
-                          chevron,
-                        ],
+                      const SizedBox(height: 6),
+                      Padding(
+                        padding: const EdgeInsetsDirectional.only(
+                          start: SongletSize.iconMd + SongletSpace.x3,
+                        ),
+                        child: priceBlock,
                       ),
                     ],
-                  )
-                : Row(
-                    children: [
-                      disc,
-                      const SizedBox(width: SongletSpace.x4),
-                      Expanded(child: texts),
-                      Flexible(child: price),
-                      chevron,
-                    ],
-                  ),
+                  );
+                }
+                return Row(
+                  children: [
+                    mark,
+                    const SizedBox(width: SongletSpace.x3),
+                    Expanded(child: texts),
+                    const SizedBox(width: SongletSpace.x2),
+                    priceBlock,
+                  ],
+                );
+              },
+            ),
           ),
         ),
       ),
@@ -307,7 +315,8 @@ class PackRow extends StatelessWidget {
   }
 }
 
-/// Round icon over a caption (P08 hero benefits, value strip).
+/// Icon over a caption (P08 hero benefits, value strip). The icon is set bare:
+/// the press does not use tinted discs.
 class IconCaption extends StatelessWidget {
   const IconCaption({
     super.key,
@@ -319,7 +328,7 @@ class IconCaption extends StatelessWidget {
   final IconData icon;
   final String label;
 
-  /// Soft accent disc behind the icon.
+  /// Kept for the template's callers; the press sets the glyph bare.
   final bool tinted;
 
   @override
@@ -328,32 +337,19 @@ class IconCaption extends StatelessWidget {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        if (tinted)
-          Container(
-            width: SongletSize.thumbnail,
-            height: SongletSize.thumbnail,
-            decoration: BoxDecoration(
-              color: c.accentSoft,
-              shape: BoxShape.circle,
-            ),
-            child: Icon(icon, color: c.accent, size: SongletSize.iconLg),
-          )
-        else
-          Icon(icon, color: c.ink, size: SongletSize.iconLg),
+        Icon(icon, color: c.accent, size: SongletSize.iconLg),
         const SizedBox(height: SongletSpace.x2),
         Text(
           label,
           textAlign: TextAlign.center,
-          style: (tinted ? SongletType.subhead : SongletType.footnote).copyWith(
-            color: tinted ? c.ink : c.inkSecondary,
-          ),
+          style: SongletType.subhead.copyWith(color: c.ink, height: 1.35),
         ),
       ],
     );
   }
 }
 
-/// Inline legal / account links separated by bars (P08 footer).
+/// Inline legal / account links separated by dots (P08 footer).
 class LinkRow extends StatelessWidget {
   const LinkRow({super.key, required this.links});
 
@@ -370,7 +366,7 @@ class LinkRow extends StatelessWidget {
           if (i > 0)
             ExcludeSemantics(
               child: Text(
-                '  |  ',
+                '  ·  ',
                 style: SongletType.footnote.copyWith(color: c.inkTertiary),
               ),
             ),
@@ -389,7 +385,7 @@ class LinkRow extends StatelessWidget {
                     style: SongletType.footnote.copyWith(
                       color: c.inkSecondary,
                       decoration: TextDecoration.underline,
-                      decorationColor: c.inkSecondary,
+                      decorationColor: c.inkTertiary,
                     ),
                   ),
                 ),

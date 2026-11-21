@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import '../tokens/songlet_colors.dart';
 import '../tokens/songlet_metrics.dart';
 
-/// Round tonal icon button (back, more, close, copy) — docs/ui P08, P09, P13.
+/// Square icon button (back, more, close, copy) — a ruled key, not a disc —
+/// docs/ui P08, P09, P13.
 class IconCircleButton extends StatelessWidget {
   const IconCircleButton({
     super.key,
@@ -20,13 +21,14 @@ class IconCircleButton extends StatelessWidget {
   final VoidCallback? onPressed;
   final double size;
 
-  /// Tonal fill; false = bare icon with the same hit target.
+  /// Ruled fill; false = bare icon with the same hit target.
   final bool filled;
   final Color? color;
 
   @override
   Widget build(BuildContext context) {
     final c = SongletColors.of(context);
+    final radius = BorderRadius.circular(SongletRadius.control);
     return Tooltip(
       message: tooltip,
       child: Semantics(
@@ -35,10 +37,15 @@ class IconCircleButton extends StatelessWidget {
         label: tooltip,
         excludeSemantics: true,
         child: Material(
-          color: filled ? c.surfaceMuted : Colors.transparent,
-          shape: const CircleBorder(),
+          color: filled ? c.surface : Colors.transparent,
+          shape: RoundedRectangleBorder(
+            borderRadius: radius,
+            side: BorderSide(
+              color: filled ? c.hairline : Colors.transparent,
+            ),
+          ),
           child: InkWell(
-            customBorder: const CircleBorder(),
+            borderRadius: radius,
             onTap: onPressed,
             child: SizedBox.square(
               dimension: size,

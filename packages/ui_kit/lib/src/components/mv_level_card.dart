@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 
 import '../tokens/songlet_colors.dart';
-import '../tokens/songlet_elevation.dart';
 import '../tokens/songlet_metrics.dart';
 import '../tokens/songlet_type.dart';
+import 'selection_mark.dart';
 
-/// One music-video level on the hub (docs/ui P20, ADR-0027): an icon disc,
-/// the level's name and what it makes, a meta line (length · shape), and the
-/// price on the end side. Selected = accent outline; [statusLabel] replaces
-/// the price while a video of this level is being made, and the card is then
-/// not selectable ([onTap] null). A [badge] ("Recommended", "Included")
-/// sits in the top end corner.
+/// One music-video level on the hub (docs/ui P20, ADR-0027), set as a menu
+/// entry: the level's name and its price on one line, what it makes under it,
+/// and a struck square to choose it.
+///
+/// [statusLabel] replaces the price while a video of this level is being made,
+/// and the entry is then not selectable ([onTap] null). A [badge]
+/// ("Recommended", "Included") is printed above the name as a coral stamp.
 class MvLevelCard extends StatelessWidget {
   const MvLevelCard({
     super.key,
@@ -39,103 +40,94 @@ class MvLevelCard extends StatelessWidget {
   final String? meta;
   final String? badge;
 
-  /// "Making…" while this level is in flight (the card is disabled).
+  /// "Making…" while this level is in flight (the entry is disabled).
   final String? statusLabel;
   final bool selected;
   final VoidCallback? onTap;
 
-  /// Fill tint of the selected card (accent-soft over the surface).
-  static const double _selectedTintAlpha = 0.35;
-
   @override
   Widget build(BuildContext context) {
     final c = SongletColors.of(context);
-    final e = SongletElevation.of(context);
     final enabled = onTap != null;
-    final stacked = SongletType.isAccessibilitySize(context);
-    final ink = enabled ? c.ink : c.inkTertiary;
+    final status = statusLabel;
 
-    final disc = Container(
-      width: SongletSize.thumbnail,
-      height: SongletSize.thumbnail,
-      decoration: BoxDecoration(
-        color: enabled ? c.accentSoft : c.hairline,
-        shape: BoxShape.circle,
-      ),
-      child: Icon(icon, color: enabled ? c.accent : c.inkTertiary, size: SongletSize.iconLg),
-    );
-    final text = Column(
+    final titleText = Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(title, style: SongletType.headline.copyWith(color: ink)),
-        const SizedBox(height: SongletSpace.x1),
-        Text(description, style: SongletType.subhead.copyWith(color: enabled ? c.inkSecondary : c.inkTertiary)),
-        if (meta != null) ...[
-          const SizedBox(height: SongletSpace.x1),
-          Text(meta!, style: SongletType.footnote.copyWith(color: c.inkTertiary)),
-        ],
-      ],
-    );
-    final status = statusLabel;
-    final priceColumn = Column(
-      crossAxisAlignment: stacked ? CrossAxisAlignment.start : CrossAxisAlignment.end,
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        if (status != null)
-          Text(status, style: SongletType.subhead.copyWith(color: c.accent, fontWeight: FontWeight.w600))
-        else ...[
-          Text(
-            price,
-            style: SongletType.title3.copyWith(
-              color: enabled ? c.accent : c.inkTertiary,
-              fontFeatures: const [FontFeature.tabularFigures()],
+        Padding(
+          padding: const EdgeInsetsDirectional.only(top: 4),
+          child: Icon(icon, size: SongletSize.iconSm, color: c.inkTertiary),
+        ),
+        const SizedBox(width: SongletSpace.x2),
+        Expanded(
+          child: Text(
+            title,
+            style: SongletType.title2.copyWith(
+              color: enabled ? (selected ? c.accent : c.ink) : c.inkTertiary,
+              fontSize: 19,
+              letterSpacing: -0.2,
             ),
           ),
-          if (priceNote != null)
-            Text(
-              priceNote!,
-              textAlign: stacked ? TextAlign.start : TextAlign.end,
-              style: SongletType.caption.copyWith(color: c.inkSecondary),
-            ),
-        ],
+        ),
       ],
     );
-
-    final body = Padding(
-      padding: const EdgeInsetsDirectional.all(SongletSpace.x4),
-      child: stacked
-          ? Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                disc,
-                const SizedBox(height: SongletSpace.x3),
-                text,
-                const SizedBox(height: SongletSpace.x3),
-                priceColumn,
-              ],
-            )
-          : Row(
-              children: [
-                disc,
-                const SizedBox(width: SongletSpace.x4),
-                Expanded(child: text),
-                const SizedBox(width: SongletSpace.x3),
-                priceColumn,
-              ],
+    final priceText = status != null
+        ? Text(
+            status,
+            style: SongletType.subhead.copyWith(
+              color: c.accent,
+              fontWeight: FontWeight.w600,
             ),
-    );
-
-    final card = Material(
-      color: selected ? Color.alphaBlend(c.accentSoft.withValues(alpha: _selectedTintAlpha), c.surface) : c.surface,
-      shape: RoundedRectangleBorder(
-        borderRadius: SongletRadius.cardAll,
-        side: BorderSide(
-          color: selected ? c.accent : c.hairline,
-          width: selected ? SongletSize.focusRing : SongletSize.hairline,
-        ),
-      ),
-      child: InkWell(borderRadius: SongletRadius.cardAll, onTap: onTap, child: body),
-    );
+          )
+        : Column(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(
+                price,
+                style: SongletType.folio.copyWith(
+                  color: enabled ? c.ink : c.inkTertiary,
+                  fontSize: 15,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+              if (priceNote != null)
+                Text(
+                  priceNote!,
+                  style: SongletType.caption2.copyWith(color: c.inkTertiary),
+                ),
+            ],
+          );
+    // Accessibility sizes: the price moves under the name instead of being
+    // squeezed off the row.
+    final head = SongletType.isAccessibilitySize(context)
+        ? Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  Expanded(child: titleText),
+                  const SizedBox(width: SongletSpace.x3),
+                  SelectionMark(selected: selected),
+                ],
+              ),
+              const SizedBox(height: 6),
+              Align(
+                alignment: AlignmentDirectional.centerStart,
+                child: priceText,
+              ),
+            ],
+          )
+        : Row(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              Expanded(child: titleText),
+              const SizedBox(width: SongletSpace.x2),
+              priceText,
+              const SizedBox(width: SongletSpace.x3),
+              SelectionMark(selected: selected),
+            ],
+          );
 
     return Semantics(
       container: true,
@@ -143,27 +135,68 @@ class MvLevelCard extends StatelessWidget {
       enabled: enabled,
       selected: selected,
       inMutuallyExclusiveGroup: true,
-      child: Stack(
-        clipBehavior: Clip.none,
-        children: [
-          DecoratedBox(
-            decoration: BoxDecoration(borderRadius: SongletRadius.cardAll, boxShadow: selected ? e.level2 : e.level1),
-            child: card,
-          ),
-          if (badge != null)
-            PositionedDirectional(
-              top: -SongletSpace.x3,
-              end: SongletSpace.x4,
-              child: Container(
-                padding: const EdgeInsetsDirectional.symmetric(horizontal: SongletSpace.x3, vertical: SongletSpace.x1),
-                decoration: BoxDecoration(color: c.accent, borderRadius: SongletRadius.pillAll),
-                child: Text(
-                  badge!,
-                  style: SongletType.footnote.copyWith(color: c.onAccent, fontWeight: FontWeight.w600),
+      child: Material(
+        type: MaterialType.transparency,
+        child: InkWell(
+          onTap: onTap,
+          child: Container(
+            margin: const EdgeInsetsDirectional.only(bottom: SongletSpace.x2),
+            decoration: BoxDecoration(
+              border: BorderDirectional(
+                start: BorderSide(
+                  color: selected ? c.accent : c.hairline,
+                  width: selected
+                      ? SongletSize.ruleStrong * 2
+                      : SongletSize.rule,
                 ),
+                bottom: BorderSide(color: c.hairline),
               ),
             ),
-        ],
+            padding: const EdgeInsetsDirectional.fromSTEB(
+              SongletSpace.x3,
+              SongletSpace.x3,
+              SongletSpace.x2,
+              SongletSpace.x3,
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                if (badge != null)
+                  Padding(
+                    padding: const EdgeInsetsDirectional.only(
+                      bottom: SongletSpace.x1,
+                    ),
+                    child: Align(
+                      alignment: AlignmentDirectional.centerStart,
+                      child: Text(
+                        badge!,
+                        style: SongletType.stamp.copyWith(color: c.accent),
+                      ),
+                    ),
+                  ),
+                head,
+                const SizedBox(height: 6),
+                Text(
+                  description,
+                  style: SongletType.subhead.copyWith(
+                    color: enabled ? c.inkSecondary : c.inkTertiary,
+                    height: 1.4,
+                  ),
+                ),
+                if (meta != null) ...[
+                  const SizedBox(height: 4),
+                  Text(
+                    meta!,
+                    style: SongletType.caption2.copyWith(
+                      color: c.inkTertiary,
+                      letterSpacing: 0.3,
+                    ),
+                  ),
+                ],
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }

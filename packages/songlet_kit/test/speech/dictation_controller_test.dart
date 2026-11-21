@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:songlet_kit/songlet_kit.dart';
-import 'package:songlet_kit/src/speech/data/channel_music_speech_gateway.dart';
+import 'package:songlet_kit/src/speech/data/music_channel_speech_gateway.dart';
 
 class FakeSpeechGateway implements MusicSpeechGateway {
   FakeSpeechGateway({this.available = MusicSpeechAvailability.available});

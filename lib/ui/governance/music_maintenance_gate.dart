@@ -68,7 +68,7 @@ class _MaintenancePageState extends ConsumerState<_MaintenancePage> {
     final maintenance = widget.maintenance;
     final minutes = _remainingMinutes(maintenance.resumeAt);
     return Scaffold(
-      body: AuroraBackground(
+      body: PaperBackground(
         child: SafeArea(
           child: Padding(
             padding: const EdgeInsets.all(StudioTokens.spaceXl),

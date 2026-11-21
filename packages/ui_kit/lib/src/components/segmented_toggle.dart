@@ -2,13 +2,15 @@ import 'package:flutter/material.dart';
 
 import '../motion.dart';
 import '../tokens/songlet_colors.dart';
-import '../tokens/songlet_elevation.dart';
 import '../tokens/songlet_metrics.dart';
 import '../tokens/songlet_motion.dart';
 import '../tokens/songlet_type.dart';
 
 /// Two-or-more segment control with a sliding thumb (the music-video hub's
 /// aspect, quality and subtitle choices).
+///
+/// A ruled switchboard: one keyline around the track, and the chosen segment
+/// struck in ink with its label reversed out.
 class SegmentedToggle<T> extends StatelessWidget {
   const SegmentedToggle({
     super.key,
@@ -27,16 +29,16 @@ class SegmentedToggle<T> extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final c = SongletColors.of(context);
-    final e = SongletElevation.of(context);
     final index = segments.indexWhere((s) => s.$1 == selected);
     final reduce = MotionPolicy.reduceMotion(context);
-    const inset = SongletSpace.x1;
+    const radius = SongletRadius.thumbAll;
     return Container(
       height: height,
-      padding: const EdgeInsetsDirectional.all(inset),
+      padding: const EdgeInsetsDirectional.all(3),
       decoration: BoxDecoration(
-        color: c.surfaceMuted,
-        borderRadius: SongletRadius.pillAll,
+        color: c.surface,
+        borderRadius: radius,
+        border: Border.all(color: c.hairline),
       ),
       child: LayoutBuilder(
         builder: (context, constraints) {
@@ -52,9 +54,8 @@ class SegmentedToggle<T> extends StatelessWidget {
                 width: width,
                 child: Container(
                   decoration: BoxDecoration(
-                    color: c.surface,
-                    borderRadius: SongletRadius.pillAll,
-                    boxShadow: e.level1,
+                    color: c.ink,
+                    borderRadius: radius,
                   ),
                 ),
               ),
@@ -67,7 +68,7 @@ class SegmentedToggle<T> extends StatelessWidget {
                         button: true,
                         selected: value == selected,
                         child: InkWell(
-                          borderRadius: SongletRadius.pillAll,
+                          borderRadius: radius,
                           onTap: onChanged == null
                               ? null
                               : () => onChanged!(value),
@@ -84,11 +85,12 @@ class SegmentedToggle<T> extends StatelessWidget {
                                   maxLines: 1,
                                   style: SongletType.subhead.copyWith(
                                     color: value == selected
-                                        ? c.ink
+                                        ? c.canvas
                                         : c.inkSecondary,
                                     fontWeight: value == selected
-                                        ? FontWeight.w600
-                                        : FontWeight.w400,
+                                        ? FontWeight.w700
+                                        : FontWeight.w500,
+                                    letterSpacing: 0.1,
                                   ),
                                 ),
                               ),

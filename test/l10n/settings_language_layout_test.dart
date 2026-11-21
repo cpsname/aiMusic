@@ -64,13 +64,25 @@ void main() {
       'SongletGoldenJP': '/System/Library/Fonts/ヒラギノ角ゴシック W3.ttc',
       'SongletGoldenKR': '/System/Library/Fonts/AppleSDGothicNeo.ttc',
     };
+    // Missing faces are skipped: on a non-macOS host the paths above do not
+    // exist, and the layout under test does not depend on the exact face.
     for (final entry in fonts.entries) {
+      final file = File(entry.value);
+      if (!file.existsSync()) continue;
       final loader = FontLoader(entry.key)
-        ..addFont(
-          Future.value(
-            ByteData.sublistView(File(entry.value).readAsBytesSync()),
-          ),
-        );
+        ..addFont(Future.value(ByteData.sublistView(file.readAsBytesSync())));
+      await loader.load();
+    }
+    const hostFonts = {
+      'SongletGoldenCJK': r'C:\Windows\Fonts\msyh.ttc',
+      'SongletGoldenJP': r'C:\Windows\Fonts\YuGothM.ttc',
+      'SongletGoldenKR': r'C:\Windows\Fonts\malgun.ttf',
+    };
+    for (final entry in hostFonts.entries) {
+      final file = File(entry.value);
+      if (!file.existsSync()) continue;
+      final loader = FontLoader(entry.key)
+        ..addFont(Future.value(ByteData.sublistView(file.readAsBytesSync())));
       await loader.load();
     }
   });

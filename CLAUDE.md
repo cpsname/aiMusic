@@ -249,9 +249,17 @@ The Pigeon signatures are verbatim; what they cannot express is pinned in
   keyed by location (`_keyed`) — go_router keys pages by pattern. Starting a song
   `go`es to `/create/generate`, which redirects home when nothing is in flight.
 - **Tokens & components** (ADR-0004): `SongletColors` / `SongletElevation` theme
-  extensions (light + dark), `SongletSpace` (4-pt grid; compact gutter 16, create
-  home 12, sheets 20), `SongletSize`, `SongletRadius`, `SongletMotion`, `SongletType`
-  (iOS text styles, ADR-0019). No literals in pages.
+  extensions (light + dark), `SongletSpace` (4-pt grid), `SongletSize`,
+  `SongletRadius`, `SongletMotion`, `SongletType` — three voices: a tight
+  grotesque for display, a serif for lyrics/quotes, a mono for every label and
+  folio (ADR-0019). No literals in pages. The look is the poster identity in
+  `docs/ui/press-identity.md`: bone stock, ink, one signal coral used as a spot,
+  ink primary actions, hairlines instead of cards, numbered sections, no
+  gradients or glass.
+  `tool/preview/design_preview_test.dart` renders fourteen pages to
+  `tool/preview/design-preview/` on any host (`flutter test
+  tool/preview/design_preview_test.dart --update-goldens`); the real goldens are
+  recorded on macOS.
 - **iPhone-only launch** (ADR-0037): `ipadEnabled` (`lib/ui/common/device_family.dart`) is
   the one switch for the two-column layouts (`WindowClass.regular`), the iPad golden
   devices / tests and the iPad previews. It is off and must equal "Runner's

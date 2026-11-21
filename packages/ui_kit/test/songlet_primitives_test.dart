@@ -23,7 +23,7 @@ void main() {
     await tester.pumpAndSettle(); // the theme change animates
     expect(warm.accent, SongletPalette.terracotta);
     expect(warm.cardBlur, isFalse);
-    expect(fallback.cardFill, StudioTokens.glassFill);
+    expect(fallback.cardFill, SongletPalette.card);
   });
 
   testWidgets('GlassCard hosts ink children on a Material (no hidden splashes)',

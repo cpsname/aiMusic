@@ -55,7 +55,7 @@ void main() {
       expect(find.byKey(const ValueKey('composer.photos')), findsOneWidget);
       expect(find.byKey(const ValueKey('composer.mic')), findsOneWidget);
       expect(
-        find.text('Preview  ·  MusicVocals on  ·  Indie Pop'),
+        find.text('Preview  ·  Vocals on  ·  Indie Pop'),
         findsOneWidget,
         reason: 'the US preset and the client defaults',
       );
@@ -279,7 +279,7 @@ void main() {
         await tester.tap(find.byKey(const ValueKey('composer.summary')));
         await settleFrames(tester);
         expect(
-          find.text('Full song  ·  MusicVocals on  ·  Indie Pop  ·  Lyric video'),
+          find.text('Full song  ·  Vocals on  ·  Indie Pop  ·  Lyric video'),
           findsOneWidget,
           reason: 'what will be sent stays in sight while folded',
         );

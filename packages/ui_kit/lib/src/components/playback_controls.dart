@@ -57,28 +57,40 @@ class PlaybackControls extends StatelessWidget {
       color: toggled == true ? c.accent : c.ink,
       icon: Icon(icon, textDirection: TextDirection.ltr),
     );
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: [
-        if (onShuffle != null)
-          side(
-            Icons.shuffle_rounded,
-            labels.shuffle,
-            onShuffle,
-            toggled: shuffle,
-          ),
-        if (onPrevious != null)
-          side(Icons.skip_previous_rounded, labels.previous, onPrevious),
-        PlayButton(
-          playing: playing,
-          onPressed: onPlayPause,
-          playLabel: labels.play,
-          pauseLabel: labels.pause,
+    return DecoratedBox(
+      decoration: BoxDecoration(
+        border: Border(
+          top: BorderSide(color: c.hairline),
+          bottom: BorderSide(color: c.hairline),
         ),
-        if (onNext != null) side(Icons.skip_next_rounded, labels.next, onNext),
-        if (onRepeat != null)
-          side(Icons.repeat_rounded, labels.repeat, onRepeat, toggled: repeat),
-      ],
+      ),
+      child: Padding(
+        padding: const EdgeInsetsDirectional.symmetric(vertical: 6),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            if (onShuffle != null)
+              side(
+                Icons.shuffle_rounded,
+                labels.shuffle,
+                onShuffle,
+                toggled: shuffle,
+              ),
+            if (onPrevious != null)
+              side(Icons.skip_previous_rounded, labels.previous, onPrevious),
+            PlayButton(
+              playing: playing,
+              onPressed: onPlayPause,
+              playLabel: labels.play,
+              pauseLabel: labels.pause,
+            ),
+            if (onNext != null)
+              side(Icons.skip_next_rounded, labels.next, onNext),
+            if (onRepeat != null)
+              side(Icons.repeat_rounded, labels.repeat, onRepeat, toggled: repeat),
+          ],
+        ),
+      ),
     );
   }
 }
@@ -110,19 +122,23 @@ class PlayButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final c = SongletColors.of(context);
-    final e = SongletElevation.of(context);
+    final radius = BorderRadius.circular(SongletRadius.control);
     return Semantics(
       container: true,
       button: true,
       label: playing ? pauseLabel : playLabel,
       excludeSemantics: true,
       child: DecoratedBox(
-        decoration: BoxDecoration(shape: BoxShape.circle, boxShadow: e.level2),
+        decoration: BoxDecoration(
+          color: c.ink,
+          borderRadius: radius,
+          border: Border.all(color: c.ink),
+          boxShadow: SongletElevation.of(context).level1,
+        ),
         child: Material(
-          color: c.accent,
-          shape: const CircleBorder(),
+          type: MaterialType.transparency,
           child: InkWell(
-            customBorder: const CircleBorder(),
+            borderRadius: radius,
             onTap: busy ? null : onPressed,
             child: SizedBox.square(
               dimension: size,
@@ -130,14 +146,14 @@ class PlayButton extends StatelessWidget {
                   ? Padding(
                       padding: EdgeInsets.all(size * _spinnerInset),
                       child: CircularProgressIndicator(
-                        color: c.onAccent,
+                        color: c.canvas,
                         strokeWidth: SongletSize.focusRing,
                       ),
                     )
                   : Icon(
                       playing ? Icons.pause_rounded : Icons.play_arrow_rounded,
-                      size: size * 0.5,
-                      color: c.onAccent,
+                      size: size * 0.46,
+                      color: c.canvas,
                       textDirection: TextDirection.ltr,
                     ),
             ),

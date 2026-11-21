@@ -38,7 +38,7 @@ void main() {
     'one grid under one heading: the server list alone, in sort order',
     (tester) async {
       final container = await pumpRoute(tester, '/create');
-      expect(find.text('MusicInspiration'), findsOneWidget);
+      expect(find.text('Inspiration'), findsOneWidget);
       expect(find.byType(SliverGrid), findsOneWidget, reason: 'one grid');
       expect(container.read(ideasProvider).map((i) => i.slug), [
         'birthday_wish',
@@ -66,7 +66,7 @@ void main() {
     (tester) async {
       final env = MusicTestEnv()..inspirations.items = const [];
       final container = await pumpRoute(tester, '/create', env: env);
-      expect(find.text('MusicInspiration'), findsOneWidget);
+      expect(find.text('Inspiration'), findsOneWidget);
       for (final t in MusicSongTemplate.values) {
         await show(tester, t.id);
         expect(tile(t.id), findsOneWidget, reason: t.id);

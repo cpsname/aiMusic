@@ -40,15 +40,16 @@ class ComposerTag extends StatelessWidget {
         label: label,
         child: DecoratedBox(
           decoration: BoxDecoration(
-            color: c.accentSoft,
-            borderRadius: SongletRadius.pillAll,
+            color: c.surface,
+            borderRadius: SongletRadius.controlAll,
+            border: Border.all(color: c.accent),
           ),
           child: Padding(
-            padding: EdgeInsetsDirectional.only(
-              start: image == null ? SongletSpace.x3 : SongletSpace.x1,
-              top: SongletSpace.x1,
-              bottom: SongletSpace.x1,
-              end: SongletSpace.x1,
+            padding: const EdgeInsetsDirectional.only(
+              start: SongletSpace.x2,
+              top: 4,
+              bottom: 4,
+              end: 4,
             ),
             child: Row(
               mainAxisSize: MainAxisSize.min,
@@ -56,7 +57,7 @@ class ComposerTag extends StatelessWidget {
                 ExcludeSemantics(
                   child: image == null
                       ? Icon(
-                          Icons.auto_awesome_rounded,
+                          Icons.bookmark_border_rounded,
                           size: SongletSize.iconSm,
                           color: c.accent,
                         )
@@ -64,8 +65,8 @@ class ComposerTag extends StatelessWidget {
                           primary: image,
                           fallback: fallbackImage,
                           builder: (context, shown, onError) => Container(
-                            width: SongletSize.iconXl,
-                            height: SongletSize.iconXl,
+                            width: SongletSize.iconLg,
+                            height: SongletSize.iconLg,
                             decoration: BoxDecoration(
                               color: c.surfaceMuted,
                               borderRadius: SongletRadius.thumbAll,
@@ -80,18 +81,17 @@ class ComposerTag extends StatelessWidget {
                           ),
                         ),
                 ),
-                SizedBox(
-                  width: image == null ? SongletSpace.x1 : SongletSpace.x2,
-                ),
+                const SizedBox(width: SongletSpace.x2),
                 Flexible(
                   child: ExcludeSemantics(
                     child: Text(
                       label,
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
-                      style: SongletType.subhead.copyWith(
-                        color: c.accent,
-                        fontWeight: FontWeight.w600,
+                      style: SongletType.title2.copyWith(
+                        color: c.ink,
+                        fontSize: 16,
+                        letterSpacing: -0.2,
                       ),
                     ),
                   ),
@@ -109,7 +109,7 @@ class ComposerTag extends StatelessWidget {
                       child: Icon(
                         Icons.close_rounded,
                         size: SongletSize.iconSm,
-                        color: c.accent,
+                        color: c.inkSecondary,
                       ),
                     ),
                   ),

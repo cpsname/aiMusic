@@ -1,0 +1,8 @@
+﻿Analyzing ui_kit...
+
+  error - lib\src\theme.dart:161:35 - Invalid constant value. - invalid_constant
+   info - lib\src\theme.dart:191:45 - The value of the argument is redundant because it matches the default value. Try removing the argument. - avoid_redundant_argument_values
+   info - lib\src\tokens\songlet_colors.dart:63:18 - The value of the argument is redundant because it matches the default value. Try removing the argument. - avoid_redundant_argument_values
+   info - lib\src\tokens\songlet_type.dart:1:8 - The import of 'dart:ui' is unnecessary because all of the used elements are also provided by the import of 'package:flutter/material.dart'. Try removing the import directive. - unnecessary_import
+
+4 issues found.

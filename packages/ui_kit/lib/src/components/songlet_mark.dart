@@ -29,7 +29,9 @@ class SongletMark extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final c = SongletColors.of(context);
-    final line = color ?? (tile ? SongletColors.light.canvas : c.accent);
+    // The icon's own contrast: cream line on the coral plate, coral line on
+    // the paper.
+    final line = color ?? (tile ? c.onAccent : c.accent);
     final mark = CustomPaint(
       size: Size.square(size),
       painter: SongletMarkPainter(color: line),
@@ -39,7 +41,7 @@ class SongletMark extends StatelessWidget {
       width: size,
       height: size,
       decoration: BoxDecoration(
-        gradient: c.actionGradient,
+        color: c.accent,
         borderRadius: BorderRadius.circular(size * cornerRatio),
       ),
       child: mark,

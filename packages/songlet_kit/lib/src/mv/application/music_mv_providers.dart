@@ -5,7 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:infra_core/infra_core.dart';
 
 import '../../library/application/music_library_providers.dart';
-import '../../library/data/sqlite_music_work_repository.dart';
+import '../../library/data/music_sqlite_work_repository.dart';
 import '../../library/domain/music_work.dart';
 import '../../platform/application/music_platform_providers.dart';
 import '../data/music_file_video_store.dart';

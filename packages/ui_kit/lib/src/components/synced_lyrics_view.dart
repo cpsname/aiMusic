@@ -72,67 +72,65 @@ class _SyncedLyricsViewState extends State<SyncedLyricsView> {
   @override
   Widget build(BuildContext context) {
     final c = SongletColors.of(context);
-    final e = SongletElevation.of(context);
+    // A lyric sheet, not a card: hairlines above and below, the lines set in
+    // the reading serif, the times at the margin.
     return Container(
       constraints: BoxConstraints(maxHeight: widget.maxHeight),
       decoration: BoxDecoration(
-        color: c.surface,
-        borderRadius: SongletRadius.cardAll,
-        boxShadow: e.level1,
+        border: Border(
+          top: BorderSide(color: c.hairline),
+          bottom: BorderSide(color: c.hairline),
+        ),
       ),
-      child: ClipRRect(
-        borderRadius: SongletRadius.cardAll,
-        child: Scrollbar(
+      child: Scrollbar(
+        controller: _scroll,
+        child: ListView.builder(
           controller: _scroll,
-          child: ListView.builder(
-            controller: _scroll,
-            shrinkWrap: true,
-            padding: const EdgeInsetsDirectional.all(SongletSpace.x5),
-            itemCount: widget.lines.length,
-            itemBuilder: (context, i) {
-              final line = widget.lines[i];
-              final active = i == widget.active;
-              final style = SongletType.body.copyWith(
-                color: active
-                    ? c.accent
-                    : (i < widget.active ? c.ink : c.inkSecondary),
-                fontWeight: active ? FontWeight.w600 : FontWeight.w400,
-              );
-              return Padding(
-                key: _keys.putIfAbsent(i, GlobalKey.new),
-                padding: EdgeInsetsDirectional.only(
-                  top: line.breakBefore && i > 0 ? SongletSpace.x4 : 0,
-                  bottom: SongletSpace.x2,
-                ),
-                child: Semantics(
-                  selected: active,
-                  button: widget.onTapLine != null,
-                  child: InkWell(
-                    onTap: widget.onTapLine == null
-                        ? null
-                        : () => widget.onTapLine!(i),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.baseline,
-                      textBaseline: TextBaseline.alphabetic,
-                      children: [
-                        Expanded(child: Text(line.text, style: style)),
-                        if (line.time != null)
-                          Text(
-                            line.time!,
-                            style: SongletType.footnote.copyWith(
-                              color: active ? c.accent : c.inkSecondary,
-                              fontFeatures: const [
-                                FontFeature.tabularFigures(),
-                              ],
-                            ),
+          shrinkWrap: true,
+          padding: const EdgeInsetsDirectional.symmetric(
+            vertical: SongletSpace.x3,
+          ),
+          itemCount: widget.lines.length,
+          itemBuilder: (context, i) {
+            final line = widget.lines[i];
+            final active = i == widget.active;
+            final style = SongletType.lede.copyWith(
+              color: active ? c.accent : (i < widget.active ? c.ink : c.inkSecondary),
+              fontWeight: active ? FontWeight.w600 : FontWeight.w400,
+              height: 1.4,
+            );
+            return Padding(
+              key: _keys.putIfAbsent(i, GlobalKey.new),
+              padding: EdgeInsetsDirectional.only(
+                top: line.breakBefore && i > 0 ? SongletSpace.x3 : 0,
+                bottom: 2,
+              ),
+              child: Semantics(
+                selected: active,
+                button: widget.onTapLine != null,
+                child: InkWell(
+                  onTap: widget.onTapLine == null
+                      ? null
+                      : () => widget.onTapLine!(i),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.baseline,
+                    textBaseline: TextBaseline.alphabetic,
+                    children: [
+                      Expanded(child: Text(line.text, style: style)),
+                      if (line.time != null)
+                        Text(
+                          line.time!,
+                          style: SongletType.folio.copyWith(
+                            color: active ? c.accent : c.inkTertiary,
+                            fontSize: 11,
                           ),
-                      ],
-                    ),
+                        ),
+                    ],
                   ),
                 ),
-              );
-            },
-          ),
+              ),
+            );
+          },
         ),
       ),
     );

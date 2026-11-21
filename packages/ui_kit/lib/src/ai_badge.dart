@@ -8,6 +8,9 @@ import 'tokens/songlet_type.dart';
 /// hide / dismiss option — every surface that shows a generated song shows it.
 /// [locked] adds the padlock the share card uses to say it cannot be removed
 /// (docs/ui P10).
+///
+/// Printed as a stamp: an "AI" mark followed by the word, no sparkles — the
+/// disclosure is a legal note, not a decoration.
 class AiGeneratedBadge extends StatelessWidget {
   const AiGeneratedBadge({
     super.key,
@@ -31,25 +34,35 @@ class AiGeneratedBadge extends StatelessWidget {
       child: DecoratedBox(
         decoration: BoxDecoration(
           color: c.badgeFill,
-          borderRadius: SongletRadius.pillAll,
+          borderRadius: BorderRadius.circular(2),
         ),
         child: Padding(
           padding: EdgeInsetsDirectional.symmetric(
-            horizontal: compact ? SongletSpace.x2 : SongletSpace.x3,
-            vertical: compact ? SongletSpace.x1 : SongletSpace.x2,
+            horizontal: compact ? 6 : SongletSpace.x2,
+            vertical: compact ? 2 : 3,
           ),
           child: Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Icon(Icons.auto_awesome, size: icon, color: c.onBadge),
-              SizedBox(width: compact ? SongletSpace.x1 : SongletSpace.x2),
+              // A printed bullet, not a sparkle: the disclosure is a legal
+              // note, so it is marked with a rule rather than a decoration.
+              Container(
+                width: compact ? 2 : 3,
+                height: compact ? 8 : 10,
+                color: c.onBadge.withValues(alpha: 0.85),
+              ),
+              SizedBox(width: compact ? 4 : 6),
               Text(
                 label,
                 style: (compact ? SongletType.caption2 : SongletType.footnote)
-                    .copyWith(color: c.onBadge, fontWeight: FontWeight.w600),
+                    .copyWith(
+                      color: c.onBadge,
+                      fontWeight: FontWeight.w600,
+                      letterSpacing: 0.1,
+                    ),
               ),
               if (locked) ...[
-                SizedBox(width: compact ? SongletSpace.x1 : SongletSpace.x2),
+                SizedBox(width: compact ? 4 : 6),
                 Icon(Icons.lock_rounded, size: icon, color: c.onBadge),
               ],
             ],

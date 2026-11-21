@@ -5,12 +5,12 @@ import '../tokens/songlet_elevation.dart';
 import '../tokens/songlet_metrics.dart';
 import '../tokens/songlet_type.dart';
 
-/// The standard content card: surface fill, card radius, level-1 shadow.
+/// The standard content plate: paper fill, one hairline, nothing floating.
 class SurfaceCard extends StatelessWidget {
   const SurfaceCard({
     super.key,
     required this.child,
-    this.padding = const EdgeInsetsDirectional.all(SongletSpace.x5),
+    this.padding = const EdgeInsetsDirectional.all(SongletSpace.x4),
     this.onTap,
   });
 
@@ -21,17 +21,16 @@ class SurfaceCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final c = SongletColors.of(context);
-    final e = SongletElevation.of(context);
     return DecoratedBox(
       decoration: BoxDecoration(
         borderRadius: SongletRadius.cardAll,
-        boxShadow: e.level1,
-        border: Border.all(color: c.hairline),
+        boxShadow: SongletElevation.of(context).level1,
       ),
       child: Material(
         color: c.surface,
-        shape: const RoundedRectangleBorder(
+        shape: RoundedRectangleBorder(
           borderRadius: SongletRadius.cardAll,
+          side: BorderSide(color: c.hairline),
         ),
         clipBehavior: Clip.antiAlias,
         child: InkWell(
@@ -43,65 +42,128 @@ class SurfaceCard extends StatelessWidget {
   }
 }
 
-/// Section title with an optional trailing caption or link ("See all ›",
-/// "Included with your plan") — docs/ui P11, P12.
+/// A printed section head: a mono folio, the title set black and tight, and a
+/// heavy rule that runs to the margin, with an optional mono link.
+///
+///    01 ── Inspirations ─────────────────  SEE ALL
 class SectionHeader extends StatelessWidget {
   const SectionHeader({
     super.key,
     required this.title,
     this.trailing,
     this.onTrailing,
+    this.index,
+    this.rule = true,
+    this.bottom = SongletSpace.x3,
   });
 
   final String title;
   final String? trailing;
   final VoidCallback? onTrailing;
 
+  /// Printed folio ("01", "02") ahead of the title.
+  final String? index;
+
+  /// Draws the rule that runs from the title to the margin.
+  final bool rule;
+
+  /// Space under the head.
+  final double bottom;
+
   @override
   Widget build(BuildContext context) {
     final c = SongletColors.of(context);
-    return Row(
-      children: [
-        Expanded(
-          child: Semantics(
-            header: true,
-            child: Text(
-              title,
-              style: SongletType.title2.copyWith(color: c.ink),
+    return Padding(
+      padding: EdgeInsetsDirectional.only(bottom: bottom),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          if (index != null) ...[
+            Text(
+              index!,
+              style: SongletType.folio.copyWith(
+                color: c.accent,
+                fontSize: 12,
+              ),
+            ),
+            if (rule) ...[
+              const SizedBox(width: SongletSpace.x2),
+              Container(
+                width: SongletSpace.x4,
+                height: SongletSize.ruleStrong,
+                color: c.accent,
+              ),
+              const SizedBox(width: SongletSpace.x2),
+            ] else
+              const SizedBox(width: SongletSpace.x2),
+          ],
+          Flexible(
+            child: Semantics(
+              header: true,
+              child: Text(
+                title,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: SongletType.title3.copyWith(
+                  color: c.ink,
+                  fontSize: 16,
+                  fontWeight: FontWeight.w800,
+                  letterSpacing: -0.3,
+                ),
+              ),
             ),
           ),
-        ),
-        if (trailing != null)
-          onTrailing == null
-              ? Text(
-                  trailing!,
-                  style: SongletType.footnote.copyWith(color: c.inkSecondary),
-                )
-              : TextButton(
-                  onPressed: onTrailing,
-                  style: TextButton.styleFrom(foregroundColor: c.inkSecondary),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Text(
-                        trailing!,
-                        style: SongletType.subhead.copyWith(
-                          color: c.inkSecondary,
+          if (rule) ...[
+            const SizedBox(width: SongletSpace.x3),
+            Expanded(child: Container(height: SongletSize.rule, color: c.ink)),
+          ],
+          if (trailing != null) ...[
+            const SizedBox(width: SongletSpace.x3),
+            onTrailing == null
+                ? Text(
+                    trailing!,
+                    style: SongletType.eyebrow.copyWith(
+                      color: c.inkSecondary,
+                      fontSize: 10,
+                    ),
+                  )
+                : TextButton(
+                    onPressed: onTrailing,
+                    style: TextButton.styleFrom(
+                      foregroundColor: c.ink,
+                      padding: const EdgeInsetsDirectional.symmetric(
+                        horizontal: SongletSpace.x1,
+                      ),
+                      minimumSize: const Size(0, SongletSize.minTap * 0.7),
+                      tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                    ),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Text(
+                          trailing!,
+                          style: SongletType.eyebrow.copyWith(
+                            color: c.ink,
+                            fontSize: 10,
+                          ),
                         ),
-                      ),
-                      const Icon(
-                        Icons.chevron_right_rounded,
-                        size: SongletSize.iconMd,
-                      ),
-                    ],
+                        Icon(
+                          Icons.arrow_forward_rounded,
+                          size: SongletSize.iconXs,
+                          color: c.ink,
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-      ],
+          ],
+        ],
+      ),
     );
   }
 }
 
-/// Accent-outlined secondary action (P07 "Share preview", P13 "Delete").
+/// Secondary action: a ruled box, not a stadium (P07 "Share preview",
+/// P13 "Delete").
 class SecondaryButton extends StatelessWidget {
   const SecondaryButton({
     super.key,
@@ -121,27 +183,29 @@ class SecondaryButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final c = SongletColors.of(context);
-    final color = destructive ? c.danger : c.accent;
+    final color = destructive ? c.danger : c.ink;
     return OutlinedButton(
       onPressed: onPressed,
       style: OutlinedButton.styleFrom(
         foregroundColor: color,
         minimumSize: const Size.fromHeight(SongletSize.controlHeight),
-        side: BorderSide(color: color, width: SongletSize.ring),
-        shape: const StadiumBorder(),
+        side: BorderSide(color: destructive ? c.danger : c.ink, width: SongletSize.rule),
+        shape: const RoundedRectangleBorder(
+          borderRadius: SongletRadius.controlAll,
+        ),
         textStyle: themedTextStyle(context, SongletType.headline),
       ),
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
           if (icon != null) ...[
-            Icon(icon, size: SongletSize.iconLg),
+            Icon(icon, size: SongletSize.iconMd),
             const SizedBox(width: SongletSpace.x2),
           ],
           Flexible(child: Text(label, overflow: TextOverflow.ellipsis)),
           if (trailingIcon != null) ...[
             const SizedBox(width: SongletSpace.x2),
-            Icon(trailingIcon, size: SongletSize.iconLg),
+            Icon(trailingIcon, size: SongletSize.iconMd),
           ],
         ],
       ),
@@ -149,8 +213,8 @@ class SecondaryButton extends StatelessWidget {
   }
 }
 
-/// Informational note with an optional trailing link (P11 license note,
-/// SynthID note).
+/// A footnote set beside a rule — the licence note, the SynthID note. A note
+/// is printed, not boxed.
 class NoteBanner extends StatelessWidget {
   const NoteBanner({
     super.key,
@@ -168,58 +232,73 @@ class NoteBanner extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final c = SongletColors.of(context);
-    return Container(
-      padding: const EdgeInsetsDirectional.all(SongletSpace.x4),
+    return DecoratedBox(
       decoration: BoxDecoration(
-        color: c.surfaceMuted,
-        borderRadius: SongletRadius.controlAll,
+        border: BorderDirectional(
+          start: BorderSide(color: c.hairline, width: SongletSize.rule),
+        ),
       ),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Icon(icon, color: c.inkSecondary, size: SongletSize.iconLg),
-          const SizedBox(width: SongletSpace.x3),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  message,
-                  style: SongletType.footnote.copyWith(color: c.inkSecondary),
-                ),
-                if (linkLabel != null && onLink != null)
-                  Align(
-                    alignment: AlignmentDirectional.centerEnd,
-                    child: TextButton(
-                      onPressed: onLink,
-                      style: TextButton.styleFrom(foregroundColor: c.accent),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Text(
-                            linkLabel!,
-                            style: SongletType.footnote.copyWith(
-                              color: c.accent,
-                            ),
-                          ),
-                          const Icon(
-                            Icons.chevron_right_rounded,
-                            size: SongletSize.iconSm,
-                          ),
-                        ],
-                      ),
+      child: Padding(
+        padding: const EdgeInsetsDirectional.fromSTEB(
+          SongletSpace.x3,
+          SongletSpace.x1,
+          0,
+          SongletSpace.x1,
+        ),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsetsDirectional.only(top: 1),
+              child: Icon(icon, color: c.inkTertiary, size: SongletSize.iconSm),
+            ),
+            const SizedBox(width: SongletSpace.x2),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    message,
+                    style: SongletType.footnote.copyWith(
+                      color: c.inkSecondary,
+                      height: 1.5,
                     ),
                   ),
-              ],
+                  if (linkLabel != null && onLink != null)
+                    Padding(
+                      padding: const EdgeInsetsDirectional.only(top: 2),
+                      child: InkWell(
+                        onTap: onLink,
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Text(
+                              linkLabel!,
+                              style: SongletType.footnote.copyWith(
+                                color: c.accent,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                            Icon(
+                              Icons.arrow_forward_rounded,
+                              size: SongletSize.iconXs,
+                              color: c.accent,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
 }
 
-/// Empty state: glyph, title, message and one action (library, lists).
+/// Empty state: a ruled frame, a serif line and one action (library, lists).
 class EmptyState extends StatelessWidget {
   const EmptyState({
     super.key,
@@ -247,26 +326,23 @@ class EmptyState extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Container(
-            width: SongletSize.playButton + SongletSpace.x4,
-            height: SongletSize.playButton + SongletSpace.x4,
-            decoration: BoxDecoration(
-              color: c.accentSoft,
-              shape: BoxShape.circle,
-            ),
-            child: Icon(icon, size: SongletSize.iconXl, color: c.accent),
-          ),
+          Icon(icon, size: SongletSize.iconXl, color: c.accent),
+          const SizedBox(height: SongletSpace.x4),
+          Container(width: SongletSpace.x10, height: SongletSize.rule, color: c.hairline),
           const SizedBox(height: SongletSpace.x4),
           Text(
             title,
             textAlign: TextAlign.center,
-            style: SongletType.title3.copyWith(color: c.ink),
+            style: SongletType.title2.copyWith(color: c.ink),
           ),
           const SizedBox(height: SongletSpace.x2),
           Text(
             message,
             textAlign: TextAlign.center,
-            style: SongletType.subhead.copyWith(color: c.inkSecondary),
+            style: SongletType.subhead.copyWith(
+              color: c.inkSecondary,
+              height: 1.5,
+            ),
           ),
           if (actionLabel != null && onAction != null) ...[
             const SizedBox(height: SongletSpace.x5),
@@ -279,7 +355,9 @@ class EmptyState extends StatelessWidget {
                   _actionMinWidth,
                   SongletSize.controlHeight,
                 ),
-                shape: const StadiumBorder(),
+                shape: const RoundedRectangleBorder(
+                  borderRadius: SongletRadius.controlAll,
+                ),
                 textStyle: themedTextStyle(context, SongletType.headline),
               ),
               child: Text(actionLabel!),

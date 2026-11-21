@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:songlet_kit/songlet_kit.dart';
-import 'package:songlet_kit/src/library/data/sqlite_music_work_repository.dart';
+import 'package:songlet_kit/src/library/data/music_sqlite_work_repository.dart';
 import 'package:songlet_kit/src/mv/data/music_sqlite_music_video_repository.dart';
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 

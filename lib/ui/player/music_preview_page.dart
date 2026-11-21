@@ -67,23 +67,39 @@ class _PreviewPageState extends ConsumerState<MusicPreviewPage>
         children: [
           // The video the length panel asked for (docs/ui P23).
           MusicAutoVideoBanner(workId: work.id),
+          // The sleeve: the plate, capped so the track and the one action below
+          // it stay on the first screen, the caption set under it.
           Center(
-            child: SizedBox(
-              width: SongletSize.coverLarge,
-              child: CoverArt(
-                seed: work.id,
-                image: MusicSongletArt.cover(work),
-                framed: true,
-                badgeLabel: l10n.playerAiGenerated,
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(maxHeight: 320),
+              child: AspectRatio(
+                aspectRatio: 1,
+                child: DecoratedBox(
+                  decoration: BoxDecoration(
+                    borderRadius: SongletRadius.thumbAll,
+                    border: Border.all(color: c.hairline),
+                  ),
+                  child: ClipRRect(
+                    borderRadius: const BorderRadius.all(
+                      Radius.circular(SongletRadius.thumb),
+                    ),
+                    child: CoverArt(
+                      seed: work.id,
+                      image: MusicSongletArt.cover(work),
+                      framed: true,
+                      badgeLabel: l10n.playerAiGenerated,
+                    ),
+                  ),
+                ),
               ),
             ),
           ),
           const SizedBox(height: SongletSpace.x4),
           Text(
             workTitle(l10n, work),
-            textAlign: TextAlign.center,
-            style: SongletType.title1.copyWith(color: c.ink),
+            style: SongletType.largeTitle.copyWith(color: c.ink),
           ),
+          const SizedBox(height: 6),
           MetaLine(
             parts: [
               workKindName(
@@ -94,8 +110,15 @@ class _PreviewPageState extends ConsumerState<MusicPreviewPage>
               workGenre(l10n, work),
               clockLabel(view.duration, l10n.localeName),
             ],
+            textAlign: TextAlign.start,
+            style: SongletType.folio.copyWith(
+              color: c.inkSecondary,
+              fontSize: 10,
+            ),
           ),
           const SizedBox(height: SongletSpace.x4),
+          Container(height: SongletSize.rule, color: c.hairline),
+          const SizedBox(height: SongletSpace.x3),
           if (path == null)
             audio.isLoading ? const MusicAudioLoading() : const MusicMissingAudio()
           else ...[

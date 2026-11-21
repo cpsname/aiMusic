@@ -1,0 +1,55 @@
+# Build outputs and generated caches — never committed.
+# (build/ holds the Dart incremental-compile caches; one of them grew past
+# GitHub's 100 MB file limit and blocked the push.)
+build/
+**/build/
+.dart_tool/
+**/.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+
+# Flutter tool output
+**/Flutter/ephemeral/
+**/Flutter-Generated.xcconfig
+**/Generated.xcconfig
+**/flutter_export_environment.sh
+**/Flutter/Generated.xcconfig
+
+# Apple native build output
+ios/Pods/
+ios/.symlinks/
+macos/Pods/
+**/*.xcworkspace/xcuserdata/
+**/*.xcodeproj/xcuserdata/
+
+# Android
+android/.gradle/
+android/local.properties
+android/app/.cxx/
+android/key.properties
+
+# Secrets and per-machine config (the *.example.json files stay tracked)
+config/*.json
+!config/*.example.json
+
+# Dev artefacts: rendered design previews, reports, scratch notes
+tool/preview/design-preview/
+dist/
+logs/
+analyze_all.txt
+analyze_probe.txt
+analyze_probe_err.txt
+preview_run.txt
+sweep*.txt
+
+# Editors / OS
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+.DS_Store
+Thumbs.db

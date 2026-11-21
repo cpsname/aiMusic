@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import 'aura_style.dart';
-import 'tokens.dart';
+import 'tokens/songlet_metrics.dart';
+import 'tokens/songlet_type.dart';
 
-/// A rounded selectable pill (genres, keywords, filters). Selected = filled
-/// with the theme accent; otherwise a white pill with a hairline.
+/// A set tag (genres, keywords, filters) — a rubber stamp, not a pill:
+/// squared corners, one hairline, and the accent plate when selected.
 class PillChip extends StatelessWidget {
   const PillChip({
     super.key,
@@ -27,50 +27,62 @@ class PillChip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final style = AuraStyle.of(context);
     final theme = Theme.of(context);
-    final fg = selected ? Colors.white : theme.textTheme.bodyLarge?.color;
-    final radius = BorderRadius.circular(StudioTokens.radiusPill);
+    final outline = theme.colorScheme.outline;
+    final ink = theme.colorScheme.onSurface;
+    final fg = selected ? theme.colorScheme.surface : ink;
+    final radius = BorderRadius.circular(SongletRadius.control);
     return Material(
-      color: selected ? style.accent : style.cardFill,
+      color: selected ? ink : Colors.transparent,
       shape: RoundedRectangleBorder(
         borderRadius: radius,
-        side: BorderSide(color: selected ? style.accent : style.cardStroke),
+        side: BorderSide(
+          color: selected ? ink : outline,
+          width: SongletSize.rule,
+        ),
       ),
       child: InkWell(
         borderRadius: radius,
         onTap: onTap,
-        child: Padding(
-          padding: const EdgeInsetsDirectional.fromSTEB(18, 10, 14, 10),
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Flexible(
-                child: Text(
-                  label,
-                  overflow: TextOverflow.ellipsis,
-                  style: theme.textTheme.labelLarge?.copyWith(
-                    color: fg,
-                    fontWeight: selected ? FontWeight.w700 : FontWeight.w500,
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(minHeight: SongletSize.chipHeight),
+          child: Padding(
+            padding: const EdgeInsetsDirectional.fromSTEB(10, 6, 10, 6),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Flexible(
+                  child: Text(
+                    label,
+                    overflow: TextOverflow.ellipsis,
+                    style: SongletType.subhead.copyWith(
+                      color: fg,
+                      fontWeight: selected ? FontWeight.w700 : FontWeight.w500,
+                      letterSpacing: 0.1,
+                    ),
                   ),
                 ),
-              ),
-              if (trailingIcon != null) ...[
-                const SizedBox(width: StudioTokens.spaceXs),
-                Icon(trailingIcon, size: 18, color: fg),
-              ],
-              if (onRemove != null) ...[
-                const SizedBox(width: StudioTokens.spaceSm),
-                InkResponse(
-                  onTap: onRemove,
-                  radius: 16,
-                  child: Tooltip(
-                    message: removeTooltip ?? '',
-                    child: Icon(Icons.close_rounded, size: 18, color: fg),
+                if (trailingIcon != null) ...[
+                  const SizedBox(width: SongletSpace.x1),
+                  Icon(trailingIcon, size: SongletSize.iconSm, color: fg),
+                ],
+                if (onRemove != null) ...[
+                  const SizedBox(width: SongletSpace.x2),
+                  InkResponse(
+                    onTap: onRemove,
+                    radius: 16,
+                    child: Tooltip(
+                      message: removeTooltip ?? '',
+                      child: Icon(
+                        Icons.close_rounded,
+                        size: SongletSize.iconSm,
+                        color: fg,
+                      ),
+                    ),
                   ),
-                ),
+                ],
               ],
-            ],
+            ),
           ),
         ),
       ),

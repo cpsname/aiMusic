@@ -335,51 +335,66 @@ class _Progress extends ConsumerWidget {
               ),
             ),
           ),
-        Center(
-          child: PulsingMark(
-            label: recipient.isEmpty
-                ? l10n.generatingTitleGeneric
-                : l10n.generatingTitleFor(recipient),
-          ),
+        // The working head is set, not centred: the state on the left, the
+        // figure struck at the right margin, then the rule that fills as the
+        // song is written.
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: [
+            Expanded(
+              child: MusicTestId(
+                'generating.progress',
+                child: Text(
+                  recipient.isEmpty
+                      ? l10n.generatingTitleGeneric
+                      : l10n.generatingTitleFor(recipient),
+                  style: SongletType.title1.copyWith(color: c.ink),
+                ),
+              ),
+            ),
+            if (waiting != null) ...[
+              const SizedBox(width: SongletSpace.x3),
+              Text(
+                l10n.generatingPercent(percent),
+                style: SongletType.numeral.copyWith(color: c.accent),
+              ),
+            ],
+          ],
         ),
-        MusicTestId(
-          'generating.progress',
-          child: Text(
-            recipient.isEmpty
-                ? l10n.generatingTitleGeneric
-                : l10n.generatingTitleFor(recipient),
-            textAlign: TextAlign.center,
-            style: SongletType.title1.copyWith(color: c.ink),
-          ),
-        ),
-        const SizedBox(height: SongletSpace.x2),
+        const SizedBox(height: 6),
         Text(
           subtitle,
-          textAlign: TextAlign.center,
-          style: SongletType.body.copyWith(color: c.inkSecondary),
-        ),
-        const SizedBox(height: SongletSpace.x5),
-        ProgressMeter(
-          value: progress,
-          percentLabel: waiting == null
-              ? null
-              : l10n.generatingPercent(percent),
-          semanticsLabel: l10n.generatingProgress,
+          style: SongletType.caption.copyWith(
+            color: c.inkTertiary,
+            letterSpacing: 0.3,
+          ),
         ),
         const SizedBox(height: SongletSpace.x4),
-        MetaLine(parts: meta),
-        const SizedBox(height: SongletSpace.x2),
-        if (onCancel != null || waiting?.cancelling == true)
-          Center(
+        ProgressMeter(
+          value: progress,
+          semanticsLabel: l10n.generatingProgress,
+        ),
+        const SizedBox(height: SongletSpace.x3),
+        MetaLine(parts: meta, textAlign: TextAlign.start),
+        if (onCancel != null || waiting?.cancelling == true) ...[
+          const SizedBox(height: SongletSpace.x1),
+          Align(
+            alignment: AlignmentDirectional.centerStart,
             child: MusicTestId(
               'generating.cancel',
               child: TextButton(
                 onPressed: onCancel,
-                style: TextButton.styleFrom(foregroundColor: c.accent),
+                style: TextButton.styleFrom(
+                  foregroundColor: c.inkSecondary,
+                  padding: EdgeInsetsDirectional.zero,
+                  minimumSize: const Size(0, SongletSize.minTap),
+                  tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                ),
                 child: Text(l10n.commonCancel),
               ),
             ),
           ),
+        ],
         const SizedBox(height: SongletSpace.x4),
         if (!(work?.isInstrumental ?? draft?.vocals == MusicVocals.instrumental))
           GlimpseCard(

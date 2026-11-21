@@ -542,16 +542,13 @@ class _IdeaGrid extends ConsumerWidget {
               SliverToBoxAdapter(
                 child: Padding(
                   padding: const EdgeInsetsDirectional.only(
-                    bottom: SongletSpace.x2,
+                    top: SongletSpace.x1,
+                    bottom: SongletSpace.x1,
                   ),
-                  child: Semantics(
-                    header: true,
-                    child: Text(
-                      l10n.inspirationHeader,
-                      style: SongletType.headline.copyWith(
-                        color: SongletColors.of(context).ink,
-                      ),
-                    ),
+                  child: SectionHeader(
+                    title: l10n.inspirationHeader,
+                    index: '01',
+                    bottom: SongletSpace.x2,
                   ),
                 ),
               ),

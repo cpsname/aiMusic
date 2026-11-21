@@ -7,12 +7,14 @@ import '../tokens/songlet_motion.dart';
 import '../tokens/songlet_type.dart';
 import 'cover_fallback.dart';
 
-/// A create-home tile (docs/ui P01, ADR-0032): a photo, the title and a play
-/// button. The photo is [image] (the server's `cover_image_url` or a bundled
-/// photo); when it fails to load, [fallbackImage] (the template's or the
-/// occasion's photo) takes its place; while it loads the tile is a muted
-/// surface. A [selected] tile — the composer's pick — takes the accent outline
-/// and settles slightly inward; the play button never changes the pick.
+/// A plate on the create home's contact sheet (docs/ui P01, ADR-0032).
+///
+/// Printed like an index print: the photograph in a ruled frame, its name
+/// lettered on the paper margin underneath — never a caption laid over the
+/// picture. The sample button is a small cream disc in the picture's corner.
+/// A [selected] plate takes the coral frame and its margin turns to coral:
+/// the pick is legible from across the room, and it is the same plate the
+/// composer unfolds, not a second card.
 class TemplateTile extends StatelessWidget {
   const TemplateTile({
     super.key,
@@ -44,17 +46,15 @@ class TemplateTile extends StatelessWidget {
   /// Accessibility label of the play button.
   final String playLabel;
 
-  /// The composer's pick: accent outline and the inward settle.
+  /// The composer's pick: coral frame and coral margin.
   final bool selected;
 
-  /// Scale of a [selected] tile.
-  static const double selectedScale = 0.95;
+  /// Scale of a [selected] plate — a hair inward, the way a print sits when
+  /// it is lifted off the sheet.
+  static const double selectedScale = 0.97;
 
-  /// Where the bottom scrim starts fading in (× height).
-  static const double _scrimStart = 0.45;
-
-  /// Tight line height of the two-line title on the art.
-  static const double _titleLineHeight = 1.15;
+  /// Height of the printed margin under the picture.
+  static const double captionHeight = 28;
 
   @override
   Widget build(BuildContext context) =>
@@ -66,10 +66,10 @@ class TemplateTile extends StatelessWidget {
     ImageErrorListener onImageError,
   ) {
     final c = SongletColors.of(context);
-    final onArt = c.onArt;
     final motion = MotionPolicy.reduceMotion(context)
         ? SongletMotion.none
         : SongletMotion.fast;
+    final frame = selected ? c.accent : c.hairline;
     return AspectRatio(
       aspectRatio: SongletSize.tileAspect,
       child: AnimatedScale(
@@ -85,89 +85,90 @@ class TemplateTile extends StatelessWidget {
             duration: motion,
             curve: SongletMotion.standardCurve,
             decoration: BoxDecoration(
-              borderRadius: SongletRadius.controlAll,
-              // The pick glows: an aurora ring backed by a soft halo, so the
-              // composer's card is findable at a glance in the grid.
-              boxShadow: selected
-                  ? [
-                      BoxShadow(
-                        color: c.accent.withValues(alpha: 0.55),
-                        blurRadius: SongletSpace.x6,
-                      ),
-                    ]
-                  : const <BoxShadow>[],
+              color: c.surface,
+              borderRadius: SongletRadius.thumbAll,
+              border: Border.all(
+                color: frame,
+                width: selected ? SongletSize.ruleStrong : SongletSize.rule,
+              ),
             ),
             child: Material(
-              clipBehavior: Clip.antiAlias,
-              shape: RoundedRectangleBorder(
-                borderRadius: SongletRadius.controlAll,
-                side: selected
-                    ? BorderSide(color: c.accent, width: SongletSize.focusRing)
-                    : BorderSide.none,
-              ),
-              child: Ink(
-                decoration: BoxDecoration(
-                  color: c.surfaceMuted,
-                  image: image == null
-                      ? null
-                      : DecorationImage(
-                          image: image,
-                          fit: BoxFit.cover,
-                          onError: onImageError,
-                        ),
+              type: MaterialType.transparency,
+              child: ClipRRect(
+                borderRadius: BorderRadius.all(
+                  Radius.circular(SongletRadius.thumb - SongletSize.rule),
                 ),
-                child: InkWell(
-                  onTap: onTap,
-                  child: DecoratedBox(
-                    decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                        begin: Alignment.topCenter,
-                        end: Alignment.bottomCenter,
-                        stops: const [_scrimStart, 1],
-                        colors: [c.artScrim.withValues(alpha: 0), c.artScrim],
+                child: Column(
+                  children: [
+                    Expanded(
+                      child: Semantics(
+                        button: true,
+                        child: InkWell(
+                          onTap: onTap,
+                          child: Stack(
+                            fit: StackFit.expand,
+                            children: [
+                              Ink(
+                                decoration: BoxDecoration(
+                                  color: c.surfaceMuted,
+                                  image: image == null
+                                      ? null
+                                      : DecorationImage(
+                                          image: image,
+                                          fit: BoxFit.cover,
+                                          onError: onImageError,
+                                        ),
+                                ),
+                              ),                              if (onPlay != null)
+                                PositionedDirectional(
+                                  top: SongletSpace.x1,
+                                  end: SongletSpace.x1,
+                                  child: _PlayDot(
+                                    playing: playing,
+                                    label: playLabel,
+                                    onTap: onPlay!,
+                                  ),
+                                ),
+                            ],
+                          ),
+                        ),
                       ),
                     ),
-                    // Title across the full width at the bottom; the sample
-                    // button sits in the top corner so a long (or translated)
-                    // name never has to break mid-word next to it.
-                    child: Stack(
-                      children: [
-                        PositionedDirectional(
-                          start: SongletSpace.x2,
-                          end: SongletSpace.x2,
-                          bottom: SongletSpace.x2,
-                          child: ExcludeSemantics(
-                            child: Text(
-                              title,
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                              style: SongletType.footnote.copyWith(
-                                color: onArt,
-                                fontWeight: FontWeight.w600,
-                                height: _titleLineHeight,
-                                shadows: [
-                                  Shadow(
-                                    color: c.artScrim,
-                                    blurRadius: SongletSpace.x2,
-                                  ),
-                                ],
-                              ),
+                    // The printed margin: the name, set in the serif, on the
+                    // stock rather than on the photograph.
+                    GestureDetector(
+                      onTap: onTap,
+                      behavior: HitTestBehavior.opaque,
+                      child: ExcludeSemantics(
+                        child: Container(
+                          height: captionHeight,
+                          width: double.infinity,
+                          alignment: AlignmentDirectional.center,
+                          padding: const EdgeInsetsDirectional.symmetric(
+                            horizontal: SongletSpace.x1,
+                          ),
+                          decoration: BoxDecoration(
+                            color: selected ? c.accent : c.surface,
+                            border: Border(
+                              top: BorderSide(color: frame),
+                            ),
+                          ),
+                          child: Text(
+                            title,
+                            maxLines: 2,
+                            textAlign: TextAlign.center,
+                            overflow: TextOverflow.ellipsis,
+                            style: SongletType.eyebrow.copyWith(
+                              color: selected ? c.onAccent : c.ink,
+                              fontSize: 8.5,
+                              height: 1.2,
+                              letterSpacing: 0.4,
                             ),
                           ),
                         ),
-                        if (onPlay != null)
-                          PositionedDirectional(
-                            top: SongletSpace.x1,
-                            end: SongletSpace.x1,
-                            child: _PlayDot(
-                              playing: playing,
-                              label: playLabel,
-                              onTap: onPlay!,
-                            ),
-                          ),
-                      ],
+                      ),
                     ),
-                  ),
+                  ],
                 ),
               ),
             ),
@@ -191,7 +192,6 @@ class _PlayDot extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const dot = SongletSize.iconLg;
     final c = SongletColors.of(context);
     return Semantics(
       container: true,
@@ -203,13 +203,17 @@ class _PlayDot extends StatelessWidget {
         onTap: onTap,
         radius: SongletSize.minTap / 2,
         child: Container(
-          width: dot,
-          height: dot,
-          decoration: BoxDecoration(color: c.onArt, shape: BoxShape.circle),
+          width: SongletSize.iconMd,
+          height: SongletSize.iconMd,
+          decoration: BoxDecoration(
+            color: c.surface,
+            shape: BoxShape.circle,
+            border: Border.all(color: c.ink.withValues(alpha: 0.18)),
+          ),
           child: Icon(
             playing ? Icons.pause_rounded : Icons.play_arrow_rounded,
             size: SongletSize.iconSm,
-            color: SongletColors.light.ink,
+            color: c.ink,
           ),
         ),
       ),

@@ -5,90 +5,152 @@ import '../tokens/songlet_metrics.dart';
 import '../tokens/songlet_type.dart';
 import 'songlet_mark.dart';
 
-/// Page header: mark, app name, optional tagline and a trailing slot
-/// (allowance pill, sync status, settings) — docs/ui P01, P12, P16.
+/// The masthead: the publication's name set black and tight, a mono standfirst
+/// under it, and a heavy ink rule carrying the page's datum.
+///
+/// On a poster the name is the composition — no tile behind it, no gradient.
+/// The bow glyph is set once, small, in the signal coral.
 class BrandHeader extends StatelessWidget {
   const BrandHeader({
     super.key,
     required this.title,
     this.tagline,
     this.trailing,
-    this.markSize = SongletSize.brandMark,
+    this.meta,
+    this.markSize = SongletSize.iconXl,
     this.centered = false,
   });
 
   final String title;
   final String? tagline;
   final Widget? trailing;
+
+  /// Short right-hand datum on the rule ("12 SONGS", "FREE").
+  final String? meta;
   final double markSize;
 
-  /// Centred compact variant for pushed pages (P07, P09, P11, P13).
+  /// Compact centred variant for pushed pages (P07, P09, P11, P13).
   final bool centered;
 
   @override
   Widget build(BuildContext context) {
     final c = SongletColors.of(context);
-    final text = Column(
-      mainAxisSize: MainAxisSize.min,
-      crossAxisAlignment: centered
-          ? CrossAxisAlignment.center
-          : CrossAxisAlignment.start,
-      children: [
-        Text(
-          title,
-          maxLines: 1,
-          overflow: TextOverflow.ellipsis,
-          style: (centered ? SongletType.headline : SongletType.title1)
-              .copyWith(color: c.ink),
-        ),
-        if (tagline != null)
-          Text(
-            tagline!,
-            maxLines: centered ? 1 : null,
-            overflow: centered ? TextOverflow.ellipsis : TextOverflow.visible,
-            style: SongletType.caption.copyWith(color: c.inkSecondary),
-          ),
-      ],
-    );
-    // Accessibility sizes: the trailing slot moves under the brand so the
-    // name keeps its line.
-    return LayoutBuilder(
-      builder: (context, constraints) {
-        final stackTrailing =
-            trailing != null &&
-            !centered &&
-            (constraints.maxWidth < SongletSize.twoPaneBreakpoint ||
-                SongletType.isAccessibilitySize(context));
-        final brand = Row(
-          mainAxisSize: centered ? MainAxisSize.min : MainAxisSize.max,
+    if (centered) return _compact(context, c);
+    return Semantics(
+      header: true,
+      child: MediaQuery.withClampedTextScaling(
+        maxScaleFactor: SongletType.chromeMaxTextScale,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SongletMark(size: markSize),
-            const SizedBox(width: SongletSpace.x3),
-            if (centered) Flexible(child: text) else Expanded(child: text),
-            if (trailing != null && !centered && !stackTrailing) ...[
-              const SizedBox(width: SongletSpace.x3),
-              trailing!,
-            ],
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                SongletMark(size: markSize, tile: false, color: c.accent),
+                const SizedBox(width: SongletSpace.x2),
+                Expanded(
+                  child: Text(
+                    title,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: SongletType.masthead.copyWith(color: c.ink),
+                  ),
+                ),
+                if (trailing != null) ...[
+                  const SizedBox(width: SongletSpace.x3),
+                  trailing!,
+                ],
+              ],
+            ),
+            if (tagline != null)
+              Padding(
+                padding: const EdgeInsetsDirectional.only(top: 2),
+                child: Text(
+                  tagline!,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: SongletType.eyebrow.copyWith(
+                    color: c.inkTertiary,
+                    letterSpacing: 1.6,
+                  ),
+                ),
+              ),
+            const SizedBox(height: SongletSpace.x3),
+            _Rule(color: c.ink, accent: c.accent, meta: meta, metaColor: c.inkSecondary),
           ],
-        );
-        return Semantics(
-          header: true,
-          // Chrome: capped like a UIKit bar (SongletType.chromeMaxTextScale).
-          child: MediaQuery.withClampedTextScaling(
-            maxScaleFactor: SongletType.chromeMaxTextScale,
-            child: stackTrailing
-                ? Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      brand,
-                      const SizedBox(height: SongletSpace.x2),
-                      trailing!,
-                    ],
-                  )
-                : brand,
-          ),
-        );
-      },
+        ),
+      ),
     );
   }
+
+  Widget _compact(BuildContext context, SongletColors c) => Semantics(
+    header: true,
+    child: MediaQuery.withClampedTextScaling(
+      maxScaleFactor: SongletType.chromeMaxTextScale,
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          SongletMark(size: SongletSize.iconMd, tile: false),
+          const SizedBox(width: SongletSpace.x2),
+          Flexible(
+            child: Text(
+              title,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              style: SongletType.title2.copyWith(
+                color: c.ink,
+                fontSize: 17,
+                fontWeight: FontWeight.w800,
+                letterSpacing: -0.4,
+              ),
+            ),
+          ),
+          if (trailing != null) ...[
+            const SizedBox(width: SongletSpace.x3),
+            trailing!,
+          ],
+        ],
+      ),
+    ),
+  );
+}
+
+/// The masthead rule: a heavy ink line with a short coral block at its head,
+/// and an optional mono datum at its end.
+class _Rule extends StatelessWidget {
+  const _Rule({
+    required this.color,
+    required this.accent,
+    required this.meta,
+    required this.metaColor,
+  });
+
+  final Color color;
+  final Color accent;
+  final String? meta;
+  final Color metaColor;
+
+  @override
+  Widget build(BuildContext context) => Row(
+    crossAxisAlignment: CrossAxisAlignment.center,
+    children: [
+      SizedBox(
+        width: SongletSpace.x5,
+        child: Container(height: SongletSize.ruleStrong + 2, color: accent),
+      ),
+      Expanded(
+        child: Container(height: SongletSize.ruleStrong, color: color),
+      ),
+      if (meta != null) ...[
+        const SizedBox(width: SongletSpace.x2),
+        Text(
+          meta!,
+          style: SongletType.folio.copyWith(
+            color: metaColor,
+            fontSize: 10,
+          ),
+        ),
+      ],
+    ],
+  );
 }

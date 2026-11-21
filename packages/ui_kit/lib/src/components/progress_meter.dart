@@ -6,7 +6,8 @@ import '../tokens/songlet_metrics.dart';
 import '../tokens/songlet_motion.dart';
 import '../tokens/songlet_type.dart';
 
-/// Rounded progress bar with an optional trailing percent (docs/ui P05).
+/// The progress rule: a printed bar, one ink fill inside a hairline frame, with
+/// an optional percent set at the margin (docs/ui P05).
 class ProgressMeter extends StatelessWidget {
   const ProgressMeter({
     super.key,
@@ -22,14 +23,15 @@ class ProgressMeter extends StatelessWidget {
   final String? percentLabel;
   final String? semanticsLabel;
 
-  /// Bar thickness: a little heavier than the standard progress bar.
-  static const double _barHeight = SongletSize.progressHeight * 1.5;
+  /// Bar thickness: a rule, not a bar.
+  static const double _barHeight = 7;
 
   @override
   Widget build(BuildContext context) {
     final c = SongletColors.of(context);
     final v = value.clamp(0.0, 1.0);
     final reduce = MotionPolicy.reduceMotion(context);
+    final radius = BorderRadius.circular(2);
     return Semantics(
       label: semanticsLabel,
       value: percentLabel,
@@ -37,7 +39,7 @@ class ProgressMeter extends StatelessWidget {
         children: [
           Expanded(
             child: ClipRRect(
-              borderRadius: SongletRadius.pillAll,
+              borderRadius: radius,
               child: TweenAnimationBuilder<double>(
                 tween: Tween(end: v),
                 duration: reduce
@@ -45,23 +47,23 @@ class ProgressMeter extends StatelessWidget {
                     : SongletMotion.emphasized,
                 curve: SongletMotion.standardCurve,
                 builder: (context, animated, _) {
-                  // The aurora fills the meter; the hairline track reads as
-                  // the unplayed canvas.
                   return SizedBox(
                     height: _barHeight,
                     child: Stack(
                       fit: StackFit.expand,
                       children: [
-                        ColoredBox(color: c.hairline),
+                        ColoredBox(color: c.surfaceMuted),
                         FractionallySizedBox(
                           widthFactor: animated,
                           alignment: AlignmentDirectional.centerStart,
-                          child: DecoratedBox(
-                            decoration: BoxDecoration(
-                              gradient: LinearGradient(
-                                colors: [c.accent, c.success],
-                              ),
-                            ),
+                          child: ColoredBox(color: c.accent),
+                        ),
+                        // The frame sits above the fill so the rule keeps its
+                        // printed edge.
+                        DecoratedBox(
+                          decoration: BoxDecoration(
+                            border: Border.all(color: c.hairline),
+                            borderRadius: radius,
                           ),
                         ),
                       ],
@@ -76,7 +78,7 @@ class ProgressMeter extends StatelessWidget {
             ExcludeSemantics(
               child: Text(
                 percentLabel!,
-                style: SongletType.subhead.copyWith(
+                style: SongletType.folio.copyWith(
                   color: c.inkSecondary,
                   fontFeatures: const [FontFeature.tabularFigures()],
                 ),

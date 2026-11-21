@@ -1,12 +1,12 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 
 import 'aura_style.dart';
 import 'tokens.dart';
+import 'tokens/songlet_metrics.dart';
 
-/// A frosted-glass surface: blurred backdrop, translucent fill and hairline
-/// stroke. Optionally tappable.
+/// A paper plate. The template's frosted glass is gone: a card is a sheet of
+/// the same stock, lifted by a hairline and (at most) a one-point keyline —
+/// never a blurred backdrop.
 class GlassCard extends StatelessWidget {
   const GlassCard({
     super.key,
@@ -14,18 +14,20 @@ class GlassCard extends StatelessWidget {
     this.padding = const EdgeInsets.all(StudioTokens.spaceLg),
     this.onTap,
     this.borderRadius,
-    this.blur = 14,
+    this.blur = 0,
   });
 
   final Widget child;
   final EdgeInsetsGeometry padding;
   final VoidCallback? onTap;
   final BorderRadius? borderRadius;
+
+  /// Ignored; kept so older callers still compile.
   final double blur;
 
   @override
   Widget build(BuildContext context) {
-    final radius = borderRadius ?? BorderRadius.circular(StudioTokens.radiusLg);
+    final radius = borderRadius ?? SongletRadius.cardAll;
     final style = AuraStyle.of(context);
     final surface = DecoratedBox(
       decoration: BoxDecoration(
@@ -46,22 +48,12 @@ class GlassCard extends StatelessWidget {
             color: Colors.transparent,
             child: InkWell(onTap: onTap, borderRadius: radius, child: surface),
           );
-    if (!style.cardBlur) {
-      // Opaque surfaces: a soft shadow instead of the backdrop blur.
-      return DecoratedBox(
-        decoration: BoxDecoration(
-          borderRadius: radius,
-          boxShadow: style.cardShadow,
-        ),
-        child: ClipRRect(borderRadius: radius, child: interactive),
-      );
-    }
-    return ClipRRect(
-      borderRadius: radius,
-      child: BackdropFilter(
-        filter: ImageFilter.blur(sigmaX: blur, sigmaY: blur),
-        child: interactive,
+    return DecoratedBox(
+      decoration: BoxDecoration(
+        borderRadius: radius,
+        boxShadow: style.cardShadow,
       ),
+      child: ClipRRect(borderRadius: radius, child: interactive),
     );
   }
 }

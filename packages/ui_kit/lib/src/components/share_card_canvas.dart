@@ -369,7 +369,10 @@ class PaletteSwatch extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final c = SongletColors.of(context);
-    const ring = SongletSpace.x1;
+    const ring = 3.0;
+    final radius = BorderRadius.circular(SongletRadius.thumb);
+    // A printed ink patch, not a colour dot: squared, framed, and struck with a
+    // coral rule when chosen.
     return Semantics(
       container: true,
       button: true,
@@ -380,19 +383,19 @@ class PaletteSwatch extends StatelessWidget {
         onTap: onTap,
         radius: size / 2 + ring,
         child: Container(
-          width: size + ring * 2,
-          height: size + ring * 2,
-          padding: const EdgeInsetsDirectional.all(ring),
+          width: size + ring,
+          height: size + ring,
+          padding: const EdgeInsetsDirectional.all(ring / 2),
           decoration: BoxDecoration(
-            shape: BoxShape.circle,
+            borderRadius: radius,
             border: Border.all(
-              color: selected ? c.accent : c.accent.withValues(alpha: 0),
-              width: SongletSize.focusRing,
+              color: selected ? c.accent : c.hairline,
+              width: selected ? SongletSize.ruleStrong : SongletSize.rule,
             ),
           ),
           child: DecoratedBox(
             decoration: BoxDecoration(
-              shape: BoxShape.circle,
+              borderRadius: BorderRadius.circular(2),
               color: palette.base,
             ),
           ),

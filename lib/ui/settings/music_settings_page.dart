@@ -98,12 +98,13 @@ class MusicSettingsPage extends ConsumerWidget {
             'settings.upgrade',
             child: ObsButton(
               label: l10n.settingsUpgrade,
-              icon: Icons.auto_awesome,
+              icon: Icons.arrow_outward_rounded,
               onPressed: () => context.openPaywall(MusicPaywallReason.upgrade),
             ),
           ),
           const SizedBox(height: SongletSpace.x6),
           SettingsGroup(
+            index: '02',
             title: l10n.settingsSectionLanguage,
             children: [
               MusicTestId(
@@ -140,6 +141,7 @@ class MusicSettingsPage extends ConsumerWidget {
           ),
           const SizedBox(height: SongletSpace.x6),
           SettingsGroup(
+            index: '03',
             title: l10n.settingsSectionAbout,
             children: [
               MusicTestId(
@@ -202,6 +204,7 @@ class _ProfileGroup extends ConsumerWidget {
     }
 
     return SettingsGroup(
+      index: '01',
       title: l10n.settingsSectionProfile,
       children: [
         MusicTestId(

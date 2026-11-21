@@ -212,12 +212,10 @@ class SectionTrack extends StatelessWidget {
     if (sections.isEmpty) return const SizedBox.shrink();
     return Column(
       children: [
-        Container(
-          height: SongletSize.iconMd,
-          decoration: BoxDecoration(
-            color: c.accentSoft,
-            borderRadius: SongletRadius.pillAll,
-          ),
+        // The movement rule: one hairline per section, the current one struck
+        // in coral — a printed running head, not a progress pill.
+        SizedBox(
+          height: SongletSpace.x2,
           child: Row(
             children: [
               for (var i = 0; i < sections.length; i++)
@@ -227,21 +225,14 @@ class SectionTrack extends StatelessWidget {
                           .round()
                           .clamp(1, _flexResolution),
                   child: Container(
-                    decoration: BoxDecoration(
-                      border: i == 0
-                          ? null
-                          : BorderDirectional(
-                              start: BorderSide(color: c.surface),
-                            ),
+                    margin: EdgeInsetsDirectional.only(
+                      start: i == 0 ? 0 : 1,
+                      end: i == sections.length - 1 ? 0 : 1,
                     ),
                     alignment: Alignment.center,
                     child: Container(
-                      width: SongletSpace.x2,
-                      height: SongletSpace.x2,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: i == current ? c.accent : c.inkTertiary,
-                      ),
+                      height: i == current ? 2 : SongletSize.rule,
+                      color: i == current ? c.accent : c.hairline,
                     ),
                   ),
                 ),

@@ -62,6 +62,7 @@ export 'src/message/message_spec.dart';
 export 'src/message/message_view.dart';
 export 'src/motion.dart';
 export 'src/obs_button.dart';
+export 'src/paper_background.dart';
 export 'src/pill_chip.dart';
 export 'src/skeleton.dart';
 export 'src/status_view.dart';

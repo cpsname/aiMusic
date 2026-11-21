@@ -125,15 +125,11 @@ class MusicWorkDetailPage extends ConsumerWidget {
             ),
           ),
           const SizedBox(height: SongletSpace.x4),
+          SectionHeader(index: '02', title: l10n.detailPromptUsed),
           SurfaceCard(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                Text(
-                  l10n.detailPromptUsed,
-                  style: SongletType.title3.copyWith(color: c.ink),
-                ),
-                const SizedBox(height: SongletSpace.x3),
                 InfoRow(
                   icon: Icons.card_giftcard_rounded,
                   label: l10n.detailOccasion,
@@ -171,15 +167,11 @@ class MusicWorkDetailPage extends ConsumerWidget {
           ),
           if (lyrics.isNotEmpty && !work.isInstrumental) ...[
             const SizedBox(height: SongletSpace.x4),
+            SectionHeader(index: '03', title: l10n.detailLyrics),
             SurfaceCard(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  Text(
-                    l10n.detailLyrics,
-                    style: SongletType.title3.copyWith(color: c.ink),
-                  ),
-                  const SizedBox(height: SongletSpace.x2),
                   for (final block in lyrics)
                     Padding(
                       padding: const EdgeInsetsDirectional.only(
@@ -187,7 +179,10 @@ class MusicWorkDetailPage extends ConsumerWidget {
                       ),
                       child: Text(
                         block.lines.join('\n'),
-                        style: SongletType.callout.copyWith(color: c.ink),
+                        style: SongletType.lede.copyWith(
+                          color: c.ink,
+                          height: 1.45,
+                        ),
                       ),
                     ),
                 ],
@@ -253,16 +248,15 @@ class _VideosCard extends ConsumerWidget {
     final l10n = AppLocalizations.of(context);
     final c = SongletColors.of(context);
     final videos = ref.watch(musicVideosOfWorkProvider(work.id));
-    return SurfaceCard(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          Text(
-            l10n.detailVideos,
-            style: SongletType.title3.copyWith(color: c.ink),
-          ),
-          const SizedBox(height: SongletSpace.x2),
-          for (final video in videos)
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        SectionHeader(index: '04', title: l10n.detailVideos),
+        SurfaceCard(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              for (final video in videos)
             MusicTestId(
               'detail.video.${video.id}',
               child: ListTile(
@@ -308,8 +302,10 @@ class _VideosCard extends ConsumerWidget {
                   : null,
             ),
           ),
-        ],
-      ),
+            ],
+          ),
+        ),
+      ],
     );
   }
 }

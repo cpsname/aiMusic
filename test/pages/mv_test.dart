@@ -6,7 +6,7 @@ import 'package:go_router/go_router.dart';
 import 'package:infra_core/infra_core.dart';
 import 'package:riverpod/misc.dart' show Override;
 import 'package:songlet/l10n/generated/app_localizations.dart';
-import 'package:songlet/ui/mv/mv_music_generating_page.dart';
+import 'package:songlet/ui/mv/music_mv_generating_page.dart';
 import 'package:songlet/ui/mv/music_mv_hub_page.dart';
 import 'package:songlet/ui/mv/music_mv_notification_binding.dart';
 import 'package:songlet/ui/mv/music_mv_player_page.dart';

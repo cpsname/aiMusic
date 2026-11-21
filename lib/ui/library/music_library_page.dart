@@ -181,9 +181,10 @@ class _LibraryPageState extends ConsumerState<MusicLibraryPage> {
                       textAlign: TextAlign.center,
                     ),
                   ),
-                for (final occasion in shown) ...[
-                  const SizedBox(height: SongletSpace.x5),
+                for (final (sectionIndex, occasion) in shown.indexed) ...[
+                  const SizedBox(height: SongletSpace.x6),
                   SectionHeader(
+                    index: (sectionIndex + 1).toString().padLeft(2, '0'),
                     title: _groupName(l10n, occasion),
                     trailing:
                         filter == null &&
@@ -193,19 +194,15 @@ class _LibraryPageState extends ConsumerState<MusicLibraryPage> {
                     onTrailing: () =>
                         context.open(MusicLibraryRoute(occasion: occasion)),
                   ),
-                  const SizedBox(height: SongletSpace.x2),
-                  SurfaceCard(
-                    padding: EdgeInsetsDirectional.zero,
-                    child: Column(
-                      children: [
-                        for (final work
-                            in filter == null
-                                ? grouped[occasion]!.take(sectionPreview)
-                                : grouped[occasion]!)
-                          _WorkTile(work: work),
-                      ],
+                  for (final (rowIndex, work)
+                      in (filter == null
+                              ? grouped[occasion]!.take(sectionPreview)
+                              : grouped[occasion]!)
+                          .indexed)
+                    _WorkTile(
+                      work: work,
+                      ordinal: (rowIndex + 1).toString().padLeft(2, '0'),
                     ),
-                  ),
                 ],
               ],
             );
@@ -222,9 +219,12 @@ class _LibraryPageState extends ConsumerState<MusicLibraryPage> {
 }
 
 class _WorkTile extends ConsumerWidget {
-  const _WorkTile({required this.work});
+  const _WorkTile({required this.work, this.ordinal});
 
   final MusicWork work;
+
+  /// Printed folio of the entry inside its section.
+  final String? ordinal;
 
   Future<void> _actions(BuildContext context, WidgetRef ref) async {
     final l10n = AppLocalizations.of(context);
@@ -317,6 +317,7 @@ class _WorkTile extends ConsumerWidget {
     return MusicTestId(
       'library.work.${work.id}',
       child: WorkRow(
+        ordinal: ordinal,
         cover: CoverArt(
           seed: work.id,
           image: MusicSongletArt.cover(work),

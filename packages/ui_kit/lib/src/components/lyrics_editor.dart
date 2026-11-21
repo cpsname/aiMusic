@@ -59,122 +59,134 @@ class LyricsEditor extends StatelessWidget {
   Widget build(BuildContext context) {
     final c = SongletColors.of(context);
     final reduce = MotionPolicy.reduceMotion(context);
-    // A Material (not a coloured box) so the ownership tile's ink shows.
-    return Material(
-      color: c.surfaceMuted,
-      shape: RoundedRectangleBorder(
-        borderRadius: SongletRadius.controlAll,
-        side: errorText != null ? BorderSide(color: c.danger) : BorderSide.none,
+    // A ruled row rather than a filled box: the editor is one more printed
+    // field of the composer's card.
+    return DecoratedBox(
+      decoration: BoxDecoration(
+        border: BorderDirectional(
+          top: BorderSide(color: errorText != null ? c.danger : c.hairline),
+          bottom: BorderSide(color: errorText != null ? c.danger : c.hairline),
+        ),
       ),
-      clipBehavior: Clip.antiAlias,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          Semantics(
-            container: true,
-            button: true,
-            expanded: expanded,
-            child: InkWell(
-              borderRadius: SongletRadius.controlAll,
-              onTap: () => onExpandedChanged(!expanded),
-              child: ConstrainedBox(
-                constraints: const BoxConstraints(
-                  minHeight: SongletSize.controlHeight,
-                ),
-                child: Padding(
-                  padding: const EdgeInsetsDirectional.symmetric(
-                    horizontal: SongletSpace.x4,
+      child: Material(
+        type: MaterialType.transparency,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Semantics(
+              container: true,
+              button: true,
+              expanded: expanded,
+              child: InkWell(
+                onTap: () => onExpandedChanged(!expanded),
+                child: ConstrainedBox(
+                  constraints: const BoxConstraints(
+                    minHeight: SongletSize.controlHeight,
                   ),
-                  child: Row(
-                    children: [
-                      Icon(
-                        Icons.description_outlined,
-                        color: c.inkSecondary,
-                        size: SongletSize.iconLg,
-                      ),
-                      const SizedBox(width: SongletSpace.x3),
-                      Expanded(
-                        child: Text(
-                          title,
-                          style: SongletType.callout.copyWith(
-                            color: c.inkSecondary,
+                  child: Padding(
+                    padding: const EdgeInsetsDirectional.symmetric(
+                      horizontal: SongletSpace.x1,
+                    ),
+                    child: Row(
+                      children: [
+                        Icon(
+                          Icons.description_outlined,
+                          color: c.inkSecondary,
+                          size: SongletSize.iconMd,
+                        ),
+                        const SizedBox(width: SongletSpace.x3),
+                        Expanded(
+                          child: Text(
+                            title,
+                            style: SongletType.subhead.copyWith(
+                              color: c.ink,
+                            ),
                           ),
                         ),
-                      ),
-                      Text(
-                        counter,
-                        style: SongletType.subhead.copyWith(
-                          color: overLimit ? c.danger : c.inkSecondary,
-                          fontFeatures: const [FontFeature.tabularFigures()],
+                        Text(
+                          counter,
+                          style: SongletType.folio.copyWith(
+                            color: overLimit ? c.danger : c.inkTertiary,
+                            fontSize: 11,
+                          ),
                         ),
-                      ),
-                      const SizedBox(width: SongletSpace.x2),
-                      AnimatedRotation(
-                        turns: expanded ? 0.5 : 0,
-                        duration: reduce
-                            ? SongletMotion.none
-                            : SongletMotion.standard,
-                        child: Icon(
-                          Icons.expand_more_rounded,
-                          color: c.inkSecondary,
+                        const SizedBox(width: SongletSpace.x2),
+                        AnimatedRotation(
+                          turns: expanded ? 0.5 : 0,
+                          duration: reduce
+                              ? SongletMotion.none
+                              : SongletMotion.standard,
+                          child: Icon(
+                            Icons.expand_more_rounded,
+                            color: c.accent,
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ),
             ),
-          ),
-          _Reveal(
-            reduce: reduce,
-            child: expanded
-                ? Padding(
-                    padding: const EdgeInsetsDirectional.fromSTEB(
-                      SongletSpace.x4,
-                      0,
-                      SongletSpace.x4,
-                      SongletSpace.x4,
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: [
-                        TextField(
-                          controller: controller,
-                          onChanged: onChanged,
-                          minLines: _minLines,
-                          maxLines: _maxLines,
-                          keyboardType: TextInputType.multiline,
-                          style: SongletType.callout.copyWith(color: c.ink),
-                          decoration: InputDecoration(
-                            hintText: hint,
-                            fillColor: c.surface,
-                            errorText: errorText,
-                          ),
-                        ),
-                        const SizedBox(height: SongletSpace.x2),
-                        Wrap(
-                          spacing: SongletSpace.x2,
-                          children: [
-                            for (final (index, tag) in sectionTags.indexed)
-                              ActionChip(
-                                label: Text(sectionTagLabels?[index] ?? tag),
-                                onPressed: () => onInsertTag(tag),
-                                labelStyle: SongletType.footnote.copyWith(
-                                  color: c.accent,
-                                ),
-                                backgroundColor: c.surface,
-                                side: BorderSide(color: c.hairline),
-                                shape: const StadiumBorder(),
+            _Reveal(
+              reduce: reduce,
+              child: expanded
+                  ? Padding(
+                      padding: const EdgeInsetsDirectional.fromSTEB(
+                        0,
+                        0,
+                        0,
+                        SongletSpace.x3,
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: [
+                          TextField(
+                            controller: controller,
+                            onChanged: onChanged,
+                            minLines: _minLines,
+                            maxLines: _maxLines,
+                            keyboardType: TextInputType.multiline,
+                            style: SongletType.lede.copyWith(
+                              color: c.ink,
+                              height: 1.4,
+                            ),
+                            decoration: InputDecoration(
+                              hintText: hint,
+                              fillColor: c.surface,
+                              hintStyle: SongletType.lede.copyWith(
+                                color: c.inkTertiary,
                               ),
-                          ],
-                        ),
-                        ?ownership,
-                      ],
-                    ),
-                  )
-                : const SizedBox(width: double.infinity),
-          ),
-        ],
+                              errorText: errorText,
+                            ),
+                          ),
+                          const SizedBox(height: SongletSpace.x2),
+                          Wrap(
+                            spacing: SongletSpace.x2,
+                            children: [
+                              for (final (index, tag) in sectionTags.indexed)
+                                ActionChip(
+                                  label: Text(sectionTagLabels?[index] ?? tag),
+                                  onPressed: () => onInsertTag(tag),
+                                  labelStyle: SongletType.caption.copyWith(
+                                    color: c.accent,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                  backgroundColor: c.surface,
+                                  side: BorderSide(color: c.hairline),
+                                  shape: const RoundedRectangleBorder(
+                                    borderRadius: SongletRadius.thumbAll,
+                                  ),
+                                ),
+                            ],
+                          ),
+                          ?ownership,
+                        ],
+                      ),
+                    )
+                  : const SizedBox(width: double.infinity),
+            ),
+          ],
+        ),
       ),
     );
   }

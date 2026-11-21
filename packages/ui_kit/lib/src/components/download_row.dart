@@ -3,11 +3,10 @@ import 'package:flutter/material.dart';
 import '../tokens/songlet_colors.dart';
 import '../tokens/songlet_metrics.dart';
 import '../tokens/songlet_type.dart';
-import 'surface_card.dart';
 
 /// A downloadable file (docs/ui P11: "MP3 · 320 kbps", "WAV · 44.1 kHz
-/// (Premier)", the license PDF): leading glyph, title, one or two detail
-/// lines, and a round download button.
+/// (Premier)", the license PDF), set as a delivery-note line: what it is on
+/// the left, its specification at the margin, and a ruled key to fetch it.
 class DownloadRow extends StatelessWidget {
   const DownloadRow({
     super.key,
@@ -35,81 +34,91 @@ class DownloadRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final c = SongletColors.of(context);
-    return SurfaceCard(
-      padding: const EdgeInsetsDirectional.all(SongletSpace.x4),
-      child: Row(
-        children: [
-          Icon(
-            icon,
-            color: c.accent,
-            size: SongletSize.iconXl + SongletSpace.x2,
-          ),
-          const SizedBox(width: SongletSpace.x4),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  title,
-                  style: SongletType.headline.copyWith(
-                    color: c.ink,
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
-                Text(
-                  subtitle,
-                  style: SongletType.subhead.copyWith(color: c.inkSecondary),
-                ),
-                if (detail != null)
+    return DecoratedBox(
+      decoration: BoxDecoration(
+        border: Border(bottom: BorderSide(color: c.hairline)),
+      ),
+      child: Padding(
+        padding: const EdgeInsetsDirectional.symmetric(
+          vertical: SongletSpace.x3,
+        ),
+        child: Row(
+          children: [
+            Icon(icon, color: c.inkSecondary, size: SongletSize.iconMd),
+            const SizedBox(width: SongletSpace.x3),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
                   Text(
-                    detail!,
-                    style: SongletType.footnote.copyWith(color: c.inkSecondary),
+                    title,
+                    style: SongletType.title3.copyWith(
+                      color: c.ink,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
-              ],
+                  Text(
+                    subtitle,
+                    style: SongletType.caption.copyWith(color: c.inkSecondary),
+                  ),
+                ],
+              ),
             ),
-          ),
-          const SizedBox(width: SongletSpace.x2),
-          Semantics(
-            container: true,
-            button: true,
-            label: actionLabel,
-            excludeSemantics: true,
-            child: Material(
-              color: c.surfaceMuted,
-              shape: const CircleBorder(),
-              child: InkWell(
-                customBorder: const CircleBorder(),
-                onTap: busy ? null : onPressed,
-                child: SizedBox.square(
-                  dimension: SongletSize.controlHeight,
-                  child: busy
-                      ? Padding(
-                          padding: const EdgeInsetsDirectional.all(
-                            SongletSpace.x4,
+            if (detail != null) ...[
+              const SizedBox(width: SongletSpace.x2),
+              Text(
+                detail!,
+                style: SongletType.folio.copyWith(color: c.inkTertiary),
+              ),
+            ],
+            const SizedBox(width: SongletSpace.x2),
+            Semantics(
+              container: true,
+              button: true,
+              label: actionLabel,
+              excludeSemantics: true,
+              child: Material(
+                color: Colors.transparent,
+                shape: RoundedRectangleBorder(
+                  borderRadius: SongletRadius.controlAll,
+                  side: BorderSide(color: c.hairline),
+                ),
+                child: InkWell(
+                  borderRadius: SongletRadius.controlAll,
+                  onTap: busy ? null : onPressed,
+                  child: SizedBox.square(
+                    dimension: SongletSize.minTap,
+                    child: busy
+                        ? Padding(
+                            padding: const EdgeInsetsDirectional.all(
+                              SongletSpace.x3,
+                            ),
+                            child: CircularProgressIndicator(
+                              strokeWidth: SongletSize.focusRing,
+                              color: c.accent,
+                            ),
+                          )
+                        : Icon(
+                            locked
+                                ? Icons.lock_outline_rounded
+                                : Icons.arrow_downward_rounded,
+                            size: SongletSize.iconMd,
+                            color: onPressed == null ? c.inkTertiary : c.ink,
                           ),
-                          child: CircularProgressIndicator(
-                            strokeWidth: SongletSize.focusRing,
-                            color: c.accent,
-                          ),
-                        )
-                      : Icon(
-                          locked
-                              ? Icons.lock_outline_rounded
-                              : Icons.download_rounded,
-                          color: onPressed == null ? c.inkTertiary : c.ink,
-                        ),
+                  ),
                 ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
 }
 
-/// A 2-column grid of allowed uses with checks (P11 "You can use this song
-/// for:").
+/// A 2-column grid of the allowed uses ("You can use this song for:"), set as
+/// a checklist — a ruled dash per line, no discs.
 class UsageGrid extends StatelessWidget {
   const UsageGrid({super.key, required this.items});
 
@@ -137,20 +146,11 @@ class UsageGrid extends StatelessWidget {
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Container(
-                      width: SongletSize.iconXl,
-                      height: SongletSize.iconXl,
-                      decoration: BoxDecoration(
-                        color: c.accentSoft,
-                        shape: BoxShape.circle,
-                      ),
-                      child: Icon(
-                        Icons.check_rounded,
-                        color: c.accent,
-                        size: SongletSize.iconMd,
-                      ),
+                    Text(
+                      '—',
+                      style: SongletType.footnote.copyWith(color: c.accent),
                     ),
-                    const SizedBox(width: SongletSpace.x3),
+                    const SizedBox(width: SongletSpace.x2),
                     Expanded(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -159,13 +159,14 @@ class UsageGrid extends StatelessWidget {
                             title,
                             style: SongletType.subhead.copyWith(
                               color: c.ink,
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.w600,
                             ),
                           ),
                           Text(
                             detail,
                             style: SongletType.caption.copyWith(
                               color: c.inkSecondary,
+                              height: 1.35,
                             ),
                           ),
                         ],
@@ -181,7 +182,7 @@ class UsageGrid extends StatelessWidget {
   }
 }
 
-/// Wide icon + label button in a card (P11 "Save to Files", "Add to Music").
+/// Wide ruled key (P11 "Save to Files", "Add to Music").
 class CardButton extends StatelessWidget {
   const CardButton({
     super.key,
@@ -199,37 +200,46 @@ class CardButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final c = SongletColors.of(context);
-    return SurfaceCard(
-      padding: const EdgeInsetsDirectional.symmetric(
-        horizontal: SongletSpace.x4,
-        vertical: SongletSpace.x4,
+    return Material(
+      color: Colors.transparent,
+      shape: RoundedRectangleBorder(
+        borderRadius: SongletRadius.controlAll,
+        side: BorderSide(color: c.inkTertiary),
       ),
-      onTap: busy ? null : onPressed,
-      child: Semantics(
-        container: true,
-        button: true,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            if (busy)
-              SizedBox.square(
-                dimension: SongletSize.iconLg,
-                child: CircularProgressIndicator(
-                  strokeWidth: SongletSize.focusRing,
-                  color: c.accent,
+      child: InkWell(
+        borderRadius: SongletRadius.controlAll,
+        onTap: busy ? null : onPressed,
+        child: Container(
+          constraints: const BoxConstraints(
+            minHeight: SongletSize.controlHeight,
+          ),
+          padding: const EdgeInsetsDirectional.symmetric(
+            horizontal: SongletSpace.x3,
+            vertical: SongletSpace.x2,
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              if (busy)
+                SizedBox.square(
+                  dimension: SongletSize.iconSm,
+                  child: CircularProgressIndicator(
+                    strokeWidth: SongletSize.focusRing,
+                    color: c.accent,
+                  ),
+                )
+              else
+                Icon(icon, color: c.ink, size: SongletSize.iconMd),
+              const SizedBox(width: SongletSpace.x2),
+              Flexible(
+                child: Text(
+                  label,
+                  overflow: TextOverflow.ellipsis,
+                  style: SongletType.headline.copyWith(color: c.ink),
                 ),
-              )
-            else
-              Icon(icon, color: c.accent, size: SongletSize.iconXl),
-            const SizedBox(width: SongletSpace.x3),
-            Flexible(
-              child: Text(
-                label,
-                overflow: TextOverflow.ellipsis,
-                style: SongletType.callout.copyWith(color: c.ink),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

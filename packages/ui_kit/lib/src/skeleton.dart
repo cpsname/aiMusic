@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 
 import 'motion.dart';
 import 'tokens.dart';
+import 'tokens/songlet_colors.dart';
+import 'tokens/songlet_metrics.dart';
 
-/// A token-colored shimmer placeholder.
+/// A paper-toned shimmer placeholder.
 ///
 /// The highlight sweeps via an infinitely repeating [AnimationController]
 /// (disposed with the state). In tests, render frames with `tester.pump()` — not
@@ -34,9 +36,6 @@ class _AuraSkeletonState extends State<AuraSkeleton>
   @override
   AnimationController get motionController => _controller;
 
-  static const Color _base = StudioTokens.glassFill;
-  static const Color _highlight = Color(0x33FFFFFF);
-
   @override
   void dispose() {
     _controller.dispose();
@@ -45,8 +44,8 @@ class _AuraSkeletonState extends State<AuraSkeleton>
 
   @override
   Widget build(BuildContext context) {
-    final radius =
-        widget.borderRadius ?? BorderRadius.circular(StudioTokens.radiusSm);
+    final c = SongletColors.of(context);
+    final radius = widget.borderRadius ?? SongletRadius.thumbAll;
     return AnimatedBuilder(
       animation: _controller,
       builder: (context, _) {
@@ -59,7 +58,7 @@ class _AuraSkeletonState extends State<AuraSkeleton>
             gradient: LinearGradient(
               begin: Alignment(dx - 1, 0),
               end: Alignment(dx + 1, 0),
-              colors: const [_base, _highlight, _base],
+              colors: [c.surfaceMuted, c.surface, c.surfaceMuted],
               stops: const [0.35, 0.5, 0.65],
             ),
           ),

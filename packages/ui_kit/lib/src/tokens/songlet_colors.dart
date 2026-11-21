@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 
 /// Colour roles for the Songlet look, light and dark (docs/ui; ADR-0004).
+///
+/// Two-ink printing on bone stock: the ground is a cool bone white, the ink is
+/// near-black, and a single signal coral is used as a *spot* — rules, numerals,
+/// progress, selection — never as a field of colour. The primary action is
+/// printed in ink, the way a poster signs its one call to action.
 /// Components read roles through [SongletColors.of]; nothing hardcodes a hex.
 @immutable
 class SongletColors extends ThemeExtension<SongletColors> {
@@ -25,82 +30,90 @@ class SongletColors extends ThemeExtension<SongletColors> {
     required this.badgeFill,
     required this.onBadge,
     required this.waveformIdle,
-    this.onArt = const Color(0xFFFFFFFF),
-    this.artScrim = const Color(0xA6000000),
+    this.highlight = const Color(0xFF1B33F0),
+    this.highlightSoft = const Color(0xFFDDE2FF),
+    this.onHighlight = const Color(0xFFFFFFFF),
+    this.onArt = const Color(0xFFFFFDF9),
+    this.artScrim = const Color(0xA60F0D0C),
   });
 
-  /// Holographic light surfaces: the same aurora language remains legible in
-  /// daylight without turning the product back into a warm, opaque UI.
+  /// Daylight sheet: bone stock, near-black ink, one signal coral.
   static const SongletColors light = SongletColors(
-    canvas: Color(0xFFF4F6FF),
-    surface: Color(0xF2FFFFFF),
-    surfaceMuted: Color(0xFFE9EDFA),
+    canvas: Color(0xFFF2EFE9),
+    surface: Color(0xFFFCFBF8),
+    surfaceMuted: Color(0xFFE7E2D8),
     surfaceRaised: Color(0xFFFFFFFF),
-    hairline: Color(0xFFD7DDF2),
-    accent: Color(0xFF6752E8),
-    accentPressed: Color(0xFF4D3BC6),
-    accentSoft: Color(0xFFE7E3FF),
-    onAccent: Color(0xFFFFFFFF),
-    ink: Color(0xFF11152A),
-    inkSecondary: Color(0xFF5E6682),
-    inkTertiary: Color(0xFF929AB6),
-    success: Color(0xFF118C78),
-    warning: Color(0xFF9A6410),
-    danger: Color(0xFFC43F55),
-    dangerSoft: Color(0xFFFFE5EB),
-    scrim: Color(0x6611152A),
-    badgeFill: Color(0xCC11152A),
-    onBadge: Color(0xFFFFFFFF),
-    waveformIdle: Color(0xFFC9D0E8),
+    hairline: Color(0xFFCFC8BA),
+    accent: Color(0xFFF2401C),
+    accentPressed: Color(0xFFC93012),
+    accentSoft: Color(0xFFFBD9CF),
+    onAccent: Color(0xFF160A06),
+    ink: Color(0xFF111010),
+    inkSecondary: Color(0xFF6A6357),
+    inkTertiary: Color(0xFF9C9487),
+    success: Color(0xFF3E6B4F),
+    warning: Color(0xFFA96A12),
+    danger: Color(0xFFA3201B),
+    dangerSoft: Color(0xFFF6DAD4),
+    scrim: Color(0x800F0D0C),
+    badgeFill: Color(0xE60F0D0C),
+    onBadge: Color(0xFFFFFDF9),
+    waveformIdle: Color(0xFFD6CFC2),
+    highlight: Color(0xFF1B33F0),
+    highlightSoft: Color(0xFFDDE2FF),
+    onHighlight: Color(0xFFFFFFFF),
   );
 
-  /// Signature Songlet surface: deep space, cool ink and aurora accents.
+  /// Night sheet: the same two inks reversed onto charcoal.
   static const SongletColors dark = SongletColors(
-    canvas: Color(0xFF0B0E1A),
-    surface: Color(0x141F2945),
-    surfaceMuted: Color(0x1A8390B8),
-    surfaceRaised: Color(0x262D3D5F),
-    hairline: Color(0x3DFFFFFF),
-    accent: Color(0xFF7C5CFF),
-    accentPressed: Color(0xFF5D42D6),
-    accentSoft: Color(0x297C5CFF),
-    onAccent: Color(0xFFFFFFFF),
-    ink: Color(0xFFF2F4FF),
-    inkSecondary: Color(0xFFA6ACCB),
-    inkTertiary: Color(0xFF5F6584),
-    success: Color(0xFF22E0C3),
-    warning: Color(0xFFFFB454),
-    danger: Color(0xFFFF5C6E),
-    dangerSoft: Color(0x33FF5C6E),
+    canvas: Color(0xFF0E0D0C),
+    surface: Color(0xFF171513),
+    surfaceMuted: Color(0xFF211E1B),
+    surfaceRaised: Color(0xFF1B1816),
+    hairline: Color(0xFF332E29),
+    accent: Color(0xFFFF5A34),
+    accentPressed: Color(0xFFFF7A5A),
+    accentSoft: Color(0xFF3A1C13),
+    onAccent: Color(0xFF160A06),
+    ink: Color(0xFFF5F0E8),
+    inkSecondary: Color(0xFFADA396),
+    inkTertiary: Color(0xFF776F64),
+    success: Color(0xFF8FB49A),
+    warning: Color(0xFFE0A45A),
+    danger: Color(0xFFFF6B5A),
+    dangerSoft: Color(0xFF3A1B16),
     scrim: Color(0xB3000000),
-    badgeFill: Color(0xCC06070D),
-    onBadge: Color(0xFFFFFFFF),
-    waveformIdle: Color(0x4DFFFFFF),
+    badgeFill: Color(0xCC0A0908),
+    onBadge: Color(0xFFFFFDF9),
+    waveformIdle: Color(0xFF443E37),
+    highlight: Color(0xFF5B72FF),
+    highlightSoft: Color(0xFF1B2148),
+    onHighlight: Color(0xFFF5F0E8),
   );
 
-  /// Page background.
+  /// Page background: the stock.
   final Color canvas;
 
-  /// Cards, sheets, tab bar.
+  /// Cards, sheets, tab bar: a lighter pull of the same stock.
   final Color surface;
 
   /// Input fields, segmented tracks, neutral chips.
   final Color surfaceMuted;
 
-  /// Popovers and floating cards above [surface].
+  /// Popovers and plates above [surface].
   final Color surfaceRaised;
 
-  /// Dividers and card outlines.
+  /// Dividers, rules and plate outlines.
   final Color hairline;
 
-  /// Primary actions, selection, progress.
+  /// The signal colour: selection, progress, numerals, the odd rule.
   final Color accent;
   final Color accentPressed;
 
   /// Tinted fills: selected chips, badges, banners.
   final Color accentSoft;
 
-  /// Content on [accent].
+  /// Content on [accent] — near-black, because the signal is bright.
   final Color onAccent;
 
   /// Primary text and icons.
@@ -129,15 +142,25 @@ class SongletColors extends ThemeExtension<SongletColors> {
   /// Unplayed waveform bars.
   final Color waveformIdle;
 
+  /// The second ink: cobalt, reserved for offers and counters ("Best value",
+  /// "Recommended"). Used rarely, like a second plate in a two-colour print.
+  final Color highlight;
+  final Color highlightSoft;
+  final Color onHighlight;
+
   /// Text and icons laid over photographic art (same in both modes).
   final Color onArt;
 
   /// Bottom gradient behind [onArt] text on art.
   final Color artScrim;
 
-  /// Primary action gradient (accent → pressed).
+  /// True when this sheet is the night run.
+  bool get isDark => canvas.computeLuminance() < 0.2;
+
+  /// Primary action gradient — kept for the template's callers; the press
+  /// prints actions in flat ink.
   LinearGradient get actionGradient => LinearGradient(
-    colors: [accent, accentPressed],
+    colors: [ink, Color.lerp(ink, accent, 0.18)!],
     begin: AlignmentDirectional.topStart,
     end: AlignmentDirectional.bottomEnd,
   );
@@ -168,6 +191,9 @@ class SongletColors extends ThemeExtension<SongletColors> {
     Color? badgeFill,
     Color? onBadge,
     Color? waveformIdle,
+    Color? highlight,
+    Color? highlightSoft,
+    Color? onHighlight,
     Color? onArt,
     Color? artScrim,
   }) => SongletColors(
@@ -191,6 +217,9 @@ class SongletColors extends ThemeExtension<SongletColors> {
     badgeFill: badgeFill ?? this.badgeFill,
     onBadge: onBadge ?? this.onBadge,
     waveformIdle: waveformIdle ?? this.waveformIdle,
+    highlight: highlight ?? this.highlight,
+    highlightSoft: highlightSoft ?? this.highlightSoft,
+    onHighlight: onHighlight ?? this.onHighlight,
     onArt: onArt ?? this.onArt,
     artScrim: artScrim ?? this.artScrim,
   );
@@ -220,6 +249,9 @@ class SongletColors extends ThemeExtension<SongletColors> {
       badgeFill: l(badgeFill, other.badgeFill),
       onBadge: l(onBadge, other.onBadge),
       waveformIdle: l(waveformIdle, other.waveformIdle),
+      highlight: l(highlight, other.highlight),
+      highlightSoft: l(highlightSoft, other.highlightSoft),
+      onHighlight: l(onHighlight, other.onHighlight),
       onArt: l(onArt, other.onArt),
       artScrim: l(artScrim, other.artScrim),
     );

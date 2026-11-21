@@ -6,9 +6,9 @@ import '../me/music_profile_page.dart';
 import '../paywall/music_paywall_page.dart';
 import '../upload/music_upload_demo_page.dart';
 
-/// Adaptive app shell: an aurora backdrop with a translucent bottom navigation
-/// switching between Profile, the Paywall (Store) and the upload demo. No route
-/// table.
+/// Adaptive shell for the template's sample screens: the paper ground with a
+/// flat bottom navigation switching between Profile, the Paywall (Store) and
+/// the upload demo. No route table.
 class MusicStudioShell extends StatefulWidget {
   const MusicStudioShell({super.key});
 
@@ -22,9 +22,10 @@ class _StudioShellState extends State<MusicStudioShell> {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context);
+    final c = SongletColors.of(context);
     return Scaffold(
       extendBody: true,
-      body: AuroraBackground(
+      body: PaperBackground(
         child: SafeArea(
           bottom: false,
           child: IndexedStack(
@@ -34,9 +35,9 @@ class _StudioShellState extends State<MusicStudioShell> {
         ),
       ),
       bottomNavigationBar: NavigationBar(
-        backgroundColor: StudioTokens.nebula.withValues(alpha: 0.72),
+        backgroundColor: c.canvas,
         surfaceTintColor: Colors.transparent,
-        indicatorColor: StudioTokens.auroraViolet.withValues(alpha: 0.30),
+        indicatorColor: c.accentSoft,
         selectedIndex: _index,
         onDestinationSelected: (index) => setState(() => _index = index),
         destinations: [

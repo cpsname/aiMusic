@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import '../motion.dart';
 import '../skeleton.dart';
 import '../tokens/songlet_colors.dart';
-import '../tokens/songlet_elevation.dart';
 import '../tokens/songlet_metrics.dart';
 import '../tokens/songlet_motion.dart';
 import '../tokens/songlet_type.dart';
@@ -84,14 +83,13 @@ class _GlimpseCardState extends State<GlimpseCard> {
   @override
   Widget build(BuildContext context) {
     final c = SongletColors.of(context);
-    final e = SongletElevation.of(context);
     final chunks = _chunks;
     // One page holds [linesPerPage] lines at the current Dynamic Type size,
     // measured as laid out (line metrics round, so they are not computed).
     final probe = TextPainter(
       text: TextSpan(
         text: widget.title,
-        style: DefaultTextStyle.of(context).style.merge(SongletType.body),
+        style: DefaultTextStyle.of(context).style.merge(SongletType.lede),
       ),
       maxLines: 1,
       textScaler: MediaQuery.textScalerOf(context),
@@ -100,96 +98,88 @@ class _GlimpseCardState extends State<GlimpseCard> {
     final lineHeight = probe.height + SongletSpace.x2;
     probe.dispose();
     final bodyHeight = lineHeight * widget.linesPerPage;
-    return Container(
-      padding: const EdgeInsetsDirectional.all(SongletSpace.x5),
-      decoration: BoxDecoration(
-        color: c.surface,
-        borderRadius: SongletRadius.cardAll,
-        boxShadow: e.level1,
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            children: [
-              Icon(
-                Icons.music_note_outlined,
-                color: c.inkSecondary,
-                size: SongletSize.iconMd,
-              ),
-              const SizedBox(width: SongletSpace.x2),
-              Flexible(
-                child: Text(
-                  widget.title,
-                  style: SongletType.subhead.copyWith(color: c.inkSecondary),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          children: [
+            Expanded(
+              child: Text(
+                widget.title,
+                style: SongletType.eyebrow.copyWith(
+                  color: c.inkTertiary,
+                  fontSize: 10.5,
+                  letterSpacing: 1.5,
                 ),
               ),
-            ],
-          ),
-          const SizedBox(height: SongletSpace.x3),
-          SizedBox(
-            height: bodyHeight,
-            child: chunks.isEmpty
-                ? Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      for (var i = 0; i < widget.linesPerPage; i++)
-                        Padding(
-                          padding: const EdgeInsetsDirectional.only(
-                            bottom: SongletSpace.x3,
-                          ),
-                          child: AuraSkeleton(
-                            width:
-                                SongletSize.coverLarge *
-                                (i.isEven ? _skeletonLong : _skeletonShort),
-                            height: SongletType.body.fontSize!,
-                          ),
+            ),
+            if (chunks.length > 1)
+              Text(
+                '${_page + 1}/${chunks.length}',
+                style: SongletType.folio.copyWith(color: c.inkTertiary),
+              ),
+          ],
+        ),
+        const SizedBox(height: 6),
+        Container(height: SongletSize.rule, color: c.hairline),
+        const SizedBox(height: SongletSpace.x3),
+        SizedBox(
+          height: bodyHeight,
+          child: chunks.isEmpty
+              ? Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    for (var i = 0; i < widget.linesPerPage; i++)
+                      Padding(
+                        padding: const EdgeInsetsDirectional.only(
+                          bottom: SongletSpace.x3,
                         ),
-                    ],
-                  )
-                : Semantics(
-                    liveRegion: true,
-                    child: PageView(
-                      controller: _pages,
-                      onPageChanged: (p) => setState(() => _page = p),
-                      children: [
-                        for (final chunk in chunks)
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              for (var i = 0; i < chunk.length; i++)
-                                Padding(
-                                  padding: const EdgeInsetsDirectional.only(
-                                    bottom: SongletSpace.x2,
-                                  ),
-                                  child: Text(
-                                    chunk[i],
-                                    maxLines: 1,
-                                    overflow: TextOverflow.ellipsis,
-                                    style: SongletType.body.copyWith(
-                                      color: i == 0 ? c.ink : c.inkSecondary,
-                                    ),
+                        child: AuraSkeleton(
+                          width:
+                              SongletSize.coverLarge *
+                              (i.isEven ? _skeletonLong : _skeletonShort),
+                          height: SongletType.lede.fontSize!,
+                        ),
+                      ),
+                  ],
+                )
+              : Semantics(
+                  liveRegion: true,
+                  child: PageView(
+                    controller: _pages,
+                    onPageChanged: (p) => setState(() => _page = p),
+                    children: [
+                      for (final chunk in chunks)
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            for (var i = 0; i < chunk.length; i++)
+                              Padding(
+                                padding: const EdgeInsetsDirectional.only(
+                                  bottom: SongletSpace.x2,
+                                ),
+                                child: Text(
+                                  chunk[i],
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: SongletType.lede.copyWith(
+                                    color: i == 0 ? c.ink : c.inkSecondary,
+                                    height: 1.4,
                                   ),
                                 ),
-                            ],
-                          ),
-                      ],
-                    ),
+                              ),
+                          ],
+                        ),
+                    ],
                   ),
-          ),
-          if (chunks.length > 1) ...[
-            const SizedBox(height: SongletSpace.x3),
-            Center(
-              child: PageDots(count: chunks.length, index: _page),
-            ),
-          ],
-        ],
-      ),
+                ),
+        ),
+      ],
     );
   }
 }
 
-/// Carousel position dots.
+/// Carousel position marks: struck squares, the current one coral.
 class PageDots extends StatelessWidget {
   const PageDots({super.key, required this.count, required this.index});
 
@@ -206,14 +196,11 @@ class PageDots extends StatelessWidget {
           for (var i = 0; i < count; i++)
             Container(
               margin: const EdgeInsetsDirectional.symmetric(
-                horizontal: SongletSpace.x1,
+                horizontal: 3,
               ),
-              width: SongletSpace.x2,
-              height: SongletSpace.x2,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: i == index ? c.accent : c.hairline,
-              ),
+              width: SongletSpace.x1 + 2,
+              height: SongletSpace.x1 / 2,
+              color: i == index ? c.accent : c.hairline,
             ),
         ],
       ),
